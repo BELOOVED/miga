@@ -24,23 +24,23 @@
                </div>
                <sm-mobile-bottom-nav _ngcontent-cro-c306="" _nghost-cro-c303="">
                   <nav _ngcontent-cro-c303="" class="container mobile-only">
-                     <div _ngcontent-cro-c303="" class="nav-item active" tabindex="0" id="mobile-navbar-item-0">
-                        <img _ngcontent-cro-c303="" src="/assets/icons/bottom-navigation/electronic-home-active.svg" alt="AnasayfaIcon"><!---->
+                     <div _ngcontent-cro-c303="" class="nav-item active" tabindex="0" id="mobile-navbar-item-0" onclick="window.location.href = '/'">
+                        <img _ngcontent-cro-c303="" src="/assets/icons/bottom-navigation/home-passive.svg" alt="AnasayfaIcon"><!---->
                         <div _ngcontent-cro-c303="" class="text mat-caption-normal text-align-center"> Anasayfa </div>
                      </div>
-                     <div _ngcontent-cro-c303="" class="nav-item" tabindex="0" id="mobile-navbar-item-1">
+                     <div _ngcontent-cro-c303="" class="nav-item" tabindex="0" id="mobile-navbar-item-1" onclick="window.location.href = '/kategoriler'">
                         <img _ngcontent-cro-c303="" src="/assets/icons/bottom-navigation/search-passive.svg" alt="KategorilerIcon"><!---->
                         <div _ngcontent-cro-c303="" class="text mat-caption-normal text-align-center"> Kategoriler </div>
                      </div>
-                     <div _ngcontent-cro-c303="" class="nav-item" id="mobile-navbar-item-2">
+                     <div _ngcontent-cro-c303="" class="nav-item" id="mobile-navbar-item-2" onclick="openmodal('sepet')">
                         <img _ngcontent-cro-c303="" src="/assets/icons/bottom-navigation/cart-passive.svg" alt="SepetimIcon"><!---->
                         <div _ngcontent-cro-c303="" class="text mat-caption-normal text-align-center"> Sepetim </div>
                      </div>
-                     <div _ngcontent-cro-c303="" class="nav-item" tabindex="0" id="mobile-navbar-item-3">
+                     <div _ngcontent-cro-c303="" class="nav-item" tabindex="0" id="mobile-navbar-item-3" onclick="window.location.href = '/kampanyalar'">
                         <img _ngcontent-cro-c303="" src="/assets/icons/bottom-navigation/campaign-passive.svg" alt="KampanyalarIcon"><!---->
                         <div _ngcontent-cro-c303="" class="text mat-caption-normal text-align-center"> Kampanyalar </div>
                      </div>
-                     <div _ngcontent-cro-c303="" class="nav-item" tabindex="0" id="mobile-navbar-item-4">
+                     <div _ngcontent-cro-c303="" class="nav-item" tabindex="0" id="mobile-navbar-item-4" onclick="window.location.href = '/uyelik'">
                         <img _ngcontent-cro-c303="" src="/assets/icons/bottom-navigation/profile-passive.svg" alt="HesabımIcon"><!---->
                         <div _ngcontent-cro-c303="" class="text mat-caption-normal text-align-center"> Hesabım </div>
                      </div>
@@ -55,8 +55,83 @@
             <!----><!---->
          </div>
       </sm-root>
-      <script src="runtime.01877aa54b76785a.js" type="module"></script><script src="polyfills.67e60b6f51f5b364.js" type="module"></script><script src="scripts.e868fb3f9b2009eb.js" defer=""></script><script src="main.dbef123daefbe409.js" type="module"></script><script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon="{&quot;rayId&quot;:&quot;827608cbde1f725a&quot;,&quot;version&quot;:&quot;2023.10.0&quot;,&quot;token&quot;:&quot;9341cbf513954834b406c4b23b064434&quot;}" crossorigin="anonymous"></script>
-      <div class="cdk-live-announcer-element cdk-visually-hidden" aria-atomic="true" aria-live="polite"></div>
-      <div class="cdk-overlay-container elektronik"></div>
+       <div class="cdk-live-announcer-element cdk-visually-hidden" aria-atomic="true" aria-live="polite"></div>
+      <div class="cdk-overlay-container elektronik hidden" id="sepet">
+         <div class="cdk-overlay-backdrop cdk-overlay-dark-backdrop cdk-overlay-backdrop-showing"></div>
+         <div class="cdk-global-overlay-wrapper" dir="ltr" style="justify-content: center; align-items: center;">
+            <div id="cdk-overlay-2" class="cdk-overlay-pane delivery-options-modal__container mobile-modal" style="max-width: 80vw; position: static;">
+               <div tabindex="0" class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div>
+               <mat-dialog-container tabindex="-1" class="mat-mdc-dialog-container mdc-dialog cdk-dialog-container mdc-dialog--open" id="modal-component" role="dialog" aria-modal="true" aria-labelledby="mat-mdc-dialog-title-1">
+                  <div class="mdc-dialog__container">
+                     <div class="mat-mdc-dialog-surface mdc-dialog__surface">
+                        <sm-delivery-options-modal class="ng-star-inserted">
+                           <h3 mat-dialog-title="" class="mat-mdc-dialog-title mdc-dialog__title text-align-center" id="mat-mdc-dialog-title-1">Teslimat Yöntemini Belirle</h3>
+                           <mat-dialog-content class="mat-mdc-dialog-content mdc-dialog__content options ng-star-inserted">
+                              <!---->
+                              <fe-icon-button class="close-button ng-star-inserted" _nghost-cro-c243="">
+                                 <button _ngcontent-cro-c243="" mat-icon-button="" color="accent" class="mdc-icon-button mat-mdc-icon-button mat-accent mat-mdc-button-base">
+                                    <span class="mat-mdc-button-persistent-ripple mdc-icon-button__ripple"></span>
+                                    <fa-icon _ngcontent-cro-c243="" class="ng-fa-icon button-icon">
+                                       <svg role="img" aria-hidden="true" focusable="false" data-prefix="far" data-icon="xmark" class="svg-inline--fa fa-xmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                          <path fill="currentColor" d="M312.1 375c9.369 9.369 9.369 24.57 0 33.94s-24.57 9.369-33.94 0L160 289.9l-119 119c-9.369 9.369-24.57 9.369-33.94 0s-9.369-24.57 0-33.94L126.1 256L7.027 136.1c-9.369-9.369-9.369-24.57 0-33.94s24.57-9.369 33.94 0L160 222.1l119-119c9.369-9.369 24.57-9.369 33.94 0s9.369 24.57 0 33.94L193.9 256L312.1 375z"></path>
+                                       </svg>
+                                    </fa-icon>
+                                    <span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span onclick="closemodal()" class="mat-mdc-button-touch-target"></span>
+                                 </button>
+                              </fe-icon-button>
+                              <!---->
+                              <div class="subtitle-2 delivery-options-hello-title ng-star-inserted"> Merhaba , </div>
+                              <!---->
+                              <h1 class="sub-title ng-star-inserted">Siparişini nasıl getirelim?</h1>
+                              <div class="delivery-options ng-star-inserted">
+                                 <fe-selectable-card id="delivery-options-modal_home" class="delivery-option delivery-option--home-not-auth ng-star-inserted">
+                                    <mat-card class="mat-mdc-card mdc-card">
+                                       <!----><!---->
+                                       <mat-card-content class="mat-mdc-card-content">
+                                          <img alt="address" src="assets/images/delivery/address.svg" class="icon">
+                                          <div class="subtitle-1 text-align-center">Adresime Gelsin</div>
+                                          <!---->
+                                       </mat-card-content>
+                                       <!---->
+                                    </mat-card>
+                                 </fe-selectable-card>
+                                 <!----><!---->
+                                 <fe-selectable-card id="delivery-options-modal_store" class="delivery-option delivery-option--store ng-star-inserted">
+                                    <mat-card class="mat-mdc-card mdc-card">
+                                       <!----><!---->
+                                       <mat-card-content class="mat-mdc-card-content">
+                                          <img alt="store" src="assets/images/delivery/store.svg" class="icon">
+                                          <div>
+                                             <div class="subtitle-1">Mağazadan Alacağım</div>
+                                             <div class="text-color-success mat-caption-normal free-delivery--label">Mağazadan Ücretsiz Teslimat!</div>
+                                          </div>
+                                          <!---->
+                                       </mat-card-content>
+                                       <!---->
+                                    </mat-card>
+                                 </fe-selectable-card>
+                                 <!----><!---->
+                              </div>
+                              <!----><!----><!----><!----><!---->
+                           </mat-dialog-content>
+                           <!----><!----><!----><!---->
+                        </sm-delivery-options-modal>
+                        <!---->
+                     </div>
+                  </div>
+               </mat-dialog-container>
+               <div tabindex="0" class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div>
+            </div>
+         </div>
+      </div>
+      <script>
+      function openmodal(contentId, menuId) {
+          $(".cdk-overlay-container").addClass("hidden");
+          $("#" + contentId).removeClass("hidden");    
+      }
+      function closemodal(){
+         $(".cdk-overlay-container").addClass("hidden");
+      }
+      </script>
    </body>
 </html>

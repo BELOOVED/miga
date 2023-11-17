@@ -352,38 +352,6 @@
                         <a _ngcontent-cro-c416="" class="category-card" id="home-page-category-card-goruntu-ve-ses-sistemleri-c-524"><img _ngcontent-cro-c416="" felazyload="" class="image" alt="Görüntü ve Ses Sistemleri" src="https://images.migrosone.com/elektronik/category/list/1316/6.goruntu-ve-ses-sistemleri-d645bc-360x360.png"></a>
                         <div _ngcontent-cro-c416="" class="category-name mat-caption">Görüntü ve Ses Sistemleri</div>
                         </div>
-                        <div _ngcontent-cro-c416="" class="category-wrapper">
-                        <a _ngcontent-cro-c416="" class="category-card" id="home-page-category-card-isitma-sogutma-c-11229"><img _ngcontent-cro-c416="" felazyload="" class="image" alt="Isıtma, Soğutma" src="https://images.migrosone.com/elektronik/category/list/70185/7.isitma-sogutma-553e93-360x360.png"></a>
-                        <div _ngcontent-cro-c416="" class="category-name mat-caption">Isıtma, Soğutma</div>
-                        </div>
-                        <div _ngcontent-cro-c416="" class="category-wrapper">
-                        <a _ngcontent-cro-c416="" class="category-card" id="home-page-category-card-giyim-aksesuar-c-118f4"><img _ngcontent-cro-c416="" felazyload="" class="image" alt="Giyim &amp; Aksesuar" src="https://images.migrosone.com/elektronik/category/list/71924/9.giyim-aksesuar-973a3c-360x360.png"></a>
-                        <div _ngcontent-cro-c416="" class="category-name mat-caption">Giyim &amp; Aksesuar</div>
-                        </div>
-                        <div _ngcontent-cro-c416="" class="category-wrapper">
-                        <a _ngcontent-cro-c416="" class="category-card" id="home-page-category-card-kitap-kirtasiye-oyuncak-c-118e6"><img _ngcontent-cro-c416="" felazyload="" class="image" alt="Kitap, Kırtasiye, Oyuncak" src="https://images.migrosone.com/elektronik/category/list/71910/10.kitap-kirtasiye-oyuncak-322a9c-360x360.png"></a>
-                        <div _ngcontent-cro-c416="" class="category-name mat-caption">Kitap, Kırtasiye, Oyuncak</div>
-                        </div>
-                        <div _ngcontent-cro-c416="" class="category-wrapper">
-                        <a _ngcontent-cro-c416="" class="category-card" id="home-page-category-card-spor-outdoor-bahce-c-119b3"><img _ngcontent-cro-c416="" felazyload="" class="image" alt="Spor, Outdoor, Bahçe" src="https://images.migrosone.com/elektronik/category/list/72115/17_spor_outdoor_menu_gorsel_2023-d2eb1e-360x360.png"></a>
-                        <div _ngcontent-cro-c416="" class="category-name mat-caption">Spor, Outdoor, Bahçe</div>
-                        </div>
-                        <div _ngcontent-cro-c416="" class="category-wrapper">
-                        <a _ngcontent-cro-c416="" class="category-card" id="home-page-category-card-hirdavat-oto-aksesuar-c-11f87"><img _ngcontent-cro-c416="" felazyload="" class="image" alt="Hırdavat, Oto Aksesuar" src="https://images.migrosone.com/elektronik/category/list/73607/17_hirdavat_otoaksesuar_menu_gorsel_2023-02b275-360x360.png"></a>
-                        <div _ngcontent-cro-c416="" class="category-name mat-caption">Hırdavat, Oto Aksesuar</div>
-                        </div>
-                        <div _ngcontent-cro-c416="" class="category-wrapper">
-                        <a _ngcontent-cro-c416="" class="category-card" id="home-page-category-card-ev-yasam-c-1190c"><img _ngcontent-cro-c416="" felazyload="" class="image" alt="Ev, Yaşam" src="https://images.migrosone.com/elektronik/category/list/71948/13.ev-yasam-fcdeab-360x360.png"></a>
-                        <div _ngcontent-cro-c416="" class="category-name mat-caption">Ev, Yaşam</div>
-                        </div>
-                        <div _ngcontent-cro-c416="" class="category-wrapper">
-                        <a _ngcontent-cro-c416="" class="category-card" id="home-page-category-card-pet-shop-c-11943"><img _ngcontent-cro-c416="" felazyload="" class="image" alt="Pet Shop" src="https://images.migrosone.com/elektronik/category/list/72003/11.pet-shop-fd740f-360x360.png"></a>
-                        <div _ngcontent-cro-c416="" class="category-name mat-caption">Pet Shop</div>
-                        </div>
-                        <div _ngcontent-cro-c416="" class="category-wrapper">
-                        <a _ngcontent-cro-c416="" class="category-card" id="home-page-category-card-aydinlatma-elektrik-malzemeleri-c-520"><img _ngcontent-cro-c416="" felazyload="" class="image" alt="Aydınlatma, Elektrik Malzemeleri" src="https://images.migrosone.com/elektronik/category/list/1312/14.aydinlatma-elektrik-malzemeleri-86c7a7-360x360.png"></a>
-                        <div _ngcontent-cro-c416="" class="category-name mat-caption">Aydınlatma, Elektrik Malzemeleri</div>
-                        </div>
                         <!----><!---->
                     </div>
                 </div>
