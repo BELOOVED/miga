@@ -312,7 +312,7 @@
                               $options .= '
                               <mat-option role="option" class="mat-mdc-option mat-mdc-focus-indicator mdc-list-item mat-body-2 ng-star-inserted mat-mdc-option-active" id="mat-option-248" tabindex="0" aria-disabled="false">
                               
-                              <span class="mdc-list-item__primary-text">
+                              <span class="mdc-list-item__primary-text" style="text-transform: uppercase">
                               
                               
                               
@@ -419,20 +419,20 @@
       function ildrop(){
          $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
          $("#dd1").toggleClass("hidden");
-         $("#dd1").addClass("hidden");
-         $("#dd1").addClass("hidden");
+         $("#dd2").addClass("hidden");
+         $("#dd3").addClass("hidden");
       }
       function ilcedrop(){
          $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
          $("#dd1").addClass("hidden");
-         $("#dd1").toggleClass("hidden");
-         $("#dd1").addClass("hidden");
+         $("#dd2").toggleClass("hidden");
+         $("#dd3").addClass("hidden");
       }
       function mahalledrop(){
          $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
          $("#dd1").addClass("hidden");
-         $("#dd1").addClass("hidden");
-         $("#dd1").remtoggleClassoveClass("hidden");
+         $("#dd2").addClass("hidden");
+         $("#dd3").remtoggleClassoveClass("hidden");
       }
       
       </script>
