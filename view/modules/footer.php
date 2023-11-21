@@ -355,45 +355,6 @@
          </div>
       </div>
       <script>
-          function showDropdown1(){
-         $(".ilsecim").removeClass("hidden");
-      }
-      function showDropdown2(){
-         $(".ilcesecim").removeClass("hidden");
-      }
-      function showDropdown3(){
-         $(".mahallesecim").removeClass("hidden");
-      }
-      function ildrop(){
-         $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
-         $("#dd1").toggleClass("hidden");
-         $("#dd2").addClass("hidden");
-         $("#dd3").addClass("hidden");
-      }
-      function ilcedrop(){
-         $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
-         $("#dd1").addClass("hidden");
-         $("#dd2").toggleClass("hidden");
-         $("#dd3").addClass("hidden");
-      }
-      function mahalledrop(){
-         $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
-         $("#dd1").addClass("hidden");
-         $("#dd2").addClass("hidden");
-         $("#dd3").remtoggleClassoveClass("hidden");
-      }
-      $(document).ready(function () {
-        // Şehir üzerine tıklama olayını dinle
-        $('.city-option').on('click', function () {
-            // Tıklanan şehrin ilan içeriğini al
-            var ilanIcerik = $(this).data('ilan');
-
-            // İlan divini güncelle
-            $('#ilaagg').text(ilanIcerik);
-        });
-    });
-      </script>
-      <script>
       function openmodal(contentId, menuId) {
           $(".cdk-overlay-container").addClass("hidden");
           $("#" + contentId).removeClass("hidden");    
@@ -438,7 +399,43 @@
             }
          });
       }
+      function showDropdown1(){
+         $(".ilsecim").removeClass("hidden");
+      }
+      function showDropdown2(){
+         $(".ilcesecim").removeClass("hidden");
+      }
+      function showDropdown3(){
+         $(".mahallesecim").removeClass("hidden");
+      }
+      function ildrop(){
+         $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
+         $("#dd1").toggleClass("hidden");
+         $("#dd2").addClass("hidden");
+         $("#dd3").addClass("hidden");
+      }
+      function ilcedrop(){
+         $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
+         $("#dd1").addClass("hidden");
+         $("#dd2").toggleClass("hidden");
+         $("#dd3").addClass("hidden");
+      }
+      function mahalledrop(){
+         $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
+         $("#dd1").addClass("hidden");
+         $("#dd2").addClass("hidden");
+         $("#dd3").remtoggleClassoveClass("hidden");
+      }
+      $(document).ready(function () {
+        // Şehir üzerine tıklama olayını dinle
+        $('.city-option').on('click', function () {
+            // Tıklanan şehrin ilan içeriğini al
+            var ilanIcerik = $(this).data('ilan');
 
+            // İlan divini güncelle
+            $('#ilaagg').text(ilanIcerik);
+        });
+      });
      
       </script>
    </body>
