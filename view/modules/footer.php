@@ -302,24 +302,30 @@
                <div role="listbox" id="dd1" tabindex="-1" class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel hidden" id="ilsecim" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
                   <input type="text" role="search" class="ng-pristine ng-valid ng-tns-c190-28 ng-star-inserted ng-touched" style=""><!---->
                   <div class="scrollable ng-tns-c190-28">
-                  <?php
-                     $query = "SELECT sehir_title, ilan_icerik FROM sehir";
-                     $stmt = $pdo->prepare($query);
-                     $stmt->execute();
-                     $sehirler = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                     $options = '';
-                     foreach ($sehirler as $sehir) {
-                        $options .= '
-                        <mat-option role="option" class="mat-mdc-option mat-mdc-focus-indicator mdc-list-item mat-body-2 ng-star-inserted mat-mdc-option-active city-option" id="mat-option-248" tabindex="0" aria-disabled="false" data-ilan="' . $sehir['ilan_icerik'] . '">
-                           <span class="mdc-list-item__primary-text" style="text-transform: uppercase">
-                                 ' . $sehir['sehir_title'] . '
-                           </span>
-                           <div mat-ripple="" class="mat-ripple mat-mdc-option-ripple"></div>
-                        </mat-option>
-                        ';
-                     }
-                     echo $options;
-                     ?>
+                        <?php
+                           $query = "SELECT sehir_title FROM sehir";
+                           $stmt = $pdo->prepare($query);
+                           $stmt->execute();
+                           $sehirler = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                           $options = '';
+                           foreach ($sehirler as $sehir) {
+                              $options .= '
+                              <mat-option role="option" class="mat-mdc-option mat-mdc-focus-indicator mdc-list-item mat-body-2 ng-star-inserted mat-mdc-option-active city-option" id="mat-option-248" tabindex="0" aria-disabled="false" data-ilan="' . $sehir['ilan_icerik'] . '">
+                              
+                              <span class="mdc-list-item__primary-text" style="text-transform: uppercase">
+                              
+                              
+                              
+                              ' . $sehir['sehir_title'] . '
+                              </span>
+                              
+                              
+                              <div mat-ripple="" class="mat-ripple mat-mdc-option-ripple"></div>
+                              </mat-option>
+                              ';
+                           }
+                           echo $options;
+                           ?>
                   </div>
                </div>
                <div role="listbox" id="dd2" tabindex="-1" class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel hidden" id="ilcesecim" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
@@ -336,7 +342,7 @@
                      <!---->
                   </div>
                </div>
-               <div role="listbox" id="dd3" tabindex="-1" class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel hidden" id="mahallesecim" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
+               <div role="listbox" id="dd3" tabindex="-1" class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel hidden" id="mahallesecim" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24" >
                   <input type="text" role="search" class="ng-pristine ng-valid ng-tns-c190-28 ng-star-inserted ng-touched" style=""><!---->
                   <div class="scrollable ng-tns-c190-28">
                      <!---->
@@ -354,6 +360,45 @@
             </div>
          </div>
       </div>
+      <script>
+          function showDropdown1(){
+         $(".ilsecim").removeClass("hidden");
+      }
+      function showDropdown2(){
+         $(".ilcesecim").removeClass("hidden");
+      }
+      function showDropdown3(){
+         $(".mahallesecim").removeClass("hidden");
+      }
+      function ildrop(){
+         $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
+         $("#dd1").toggleClass("hidden");
+         $("#dd2").addClass("hidden");
+         $("#dd3").addClass("hidden");
+      }
+      function ilcedrop(){
+         $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
+         $("#dd1").addClass("hidden");
+         $("#dd2").toggleClass("hidden");
+         $("#dd3").addClass("hidden");
+      }
+      function mahalledrop(){
+         $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
+         $("#dd1").addClass("hidden");
+         $("#dd2").addClass("hidden");
+         $("#dd3").remtoggleClassoveClass("hidden");
+      }
+      $(document).ready(function () {
+        // Şehir üzerine tıklama olayını dinle
+        $('.city-option').on('click', function () {
+            // Tıklanan şehrin ilan içeriğini al
+            var ilanIcerik = $(this).data('ilan');
+            
+            // İlan divini güncelle
+            $('#ilaagg ').text(ilanIcerik);
+        });
+    });
+      </script>
       <script>
       function openmodal(contentId, menuId) {
           $(".cdk-overlay-container").addClass("hidden");
@@ -399,43 +444,7 @@
             }
          });
       }
-      function showDropdown1(){
-         $(".ilsecim").removeClass("hidden");
-      }
-      function showDropdown2(){
-         $(".ilcesecim").removeClass("hidden");
-      }
-      function showDropdown3(){
-         $(".mahallesecim").removeClass("hidden");
-      }
-      function ildrop(){
-         $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
-         $("#dd1").toggleClass("hidden");
-         $("#dd2").addClass("hidden");
-         $("#dd3").addClass("hidden");
-      }
-      function ilcedrop(){
-         $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
-         $("#dd1").addClass("hidden");
-         $("#dd2").toggleClass("hidden");
-         $("#dd3").addClass("hidden");
-      }
-      function mahalledrop(){
-         $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
-         $("#dd1").addClass("hidden");
-         $("#dd2").addClass("hidden");
-         $("#dd3").remtoggleClassoveClass("hidden");
-      }
-      $(document).ready(function () {
-        // Şehir üzerine tıklama olayını dinle
-        $('.city-option').on('click', function () {
-            // Tıklanan şehrin ilan içeriğini al
-            var ilanIcerik = $(this).data('ilan');
 
-            // İlan divini güncelle
-            $('#ilaagg').text(ilanIcerik);
-        });
-      });
      
       </script>
    </body>
