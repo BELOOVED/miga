@@ -303,7 +303,7 @@
                   <input type="text" role="search" class="ng-pristine ng-valid ng-tns-c190-28 ng-star-inserted ng-touched" style=""><!---->
                   <div class="scrollable ng-tns-c190-28">
                         <?php
-                           $query = "SELECT sehir_title FROM sehir";
+                           $query = "SELECT * FROM sehir";
                            $stmt = $pdo->prepare($query);
                            $stmt->execute();
                            $sehirler = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -312,7 +312,7 @@
                               $options .= '
                               <mat-option role="option" class="mat-mdc-option mat-mdc-focus-indicator mdc-list-item mat-body-2 ng-star-inserted mat-mdc-option-active city-option" id="mat-option-248" tabindex="0" aria-disabled="false" data-ilan="' . $sehir['sehir_title'] . '">
                               
-                              <span class="mdc-list-item__primary-text" style="text-transform: uppercase">
+                              <span class="mdc-list-item__primary-text" style="text-transform: uppercase" id="' . $sehir['ilce_sehirkey'] . '">
                               
                               
                               
@@ -330,31 +330,37 @@
                </div>
                <div role="listbox" id="dd2" tabindex="-1" class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel hidden" id="ilcesecim" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
                   <input type="text" role="search" class="ng-pristine ng-valid ng-tns-c190-28 ng-star-inserted ng-touched" style=""><!---->
-                  <div class="scrollable ng-tns-c190-28">
-                     <!---->
-                     
-                        <!---->
-                        
-                           
-                        
-                        <!---->
-                        
-                     <!---->
+                  <div class="scrollable ng-tns-c190-28" id="gggaaagggaaa">
+                  
                   </div>
                </div>
                <div role="listbox" id="dd3" tabindex="-1" class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel hidden" id="mahallesecim" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24" >
                   <input type="text" role="search" class="ng-pristine ng-valid ng-tns-c190-28 ng-star-inserted ng-touched" style=""><!---->
                   <div class="scrollable ng-tns-c190-28">
-                     <!---->
-                     <mat-option role="option" class="mat-mdc-option mat-mdc-focus-indicator mdc-list-item mat-body-2 ng-star-inserted mat-mdc-option-active" id="mat-option-248" tabindex="0" aria-disabled="false">
-                        <!---->
-                        <span class="mdc-list-item__primary-text">
-                           İstanbul <!---->
-                        </span>
-                        <!---->
-                        <div mat-ripple="" class="mat-ripple mat-mdc-option-ripple"></div>
-                     </mat-option>
-                     <!---->
+                  <?php
+                           $query = "SELECT * FROM mahalle Where mahalle_ilcekey";
+                           $stmt = $pdo->prepare($query);
+                           $stmt->execute();
+                           $sehirler = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                           $options = '';
+                           foreach ($sehirler as $sehir) {
+                              $options .= '
+                              <mat-option role="option" class="mat-mdc-option mat-mdc-focus-indicator mdc-list-item mat-body-2 ng-star-inserted mat-mdc-option-active city-option" id="mat-option-248" tabindex="0" aria-disabled="false" data-ilan="' . $sehir['sehir_title'] . '">
+                              
+                              <span class="mdc-list-item__primary-text" style="text-transform: uppercase" >
+                              
+                              
+                              
+                              ' . $sehir['mahalle_title'] . '
+                              </span>
+                              
+                              
+                              <div mat-ripple="" class="mat-ripple mat-mdc-option-ripple"></div>
+                              </mat-option>
+                              ';
+                           }
+                           echo $options;
+                           ?>
                   </div>
                </div>
             </div>
@@ -397,6 +403,7 @@
 
 
          $("#dd1").toggleClass("hidden");
+         $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
 
         });
     });
@@ -415,12 +422,12 @@
       }
 
       document.getElementById('ilsecim').addEventListener('click', function() {
-         var selectedCity = document.querySelector('#ilsecim .mat-mdc-option-active .mdc-list-item__primary-text').innerText;
+         var selectedCity = document.querySelector('#ilsecim .mat-mdc-option-active .mdc-list-item__primary-text').id;
          getDistricts(selectedCity);
       });
 
       document.getElementById('ilcesecim').addEventListener('click', function() {
-         var selectedDistrict = document.querySelector('#ilcesecim .mat-mdc-option-active .mdc-list-item__primary-text').innerText;
+         var selectedDistrict = document.querySelector('#ilcesecim .mat-mdc-option-active .mdc-list-item__primary-text').id;
          getNeighborhoods(selectedDistrict);
       });
 
@@ -430,7 +437,8 @@
             url: 'get_districts.php',
             data: { city: selectedCity },
             success: function(data) {
-                  document.getElementById('ilcesecim').innerHTML = data;
+                  $("#dd2").toggleClass("hidden");
+                  document.getElementById('gggaaagggaaa').innerHTML = data;
             }
          });
       }
