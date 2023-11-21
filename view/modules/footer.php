@@ -84,7 +84,7 @@
                               <!---->
                               <h1 class="sub-title ng-star-inserted">Siparişini nasıl getirelim?</h1>
                               <div class="delivery-options ng-star-inserted">
-                                 <fe-selectable-card id="delivery-options-modal_home" class="delivery-option delivery-option--home-not-auth ng-star-inserted">
+                                 <fe-selectable-card id="delivery-options-modal_home" class="delivery-option delivery-option--home-not-auth ng-star-inserted" onclick="sepetadres()">
                                     <mat-card class="mat-mdc-card mdc-card">
                                        <!----><!---->
                                        <mat-card-content class="mat-mdc-card-content">
@@ -96,7 +96,7 @@
                                     </mat-card>
                                  </fe-selectable-card>
                                  <!----><!---->
-                                 <fe-selectable-card id="delivery-options-modal_store" class="delivery-option delivery-option--store ng-star-inserted">
+                                 <fe-selectable-card id="delivery-options-modal_store" class="delivery-option delivery-option--store ng-star-inserted"  onclick="sepetadres()">
                                     <mat-card class="mat-mdc-card mdc-card">
                                        <!----><!---->
                                        <mat-card-content class="mat-mdc-card-content">
