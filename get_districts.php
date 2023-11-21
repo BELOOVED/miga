@@ -1,5 +1,5 @@
 <?php
-// Seçilen şehre ait ilçeleri getir
+include 'inc/config.php';
 $selectedCity = $_POST['city'];
 
 // Örnek veritabanı sorgusu

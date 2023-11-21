@@ -1,5 +1,5 @@
 <?php
-// Seçilen ilçeye ait mahalleleri getir
+include 'inc/config.php';
 $selectedDistrict = $_POST['district'];
 
 // Örnek veritabanı sorgusu

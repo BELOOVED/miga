@@ -306,7 +306,20 @@
                      <mat-option role="option" class="mat-mdc-option mat-mdc-focus-indicator mdc-list-item mat-body-2 ng-star-inserted mat-mdc-option-active" id="mat-option-248" tabindex="0" aria-disabled="false">
                         <!---->
                         <span class="mdc-list-item__primary-text">
-                        
+                        <?php
+                           
+                           $query = "SELECT sehir_title FROM sehir WHERE sehir_ilcekey";
+                           $stmt = $pdo->prepare($query);
+                           $stmt->execute();
+                           $neighborhoods = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                           
+                           $options = '';
+                           foreach ($neighborhoods as $neighborhood) {
+                               $options .= $neighborhood['mahalle_title'];
+                           }
+                           
+                           echo $options;
+                           ?>
                         </span>
                         <!---->
                         <div mat-ripple="" class="mat-ripple mat-mdc-option-ripple"></div>
