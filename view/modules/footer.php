@@ -84,7 +84,7 @@
                               <!---->
                               <h1 class="sub-title ng-star-inserted">Siparişini nasıl getirelim?</h1>
                               <div class="delivery-options ng-star-inserted">
-                                 <fe-selectable-card id="delivery-options-modal_home" class="delivery-option delivery-option--home-not-auth ng-star-inserted" onclick="sepetadres()">
+                                 <fe-selectable-card id="delivery-options-modal_home" class="delivery-option delivery-option--home-not-auth ng-star-inserted">
                                     <mat-card class="mat-mdc-card mdc-card">
                                        <!----><!---->
                                        <mat-card-content class="mat-mdc-card-content">
@@ -96,7 +96,7 @@
                                     </mat-card>
                                  </fe-selectable-card>
                                  <!----><!---->
-                                 <fe-selectable-card id="delivery-options-modal_store" class="delivery-option delivery-option--store ng-star-inserted" onclick="sepetadres()">
+                                 <fe-selectable-card id="delivery-options-modal_store" class="delivery-option delivery-option--store ng-star-inserted">
                                     <mat-card class="mat-mdc-card mdc-card">
                                        <!----><!---->
                                        <mat-card-content class="mat-mdc-card-content">
@@ -296,17 +296,17 @@
                <div tabindex="0" class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div>
             </div>
          </div>
-         <div class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing hidden"></div>
+         <div class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing"></div>
          <div class="cdk-overlay-connected-position-bounding-box hidden" id="" dir="ltr" style="top: 0px; left: 0px; height: 100%; width: 100%;">
             <div id="cdk-overlay-6" class="cdk-overlay-pane dialog-shadow" style="width: 312px; top: 164.969px; left: 24px;">
                <div role="listbox" tabindex="-1" class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel" id="ilsecim" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
                   <input type="text" role="search" class="ng-pristine ng-valid ng-tns-c190-28 ng-star-inserted ng-touched" style=""><!---->
                   <div class="scrollable ng-tns-c190-28">
-                     <!---->
+                     
                      <mat-option role="option" class="mat-mdc-option mat-mdc-focus-indicator mdc-list-item mat-body-2 ng-star-inserted mat-mdc-option-active" id="mat-option-248" tabindex="0" aria-disabled="false">
                         <!---->
                         <span class="mdc-list-item__primary-text">
-                           <?php
+                        <?php
                            
                            $query = "SELECT sehir_title FROM sehir WHERE sehir_ilcekey";
                            $stmt = $pdo->prepare($query);
@@ -320,7 +320,6 @@
                            
                            echo $options;
                            ?>
-                            <!---->
                         </span>
                         <!---->
                         <div mat-ripple="" class="mat-ripple mat-mdc-option-ripple"></div>
@@ -361,7 +360,7 @@
             </div>
          </div>
       </div>
-      <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+      
       <script>
       function openmodal(contentId, menuId) {
           $(".cdk-overlay-container").addClass("hidden");
