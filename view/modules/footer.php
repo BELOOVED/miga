@@ -152,7 +152,7 @@
                                                    <!----><!----><!---->
                                                    <div class="mat-mdc-form-field-infix ng-tns-c186-27">
                                                       <!---->
-                                                      <mat-select onclick="toggleDropdown()" role="combobox" aria-autocomplete="none" aria-haspopup="listbox" class="mat-mdc-select ng-tns-c190-28 ng-tns-c186-27 mat-mdc-select-empty ng-untouched ng-pristine ng-invalid ng-star-inserted" aria-labelledby="mat-mdc-form-field-label-24 mat-select-value-25" id="mat-select-24" tabindex="0" aria-expanded="false" aria-required="false" aria-disabled="false" aria-invalid="false">
+                                                      <mat-select onclick="toggleDropdown('dd1')" role="combobox" aria-autocomplete="none" aria-haspopup="listbox" class="mat-mdc-select ng-tns-c190-28 ng-tns-c186-27 mat-mdc-select-empty ng-untouched ng-pristine ng-invalid ng-star-inserted" aria-labelledby="mat-mdc-form-field-label-24 mat-select-value-25" id="mat-select-24" tabindex="0" aria-expanded="false" aria-required="false" aria-disabled="false" aria-invalid="false">
                                                          <div cdk-overlay-origin="" class="mat-mdc-select-trigger ng-tns-c190-28">
                                                             <div class="mat-mdc-select-value ng-tns-c190-28" id="mat-select-value-25">
                                                                <span class="mat-mdc-select-placeholder mat-mdc-select-min-line ng-tns-c190-28 ng-star-inserted">İl</span><!----><!---->
@@ -202,7 +202,7 @@
                                                    <!----><!----><!---->
                                                    <div class="mat-mdc-form-field-infix ng-tns-c186-29">
                                                       <!---->
-                                                      <mat-select onclick="toggleDropdown()" role="combobox" aria-autocomplete="none" aria-haspopup="listbox" class="mat-mdc-select ng-tns-c190-30 ng-tns-c186-29 mat-mdc-select-disabled mat-mdc-select-empty ng-untouched ng-pristine ng-star-inserted" aria-labelledby="mat-mdc-form-field-label-26 mat-select-value-27" id="mat-select-26" tabindex="-1" aria-expanded="false" aria-required="false" aria-disabled="true" aria-invalid="false">
+                                                      <mat-select onclick="toggleDropdown('dd2')" role="combobox" aria-autocomplete="none" aria-haspopup="listbox" class="mat-mdc-select ng-tns-c190-30 ng-tns-c186-29 mat-mdc-select-disabled mat-mdc-select-empty ng-untouched ng-pristine ng-star-inserted" aria-labelledby="mat-mdc-form-field-label-26 mat-select-value-27" id="mat-select-26" tabindex="-1" aria-expanded="false" aria-required="false" aria-disabled="true" aria-invalid="false">
                                                          <div cdk-overlay-origin="" class="mat-mdc-select-trigger ng-tns-c190-30">
                                                             <div class="mat-mdc-select-value ng-tns-c190-30" id="mat-select-value-27">
                                                                <span class="mat-mdc-select-placeholder mat-mdc-select-min-line ng-tns-c190-30 ng-star-inserted">İlçe</span><!----><!---->
@@ -252,7 +252,7 @@
                                                    <!----><!----><!---->
                                                    <div class="mat-mdc-form-field-infix ng-tns-c186-31">
                                                       <!---->
-                                                      <mat-select onclick="toggleDropdown()" role="combobox" aria-autocomplete="none" aria-haspopup="listbox" class="mat-mdc-select ng-tns-c190-32 ng-tns-c186-31 mat-mdc-select-disabled mat-mdc-select-empty ng-untouched ng-pristine ng-star-inserted" aria-labelledby="mat-mdc-form-field-label-28 mat-select-value-29" id="mat-select-28" tabindex="-1" aria-expanded="false" aria-required="false" aria-disabled="true" aria-invalid="false">
+                                                      <mat-select onclick="toggleDropdown('dd3')" role="combobox" aria-autocomplete="none" aria-haspopup="listbox" class="mat-mdc-select ng-tns-c190-32 ng-tns-c186-31 mat-mdc-select-disabled mat-mdc-select-empty ng-untouched ng-pristine ng-star-inserted" aria-labelledby="mat-mdc-form-field-label-28 mat-select-value-29" id="mat-select-28" tabindex="-1" aria-expanded="false" aria-required="false" aria-disabled="true" aria-invalid="false">
                                                          <div cdk-overlay-origin="" class="mat-mdc-select-trigger ng-tns-c190-32">
                                                             <div class="mat-mdc-select-value ng-tns-c190-32" id="mat-select-value-29">
                                                                <span class="mat-mdc-select-placeholder mat-mdc-select-min-line ng-tns-c190-32 ng-star-inserted">Mahalle</span><!----><!---->
