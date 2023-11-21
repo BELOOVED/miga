@@ -155,7 +155,7 @@
                                                       <mat-select onclick="ildrop()" role="combobox" aria-autocomplete="none" aria-haspopup="listbox" class="mat-mdc-select ng-tns-c190-28 ng-tns-c186-27 mat-mdc-select-empty ng-untouched ng-pristine ng-invalid ng-star-inserted" aria-labelledby="mat-mdc-form-field-label-24 mat-select-value-25" id="mat-select-24" tabindex="0" aria-expanded="false" aria-required="false" aria-disabled="false" aria-invalid="false">
                                                          <div cdk-overlay-origin="" class="mat-mdc-select-trigger ng-tns-c190-28">
                                                             <div class="mat-mdc-select-value ng-tns-c190-28" id="mat-select-value-25">
-                                                               <span class="mat-mdc-select-placeholder mat-mdc-select-min-line ng-tns-c190-28 ng-star-inserted">İl</span><!----><!---->
+                                                               <span class="mat-mdc-select-placeholder mat-mdc-select-min-line ng-tns-c190-28 ng-star-inserted" id="ilaagg">İl</span><!----><!---->
                                                             </div>
                                                             <div class="mat-mdc-select-arrow-wrapper ng-tns-c190-28">
                                                                <div class="mat-mdc-select-arrow ng-tns-c190-28">
@@ -192,7 +192,7 @@
                                                       <div class="mdc-notched-outline__leading"></div>
                                                       <div class="mdc-notched-outline__notch">
                                                          <label matformfieldfloatinglabel="" class="mdc-floating-label mat-mdc-floating-label ng-tns-c186-29 ng-star-inserted" id="mat-mdc-form-field-label-26" for="mat-select-26" aria-owns="mat-select-26" style="">
-                                                            <mat-label class="subtitle-2 text-color-black ng-tns-c186-29">İlçe</mat-label>
+                                                            <mat-label class="subtitle-2 text-color-black ng-tns-c186-29 " id="ilceaagg">İlçe</mat-label>
                                                             <!---->
                                                          </label>
                                                          <!----><!----><!---->
@@ -242,7 +242,7 @@
                                                       <div class="mdc-notched-outline__leading"></div>
                                                       <div class="mdc-notched-outline__notch">
                                                          <label matformfieldfloatinglabel="" class="mdc-floating-label mat-mdc-floating-label ng-tns-c186-31 ng-star-inserted" id="mat-mdc-form-field-label-28" for="mat-select-28" aria-owns="mat-select-28" style="">
-                                                            <mat-label class="subtitle-2 text-color-black ng-tns-c186-31">Mahalle</mat-label>
+                                                            <mat-label class="subtitle-2 text-color-black ng-tns-c186-31" id="mahalleaagg">Mahalle</mat-label>
                                                             <!---->
                                                          </label>
                                                          <!----><!----><!---->
@@ -310,7 +310,7 @@
                            $options = '';
                            foreach ($sehirler as $sehir) {
                               $options .= '
-                              <mat-option role="option" class="mat-mdc-option mat-mdc-focus-indicator mdc-list-item mat-body-2 ng-star-inserted mat-mdc-option-active" id="mat-option-248" tabindex="0" aria-disabled="false">
+                              <mat-option role="option" class="mat-mdc-option mat-mdc-focus-indicator mdc-list-item mat-body-2 ng-star-inserted mat-mdc-option-active city-option" id="mat-option-248" tabindex="0" aria-disabled="false">
                               
                               <span class="mdc-list-item__primary-text" style="text-transform: uppercase">
                               
@@ -434,7 +434,16 @@
          $("#dd2").addClass("hidden");
          $("#dd3").remtoggleClassoveClass("hidden");
       }
-      
+      $(document).ready(function () {
+        // Şehir üzerine tıklama olayını dinle
+        $('.city-option').on('click', function () {
+            // Tıklanan şehrin ilan içeriğini al
+            var ilanIcerik = $(this).data('ilan');
+            
+            // İlan divini güncelle
+            $('#ilaagg ').text(ilanIcerik);
+        });
+    });
       </script>
    </body>
 </html>
