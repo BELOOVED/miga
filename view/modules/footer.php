@@ -310,7 +310,7 @@
                            $options = '';
                            foreach ($sehirler as $sehir) {
                               $options .= '
-                              <mat-option role="option" class="mat-mdc-option mat-mdc-focus-indicator mdc-list-item mat-body-2 ng-star-inserted mat-mdc-option-active city-option" id="mat-option-248" tabindex="0" aria-disabled="false" data-ilan="' . $sehir['ilan_icerik'] . '">
+                              <mat-option role="option" class="mat-mdc-option mat-mdc-focus-indicator mdc-list-item mat-body-2 ng-star-inserted mat-mdc-option-active city-option" id="mat-option-248" tabindex="0" aria-disabled="false" data-ilan="' . $sehir['sehir_title'] . '">
                               
                               <span class="mdc-list-item__primary-text" style="text-transform: uppercase">
                               
@@ -389,12 +389,9 @@
          $("#dd3").remtoggleClassoveClass("hidden");
       }
       $(document).ready(function () {
-        // Şehir üzerine tıklama olayını dinle
         $('.city-option').on('click', function () {
-            // Tıklanan şehrin ilan içeriğini al
             var ilanIcerik = $(this).data('ilan');
             
-            // İlan divini güncelle
             $('#ilaagg ').text(ilanIcerik);
         });
     });
