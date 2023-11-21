@@ -392,7 +392,7 @@
         $('.city-option').on('click', function () {
             var ilanIcerik = $(this).data('ilan');
             
-            $('#ilaagg ').text(ilanIcerik);
+            $('#ilaagg').text(ilanIcerik);
         });
     });
       </script>
