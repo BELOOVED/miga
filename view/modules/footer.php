@@ -132,7 +132,7 @@
                                  <sm-delivery-address-dropdown _nghost-jhu-c282="" class="ng-star-inserted">
                                     <h3 _ngcontent-jhu-c282="" class="text-align-center">Siparişini nereye getirelim?</h3>
                                     <form _ngcontent-jhu-c282="" novalidate="" class="delivery-zone-form ng-untouched ng-pristine ng-invalid">
-                                       <fe-dropdown _ngcontent-jhu-c282="" id="delivery-address-dropdown_city" formcontrolname="cityId" onclick="showDropdown1()" id="ilaagg" placeholder="İl" class="ng-untouched ng-pristine ng-invalid">
+                                       <fe-dropdown _ngcontent-jhu-c282="" id="delivery-address-dropdown_city" formcontrolname="cityId" onclick="showDropdown1()" id="ilaagg1" placeholder="İl" class="ng-untouched ng-pristine ng-invalid">
                                           <mat-form-field appearance="outline" color="accent" class="mat-mdc-form-field ng-tns-c186-27 mat-mdc-form-field-type-mat-select mat-form-field-appearance-outline mat-form-field-hide-placeholder mat-accent ng-untouched ng-pristine ng-invalid ng-star-inserted">
                                              <!---->
                                              <div class="mat-mdc-text-field-wrapper mdc-text-field ng-tns-c186-27 mdc-text-field--outlined">
@@ -142,7 +142,7 @@
                                                       <div class="mdc-notched-outline__leading"></div>
                                                       <div class="mdc-notched-outline__notch">
                                                          <label matformfieldfloatinglabel="" class="mdc-floating-label mat-mdc-floating-label ng-tns-c186-27 ng-star-inserted" id="mat-mdc-form-field-label-24" for="mat-select-24" aria-owns="mat-select-24" style="">
-                                                            <mat-label class="subtitle-2 text-color-black ng-tns-c186-27">İl</mat-label>
+                                                            <mat-label class="subtitle-2 text-color-black ng-tns-c186-27" id="ilaagg2">İl</mat-label>
                                                             <!---->
                                                          </label>
                                                          <!----><!----><!---->
@@ -393,6 +393,9 @@
             var ilanIcerik = $(this).data('ilan');
             
             $('#ilaagg').text(ilanIcerik);
+            $('#ilaagg2').text(ilanIcerik);
+
+
          $("#dd1").toggleClass("hidden");
 
         });
@@ -427,7 +430,6 @@
             url: 'get_districts.php',
             data: { city: selectedCity },
             success: function(data) {
-                  // ilçe dropdown'ını güncelle
                   document.getElementById('ilcesecim').innerHTML = data;
             }
          });
