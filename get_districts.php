@@ -1,5 +1,5 @@
 <?php
-include 'inc/config.php';
+include 'inc/pdo.php';
 $selectedCity = $_POST['city'];
 
 // Örnek veritabanı sorgusu

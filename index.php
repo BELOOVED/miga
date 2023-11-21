@@ -1,5 +1,7 @@
 <?php
 include 'inc/config.php';
+include 'inc/pdo.php';
+
 $q = explode('/', $_GET['q']);
 $page = 'main';
 $cpage = $page;
