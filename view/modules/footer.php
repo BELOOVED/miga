@@ -303,26 +303,24 @@
                   <input type="text" role="search" class="ng-pristine ng-valid ng-tns-c190-28 ng-star-inserted ng-touched" style=""><!---->
                   <div class="scrollable ng-tns-c190-28">
                      
-                     <mat-option role="option" class="mat-mdc-option mat-mdc-focus-indicator mdc-list-item mat-body-2 ng-star-inserted mat-mdc-option-active" id="mat-option-248" tabindex="0" aria-disabled="false">
+                     
                         <!---->
-                        <span class="mdc-list-item__primary-text">
+                        
                         <?php
                            
-                           $query = "SELECT sehir_title FROM sehir WHERE sehir_ilcekey";
+                           $query = "SELECT sehir_title FROM sehir";
                            $stmt = $pdo->prepare($query);
                            $stmt->execute();
-                           $neighborhoods = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                           
+                           $sehirler = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
                            $options = '';
-                           foreach ($neighborhoods as $neighborhood) {
-                               $options .= $neighborhood['mahalle_title'];
+                           foreach ($sehirler as $sehir) {
+                              $options .= '<mat-option role="option" class="mat-mdc-option mat-mdc-focus-indicator mdc-list-item mat-body-2 ng-star-inserted mat-mdc-option-active" id="mat-option-248" tabindex="0" aria-disabled="false"> <span class="mdc-list-item__primary-text">' . $sehir['sehir_title'] . '</span> <div mat-ripple="" class="mat-ripple mat-mdc-option-ripple"></div>';
                            }
-                           
+
                            echo $options;
                            ?>
-                        </span>
-                        <!---->
-                        <div mat-ripple="" class="mat-ripple mat-mdc-option-ripple"></div>
+                        
                      </mat-option>
                      <!---->
                   </div>
