@@ -152,7 +152,7 @@
                                                    <!----><!----><!---->
                                                    <div class="mat-mdc-form-field-infix ng-tns-c186-27">
                                                       <!---->
-                                                      <mat-select onclick="ildrop()" role="combobox" aria-autocomplete="none" aria-haspopup="listbox" class="mat-mdc-select ng-tns-c190-28 ng-tns-c186-27 mat-mdc-select-empty ng-untouched ng-pristine ng-invalid ng-star-inserted" aria-labelledby="mat-mdc-form-field-label-24 mat-select-value-25" id="mat-select-24" tabindex="0" aria-expanded="false" aria-required="false" aria-disabled="false" aria-invalid="false">
+                                                      <mat-select onclick="toggleDropdown()" role="combobox" aria-autocomplete="none" aria-haspopup="listbox" class="mat-mdc-select ng-tns-c190-28 ng-tns-c186-27 mat-mdc-select-empty ng-untouched ng-pristine ng-invalid ng-star-inserted" aria-labelledby="mat-mdc-form-field-label-24 mat-select-value-25" id="mat-select-24" tabindex="0" aria-expanded="false" aria-required="false" aria-disabled="false" aria-invalid="false">
                                                          <div cdk-overlay-origin="" class="mat-mdc-select-trigger ng-tns-c190-28">
                                                             <div class="mat-mdc-select-value ng-tns-c190-28" id="mat-select-value-25">
                                                                <span class="mat-mdc-select-placeholder mat-mdc-select-min-line ng-tns-c190-28 ng-star-inserted">İl</span><!----><!---->
@@ -202,7 +202,7 @@
                                                    <!----><!----><!---->
                                                    <div class="mat-mdc-form-field-infix ng-tns-c186-29">
                                                       <!---->
-                                                      <mat-select onclick="ilcedrop()" role="combobox" aria-autocomplete="none" aria-haspopup="listbox" class="mat-mdc-select ng-tns-c190-30 ng-tns-c186-29 mat-mdc-select-disabled mat-mdc-select-empty ng-untouched ng-pristine ng-star-inserted" aria-labelledby="mat-mdc-form-field-label-26 mat-select-value-27" id="mat-select-26" tabindex="-1" aria-expanded="false" aria-required="false" aria-disabled="true" aria-invalid="false">
+                                                      <mat-select onclick="toggleDropdown()" role="combobox" aria-autocomplete="none" aria-haspopup="listbox" class="mat-mdc-select ng-tns-c190-30 ng-tns-c186-29 mat-mdc-select-disabled mat-mdc-select-empty ng-untouched ng-pristine ng-star-inserted" aria-labelledby="mat-mdc-form-field-label-26 mat-select-value-27" id="mat-select-26" tabindex="-1" aria-expanded="false" aria-required="false" aria-disabled="true" aria-invalid="false">
                                                          <div cdk-overlay-origin="" class="mat-mdc-select-trigger ng-tns-c190-30">
                                                             <div class="mat-mdc-select-value ng-tns-c190-30" id="mat-select-value-27">
                                                                <span class="mat-mdc-select-placeholder mat-mdc-select-min-line ng-tns-c190-30 ng-star-inserted">İlçe</span><!----><!---->
@@ -252,7 +252,7 @@
                                                    <!----><!----><!---->
                                                    <div class="mat-mdc-form-field-infix ng-tns-c186-31">
                                                       <!---->
-                                                      <mat-select onclick="mahalledrop()" role="combobox" aria-autocomplete="none" aria-haspopup="listbox" class="mat-mdc-select ng-tns-c190-32 ng-tns-c186-31 mat-mdc-select-disabled mat-mdc-select-empty ng-untouched ng-pristine ng-star-inserted" aria-labelledby="mat-mdc-form-field-label-28 mat-select-value-29" id="mat-select-28" tabindex="-1" aria-expanded="false" aria-required="false" aria-disabled="true" aria-invalid="false">
+                                                      <mat-select onclick="toggleDropdown()" role="combobox" aria-autocomplete="none" aria-haspopup="listbox" class="mat-mdc-select ng-tns-c190-32 ng-tns-c186-31 mat-mdc-select-disabled mat-mdc-select-empty ng-untouched ng-pristine ng-star-inserted" aria-labelledby="mat-mdc-form-field-label-28 mat-select-value-29" id="mat-select-28" tabindex="-1" aria-expanded="false" aria-required="false" aria-disabled="true" aria-invalid="false">
                                                          <div cdk-overlay-origin="" class="mat-mdc-select-trigger ng-tns-c190-32">
                                                             <div class="mat-mdc-select-value ng-tns-c190-32" id="mat-select-value-29">
                                                                <span class="mat-mdc-select-placeholder mat-mdc-select-min-line ng-tns-c190-32 ng-star-inserted">Mahalle</span><!----><!---->
@@ -299,7 +299,7 @@
          <div class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing hidden"></div>
          <div class="cdk-overlay-connected-position-bounding-box hidden" id="" dir="ltr" style="top: 0px; left: 0px; height: 100%; width: 100%;">
             <div id="cdk-overlay-6" class="cdk-overlay-pane dialog-shadow" style="width: 312px; top: 164.969px; left: 24px;">
-               <div role="listbox" id="dd1" tabindex="-1" class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel" id="ilsecim" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
+               <div role="listbox" id="dd1" tabindex="-1" class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel hidden" id="ilsecim" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
                   <input type="text" role="search" class="ng-pristine ng-valid ng-tns-c190-28 ng-star-inserted ng-touched" style=""><!---->
                   <div class="scrollable ng-tns-c190-28">
                         <?php
@@ -328,7 +328,7 @@
                            ?>
                   </div>
                </div>
-               <div role="listbox hidden" id="dd2" tabindex="-1" class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel" id="ilcesecim" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
+               <div role="listbox" id="dd2" tabindex="-1" class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel hidden" id="ilcesecim" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
                   <input type="text" role="search" class="ng-pristine ng-valid ng-tns-c190-28 ng-star-inserted ng-touched" style=""><!---->
                   <div class="scrollable ng-tns-c190-28">
                      <!---->
@@ -342,7 +342,7 @@
                      <!---->
                   </div>
                </div>
-               <div role="listbox hidden" id="dd3" tabindex="-1" class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel" id="mahallesecim" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
+               <div role="listbox" id="dd3" tabindex="-1" class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel hidden" id="mahallesecim" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
                   <input type="text" role="search" class="ng-pristine ng-valid ng-tns-c190-28 ng-star-inserted ng-touched" style=""><!---->
                   <div class="scrollable ng-tns-c190-28">
                      <!---->
@@ -410,24 +410,31 @@
       function showDropdown1(){
          $(".ilsecim").removeClass("hidden");
       }
-      function ildrop(){
-         $(".cdk-overlay-connected-position-bounding-box").removeClass("hidden");
-         $("#dd1").removeClass("hidden");
-         $("#dd1").addClass("hidden");
-         $("#dd1").addClass("hidden");
-      }
-      function ilcedrop(){
-         $(".cdk-overlay-connected-position-bounding-box").removeClass("hidden");
-         $("#dd1").addClass("hidden");
-         $("#dd1").removeClass("hidden");
-         $("#dd1").addClass("hidden");
-      }
-      function mahalledrop(){
-         $(".cdk-overlay-connected-position-bounding-box").removeClass("hidden");
-         $("#dd1").addClass("hidden");
-         $("#dd1").addClass("hidden");
-         $("#dd1").removeClass("hidden");
-      }
+      function toggleDropdown(dropdown) {
+        dropdown.toggleClass('hidden');
+        $('.dropdown-panel').not(dropdown).addClass('hidden');
+    }
+
+    // Her bir dropdown için tıklama olaylarına tepki ver
+    $('#dd1').click(function (event) {
+        event.stopPropagation();
+        toggleDropdown($(this));
+    });
+
+    $('#dd2').click(function (event) {
+        event.stopPropagation();
+        toggleDropdown($(this));
+    });
+
+    $('#dd3').click(function (event) {
+        event.stopPropagation();
+        toggleDropdown($(this));
+    });
+
+    // Belge üzerine tıklandığında dropdownları gizle
+    $(document).click(function () {
+        $('.dropdown-panel').addClass('hidden');
+    });
       </script>
    </body>
 </html>
