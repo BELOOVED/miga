@@ -411,7 +411,7 @@
          $(".ilsecim").removeClass("hidden");
       }
       function toggleDropdown(dropdown) {
-        dropdown.toggleClass('hidden');
+         $('#' + dropdown).toggleClass('hidden');
         $('.dropdown-panel').not(dropdown).addClass('hidden');
     }
 
