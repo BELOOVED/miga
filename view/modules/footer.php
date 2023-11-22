@@ -182,7 +182,7 @@
                                              </div>
                                           </mat-form-field>
                                        </fe-dropdown>
-                                       <fe-dropdown _ngcontent-jhu-c282="" id="delivery-address-dropdown_town" formcontrolname="townId" onclick="showDropdown2()" placeholder="İlçe" class="disabled ng-untouched ng-pristine ng-invalid">
+                                       <fe-dropdown _ngcontent-jhu-c282="" id="delivery-address-dropdown_town" formcontrolname="townId" onclick="showDropdown2()" id="ilaagg3" placeholder="İlçe" class="disabled ng-untouched ng-pristine ng-invalid">
                                           <mat-form-field appearance="outline" color="accent" id="citygga" class="mat-mdc-form-field ng-tns-c186-29 mat-mdc-form-field-type-mat-select mat-form-field-disabled mat-form-field-appearance-outline mat-form-field-hide-placeholder mat-accent ng-untouched ng-pristine ng-star-inserted">
                                              <!---->
                                              <div class="mat-mdc-text-field-wrapper mdc-text-field ng-tns-c186-29 mdc-text-field--outlined mdc-text-field--disabled">
@@ -192,7 +192,7 @@
                                                       <div class="mdc-notched-outline__leading"></div>
                                                       <div class="mdc-notched-outline__notch">
                                                          <label matformfieldfloatinglabel="" class="mdc-floating-label mat-mdc-floating-label ng-tns-c186-29 ng-star-inserted" id="mat-mdc-form-field-label-26" for="mat-select-26" aria-owns="mat-select-26" style="">
-                                                            <mat-label class="subtitle-2 text-color-black ng-tns-c186-29 " id="ilceaagg">İlçe</mat-label>
+                                                            <mat-label class="subtitle-2 text-color-black ng-tns-c186-29 " id="ilaagg4">İlçe</mat-label>
                                                             <!---->
                                                          </label>
                                                          <!----><!----><!---->
@@ -232,7 +232,7 @@
                                              </div>
                                           </mat-form-field>
                                        </fe-dropdown>
-                                       <fe-dropdown _ngcontent-jhu-c282="" id="delivery-address-dropdown_district" formcontrolname="serviceAreaObjectId" onclick="showDropdown3()" placeholder="Mahalle" class="disabled ng-untouched ng-pristine">
+                                       <fe-dropdown _ngcontent-jhu-c282="" id="delivery-address-dropdown_district" formcontrolname="serviceAreaObjectId" onclick="showDropdown3()" id="ilaagg5" placeholder="Mahalle" class="disabled ng-untouched ng-pristine">
                                           <mat-form-field appearance="outline" color="accent" class="mat-mdc-form-field ng-tns-c186-31 mat-mdc-form-field-type-mat-select mat-form-field-disabled mat-form-field-appearance-outline mat-form-field-hide-placeholder mat-accent ng-untouched ng-pristine ng-star-inserted">
                                              <!---->
                                              <div class="mat-mdc-text-field-wrapper mdc-text-field ng-tns-c186-31 mdc-text-field--outlined mdc-text-field--disabled">
@@ -242,7 +242,7 @@
                                                       <div class="mdc-notched-outline__leading"></div>
                                                       <div class="mdc-notched-outline__notch">
                                                          <label matformfieldfloatinglabel="" class="mdc-floating-label mat-mdc-floating-label ng-tns-c186-31 ng-star-inserted" id="mat-mdc-form-field-label-28" for="mat-select-28" aria-owns="mat-select-28" style="">
-                                                            <mat-label class="subtitle-2 text-color-black ng-tns-c186-31" id="mahalleaagg">Mahalle</mat-label>
+                                                            <mat-label class="subtitle-2 text-color-black ng-tns-c186-31" id="ilaagg6">Mahalle</mat-label>
                                                             <!---->
                                                          </label>
                                                          <!----><!----><!---->
@@ -413,13 +413,33 @@
         $("#dd2").addClass("hidden");
         $("#dd3").toggleClass("hidden");
     }
-
+    
     $(document).ready(function () {
         $('.city-option').on('click', function () {
             var ilanIcerik = $(this).data('ilan');
             $('#ilaagg').text(ilanIcerik);
             $('#ilaagg2').text(ilanIcerik);
+            $('#citygga').removeClass('mat-form-field-disabled');
+
             $("#dd1").toggleClass("hidden");
+            $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
+        });
+    });
+    $(document).ready(function () {
+        $('.town-option').on('click', function () {
+            var ilanIcerik = $(this).data('ilan');
+            $('#ilaagg3').text(ilanIcerik);
+            $('#ilaagg4').text(ilanIcerik);
+            $("#dd2").toggleClass("hidden");
+            $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
+        });
+    });
+    $(document).ready(function () {
+        $('.town-option').on('click', function () {
+            var ilanIcerik = $(this).data('ilan');
+            $('#ilaagg5').text(ilanIcerik);
+            $('#ilaagg6').text(ilanIcerik);
+            $("#dd3").toggleClass("hidden");
             $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
         });
     });
