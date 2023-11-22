@@ -356,6 +356,8 @@
             $.post('get_districts.php', { city: selectedCity })
                 .done(function (data) {
                     $("#dd2").removeClass("hidden");
+                    $("#delivery-address-dropdown_town").removeClass("disabled");
+
                     $('#districta').html(data);
                 })
                 .fail(function (error) {
