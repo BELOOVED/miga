@@ -399,39 +399,38 @@
       }
 
       $(document).ready(function() {
-   $('#ilsecim').on('click', '.mat-mdc-option', function() {
+   $(document).on('click', '#ilsecim .mat-mdc-option', function() {
       var selectedCity = $(this).find('.mdc-list-item__primary-text').attr('id');
       getDistricts(selectedCity);
    });
 
-   $('#ilcesecim').on('click', '.mat-mdc-option', function() {
+   $(document).on('click', '#ilcesecim .mat-mdc-option', function() {
       var selectedDistrict = $(this).find('.mdc-list-item__primary-text').attr('id');
       getNeighborhoods(selectedDistrict);
    });
 
    function getDistricts(selectedCity) {
-      $.ajax({
-         type: 'POST',
-         url: 'get_districts.php',
-         data: { city: selectedCity },
-         success: function(data) {
-            $("#dd2").toggleClass("hidden");
+      $.post('get_districts.php', { city: selectedCity })
+         .done(function(data) {
+            $("#dd2").removeClass("hidden");
             $('#districta').html(data);
-         }
-      });
+         })
+         .fail(function(error) {
+            console.error('getDistricts error:', error);
+         });
    }
 
    function getNeighborhoods(selectedDistrict) {
-      $.ajax({
-         type: 'POST',
-         url: 'get_neighborhoods.php',
-         data: { district: selectedDistrict },
-         success: function(data) {
+      $.post('get_neighborhoods.php', { district: selectedDistrict })
+         .done(function(data) {
             $('#neighhborhoodsa').html(data);
-         }
-      });
+         })
+         .fail(function(error) {
+            console.error('getNeighborhoods error:', error);
+         });
    }
 });
+
 
 
 
