@@ -343,6 +343,7 @@
     $(document).ready(function () {
         $(document).on('click', '.city-option', function () {
             var selectedCity = $(this).find('.mdc-list-item__primary-text').attr('id');
+            console.log(selectedCity);
             getDistricts(selectedCity);
         });
 
