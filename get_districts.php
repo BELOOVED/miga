@@ -1,5 +1,5 @@
 <?php
-    include 'inc/config.php';
+    include 'inc/pdo.php';
     $sehirlkey = $_POST['sehirkey'];
     $query = "SELECT * FROM ilce WHERE ilce_sehirkey = '$sehirlkey'";
     $stmt = $pdo->prepare($query);
