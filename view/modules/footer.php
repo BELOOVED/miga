@@ -298,143 +298,137 @@
          </div>
          <div class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing hidden"></div>
          <div class="cdk-overlay-connected-position-bounding-box hidden" id="" dir="ltr" style="top: 0px; left: 0px; height: 100%; width: 100%;">
-            <div id="cdk-overlay-6" class="cdk-overlay-pane dialog-shadow" style="width: 312px; top: 164.969px; left: 24px;">
-               <div role="listbox" id="dd1" tabindex="-1" class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel hidden" id="ilsecim" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
-                  <input type="text" role="search" class="ng-pristine ng-valid ng-tns-c190-28 ng-star-inserted ng-touched" style=""><!---->
-                  <div class="scrollable ng-tns-c190-28">
-                        <?php
-                           $query = "SELECT * FROM sehir";
-                           $stmt = $pdo->prepare($query);
-                           $stmt->execute();
-                           $sehirler = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                           $options = '';
-                           foreach ($sehirler as $sehir) {
-                              $options .= '
-                              <mat-option role="option" class="mat-mdc-option mat-mdc-focus-indicator mdc-list-item mat-body-2 ng-star-inserted mat-mdc-option-active city-option" id="mat-option-248" tabindex="0" aria-disabled="false" data-ilan="' . $sehir['sehir_title'] . '">
-                              
-                              <span class="mdc-list-item__primary-text" style="text-transform: uppercase" id="' . $sehir['ilce_sehirkey'] . '">
-                              
-                              
-                              
-                              ' . $sehir['sehir_title'] . '
-                              </span>
-                              
-                              
-                              <div mat-ripple="" class="mat-ripple mat-mdc-option-ripple"></div>
-                              </mat-option>
-                              ';
-                           }
-                           echo $options;
-                           ?>
-                  </div>
-               </div>
-               <div role="listbox" id="dd2" tabindex="-1" class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel hidden" id="ilcesecim" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
-                  <input type="text" role="search" class="ng-pristine ng-valid ng-tns-c190-28 ng-star-inserted ng-touched" style=""><!---->
-                  <div class="scrollable ng-tns-c190-28" id="districta">
-                  
-                  </div>
-               </div>
-               <div role="listbox" id="dd3" tabindex="-1" class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel hidden" id="mahallesecim" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24" >
-                  <input type="text" role="search" class="ng-pristine ng-valid ng-tns-c190-28 ng-star-inserted ng-touched" style=""><!---->
-                  <div class="scrollable ng-tns-c190-28" id="neighhborhoodsa">
-                  
-                  </div>
-               </div>
+    <div id="cdk-overlay-6" class="cdk-overlay-pane dialog-shadow" style="width: 312px; top: 164.969px; left: 24px;">
+        <div role="listbox" id="dd1" tabindex="-1"
+            class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel hidden"
+            id="ilsecim" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
+            <input type="text" role="search" class="ng-pristine ng-valid ng-tns-c190-28 ng-star-inserted ng-touched"
+                style=""><!---->
+            <div class="scrollable ng-tns-c190-28">
+                <?php
+                    $query = "SELECT * FROM sehir";
+                    $stmt = $pdo->prepare($query);
+                    $stmt->execute();
+                    $sehirler = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                    $options = '';
+                    foreach ($sehirler as $sehir) {
+                        $options .= '
+                            <mat-option role="option" class="mat-mdc-option mat-mdc-focus-indicator mdc-list-item mat-body-2 ng-star-inserted mat-mdc-option-active city-option" tabindex="0" aria-disabled="false" data-ilan="' . $sehir['sehir_title'] . '">
+                                <span class="mdc-list-item__primary-text" style="text-transform: uppercase" id="' . $sehir['ilce_sehirkey'] . '">
+                                    ' . $sehir['sehir_title'] . '
+                                </span>
+                                <div mat-ripple="" class="mat-ripple mat-mdc-option-ripple"></div>
+                            </mat-option>';
+                    }
+                    echo $options;
+                ?>
             </div>
-         </div>
-      </div>
-      <script>
-          function showDropdown1(){
-         $(".ilsecim").removeClass("hidden");
-      }
-      function showDropdown2(){
-         $(".ilcesecim").removeClass("hidden");
-      }
-      function showDropdown3(){
-         $(".mahallesecim").removeClass("hidden");
-      }
-      function ildrop(){
-         $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
-         $("#dd1").toggleClass("hidden");
-         $("#dd2").addClass("hidden");
-         $("#dd3").addClass("hidden");
-      }
-      function ilcedrop(){
-         $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
-         $("#dd1").addClass("hidden");
-         $("#dd2").toggleClass("hidden");
-         $("#dd3").addClass("hidden");
-      }
-      function mahalledrop(){
-         $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
-         $("#dd1").addClass("hidden");
-         $("#dd2").addClass("hidden");
-         $("#dd3").remtoggleClassoveClass("hidden");
-      }
-      $(document).ready(function () {
+        </div>
+        <div role="listbox" id="dd2" tabindex="-1"
+            class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel hidden" id="ilcesecim" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
+            <input type="text" role="search" class="ng-pristine ng-valid ng-tns-c190-28 ng-star-inserted ng-touched"
+                style=""><!---->
+            <div class="scrollable ng-tns-c190-28" id="districta"></div>
+        </div>
+        <div role="listbox" id="dd3" tabindex="-1"
+            class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel hidden" id="mahallesecim" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
+            <input type="text" role="search" class="ng-pristine ng-valid ng-tns-c190-28 ng-star-inserted ng-touched"
+                style=""><!---->
+            <div class="scrollable ng-tns-c190-28" id="neighhborhoodsa"></div>
+        </div>
+    </div>
+</div>
+</div>
+<script>
+    $(document).ready(function () {
+        $(document).on('click', '.city-option', function () {
+            var selectedCity = $(this).find('.mdc-list-item__primary-text').attr('id');
+            getDistricts(selectedCity);
+        });
+
+        $(document).on('click', '.mat-mdc-option', function () {
+            var selectedDistrict = $(this).find('.mdc-list-item__primary-text').attr('id');
+            getNeighborhoods(selectedDistrict);
+        });
+
+        function getDistricts(selectedCity) {
+            $.post('get_districts.php', { city: selectedCity })
+                .done(function (data) {
+                    $("#dd2").removeClass("hidden");
+                    $('#districta').html(data);
+                })
+                .fail(function (error) {
+                    console.error('getDistricts error:', error);
+                });
+        }
+
+        function getNeighborhoods(selectedDistrict) {
+            $.post('get_neighborhoods.php', { district: selectedDistrict })
+                .done(function (data) {
+                    $('#neighhborhoodsa').html(data);
+                })
+                .fail(function (error) {
+                    console.error('getNeighborhoods error:', error);
+                });
+        }
+    });
+
+    function showDropdown1() {
+        $(".ilsecim").removeClass("hidden");
+    }
+
+    function showDropdown2() {
+        $(".ilcesecim").removeClass("hidden");
+    }
+
+    function showDropdown3() {
+        $(".mahallesecim").removeClass("hidden");
+    }
+
+    function ildrop() {
+        $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
+        $("#dd1").toggleClass("hidden");
+        $("#dd2").addClass("hidden");
+        $("#dd3").addClass("hidden");
+    }
+
+    function ilcedrop() {
+        $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
+        $("#dd1").addClass("hidden");
+        $("#dd2").toggleClass("hidden");
+        $("#dd3").addClass("hidden");
+    }
+
+    function mahalledrop() {
+        $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
+        $("#dd1").addClass("hidden");
+        $("#dd2").addClass("hidden");
+        $("#dd3").remtoggleClassoveClass("hidden");
+    }
+
+    $(document).ready(function () {
         $('.city-option').on('click', function () {
             var ilanIcerik = $(this).data('ilan');
-            
             $('#ilaagg').text(ilanIcerik);
             $('#ilaagg2').text(ilanIcerik);
-
-
-         $("#dd1").toggleClass("hidden");
-         $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
-
+            $("#dd1").toggleClass("hidden");
+            $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
         });
     });
-      </script>
-      <script>
-      function openmodal(contentId, menuId) {
-          $(".cdk-overlay-container").addClass("hidden");
-          $("#" + contentId).removeClass("hidden");    
-      }
-      function closemodal(){
-         $(".cdk-overlay-container").addClass("hidden");
-      }
-      function sepetadres(){
-         $("#sepet1").addClass("hidden");
-         $("#sepet2").removeClass("hidden");
-      }
+</script>
+<script>
+    function openmodal(contentId, menuId) {
+        $(".cdk-overlay-container").addClass("hidden");
+        $("#" + contentId).removeClass("hidden");
+    }
+    function closemodal() {
+        $(".cdk-overlay-container").addClass("hidden");
+    }
+    function sepetadres() {
+        $("#sepet1").addClass("hidden");
+        $("#sepet2").removeClass("hidden");
+    }
+</script>
 
-      $(document).ready(function() {
-   $(document).on('click', '#ilsecim .mat-mdc-option', function() {
-      var selectedCity = $(this).find('.mdc-list-item__primary-text').attr('id');
-      getDistricts(selectedCity);
-   });
-
-   $(document).on('click', '#ilcesecim .mat-mdc-option', function() {
-      var selectedDistrict = $(this).find('.mdc-list-item__primary-text').attr('id');
-      getNeighborhoods(selectedDistrict);
-   });
-
-   function getDistricts(selectedCity) {
-      $.post('get_districts.php', { city: selectedCity })
-         .done(function(data) {
-            $("#dd2").removeClass("hidden");
-            $('#districta').html(data);
-         })
-         .fail(function(error) {
-            console.error('getDistricts error:', error);
-         });
-   }
-
-   function getNeighborhoods(selectedDistrict) {
-      $.post('get_neighborhoods.php', { district: selectedDistrict })
-         .done(function(data) {
-            $('#neighhborhoodsa').html(data);
-         })
-         .fail(function(error) {
-            console.error('getNeighborhoods error:', error);
-         });
-   }
-});
-
-
-
-
-     
-      </script>
    </body>
 </html>
