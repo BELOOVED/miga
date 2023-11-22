@@ -182,8 +182,8 @@
                                              </div>
                                           </mat-form-field>
                                        </fe-dropdown>
-                                       <fe-dropdown _ngcontent-jhu-c282="" id="delivery-address-dropdown_town" formcontrolname="townId" onclick="showDropdown2()" placeholder="İlçe" class="disabled ng-untouched ng-pristine">
-                                          <mat-form-field appearance="outline" color="accent" class="mat-mdc-form-field ng-tns-c186-29 mat-mdc-form-field-type-mat-select mat-form-field-disabled mat-form-field-appearance-outline mat-form-field-hide-placeholder mat-accent ng-untouched ng-pristine ng-star-inserted">
+                                       <fe-dropdown _ngcontent-jhu-c282="" id="delivery-address-dropdown_town" formcontrolname="townId" onclick="showDropdown2()" placeholder="İlçe" class="disabled ng-untouched ng-pristine ng-invalid">
+                                          <mat-form-field appearance="outline" color="accent" id="citygga" class="mat-mdc-form-field ng-tns-c186-29 mat-mdc-form-field-type-mat-select mat-form-field-disabled mat-form-field-appearance-outline mat-form-field-hide-placeholder mat-accent ng-untouched ng-pristine ng-star-inserted">
                                              <!---->
                                              <div class="mat-mdc-text-field-wrapper mdc-text-field ng-tns-c186-29 mdc-text-field--outlined mdc-text-field--disabled">
                                                 <!---->
@@ -301,7 +301,7 @@
     <div id="cdk-overlay-6" class="cdk-overlay-pane dialog-shadow" style="width: 312px; top: 164.969px; left: 24px;">
         <div role="listbox" id="dd1" tabindex="-1"
             class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel hidden"
-            id="ilsecim" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
+            aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
             <input type="text" role="search" class="ng-pristine ng-valid ng-tns-c190-28 ng-star-inserted ng-touched"
                 style=""><!---->
             <div class="scrollable ng-tns-c190-28">
@@ -325,13 +325,13 @@
             </div>
         </div>
         <div role="listbox" id="dd2" tabindex="-1"
-            class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel hidden" id="ilcesecim" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
+            class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel hidden" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
             <input type="text" role="search" class="ng-pristine ng-valid ng-tns-c190-28 ng-star-inserted ng-touched"
                 style=""><!---->
             <div class="scrollable ng-tns-c190-28" id="districta"></div>
         </div>
         <div role="listbox" id="dd3" tabindex="-1"
-            class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel hidden" id="mahallesecim" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
+            class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel hidden" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
             <input type="text" role="search" class="ng-pristine ng-valid ng-tns-c190-28 ng-star-inserted ng-touched"
                 style=""><!---->
             <div class="scrollable ng-tns-c190-28" id="neighhborhoodsa"></div>
@@ -378,18 +378,6 @@
         }
     });
 
-    function showDropdown1() {
-        $(".ilsecim").removeClass("hidden");
-    }
-
-    function showDropdown2() {
-        $(".ilcesecim").removeClass("hidden");
-    }
-
-    function showDropdown3() {
-        $(".mahallesecim").removeClass("hidden");
-    }
-
     function ildrop() {
         $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
         $("#dd1").toggleClass("hidden");
@@ -434,6 +422,6 @@
         $("#sepet2").removeClass("hidden");
     }
 </script>
-
+citygga
    </body>
 </html>
