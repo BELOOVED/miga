@@ -132,7 +132,7 @@
                                  <sm-delivery-address-dropdown _nghost-jhu-c282="" class="ng-star-inserted">
                                     <h3 _ngcontent-jhu-c282="" class="text-align-center">Siparişini nereye getirelim?</h3>
                                     <form _ngcontent-jhu-c282="" novalidate="" class="delivery-zone-form ng-untouched ng-pristine ng-invalid">
-                                       <fe-dropdown _ngcontent-jhu-c282="" id="delivery-address-dropdown_city" formcontrolname="cityId" onclick="showDropdown1()" id="ilaagg1" placeholder="İl" class="ng-untouched ng-pristine ng-invalid">
+                                       <fe-dropdown _ngcontent-jhu-c282="" id="delivery-address-dropdown_city" formcontrolname="cityId" id="ilaagg1" placeholder="İl" class="ng-untouched ng-pristine ng-invalid">
                                           <mat-form-field appearance="outline" color="accent" class="mat-mdc-form-field ng-tns-c186-27 mat-mdc-form-field-type-mat-select mat-form-field-appearance-outline mat-form-field-hide-placeholder mat-accent ng-untouched ng-pristine ng-invalid ng-star-inserted">
                                              <!---->
                                              <div class="mat-mdc-text-field-wrapper mdc-text-field ng-tns-c186-27 mdc-text-field--outlined">
@@ -182,7 +182,7 @@
                                              </div>
                                           </mat-form-field>
                                        </fe-dropdown>
-                                       <fe-dropdown _ngcontent-jhu-c282="" id="delivery-address-dropdown_town" formcontrolname="townId" onclick="showDropdown2()" placeholder="İlçe" class="disabled ng-untouched ng-pristine ng-invalid">
+                                       <fe-dropdown _ngcontent-jhu-c282="" id="delivery-address-dropdown_town" formcontrolname="townId" placeholder="İlçe" class="disabled ng-untouched ng-pristine ng-invalid">
                                           <mat-form-field appearance="outline" color="accent" id="citygga" class="mat-mdc-form-field ng-tns-c186-29 mat-mdc-form-field-type-mat-select mat-form-field-disabled mat-form-field-appearance-outline mat-form-field-hide-placeholder mat-accent ng-untouched ng-pristine ng-star-inserted">
                                              <!---->
                                              <div class="mat-mdc-text-field-wrapper mdc-text-field ng-tns-c186-29 mdc-text-field--outlined mdc-text-field--disabled">
@@ -232,7 +232,7 @@
                                              </div>
                                           </mat-form-field>
                                        </fe-dropdown>
-                                       <fe-dropdown _ngcontent-jhu-c282="" id="delivery-address-dropdown_district" formcontrolname="serviceAreaObjectId" onclick="showDropdown3()" placeholder="Mahalle" class="disabled ng-untouched ng-pristine">
+                                       <fe-dropdown _ngcontent-jhu-c282="" id="delivery-address-dropdown_district" formcontrolname="serviceAreaObjectId" placeholder="Mahalle" class="disabled ng-untouched ng-pristine">
                                           <mat-form-field appearance="outline" color="accent" class="mat-mdc-form-field ng-tns-c186-31 mat-mdc-form-field-type-mat-select mat-form-field-disabled mat-form-field-appearance-outline mat-form-field-hide-placeholder mat-accent ng-untouched ng-pristine ng-star-inserted">
                                              <!---->
                                              <div class="mat-mdc-text-field-wrapper mdc-text-field ng-tns-c186-31 mdc-text-field--outlined mdc-text-field--disabled">
@@ -298,7 +298,7 @@
          </div>
          <div class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing hidden"></div>
          <div class="cdk-overlay-connected-position-bounding-box hidden" id="" dir="ltr" style="top: 0px; left: 0px; height: 100%; width: 100%;">
-    <div id="cdk-overlay-6" class="cdk-overlay-pane dialog-shadow" style="width: 312px; top: 164.969px; left: 24px;">
+          <div id="cdk-overlay-6" id="toppoa" class="cdk-overlay-pane dialog-shadow" style="width: 312px; top: 164.969px; left: 24px;">
         <div role="listbox" id="dd1" tabindex="-1"
             class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel hidden"
             aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
@@ -357,6 +357,9 @@
         function getDistricts(selectedCity) {
             $.post('get_districts.php', { city: selectedCity })
                 .done(function (data) {
+                    $(".cdk-overlay-connected-position-bounding-box").addClass("hidden");
+                    $("#toppoa").css('top:' '248.953px');
+
                     $("#dd2").removeClass("hidden");
                     $("#delivery-address-dropdown_town").removeClass("disabled");
 
