@@ -381,6 +381,18 @@
         }
     });
 
+    function showDropdown1() {
+        $(".ilsecim").removeClass("hidden");
+    }
+
+    function showDropdown2() {
+        $(".ilcesecim").removeClass("hidden");
+    }
+
+    function showDropdown3() {
+        $(".mahallesecim").removeClass("hidden");
+    }
+
     function ildrop() {
         $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
         $("#dd1").toggleClass("hidden");
