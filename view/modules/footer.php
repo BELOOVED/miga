@@ -185,7 +185,7 @@
                                        <fe-dropdown _ngcontent-jhu-c282="" id="delivery-address-dropdown_town" formcontrolname="townId" onclick="showDropdown2()" id="ilaagg3" placeholder="İlçe" class="disabled ng-untouched ng-pristine ng-invalid">
                                           <mat-form-field appearance="outline" color="accent" id="citygga" class="mat-mdc-form-field ng-tns-c186-29 mat-mdc-form-field-type-mat-select mat-form-field-disabled mat-form-field-appearance-outline mat-form-field-hide-placeholder mat-accent ng-untouched ng-pristine ng-star-inserted">
                                              <!---->
-                                             <div class="mat-mdc-text-field-wrapper mdc-text-field ng-tns-c186-29 mdc-text-field--outlined mdc-text-field--disabled">
+                                             <div class="mat-mdc-text-field-wrapper mdc-text-field ng-tns-c186-29 mdc-text-field--outlined mdc-text-field--disabled" id="ggagfkdfg">
                                                 <!---->
                                                 <div class="mat-mdc-form-field-flex ng-tns-c186-29">
                                                    <div matformfieldnotchedoutline="" class="mdc-notched-outline ng-tns-c186-29 mdc-notched-outline--upgraded ng-star-inserted">
@@ -420,7 +420,7 @@
             $('#ilaagg').text(ilanIcerik);
             $('#ilaagg2').text(ilanIcerik);
             $('#citygga').removeClass('mat-form-field-disabled');
-
+            $('#ggagfkdfg').removeClass('mdc-text-field--disabled');
             $("#dd1").toggleClass("hidden");
             $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
         });
@@ -457,6 +457,5 @@
         $("#sepet2").removeClass("hidden");
     }
 </script>
-citygga
    </body>
 </html>
