@@ -353,22 +353,22 @@
             var selectedDistrict = $(this).find('.mdc-list-item__primary-text').attr('id');
             getNeighborhoods(selectedDistrict);
         });
-
         function getDistricts(selectedCity) {
-            $.post('get_districts.php', { city: selectedCity })
-                .done(function (data) {
-                    $(".cdk-overlay-connected-position-bounding-box").addClass("hidden");
-                    $("#toppoa").css('top:' '248.953px');
+    $.post('get_districts.php', { city: selectedCity })
+        .done(function (data) {
+            $(".cdk-overlay-connected-position-bounding-box").addClass("hidden");
+            $("#toppoa").css('top', '248.953px'); // Burada virgül kullanımına dikkat edin
 
-                    $("#dd2").removeClass("hidden");
-                    $("#delivery-address-dropdown_town").removeClass("disabled");
+            $("#dd2").removeClass("hidden");
+            $("#delivery-address-dropdown_town").removeClass("disabled");
 
-                    $('#districta').html(data);
-                })
-                .fail(function (error) {
-                    console.error('getDistricts error:', error);
-                });
-        }
+            $('#districta').html(data);
+        })
+        .fail(function (error) {
+            console.error('getDistricts error:', error);
+        });
+}
+
 
         function getNeighborhoods(selectedDistrict) {
             $.post('get_neighborhoods.php', { district: selectedDistrict })
