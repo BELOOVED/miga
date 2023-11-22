@@ -416,7 +416,7 @@
          data: { city: selectedCity },
          success: function(data) {
             $("#dd2").toggleClass("hidden");
-            $('#gggaaagggaaa').html(data);
+            $('#districta').html(data);
          }
       });
    }
@@ -427,11 +427,12 @@
          url: 'get_neighborhoods.php',
          data: { district: selectedDistrict },
          success: function(data) {
-            $('#mahallesecim').html(data);
+            $('#neighhborhoodsa').html(data);
          }
       });
    }
 });
+
 
 
      
