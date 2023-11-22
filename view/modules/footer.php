@@ -330,13 +330,13 @@
                </div>
                <div role="listbox" id="dd2" tabindex="-1" class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel hidden" id="ilcesecim" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
                   <input type="text" role="search" class="ng-pristine ng-valid ng-tns-c190-28 ng-star-inserted ng-touched" style=""><!---->
-                  <div class="scrollable ng-tns-c190-28" id="gggaaagggaaa">
+                  <div class="scrollable ng-tns-c190-28" id="districta">
                   
                   </div>
                </div>
                <div role="listbox" id="dd3" tabindex="-1" class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel hidden" id="mahallesecim" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24" >
                   <input type="text" role="search" class="ng-pristine ng-valid ng-tns-c190-28 ng-star-inserted ng-touched" style=""><!---->
-                  <div class="scrollable ng-tns-c190-28">
+                  <div class="scrollable ng-tns-c190-28" id="neighhborhoodsa">
                   
                   </div>
                </div>
@@ -398,38 +398,41 @@
          $("#sepet2").removeClass("hidden");
       }
 
-      document.getElementById('ilsecim').addEventListener('click', function() {
-         var selectedCity = document.querySelector('#ilsecim .mat-mdc-option-active .mdc-list-item__primary-text').id;
-         getDistricts(selectedCity);
+      $(document).ready(function() {
+   $('#ilsecim').on('click', '.mat-mdc-option', function() {
+      var selectedCity = $(this).find('.mdc-list-item__primary-text').attr('id');
+      getDistricts(selectedCity);
+   });
+
+   $('#ilcesecim').on('click', '.mat-mdc-option', function() {
+      var selectedDistrict = $(this).find('.mdc-list-item__primary-text').attr('id');
+      getNeighborhoods(selectedDistrict);
+   });
+
+   function getDistricts(selectedCity) {
+      $.ajax({
+         type: 'POST',
+         url: 'get_districts.php',
+         data: { city: selectedCity },
+         success: function(data) {
+            $("#dd2").toggleClass("hidden");
+            $('#gggaaagggaaa').html(data);
+         }
       });
+   }
 
-      document.getElementById('ilcesecim').addEventListener('click', function() {
-         var selectedDistrict = document.querySelector('#ilcesecim .mat-mdc-option-active .mdc-list-item__primary-text').id;
-         getNeighborhoods(selectedDistrict);
+   function getNeighborhoods(selectedDistrict) {
+      $.ajax({
+         type: 'POST',
+         url: 'get_neighborhoods.php',
+         data: { district: selectedDistrict },
+         success: function(data) {
+            $('#mahallesecim').html(data);
+         }
       });
+   }
+});
 
-      function getDistricts(selectedCity) {
-         $.ajax({
-            type: 'POST',
-            url: 'get_districts.php',
-            data: { city: selectedCity },
-            success: function(data) {
-                  $("#dd2").toggleClass("hidden");
-                  document.getElementById('gggaaagggaaa').innerHTML = data;
-            }
-         });
-      }
-
-      function getNeighborhoods(selectedDistrict) {
-         $.ajax({
-            type: 'POST',
-            url: 'get_neighborhoods.php',
-            data: { district: selectedDistrict },
-            success: function(data) {
-                  document.getElementById('mahallesecim').innerHTML = data;
-            }
-         });
-      }
 
      
       </script>
