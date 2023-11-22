@@ -343,6 +343,8 @@
     $(document).ready(function () {
         $(document).on('click', '.city-option', function () {
             var selectedCity = $(this).find('.mdc-list-item__primary-text').attr('id');
+        $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
+
             console.log(selectedCity);
             getDistricts(selectedCity);
         });
@@ -406,7 +408,7 @@
         $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
         $("#dd1").addClass("hidden");
         $("#dd2").addClass("hidden");
-        $("#dd3").remtoggleClassoveClass("hidden");
+        $("#dd3").toggleClass("hidden");
     }
 
     $(document).ready(function () {
