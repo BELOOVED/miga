@@ -1,12 +1,8 @@
 <?php
 include 'inc/pdo.php';
 
-// POST verisini al
-$sehirlkey = $_POST['city']; // jQuery tarafında 'city' olarak gönderildi.
+$sehirlkey = $_POST['city']; 
 
-// Diğer kontroller ve güvenlik işlemleri burada...
-
-// Şehre ait ilçeleri çek
 $query = "SELECT * FROM ilce WHERE ilce_sehirkey = :sehirlkey";
 $stmt = $pdo->prepare($query);
 $stmt->bindParam(':sehirlkey', $sehirlkey, PDO::PARAM_STR);

@@ -124,7 +124,7 @@
                                           <path fill="currentColor" d="M312.1 375c9.369 9.369 9.369 24.57 0 33.94s-24.57 9.369-33.94 0L160 289.9l-119 119c-9.369 9.369-24.57 9.369-33.94 0s-9.369-24.57 0-33.94L126.1 256L7.027 136.1c-9.369-9.369-9.369-24.57 0-33.94s24.57-9.369 33.94 0L160 222.1l119-119c9.369-9.369 24.57-9.369 33.94 0s9.369 24.57 0 33.94L193.9 256L312.1 375z"></path>
                                        </svg>
                                     </fa-icon>
-                                    <span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span>
+                                    <span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span onclick="closemodal()" class="mat-mdc-button-touch-target"></span>
                                  </button>
                               </fe-icon-button>
                               <!----><!---->
@@ -235,7 +235,7 @@
                                        <fe-dropdown _ngcontent-jhu-c282="" id="delivery-address-dropdown_district" formcontrolname="serviceAreaObjectId" onclick="showDropdown3()" id="ilaagg5" placeholder="Mahalle" class="disabled ng-untouched ng-pristine">
                                           <mat-form-field appearance="outline" color="accent" class="mat-mdc-form-field ng-tns-c186-31 mat-mdc-form-field-type-mat-select mat-form-field-disabled mat-form-field-appearance-outline mat-form-field-hide-placeholder mat-accent ng-untouched ng-pristine ng-star-inserted">
                                              <!---->
-                                             <div class="mat-mdc-text-field-wrapper mdc-text-field ng-tns-c186-31 mdc-text-field--outlined mdc-text-field--disabled">
+                                             <div class="mat-mdc-text-field-wrapper mdc-text-field ng-tns-c186-31 mdc-text-field--outlined mdc-text-field--disabled" id="afgakdfg">
                                                 <!---->
                                                 <div class="mat-mdc-form-field-flex ng-tns-c186-31">
                                                    <div matformfieldnotchedoutline="" class="mdc-notched-outline ng-tns-c186-31 mdc-notched-outline--upgraded ng-star-inserted">
@@ -422,6 +422,7 @@
             $('#citygga').removeClass('mat-form-field-disabled');
             $('#ggagfkdfg').removeClass('mdc-text-field--disabled');
             $("#dd1").toggleClass("hidden");
+            $("#dd2").removeClass("hidden");
             $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
         });
     });
@@ -430,12 +431,13 @@
             var ilanIcerik = $(this).data('ilan');
             $('#ilaagg3').text(ilanIcerik);
             $('#ilaagg4').text(ilanIcerik);
+            $('#afgakdfg').removeClass('mdc-text-field--disabled');
             $("#dd2").toggleClass("hidden");
             $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
         });
     });
     $(document).ready(function () {
-        $('.town-option').on('click', function () {
+        $('.neighboords-option').on('click', function () {
             var ilanIcerik = $(this).data('ilan');
             $('#ilaagg5').text(ilanIcerik);
             $('#ilaagg6').text(ilanIcerik);
