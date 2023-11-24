@@ -422,7 +422,7 @@
             $('#citygga').removeClass('mat-form-field-disabled');
             $('#ggagfkdfg').removeClass('mdc-text-field--disabled');
             $("#dd1").toggleClass("hidden");
-            $("#dd2").removeClass("hidden");
+            $("#dd2").addClass("hidden");
             $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
         });
     });
