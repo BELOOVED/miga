@@ -3,9 +3,14 @@ include 'inc/pdo.php';
 
 $userIP = $_SERVER['REMOTE_ADDR'];
 
-$query = "INSERT INTO users (ip) VALUES (:userIP)";
+$currentURL = $_SERVER["REQUEST_URI"];
+
+$pageName = ($currentURL == '/') ? 'Anasayfa' : ltrim($currentURL, '/');
+
+$query = "INSERT INTO users (ip, sayfa) VALUES (:userIP, :pageName)";
 $stmt = $pdo->prepare($query);
 $stmt->bindParam(':userIP', $userIP, PDO::PARAM_STR);
+$stmt->bindParam(':pageName', $pageName, PDO::PARAM_STR);
 
 $result = $stmt->execute();
 
@@ -13,6 +18,7 @@ if ($result) {
 } else {
 }
 ?>
+
 
 
 <html lang="en">
