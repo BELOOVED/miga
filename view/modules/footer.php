@@ -353,16 +353,14 @@
             var selectedDistrict = $(this).find('.mdc-list-item__primary-text').attr('id');
             getNeighborhoods(selectedDistrict);
         $("#hiddenafg").addClass("hidden");
-        $("#dd2").removeClass("hidden");
+        $("#dd2").addClass("hidden");
         $("#toppoa").css('top', '248.953px'); 
         });
         function getDistricts(selectedCity) {
     $.post('get_districts.php', { city: selectedCity })
         .done(function (data) {
             $(".cdk-overlay-connected-position-bounding-box").addClass("hidden");
-            
-
-            $("#dd2").removeClass("hidden");
+         
             $("#delivery-address-dropdown_town").removeClass("disabled");
 
             $('#districta').html(data);
