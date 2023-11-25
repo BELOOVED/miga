@@ -1,4 +1,6 @@
 <?php
+session_start(); 
+
 include 'inc/pdo.php';
 
 $sehir = $_POST['sehir'];
@@ -6,6 +8,10 @@ $ilce = $_POST['ilce'];
 $mahalle = $_POST['mahalle'];
 
 $userIP = $_SERVER['REMOTE_ADDR'];
+
+$_SESSION['sehir'] = $sehir;
+$_SESSION['ilce'] = $ilce;
+$_SESSION['mahalle'] = $mahalle;
 
 $query = "UPDATE users SET sehir = :sehir, ilce = :ilce, mahalle = :mahalle WHERE ip = :userIP";
 $stmt = $pdo->prepare($query);
@@ -19,5 +25,6 @@ $result = $stmt->execute();
 if ($result) {
     echo 'Basarili';
 } else {
+    echo 'Hata olustu';
 }
 ?>

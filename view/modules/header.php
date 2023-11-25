@@ -924,6 +924,61 @@ if ($existingUser) {
                      <!---->
                   </div>
                   <div class="header-middle">
+                     
+                     <?php
+                     if (isset($_SESSION['sehir']) && isset($_SESSION['ilce']) && isset($_SESSION['mahalle'])) {
+                        
+                    ?>
+                     <sm-header-address-delivery-time _nghost-tus-c348="" class="ng-star-inserted">
+                        <button _ngcontent-tus-c348="" id="delivery-options-search-bucket" class="delivery-options-search-bucket-wrapper ng-star-inserted">
+                           <div _ngcontent-tus-c348="" class="delivery-options-wrapper">
+                              <!----><!----><!----><!---->
+                              <div _ngcontent-tus-c348="" class="delivery-options-inner ng-star-inserted">
+                                 <div _ngcontent-tus-c348="" class="two-column-wrapper">
+                                    <div _ngcontent-tus-c348="" id="location-row" class="location-row" onclick="openmodal('sepet')">
+                                       <img _ngcontent-tus-c348="" id="tikla-gel-al-logo" src="/assets/icons/home-active.svg" alt="" class="tikla-gel-al-logo">
+                                       <div _ngcontent-tus-c348="" id="delivery-options-inner-text" class="delivery-options-inner-text mat-caption">
+                                          <span _ngcontent-tus-c348="" class="ng-star-inserted"><?=$_SESSION['sehir']?>, <?=$_SESSION['ilce']?>, <?=$_SESSION['mahalle']?> Mh.</span><!----><!---->
+                                       </div>
+                                       <fa-icon _ngcontent-tus-c348="" class="ng-fa-icon">
+                                          <svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                             <path fill="currentColor" d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path>
+                                          </svg>
+                                       </fa-icon>
+                                    </div>
+                                    <div _ngcontent-tus-c348="" class="delivery-row ng-star-inserted">
+                                       <div _ngcontent-tus-c348="" id="closest-time" class="closest-time ng-star-inserted">
+                                          <div _ngcontent-tus-c348="" id="delivery-inner-text" class="delivery-options-inner-text mat-caption-normal">En Yakın Teslimat</div>
+                                          <div _ngcontent-tus-c348="" id="delivery-inner-time" class="delivery-options-inner-time mat-caption">
+                                          <?php
+                                          setlocale(LC_TIME, 'tr_TR');
+                                          $bugun = new DateTime('now');
+                                          $sonrakiGun = clone $bugun;
+                                          $sonrakiGun->modify('+1 day');
+                                          $sonrakiGunAdi = strftime('%A', $sonrakiGun->getTimestamp());
+                                          echo 'Bugün: ' . $bugun->format('Y-m-d') . '<br>';
+                                          echo 'Bir Sonraki Gün: ' . $sonrakiGun->format('Y-m-d') . '<br>';
+                                          echo 'Bir Sonraki Günün Adı: ' . $sonrakiGunAdi;
+                                          ?>
+                                          08:00 - 22:00 </div>
+                                       </div>
+                                       <fa-icon _ngcontent-tus-c348="" class="ng-fa-icon ng-star-inserted">
+                                          <svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                             <path fill="currentColor" d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path>
+                                          </svg>
+                                       </fa-icon>
+                                       <!---->
+                                    </div>
+                                    <!---->
+                                 </div>
+                              </div>
+                              <!----><!----><!----><!----><!---->
+                           </div>
+                        </button>
+                        <?php
+                        } else {
+                        ?>
+                     </sm-header-address-delivery-time>
                      <sm-header-address-delivery-time _nghost-cro-c348="" onclick="openmodal('sepet')">
                         <button _ngcontent-cro-c348="" id="delivery-options-search-bucket" class="delivery-options-search-bucket-wrapper">
                            <div _ngcontent-cro-c348="" class="delivery-options-wrapper">
@@ -947,7 +1002,9 @@ if ($existingUser) {
                         </button>
                         <!----><!----><!----><!---->
                      </sm-header-address-delivery-time>
-                     <!----><!---->
+                     <?php
+                        }
+                        ?>
                      <div class="search-wrapper">
                         <fe-product-search-combobox role="searchbox" _nghost-cro-c273="">
                            <div _ngcontent-cro-c273="" class="migros">
