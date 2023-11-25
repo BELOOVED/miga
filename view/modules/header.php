@@ -49,12 +49,7 @@ if ($existingUser) {
       <base href="/">
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=0">
       <style type="text/css">
-      *{
-         margin: 0;
-         padding: 0;
-         box-sizing: border-box;
-         overflow-x: hidden;
-      }
+      
       
       :root, :host {
          --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Solid";
