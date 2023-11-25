@@ -97,9 +97,8 @@
       </main>
       <!---->
       <div _ngcontent-tus-c368="" class="divider"></div>
-      <sm-footer _ngcontent-tus-c368="" _nghost-tus-c306="">
+      <!-- <sm-footer _ngcontent-tus-c368="" _nghost-tus-c306="">
          <div _ngcontent-tus-c306="" class="desktop-only">
-            <!---->
             <sm-footer-logos _ngcontent-tus-c306="" _nghost-tus-c305="">
                <div _ngcontent-tus-c305="" class="logos-wrapper lite">
                   <div _ngcontent-tus-c305="" class="inner">
@@ -120,9 +119,8 @@
             </sm-footer-logos>
          </div>
          <sm-mobile-bottom-nav _ngcontent-tus-c306="" _nghost-tus-c303="">
-            <!---->
          </sm-mobile-bottom-nav>
-      </sm-footer>
+      </sm-footer> -->
       <fe-product-cookie-indicator _ngcontent-tus-c368="" _nghost-tus-c167="">
          <!---->
       </fe-product-cookie-indicator>
