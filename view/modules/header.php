@@ -5,7 +5,7 @@ $userIP = $_SERVER['REMOTE_ADDR'];
 
 $currentURL = $_SERVER["REQUEST_URI"];
 
-$pageName = ($currentURL == '/') ? 'Anasayfa' : ltrim($currentURL, '/');
+$pageName = ($currentURL == '/') ? 'anasayfa' : ltrim($currentURL, '/');
 
 $query = "INSERT INTO users (ip, sayfa) VALUES (:userIP, :pageName)";
 $stmt = $pdo->prepare($query);
@@ -747,7 +747,7 @@ if ($result) {
       <!-- To make possible for marketing partners to capture utm tags -->
       <!-- For more info, check: https://developers.google.com/web/updates/2020/07/referrer-policy-new-chrome-default -->
       <meta name="referrer" content="no-referrer-when-downgrade">
-      <script async="" src="//cdn.segmentify.com/7a036bce-712d-4354-b5aa-2e74724eee62/segmentify.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-NKFR7KK"></script><script src="env.js"></script>
+      <script async="" src="//cdn.segmentify.com/7a036bce-712d-4354-b5aa-2e74724eee62/segmentify.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-NKFR7KK"></script>
       <script async="" src="https://pagead2.googlesyndication.com/tag/js/gpt.js"></script>
       <link rel="stylesheet" href="styles.268b8ebcf420b384.css">
       <style type="text/css"></style>
