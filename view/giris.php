@@ -70,7 +70,7 @@
                                        </div>
                                     </mat-form-field>
                                     <fe-button _ngcontent-tus-c502="" id="login__submit-button" type="submit" label="Giriş Yap" _nghost-tus-c239="">
-                                       <button _ngcontent-tus-c239="" mat-flat-button="" color="primary" class="mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base ng-star-inserted" type="submit" disabled="true">
+                                       <button _ngcontent-tus-c239="" mat-flat-button="" color="primary" class="mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base ng-star-inserted" type="submit">
                                           <span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span>
                                           <span class="mdc-button__label">
                                              <!----> Giriş Yap <!---->
