@@ -173,16 +173,25 @@
 </main>
 <script>
    function handleInput() {
-    var inputElement = document.getElementById("emailInput");
-    var labelElement = document.getElementById("emailLabel");
+      var inputElement = document.getElementById("emailInput");
+      var labelElement = document.getElementById("emailLabel");
+      if (inputElement.value.trim() !== "") {
+         labelElement.style.display = "none";
+      } else {
+         labelElement.style.display = "block";
+      }
+   }
 
-    if (inputElement.value.trim() !== "") {
-        // Kullanıcı bir şey girdiğinde
-        labelElement.style.display = "none"; // E-Posta etiketini gizle
-    } else {
-        // Boşken
-        labelElement.style.display = "block"; // E-Posta etiketini göster
-    }
-}
+   function addPrefix() {
+      var inputElement = document.getElementById("mat-input-3");
 
+      // Kullanıcının girdiği değeri al
+      var inputValue = inputElement.value;
+
+      // Başına +90 eklemek için kontrol et
+      if (inputValue.trim() !== "" && !inputValue.startsWith("+90")) {
+         // Başında +90 yoksa ekle
+         inputElement.value = "+90" + inputValue;
+      }
+   }
 </script>
