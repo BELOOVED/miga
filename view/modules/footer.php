@@ -435,16 +435,17 @@
         });
     });
     $(document).ready(function () {
-        $('.town-option').on('click', function () {
-            var ilanIcerik = $(this).data('ilan');
-            $('#ilaagg3').text(ilanIcerik);
-            $('#ilaagg4').text(ilanIcerik);
-            $('#afgakdfg').removeClass('mdc-text-field--disabled');
-            $("#dd2").toggleClass("hidden");
-            $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
-            console.log('Upped');
-        });
-    });
+      $(document).on('click', '.town-option', function () {
+         var ilanIcerik = $(this).data('ilan');
+         $('#ilaagg3').text(ilanIcerik);
+         $('#ilaagg4').text(ilanIcerik);
+         $('#afgakdfg').removeClass('mdc-text-field--disabled');
+         $("#dd2").toggleClass("hidden");
+         $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
+         console.log('Upped');
+      });
+   });
+
     $(document).ready(function () {
         $('.neighboords-option').on('click', function () {
             var ilanIcerik = $(this).data('ilan');

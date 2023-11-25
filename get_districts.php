@@ -17,7 +17,8 @@ foreach ($sehirler as $sehir) {
         ' . $sehir['ilce_title'] . '
         </span>
         <div mat-ripple="" class="mat-ripple mat-mdc-option-ripple"></div>
-        </mat-option>';
+        </mat-option>
+        ';
 }
 
 echo $options;
