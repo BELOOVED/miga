@@ -1,5 +1,8 @@
-<sm-root _nghost-tus-c368="" ng-version="14.2.10">
-   <div _ngcontent-tus-c368="" class="elektronik grid">
+<style>
+    .header{
+        display: none;
+    }
+</style>
       <sm-header-lite _ngcontent-tus-c368="" _nghost-tus-c366="" class="ng-star-inserted">
          <div _ngcontent-tus-c366="" class="header-wrapper">
             <div _ngcontent-tus-c366="" class="desktop-only">
@@ -120,6 +123,3 @@
       <fe-product-cookie-indicator _ngcontent-tus-c368="" _nghost-tus-c167="">
          <!---->
       </fe-product-cookie-indicator>
-      <!----><!---->
-   </div>
-</sm-root>

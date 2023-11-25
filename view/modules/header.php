@@ -891,7 +891,7 @@ if ($existingUser) {
    <body class="mat-typography">
       <sm-root _nghost-cro-c368="" ng-version="14.2.10">
          <div _ngcontent-cro-c368="" class="elektronik grid">
-            <sm-header _ngcontent-cro-c368="">
+            <sm-header _ngcontent-cro-c368="" class="header">
                <div id="header-wrapper" class="header-wrapper elektronik">
                   <!---->
                   <fe-swiper-banner fedeferload="" class="inline-banner">
