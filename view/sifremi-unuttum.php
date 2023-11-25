@@ -85,7 +85,6 @@
                            </mat-card-content>
                            <mat-card-actions _ngcontent-tus-c502="" class="mat-mdc-card-actions mdc-card__actions bg-basic-50"><span _ngcontent-tus-c502="" class="mat-body-2 text-color-grey"> Henüz hesabın yoksa <a _ngcontent-tus-c502="" id="login__redirect-to-register" routerlink="/kayit" class="text-color-orange subtitle-2" ngx-ql="" href="/kayit">Üye Ol</a></span></mat-card-actions>
                         </mat-card>
-                        <div _ngcontent-tus-c502="" class="login__links"><a _ngcontent-tus-c502="" id="login__redirect-to-recovery" routerlink="/sifremi-unuttum" class="mat-caption text-color-grey" ngx-ql="" href="/sifremi-unuttum">Giriş Yapamıyorum</a><a _ngcontent-tus-c502="" id="login__open-otp-faqs-button" class="mat-caption text-color-grey"> Sıkça Sorulan Sorular </a></div>
                      </div>
                      <!----><!---->
                   </sm-login>
