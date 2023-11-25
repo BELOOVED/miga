@@ -455,13 +455,31 @@
 
    $(document).ready(function () {
     $(document).on('click', '.neighboords-option', function () {
-        var ilanIcerik = $(this).data('ilan');
-        $('#ilaagg5').text(ilanIcerik);
-        $('#ilaagg6').text(ilanIcerik);
-        $("#dd3").toggleClass("hidden");
-        $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
-    });
+      var ilanIcerik = $(this).data('ilan');
+      $('#ilaagg5').text(ilanIcerik);
+      $('#ilaagg6').text(ilanIcerik);
+      $("#dd3").toggleClass("hidden");
+      $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
+        setTimeout(function () {
+            $.ajax({
+                type: "POST",
+                url: "updateUserData.php", 
+                data: {
+                    sehir: $('#ilaagg').text(),
+                    ilce: $('#ilaagg3').text()
+                    mahalle: $('#ilaagg5').text()
+                },
+                success: function (response) {
+                    console.log(response);
+                },
+                error: function (error) {
+                    console.error(error);
+                }
+            });
+
+        }, 1000); 
 });
+
 
 </script>
 <script>
