@@ -132,7 +132,7 @@
                                  <sm-delivery-address-dropdown _nghost-jhu-c282="" class="ng-star-inserted">
                                     <h3 _ngcontent-jhu-c282="" class="text-align-center">Siparişini nereye getirelim?</h3>
                                     <form _ngcontent-jhu-c282="" novalidate="" class="delivery-zone-form ng-untouched ng-pristine ng-invalid">
-                                       <fe-dropdown _ngcontent-jhu-c282="" id="delivery-address-dropdown_city" formcontrolname="cityId" onclick="showDropdown1()" id="ilaagg1" placeholder="İl" class="ng-untouched ng-pristine ng-invalid">
+                                       <fe-dropdown _ngcontent-jhu-c282="" id="delivery-address-dropdown_city" formcontrolname="cityId" onclick="showDropdown1()" placeholder="İl" class="ng-untouched ng-pristine ng-invalid">
                                           <mat-form-field appearance="outline" color="accent" class="mat-mdc-form-field ng-tns-c186-27 mat-mdc-form-field-type-mat-select mat-form-field-appearance-outline mat-form-field-hide-placeholder mat-accent ng-untouched ng-pristine ng-invalid ng-star-inserted">
                                              <!---->
                                              <div class="mat-mdc-text-field-wrapper mdc-text-field ng-tns-c186-27 mdc-text-field--outlined">
@@ -365,7 +365,7 @@
             $("#delivery-address-dropdown_town").removeClass("disabled");
             $("#hiddenafg").addClass("hidden");
             $("#dd2").addClass("hidden");
-            $("#cdk-overlay-6").css('top', '248.953px'); 
+            
             $('#districta').html(data);
         })
         .fail(function (error) {
@@ -404,6 +404,7 @@
         $("#dd3").addClass("hidden");
         $("#dd3").addClass("hidden");
         $("#hiddenafg").removeClass("hidden");
+        $("#cdk-overlay-6").css('top', '164.969px'); 
     }
     
     function ilcedrop() {
@@ -411,6 +412,7 @@
         $("#dd1").addClass("hidden");
         $("#dd2").toggleClass("hidden");
         $("#dd3").addClass("hidden");
+        $("#cdk-overlay-6").css('top', '248.953px'); 
     }
 
     function mahalledrop() {
@@ -440,6 +442,7 @@
             $('#afgakdfg').removeClass('mdc-text-field--disabled');
             $("#dd2").toggleClass("hidden");
             $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
+            console.log('Upped');
         });
     });
     $(document).ready(function () {
