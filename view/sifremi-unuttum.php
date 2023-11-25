@@ -45,7 +45,7 @@
                                                 <div class="mdc-notched-outline__leading"></div>
                                                 <div class="mdc-notched-outline__notch" style="width: calc(118px * var(--mat-mdc-form-field-floating-label-scale, 0.75) + 9px);">
                                                    <label matformfieldfloatinglabel="" class="mdc-floating-label mat-mdc-floating-label ng-tns-c186-13 mdc-floating-label--float-above ng-star-inserted" id="mat-mdc-form-field-label-14" for="mat-input-1" aria-owns="mat-input-1" style="">
-                                                      <mat-label _ngcontent-tus-c502="" class="subtitle-2 text-color-black ng-tns-c186-13">Telefon Numarası</mat-label>
+                                                      <mat-label _ngcontent-tus-c502="" class="subtitle-2 text-color-black ng-tns-c186-13">E-Posta</mat-label>
                                                       <!---->
                                                    </label>
                                                    <!----><!----><!---->
@@ -69,7 +69,7 @@
                                           <!---->
                                        </div>
                                     </mat-form-field>
-                                    <fe-button _ngcontent-tus-c502="" id="login__submit-button" type="submit" label="Giriş Yap" _nghost-tus-c239="">
+                                    <fe-button _ngcontent-tus-c502="" id="login__submit-button" type="submit" label="Doğrulama Linki Gönder" _nghost-tus-c239="">
                                        <button _ngcontent-tus-c239="" mat-flat-button="" color="primary" class="mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base ng-star-inserted" type="submit" disabled="true">
                                           <span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span>
                                           <span class="mdc-button__label">
