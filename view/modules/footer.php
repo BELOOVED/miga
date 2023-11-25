@@ -296,7 +296,7 @@
                <div tabindex="0" class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div>
             </div>
          </div>
-         <div class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing hidden"></div>
+         <div class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing hidden" id="hiddenafg"></div>
          <div class="cdk-overlay-connected-position-bounding-box hidden" id="" dir="ltr" style="top: 0px; left: 0px; height: 100%; width: 100%;">
     <div id="cdk-overlay-6" class="cdk-overlay-pane dialog-shadow" id="toppoa" style="width: 312px; top: 164.969px; left: 24px;">
         <div role="listbox" id="dd1" tabindex="-1"
@@ -352,12 +352,15 @@
         $(document).on('click', '.mat-mdc-option', function () {
             var selectedDistrict = $(this).find('.mdc-list-item__primary-text').attr('id');
             getNeighborhoods(selectedDistrict);
+        $("#hiddenafg").addClass("hidden");
+        $("#dd2").removeClass("hidden");
+        $("#toppoa").css('top', '248.953px'); 
         });
         function getDistricts(selectedCity) {
     $.post('get_districts.php', { city: selectedCity })
         .done(function (data) {
             $(".cdk-overlay-connected-position-bounding-box").addClass("hidden");
-            $("#toppoa").css('top', '248.953px'); 
+            
 
             $("#dd2").removeClass("hidden");
             $("#delivery-address-dropdown_town").removeClass("disabled");
@@ -394,12 +397,14 @@
     }
 
     function ildrop() {
-        $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
-        $("#dd1").toggleClass("hidden");
+        $(".cdk-overlay-connected-position-bounding-box").removeClass("hidden");
+        $("#dd1").removeClass("hidden");
         $("#dd2").addClass("hidden");
         $("#dd3").addClass("hidden");
+        $("#dd3").addClass("hidden");
+        $("#hiddenafg").removeClass("hidden");
     }
-
+    
     function ilcedrop() {
         $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
         $("#dd1").addClass("hidden");
