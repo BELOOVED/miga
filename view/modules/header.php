@@ -950,7 +950,7 @@ if ($existingUser) {
                                           </svg>
                                        </fa-icon>
                                     </div>
-                                    <div _ngcontent-tus-c348="" class="delivery-row ng-star-inserted">
+                                    <div _ngcontent-tus-c348="" class="delivery-row ng-star-inserted" onclick="openmodal('zaman')">
                                        <div _ngcontent-tus-c348="" id="closest-time" class="closest-time ng-star-inserted">
                                           <div _ngcontent-tus-c348="" id="delivery-inner-text" class="delivery-options-inner-text mat-caption-normal">En Yakın Teslimat</div>
                                           <div _ngcontent-tus-c348="" id="delivery-inner-time" class="delivery-options-inner-time mat-caption">

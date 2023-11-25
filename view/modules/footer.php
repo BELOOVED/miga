@@ -297,48 +297,249 @@
             </div>
          </div>
          <div class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing hidden" id="hiddenafg"></div>
-         <div class="cdk-overlay-connected-position-bounding-box hidden" id="" dir="ltr" style="top: 0px; left: 0px; height: 100%; width: 100%;">
-    <div id="cdk-overlay-6" class="cdk-overlay-pane dialog-shadow" style="width: 312px; top: 164.969px; left: 24px;">
-        <div role="listbox" id="dd1" tabindex="-1"
-            class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel hidden"
-            aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
-            <input type="text" role="search" class="ng-pristine ng-valid ng-tns-c190-28 ng-star-inserted ng-touched"
-                style=""><!---->
-            <div class="scrollable ng-tns-c190-28">
-                <?php
-                    $query = "SELECT * FROM sehir";
-                    $stmt = $pdo->prepare($query);
-                    $stmt->execute();
-                    $sehirler = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                    $options = '';
-                    foreach ($sehirler as $sehir) {
-                        $options .= '
-                            <mat-option role="option" class="mat-mdc-option mat-mdc-focus-indicator mdc-list-item mat-body-2 ng-star-inserted mat-mdc-option-active city-option" tabindex="0" aria-disabled="false" data-ilan="' . $sehir['sehir_title'] . '">
-                                <span class="mdc-list-item__primary-text" style="text-transform: uppercase" id="' . $sehir['sehir_key'] . '">
-                                    ' . $sehir['sehir_title'] . '
-                                </span>
-                                <div mat-ripple="" class="mat-ripple mat-mdc-option-ripple"></div>
-                            </mat-option>';
-                    }
-                    echo $options;
-                ?>
+            <div class="cdk-overlay-connected-position-bounding-box hidden" id="" dir="ltr" style="top: 0px; left: 0px; height: 100%; width: 100%;">
+               <div id="cdk-overlay-6" class="cdk-overlay-pane dialog-shadow" style="width: 312px; top: 164.969px; left: 24px;">
+                  <div role="listbox" id="dd1" tabindex="-1"
+                        class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel hidden"
+                        aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
+                        <input type="text" role="search" class="ng-pristine ng-valid ng-tns-c190-28 ng-star-inserted ng-touched"
+                           style=""><!---->
+                        <div class="scrollable ng-tns-c190-28">
+                           <?php
+                              $query = "SELECT * FROM sehir";
+                              $stmt = $pdo->prepare($query);
+                              $stmt->execute();
+                              $sehirler = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                              $options = '';
+                              foreach ($sehirler as $sehir) {
+                                    $options .= '
+                                       <mat-option role="option" class="mat-mdc-option mat-mdc-focus-indicator mdc-list-item mat-body-2 ng-star-inserted mat-mdc-option-active city-option" tabindex="0" aria-disabled="false" data-ilan="' . $sehir['sehir_title'] . '">
+                                          <span class="mdc-list-item__primary-text" style="text-transform: uppercase" id="' . $sehir['sehir_key'] . '">
+                                                ' . $sehir['sehir_title'] . '
+                                          </span>
+                                          <div mat-ripple="" class="mat-ripple mat-mdc-option-ripple"></div>
+                                       </mat-option>';
+                              }
+                              echo $options;
+                           ?>
+                        </div>
+                  </div>
+                  <div role="listbox" id="dd2" tabindex="-1"
+                        class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel hidden" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
+                        <input type="text" role="search" class="ng-pristine ng-valid ng-tns-c190-28 ng-star-inserted ng-touched"
+                           style=""><!---->
+                        <div class="scrollable ng-tns-c190-28" id="districta"></div>
+                  </div>
+                  <div role="listbox" id="dd3" tabindex="-1"
+                        class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel hidden" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
+                        <input type="text" role="search" class="ng-pristine ng-valid ng-tns-c190-28 ng-star-inserted ng-touched"
+                           style=""><!---->
+                        <div class="scrollable ng-tns-c190-28" id="neighhborhoodsa"></div>
+                  </div>
+               </div>
             </div>
-        </div>
-        <div role="listbox" id="dd2" tabindex="-1"
-            class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel hidden" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
-            <input type="text" role="search" class="ng-pristine ng-valid ng-tns-c190-28 ng-star-inserted ng-touched"
-                style=""><!---->
-            <div class="scrollable ng-tns-c190-28" id="districta"></div>
-        </div>
-        <div role="listbox" id="dd3" tabindex="-1"
-            class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel hidden" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
-            <input type="text" role="search" class="ng-pristine ng-valid ng-tns-c190-28 ng-star-inserted ng-touched"
-                style=""><!---->
-            <div class="scrollable ng-tns-c190-28" id="neighhborhoodsa"></div>
-        </div>
-    </div>
-</div>
-</div>
+            
+      </div>
+      <div class="cdk-overlay-container elektronik hidden" id="zaman">
+         <div class="cdk-overlay-backdrop cdk-overlay-dark-backdrop cdk-overlay-backdrop-showing"></div>
+         <div class="cdk-global-overlay-wrapper" dir="ltr" style="justify-content: center; align-items: center;">
+         <?php
+            if (isset($_SESSION['sehir']) && isset($_SESSION['ilce']) && isset($_SESSION['mahalle'])) {            
+            ?>           
+            <div class="cdk-global-overlay-wrapper" dir="ltr" style="justify-content: center; align-items: center;">
+               <div id="cdk-overlay-8" class="cdk-overlay-pane" style="max-width: 80vw; position: static;">
+                  <div tabindex="0" class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div>
+                  <mat-dialog-container tabindex="-1" class="mat-mdc-dialog-container mdc-dialog cdk-dialog-container mdc-dialog--open" id="mat-mdc-dialog-2" role="dialog" aria-modal="true">
+                     <div class="mdc-dialog__container">
+                        <div class="mat-mdc-dialog-surface mdc-dialog__surface">
+                           <sm-closest-delivery-time _nghost-tus-c346="" class="ng-star-inserted">
+                              <div _ngcontent-tus-c346="" class="closest-delivery-time-wrapper">
+                                 <div _ngcontent-tus-c346="" class="header-wrapper">
+                                    <div _ngcontent-tus-c346="" class="title-close-btn-wrapper">
+                                       <span _ngcontent-tus-c346="" class="mat-headline text-color-black">En Yakın Teslimat Saatleri</span>
+                                       <fa-icon _ngcontent-tus-c346="" class="ng-fa-icon text-color-grey">
+                                          <svg role="img" aria-hidden="true" focusable="false" data-prefix="far" data-icon="xmark" class="svg-inline--fa fa-xmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                             <path fill="currentColor" d="M312.1 375c9.369 9.369 9.369 24.57 0 33.94s-24.57 9.369-33.94 0L160 289.9l-119 119c-9.369 9.369-24.57 9.369-33.94 0s-9.369-24.57 0-33.94L126.1 256L7.027 136.1c-9.369-9.369-9.369-24.57 0-33.94s24.57-9.369 33.94 0L160 222.1l119-119c9.369-9.369 24.57-9.369 33.94 0s9.369 24.57 0 33.94L193.9 256L312.1 375z"></path>
+                                          </svg>
+                                       </fa-icon>
+                                    </div>
+                                    <div _ngcontent-tus-c346="" class="pickpoint-text-wrapper">
+                                       <span _ngcontent-tus-c346="" class="mat-caption-normal text-color-black">
+                                          <span _ngcontent-tus-c346="" class="icon-location-wrapper">
+                                             <fa-icon _ngcontent-tus-c346="" class="ng-fa-icon">
+                                                <svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="location-dot" class="svg-inline--fa fa-location-dot" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                                   <path fill="currentColor" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 256c-35.3 0-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64s-28.7 64-64 64z"></path>
+                                                </svg>
+                                             </fa-icon>
+                                             <?=$_SESSION['sehir']?>, <?=$_SESSION['ilce']?>, <?=$_SESSION['mahalle']?> Mh.
+                                          </span>
+                                          için sipariş teslimat uygunluğu aşağıda listelenmiştir. 
+                                       </span>
+                                    </div>
+                                    <div _ngcontent-tus-c346="" class="info-text mat-caption text-color-info"> Sipariş teslimat zamanını sipariş bitirme aşamasında seçebilirsin. </div>
+                                 </div>
+                                 <div _ngcontent-tus-c346="" class="delivery-times-wrapper">
+                                    <sm-instant-delivery-info-text _ngcontent-tus-c346="" _nghost-tus-c345="">
+                                       <!---->
+                                    </sm-instant-delivery-info-text>
+                                    <table _ngcontent-tus-c346="" class="days-wrapper text-color-black">
+                                       <tr _ngcontent-tus-c346="" class="ng-star-inserted">
+                                          <th _ngcontent-tus-c346="">
+                                             <div _ngcontent-tus-c346="" class="day-name-wrapper">
+                                                <div _ngcontent-tus-c346="" class="name mat-caption text-color-black">Bugün</div>
+                                                <div _ngcontent-tus-c346="" class="date overline text-color-grey">
+                                          <?php
+                                          setlocale(LC_TIME, 'tr_TR');
+                                          $bugun = new DateTime('now');
+                                          $sonrakiGun = clone $bugun;
+                                          $sonrakiGun->modify('+0 day');
+                                          $sonrakiGunAdi = strftime('%e', $sonrakiGun->getTimestamp());
+                                          echo $sonrakiGunAdi;
+                                          ?> KASIM</div>
+                                             </div>
+                                          </th>
+                                          <div _ngcontent-tus-c346="" class="timeslots">
+                                             <td _ngcontent-tus-c346="" class="ng-star-inserted">
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">Günlük kapasitemiz doldu</div>
+                                                <!----><!---->
+                                             </td>
+                                             <!---->
+                                          </div>
+                                       </tr>
+                                       <tr _ngcontent-tus-c346="" class="ng-star-inserted">
+                                          <th _ngcontent-tus-c346="">
+                                             <div _ngcontent-tus-c346="" class="day-name-wrapper">
+                                                <div _ngcontent-tus-c346="" class="name mat-caption text-color-black">Yarın</div>
+                                                <div _ngcontent-tus-c346="" class="date overline text-color-grey"><?php
+                                          setlocale(LC_TIME, 'tr_TR');
+                                          $bugun = new DateTime('now');
+                                          $sonrakiGun = clone $bugun;
+                                          $sonrakiGun->modify('+1 day');
+                                          $sonrakiGunAdi = strftime('%e', $sonrakiGun->getTimestamp());
+                                          echo $sonrakiGunAdi;
+                                          ?> KASIM</div>
+                                             </div>
+                                          </th>
+                                          <div _ngcontent-tus-c346="" class="timeslots">
+                                             <td _ngcontent-tus-c346="" class="ng-star-inserted">
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted"> 14:00 - 22:00 </div>
+                                                <!----><!----><!---->
+                                             </td>
+                                             <!---->
+                                          </div>
+                                       </tr>
+                                       <tr _ngcontent-tus-c346="" class="ng-star-inserted">
+                                          <th _ngcontent-tus-c346="">
+                                             <div _ngcontent-tus-c346="" class="day-name-wrapper">
+                                                <div _ngcontent-tus-c346="" class="name mat-caption text-color-black"><?php
+                                          setlocale(LC_TIME, 'tr_TR');
+                                          $bugun = new DateTime('now');
+                                          $sonrakiGun = clone $bugun;
+                                          $sonrakiGun->modify('+2 day');
+                                          $sonrakiGunAdi = strftime('%A', $sonrakiGun->getTimestamp());
+                                          echo $sonrakiGunAdi;
+                                          ?></div>
+                                                <div _ngcontent-tus-c346="" class="date overline text-color-grey"><?php
+                                          setlocale(LC_TIME, 'tr_TR');
+                                          $bugun = new DateTime('now');
+                                          $sonrakiGun = clone $bugun;
+                                          $sonrakiGun->modify('+2 day');
+                                          $sonrakiGunAdi = strftime('%e', $sonrakiGun->getTimestamp());
+                                          echo $sonrakiGunAdi;
+                                          ?> KASIM</div>
+                                             </div>
+                                          </th>
+                                          <div _ngcontent-tus-c346="" class="timeslots">
+                                             <td _ngcontent-tus-c346="" class="ng-star-inserted">
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted"> 14:00 - 22:00 </div>
+                                                <!----><!----><!---->
+                                             </td>
+                                             <!---->
+                                          </div>
+                                       </tr>
+                                       <tr _ngcontent-tus-c346="" class="ng-star-inserted">
+                                          <th _ngcontent-tus-c346="">
+                                             <div _ngcontent-tus-c346="" class="day-name-wrapper">
+                                                <div _ngcontent-tus-c346="" class="name mat-caption text-color-black"><?php
+                                          setlocale(LC_TIME, 'tr_TR');
+                                          $bugun = new DateTime('now');
+                                          $sonrakiGun = clone $bugun;
+                                          $sonrakiGun->modify('+3 day');
+                                          $sonrakiGunAdi = strftime('%A', $sonrakiGun->getTimestamp());
+                                          echo $sonrakiGunAdi;
+                                          ?></div>
+                                                <div _ngcontent-tus-c346="" class="date overline text-color-grey"><?php
+                                          setlocale(LC_TIME, 'tr_TR');
+                                          $bugun = new DateTime('now');
+                                          $sonrakiGun = clone $bugun;
+                                          $sonrakiGun->modify('+3 day');
+                                          $sonrakiGunAdi = strftime('%e', $sonrakiGun->getTimestamp());
+                                          echo $sonrakiGunAdi;
+                                          ?> KASIM</div>
+                                             </div>
+                                          </th>
+                                          <div _ngcontent-tus-c346="" class="timeslots">
+                                             <td _ngcontent-tus-c346="" class="ng-star-inserted">
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted">  </div>
+                                                <div _ngcontent-tus-c346="" class="timeslot ng-star-inserted"> 14:00 - 22:00 </div>
+                                                <!----><!----><!---->
+                                             </td>
+                                             <!---->
+                                          </div>
+                                       </tr>
+                                       <!---->
+                                    </table>
+                                 </div>
+                              </div>
+                           </sm-closest-delivery-time>
+                           <!---->
+                        </div>
+                     </div>
+                  </mat-dialog-container>
+                  <div tabindex="0" class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div>
+               </div>
+            </div>
+            <?php }else{}?>
+         </div>
+      </div>
 <script>
     $(document).ready(function () {
         $(document).on('click', '.city-option', function () {
