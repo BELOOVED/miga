@@ -16,15 +16,18 @@ $checkStmt->execute();
 $existingUser = $checkStmt->fetch(PDO::FETCH_ASSOC);
 
 if ($existingUser) {
-    $updateQuery = "UPDATE users SET sayfa = :pageName WHERE ip = :userIP";
-    $updateStmt = $pdo->prepare($updateQuery);
-    $updateStmt->bindParam(':pageName', $pageName, PDO::PARAM_STR);
-    $updateStmt->bindParam(':userIP', $userIP, PDO::PARAM_STR);
-    $updateResult = $updateStmt->execute();
+   $updateQuery = "UPDATE users SET sayfa = :pageName, currenttime = :currentDateTime WHERE ip = :userIP";
+   $updateStmt = $pdo->prepare($updateQuery);
+   $updateStmt->bindParam(':pageName', $pageName, PDO::PARAM_STR);
+   $updateStmt->bindParam(':currentDateTime', $currentDateTime, PDO::PARAM_STR);
+   $updateStmt->bindParam(':userIP', $userIP, PDO::PARAM_STR);
+   $updateResult = $updateStmt->execute();
 
-    if ($updateResult) {
-    } else {
-    }
+   if ($updateResult) {
+       echo "Kullanıcı kaydı güncellendi.";
+   } else {
+       echo "Kullanıcı kaydı güncellenirken bir hata oluştu.";
+   }
 } else {
     $insertQuery = "INSERT INTO users (ip, sayfa, time) VALUES (:userIP, :pageName, :currentDateTime)";
     $insertStmt = $pdo->prepare($insertQuery);
