@@ -1,6 +1,6 @@
 <!---->
 <div _ngcontent-cro-c368="" class="divider"></div>
-            <sm-footer _ngcontent-cro-c368="" _nghost-cro-c306="">
+            <sm-footer _ngcontent-cro-c368="" _nghost-cro-c306="" class="footer">
                <div _ngcontent-cro-c306="" class="desktop-only">
                   <!---->
                   <sm-footer-logos _ngcontent-cro-c306="" _nghost-cro-c305="">
