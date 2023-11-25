@@ -90,7 +90,7 @@
                                        </div>
                                        <!----><!----><!---->
                                        <div class="mat-mdc-form-field-infix ng-tns-c186-16">
-                                          <!----><input matinput="" required="" type="email" placeholder="E-Posta" formcontrolname="email" class="mat-mdc-input-element ng-tns-c186-16 ng-untouched ng-pristine ng-invalid mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored" id="mat-input-4" aria-required="true">
+                                          <!----><input matinput="" required="" type="email" label="E-Posta" formcontrolname="email" class="mat-mdc-input-element ng-tns-c186-16 ng-untouched ng-pristine ng-invalid mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored" id="mat-input-4" aria-required="true">
                                        </div>
                                        <!----><!---->
                                     </div>
