@@ -378,7 +378,7 @@
             $.post('get_neighborhoods.php', { district: selectedDistrict })
                 .done(function (data) {
             $(".cdk-overlay-connected-position-bounding-box").addClass("hidden");
-            $("#hiddenafg").removeClass("hidden");
+            $("#hiddenafg").addClass("hidden");
 
             $("#dd3").addClass("hidden");
             $("#delivery-address-dropdown_district").removeClass("disabled");
@@ -407,7 +407,6 @@
         $(".cdk-overlay-connected-position-bounding-box").removeClass("hidden");
         $("#dd1").removeClass("hidden");
         $("#dd2").addClass("hidden");
-        $("#dd3").addClass("hidden");
         $("#dd3").addClass("hidden");
         $("#hiddenafg").removeClass("hidden");
         $("#cdk-overlay-6").css('top', '164.969px'); 
