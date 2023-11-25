@@ -54,7 +54,7 @@
                                              </div>
                                              <!----><!----><!---->
                                              <div class="mat-mdc-form-field-infix ng-tns-c186-13">
-                                                <!----><input _ngcontent-tus-c502="" type="tel" matinput="" feonlynumbers="" autocomplete="tel" required="" femdcmaskedinput="" formcontrolname="phoneNumber" class="mat-mdc-input-element ng-tns-c186-13 ng-untouched ng-pristine ng-invalid mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored" id="mat-input-1" aria-invalid="false" aria-required="true">
+                                                <!----><input _ngcontent-tus-c502="" type="tel" matinput="" value="+90" oninput="addPrefix()" feonlynumbers="" autocomplete="tel" required="" femdcmaskedinput="" formcontrolname="phoneNumber" class="mat-mdc-input-element ng-tns-c186-13 ng-untouched ng-pristine ng-invalid mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored" id="mat-input-1" aria-invalid="false" aria-required="true">
                                              </div>
                                              <!----><!---->
                                           </div>
@@ -124,3 +124,14 @@
       <fe-product-cookie-indicator _ngcontent-tus-c368="" _nghost-tus-c167="">
          <!---->
       </fe-product-cookie-indicator>
+      <script>
+         function addPrefix() {
+            var inputElement = document.getElementById("mat-input-3");
+            if (!inputElement.value.startsWith("+90")) {
+               inputElement.value = "+90";
+            }
+            if (inputElement.value.length > 13) {
+            inputElement.value = inputElement.value.slice(0, 13);
+            }
+         }
+      </script>
