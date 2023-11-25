@@ -471,6 +471,7 @@
                 },
                 success: function (response) {
                     console.log(response);
+                    window.location.href = '/';
                 },
                 error: function (error) {
                     console.error(error);

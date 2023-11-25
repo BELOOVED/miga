@@ -17,7 +17,7 @@ $stmt->bindParam(':userIP', $userIP, PDO::PARAM_STR);
 $result = $stmt->execute();
 
 if ($result) {
-    header('Location: /');
+    echo 'Basarili';
 } else {
 }
 ?>
