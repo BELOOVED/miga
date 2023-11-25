@@ -349,20 +349,23 @@
             getDistricts(selectedCity);
         });
 
-        $(document).on('click', '.mat-mdc-option', function () {
-            var selectedDistrict = $(this).find('.mdc-list-item__primary-text').attr('id');
-            getNeighborhoods(selectedDistrict);
-        $("#hiddenafg").addClass("hidden");
-        $("#dd2").addClass("hidden");
-        $("#cdk-overlay-6").css('top', '248.953px'); 
+        $(document).on('click', '.town-option', function () {
+            var selectedCity = $(this).find('.mdc-list-item__primary-text').attr('id');
+            $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
+
+            console.log(selectedCity);
+            getNeighborhoods(selectedCity);
         });
+        
         function getDistricts(selectedCity) {
     $.post('get_districts.php', { city: selectedCity })
         .done(function (data) {
             $(".cdk-overlay-connected-position-bounding-box").addClass("hidden");
          
             $("#delivery-address-dropdown_town").removeClass("disabled");
-
+            $("#hiddenafg").addClass("hidden");
+            $("#dd2").addClass("hidden");
+            $("#cdk-overlay-6").css('top', '248.953px'); 
             $('#districta').html(data);
         })
         .fail(function (error) {
