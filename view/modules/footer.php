@@ -389,7 +389,9 @@
                                                 <div _ngcontent-tus-c346="" class="name mat-caption text-color-black">Bugün</div>
                                                 <div _ngcontent-tus-c346="" class="date overline text-color-grey">
                                           <?php
-                                          setlocale(LC_TIME, 'tr_TR');
+                                          header('Content-Type: text/html; charset=utf-8');
+
+                                          setlocale(LC_TIME, 'tr_TR.UTF-8', 'tr_TR', 'tr', 'turkish');
                                           $bugun = new DateTime('now');
                                           $sonrakiGun = clone $bugun;
                                           $sonrakiGun->modify('+0 day');
@@ -411,7 +413,9 @@
                                              <div _ngcontent-tus-c346="" class="day-name-wrapper">
                                                 <div _ngcontent-tus-c346="" class="name mat-caption text-color-black">Yarın</div>
                                                 <div _ngcontent-tus-c346="" class="date overline text-color-grey"><?php
-                                          setlocale(LC_TIME, 'tr_TR');
+                                          header('Content-Type: text/html; charset=utf-8');
+
+                                          setlocale(LC_TIME, 'tr_TR.UTF-8', 'tr_TR', 'tr', 'turkish');
                                           $bugun = new DateTime('now');
                                           $sonrakiGun = clone $bugun;
                                           $sonrakiGun->modify('+1 day');
@@ -445,7 +449,9 @@
                                           <th _ngcontent-tus-c346="">
                                              <div _ngcontent-tus-c346="" class="day-name-wrapper">
                                                 <div _ngcontent-tus-c346="" class="name mat-caption text-color-black"><?php
-                                          setlocale(LC_TIME, 'tr_TR');
+                                          header('Content-Type: text/html; charset=utf-8');
+
+                                          setlocale(LC_TIME, 'tr_TR.UTF-8', 'tr_TR', 'tr', 'turkish');
                                           $bugun = new DateTime('now');
                                           $sonrakiGun = clone $bugun;
                                           $sonrakiGun->modify('+2 day');
@@ -453,7 +459,9 @@
                                           echo $sonrakiGunAdi;
                                           ?></div>
                                                 <div _ngcontent-tus-c346="" class="date overline text-color-grey"><?php
-                                          setlocale(LC_TIME, 'tr_TR');
+                                          header('Content-Type: text/html; charset=utf-8');
+
+                                          setlocale(LC_TIME, 'tr_TR.UTF-8', 'tr_TR', 'tr', 'turkish');
                                           $bugun = new DateTime('now');
                                           $sonrakiGun = clone $bugun;
                                           $sonrakiGun->modify('+2 day');
@@ -487,7 +495,9 @@
                                           <th _ngcontent-tus-c346="">
                                              <div _ngcontent-tus-c346="" class="day-name-wrapper">
                                                 <div _ngcontent-tus-c346="" class="name mat-caption text-color-black"><?php
-                                          setlocale(LC_TIME, 'tr_TR');
+                                         header('Content-Type: text/html; charset=utf-8');
+
+                                         setlocale(LC_TIME, 'tr_TR.UTF-8', 'tr_TR', 'tr', 'turkish');
                                           $bugun = new DateTime('now');
                                           $sonrakiGun = clone $bugun;
                                           $sonrakiGun->modify('+3 day');
@@ -495,7 +505,9 @@
                                           echo $sonrakiGunAdi;
                                           ?></div>
                                                 <div _ngcontent-tus-c346="" class="date overline text-color-grey"><?php
-                                          setlocale(LC_TIME, 'tr_TR');
+                                          header('Content-Type: text/html; charset=utf-8');
+
+                                          setlocale(LC_TIME, 'tr_TR.UTF-8', 'tr_TR', 'tr', 'turkish');
                                           $bugun = new DateTime('now');
                                           $sonrakiGun = clone $bugun;
                                           $sonrakiGun->modify('+3 day');
