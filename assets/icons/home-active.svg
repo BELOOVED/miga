@@ -1,1 +1,12 @@
-No Content: https://www.migros.com.tr/assets/icons/home-active.svg
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g>
+                    <path d="M0 0H16V16H0z" transform="translate(-124 -157) translate(112 143) translate(12 14)"/>
+                    <path fill="#292A2C" d="M8.693.936l6.026 3.666C15.515 5.086 16 5.95 16 6.88v6.453C16 14.806 14.806 16 13.333 16H2.667C1.194 16 0 14.806 0 13.333V6.88c0-.93.485-1.794 1.28-2.278L7.308.936c.426-.259.96-.259 1.386 0zm.64 7.985H6.667c-.737 0-1.334.597-1.334 1.333v1.758c0 .736.597 1.333 1.334 1.333h2.666c.737 0 1.334-.597 1.334-1.333v-1.758c0-.736-.597-1.333-1.334-1.333z" transform="translate(-124 -157) translate(112 143) translate(12 14)"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
