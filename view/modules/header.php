@@ -48,7 +48,14 @@ if ($existingUser) {
       <title>Migros Sanal Market: Online Market Alışverişi</title>
       <base href="/">
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=0">
-      <style type="text/css">:root, :host {
+      <style type="text/css">
+      *{
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+      
+      :root, :host {
          --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Solid";
          --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Regular";
          --fa-font-light: normal 300 1em/1 "Font Awesome 6 Light";
