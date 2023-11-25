@@ -182,7 +182,7 @@
                                              </div>
                                           </mat-form-field>
                                        </fe-dropdown>
-                                       <fe-dropdown _ngcontent-jhu-c282="" id="delivery-address-dropdown_town" formcontrolname="townId" onclick="showDropdown2()" id="ilaagg3" placeholder="İlçe" class="disabled ng-untouched ng-pristine ng-invalid">
+                                       <fe-dropdown _ngcontent-jhu-c282="" id="delivery-address-dropdown_town" formcontrolname="townId" onclick="showDropdown2()" placeholder="İlçe" class="disabled ng-untouched ng-pristine ng-invalid">
                                           <mat-form-field appearance="outline" color="accent" id="citygga" class="mat-mdc-form-field ng-tns-c186-29 mat-mdc-form-field-type-mat-select mat-form-field-disabled mat-form-field-appearance-outline mat-form-field-hide-placeholder mat-accent ng-untouched ng-pristine ng-star-inserted">
                                              <!---->
                                              <div class="mat-mdc-text-field-wrapper mdc-text-field ng-tns-c186-29 mdc-text-field--outlined mdc-text-field--disabled" id="ggagfkdfg">
@@ -205,7 +205,7 @@
                                                       <mat-select onclick="ilcedrop()" role="combobox" aria-autocomplete="none" aria-haspopup="listbox" class="mat-mdc-select ng-tns-c190-30 ng-tns-c186-29 mat-mdc-select-disabled mat-mdc-select-empty ng-untouched ng-pristine ng-star-inserted" aria-labelledby="mat-mdc-form-field-label-26 mat-select-value-27" id="mat-select-26" tabindex="-1" aria-expanded="false" aria-required="false" aria-disabled="true" aria-invalid="false">
                                                          <div cdk-overlay-origin="" class="mat-mdc-select-trigger ng-tns-c190-30">
                                                             <div class="mat-mdc-select-value ng-tns-c190-30" id="mat-select-value-27">
-                                                               <span class="mat-mdc-select-placeholder mat-mdc-select-min-line ng-tns-c190-30 ng-star-inserted">İlçe</span><!----><!---->
+                                                               <span class="mat-mdc-select-placeholder mat-mdc-select-min-line ng-tns-c190-30 ng-star-inserted" id="ilaagg3">İlçe</span><!----><!---->
                                                             </div>
                                                             <div class="mat-mdc-select-arrow-wrapper ng-tns-c190-30">
                                                                <div class="mat-mdc-select-arrow ng-tns-c190-30">
@@ -232,7 +232,7 @@
                                              </div>
                                           </mat-form-field>
                                        </fe-dropdown>
-                                       <fe-dropdown _ngcontent-jhu-c282="" id="delivery-address-dropdown_district" formcontrolname="serviceAreaObjectId" onclick="showDropdown3()" id="ilaagg5" placeholder="Mahalle" class="disabled ng-untouched ng-pristine">
+                                       <fe-dropdown _ngcontent-jhu-c282="" id="delivery-address-dropdown_district" formcontrolname="serviceAreaObjectId" onclick="showDropdown3()"  placeholder="Mahalle" class="disabled ng-untouched ng-pristine">
                                           <mat-form-field appearance="outline" color="accent" class="mat-mdc-form-field ng-tns-c186-31 mat-mdc-form-field-type-mat-select mat-form-field-disabled mat-form-field-appearance-outline mat-form-field-hide-placeholder mat-accent ng-untouched ng-pristine ng-star-inserted">
                                              <!---->
                                              <div class="mat-mdc-text-field-wrapper mdc-text-field ng-tns-c186-31 mdc-text-field--outlined mdc-text-field--disabled" id="afgakdfg">
@@ -255,7 +255,7 @@
                                                       <mat-select onclick="mahalledrop()" role="combobox" aria-autocomplete="none" aria-haspopup="listbox" class="mat-mdc-select ng-tns-c190-32 ng-tns-c186-31 mat-mdc-select-disabled mat-mdc-select-empty ng-untouched ng-pristine ng-star-inserted" aria-labelledby="mat-mdc-form-field-label-28 mat-select-value-29" id="mat-select-28" tabindex="-1" aria-expanded="false" aria-required="false" aria-disabled="true" aria-invalid="false">
                                                          <div cdk-overlay-origin="" class="mat-mdc-select-trigger ng-tns-c190-32">
                                                             <div class="mat-mdc-select-value ng-tns-c190-32" id="mat-select-value-29">
-                                                               <span class="mat-mdc-select-placeholder mat-mdc-select-min-line ng-tns-c190-32 ng-star-inserted">Mahalle</span><!----><!---->
+                                                               <span class="mat-mdc-select-placeholder mat-mdc-select-min-line ng-tns-c190-32 ng-star-inserted" id="ilaagg5">Mahalle</span><!----><!---->
                                                             </div>
                                                             <div class="mat-mdc-select-arrow-wrapper ng-tns-c190-32">
                                                                <div class="mat-mdc-select-arrow ng-tns-c190-32">
