@@ -298,7 +298,7 @@
          </div>
          <div class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing hidden" id="hiddenafg"></div>
          <div class="cdk-overlay-connected-position-bounding-box hidden" id="" dir="ltr" style="top: 0px; left: 0px; height: 100%; width: 100%;">
-    <div id="cdk-overlay-6" class="cdk-overlay-pane dialog-shadow" id="toppoa" style="width: 312px; top: 164.969px; left: 24px;">
+    <div id="cdk-overlay-6" class="cdk-overlay-pane dialog-shadow" style="width: 312px; top: 164.969px; left: 24px;">
         <div role="listbox" id="dd1" tabindex="-1"
             class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel hidden"
             aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
@@ -354,7 +354,7 @@
             getNeighborhoods(selectedDistrict);
         $("#hiddenafg").addClass("hidden");
         $("#dd2").addClass("hidden");
-        $("#toppoa").css('top', '248.953px'); 
+        $("#cdk-overlay-6").css('top', '248.953px'); 
         });
         function getDistricts(selectedCity) {
     $.post('get_districts.php', { city: selectedCity })
