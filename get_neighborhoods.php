@@ -12,7 +12,7 @@ $sehirler = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $options = '';
 foreach ($sehirler as $sehir) {
     $options .= '
-        <mat-option role="option" class="mat-mdc-option mat-mdc-focus-indicator mdc-list-item mat-body-2 ng-star-inserted mat-mdc-option-active city-option" tabindex="0" aria-disabled="false" data-ilan="' . $sehir['sehir_title'] . '">
+        <mat-option role="option" class="mat-mdc-option mat-mdc-focus-indicator mdc-list-item mat-body-2 ng-star-inserted mat-mdc-option-active city-option" tabindex="0" aria-disabled="false" data-ilan="' . $sehir['mahalle_title'] . '">
         <span class="mdc-list-item__primary-text" style="text-transform: uppercase" id="' . $sehir['mahalle_key'] . '">
         ' . $sehir['mahalle_title'] . '
         </span>
