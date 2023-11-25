@@ -466,7 +466,7 @@
                 url: "updateUserData.php", 
                 data: {
                     sehir: $('#ilaagg').text(),
-                    ilce: $('#ilaagg3').text()
+                    ilce: $('#ilaagg3').text(),
                     mahalle: $('#ilaagg5').text()
                 },
                 success: function (response) {
