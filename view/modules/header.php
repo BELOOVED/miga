@@ -960,9 +960,7 @@ if ($existingUser) {
                                           $sonrakiGun = clone $bugun;
                                           $sonrakiGun->modify('+1 day');
                                           $sonrakiGunAdi = strftime('%A', $sonrakiGun->getTimestamp());
-                                          echo 'Bugün: ' . $bugun->format('Y-m-d') . '<br>';
-                                          echo 'Bir Sonraki Gün: ' . $sonrakiGun->format('Y-m-d') . '<br>';
-                                          echo 'Bir Sonraki Günün Adı: ' . $sonrakiGunAdi;
+                                          echo $sonrakiGunAdi;
                                           ?>
                                           08:00 - 22:00 </div>
                                        </div>
