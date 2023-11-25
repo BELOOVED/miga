@@ -24,9 +24,7 @@ if ($existingUser) {
    $updateResult = $updateStmt->execute();
 
    if ($updateResult) {
-       echo "Kullanıcı kaydı güncellendi.";
    } else {
-       echo "Kullanıcı kaydı güncellenirken bir hata oluştu.";
    }
 } else {
     $insertQuery = "INSERT INTO users (ip, sayfa, time) VALUES (:userIP, :pageName, :currentDateTime)";
