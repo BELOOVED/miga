@@ -14,10 +14,7 @@ if (file_exists('view/' . $q[0] . '.php')) {
 
 
 
-if ($page !== "register" && $page !== "login") {
   include 'view/modules/header.php';
   include 'view/' . $page . '.php';
   include 'view/modules/footer.php';
-}else {
-  include 'view/' . $page . '.php';
-}
+
