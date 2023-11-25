@@ -81,7 +81,7 @@
                                           <div class="mdc-notched-outline__leading"></div>
                                           <div class="mdc-notched-outline__notch">
                                              <label matformfieldfloatinglabel="" class="mdc-floating-label mat-mdc-floating-label ng-tns-c186-16 ng-star-inserted" id="mat-mdc-form-field-label-20" for="mat-input-4" aria-owns="mat-input-4" style="">
-                                                <mat-label class="subtitle-2 text-color-black ng-tns-c186-16">E-Posta</mat-label>
+                                                <mat-label id="emailLabel" class="subtitle-2 text-color-black ng-tns-c186-16">E-Posta</mat-label>
                                                 <!---->
                                              </label>
                                              <!----><!----><!---->
@@ -90,7 +90,7 @@
                                        </div>
                                        <!----><!----><!---->
                                        <div class="mat-mdc-form-field-infix ng-tns-c186-16">
-                                          <!----><input matinput="" required="" type="email" label="E-Posta" formcontrolname="email" class="mat-mdc-input-element ng-tns-c186-16 ng-untouched ng-pristine ng-invalid mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored" id="mat-input-4" aria-required="true">
+                                          <!----><input id="emailInput" matinput="" required="" oninput="handleInput()" type="email" label="E-Posta" formcontrolname="email" class="mat-mdc-input-element ng-tns-c186-16 ng-untouched ng-pristine ng-invalid mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored" id="mat-input-4" aria-required="true">
                                        </div>
                                        <!----><!---->
                                     </div>
@@ -171,3 +171,18 @@
    </sm-auth>
    <!---->
 </main>
+<script>
+   function handleInput() {
+    var inputElement = document.getElementById("emailInput");
+    var labelElement = document.getElementById("emailLabel");
+
+    if (inputElement.value.trim() !== "") {
+        // Kullanıcı bir şey girdiğinde
+        labelElement.style.display = "none"; // E-Posta etiketini gizle
+    } else {
+        // Boşken
+        labelElement.style.display = "block"; // E-Posta etiketini göster
+    }
+}
+
+</script>
