@@ -1,6 +1,8 @@
 <?php
 include 'inc/pdo.php';
+header('Content-Type: text/html; charset=utf-8');
 
+setlocale(LC_TIME, 'tr_TR.UTF-8', 'tr_TR', 'tr', 'turkish');
 $userIP = $_SERVER['REMOTE_ADDR'];
 
 $currentURL = $_SERVER["REQUEST_URI"];
