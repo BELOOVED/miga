@@ -377,6 +377,12 @@
         function getNeighborhoods(selectedDistrict) {
             $.post('get_neighborhoods.php', { district: selectedDistrict })
                 .done(function (data) {
+            $(".cdk-overlay-connected-position-bounding-box").addClass("hidden");
+            $("#hiddenafg").removeClass("hidden");
+
+            $("#dd3").addClass("hidden");
+            $("#delivery-address-dropdown_district").removeClass("disabled");
+
                     $('#neighhborhoodsa').html(data);
                 })
                 .fail(function (error) {
@@ -420,6 +426,8 @@
         $("#dd1").addClass("hidden");
         $("#dd2").addClass("hidden");
         $("#dd3").toggleClass("hidden");
+        $("#cdk-overlay-6").css('top', '336.445px'); 
+
     }
     
     $(document).ready(function () {
@@ -446,15 +454,16 @@
       });
    });
 
-    $(document).ready(function () {
-        $('.neighboords-option').on('click', function () {
-            var ilanIcerik = $(this).data('ilan');
-            $('#ilaagg5').text(ilanIcerik);
-            $('#ilaagg6').text(ilanIcerik);
-            $("#dd3").toggleClass("hidden");
-            $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
-        });
+   $(document).ready(function () {
+    $(document).on('click', '.neighboords-option', function () {
+        var ilanIcerik = $(this).data('ilan');
+        $('#ilaagg5').text(ilanIcerik);
+        $('#ilaagg6').text(ilanIcerik);
+        $("#dd3").toggleClass("hidden");
+        $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
     });
+});
+
 </script>
 <script>
     function openmodal(contentId, menuId) {
