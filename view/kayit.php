@@ -188,10 +188,18 @@
       // Kullanıcının girdiği değeri al
       var inputValue = inputElement.value;
 
-      // Başına +90 eklemek için kontrol et
+      // Başında "+90" varsa kaldır
+      if (inputValue.startsWith("+90")) {
+         inputValue = inputValue.slice(3); // Başındaki "+90" kısmını kaldır
+      }
+
+      // Başına +90 ekle
       if (inputValue.trim() !== "" && !inputValue.startsWith("+90")) {
          // Başında +90 yoksa ekle
-         inputElement.value = "+90" + inputValue;
+         inputValue = "+90" + inputValue;
       }
-   }
+
+      // Yeni değeri inputa yerleştir
+      inputElement.value = inputValue;
+      }
 </script>
