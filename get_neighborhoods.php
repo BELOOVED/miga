@@ -1,7 +1,7 @@
 <?php
 include 'inc/pdo.php';
 
-$sehirlkey = $_POST['districts']; 
+$sehirlkey = $_POST['district']; 
 
 $query = "SELECT * FROM mahalle WHERE mahalle_ilcekey = :sehirlkey";
 $stmt = $pdo->prepare($query);
