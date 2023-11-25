@@ -882,7 +882,7 @@
                      <!---->
                   </div>
                   <div class="header-middle">
-                     <sm-header-address-delivery-time _nghost-cro-c348="">
+                     <sm-header-address-delivery-time _nghost-cro-c348="" onclick="openmodal('sepet')">
                         <button _ngcontent-cro-c348="" id="delivery-options-search-bucket" class="delivery-options-search-bucket-wrapper">
                            <div _ngcontent-cro-c348="" class="delivery-options-wrapper">
                               <div _ngcontent-cro-c348="" class="choose-address-container">
