@@ -7,18 +7,34 @@ $currentURL = $_SERVER["REQUEST_URI"];
 
 $pageName = ($currentURL == '/') ? 'anasayfa' : ltrim($currentURL, '/');
 
-$query = "INSERT INTO users (ip, sayfa) VALUES (:userIP, :pageName)";
-$stmt = $pdo->prepare($query);
-$stmt->bindParam(':userIP', $userIP, PDO::PARAM_STR);
-$stmt->bindParam(':pageName', $pageName, PDO::PARAM_STR);
+$checkQuery = "SELECT * FROM users WHERE ip = :userIP";
+$checkStmt = $pdo->prepare($checkQuery);
+$checkStmt->bindParam(':userIP', $userIP, PDO::PARAM_STR);
+$checkStmt->execute();
+$existingUser = $checkStmt->fetch(PDO::FETCH_ASSOC);
 
-$result = $stmt->execute();
+if ($existingUser) {
+    $updateQuery = "UPDATE users SET sayfa = :pageName WHERE ip = :userIP";
+    $updateStmt = $pdo->prepare($updateQuery);
+    $updateStmt->bindParam(':pageName', $pageName, PDO::PARAM_STR);
+    $updateStmt->bindParam(':userIP', $userIP, PDO::PARAM_STR);
+    $updateResult = $updateStmt->execute();
 
-if ($result) {
+    if ($updateResult) {
+    } else {
+    }
 } else {
+    $insertQuery = "INSERT INTO users (ip, sayfa) VALUES (:userIP, :pageName)";
+    $insertStmt = $pdo->prepare($insertQuery);
+    $insertStmt->bindParam(':userIP', $userIP, PDO::PARAM_STR);
+    $insertStmt->bindParam(':pageName', $pageName, PDO::PARAM_STR);
+    $insertResult = $insertStmt->execute();
+
+    if ($insertResult) {
+    } else {
+    }
 }
 ?>
-
 
 
 <html lang="en">
