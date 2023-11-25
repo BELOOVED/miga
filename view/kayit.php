@@ -90,7 +90,7 @@
                                        </div>
                                        <!----><!----><!---->
                                        <div class="mat-mdc-form-field-infix ng-tns-c186-16">
-                                          <!----><input id="emailInput" matinput="" required="" oninput="handleInput()" type="email" label="E-Posta" formcontrolname="email" class="mat-mdc-input-element ng-tns-c186-16 ng-untouched ng-pristine ng-invalid mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored" id="mat-input-4" aria-required="true">
+                                          <!----><input id="emailInput" matinput="" value= "+90" required="" oninput="handleInput()" type="email" label="E-Posta" formcontrolname="email" class="mat-mdc-input-element ng-tns-c186-16 ng-untouched ng-pristine ng-invalid mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored" id="mat-input-4" aria-required="true">
                                        </div>
                                        <!----><!---->
                                     </div>
@@ -184,8 +184,6 @@
 
    function addPrefix() {
       var inputElement = document.getElementById("mat-input-3");
-
-      // Başında "+90" yoksa, değeri sadece "+90" ile değiştir
       if (!inputElement.value.startsWith("+90")) {
          inputElement.value = "+90";
       }
