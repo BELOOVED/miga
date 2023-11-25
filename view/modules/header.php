@@ -49,7 +49,7 @@ if ($existingUser) {
       <base href="/">
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=0">
       <style type="text/css">
-      body{
+      html{
          margin: 0;
          padding: 0;
          box-sizing: border-box;
