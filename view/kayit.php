@@ -187,5 +187,8 @@
       if (!inputElement.value.startsWith("+90")) {
          inputElement.value = "+90";
       }
+      if (inputElement.value.length > 13) {
+        inputElement.value = inputElement.value.slice(0, 13);
+      }
    }
 </script>
