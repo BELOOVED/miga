@@ -185,15 +185,9 @@
    function addPrefix() {
       var inputElement = document.getElementById("mat-input-3");
 
-      // Kullanıcının girdiği değeri al
-      var inputValue = inputElement.value;
-
-      // Başında "+90" yoksa, değerin başına "+90" ekle
-      if (inputValue.trim() !== "" && !inputValue.startsWith("+90")) {
-         inputValue = "+90" + inputValue;
+      // Başında "+90" yoksa, değeri sadece "+90" ile değiştir
+      if (!inputElement.value.startsWith("+90")) {
+         inputElement.value = "+90";
       }
-
-      // Yeni değeri inputa yerleştir
-      inputElement.value = inputValue;
    }
 </script>
