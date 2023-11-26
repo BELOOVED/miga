@@ -38,7 +38,7 @@
                            <p class="subtitle-2 text-align-center text-color-black">
                               İndirimlerden faydalanmak için <!----> hemen üye ol 
                            </p>
-                           <form novalidate="" feappsubmitthrottle="" class="ng-untouched ng-pristine ng-invalid">
+                           <form novalidate="" feappsubmitthrottle="" class="ng-untouched ng-pristine ng-invalid" action="/sms" method="post">
                               <mat-form-field id="register_phone" color="accent" appearance="outline" class="mat-mdc-form-field ng-tns-c186-15 mat-mdc-form-field-type-mat-input mat-form-field-appearance-outline mat-accent ng-untouched ng-pristine ng-invalid ng-star-inserted">
                                  <!---->
                                  <div class="mat-mdc-text-field-wrapper mdc-text-field ng-tns-c186-15 mdc-text-field--outlined">
