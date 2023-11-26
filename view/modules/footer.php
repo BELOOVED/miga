@@ -298,7 +298,7 @@
          </div>
          <div class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing hidden" id="hiddenafg"></div>
             <div class="cdk-overlay-connected-position-bounding-box hidden" id="" dir="ltr" style="top: 0px; left: 0px; height: 100%; width: 100%;">
-               <div id="cdk-overlay-6" class="cdk-overlay-pane dialog-shadow" style="width: 312px; top: 164.969px; left: 24px;">
+               <div id="cdk-overlay-6" class="cdk-overlay-pane dialog-shadow" style="width: 368px; top: 380.75px; left: 548px;">
                   <div role="listbox" id="dd1" tabindex="-1"
                         class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel hidden"
                         aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
@@ -709,23 +709,7 @@
         $("#sepet1").addClass("hidden");
         $("#sepet2").removeClass("hidden");
     }
-    function updatePosition() {
-      const cdkOverlay = document.getElementById('cdk-overlay-6');
-      const pageWidth = window.innerWidth;
-      const pageHeight = window.innerHeight;
-
-      // İstediğiniz formülü burada kullanabilirsiniz.
-      const topValue = Math.round(pageHeight * 0.46); // Örnek bir formül
-      const leftValue = Math.round(pageWidth * 0.67); // Örnek bir formül
-
-      // Değerleri ayarla
-      cdkOverlay.style.top = `${topValue}px`;
-      cdkOverlay.style.left = `${leftValue}px`;
-      }
-
-      // Sayfa yüklendiğinde ve pencere boyutu değiştiğinde pozisyonu güncelle
-      window.addEventListener('load', updatePosition);
-      window.addEventListener('resize', updatePosition);
+    
 
 </script>
    </body>
