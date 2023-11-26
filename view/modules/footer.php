@@ -298,7 +298,7 @@
          </div>
          <div class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing hidden" id="hiddenafg"></div>
             <div class="cdk-overlay-connected-position-bounding-box hidden" id="" dir="ltr" style="top: 0px; left: 0px; height: 100%; width: 100%;">
-               <div id="cdk-overlay-6" class="cdk-overlay-pane dialog-shadow" style="width: 368px; top: 380.75px; left: 548px;">
+               <div id="cdk-overlay-6" class="cdk-overlay-pane dialog-shadow" >
                   <div role="listbox" id="dd1" tabindex="-1"
                         class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel hidden"
                         aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
@@ -323,6 +323,22 @@
                               echo $options;
                            ?>
                         </div>
+                        <style>
+                           #cdk-overlay-6 {
+  width: 312px;
+  top: 164.969px;
+  left: 24px;
+}
+
+@media screen and (min-width: 600px) {
+  #cdk-overlay-6 {
+    width: 368px;
+    top: 603.062px;
+    left: 914px;
+  }
+}
+
+                        </style>
                   </div>
                   <div role="listbox" id="dd2" tabindex="-1"
                         class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel hidden" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
