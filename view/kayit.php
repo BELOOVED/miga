@@ -215,13 +215,14 @@
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     var inputElement = document.getElementById("mat-input-3");
+    var phoneNumberPattern = '0(5__) ___-____';
 
     // Sayfa yüklendiğinde hazır bekleyen başlangıç değeri
-    inputElement.value = '0(5__) ___-____';
+    inputElement.value = phoneNumberPattern;
 
     // Input alanına odaklandığında, içeriği temizle
     inputElement.addEventListener('focus', function () {
-        if (inputElement.value === '0(5__) ___-____') {
+        if (inputElement.value === phoneNumberPattern) {
             inputElement.value = '0';
         }
     });
@@ -231,7 +232,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Eğer değer yoksa, varsayılan formatı ekleyebiliriz
         if (inputValue.length === 0) {
-            inputElement.value = '0(5__) ___-____';
+            inputElement.value = phoneNumberPattern;
             return;
         }
 
@@ -265,6 +266,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Input alanındaki herhangi bir değişiklik için olay dinleyicisi ekle
     inputElement.addEventListener('input', formatPhoneNumber);
 });
+
 
 
 </script>
