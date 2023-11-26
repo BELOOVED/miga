@@ -299,7 +299,7 @@
          <style>
 
 @media screen and (min-width: 600px) {
-   .cdk-overlay-connected-position-bounding-box {
+   #yetoa {
    top: -70px;
     left: 0px;
     display: flex;
@@ -314,7 +314,7 @@
 }
                         </style>
          <div class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing hidden" id="hiddenafg"></div>
-            <div class="cdk-overlay-connected-position-bounding-box hidden" id="" dir="ltr" style="top: 80px;
+            <div class="cdk-overlay-connected-position-bounding-box hidden" id="yetoa" dir="ltr" style="top: 80px;
     left: 0px;
     display: flex;
     align-items: center;
