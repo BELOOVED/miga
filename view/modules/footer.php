@@ -301,7 +301,7 @@
 
 <style>
    #yetoa {
-    top: -70px;
+    top: 0px;
     left: 0px;
     display: flex;
     align-items: center;
