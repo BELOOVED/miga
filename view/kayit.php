@@ -115,7 +115,7 @@
                                     <div class="mdc-form-field">
                                        <div class="mdc-checkbox">
                                           <div class="mat-mdc-checkbox-touch-target"></div>
-                                          <input type="checkbox" class="mdc-checkbox__native-control" id="mat-mdc-checkbox-1-input" required="" tabindex="0" aria-checked="false">
+                                          <input type="checkbox" required class="mdc-checkbox__native-control" id="mat-mdc-checkbox-1-input" required="" tabindex="0" aria-checked="false">
                                           <div class="mdc-checkbox__ripple"></div>
                                           <div class="mdc-checkbox__background">
                                              <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true" class="mdc-checkbox__checkmark">
@@ -138,7 +138,7 @@
                                     <div class="mdc-form-field">
                                        <div class="mdc-checkbox">
                                           <div class="mat-mdc-checkbox-touch-target"></div>
-                                          <input type="checkbox" class="mdc-checkbox__native-control" id="mat-mdc-checkbox-2-input" tabindex="0" aria-checked="false">
+                                          <input type="checkbox" required class="mdc-checkbox__native-control" id="mat-mdc-checkbox-2-input" tabindex="0" aria-checked="false">
                                           <div class="mdc-checkbox__ripple"></div>
                                           <div class="mdc-checkbox__background">
                                              <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true" class="mdc-checkbox__checkmark">
