@@ -710,6 +710,16 @@
          </div>
       </div>
 <script>
+   function showCart() {
+  var cart = document.getElementById("cart");
+  cart.classList.remove("hidden");
+}
+
+function hideCart() {
+  var cart = document.getElementById("cart");
+  cart.classList.add("hidden");
+}
+
     $(document).ready(function () {
         $(document).on('click', '.city-option', function () {
             var selectedCity = $(this).find('.mdc-list-item__primary-text').attr('id');

@@ -1175,7 +1175,7 @@ if ($existingUser) {
                      </div>
                      <sm-cart-dropdown _nghost-cro-c342="">
                         <div _ngcontent-cro-c342="">
-                           <div _ngcontent-cro-c342="" id="homepage-cart-button" class="toggle-layer"></div>
+                           <div _ngcontent-cro-c342="" id="homepage-cart-button" class="toggle-layer"  onmouseover="showCart()" onmouseout="hideCart()"></div>
                            <div _ngcontent-cro-c342="" feclickelsewhere="" class="dropdown-btn">
                               <div _ngcontent-cro-c342="" class="icon-cart-quantity-wrapper">
                                  <div _ngcontent-cro-c342="" class="icon-cart"></div>
@@ -1190,6 +1190,7 @@ if ($existingUser) {
                                     <path fill="currentColor" d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path>
                                  </svg>
                               </fa-icon>
+                              <span _ngcontent-svk-c342="" class="empty-cart mat-body-2 hidden">Sepetiniz Henüz Boş</span>
                               <!---->
                            </div>
                         </div>
