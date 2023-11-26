@@ -372,11 +372,6 @@
                     </div>
                 </div>
                 <!---->
-                <div _ngcontent-cro-c416="" class="mdc-layout-grid__cell--span-12 free-banner-wrapper">
-                    <div _ngcontent-cro-c416="" fedeferload="" class="free-banner" id="div-gpt-ad-1664180024078-0" style="transform: scale(1.17526); height: 293.8px;"></div>
-                    <!---->
-                </div>
-                <!---->
                 <div _ngcontent-cro-c416="" class="section mdc-layout-grid__cell--span-12">
                     <div _ngcontent-cro-c416="" class="d-flex">
                         <div _ngcontent-cro-c416="" class="section-title mat-headline text-color-black"> Migroskop Ürünleri </div>
