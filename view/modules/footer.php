@@ -572,7 +572,7 @@
     $(document).ready(function () {
         $(document).on('click', '.city-option', function () {
             var selectedCity = $(this).find('.mdc-list-item__primary-text').attr('id');
-        $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
+        $(".cdk-overlay-connected-position-bounding-box").toggleClass("visible");
 
             console.log(selectedCity);
             getDistricts(selectedCity);
@@ -580,7 +580,7 @@
 
         $(document).on('click', '.town-option', function () {
             var selectedCity = $(this).find('.mdc-list-item__primary-text').attr('id');
-            $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
+            $(".cdk-overlay-connected-position-bounding-box").toggleClass("visible");
 
             console.log(selectedCity);
             getNeighborhoods(selectedCity);
@@ -589,11 +589,11 @@
         function getDistricts(selectedCity) {
     $.post('get_districts.php', { city: selectedCity })
         .done(function (data) {
-            $(".cdk-overlay-connected-position-bounding-box").addClass("hidden");
+            $(".cdk-overlay-connected-position-bounding-box").addClass("visible");
          
             $("#delivery-address-dropdown_town").removeClass("disabled");
-            $("#hiddenafg").addClass("hidden");
-            $("#dd2").addClass("hidden");
+            $("#hiddenafg").addClass("visible");
+            $("#dd2").addClass("visible");
             
             $('#districta').html(data);
         })
@@ -606,10 +606,10 @@
         function getNeighborhoods(selectedDistrict) {
             $.post('get_neighborhoods.php', { district: selectedDistrict })
                 .done(function (data) {
-            $(".cdk-overlay-connected-position-bounding-box").addClass("hidden");
-            $("#hiddenafg").addClass("hidden");
+            $(".cdk-overlay-connected-position-bounding-box").addClass("visible");
+            $("#hiddenafg").addClass("visible");
 
-            $("#dd3").addClass("hidden");
+            $("#dd3").addClass("visible");
             $("#delivery-address-dropdown_district").removeClass("disabled");
 
                     $('#neighhborhoodsa').html(data);
@@ -621,39 +621,39 @@
     });
 
     function showDropdown1() {
-        $(".ilsecim").removeClass("hidden");
+        $(".ilsecim").removeClass("visible");
     }
 
     function showDropdown2() {
-        $(".ilcesecim").removeClass("hidden");
+        $(".ilcesecim").removeClass("visible");
     }
 
     function showDropdown3() {
-        $(".mahallesecim").removeClass("hidden");
+        $(".mahallesecim").removeClass("visible");
     }
 
     function ildrop() {
-        $(".cdk-overlay-connected-position-bounding-box").removeClass("hidden");
-        $("#dd1").removeClass("hidden");
-        $("#dd2").addClass("hidden");
-        $("#dd3").addClass("hidden");
-        $("#hiddenafg").removeClass("hidden");
+        $(".cdk-overlay-connected-position-bounding-box").removeClass("visible");
+        $("#dd1").removeClass("visible");
+        $("#dd2").addClass("visible");
+        $("#dd3").addClass("visible");
+        $("#hiddenafg").removeClass("visible");
         $("#cdk-overlay-6").css('top', '164.969px'); 
     }
     
     function ilcedrop() {
-        $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
-        $("#dd1").addClass("hidden");
-        $("#dd2").toggleClass("hidden");
-        $("#dd3").addClass("hidden");
+        $(".cdk-overlay-connected-position-bounding-box").toggleClass("visible");
+        $("#dd1").addClass("visible");
+        $("#dd2").toggleClass("visible");
+        $("#dd3").addClass("visible");
         $("#cdk-overlay-6").css('top', '248.953px'); 
     }
 
     function mahalledrop() {
-        $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
-        $("#dd1").addClass("hidden");
-        $("#dd2").addClass("hidden");
-        $("#dd3").toggleClass("hidden");
+        $(".cdk-overlay-connected-position-bounding-box").toggleClass("visible");
+        $("#dd1").addClass("visible");
+        $("#dd2").addClass("visible");
+        $("#dd3").toggleClass("visible");
         $("#cdk-overlay-6").css('top', '336.445px'); 
 
     }
@@ -665,9 +665,9 @@
             $('#ilaagg2').text(ilanIcerik);
             $('#citygga').removeClass('mat-form-field-disabled');
             $('#ggagfkdfg').removeClass('mdc-text-field--disabled');
-            $("#dd1").toggleClass("hidden");
-            $("#dd2").addClass("hidden");
-            $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
+            $("#dd1").toggleClass("visible");
+            $("#dd2").addClass("visible");
+            $(".cdk-overlay-connected-position-bounding-box").toggleClass("visible");
         });
     });
     $(document).ready(function () {
@@ -676,8 +676,8 @@
          $('#ilaagg3').text(ilanIcerik);
          $('#ilaagg4').text(ilanIcerik);
          $('#afgakdfg').removeClass('mdc-text-field--disabled');
-         $("#dd2").toggleClass("hidden");
-         $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
+         $("#dd2").toggleClass("visible");
+         $(".cdk-overlay-connected-position-bounding-box").toggleClass("visible");
          console.log('Upped');
       });
    });
@@ -687,8 +687,8 @@
       var ilanIcerik = $(this).data('ilan');
       $('#ilaagg5').text(ilanIcerik);
       $('#ilaagg6').text(ilanIcerik);
-      $("#dd3").toggleClass("hidden");
-      $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
+      $("#dd3").toggleClass("visible");
+      $(".cdk-overlay-connected-position-bounding-box").toggleClass("visible");
         setTimeout(function () {
             $.ajax({
                 type: "POST",
@@ -715,15 +715,15 @@
 </script>
 <script>
     function openmodal(contentId, menuId) {
-        $(".cdk-overlay-container").addClass("hidden");
-        $("#" + contentId).removeClass("hidden");
+        $(".cdk-overlay-container").addClass("visible");
+        $("#" + contentId).removeClass("visible");
     }
     function closemodal() {
-        $(".cdk-overlay-container").addClass("hidden");
+        $(".cdk-overlay-container").addClass("visible");
     }
     function sepetadres() {
-        $("#sepet1").addClass("hidden");
-        $("#sepet2").removeClass("hidden");
+        $("#sepet1").addClass("visible");
+        $("#sepet2").removeClass("visible");
     }
     
 
