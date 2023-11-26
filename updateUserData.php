@@ -8,8 +8,16 @@ $ilce = isset($_POST['ilce']) ? $_POST['ilce'] : '';
 $mahalle = isset($_POST['mahalle']) ? $_POST['mahalle'] : '';
 if (empty($sehir) && empty($ilce) && empty($mahalle)) {
     echo 'Hata olustu';
+    die();
 }
 $userIP = $_SERVER['REMOTE_ADDR'];
+$sql = "SELECT * FROM `users` WHERE `ip` = :ip";
+$stmt = $pdo->prepare($sql);
+$stmt->bindParam(':ip', $userIP, PDO::PARAM_STR);
+
+
+
+
 
 $_SESSION['sehir'] = $sehir;
 $_SESSION['ilce'] = $ilce;
