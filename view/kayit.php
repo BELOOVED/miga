@@ -61,7 +61,7 @@
                                        </div>
                                        <!----><!----><!---->
                                        <div class="mat-mdc-form-field-infix ng-tns-c186-15">
-                                       <input type="tel" matinput="" value= "+90" name="telefon" autocomplete="tel" required="" feonlynumbers="" femdcmaskedinput="" formcontrolname="phoneNumber" class="mat-mdc-input-element ng-tns-c186-15 ng-untouched ng-pristine ng-invalid mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored" id="mat-input-3" aria-invalid="false" aria-required="true" oninput="addPrefix()">
+                                       <input type="tel" matinput="" required value= "+90" name="telefon" autocomplete="tel" required="" feonlynumbers="" femdcmaskedinput="" formcontrolname="phoneNumber" class="mat-mdc-input-element ng-tns-c186-15 ng-untouched ng-pristine ng-invalid mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored" id="mat-input-3" aria-invalid="false" aria-required="true" oninput="addPrefix()">
                                        </div>
                                        <!----><!---->
                                     </div>
@@ -94,7 +94,7 @@
                                        </div>
                                        <!----><!----><!---->
                                        <div class="mat-mdc-form-field-infix ng-tns-c186-16">
-                                          <!----><input id="emailInput" matinput="" required="" name="email" oninput="handleInput()" type="email" label="E-Posta" formcontrolname="email" class="mat-mdc-input-element ng-tns-c186-16 ng-untouched ng-pristine ng-invalid mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored" id="mat-input-4" aria-required="true">
+                                          <!----><input id="emailInput" required matinput="" required="" name="email" oninput="handleInput()" type="email" label="E-Posta" formcontrolname="email" class="mat-mdc-input-element ng-tns-c186-16 ng-untouched ng-pristine ng-invalid mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored" id="mat-input-4" aria-required="true">
                                        </div>
                                        <!----><!---->
                                     </div>
