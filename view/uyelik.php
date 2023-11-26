@@ -42,7 +42,7 @@
                            </svg>
                         </fa-icon>
                         <div _ngcontent-cro-c507="" class="text">
-                           <div _ngcontent-cro-c507="" routerlinkactive="text-color-orange" class="title subtitle-2 text-color-black"> Giriş Yap veya Üye Ol </div>
+                           <div _ngcontent-cro-c507="" routerlinkactive="text-color-orange" onclick="window.location.href = 'giris'" class="title subtitle-2 text-color-black"> Giriş Yap veya Üye Ol </div>
                            <!---->
                         </div>
                         <fa-icon _ngcontent-cro-c507="" routerlinkactive="text-color-orange" class="ng-fa-icon chevron">
