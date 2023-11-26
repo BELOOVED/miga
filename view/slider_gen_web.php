@@ -21,14 +21,33 @@ $stmt = $pdo->query("SELECT * FROM slider");
                 $slide_index = 0;
                 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                     echo '<div data-swiper-slide-index="' . strval($slide_index) . '" class="swiper-slide" style="width: 1140px; role="group" aria-label="1 / 19">';
-                    echo '<a href="' . $row['url'] . '"><img alt="" class="swiper-lazy swiper-lazy-loaded" src="https://external-content.duckduckgo.com/iu/?u=' . $row['image'] . '"></a>';
-                    echo '<div class="swiper-placeholder"><div class="swiper-lazy-preloader"></div><img src="/assets/images/banner_placeholder.webp" alt=""><!----></div>';
+                    echo '<a href="' . $row['url'] . '"><img id="swiperImage' . $slide_index . '" alt="" class="swiper-lazy" data-src="https://external-content.duckduckgo.com/iu/?u=' . $row['image'] . '"></a>';
+                    echo '<div id="swiperPlaceholder' . $slide_index . '" class="swiper-placeholder"><div class="swiper-lazy-preloader"></div><img src="/assets/images/banner_placeholder.webp" alt=""><!----></div>';
                     echo '</div>';
                     $slide_index += 1;
                 }
             ?>
           <!----><!---->
        </div>
+       <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var swiper = new Swiper('.swiper-container', {
+                    // Swiper ayarları buraya gelir
+                    // ...
+                    on: {
+                        lazyImageReady: function (swiper) {
+                            // Her bir resim yüklendiğinde bu olay tetiklenir
+                            var slideIndex = swiper.realIndex;
+                            var placeholder = document.getElementById('swiperPlaceholder' + slideIndex);
+                            if (placeholder) {
+                                placeholder.style.display = 'none';
+                            }
+                        }
+                    }
+                });
+            });
+        </script>
+
        <!----><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
     </swiper>
     <!---->
