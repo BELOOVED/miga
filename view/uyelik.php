@@ -1,11 +1,15 @@
+<?php
+                if ($detect->isMobile()) {?>
 <style>
     .header{
         display: none;
     }
-    .footer{
-        display: none;
+    .footer
+    {
+      display: none;
     }
 </style>
+<?php }?>
 <main _ngcontent-cro-c368="" class="elektronik">
    <router-outlet _ngcontent-cro-c368=""></router-outlet>
    <sm-membership-shell-page class="ng-star-inserted">

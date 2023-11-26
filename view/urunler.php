@@ -1,8 +1,11 @@
+<?php
+                if ($detect->isMobile()) {?>
 <style>
     .header{
         display: none;
     }
 </style>
+<?php }?>
 <main _ngcontent-nyw-c368="" class="elektronik">
    <router-outlet _ngcontent-nyw-c368=""></router-outlet>
    <sm-product class="ng-star-inserted">
