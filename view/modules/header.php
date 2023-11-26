@@ -1039,7 +1039,7 @@ if ($existingUser) {
                         <div class="anonymous">
                            <div class="login-signup-wrapper track-wrapper">
                               <div class="inner inner-track text-color-white">
-                                 <div class="text mat-caption">Sipariş Takibi</div>
+                                 <div onclick="openmodal('takip');" class="text mat-caption">Sipariş Takibi</div>
                                  <div class="carrot">
                                     <fa-icon class="ng-fa-icon">
                                        <svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">

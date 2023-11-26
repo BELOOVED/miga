@@ -595,6 +595,112 @@
             <?php }else{}?>
          </div>
       </div>
+      <div class="cdk-overlay-container elektronik hidden" id="takip">
+         <div class="cdk-overlay-backdrop cdk-overlay-dark-backdrop cdk-overlay-backdrop-showing"></div>
+         <div class="cdk-global-overlay-wrapper" dir="ltr" style="justify-content: center; align-items: center;">
+            <div id="cdk-overlay-3" class="cdk-overlay-pane wide-dialog mobile-modal" style="max-width: 80vw; position: static;">
+               <div tabindex="0" class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div>
+               <mat-dialog-container tabindex="-1" class="mat-mdc-dialog-container mdc-dialog cdk-dialog-container mdc-dialog--open" id="track-order-dialog" role="dialog" aria-modal="true">
+                  <div class="mdc-dialog__container">
+                     <div class="mat-mdc-dialog-surface mdc-dialog__surface">
+                        <fe-membership-track-order-modal class="ng-star-inserted">
+                           <div class="modal">
+                              <h3 class="title text-color-black">Sipariş Takibi</h3>
+                              <fa-icon class="ng-fa-icon text-color-grey close-button" onclick="closemodal()">
+                                 <svg role="img" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="xmark" class="svg-inline--fa fa-xmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path fill="currentColor" d="M315.3 411.3c-6.253 6.253-16.37 6.253-22.63 0L160 278.6l-132.7 132.7c-6.253 6.253-16.37 6.253-22.63 0c-6.253-6.253-6.253-16.37 0-22.63L137.4 256L4.69 123.3c-6.253-6.253-6.253-16.37 0-22.63c6.253-6.253 16.37-6.253 22.63 0L160 233.4l132.7-132.7c6.253-6.253 16.37-6.253 22.63 0c6.253 6.253 6.253 16.37 0 22.63L182.6 256l132.7 132.7C321.6 394.9 321.6 405.1 315.3 411.3z"></path>
+                                 </svg>
+                              </fa-icon>
+                              <div class="info-detail subtitle-2 text-color-black">Siparişini telefon ve sipariş numaran ile takip edebilirsin</div>
+                              <form novalidate="" feappsubmitthrottle="" class="track-form ng-untouched ng-pristine ng-invalid">
+                                 <mat-form-field color="accent" appearance="outline" tabindex="-1" class="mat-form-field row-items ng-tns-c68-5 mat-accent ng-star-inserted mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-invalid">
+                                    <div class="mat-form-field-wrapper ng-tns-c68-5">
+                                       <div class="mat-form-field-flex ng-tns-c68-5">
+                                          <div class="mat-form-field-outline ng-tns-c68-5 ng-star-inserted">
+                                             <div class="mat-form-field-outline-start ng-tns-c68-5" style="width: 3.39999px;"></div>
+                                             <div class="mat-form-field-outline-gap ng-tns-c68-5" style="width: 106.75px;"></div>
+                                             <div class="mat-form-field-outline-end ng-tns-c68-5"></div>
+                                          </div>
+                                          <div class="mat-form-field-outline mat-form-field-outline-thick ng-tns-c68-5 ng-star-inserted">
+                                             <div class="mat-form-field-outline-start ng-tns-c68-5" style="width: 3.39999px;"></div>
+                                             <div class="mat-form-field-outline-gap ng-tns-c68-5" style="width: 106.75px;"></div>
+                                             <div class="mat-form-field-outline-end ng-tns-c68-5"></div>
+                                          </div>
+                                          <!----><!----><!---->
+                                          <div class="mat-form-field-infix ng-tns-c68-5">
+                                             <input matinput="" required="" type="tel" feonlynumbers="" label="Telefon Numarası" formcontrolname="phoneNumber" maxlength="10" tabindex="-1" class="mat-input-element mat-form-field-autofill-control ng-tns-c68-5 ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored" id="mat-input-5" aria-required="true">
+                                             <span class="mat-form-field-label-wrapper ng-tns-c68-5">
+                                                <label class="mat-form-field-label ng-tns-c68-5 mat-empty mat-form-field-empty mat-accent ng-star-inserted" id="mat-form-field-label-9" for="mat-input-5" aria-owns="mat-input-5">
+                                                   <!---->
+                                                   <mat-label class="ng-tns-c68-5 ng-star-inserted">Telefon Numarası</mat-label>
+                                                   <!----><span aria-hidden="true" class="mat-placeholder-required mat-form-field-required-marker ng-tns-c68-5 ng-star-inserted"> *</span><!---->
+                                                </label>
+                                                <!---->
+                                             </span>
+                                          </div>
+                                          <!---->
+                                       </div>
+                                       <!---->
+                                       <div class="mat-form-field-subscript-wrapper ng-tns-c68-5">
+                                          <!---->
+                                          <div class="mat-form-field-hint-wrapper ng-tns-c68-5 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                                             <!---->
+                                             <div class="mat-form-field-hint-spacer ng-tns-c68-5"></div>
+                                          </div>
+                                          <!---->
+                                       </div>
+                                    </div>
+                                 </mat-form-field>
+                                 <mat-form-field color="accent" appearance="outline" tabindex="-1" class="mat-form-field row-items ng-tns-c68-6 mat-accent ng-star-inserted mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-invalid">
+                                    <div class="mat-form-field-wrapper ng-tns-c68-6">
+                                       <div class="mat-form-field-flex ng-tns-c68-6">
+                                          <div class="mat-form-field-outline ng-tns-c68-6 ng-star-inserted">
+                                             <div class="mat-form-field-outline-start ng-tns-c68-6" style="width: 3.39999px;"></div>
+                                             <div class="mat-form-field-outline-gap ng-tns-c68-6" style="width: 82px;"></div>
+                                             <div class="mat-form-field-outline-end ng-tns-c68-6"></div>
+                                          </div>
+                                          <div class="mat-form-field-outline mat-form-field-outline-thick ng-tns-c68-6 ng-star-inserted">
+                                             <div class="mat-form-field-outline-start ng-tns-c68-6" style="width: 3.39999px;"></div>
+                                             <div class="mat-form-field-outline-gap ng-tns-c68-6" style="width: 82px;"></div>
+                                             <div class="mat-form-field-outline-end ng-tns-c68-6"></div>
+                                          </div>
+                                          <!----><!----><!---->
+                                          <div class="mat-form-field-infix ng-tns-c68-6">
+                                             <input matinput="" required="" type="tel" feonlynumbers="" label="Sipariş Kodu" formcontrolname="orderId" minlength="8" tabindex="-1" class="mat-input-element mat-form-field-autofill-control ng-tns-c68-6 ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored" id="mat-input-6" aria-required="true">
+                                             <span class="mat-form-field-label-wrapper ng-tns-c68-6">
+                                                <label class="mat-form-field-label ng-tns-c68-6 mat-empty mat-form-field-empty mat-accent ng-star-inserted" id="mat-form-field-label-11" for="mat-input-6" aria-owns="mat-input-6">
+                                                   <!---->
+                                                   <mat-label class="ng-tns-c68-6 ng-star-inserted">Sipariş Kodu</mat-label>
+                                                   <!----><span aria-hidden="true" class="mat-placeholder-required mat-form-field-required-marker ng-tns-c68-6 ng-star-inserted"> *</span><!---->
+                                                </label>
+                                                <!---->
+                                             </span>
+                                          </div>
+                                          <!---->
+                                       </div>
+                                       <!---->
+                                       <div class="mat-form-field-subscript-wrapper ng-tns-c68-6">
+                                          <!---->
+                                          <div class="mat-form-field-hint-wrapper ng-tns-c68-6 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                                             <!---->
+                                             <div class="mat-form-field-hint-spacer ng-tns-c68-6"></div>
+                                          </div>
+                                          <!---->
+                                       </div>
+                                    </div>
+                                 </mat-form-field>
+                                 <div class="button-wrapper"><button type="submit" class="button-primary" disabled=""> Siparişimi Göster </button></div>
+                              </form>
+                           </div>
+                        </fe-membership-track-order-modal>
+                        <!---->
+                     </div>
+                  </div>
+               </mat-dialog-container>
+               <div tabindex="0" class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div>
+            </div>
+         </div>
+      </div>
 <script>
     $(document).ready(function () {
         $(document).on('click', '.city-option', function () {
