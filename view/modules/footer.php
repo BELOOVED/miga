@@ -709,6 +709,24 @@
         $("#sepet1").addClass("hidden");
         $("#sepet2").removeClass("hidden");
     }
+    function updatePosition() {
+      const cdkOverlay = document.getElementById('cdk-overlay-6');
+      const pageWidth = window.innerWidth;
+      const pageHeight = window.innerHeight;
+
+      // İstediğiniz formülü burada kullanabilirsiniz.
+      const topValue = Math.round(pageHeight * 0.45); // Örnek bir formül
+      const leftValue = Math.round(pageWidth * 0.23); // Örnek bir formül
+
+      // Değerleri ayarla
+      cdkOverlay.style.top = `${topValue}px`;
+      cdkOverlay.style.left = `${leftValue}px`;
+      }
+
+      // Sayfa yüklendiğinde ve pencere boyutu değiştiğinde pozisyonu güncelle
+      window.addEventListener('load', updatePosition);
+      window.addEventListener('resize', updatePosition);
+
 </script>
    </body>
 </html>
