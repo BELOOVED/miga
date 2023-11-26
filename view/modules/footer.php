@@ -755,5 +755,17 @@
     
 
 </script>
+<script>
+  $(document).ready(function(){
+    $('.swiper-container').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000, // Milliseconds
+      prevArrow: '<button type="button" class="slick-prev" aria-label="Previous"></button>',
+      nextArrow: '<button type="button" class="slick-next" aria-label="Next"></button>'
+    });
+  });
+</script>
    </body>
 </html>
