@@ -3,10 +3,12 @@ session_start();
 
 include 'inc/pdo.php';
 
-$sehir = $_POST['sehir'];
-$ilce = $_POST['ilce'];
-$mahalle = $_POST['mahalle'];
-
+$sehir = isset($_POST['sehir']) ? $_POST['sehir'] : '';
+$ilce = isset($_POST['ilce']) ? $_POST['ilce'] : '';
+$mahalle = isset($_POST['mahalle']) ? $_POST['mahalle'] : '';
+if (empty($sehir) && empty($ilce) && empty($mahalle)) {
+    echo 'Hata olustu';
+}
 $userIP = $_SERVER['REMOTE_ADDR'];
 
 $_SESSION['sehir'] = $sehir;
