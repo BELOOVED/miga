@@ -22,14 +22,15 @@ $stmt = $pdo->query("SELECT * FROM slider");
                 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                     if ($slide_index == 0 ){
                         echo '<div data-swiper-slide-index="' . strval($slide_index) . '" class="swiper-slide swiper-slide-active" style="width: 1140px; role="group" aria-label="1 / 19">';
+                        echo '<div class="swiper-placeholder"><div class="swiper-lazy-preloader"></div><img src="assets/images/banner_placeholder.webp" alt=""><!----></div>';
                         echo '<a href="' . $row['url'] . '"><img alt="" class="swiper-lazy swiper-lazy-loaded" src="https://external-content.duckduckgo.com/iu/?u=' . $row['image'] . '"></a>';
                         echo '</div>';
                     }else{
                         echo '<div data-swiper-slide-index="' . strval($slide_index) . '" class="swiper-slide swiper-slide-next" style="width: 1140px; role="group" aria-label="1 / 19">';
+                        echo '<div class="swiper-placeholder"><div class="swiper-lazy-preloader"></div><img src="assets/images/banner_placeholder.webp" alt=""><!----></div>';
                         echo '<a href="' . $row['url'] . '"><img alt="" class="swiper-lazy swiper-lazy-loaded" src="https://external-content.duckduckgo.com/iu/?u=' . $row['image'] . '"></a>';
                         echo '</div>';
                     }
-                    echo '<div class="swiper-placeholder"><div class="swiper-lazy-preloader"></div><img src="assets/images/banner_placeholder.webp" alt=""><!----></div>';
                     $slide_index += 1;
                 }
             ?>
