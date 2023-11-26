@@ -1,15 +1,15 @@
-<?php
-if ($detect->isMobile()) {?>
 <style>
     .header{
         display: none;
     }
+    <?php
+      if ($detect->isMobile()) {?>
     .footer
     {
       display: none;
     }
+    <?php }?>
 </style>
-<?php }?>
 <sm-header-lite _ngcontent-tus-c368="" _nghost-tus-c366="" class="ng-star-inserted">
    <div _ngcontent-tus-c366="" class="header-wrapper">
       <div _ngcontent-tus-c366="" class="desktop-only">
