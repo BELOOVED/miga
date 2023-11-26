@@ -664,7 +664,7 @@
         $("#dd1").addClass("hidden");
         $("#dd2").toggleClass("hidden");
         $("#dd3").addClass("hidden");
-        $("#cdk-overlay-6").css('top', '0px'); 
+        $("#cdk-overlay-6").css('top', '10px'); 
     }
 
     function mahalledrop() {
@@ -672,7 +672,7 @@
         $("#dd1").addClass("hidden");
         $("#dd2").addClass("hidden");
         $("#dd3").toggleClass("hidden");
-        $("#cdk-overlay-6").css('top', '50px'); 
+        $("#cdk-overlay-6").css('top', '80px'); 
 
     }
     
