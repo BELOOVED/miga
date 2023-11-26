@@ -64,7 +64,7 @@
                            </svg>
                         </fa-icon>
                         <div _ngcontent-cro-c507="" class="text">
-                           <div _ngcontent-cro-c507="" routerlinkactive="text-color-orange" class="title subtitle-2 text-color-black"> Sipariş Takibi </div>
+                           <div _ngcontent-cro-c507="" routerlinkactive="text-color-orange" class="title subtitle-2 text-color-black" onclick="openmodal('takip')"> Sipariş Takibi </div>
                            <div _ngcontent-cro-c507="" class="detail mat-caption-normal text-color-grey ng-star-inserted"> Üye olmayan kullanıcılar için </div>
                            <!---->
                         </div>
