@@ -672,7 +672,7 @@
         $("#dd1").addClass("hidden");
         $("#dd2").addClass("hidden");
         $("#dd3").toggleClass("hidden");
-        $("#cdk-overlay-6").css('top', '80px'); 
+        $("#cdk-overlay-6").css('top', '90px'); 
 
     }
     
