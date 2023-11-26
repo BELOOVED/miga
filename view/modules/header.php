@@ -1006,7 +1006,7 @@ if ($existingUser) {
                               </div>
                            </div>
                            <!---->
-                           <div class="login-signup-wrapper">
+                           <div class="login-signup-wrapper" onclick='window.location.href = "/giris";'>
                               <div class="inner text-color-white">
                                  <div class="icon"></div>
                                  <div class="text mat-caption">Üye Ol veya Giriş Yap</div>
