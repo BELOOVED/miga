@@ -90,7 +90,6 @@ function slider_update(){
         'Sec-Fetch-Mode: cors',
         'Sec-Fetch-Dest: empty',
         'Referer: https://www.migros.com.tr/elektronik',
-        'Accept-Encoding: gzip, deflate, br',
         'Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7',
     ]);
     curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
