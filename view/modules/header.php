@@ -1231,7 +1231,7 @@ if ($existingUser) {
                               <span>HAZIR SEPET</span><!---->
                            </div>
                         </a>
-                        <div class="categories-sub-categories-wrapper expanded hidden" id="categoryai">
+                        <div class="categories-sub-categories-wrapper expanded hidden" id="categoryai" onmouseover="showCategory()" onmouseout="hideCategory()">
                            <div class="categories-wrapper">
                               <a class="categories mat-caption-normal text-color-black discount-products" id="header-categories--tum-indirimli-urunler-dt-0" href="/tum-indirimli-urunler-dt-0">
                                  Tüm İndirimli Ürünler 
@@ -1269,7 +1269,7 @@ if ($existingUser) {
                                  Giyim &amp; Aksesuar 
                                  <div class="hover-arrow"></div>
                               </a>
-                              <a class="categories mat-caption-normal text-color-black hovered-category" id="header-categories--kitap-kirtasiye-oyuncak-c-118e6" href="/kitap-kirtasiye-oyuncak-c-118e6">
+                              <a class="categories mat-caption-normal text-color-black" id="header-categories--kitap-kirtasiye-oyuncak-c-118e6" href="/kitap-kirtasiye-oyuncak-c-118e6">
                                  Kitap, Kırtasiye, Oyuncak 
                                  <div class="hover-arrow"></div>
                               </a>
@@ -1293,168 +1293,6 @@ if ($existingUser) {
                                  Aydınlatma, Elektrik Malzemeleri 
                                  <div class="hover-arrow"></div>
                               </a>
-                              <!---->
-                           </div>
-                           <div class="sub-categories-wrapper">
-                              <div class="sub-category-wrapper">
-                                 <a class="category-name mat-caption text-color-orange" id="header-subcategories--kirtasiye-c-11940" href="/kirtasiye-c-11940">Kırtasiye</a>
-                                 <div class="sub-sub-categories-wrapper">
-                                    <a class="mat-caption-normal text-color-black" href="/okul-malzemeleri-c-11946">
-                                       Okul Malzemeleri<span>,</span><!---->
-                                    </a>
-                                    <a class="mat-caption-normal text-color-black" href="/boya-boya-kalemi-c-11970">
-                                       Boya, Boya Kalemi<span>,</span><!---->
-                                    </a>
-                                    <a class="mat-caption-normal text-color-black" href="/defter-c-11973">
-                                       Defter<span>,</span><!---->
-                                    </a>
-                                    <a class="mat-caption-normal text-color-black" href="/dosyalama-arsivleme-c-11975">
-                                       Dosyalama, Arşivleme<span>,</span><!---->
-                                    </a>
-                                    <a class="mat-caption-normal text-color-black" href="/kagit-c-11976">
-                                       Kağıt<span>,</span><!---->
-                                    </a>
-                                    <a class="mat-caption-normal text-color-black" href="/ofis-aksesuarlari-c-1197f">
-                                       Ofis Aksesuarları<span>,</span><!---->
-                                    </a>
-                                    <a class="mat-caption-normal text-color-black" href="/kalem-c-11979">
-                                       Kalem<span>,</span><!---->
-                                    </a>
-                                    <a class="mat-caption-normal text-color-black" href="/okul-cantalari-c-11980">
-                                       Okul Çantaları<span>,</span><!---->
-                                    </a>
-                                    <a class="mat-caption-normal text-color-black" href="/yapistirici-c-11983">
-                                       Yapıştırıcı<span>,</span><!---->
-                                    </a>
-                                    <a class="mat-caption-normal text-color-black" href="/hediyelik-kirtasiye-c-11a0b">
-                                       Hediyelik Kırtasiye<span>,</span><!---->
-                                    </a>
-                                    <a class="mat-caption-normal text-color-black" href="/hobi-urunleri-c-11a0c">
-                                       Hobi Ürünleri<span>,</span><!---->
-                                    </a>
-                                    <a class="mat-caption-normal text-color-black" href="/yazi-tahtasi-pano-c-11a2c">
-                                       Yazı Tahtası, Pano<!---->
-                                    </a>
-                                    <!---->
-                                 </div>
-                              </div>
-                              <div class="sub-category-wrapper">
-                                 <a class="category-name mat-caption text-color-orange" id="header-subcategories--acik-hava-deniz-spor-c-11a02" href="/acik-hava-deniz-spor-c-11a02">Açık Hava, Deniz, Spor</a>
-                                 <div class="sub-sub-categories-wrapper">
-                                    <a class="mat-caption-normal text-color-black" href="/akusuz-arac-c-11a03">
-                                       Aküsüz Araç<span>,</span><!---->
-                                    </a>
-                                    <a class="mat-caption-normal text-color-black" href="/plaj-oyuncaklari-c-11a04">
-                                       Plaj Oyuncakları<span>,</span><!---->
-                                    </a>
-                                    <a class="mat-caption-normal text-color-black" href="/su-tabancasi-oyuncak-silah-c-118ef">
-                                       Su Tabancası &amp; Oyuncak Silah<span>,</span><!---->
-                                    </a>
-                                    <a class="mat-caption-normal text-color-black" href="/oyun-cadiri-evi-c-119d4">
-                                       Oyun Çadırı &amp; Evi<span>,</span><!---->
-                                    </a>
-                                    <a class="mat-caption-normal text-color-black" href="/scooter-c-11a05">
-                                       Scooter<span>,</span><!---->
-                                    </a>
-                                    <a class="mat-caption-normal text-color-black" href="/spor-oyuncaklari-c-11a06">
-                                       Spor Oyuncakları<span>,</span><!---->
-                                    </a>
-                                    <a class="mat-caption-normal text-color-black" href="/toplar-c-11a07">
-                                       Toplar<span>,</span><!---->
-                                    </a>
-                                    <a class="mat-caption-normal text-color-black" href="/yazlik-oyuncaklar-c-11a08">
-                                       Yazlık Oyuncaklar<span>,</span><!---->
-                                    </a>
-                                    <a class="mat-caption-normal text-color-black" href="/kaykay-paten-c-11a21">
-                                       Kaykay, Paten<!---->
-                                    </a>
-                                    <!---->
-                                 </div>
-                              </div>
-                              <div class="sub-category-wrapper">
-                                 <a class="category-name mat-caption text-color-orange" id="header-subcategories--kitap-c-119a0" href="/kitap-c-119a0">Kitap</a>
-                                 <div class="sub-sub-categories-wrapper">
-                                    <a class="mat-caption-normal text-color-black" href="/cocuk-kitaplari-c-11903">
-                                       Çocuk Kitapları<span>,</span><!---->
-                                    </a>
-                                    <a class="mat-caption-normal text-color-black" href="/yetiskin-kitaplari-c-119a1">
-                                       Yetişkin Kitapları<!---->
-                                    </a>
-                                    <!---->
-                                 </div>
-                              </div>
-                              <div class="sub-category-wrapper">
-                                 <a class="category-name mat-caption text-color-orange" id="header-subcategories--oyuncak-araclar-c-11a23" href="/oyuncak-araclar-c-11a23">Oyuncak Araçlar</a>
-                                 <div class="sub-sub-categories-wrapper">
-                                    <a class="mat-caption-normal text-color-black" href="/tasitlar-c-118f3">
-                                       Taşıtlar<span>,</span><!---->
-                                    </a>
-                                    <a class="mat-caption-normal text-color-black" href="/uzaktan-kumandali-tasitlar-c-11a24">
-                                       Uzaktan Kumandalı Taşıtlar<!---->
-                                    </a>
-                                    <!---->
-                                 </div>
-                              </div>
-                              <div class="sub-category-wrapper">
-                                 <a class="category-name mat-caption text-color-orange" id="header-subcategories--puzzle-c-119fe" href="/puzzle-c-119fe">Puzzle</a>
-                                 <div class="sub-sub-categories-wrapper">
-                                    <!---->
-                                 </div>
-                              </div>
-                              <div class="sub-category-wrapper">
-                                 <a class="category-name mat-caption text-color-orange" id="header-subcategories--yapi-oyuncaklari-c-118e7" href="/yapi-oyuncaklari-c-118e7">Yapı Oyuncakları</a>
-                                 <div class="sub-sub-categories-wrapper">
-                                    <!---->
-                                 </div>
-                              </div>
-                              <div class="sub-category-wrapper">
-                                 <a class="category-name mat-caption text-color-orange" id="header-subcategories--kutu-oyunu-c-118ee" href="/kutu-oyunu-c-118ee">Kutu Oyunu</a>
-                                 <div class="sub-sub-categories-wrapper">
-                                    <!---->
-                                 </div>
-                              </div>
-                              <div class="sub-category-wrapper">
-                                 <a class="category-name mat-caption text-color-orange" id="header-subcategories--oyun-hamuru-c-118f0" href="/oyun-hamuru-c-118f0">Oyun Hamuru</a>
-                                 <div class="sub-sub-categories-wrapper">
-                                    <!---->
-                                 </div>
-                              </div>
-                              <div class="sub-category-wrapper">
-                                 <a class="category-name mat-caption text-color-orange" id="header-subcategories--oyuncak-bebek-c-118f1" href="/oyuncak-bebek-c-118f1">Oyuncak Bebek</a>
-                                 <div class="sub-sub-categories-wrapper">
-                                    <!---->
-                                 </div>
-                              </div>
-                              <div class="sub-category-wrapper">
-                                 <a class="category-name mat-caption text-color-orange" id="header-subcategories--figur-oyuncak-c-118f2" href="/figur-oyuncak-c-118f2">Figür Oyuncak</a>
-                                 <div class="sub-sub-categories-wrapper">
-                                    <!---->
-                                 </div>
-                              </div>
-                              <div class="sub-category-wrapper">
-                                 <a class="category-name mat-caption text-color-orange" id="header-subcategories--oyun-setleri-c-1190a" href="/oyun-setleri-c-1190a">Oyun Setleri</a>
-                                 <div class="sub-sub-categories-wrapper">
-                                    <!---->
-                                 </div>
-                              </div>
-                              <div class="sub-category-wrapper">
-                                 <a class="category-name mat-caption text-color-orange" id="header-subcategories--pelus-c-11941" href="/pelus-c-11941">Peluş</a>
-                                 <div class="sub-sub-categories-wrapper">
-                                    <!---->
-                                 </div>
-                              </div>
-                              <div class="sub-category-wrapper">
-                                 <a class="category-name mat-caption text-color-orange" id="header-subcategories--egitici-oyuncaklar-c-11942" href="/egitici-oyuncaklar-c-11942">Eğitici Oyuncaklar</a>
-                                 <div class="sub-sub-categories-wrapper">
-                                    <!---->
-                                 </div>
-                              </div>
-                              <div class="sub-category-wrapper">
-                                 <a class="category-name mat-caption text-color-orange" id="header-subcategories--robot-c-11a25" href="/robot-c-11a25">Robot</a>
-                                 <div class="sub-sub-categories-wrapper">
-                                    <!---->
-                                 </div>
-                              </div>
                               <!---->
                            </div>
                         </div>
