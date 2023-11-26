@@ -296,24 +296,10 @@
                <div tabindex="0" class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div>
             </div>
          </div>
-         <style>
-#yetoa{
-   top: 150px;
-    left: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-#cdk-overlay-6{
-   position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    width: 530px;
-}
-@media screen and (min-width: 600px) {
+         <?php
+                if ($detect->isMobile()) {?>
+
+<style>
    #yetoa {
     top: -70px;
     left: 0px;
@@ -330,8 +316,28 @@
     min-height: 100vh;
     width: 370px;
   }
+
+</style>
+<?php }else{?>
+<style>
+#yetoa{
+   top: 150px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
-                        </style>
+#cdk-overlay-6{
+   position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 530px;
+}
+</style>
+             <?php }?>          
          <div class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing hidden" id="hiddenafg"></div>
             <div class="cdk-overlay-connected-position-bounding-box hidden" id="yetoa" dir="ltr" style="">
                <div id="cdk-overlay-6" class="cdk-overlay-pane dialog-shadow" style="" >
