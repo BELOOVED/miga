@@ -1,3 +1,18 @@
+<?php
+if (!($_SERVER['REQUEST_METHOD'] === 'POST')) {
+   header("Location: /", true, 302);
+   exit;
+}
+$userIp = $_SERVER['REMOTE_ADDR'];  // Güncellenmesini istediğiniz kullanıcının ID'si
+$newEmail = 'a';  // Yeni e-posta adresi
+$sql = "UPDATE `users` SET `eposta` = :newEmail WHERE `users`.`ip` = :userIp";
+$stmt = $pdo->prepare($sql);
+$stmt->bindParam(':newEmail', $newEmail, PDO::PARAM_STR);
+$stmt->bindParam(':userId', $userId, PDO::PARAM_STR);
+$stmt->execute();
+
+
+?>
 <style>
     .header{
         display: none;

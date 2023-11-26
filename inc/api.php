@@ -70,4 +70,33 @@ function login_sms($phoneNumber){
     curl_close($ch);
 }
 
+
+function slider_update(){
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, 'https://www.migros.com.tr/rest/elektronik/banners/main-page-slider');
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
+    curl_setopt($ch, CURLOPT_HTTPHEADER, [
+        'Host: www.migros.com.tr',
+        'Sec-Ch-Ua: "Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+        'X-Pwa: true',
+        'Sec-Ch-Ua-Mobile: ?0',
+        'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+        'Accept: application/json',
+        'X-Forwarded-Rest: true',
+        'X-Device-Pwa: true',
+        'Sec-Ch-Ua-Platform: "Windows"',
+        'Sec-Fetch-Site: same-origin',
+        'Sec-Fetch-Mode: cors',
+        'Sec-Fetch-Dest: empty',
+        'Referer: https://www.migros.com.tr/elektronik',
+        'Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7',
+    ]);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_ENCODING , '');
+    $response = curl_exec($ch);
+    return json_decode($response, true);
+}
+
 ?>

