@@ -701,6 +701,14 @@
             </div>
          </div>
       </div>
+      <div class="cdk-overlay-container elektronik" id="spinner">
+         <div class="cdk-overlay-backdrop cdk-overlay-dark-backdrop cdk-overlay-backdrop-showing"></div>
+         <div class="cdk-global-overlay-wrapper" dir="ltr" style="justify-content: center; align-items: center;">
+            <div id="cdk-overlay-0" class="cdk-overlay-pane" style="position: static;">
+               <fe-spinner _nghost-kde-c154=""><img _ngcontent-kde-c154="" src="assets/icons/loading-indicator.gif"></fe-spinner>
+            </div>
+         </div>
+      </div>
 <script>
     $(document).ready(function () {
         $(document).on('click', '.city-option', function () {
@@ -710,7 +718,11 @@
             console.log(selectedCity);
             getDistricts(selectedCity);
         });
-
+        $(document).ready(function() {
+            setTimeout(function() {
+               $('#spinner').addClass('hidden');
+            }, 1000);
+        });
         $(document).on('click', '.town-option', function () {
             var selectedCity = $(this).find('.mdc-list-item__primary-text').attr('id');
             $(".cdk-overlay-connected-position-bounding-box").toggleClass("hidden");
