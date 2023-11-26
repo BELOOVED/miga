@@ -14,10 +14,7 @@
                     </sm-swiper-banner>
                     <!---->
                 </div>
-                <?php include "slider_gen.php"; ?>
-                <!---->
-             
-                <!---->
+                <?php include "slider_gen_mobil.php"; ?>
                 </div>
                 <?php }else{?>
                 <div _ngcontent-cro-c416="" class="mdc-layout-grid__cell--span-12">
@@ -27,130 +24,6 @@
                         </sm-swiper-banner>
                         <!---->
                     </div>
-                    <sm-swiper-banner _ngcontent-cro-c416="" id="sm-home-main-swiper-banner" fedeferload="" class="banners">
-                        <swiper class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events">
-                        <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-47cf7ec6fe846dde"></div>
-                        <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-47cf7ec6fe846dde"></div>
-                        <!----><!----><!---->
-                        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 6"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 7"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 8"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 9"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 10"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 11"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 12"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 13"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 14"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 15"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 16"></span></div>
-                        <!---->
-                        <div class="swiper-wrapper slick-slider" id="swiper-wrapper-47cf7ec6fe846dde" aria-live="off" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
-                            <div data-swiper-slide-index="15" class="swiper-slide swiper-slide-duplicate swiper-slide-prev" style="width: 1140px;" role="group" aria-label="16 / 16">
-                                <!----><a href="/elektronik/yok-boyle-fiyat-urunleri-l-bbc0ae2"><img alt="" class="swiper-lazy" data-src="https://images.migrosone.com/elektronik/banner/main_page_slider/55069/57103-web-d9dd11.jpg"></a><!---->
-                                <div class="swiper-placeholder">
-                                    <div class="swiper-lazy-preloader"></div>
-                                    <img src="assets/images/banner_placeholder.webp" alt=""><!---->
-                                </div>
-                                <!----><!----><!----><!----><!----><!----><!----><!----><!---->
-                            </div>
-                            <!----><!---->
-                            <div data-swiper-slide-index="0" class="swiper-slide swiper-slide-active" style="width: 1140px;" role="group" aria-label="1 / 16">
-                                <!----><a href="/elektronik/cep-telefonlarinda-muthis-kasim-firsatlari-l-bbc0b6a"><img alt="" class="swiper-lazy swiper-lazy-loaded" src="https://images.migrosone.com/elektronik/banner/main_page_slider/55335/57369-webekstra-a9c42e.png"></a><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
-                            </div>
-                            <div data-swiper-slide-index="1" class="swiper-slide swiper-slide-next" style="width: 1140px;" role="group" aria-label="2 / 16">
-                                <!----><a href="/elektronik/beyaz-esyalarda-muthis-kasim-firsatlari-l-bbc0b83"><img alt="" class="swiper-lazy swiper-lazy-loaded" src="https://images.migrosone.com/elektronik/banner/main_page_slider/55293/57327-webekstra-b53fd5.jpg"></a><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
-                            </div>
-                            <div data-swiper-slide-index="2" class="swiper-slide" style="width: 1140px;" role="group" aria-label="3 / 16">
-                                <!----><a href="/elektronik/elektronikte-muthis-kasim-firsatlari-l-bbc0b70"><img alt="" class="swiper-lazy swiper-lazy-loaded" src="https://images.migrosone.com/elektronik/banner/main_page_slider/55476/57510-webekstra-550a4a.png"></a><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
-                            </div>
-                            <div data-swiper-slide-index="3" class="swiper-slide" style="width: 1140px;" role="group" aria-label="4 / 16">
-                                <!---->
-                                <div class="home-slider-banner" id="div-gpt-ad-1664195677239-0" style="transform: scale(0.333333, 0.333333); height: 300px;"></div>
-                                <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
-                            </div>
-                            <div data-swiper-slide-index="4" class="swiper-slide" style="width: 1140px;" role="group" aria-label="5 / 16">
-                                <!----><a href="/elektronik/elektronikte-muthis-kasim-firsatlari-l-bbc0b6b"><img alt="" class="swiper-lazy swiper-lazy-loaded" src="https://images.migrosone.com/elektronik/banner/main_page_slider/55338/57372-webekstra-550a4a.png"></a><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
-                            </div>
-                            <div data-swiper-slide-index="5" class="swiper-slide" style="width: 1140px;" role="group" aria-label="6 / 16">
-                                <!----><a href="/elektronik/televizyonlarda-muthis-kasim-firsatlari-l-bbc0b75"><img alt="" class="swiper-lazy swiper-lazy-loaded" src="https://images.migrosone.com/elektronik/banner/main_page_slider/55284/57318-webekstra-c057f2.png"></a><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
-                            </div>
-                            <div data-swiper-slide-index="6" class="swiper-slide" style="width: 1140px;" role="group" aria-label="7 / 16">
-                                <!----><!----><!---->
-                                <div class="home-slider-banner" id="div-gpt-ad-1664195759697-0" style="transform: scale(0.333333, 0.333333); height: 300px;"></div>
-                                <!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
-                            </div>
-                            <div data-swiper-slide-index="7" class="swiper-slide" style="width: 1140px;" role="group" aria-label="8 / 16">
-                                <!----><a href="/elektronik/aksesuarlarda-muthis-kasim-firsatlari-l-bbc0b71"><img alt="" class="swiper-lazy" data-src="https://images.migrosone.com/elektronik/banner/main_page_slider/55344/57378-webekstra-a305d8.png"></a><!---->
-                                <div class="swiper-placeholder">
-                                    <div class="swiper-lazy-preloader"></div>
-                                    <img src="assets/images/banner_placeholder.webp" alt=""><!---->
-                                </div>
-                                <!----><!----><!----><!----><!----><!----><!----><!----><!---->
-                            </div>
-                            <div data-swiper-slide-index="8" class="swiper-slide" style="width: 1140px;" role="group" aria-label="9 / 16">
-                                <!----><a href="/elektronik/crocs-ve-birkenstock-muthis-kasim-firsatlari-l-bbc0b7b"><img alt="" class="swiper-lazy" data-src="https://images.migrosone.com/elektronik/banner/main_page_slider/55369/57403-webekstracrocs-f98035.jpg"></a><!---->
-                                <div class="swiper-placeholder">
-                                    <div class="swiper-lazy-preloader"></div>
-                                    <img src="assets/images/banner_placeholder.webp" alt=""><!---->
-                                </div>
-                                <!----><!----><!----><!----><!----><!----><!----><!----><!---->
-                            </div>
-                            <div data-swiper-slide-index="9" class="swiper-slide" style="width: 1140px;" role="group" aria-label="10 / 16">
-                                <!----><a href="/elektronik/evin-tum-ihtiyaclarinda-muthis-kasim-firsatlari-l-bbc0b80"><img alt="" class="swiper-lazy" data-src="https://images.migrosone.com/elektronik/banner/main_page_slider/55397/57431-webekstraev-08385f.jpg"></a><!---->
-                                <div class="swiper-placeholder">
-                                    <div class="swiper-lazy-preloader"></div>
-                                    <img src="assets/images/banner_placeholder.webp" alt=""><!---->
-                                </div>
-                                <!----><!----><!----><!----><!----><!----><!----><!----><!---->
-                            </div>
-                            <div data-swiper-slide-index="10" class="swiper-slide" style="width: 1140px;" role="group" aria-label="11 / 16">
-                                <!----><a href="/elektronik/kirtasiye-urunlerinde-ve-kirtasiyelerde-muthis-kasim-firsatlari-l-bbc0ba4"><img alt="" class="swiper-lazy" data-src="https://images.migrosone.com/elektronik/banner/main_page_slider/55427/57461-webekstra-fe5bc8.jpg"></a><!---->
-                                <div class="swiper-placeholder">
-                                    <div class="swiper-lazy-preloader"></div>
-                                    <img src="assets/images/banner_placeholder.webp" alt=""><!---->
-                                </div>
-                                <!----><!----><!----><!----><!----><!----><!----><!----><!---->
-                            </div>
-                            <div data-swiper-slide-index="11" class="swiper-slide" style="width: 1140px;" role="group" aria-label="12 / 16">
-                                <!----><a href="/elektronik/tefal-ve-victorinox-muthis-kasim-firsatlari-l-bbc0ba6"><img alt="" class="swiper-lazy" data-src="https://images.migrosone.com/elektronik/banner/main_page_slider/55438/57472-webekstra-c2928c.jpg"></a><!---->
-                                <div class="swiper-placeholder">
-                                    <div class="swiper-lazy-preloader"></div>
-                                    <img src="assets/images/banner_placeholder.webp" alt=""><!---->
-                                </div>
-                                <!----><!----><!----><!----><!----><!----><!----><!----><!---->
-                            </div>
-                            <div data-swiper-slide-index="12" class="swiper-slide" style="width: 1140px;" role="group" aria-label="13 / 16">
-                                <!----><a href="/elektronik/lego-urunleri-l-bbc06e9"><img alt="" class="swiper-lazy" data-src="https://images.migrosone.com/elektronik/banner/main_page_slider/54801/56835-web-2c0747.jpg"></a><!---->
-                                <div class="swiper-placeholder">
-                                    <div class="swiper-lazy-preloader"></div>
-                                    <img src="assets/images/banner_placeholder.webp" alt=""><!---->
-                                </div>
-                                <!----><!----><!----><!----><!----><!----><!----><!----><!---->
-                            </div>
-                            <div data-swiper-slide-index="13" class="swiper-slide" style="width: 1140px;" role="group" aria-label="14 / 16">
-                                <!----><a href="/elektronik/oyuncaklarda-super-firsatlar-l-bbc0ab6"><img alt="" class="swiper-lazy" data-src="https://images.migrosone.com/elektronik/banner/main_page_slider/54974/57008-web-a99fb7.jpg"></a><!---->
-                                <div class="swiper-placeholder">
-                                    <div class="swiper-lazy-preloader"></div>
-                                    <img src="assets/images/banner_placeholder.webp" alt=""><!---->
-                                </div>
-                                <!----><!----><!----><!----><!----><!----><!----><!----><!---->
-                            </div>
-                            <div data-swiper-slide-index="14" class="swiper-slide" style="width: 1140px;" role="group" aria-label="15 / 16">
-                                <!----><a href="/elektronik/aldim-bitti-firsati-l-bbc0ad6"><img alt="" class="swiper-lazy" data-src="https://images.migrosone.com/elektronik/banner/main_page_slider/55047/57081-web-df85eb.jpg"></a><!---->
-                                <div class="swiper-placeholder">
-                                    <div class="swiper-lazy-preloader"></div>
-                                    <img src="assets/images/banner_placeholder.webp" alt=""><!---->
-                                </div>
-                                <!----><!----><!----><!----><!----><!----><!----><!----><!---->
-                            </div>
-                            <div data-swiper-slide-index="15" class="swiper-slide swiper-slide-duplicate-prev" style="width: 1140px;" role="group" aria-label="16 / 16">
-                                <!----><a href="/elektronik/yok-boyle-fiyat-urunleri-l-bbc0ae2"><img alt="" class="swiper-lazy" data-src="https://images.migrosone.com/elektronik/banner/main_page_slider/55069/57103-web-d9dd11.jpg"></a><!---->
-                                <div class="swiper-placeholder">
-                                    <div class="swiper-lazy-preloader"></div>
-                                    <img src="assets/images/banner_placeholder.webp" alt=""><!---->
-                                </div>
-                                <!----><!----><!----><!----><!----><!----><!----><!----><!---->
-                            </div>
-                            <!----><!---->
-                            <div data-swiper-slide-index="0" class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" role="group" aria-label="1 / 16" style="width: 1140px;">
-                                <!----><a href="/elektronik/cep-telefonlarinda-muthis-kasim-firsatlari-l-bbc0b6a"><img alt="" class="swiper-lazy swiper-lazy-loaded" src="https://images.migrosone.com/elektronik/banner/main_page_slider/55335/57369-webekstra-a9c42e.png"></a><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
-                            </div>
-                            <!----><!---->
-                        </div>
-                        <!----><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-                        </swiper>
-                        <!---->
-                    </sm-swiper-banner>
                     <!---->
                     <sm-swiper-banner _ngcontent-cro-c416="" id="sm-home-main-swiper-banner-optimize" fedeferload="" class="banners">
                         <swiper class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events">
