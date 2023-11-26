@@ -21,11 +21,11 @@ $stmt = $pdo->query("SELECT * FROM slider");
                 $slide_index = 0;
                 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                     if ($slide_index == 0 ){
-                        echo '<div data-swiper-slide-index="' . strval($slide_index) . '" class="swiper-slide ng-star-inserted swiper-slide-active" style="width: 386px;" role="group">';
+                        echo '<div data-swiper-slide-index="' . strval($slide_index) . '" class="swiper-slide ng-star-inserted swiper-slide-active" style="width: 386px;" role="group" aria-label="1 / 19">';
                         echo '<a href="' . $row['url'] . '" class="ng-star-inserted"><img alt="" class="swiper-lazy swiper-lazy-loaded" src="' . $row['image'] . '"></a>';
                         echo '</div>';
                     }else{
-                        echo '<div data-swiper-slide-index="' . strval($slide_index) . '" class="swiper-slide ng-star-inserted swiper-slide-next" style="width: 386px;" role="group">';
+                        echo '<div data-swiper-slide-index="' . strval($slide_index) . '" class="swiper-slide ng-star-inserted swiper-slide-next" style="width: 386px;" role="group" aria-label="1 / 19">';
                         echo '<a href="' . $row['url'] . '" class="ng-star-inserted"><img alt="" class="swiper-lazy swiper-lazy-loaded" src="' . $row['image'] . '"></a>';
                         echo '</div>';
                     }
