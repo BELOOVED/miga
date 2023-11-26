@@ -1231,68 +1231,39 @@ if ($existingUser) {
                               <span>HAZIR SEPET</span><!---->
                            </div>
                         </a>
-                        <div class="categories-sub-categories-wrapper expanded hidden" id="categoryai" onmouseover="showCategory()" onmouseout="hideCategory()">
+                        <div class="categories-sub-categories-wrapper ng-star-inserted hidden" id="categoryai" onmouseover="showCategory()" onmouseout="hideCategory()">
                            <div class="categories-wrapper">
-                              <a class="categories mat-caption-normal text-color-black discount-products" id="header-categories--tum-indirimli-urunler-dt-0" href="/tum-indirimli-urunler-dt-0">
+                              <a class="categories mat-caption-normal text-color-black discount-products ng-star-inserted" id="header-categories--tum-indirimli-urunler-dt-0" href="/urunler?q=indirim">
                                  Tüm İndirimli Ürünler 
                                  <div class="hover-arrow"></div>
                               </a>
-                              <a class="categories mat-caption-normal text-color-black" id="header-categories--telefon-ve-aksesuarlari-c-525" href="/telefon-ve-aksesuarlari-c-525">
+                              <a class="categories mat-caption-normal text-color-black ng-star-inserted" id="header-categories--telefon-ve-aksesuarlari-c-525" href="/urunler?q=telefon">
                                  Telefon ve Aksesuarları 
                                  <div class="hover-arrow"></div>
                               </a>
-                              <a class="categories mat-caption-normal text-color-black" id="header-categories--bilgisayar-ve-aksesuarlari-c-523" href="/bilgisayar-ve-aksesuarlari-c-523">
+                              <a class="categories mat-caption-normal text-color-black ng-star-inserted" id="header-categories--bilgisayar-ve-aksesuarlari-c-523" href="/urunler?q=bilgisayar">
                                  Bilgisayar ve Aksesuarları 
                                  <div class="hover-arrow"></div>
                               </a>
-                              <a class="categories mat-caption-normal text-color-black" id="header-categories--beyaz-esya-c-521" href="/beyaz-esya-c-521">
+                              <a class="categories mat-caption-normal text-color-black ng-star-inserted" id="header-categories--beyaz-esya-c-521" href="//urunler?q=beyazesya">
                                  Beyaz Eşya 
                                  <div class="hover-arrow"></div>
                               </a>
-                              <a class="categories mat-caption-normal text-color-black" id="header-categories--elektrikli-ev-aletleri-c-522" href="/elektrikli-ev-aletleri-c-522">
+                              <a class="categories mat-caption-normal text-color-black ng-star-inserted" id="header-categories--elektrikli-ev-aletleri-c-522" href="/urunler?q=elektrikli">
                                  Elektrikli Ev Aletleri 
                                  <div class="hover-arrow"></div>
                               </a>
-                              <a class="categories mat-caption-normal text-color-black" id="header-categories--oyun-konsollari-c-2ad4" href="/oyun-konsollari-c-2ad4">
+                              <a class="categories mat-caption-normal text-color-black ng-star-inserted" id="header-categories--oyun-konsollari-c-2ad4" href="/urunler?q=oyunkonsollari">
                                  Oyun Konsolları 
                                  <div class="hover-arrow"></div>
                               </a>
-                              <a class="categories mat-caption-normal text-color-black" id="header-categories--goruntu-ve-ses-sistemleri-c-524" href="/goruntu-ve-ses-sistemleri-c-524">
+                              <a class="categories mat-caption-normal text-color-black ng-star-inserted" id="header-categories--goruntu-ve-ses-sistemleri-c-524" href="/urunler?q=goruntu">
                                  Görüntü ve Ses Sistemleri 
                                  <div class="hover-arrow"></div>
                               </a>
-                              <a class="categories mat-caption-normal text-color-black" id="header-categories--isitma-sogutma-c-11229" href="/isitma-sogutma-c-11229">
-                                 Isıtma, Soğutma 
-                                 <div class="hover-arrow"></div>
-                              </a>
-                              <a class="categories mat-caption-normal text-color-black" id="header-categories--giyim-aksesuar-c-118f4" href="/giyim-aksesuar-c-118f4">
-                                 Giyim &amp; Aksesuar 
-                                 <div class="hover-arrow"></div>
-                              </a>
-                              <a class="categories mat-caption-normal text-color-black" id="header-categories--kitap-kirtasiye-oyuncak-c-118e6" href="/kitap-kirtasiye-oyuncak-c-118e6">
-                                 Kitap, Kırtasiye, Oyuncak 
-                                 <div class="hover-arrow"></div>
-                              </a>
-                              <a class="categories mat-caption-normal text-color-black" id="header-categories--spor-outdoor-bahce-c-119b3" href="/spor-outdoor-bahce-c-119b3">
-                                 Spor, Outdoor, Bahçe 
-                                 <div class="hover-arrow"></div>
-                              </a>
-                              <a class="categories mat-caption-normal text-color-black" id="header-categories--hirdavat-oto-aksesuar-c-11f87" href="/hirdavat-oto-aksesuar-c-11f87">
-                                 Hırdavat, Oto Aksesuar 
-                                 <div class="hover-arrow"></div>
-                              </a>
-                              <a class="categories mat-caption-normal text-color-black" id="header-categories--ev-yasam-c-1190c" href="/ev-yasam-c-1190c">
-                                 Ev, Yaşam 
-                                 <div class="hover-arrow"></div>
-                              </a>
-                              <a class="categories mat-caption-normal text-color-black" id="header-categories--pet-shop-c-11943" href="/pet-shop-c-11943">
-                                 Pet Shop 
-                                 <div class="hover-arrow"></div>
-                              </a>
-                              <a class="categories mat-caption-normal text-color-black" id="header-categories--aydinlatma-elektrik-malzemeleri-c-520" href="/aydinlatma-elektrik-malzemeleri-c-520">
-                                 Aydınlatma, Elektrik Malzemeleri 
-                                 <div class="hover-arrow"></div>
-                              </a>
+                              <!---->
+                           </div>
+                           <div class="sub-categories-wrapper">
                               <!---->
                            </div>
                         </div>
