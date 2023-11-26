@@ -296,6 +296,23 @@
                <div tabindex="0" class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div>
             </div>
          </div>
+         <style>
+
+@media screen and (min-width: 600px) {
+   .cdk-overlay-connected-position-bounding-box {
+   top: -70px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  #cdk-overlay-6 {
+   
+   width: 370px;
+  }
+}
+                        </style>
          <div class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing hidden" id="hiddenafg"></div>
             <div class="cdk-overlay-connected-position-bounding-box hidden" id="" dir="ltr" style="top: 80px;
     left: 0px;
@@ -333,23 +350,7 @@
                               echo $options;
                            ?>
                         </div>
-                        <style>
-
-@media screen and (min-width: 600px) {
-   #cdk-overlay-connected-position-bounding-box {
-   top: -70px;
-    left: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
-  #cdk-overlay-6 {
-   
-   width: 370px;
-  }
-}
-                        </style>
+                        
                   </div>
                   <div role="listbox" id="dd2" tabindex="-1"
                         class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel hidden" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
