@@ -37,27 +37,27 @@
                     <div _ngcontent-cro-c416="" class="section-title mat-headline text-color-black">Migros'u Keşfet</div>
                     <div _ngcontent-cro-c416="" class="categories-wrapper">
                         <div _ngcontent-cro-c416="" class="category-wrapper">
-                        <a _ngcontent-cro-c416="" class="category-card" id="home-page-category-card-tum-indirimli-urunler-dt-0" style="background-color: rgb(255, 232, 225);"><img _ngcontent-cro-c416="" felazyload="" class="image" alt="Tüm İndirimli Ürünler" src="https://images.migrosone.com/elektronik/category/list/73630/tum_indirimler_logo_3x-18425a-360x360.png"></a>
+                        <a _ngcontent-cro-c416="" class="category-card" id="home-page-category-card-tum-indirimli-urunler-dt-0" style="background-color: rgb(255, 232, 225);"><img _ngcontent-cro-c416="" felazyload="" class="image" alt="Tüm İndirimli Ürünler" src="https://external-content.duckduckgo.com/iu/?u=https://images.migrosone.com/elektronik/category/list/73630/tum_indirimler_logo_3x-18425a-360x360.png"></a>
                         <div _ngcontent-cro-c416="" class="category-name mat-caption">Tüm İndirimli Ürünler</div>
                         </div>
                         <div _ngcontent-cro-c416="" class="category-wrapper">
-                        <a _ngcontent-cro-c416="" class="category-card" id="home-page-category-card-telefon-ve-aksesuarlari-c-525"><img _ngcontent-cro-c416="" felazyload="" class="image" alt="Telefon ve Aksesuarları" src="https://images.migrosone.com/elektronik/category/list/1317/1.telefon-ve-aksesuarlari-3b6d68-360x360.png"></a>
+                        <a _ngcontent-cro-c416="" class="category-card" id="home-page-category-card-telefon-ve-aksesuarlari-c-525"><img _ngcontent-cro-c416="" felazyload="" class="image" alt="Telefon ve Aksesuarları" src="https://external-content.duckduckgo.com/iu/?u=https://images.migrosone.com/elektronik/category/list/1317/1.telefon-ve-aksesuarlari-3b6d68-360x360.png"></a>
                         <div _ngcontent-cro-c416="" class="category-name mat-caption">Telefon ve Aksesuarları</div>
                         </div>
                         <div _ngcontent-cro-c416="" class="category-wrapper">
-                        <a _ngcontent-cro-c416="" class="category-card" id="home-page-category-card-bilgisayar-ve-aksesuarlari-c-523"><img _ngcontent-cro-c416="" felazyload="" class="image" alt="Bilgisayar ve Aksesuarları" src="https://images.migrosone.com/elektronik/category/list/1315/2.bilgisayar-ve-aksesuarlari-11ef63-360x360.png"></a>
+                        <a _ngcontent-cro-c416="" class="category-card" id="home-page-category-card-bilgisayar-ve-aksesuarlari-c-523"><img _ngcontent-cro-c416="" felazyload="" class="image" alt="Bilgisayar ve Aksesuarları" src="https://external-content.duckduckgo.com/iu/?u=https://images.migrosone.com/elektronik/category/list/1315/2.bilgisayar-ve-aksesuarlari-11ef63-360x360.png"></a>
                         <div _ngcontent-cro-c416="" class="category-name mat-caption">Bilgisayar ve Aksesuarları</div>
                         </div>
                         <div _ngcontent-cro-c416="" class="category-wrapper">
-                        <a _ngcontent-cro-c416="" class="category-card" id="home-page-category-card-elektrikli-ev-aletleri-c-522"><img _ngcontent-cro-c416="" felazyload="" class="image" alt="Elektrikli Ev Aletleri" src="https://images.migrosone.com/elektronik/category/list/1314/4.elektrikli-ev-aletleri-d27117-360x360.png"></a>
+                        <a _ngcontent-cro-c416="" class="category-card" id="home-page-category-card-elektrikli-ev-aletleri-c-522"><img _ngcontent-cro-c416="" felazyload="" class="image" alt="Elektrikli Ev Aletleri" src="https://external-content.duckduckgo.com/iu/?u=https://images.migrosone.com/elektronik/category/list/1314/4.elektrikli-ev-aletleri-d27117-360x360.png"></a>
                         <div _ngcontent-cro-c416="" class="category-name mat-caption">Elektrikli Ev Aletleri</div>
                         </div>
                         <div _ngcontent-cro-c416="" class="category-wrapper">
-                        <a _ngcontent-cro-c416="" class="category-card" id="home-page-category-card-oyun-konsollari-c-2ad4"><img _ngcontent-cro-c416="" felazyload="" class="image" alt="Oyun Konsolları" src="https://images.migrosone.com/elektronik/category/list/10964/5.oyun-konsollari-f054ff-360x360.png"></a>
+                        <a _ngcontent-cro-c416="" class="category-card" id="home-page-category-card-oyun-konsollari-c-2ad4"><img _ngcontent-cro-c416="" felazyload="" class="image" alt="Oyun Konsolları" src="https://external-content.duckduckgo.com/iu/?u=https://images.migrosone.com/elektronik/category/list/10964/5.oyun-konsollari-f054ff-360x360.png"></a>
                         <div _ngcontent-cro-c416="" class="category-name mat-caption">Oyun Konsolları</div>
                         </div>
                         <div _ngcontent-cro-c416="" class="category-wrapper">
-                        <a _ngcontent-cro-c416="" class="category-card" id="home-page-category-card-goruntu-ve-ses-sistemleri-c-524"><img _ngcontent-cro-c416="" felazyload="" class="image" alt="Görüntü ve Ses Sistemleri" src="https://images.migrosone.com/elektronik/category/list/1316/6.goruntu-ve-ses-sistemleri-d645bc-360x360.png"></a>
+                        <a _ngcontent-cro-c416="" class="category-card" id="home-page-category-card-goruntu-ve-ses-sistemleri-c-524"><img _ngcontent-cro-c416="" felazyload="" class="image" alt="Görüntü ve Ses Sistemleri" src="https://external-content.duckduckgo.com/iu/?u=https://images.migrosone.com/elektronik/category/list/1316/6.goruntu-ve-ses-sistemleri-d645bc-360x360.png"></a>
                         <div _ngcontent-cro-c416="" class="category-name mat-caption">Görüntü ve Ses Sistemleri</div>
                         </div>
                         <!----><!---->
