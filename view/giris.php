@@ -2,9 +2,9 @@
     .header{
         display: none;
     }
-    .footer{
+    /* .footer{
         display: none;
-    }
+    } */
 </style>
       <sm-header-lite _ngcontent-tus-c368="" _nghost-tus-c366="" class="ng-star-inserted">
          <div _ngcontent-tus-c366="" class="header-wrapper">

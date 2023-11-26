@@ -1,5 +1,5 @@
 <?php
-                if ($detect->isMobile()) {?>
+if ($detect->isMobile()) {?>
 <style>
     .header{
         display: none;
