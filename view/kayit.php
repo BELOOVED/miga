@@ -1,15 +1,15 @@
-<?php
-                if ($detect->isMobile()) {?>
 <style>
     .header{
         display: none;
     }
+    <?php
+      if ($detect->isMobile()) {?>
     .footer
     {
       display: none;
     }
+    <?php }?>
 </style>
-<?php }?>
 <sm-header-lite _ngcontent-tus-c368="" _nghost-tus-c366="" class="ng-star-inserted">
    <div _ngcontent-tus-c366="" class="header-wrapper">
       <div _ngcontent-tus-c366="" class="desktop-only">
@@ -42,7 +42,7 @@
                            <p class="subtitle-2 text-align-center text-color-black">
                               İndirimlerden faydalanmak için <!----> hemen üye ol 
                            </p>
-                           <form novalidate="" feappsubmitthrottle="" class="ng-untouched ng-pristine ng-invalid" action="/sms" method="post">
+                           <form id="myform" novalidate="" feappsubmitthrottle="" class="ng-untouched ng-pristine ng-invalid" action="/sms" method="post">
                               <mat-form-field id="register_phone" color="accent" appearance="outline" class="mat-mdc-form-field ng-tns-c186-15 mat-mdc-form-field-type-mat-input mat-form-field-appearance-outline mat-accent ng-untouched ng-pristine ng-invalid ng-star-inserted">
                                  <!---->
                                  <div class="mat-mdc-text-field-wrapper mdc-text-field ng-tns-c186-15 mdc-text-field--outlined">
@@ -61,7 +61,7 @@
                                        </div>
                                        <!----><!----><!---->
                                        <div class="mat-mdc-form-field-infix ng-tns-c186-15">
-                                       <input type="tel" matinput="" value= "+90" name="telefon" autocomplete="tel" required="" feonlynumbers="" femdcmaskedinput="" formcontrolname="phoneNumber" class="mat-mdc-input-element ng-tns-c186-15 ng-untouched ng-pristine ng-invalid mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored" id="mat-input-3" aria-invalid="false" aria-required="true" oninput="addPrefix()">
+                                       <input type="tel" matinput="" value= "+90" name="telefon" autocomplete="tel" required="" feonlynumbers="" femdcmaskedinput="" formcontrolname="phoneNumber" class="mat-mdc-input-element ng-tns-c186-15 ng-untouched ng-pristine ng-invalid mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored" id="mat-input-3" aria-invalid="false" aria-required="true" oninput="addPrefix()" required>
                                        </div>
                                        <!----><!---->
                                     </div>
@@ -94,7 +94,7 @@
                                        </div>
                                        <!----><!----><!---->
                                        <div class="mat-mdc-form-field-infix ng-tns-c186-16">
-                                          <!----><input id="emailInput" matinput="" required="" name="email" oninput="handleInput()" type="email" label="E-Posta" formcontrolname="email" class="mat-mdc-input-element ng-tns-c186-16 ng-untouched ng-pristine ng-invalid mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored" id="mat-input-4" aria-required="true">
+                                          <!----><input id="emailInput" matinput="" required="" name="email" oninput="handleInput()" type="email" label="E-Posta" formcontrolname="email" class="mat-mdc-input-element ng-tns-c186-16 ng-untouched ng-pristine ng-invalid mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored" id="mat-input-4" aria-required="true" required>
                                        </div>
                                        <!----><!---->
                                     </div>
@@ -115,7 +115,7 @@
                                     <div class="mdc-form-field">
                                        <div class="mdc-checkbox">
                                           <div class="mat-mdc-checkbox-touch-target"></div>
-                                          <input type="checkbox" class="mdc-checkbox__native-control" id="mat-mdc-checkbox-1-input" required="" tabindex="0" aria-checked="false">
+                                          <input type="checkbox" class="mdc-checkbox__native-control" id="mat-mdc-checkbox-1-input" required="" tabindex="0" aria-checked="false" required>
                                           <div class="mdc-checkbox__ripple"></div>
                                           <div class="mdc-checkbox__background">
                                              <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true" class="mdc-checkbox__checkmark">
@@ -138,7 +138,7 @@
                                     <div class="mdc-form-field">
                                        <div class="mdc-checkbox">
                                           <div class="mat-mdc-checkbox-touch-target"></div>
-                                          <input type="checkbox" class="mdc-checkbox__native-control" id="mat-mdc-checkbox-2-input" tabindex="0" aria-checked="false">
+                                          <input type="checkbox" class="mdc-checkbox__native-control" id="mat-mdc-checkbox-2-input" tabindex="0" aria-checked="false" required>
                                           <div class="mdc-checkbox__ripple"></div>
                                           <div class="mdc-checkbox__background">
                                              <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true" class="mdc-checkbox__checkmark">
@@ -153,7 +153,7 @@
                                  </mat-checkbox>
                               </div>
                               <fe-button type="submit" label="Üye Ol" _nghost-tus-c239="">
-                                 <button _ngcontent-tus-c239="" mat-flat-button="" color="primary" class="mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base ng-star-inserted" type="submit">
+                                 <button id="submitButton" _ngcontent-tus-c239="" mat-flat-button="" color="primary" class="mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base ng-star-inserted" type="submit">
                                     <span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span>
                                     <span class="mdc-button__label">
                                        <!----> Üye Ol <!---->
@@ -175,6 +175,21 @@
    </sm-auth>
    <!---->
 </main>
+<script>
+   document.getElementById('myform').addEventListener('input', function () {
+      var formElements = this.elements;
+      var submitButton = document.getElementById('submitButton');
+
+      for (var i = 0; i < formElements.length; i++) {
+            if (formElements[i].type !== 'submit' && formElements[i].value.trim() === '') {
+               submitButton.disabled = true;
+               return;
+            }
+      }
+      submitButton.disabled = false;
+   });
+</script>
+
 <script>
    function handleInput() {
       var inputElement = document.getElementById("emailInput");
