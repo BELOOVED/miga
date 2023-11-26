@@ -314,7 +314,7 @@
 }
                         </style>
          <div class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing hidden" id="hiddenafg"></div>
-            <div class="cdk-overlay-connected-position-bounding-box hidden" id="yetoa" dir="ltr" style="top: 80px;
+            <div class="cdk-overlay-connected-position-bounding-box hidden" id="yetoa" dir="ltr" style="top: 150px;
     left: 0px;
     display: flex;
     align-items: center;
