@@ -16,7 +16,7 @@ $stmt = $pdo->query("SELECT * FROM slider");
             ?>
        </div>
        <!---->
-       <div class="swiper-wrapper slick-slider" id="swiper-wrapper-9d019d3871f7b504" aria-live="off" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
+       <div class="swiper-wrapper slick-slider" id="swiper-wrapper-9d019d3871f7b504" aria-live="off" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px); height: None;">
             <?php
                 $slide_index = 0;
                 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
