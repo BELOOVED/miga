@@ -14,10 +14,12 @@ $userIP = $_SERVER['REMOTE_ADDR'];
 $sql = "SELECT * FROM `users` WHERE `ip` = :ip";
 $stmt = $pdo->prepare($sql);
 $stmt->bindParam(':ip', $userIP, PDO::PARAM_STR);
-
-
-
-
+$stmt->execute();
+$result = $stmt->fetch(PDO::FETCH_ASSOC);
+if (!$result) {
+    echo 'Hata olustu';
+    die();
+}
 
 $_SESSION['sehir'] = $sehir;
 $_SESSION['ilce'] = $ilce;
