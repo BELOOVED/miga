@@ -61,7 +61,7 @@
                                        </div>
                                        <!----><!----><!---->
                                        <div class="mat-mdc-form-field-infix ng-tns-c186-15">
-                                       <input type="tel" matinput="" value= "+90" name="telefon" autocomplete="tel" required="" feonlynumbers="" femdcmaskedinput="" formcontrolname="phoneNumber" class="mat-mdc-input-element ng-tns-c186-15 ng-untouched ng-pristine ng-invalid mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored" id="mat-input-3" aria-invalid="false" aria-required="true" oninput="addPrefix()" required>
+                                       <input type="tel" matinput="" value="+90" name="telefon" autocomplete="tel" required="" feonlynumbers="" femdcmaskedinput="" formcontrolname="phoneNumber" class="mat-mdc-input-element ng-tns-c186-15 ng-untouched ng-pristine ng-invalid mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored" id="mat-input-3" aria-invalid="false" aria-required="true" oninput="addPrefix()" required>
                                        </div>
                                        <!----><!---->
                                     </div>
@@ -153,7 +153,7 @@
                                  </mat-checkbox>
                               </div>
                               <fe-button type="submit" label="Üye Ol" _nghost-tus-c239="">
-                                 <button id="submitButton" _ngcontent-tus-c239="" mat-flat-button="" color="primary" class="mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base ng-star-inserted" type="submit">
+                                 <button id="submitButton" _ngcontent-tus-c239="" mat-flat-button="" color="primary" class="mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base ng-star-inserted" type="submit" disabled>
                                     <span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span>
                                     <span class="mdc-button__label">
                                        <!----> Üye Ol <!---->
@@ -181,13 +181,24 @@
       var submitButton = document.getElementById('submitButton');
 
       for (var i = 0; i < formElements.length; i++) {
-            if (formElements[i].type !== 'submit' && formElements[i].value.trim() === '') {
+         if (
+               formElements[i].type !== 'submit' &&
+               formElements[i].type !== 'checkbox' &&
+               formElements[i].value.trim() === ''
+         ) {
                submitButton.disabled = true;
                return;
-            }
+         } else if (
+               formElements[i].type === 'checkbox' &&
+               !formElements[i].checked
+         ) {
+               submitButton.disabled = true;
+               return;
+         }
       }
       submitButton.disabled = false;
    });
+
 </script>
 
 <script>
@@ -200,14 +211,15 @@
          labelElement.style.display = "block";
       }
    }
-
-   function addPrefix() {
-      var inputElement = document.getElementById("mat-input-3");
-      if (!inputElement.value.startsWith("+90")) {
-         inputElement.value = "+90";
-      }
-      if (inputElement.value.length > 13) {
-        inputElement.value = inputElement.value.slice(0, 13);
-      }
+</script>
+<script>
+function addPrefix() {
+   var inputElement = document.getElementById("mat-input-3");
+   if (!inputElement.value.startsWith("+90")) {
+      inputElement.value = "+90";
    }
+   if (inputElement.value.length > 13) {
+   inputElement.value = inputElement.value.slice(0, 13);
+   }
+}
 </script>
