@@ -2,9 +2,6 @@
     .header{
         display: none;
     }
-    .footer{
-        display: none;
-    }
 </style>
 <main _ngcontent-tus-c368="" class="elektronik">
    <router-outlet _ngcontent-tus-c368=""></router-outlet>
