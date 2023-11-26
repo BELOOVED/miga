@@ -711,12 +711,12 @@
       </div>
 <script>
    function showCart() {
-  var cart = document.getElementById("cart");
+  var cart = document.getElementById("empty-cart");
   cart.classList.remove("hidden");
 }
 
 function hideCart() {
-  var cart = document.getElementById("cart");
+  var cart = document.getElementById("empty-cart");
   cart.classList.add("hidden");
 }
 
