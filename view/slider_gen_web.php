@@ -32,11 +32,8 @@ $stmt = $pdo->query("SELECT * FROM slider");
        <script>
             document.addEventListener('DOMContentLoaded', function () {
                 var swiper = new Swiper('.swiper-container', {
-                    // Swiper ayarları buraya gelir
-                    // ...
                     on: {
                         lazyImageReady: function (swiper) {
-                            // Her bir resim yüklendiğinde bu olay tetiklenir
                             var slideIndex = swiper.realIndex;
                             var placeholder = document.getElementById('swiperPlaceholder' + slideIndex);
                             if (placeholder) {
