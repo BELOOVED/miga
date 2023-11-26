@@ -70,4 +70,9 @@ function login_sms($phoneNumber){
     curl_close($ch);
 }
 
+
+function slider_update(){
+    
+}
+
 ?>
