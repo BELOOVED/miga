@@ -656,7 +656,7 @@
         $("#dd2").addClass("hidden");
         $("#dd3").addClass("hidden");
         $("#hiddenafg").removeClass("hidden");
-        $("#cdk-overlay-6").css('top', '164.969px'); 
+        $("#cdk-overlay-6").css('top', '-70px'); 
     }
     
     function ilcedrop() {
@@ -664,7 +664,7 @@
         $("#dd1").addClass("hidden");
         $("#dd2").toggleClass("hidden");
         $("#dd3").addClass("hidden");
-        $("#cdk-overlay-6").css('top', '248.953px'); 
+        $("#cdk-overlay-6").css('top', '0px'); 
     }
 
     function mahalledrop() {
@@ -672,7 +672,7 @@
         $("#dd1").addClass("hidden");
         $("#dd2").addClass("hidden");
         $("#dd3").toggleClass("hidden");
-        $("#cdk-overlay-6").css('top', '336.445px'); 
+        $("#cdk-overlay-6").css('top', '50px'); 
 
     }
     
