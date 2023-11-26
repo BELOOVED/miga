@@ -715,8 +715,8 @@
       const pageHeight = window.innerHeight;
 
       // İstediğiniz formülü burada kullanabilirsiniz.
-      const topValue = Math.round(pageHeight * 0.45); // Örnek bir formül
-      const leftValue = Math.round(pageWidth * 0.23); // Örnek bir formül
+      const topValue = Math.round(pageHeight * 1); // Örnek bir formül
+      const leftValue = Math.round(pageWidth * 1); // Örnek bir formül
 
       // Değerleri ayarla
       cdkOverlay.style.top = `${topValue}px`;
