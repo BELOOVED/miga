@@ -1,37 +1,43 @@
-<main _ngcontent-tus-c368="" class="elektronik">
-   <router-outlet _ngcontent-tus-c368=""></router-outlet>
+<style>
+    .header{
+        display: none;
+    }
+    .footer{
+        display: none;
+    }
+</style>
+<main _ngcontent-nyw-c368="" class="elektronik">
+   <router-outlet _ngcontent-nyw-c368=""></router-outlet>
    <sm-product class="ng-star-inserted">
       <article>
          <router-outlet></router-outlet>
          <sm-product-detail-page class="ng-star-inserted">
             <div class="product-detail-page ng-star-inserted">
                <div id="dsa-category-id">
-                  <div>21000000071948/21000000072098/21000000072119/21000000072135</div>
+                  <div>21000000001317/21000000010969</div>
                </div>
-               <fe-mobile-breadcrumb pagename="Ürün Detayı" class="mobile-header mobile-only" _nghost-tus-c391="">
-                  <div _ngcontent-tus-c391="" class="breadcrumb mobile-only">
-                     <a _ngcontent-tus-c391="">
-                        <fa-icon _ngcontent-tus-c391="" class="ng-fa-icon">
+               <fe-mobile-breadcrumb pagename="Ürün Detayı" class="mobile-header mobile-only" _nghost-nyw-c391="">
+                  <div _ngcontent-nyw-c391="" class="breadcrumb mobile-only">
+                     <a _ngcontent-nyw-c391="">
+                        <fa-icon _ngcontent-nyw-c391="" class="ng-fa-icon">
                            <svg role="img" aria-hidden="true" focusable="false" data-prefix="far" data-icon="arrow-left" class="svg-inline--fa fa-arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                               <path fill="currentColor" d="M447.1 256c0 13.25-10.76 24.01-24.01 24.01H83.9l132.7 126.6c9.625 9.156 9.969 24.41 .8125 33.94c-9.156 9.594-24.34 9.938-33.94 .8125l-176-168C2.695 268.9 .0078 262.6 .0078 256S2.695 243.2 7.445 238.6l176-168C193 61.51 208.2 61.85 217.4 71.45c9.156 9.5 8.812 24.75-.8125 33.94l-132.7 126.6h340.1C437.2 232 447.1 242.8 447.1 256z"></path>
                            </svg>
                         </fa-icon>
                      </a>
-                     <div _ngcontent-tus-c391="" class="content">
-                        <h3 _ngcontent-tus-c391="">Ürün Detayı</h3>
+                     <div _ngcontent-nyw-c391="" class="content">
+                        <h3 _ngcontent-nyw-c391="">Ürün Detayı</h3>
                         <!---->
                      </div>
                   </div>
                </fe-mobile-breadcrumb>
-               <fe-breadcrumb _nghost-tus-c389="">
-                  <ul _ngcontent-tus-c389="" class="breadcrumbs">
-                     <li _ngcontent-tus-c389="" class="breadcrumbs__item"><a _ngcontent-tus-c389="" title="Anasayfa" class="breadcrumbs__link" href="/elektronik">Anasayfa</a></li>
+               <fe-breadcrumb _nghost-nyw-c389="">
+                  <ul _ngcontent-nyw-c389="" class="breadcrumbs">
+                     <li _ngcontent-nyw-c389="" class="breadcrumbs__item"><a _ngcontent-nyw-c389="" title="Anasayfa" class="breadcrumbs__link" href="/elektronik">Anasayfa</a></li>
                      <!---->
-                     <li _ngcontent-tus-c389="" class="breadcrumbs__item ng-star-inserted"><a _ngcontent-tus-c389="" class="breadcrumbs__link" title="Ev, Yaşam" href="/elektronik/ev-yasam-c-1190c"> Ev, Yaşam </a></li>
-                     <li _ngcontent-tus-c389="" class="breadcrumbs__item ng-star-inserted"><a _ngcontent-tus-c389="" class="breadcrumbs__link" title="Mutfak Eşyaları" href="/elektronik/mutfak-esyalari-c-119a2"> Mutfak Eşyaları </a></li>
-                     <li _ngcontent-tus-c389="" class="breadcrumbs__item ng-star-inserted"><a _ngcontent-tus-c389="" class="breadcrumbs__link" title="Fırında Pişirme" href="/elektronik/firinda-pisirme-c-119b7"> Fırında Pişirme </a></li>
-                     <li _ngcontent-tus-c389="" class="breadcrumbs__item ng-star-inserted"><a _ngcontent-tus-c389="" class="breadcrumbs__link" title="Kek Kalıbı" href="/elektronik/kek-kalibi-c-119c7"> Kek Kalıbı </a></li>
-                     <li _ngcontent-tus-c389="" class="breadcrumbs__item ng-star-inserted"><a _ngcontent-tus-c389="" class="breadcrumbs__link" title="Masterchef Mini Döküm Ürünleri" href="/elektronik/masterchef-mini-dokum-urunleri-p-1e902a9"> Masterchef Mini Döküm Ürünleri </a></li>
+                     <li _ngcontent-nyw-c389="" class="breadcrumbs__item ng-star-inserted"><a _ngcontent-nyw-c389="" class="breadcrumbs__link" title="Telefon ve Aksesuarları" href="/elektronik/telefon-ve-aksesuarlari-c-525"> Telefon ve Aksesuarları </a></li>
+                     <li _ngcontent-nyw-c389="" class="breadcrumbs__item ng-star-inserted"><a _ngcontent-nyw-c389="" class="breadcrumbs__link" title="Giyilebilir Aksesuar" href="/elektronik/giyilebilir-aksesuar-c-2ad9"> Giyilebilir Aksesuar </a></li>
+                     <li _ngcontent-nyw-c389="" class="breadcrumbs__item ng-star-inserted"><a _ngcontent-nyw-c389="" class="breadcrumbs__link" title="Xiaomi Redmi Buds 3 Bluetooth Kulaklık - Beyaz" href="/elektronik/xiaomi-redmi-buds-3-bluetooth-kulaklik-beyaz-p-255e133"> Xiaomi Redmi Buds 3 Bluetooth Kulaklık - Beyaz </a></li>
                      <!----><!----><!---->
                   </ul>
                </fe-breadcrumb>
@@ -39,58 +45,46 @@
                   <sm-product-images>
                      <div class="product-images">
                         <div class="preview-image-wrapper">
-                           <swiper class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events">
+                           <swiper class="swiper-container swiper-container-initialized swiper-container-horizontal">
                               <!----><!----><!---->
-                              <div class="swiper-wrapper" id="swiper-wrapper-a688a1f52d06d3c9" aria-live="polite" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
+                              <div class="swiper-wrapper" id="swiper-wrapper-8a259864b5f46894" aria-live="polite" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
                                  <!----><!---->
                                  <div data-swiper-slide-index="0" class="swiper-slide ng-star-inserted swiper-slide-active" style="width: 328px;">
-                                    <!----><img src="https://images.migrosone.com/elektronik/product/32047785/32047785-1065dd-1650x1650.jpg" class="ng-star-inserted"><!----><!----><!---->
-                                 </div>
-                                 <div data-swiper-slide-index="1" class="swiper-slide ng-star-inserted swiper-slide-next" style="width: 328px;">
-                                    <!----><img src="https://images.migrosone.com/elektronik/product/32047785/32047785_yan-227e30-1650x1650.jpg" class="ng-star-inserted"><!----><!----><!---->
-                                 </div>
-                                 <div data-swiper-slide-index="2" class="swiper-slide ng-star-inserted" style="width: 328px;">
-                                    <!----><img src="https://images.migrosone.com/elektronik/product/32047785/32047785_arka-500938-1650x1650.jpg" class="ng-star-inserted"><!----><!----><!---->
+                                    <!----><img src="https://images.migrosone.com/elektronik/product/39182643/39182643-3aaa81-1650x1650.jpg" class="ng-star-inserted"><!----><!----><!---->
                                  </div>
                                  <!----><!----><!----><!---->
                               </div>
                               <!----><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                            </swiper>
                         </div>
-                        <div class="product-images-carousel-cells ng-star-inserted">
-                           <div class="product-images-carousel-cell product-images-carousel-cell--active ng-star-inserted"><img src="https://images.migrosone.com/elektronik/product/32047785/32047785-1065dd-105x105.jpg" alt="Product Image"></div>
-                           <div class="product-images-carousel-cell ng-star-inserted"><img src="https://images.migrosone.com/elektronik/product/32047785/32047785_yan-227e30-105x105.jpg" alt="Product Image"></div>
-                           <div class="product-images-carousel-cell ng-star-inserted"><img src="https://images.migrosone.com/elektronik/product/32047785/32047785_arka-500938-105x105.jpg" alt="Product Image"></div>
-                           <!---->
-                        </div>
                         <!---->
                      </div>
                      <!---->
                   </sm-product-images>
                   <div class="product-details">
-                     <h3 class="text-color-black">Masterchef Mini Döküm Ürünleri</h3>
-                     <a class="text-color-info subtitle-2 brand-name" ngx-ql="" href="/elektronik/masterchef-b-1a26"> Masterchef </a>
+                     <h3 class="text-color-black">Xiaomi Redmi Buds 3 Bluetooth Kulaklık - Beyaz</h3>
+                     <a class="text-color-info subtitle-2 brand-name" ngx-ql="" href="/elektronik/xiaomi-b-5d0"> Xiaomi </a>
                      <div class="price">
-                        <fe-product-price _nghost-tus-c271="">
-                           <div _ngcontent-tus-c271="">
-                              <div _ngcontent-tus-c271="" id="price-old" class="price-old ng-star-inserted"><span _ngcontent-tus-c271="" id="old-amount" class="amount">99,95 <span _ngcontent-tus-c271="" class="currency">TL</span></span></div>
+                        <fe-product-price _nghost-nyw-c271="">
+                           <div _ngcontent-nyw-c271="">
+                              <div _ngcontent-nyw-c271="" id="price-old" class="price-old ng-star-inserted"><span _ngcontent-nyw-c271="" id="old-amount" class="amount">699,00 <span _ngcontent-nyw-c271="" class="currency">TL</span></span></div>
                               <!---->
-                              <div _ngcontent-tus-c271="" id="price-new" class="price-new subtitle-1"><span _ngcontent-tus-c271="" id="new-amount" class="amount"> 84,95 <span _ngcontent-tus-c271="" class="currency">TL</span></span></div>
+                              <div _ngcontent-nyw-c271="" id="price-new" class="price-new subtitle-1"><span _ngcontent-nyw-c271="" id="new-amount" class="amount"> 559,20 <span _ngcontent-nyw-c271="" class="currency">TL</span></span></div>
                            </div>
                            <!---->
                         </fe-product-price>
                         <!---->
                      </div>
                      <mat-divider role="separator" class="mat-divider mat-divider-horizontal" aria-orientation="horizontal"></mat-divider>
-                     <fe-product-discounts _nghost-tus-c399="" class="ng-star-inserted">
-                        <div _ngcontent-tus-c399="" class="product-discounts ng-star-inserted">
-                           <fe-crm-discount-badge _ngcontent-tus-c399="" _nghost-tus-c293="">
+                     <fe-product-discounts _nghost-nyw-c399="" class="ng-star-inserted">
+                        <div _ngcontent-nyw-c399="" class="product-discounts ng-star-inserted">
+                           <fe-crm-discount-badge _ngcontent-nyw-c399="" _nghost-nyw-c293="">
                               <!---->
                            </fe-crm-discount-badge>
-                           <div _ngcontent-tus-c399="" class="discount ng-star-inserted">
-                              <div _ngcontent-tus-c399="" class="discount-badge">
-                                 <div _ngcontent-tus-c399=""><span _ngcontent-tus-c399="" class="discount-badge--percent">%</span><span _ngcontent-tus-c399="" class="discount-badge--unit">15</span></div>
-                                 <div _ngcontent-tus-c399="" class="discount-badge--label">İNDİRİM</div>
+                           <div _ngcontent-nyw-c399="" class="discount ng-star-inserted">
+                              <div _ngcontent-nyw-c399="" class="discount-badge">
+                                 <div _ngcontent-nyw-c399=""><span _ngcontent-nyw-c399="" class="discount-badge--percent">%</span><span _ngcontent-nyw-c399="" class="discount-badge--unit">20</span></div>
+                                 <div _ngcontent-nyw-c399="" class="discount-badge--label">İNDİRİM</div>
                               </div>
                            </div>
                            <!----><!----><!----><!----><!---->
@@ -105,8 +99,8 @@
                      </div>
                      <!----><!---->
                      <div class="actions">
-                        <sm-product-actions _nghost-tus-c292="">
-                           <!----><!----><button _ngcontent-tus-c292="" mat-flat-button="" color="primary" class="product-detail-add mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base ng-star-inserted"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Sepete Ekle
+                        <sm-product-actions _nghost-nyw-c292="">
+                           <!----><!----><button _ngcontent-nyw-c292="" mat-flat-button="" color="primary" class="product-detail-add mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base ng-star-inserted"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Sepete Ekle
                            </span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button><!---->
                         </sm-product-actions>
                         <fa-icon id="product-detail-favourite" class="ng-fa-icon favourite favourite--empty ng-star-inserted">
@@ -119,13 +113,16 @@
                      <!---->
                      <mat-divider role="separator" class="mat-divider last mat-divider-horizontal ng-star-inserted" aria-orientation="horizontal"></mat-divider>
                      <div class="general-info-wrapper ng-star-inserted">
-                        <!---->
-                        <sm-product-info _nghost-tus-c400="" class="ng-star-inserted">
-                           <div _ngcontent-tus-c400="" class="info-line"><span _ngcontent-tus-c400="" class="dot"></span> Bu üründen en fazla 6 adet sipariş verilebilir. Belirtilen adet üzerindeki siparişlerin iptal edilmesi hakkı saklıdır.</div>
+                        <sm-product-info _nghost-nyw-c400="" class="ng-star-inserted">
+                           <div _ngcontent-nyw-c400="" class="info-line"><span _ngcontent-nyw-c400="" class="dot"></span> Bu fiyattan satılmak üzere toplam 30 adet stok bulunmaktadır.</div>
                         </sm-product-info>
                         <!---->
-                        <sm-product-info _nghost-tus-c400="" class="ng-star-inserted">
-                           <div _ngcontent-tus-c400="" class="info-line"><span _ngcontent-tus-c400="" class="dot"></span> Ürünün stok, fiyat ve kampanya bilgisi, teslimatı gerçekleştirecek mağazanın stok, fiyat ve kampanya bilgilerine göre belirlenmektedir.</div>
+                        <sm-product-info _nghost-nyw-c400="" class="ng-star-inserted">
+                           <div _ngcontent-nyw-c400="" class="info-line"><span _ngcontent-nyw-c400="" class="dot"></span> Bu üründen en fazla 1 adet sipariş verilebilir. Belirtilen adet üzerindeki siparişlerin iptal edilmesi hakkı saklıdır.</div>
+                        </sm-product-info>
+                        <!---->
+                        <sm-product-info _nghost-nyw-c400="" class="ng-star-inserted">
+                           <div _ngcontent-nyw-c400="" class="info-line"><span _ngcontent-nyw-c400="" class="dot"></span> Ürünün stok, fiyat ve kampanya bilgisi, teslimatı gerçekleştirecek mağazanın stok, fiyat ve kampanya bilgilerine göre belirlenmektedir.</div>
                         </sm-product-info>
                         <!---->
                      </div>
@@ -136,31 +133,21 @@
                <div class="product-tabs-wrapper ng-star-inserted">
                   <fe-product-detail-tabs>
                      <mat-tab-group dynamicheight="false" disableripple="true" animationduration="0ms" mat-align-tabs="start" class="mat-tab-group mat-primary">
-                        <mat-tab-header class="mat-tab-header mat-tab-header-pagination-controls-enabled">
-                           <button aria-hidden="true" type="button" mat-ripple="" tabindex="-1" class="mat-ripple mat-tab-header-pagination mat-tab-header-pagination-before mat-elevation-z4">
+                        <mat-tab-header class="mat-tab-header">
+                           <button aria-hidden="true" type="button" mat-ripple="" tabindex="-1" class="mat-ripple mat-tab-header-pagination mat-tab-header-pagination-before mat-elevation-z4 mat-tab-header-pagination-disabled" disabled="">
                               <div class="mat-tab-header-pagination-chevron"></div>
                            </button>
                            <div class="mat-tab-label-container">
-                              <div role="tablist" class="mat-tab-list" style="transform: translateX(-218px);">
+                              <div role="tablist" class="mat-tab-list" style="transform: translateX(0px);">
                                  <div class="mat-tab-labels">
-                                    <div role="tab" mattablabelwrapper="" mat-ripple="" cdkmonitorelementfocus="" class="mat-ripple mat-tab-label mat-focus-indicator mat-tab-label-active ng-star-inserted" id="mat-tab-label-0-0" tabindex="0" aria-posinset="1" aria-setsize="3" aria-controls="mat-tab-content-0-0" aria-selected="true" aria-disabled="false">
-                                       <div class="mat-tab-label-content">
-                                          Ürün Açıklaması<!----><!---->
-                                       </div>
-                                    </div>
-                                    <div role="tab" mattablabelwrapper="" mat-ripple="" cdkmonitorelementfocus="" class="mat-ripple mat-tab-label mat-focus-indicator ng-star-inserted" id="mat-tab-label-0-1" tabindex="-1" aria-posinset="2" aria-setsize="3" aria-controls="mat-tab-content-0-1" aria-selected="false" aria-disabled="false">
-                                       <div class="mat-tab-label-content">
-                                          Taksit Seçenekleri<!----><!---->
-                                       </div>
-                                    </div>
-                                    <div role="tab" mattablabelwrapper="" mat-ripple="" cdkmonitorelementfocus="" class="mat-ripple mat-tab-label mat-focus-indicator ng-star-inserted" id="mat-tab-label-0-2" tabindex="-1" aria-posinset="3" aria-setsize="3" aria-controls="mat-tab-content-0-2" aria-selected="false" aria-disabled="false">
+                                    <div role="tab" mattablabelwrapper="" mat-ripple="" cdkmonitorelementfocus="" class="mat-ripple mat-tab-label mat-focus-indicator mat-tab-label-active ng-star-inserted" id="mat-tab-label-0-0" tabindex="0" aria-posinset="1" aria-setsize="1" aria-controls="mat-tab-content-0-0" aria-selected="true" aria-disabled="false">
                                        <div class="mat-tab-label-content">
                                           İade Koşulları<!----><!---->
                                        </div>
                                     </div>
                                     <!---->
                                  </div>
-                                 <mat-ink-bar class="mat-ink-bar" style="visibility: visible; left: 0px; width: 158px;"></mat-ink-bar>
+                                 <mat-ink-bar class="mat-ink-bar" style="visibility: visible; left: 0px; width: 139px;"></mat-ink-bar>
                               </div>
                            </div>
                            <button aria-hidden="true" type="button" mat-ripple="" tabindex="-1" class="mat-ripple mat-tab-header-pagination mat-tab-header-pagination-after mat-elevation-z4 mat-tab-header-pagination-disabled" disabled="">
@@ -168,32 +155,145 @@
                            </button>
                         </mat-tab-header>
                         <div class="mat-tab-body-wrapper">
-                           <mat-tab-body role="tabpanel" class="mat-tab-body ng-tns-c129-17 mat-tab-body-active ng-star-inserted" id="mat-tab-content-0-0" aria-labelledby="mat-tab-label-0-0">
-                              <div cdkscrollable="" class="mat-tab-body-content ng-tns-c129-17 ng-trigger ng-trigger-translateTab" style="transform: none;">
-                                 <fe-read-more class="mobile-only ng-star-inserted" _nghost-tus-c268="" style="">
-                                    <div _ngcontent-tus-c268="" class="read-more">
-                                       <div _ngcontent-tus-c268="" style="height: auto;">
-                                          <div class="product-description">
-                                             <p>Mağaza stoklarıyla sınırlıdır. Adet fiyatıdır. Tercih ettiğiniz seçeneği ürün notuna ekleyebilirsiniz. Tercih ettiğiniz seçenek mağaza stoklarında mevcut ise, tercih ettiğiniz seçenek teslimi yapılabilecektir.</p>
+                           <mat-tab-body role="tabpanel" class="mat-tab-body ng-tns-c129-4 mat-tab-body-active ng-star-inserted" id="mat-tab-content-0-0" aria-labelledby="mat-tab-label-0-0">
+                              <div cdkscrollable="" class="mat-tab-body-content ng-tns-c129-4 ng-trigger ng-trigger-translateTab" style="transform: none;">
+                                 <fe-read-more class="mobile-only ng-star-inserted" _nghost-nyw-c268="" style="">
+                                    <div _ngcontent-nyw-c268="" class="read-more">
+                                       <div _ngcontent-nyw-c268="" style="height: auto;">
+                                          <div data-nosnippet="" class="product-description">
+                                             <div class="form-area return-policy-area">
+                                                <div class="in">
+                                                   <p><strong>İade Sürecini Nasıl Başlatabilirim?</strong></p>
+                                                   <p>Ürün teslim tarihinden itibaren <strong>30 gün</strong> içinde, <strong>0850 200 40 00</strong> telefon numarası
+                                                      üzerinden iade sürecini başlatabilirsiniz.
+                                                   </p>
+                                                   <p><strong>İade Koşulları:</strong></p>
+                                                   <p>Her türlü iadeler mutlak suretle orjinal kutu ve ürünün ambalajı (koruma bandı) bozulmaksızın yapılmalıdır.</p>
+                                                   <p>Ürün fatura aslınının iade/değişim bildirimi ile birlikte gönderilmesi gerekmektedir.</p>
+                                                   <p></p>
+                                                   <p>Elektronik ürünler ve cep telefonları yetkili servis garantisinde bulunmaktadır. Üründe yaşanan sorun ya da
+                                                      ayıplı mal yetkili servis tarafından belgelendikten sonra tarafımızca tüm aksesuarları ile birlikte iade olarak
+                                                      kabul edilmektedir. Cep telefonları ürünlerinde kutu içerisindeki garanti belgesinin kaşelenmesi için ürünün
+                                                      kutusu açılmakta ve orjinal ambalajı açık şekilde teslim edilmektedir.
+                                                   </p>
+                                                   <p></p>
+                                                   <p>Kurulum gerektiren elektronik ürünler yetkili servis çalışanları tarafından açıldıktan sonra, herhangi bir
+                                                      hasar/kusur/ayıp tespit edilmesi halinde tespit tutanağı doldurtulması gerekir. Tespit tutanağı olmayan veya
+                                                      yetkili servis kontrolü dışında açılmış olan ürünler için iade/değişim işlemi gerçekleştirilemez.
+                                                   </p>
+                                                   <p></p>
+                                                   <p>Kargo belgesi ile teslim edilen ürünler kargo görevlisi huzurunda açılmalıdır. Ürünün dış ambalajında hiç bir
+                                                      hasar, açıklık, darbe, ıslaklık vb. olmaması, buna rağmen ürünün hasarlı çıkması durumunda, mevcut durum bir
+                                                      tutanakla karşılıklı olarak imza altına alınmalıdır. Kargo görevlisi tutanağın 1 nüshasını müşteriye vermekle
+                                                      yükümlüdür. Ürün hasar tespit tutanağının ve fatura aslının iade/değişim bildirimi ile birlikte gönderilmesi
+                                                      gerekmektedir.
+                                                   </p>
+                                                   <p><strong>Cayma Hakkının Geçerli Olmadığı Durumlar</strong></p>
+                                                   <ul>
+                                                      <li>Fiyatı finansal piyasalardaki dalgalanmalara bağlı olarak değişen ve satıcının kontrolünde olmayan ürün veya
+                                                         hizmetler iade/değişim kapsamında değerlendirilmemektedir.
+                                                      </li>
+                                                      <li>Kişisel istekler doğrultusunda size özel olarak üretilen veya üzerinde değişiklik yapılan ürünler iade/değişim
+                                                         kapsamında degerlendirilmemektedir.
+                                                      </li>
+                                                      <li>Çabuk bozulabilen veya son kullanma tarihi geçebilecek ürünler iade/değişim kapsamında
+                                                         değerlendirilmemektedir.
+                                                      </li>
+                                                      <li>Sağlık veya hijyen açısından iadesi uygun olmayıp, tesliminden sonra ambalaj, bant, mühür, paket gibi koruyucu
+                                                         unsurları açılmış olan ürünler iade/değişim kapsamında değerlendirilmemektedir. (İç giyim, mayo, bikini, kişisel
+                                                         bakım, kozmetik ürünleri vb.)
+                                                      </li>
+                                                      <li>Tesliminden sonra başka ürünlerle karışan ve doğası gereği ayrıştırılması mümkün olmayan ürünler iade/değişim
+                                                         kapsamında değerlendirilmemektedir.
+                                                      </li>
+                                                      <li>Ürünün tesliminden sonra ambalajın açılmış olması halinde maddi ortamda sunulan kitap, dijital içerik ve
+                                                         bilgisayar sarf malzemeleri iade/değişim kapsamında değerlendirilmemektedir.
+                                                      </li>
+                                                      <li>Abonelik sözleşmesi kapsamında sağlananlar dışında, gazete, dergi gibi süreli yayınlar iade/değişim kapsamında
+                                                         değerlendirilmemektedir.
+                                                      </li>
+                                                      <li>Belirli bir tarihte veya dönemde yapılması gereken, konaklama, eşya taşıma, araba kiralama, yiyecek- içecek
+                                                         tedariki ve boş zamanın değerlendirilmesine ilişkin ürünler iade/değişim kapsamında değerlendirilmemektedir.
+                                                      </li>
+                                                      <li>Elektronik ortamda anında ifa edilen hizmetler veya anında teslim edilen gayrimaddi ürünler iade/değişim
+                                                         kapsamında değerlendirilmemektedir.
+                                                      </li>
+                                                      <li>Yiyecek ve içecek gibi günlük tüketim maddelerinin, satıcının düzenli teslimatları çerçevesinde tüketicinin
+                                                         meskenine veya işyerine gönderilmesi iade/değişim kapsamında değerlendirilmemektedir.
+                                                      </li>
+                                                   </ul>
+                                                </div>
+                                             </div>
                                           </div>
                                        </div>
                                        <!---->
                                     </div>
                                  </fe-read-more>
-                                 <!---->
-                                 <div class="product-description desktop-only ng-star-inserted" style="">
-                                    <p>Mağaza stoklarıyla sınırlıdır. Adet fiyatıdır. Tercih ettiğiniz seçeneği ürün notuna ekleyebilirsiniz. Tercih ettiğiniz seçenek mağaza stoklarında mevcut ise, tercih ettiğiniz seçenek teslimi yapılabilecektir.</p>
+                                 <div data-nosnippet="" class="product-description desktop-only ng-star-inserted" style="">
+                                    <div class="form-area return-policy-area">
+                                       <div class="in">
+                                          <p><strong>İade Sürecini Nasıl Başlatabilirim?</strong></p>
+                                          <p>Ürün teslim tarihinden itibaren <strong>30 gün</strong> içinde, <strong>0850 200 40 00</strong> telefon numarası
+                                             üzerinden iade sürecini başlatabilirsiniz.
+                                          </p>
+                                          <p><strong>İade Koşulları:</strong></p>
+                                          <p>Her türlü iadeler mutlak suretle orjinal kutu ve ürünün ambalajı (koruma bandı) bozulmaksızın yapılmalıdır.</p>
+                                          <p>Ürün fatura aslınının iade/değişim bildirimi ile birlikte gönderilmesi gerekmektedir.</p>
+                                          <p></p>
+                                          <p>Elektronik ürünler ve cep telefonları yetkili servis garantisinde bulunmaktadır. Üründe yaşanan sorun ya da
+                                             ayıplı mal yetkili servis tarafından belgelendikten sonra tarafımızca tüm aksesuarları ile birlikte iade olarak
+                                             kabul edilmektedir. Cep telefonları ürünlerinde kutu içerisindeki garanti belgesinin kaşelenmesi için ürünün
+                                             kutusu açılmakta ve orjinal ambalajı açık şekilde teslim edilmektedir.
+                                          </p>
+                                          <p></p>
+                                          <p>Kurulum gerektiren elektronik ürünler yetkili servis çalışanları tarafından açıldıktan sonra, herhangi bir
+                                             hasar/kusur/ayıp tespit edilmesi halinde tespit tutanağı doldurtulması gerekir. Tespit tutanağı olmayan veya
+                                             yetkili servis kontrolü dışında açılmış olan ürünler için iade/değişim işlemi gerçekleştirilemez.
+                                          </p>
+                                          <p></p>
+                                          <p>Kargo belgesi ile teslim edilen ürünler kargo görevlisi huzurunda açılmalıdır. Ürünün dış ambalajında hiç bir
+                                             hasar, açıklık, darbe, ıslaklık vb. olmaması, buna rağmen ürünün hasarlı çıkması durumunda, mevcut durum bir
+                                             tutanakla karşılıklı olarak imza altına alınmalıdır. Kargo görevlisi tutanağın 1 nüshasını müşteriye vermekle
+                                             yükümlüdür. Ürün hasar tespit tutanağının ve fatura aslının iade/değişim bildirimi ile birlikte gönderilmesi
+                                             gerekmektedir.
+                                          </p>
+                                          <p><strong>Cayma Hakkının Geçerli Olmadığı Durumlar</strong></p>
+                                          <ul>
+                                             <li>Fiyatı finansal piyasalardaki dalgalanmalara bağlı olarak değişen ve satıcının kontrolünde olmayan ürün veya
+                                                hizmetler iade/değişim kapsamında değerlendirilmemektedir.
+                                             </li>
+                                             <li>Kişisel istekler doğrultusunda size özel olarak üretilen veya üzerinde değişiklik yapılan ürünler iade/değişim
+                                                kapsamında degerlendirilmemektedir.
+                                             </li>
+                                             <li>Çabuk bozulabilen veya son kullanma tarihi geçebilecek ürünler iade/değişim kapsamında
+                                                değerlendirilmemektedir.
+                                             </li>
+                                             <li>Sağlık veya hijyen açısından iadesi uygun olmayıp, tesliminden sonra ambalaj, bant, mühür, paket gibi koruyucu
+                                                unsurları açılmış olan ürünler iade/değişim kapsamında değerlendirilmemektedir. (İç giyim, mayo, bikini, kişisel
+                                                bakım, kozmetik ürünleri vb.)
+                                             </li>
+                                             <li>Tesliminden sonra başka ürünlerle karışan ve doğası gereği ayrıştırılması mümkün olmayan ürünler iade/değişim
+                                                kapsamında değerlendirilmemektedir.
+                                             </li>
+                                             <li>Ürünün tesliminden sonra ambalajın açılmış olması halinde maddi ortamda sunulan kitap, dijital içerik ve
+                                                bilgisayar sarf malzemeleri iade/değişim kapsamında değerlendirilmemektedir.
+                                             </li>
+                                             <li>Abonelik sözleşmesi kapsamında sağlananlar dışında, gazete, dergi gibi süreli yayınlar iade/değişim kapsamında
+                                                değerlendirilmemektedir.
+                                             </li>
+                                             <li>Belirli bir tarihte veya dönemde yapılması gereken, konaklama, eşya taşıma, araba kiralama, yiyecek- içecek
+                                                tedariki ve boş zamanın değerlendirilmesine ilişkin ürünler iade/değişim kapsamında değerlendirilmemektedir.
+                                             </li>
+                                             <li>Elektronik ortamda anında ifa edilen hizmetler veya anında teslim edilen gayrimaddi ürünler iade/değişim
+                                                kapsamında değerlendirilmemektedir.
+                                             </li>
+                                             <li>Yiyecek ve içecek gibi günlük tüketim maddelerinin, satıcının düzenli teslimatları çerçevesinde tüketicinin
+                                                meskenine veya işyerine gönderilmesi iade/değişim kapsamında değerlendirilmemektedir.
+                                             </li>
+                                          </ul>
+                                       </div>
+                                    </div>
                                  </div>
-                                 <!---->
-                              </div>
-                           </mat-tab-body>
-                           <mat-tab-body role="tabpanel" class="mat-tab-body ng-tns-c129-18 ng-star-inserted" id="mat-tab-content-0-1" aria-labelledby="mat-tab-label-0-1">
-                              <div cdkscrollable="" class="mat-tab-body-content ng-tns-c129-18 ng-trigger ng-trigger-translateTab" style="transform: translate3d(100%, 0px, 0px); min-height: 1px; visibility: hidden;">
-                                 <!---->
-                              </div>
-                           </mat-tab-body>
-                           <mat-tab-body role="tabpanel" class="mat-tab-body ng-tns-c129-19 ng-star-inserted" id="mat-tab-content-0-2" aria-labelledby="mat-tab-label-0-2">
-                              <div cdkscrollable="" class="mat-tab-body-content ng-tns-c129-19 ng-trigger ng-trigger-translateTab" style="transform: translate3d(100%, 0px, 0px); min-height: 1px; visibility: hidden;">
                                  <!---->
                               </div>
                            </mat-tab-body>
@@ -210,17 +310,17 @@
             </div>
             <!----><!----><!---->
             <div class="sticky-add-button mobile-only">
-               <fe-product-price class="product-price ng-star-inserted" _nghost-tus-c271="">
-                  <div _ngcontent-tus-c271="">
-                     <div _ngcontent-tus-c271="" id="price-old" class="price-old ng-star-inserted"><span _ngcontent-tus-c271="" id="old-amount" class="amount">99,95 <span _ngcontent-tus-c271="" class="currency">TL</span></span></div>
+               <fe-product-price class="product-price ng-star-inserted" _nghost-nyw-c271="">
+                  <div _ngcontent-nyw-c271="">
+                     <div _ngcontent-nyw-c271="" id="price-old" class="price-old ng-star-inserted"><span _ngcontent-nyw-c271="" id="old-amount" class="amount">699,00 <span _ngcontent-nyw-c271="" class="currency">TL</span></span></div>
                      <!---->
-                     <div _ngcontent-tus-c271="" id="price-new" class="price-new subtitle-1"><span _ngcontent-tus-c271="" id="new-amount" class="amount"> 84,95 <span _ngcontent-tus-c271="" class="currency">TL</span></span></div>
+                     <div _ngcontent-nyw-c271="" id="price-new" class="price-new subtitle-1"><span _ngcontent-nyw-c271="" id="new-amount" class="amount"> 559,20 <span _ngcontent-nyw-c271="" class="currency">TL</span></span></div>
                   </div>
                   <!---->
                </fe-product-price>
                <!---->
-               <sm-product-actions _nghost-tus-c292="" class="ng-star-inserted">
-                  <!----><!----><button _ngcontent-tus-c292="" mat-flat-button="" color="primary" class="product-detail-add mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base ng-star-inserted"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Sepete Ekle
+               <sm-product-actions _nghost-nyw-c292="" class="ng-star-inserted">
+                  <!----><!----><button _ngcontent-nyw-c292="" mat-flat-button="" color="primary" class="product-detail-add mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base ng-star-inserted"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Sepete Ekle
                   </span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button><!---->
                </sm-product-actions>
                <!---->
