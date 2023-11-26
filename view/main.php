@@ -7,6 +7,12 @@
             <div _ngcontent-cro-c416="" class="home-page-wrapper mdc-layout-grid__inner">
                 <?php
                 if ($detect->isMobile()) {?>
+                <div _ngcontent-cro-c416="">
+                    <sm-swiper-banner _ngcontent-cro-c416="" id="sm-home-main-top-banner" class="banners ng-star-inserted">
+                        <!---->
+                    </sm-swiper-banner>
+                    <!---->
+                </div>
                 <?php include "slider_gen.php"; ?>
                 <!---->
              
