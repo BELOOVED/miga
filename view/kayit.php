@@ -61,7 +61,7 @@
                                        </div>
                                        <!----><!----><!---->
                                        <div class="mat-mdc-form-field-infix ng-tns-c186-15">
-                                       <input type="tel" matinput="" name="telefon" autocomplete="tel" required="" feonlynumbers="" femdcmaskedinput="" formcontrolname="phoneNumber" class="mat-mdc-input-element ng-tns-c186-15 ng-untouched ng-pristine ng-invalid mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored" id="mat-input-3" aria-invalid="false" aria-required="true" oninput="addPrefix()" required>
+                                       <input type="tel" matinput="" value="+90" name="telefon" autocomplete="tel" required="" feonlynumbers="" femdcmaskedinput="" formcontrolname="phoneNumber" class="mat-mdc-input-element ng-tns-c186-15 ng-untouched ng-pristine ng-invalid mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored" id="mat-input-3" aria-invalid="false" aria-required="true" oninput="addPrefix()" required>
                                        </div>
                                        <!----><!---->
                                     </div>
@@ -213,60 +213,13 @@
    }
 </script>
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-    var inputElement = document.getElementById("mat-input-3");
-    var phoneNumberPattern = '0(5__) ___-____';
-
-    // Sayfa yüklendiğinde hazır bekleyen başlangıç değeri
-    inputElement.value = phoneNumberPattern;
-
-    // Input alanına odaklandığında, içeriği temizle
-    inputElement.addEventListener('focus', function () {
-        if (inputElement.value === phoneNumberPattern) {
-            inputElement.value = '0';
-        }
-    });
-
-    function formatPhoneNumber() {
-        var inputValue = inputElement.value.replace(/\D/g, ''); // Sadece sayıları al
-
-        // Eğer değer yoksa, varsayılan formatı ekleyebiliriz
-        if (inputValue.length === 0) {
-            inputElement.value = phoneNumberPattern;
-            return;
-        }
-
-        // Özel formatı uygula: 0(5__) ___-____
-        var formattedValue = '';
-
-        // 5 karakterini ekleyebiliriz
-        if (inputValue.length > 0) {
-            formattedValue += '0(' + inputValue.substring(0, 1);
-        }
-
-        // 3 karakterini ekleyebiliriz
-        if (inputValue.length > 1) {
-            formattedValue += inputValue.substring(1, 4) + ')';
-        }
-
-        // 3 karakterini ekleyebiliriz
-        if (inputValue.length > 4) {
-            formattedValue += ' ' + inputValue.substring(4, 7);
-        }
-
-        // Geriye kalan karakterleri ekleyebiliriz
-        if (inputValue.length > 7) {
-            formattedValue += '-' + inputValue.substring(7, 11);
-        }
-
-        // Input elementinin değerini güncelle
-        inputElement.value = formattedValue;
-    }
-
-    // Input alanındaki herhangi bir değişiklik için olay dinleyicisi ekle
-    inputElement.addEventListener('input', formatPhoneNumber);
-});
-
-
-
+function addPrefix() {
+   var inputElement = document.getElementById("mat-input-3");
+   if (!inputElement.value.startsWith("+90")) {
+      inputElement.value = "+90";
+   }
+   if (inputElement.value.length > 13) {
+   inputElement.value = inputElement.value.slice(0, 13);
+   }
+}
 </script>
