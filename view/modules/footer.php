@@ -297,7 +297,12 @@
             </div>
          </div>
          <div class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing hidden" id="hiddenafg"></div>
-            <div class="cdk-overlay-connected-position-bounding-box hidden" id="" dir="ltr" style="">
+            <div class="cdk-overlay-connected-position-bounding-box hidden" id="" dir="ltr" style="top: 80px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;">
                <div id="cdk-overlay-6" class="cdk-overlay-pane dialog-shadow" style="position: relative;
     display: flex;
     align-items: center;
@@ -329,14 +334,6 @@
                            ?>
                         </div>
                         <style>
-                           #cdk-overlay-connected-position-bounding-box {
-                              top: 80px;
-    left: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
 
 @media screen and (min-width: 600px) {
    #cdk-overlay-connected-position-bounding-box {
@@ -347,15 +344,11 @@
     justify-content: center;
     width: 100%;
   }
-}
-@media screen and (min-width: 600px) {
   #cdk-overlay-6 {
    
-    width: 370px;
+   width: 370px;
   }
 }
-
-
                         </style>
                   </div>
                   <div role="listbox" id="dd2" tabindex="-1"
