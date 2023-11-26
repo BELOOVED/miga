@@ -177,17 +177,17 @@
 </main>
 <script>
    document.getElementById('myform').addEventListener('input', function () {
-      var formElements = this.elements;
-      var submitButton = document.getElementById('submitButton');
+    var formElements = this.elements;
+    var submitButton = document.getElementById('submitButton');
 
-      for (var i = 0; i < formElements.length; i++) {
-            if (formElements[i].type !== 'submit' && formElements[i].value.trim() === '') {
-               submitButton.disabled = true;
-               return;
-            }
-      }
-      submitButton.disabled = false;
-   });
+    for (var i = 0; i < formElements.length; i++) {
+        if (formElements[i].type !== 'submit' && formElements[i].value.trim() === '') {
+            submitButton.disabled = true;
+            return;
+        }
+    }
+    submitButton.disabled = false;
+});
 </script>
 
 <script>
