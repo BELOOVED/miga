@@ -719,7 +719,15 @@ function hideCart() {
   var cart = document.getElementById("cart");
   cart.classList.add("hidden");
 }
+function showCategory() {
+  var cart = document.getElementById("categoryai");
+  cart.classList.remove("hidden");
+}
 
+function hideCategory() {
+  var cart = document.getElementById("categoryai");
+  cart.classList.add("hidden");
+}
     $(document).ready(function () {
         $(document).on('click', '.city-option', function () {
             var selectedCity = $(this).find('.mdc-list-item__primary-text').attr('id');
