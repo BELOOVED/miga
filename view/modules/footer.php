@@ -297,10 +297,25 @@
             </div>
          </div>
          <style>
-
+#yetoa{
+   top: 150px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+#cdk-overlay-6{
+   position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 530px;
+}
 @media screen and (min-width: 600px) {
    #yetoa {
-   top: -70px;
+    top: -70px;
     left: 0px;
     display: flex;
     align-items: center;
@@ -308,24 +323,18 @@
     width: 100%;
   }
   #cdk-overlay-6 {
-   
-   width: 370px;
-  }
-}
-                        </style>
-         <div class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing hidden" id="hiddenafg"></div>
-            <div class="cdk-overlay-connected-position-bounding-box hidden" id="yetoa" dir="ltr" style="top: 150px;
-    left: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;">
-               <div id="cdk-overlay-6" class="cdk-overlay-pane dialog-shadow" style="position: relative;
+   position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    width: 530px;" >
+    width: 370px;
+  }
+}
+                        </style>
+         <div class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing hidden" id="hiddenafg"></div>
+            <div class="cdk-overlay-connected-position-bounding-box hidden" id="yetoa" dir="ltr" style="">
+               <div id="cdk-overlay-6" class="cdk-overlay-pane dialog-shadow" style="" >
                   <div role="listbox" id="dd1" tabindex="-1"
                         class="ng-trigger ng-trigger-transformPanel ng-tns-c190-28 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel hidden"
                         aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-24">
