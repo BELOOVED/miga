@@ -758,7 +758,17 @@
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 <script>
-   $(document).ready(function(){
+  $(document).ready(function(){
+    var $paginationBullets = $('.swiper-pagination-bullet');
+
+    $('.slick-slider').on('afterChange', function(event, slick, currentSlide){
+      // Remove active class from all bullets
+      $paginationBullets.removeClass('swiper-pagination-bullet-active');
+
+      // Add active class to the bullet corresponding to the current slide
+      $paginationBullets.eq(currentSlide).addClass('swiper-pagination-bullet-active');
+    });
+
     $('.slick-slider').slick({
         infinite: true, // sonsuz döngü
         slidesToShow: 1,
@@ -768,7 +778,10 @@
         prevArrow: $('.swiper-button-prev'), // önceki buton
         nextArrow: $('.swiper-button-next'), // sonraki buton
     });
-});
+
+    // Initial setup - add active class to the first bullet
+    $paginationBullets.eq(0).addClass('swiper-pagination-bullet-active');
+  });
 </script>
    </body>
 </html>
