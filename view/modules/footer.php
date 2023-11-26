@@ -755,17 +755,20 @@
     
 
 </script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 <script>
-  $(document).ready(function(){
-    $('.swiper-container').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 2000, // Milliseconds
-      prevArrow: '<button type="button" class="slick-prev" aria-label="Previous"></button>',
-      nextArrow: '<button type="button" class="slick-next" aria-label="Next"></button>'
+   $(document).ready(function(){
+    $('.slick-slider').slick({
+        infinite: true, // sonsuz döngü
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true, // otomatik döngü başlatma
+        autoplaySpeed: 5000, // 2 saniye aralıkla döngü
+        prevArrow: $('.swiper-button-prev'), // önceki buton
+        nextArrow: $('.swiper-button-next'), // sonraki buton
     });
-  });
+});
 </script>
    </body>
 </html>
