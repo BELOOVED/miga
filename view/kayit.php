@@ -214,14 +214,32 @@
 
    function formatPhoneNumber() {
       var inputElement = document.getElementById("mat-input-3");
-      var inputValue = inputElement.value.replace(/\D/g, '').slice(0, 10);
+      var inputValue = inputElement.value.replace(/\D/g, ''); // Sadece sayıları al
 
+      // Özel formatı uygula: 0(5__) ___-____
       var formattedValue = '';
-      if (inputValue.length > 0) formattedValue += '0(' + inputValue.substring(0, 1);
-      if (inputValue.length > 1) formattedValue += inputValue.substring(1, 4) + ') ';
-      if (inputValue.length > 4) formattedValue += inputValue.substring(4, 7) + '-';
-      if (inputValue.length > 7) formattedValue += inputValue.substring(7);
 
+      // Eğer değer varsa, 0 karakterini ekle
+      if (inputValue.length > 0) {
+         formattedValue += '0';
+      }
+
+      // 5 karakterini ekleyebiliriz
+      if (inputValue.length > 4) {
+         formattedValue += '(' + inputValue.substring(1, 4) + ')';
+      }
+
+      // 3 karakterini ekleyebiliriz
+      if (inputValue.length > 7) {
+         formattedValue += ' ' + inputValue.substring(4, 7);
+      }
+
+      // Geriye kalan karakterleri ekleyebiliriz
+      if (inputValue.length > 10) {
+         formattedValue += '-' + inputValue.substring(7, 11);
+      }
+
+      // Input elementinin değerini güncelle
       inputElement.value = formattedValue;
    }
    document.getElementById("mat-input-3").addEventListener('input', formatPhoneNumber);
