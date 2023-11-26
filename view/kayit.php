@@ -213,7 +213,7 @@
    }
 </script>
 <script>
-   document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
     var inputElement = document.getElementById("mat-input-3");
 
     // Sayfa yüklendiğinde hazır bekleyen başlangıç değeri
@@ -262,15 +262,9 @@
         inputElement.value = formattedValue;
     }
 
-    // Input alanından odak çıkıldığında, başlangıç değeri kontrol edilir
-    inputElement.addEventListener('blur', function () {
-        if (inputElement.value === '0') {
-            inputElement.value = '0(5__) ___-____';
-        }
-    });
-
     // Input alanındaki herhangi bir değişiklik için olay dinleyicisi ekle
     inputElement.addEventListener('input', formatPhoneNumber);
 });
+
 
 </script>
