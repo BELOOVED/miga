@@ -1,7 +1,7 @@
 
 <?php
 include_once 'inc/pdo.php';
-$kategori_id = isset($_GET['kategori_id']) ? $_GET['kategori_id'] : null;
+$kategori_id = isset($_GET['id']) ? $_GET['id'] : null;
 try {
     $sql = "SELECT * FROM kategoriler";
     if ($kategori_id !== null) {
@@ -103,7 +103,7 @@ try {
                      <sm-product-filters-desktop>
                         <div class="filter">
                            <div class="filter__header">
-                              <h2>Telefon ve Aksesuarları</h2>
+                              <h2> <?=$kategoriler['kategori_adi']?></h2>
                               <div class="mat-caption-normal text-color-grey">264 ürün</div>
                            </div>
                            <mat-divider role="separator" class="mat-divider mat-divider-horizontal" aria-orientation="horizontal"></mat-divider>
