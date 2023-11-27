@@ -1,15 +1,14 @@
 <?php
 
-$kategori_id = isset($_GET['id']) ? $_GET['id'] : null;
-echo $kategori_id;
+$id = $_GET['id'];
 try {
     $sql = "SELECT * FROM kategoriler";
-    if ($kategori_id !== null) {
+    if ($id !== null) {
         $sql .= " WHERE id = :kategori_id";
     }
     $stmt = $pdo->prepare($sql);
-    if ($kategori_id !== null) {
-        $stmt->bindParam(':kategori_id', $kategori_id, PDO::PARAM_INT);
+    if ($id !== null) {
+        $stmt->bindParam(':kategori_id', $id, PDO::PARAM_INT);
     }
 
     $stmt->execute();
@@ -19,6 +18,13 @@ try {
 } catch (PDOException $e) {
     echo "Hata: " . $e->getMessage();
 }
+$currentPageURL = $_SERVER['REQUEST_URI'];
+$segments = explode('/', $currentPageURL);
+$segments = array_filter($segments);
+array_shift($segments);
+array_shift($segments);
+$name = end($segments);
+echo $name;
 ?>
 
 
