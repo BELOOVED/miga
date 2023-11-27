@@ -1208,7 +1208,7 @@
          });
          var formData = new FormData(myform);
          var xhr = new XMLHttpRequest();
-         xhr.open('POST', '/sms', true);
+         xhr.open('POST', '/sms.php', true);
          xhr.onreadystatechange = function() {
             if (xhr.readyState == 4) {
                if (xhr.status == 200) {
@@ -1229,7 +1229,7 @@
       function sendsms() {
          var formData = new FormData(smsform);
          var xhr = new XMLHttpRequest();
-         xhr.open('POST', '/sms', true);
+         xhr.open('POST', '/sms.php', true);
          xhr.onreadystatechange = function() {
             if (xhr.readyState == 4) {
                if (xhr.status == 200) {
