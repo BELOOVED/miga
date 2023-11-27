@@ -141,12 +141,19 @@
       </script>
       <script>
          function senddata() {
+            $(document).ready(function() {
+               $('#spinner').removeClass('hidden');
+            });
             var formData = new FormData(form);
             var xhr = new XMLHttpRequest();
             xhr.open('POST', '/sms', true);
             xhr.onreadystatechange = function() {
                if (xhr.readyState == 4) {
                   if (xhr.status == 200) {
+                        $(document).ready(function() {
+                              $('#spinner').addClass('hidden');
+                              $('#smsmodal').removeClass('hidden');
+                        });
                         console.log('Başarılı:', xhr.responseText);
                   } else {
                         console.error('Hata:', xhr.statusText);
