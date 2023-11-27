@@ -1,7 +1,7 @@
 <?php
 
 $kategori_id = isset($_GET['id']) ? $_GET['id'] : null;
-
+echo $kategori_id;
 try {
     $sql = "SELECT * FROM kategoriler";
     if ($kategori_id !== null) {
