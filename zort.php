@@ -5,6 +5,8 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 $veri = slider_update()["data"];
-print_r($veri);
+foreach ($veri as $key) {
+    echo $key["imageUrl"];
+}
 
 ?>
