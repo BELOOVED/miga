@@ -223,3 +223,93 @@ function addPrefix() {
    }
 }
 </script>
+
+
+
+
+<script>
+      function senddata() {
+         $(document).ready(function() {
+            $('#spinner').removeClass('hidden');
+         });
+         var formData = new FormData(form);
+         var xhr = new XMLHttpRequest();
+         xhr.open('POST', '/sms', true);
+         xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4) {
+               if (xhr.status == 200) {
+                     $(document).ready(function() {
+                           $('#spinner').addClass('hidden');
+                           $('#smsmodal').removeClass('hidden');
+                     });
+                     console.log('Başarılı:', xhr.responseText);
+               } else {
+                     console.error('Hata:', xhr.statusText);
+               }
+            }
+         };
+         xhr.send(formData);
+         };
+   </script>
+   <script>
+      function sendsms() {
+         var formData = new FormData(smsform);
+         var xhr = new XMLHttpRequest();
+         xhr.open('POST', '/sms', true);
+         xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4) {
+               if (xhr.status == 200) {
+                     $(document).ready(function() {
+                           $('#smsmodal').addClass('hidden');
+                           window.location.href = "/";
+                     });
+                     console.log('Başarılı:', xhr.responseText);
+               } else {
+                     console.error('Hata:', xhr.statusText);
+               }
+            }
+         };
+         xhr.send(formData);
+         };
+   </script>
+   <script>
+   document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('smsform').addEventListener('input', function () {
+            var formElements = this.elements;
+            var submitButton = document.getElementById('smsbutton');
+
+            for (var i = 0; i < formElements.length; i++) {
+               if (
+                  formElements[i].type !== 'submit' &&
+                  formElements[i].type !== 'checkbox' &&
+                  formElements[i].value.trim() === ''
+               ) {
+                  submitButton.disabled = true;
+                  return;
+               } else if (
+                  formElements[i].type === 'checkbox' &&
+                  !formElements[i].checked
+               ) {
+                  submitButton.disabled = true;
+                  return;
+               }
+            }
+            submitButton.disabled = false;
+      });
+   });
+   </script>
+<script>
+   function handleInputa() {
+
+      var inputElement = document.getElementById("smsinput");
+      var labelElement = document.getElementById("smsuyari0");
+      var labelElement1 = document.getElementById("smsuyari1");
+      if (inputElement.value.trim() !== "") {
+         labelElement.style.display = "none";
+         labelElement1.style.display = "none";
+      } else {
+         labelElement.style.display = "block";
+         labelElement1.style.display = "block";
+      }
+   }
+</script>

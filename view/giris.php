@@ -211,7 +211,7 @@
       });
     </script>
    <script>
-      function handleInput() {
+      function handleInputa() {
 
          var inputElement = document.getElementById("smsinput");
          var labelElement = document.getElementById("smsuyari0");
