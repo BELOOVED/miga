@@ -124,8 +124,7 @@
    </sm-membership-shell-page>
    </main>
   <?php }else{?>
-   <main _ngcontent-cro-c368="" class="elektronik">
-   <router-outlet _ngcontent-cro-c368=""></router-outlet>
+   <main _ngcontent-tqa-c368="" class="elektronik"><router-outlet _ngcontent-tqa-c368=""></router-outlet>
    <sm-membership-shell-page class="ng-star-inserted">
    <div class="page">
       <fe-mobile-breadcrumb pagename="Hesabım" linkname="uyelik" class="account-mainpage" _nghost-mdr-c391="">
@@ -329,5 +328,5 @@
       <!---->
    </div>
    </sm-membership-shell-page>
-   </main>
+    </main>
    <?php }?>
