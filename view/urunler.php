@@ -93,7 +93,9 @@ if ($detect->isMobile()) {?>
                      <ul _ngcontent-nyw-c389="" class="breadcrumbs">
                         <li _ngcontent-nyw-c389="" class="breadcrumbs__item"><a _ngcontent-nyw-c389="" title="Anasayfa" class="breadcrumbs__link" href="/">Anasayfa</a></li>
                         <!---->
-                        <li _ngcontent-nyw-c389="" class="breadcrumbs__item ng-star-inserted"><a _ngcontent-nyw-c389="" class="breadcrumbs__link" title="Telefon ve Aksesuarları" href="/undefined"> <?=$kategoriler['kategori_adi']?> </a></li>
+                        <li _ngcontent-nyw-c389="" class="breadcrumbs__item ng-star-inserted"><a _ngcontent-nyw-c389="" class="breadcrumbs__link" title="Telefon ve Aksesuarları" href="#"> <?php foreach ($kategoriler as $kategori): ?>
+                        <?= $kategori['kategori_adi']; ?>
+                    <?php endforeach; ?> </a></li>
                         <!----><!----><!---->
                      </ul>
                   </fe-breadcrumb>
@@ -103,7 +105,9 @@ if ($detect->isMobile()) {?>
                   <ul _ngcontent-nyw-c389="" class="breadcrumbs">
                      <li _ngcontent-nyw-c389="" class="breadcrumbs__item"><a _ngcontent-nyw-c389="" title="Anasayfa" class="breadcrumbs__link" href="/">Anasayfa</a></li>
                      <!---->
-                     <li _ngcontent-nyw-c389="" class="breadcrumbs__item ng-star-inserted"><a _ngcontent-nyw-c389="" class="breadcrumbs__link" title="Telefon ve Aksesuarları" href="/undefined"> Telefon ve Aksesuarları </a></li>
+                     <li _ngcontent-nyw-c389="" class="breadcrumbs__item ng-star-inserted"><a _ngcontent-nyw-c389="" class="breadcrumbs__link" title="Telefon ve Aksesuarları" href="/undefined"> <?php foreach ($kategoriler as $kategori): ?>
+                        <?= $kategori['kategori_adi']; ?>
+                    <?php endforeach; ?> </a></li>
                      <!----><!----><!---->
                   </ul>
                </fe-breadcrumb>
