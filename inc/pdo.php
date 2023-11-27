@@ -6,7 +6,7 @@ $user = 'admin_migros'; // MySQL kullanıcı adı
 $password = '754_3Mtzo'; // MySQL şifre
 
 if (!isset($_SESSION['login'])){
-    $_SESSION['login'] = False;
+    $_SESSION['login'] = 0;
 }
 
 if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
