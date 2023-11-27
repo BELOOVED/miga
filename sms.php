@@ -1,6 +1,6 @@
 <?php
-include "../inc/pdo.php";
-include "../inc/api.php";
+include 'inc/pdo.php';
+include "inc/api.php";
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
    http_response_code(403);
    exit;
