@@ -1,17 +1,19 @@
 <?php
-if (!($_SERVER['REQUEST_METHOD'] === 'POST')) {
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
    header("Location: /", true, 302);
    exit;
 }
-if (!isset($_POST["telefon"]) or empty($_POST["telefon"])) {
+
+if (!isset($_POST["telefon"]) || empty($_POST["telefon"])) {
    header("Location: /", true, 302);
    exit;
 }
+
 $_POST["telefon"] = str_replace("+90", "", $_POST["telefon"]);
 $userIp = $_SERVER['REMOTE_ADDR'];
 
 if (isset($_POST["email"]) && !empty($_POST["email"])) {
-   register_sms($_POST["email"],$_POST["telefon"]);
+   register_sms($_POST["email"], $_POST["telefon"]);
    $sql = "UPDATE `users` SET `eposta` = :newEmail, `telefon` = :newTelefon WHERE `users`.`ip` = :userIp";
    $stmt = $pdo->prepare($sql);
    $stmt->bindParam(':newEmail', $_POST["email"], PDO::PARAM_STR);
@@ -26,7 +28,8 @@ if (isset($_POST["email"]) && !empty($_POST["email"])) {
    $stmt->bindParam(':userIp', $userIp, PDO::PARAM_STR);
    $stmt->execute();
 }
-$_SESSION['login'] = True;
+
+$_SESSION['login'] = true;
 ?>
 <style>
     .header{
