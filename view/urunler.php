@@ -1,5 +1,28 @@
 
 <?php
+include_once 'inc/pdo.php';
+$kategori_id = isset($_GET['kategori_id']) ? $_GET['kategori_id'] : null;
+try {
+    $sql = "SELECT * FROM kategoriler";
+    if ($kategori_id !== null) {
+        $sql .= " WHERE id = :kategori_id";
+    }
+    $stmt = $pdo->prepare($sql);
+    if ($kategori_id !== null) {
+        $stmt->bindParam(':kategori_id', $kategori_id, PDO::PARAM_INT);
+    }
+
+    $stmt->execute();
+    $kategoriler = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    
+
+} catch (PDOException $e) {
+    echo "Hata: " . $e->getMessage();
+}
+?>
+
+<?php
                 if ($detect->isMobile()) {?>
 <style>
     .header{
@@ -23,7 +46,9 @@
                      </fa-icon>
                   </a>
                   <div _ngcontent-nyw-c391="" class="content">
-                     <h3 _ngcontent-nyw-c391="">Telefon ve Aksesuarları</h3>
+                     <h3 _ngcontent-nyw-c391="">
+                        <?=$kategoriler['kategori_adi']?>
+                     </h3>
                      <div _ngcontent-nyw-c391="" class="mat-caption-normal text-color-white ng-star-inserted">264 sonuç bulundu</div>
                      <!---->
                   </div>
@@ -59,11 +84,11 @@
                      <ul _ngcontent-nyw-c389="" class="breadcrumbs">
                         <li _ngcontent-nyw-c389="" class="breadcrumbs__item"><a _ngcontent-nyw-c389="" title="Anasayfa" class="breadcrumbs__link" href="/">Anasayfa</a></li>
                         <!---->
-                        <li _ngcontent-nyw-c389="" class="breadcrumbs__item ng-star-inserted"><a _ngcontent-nyw-c389="" class="breadcrumbs__link" title="Telefon ve Aksesuarları" href="/undefined"> Telefon ve Aksesuarları </a></li>
+                        <li _ngcontent-nyw-c389="" class="breadcrumbs__item ng-star-inserted"><a _ngcontent-nyw-c389="" class="breadcrumbs__link" title="Telefon ve Aksesuarları" href="/undefined"> <?=$kategoriler['kategori_adi']?> </a></li>
                         <!----><!----><!---->
                      </ul>
                   </fe-breadcrumb>
-                  <a class="mobile-sub-category mat-caption text-color-black ng-star-inserted" ngx-ql="" href="/telefon-c-2add?sayfa=1"> Telefon <span class="overline text-color-grey">(71)</span></a><a class="mobile-sub-category mat-caption text-color-black ng-star-inserted" ngx-ql="" href="/yenilenmis-cep-telefonu-c-11f63?sayfa=1"> Yenilenmiş Cep Telefonu <span class="overline text-color-grey">(10)</span></a><a class="mobile-sub-category mat-caption text-color-black ng-star-inserted" ngx-ql="" href="/telefon-aksesuarlari-c-2ade?sayfa=1"> Telefon Aksesuarları <span class="overline text-color-grey">(150)</span></a><a class="mobile-sub-category mat-caption text-color-black ng-star-inserted" ngx-ql="" href="/giyilebilir-aksesuar-c-2ad9?sayfa=1"> Giyilebilir Aksesuar <span class="overline text-color-grey">(33)</span></a><!---->
+                  <a class="mobile-sub-category mat-caption text-color-black ng-star-inserted" ngx-ql="" href="/telefon-c-2add?sayfa=1"> Telefon <span class="overline text-color-grey">(71)</span></a>
                </div>
                <fe-breadcrumb class="breadcrumb desktop-only" _nghost-nyw-c389="">
                   <ul _ngcontent-nyw-c389="" class="breadcrumbs">
@@ -85,19 +110,22 @@
                            <div class="filter__subcategories ng-star-inserted">
                               <div class="subtitle-1">Alt Kategoriler</div>
                               <div class="items">
+                                <?php 
+                                
+                                foreach ($kategoriler as $kategori) {
+                                    $alt_kategoriler = explode(',', $kategori['altkategoriler']);
+                                    foreach ($alt_kategoriler as $alt_kategori) {
+                                        $alt_kategori = trim($alt_kategori); 
+                                        ?>
+                                        <div class="item extra-margin ng-star-inserted">
+                                            <a class="text-color-black mat-body-2 ng-star-inserted" ngx-ql="" href="/urunler/<?=seo($alt_kategori)?>/<?=$kategori['id']?>"> <?=$alt_kategori?> <span class="text-color-grey">(71)</span></a>
+                                        </div>
+                                        <?php }?>
+
                                  <div class="item extra-margin ng-star-inserted">
                                     <a class="text-color-black mat-body-2 ng-star-inserted" ngx-ql="" href="/telefon-c-2add?sayfa=1"> Telefon <span class="text-color-grey">(71)</span></a><!----><!---->
                                  </div>
-                                 <div class="item extra-margin ng-star-inserted">
-                                    <a class="text-color-black mat-body-2 ng-star-inserted" ngx-ql="" href="/yenilenmis-cep-telefonu-c-11f63?sayfa=1"> Yenilenmiş Cep Telefonu <span class="text-color-grey">(10)</span></a><!----><!---->
-                                 </div>
-                                 <div class="item extra-margin ng-star-inserted">
-                                    <a class="text-color-black mat-body-2 ng-star-inserted" ngx-ql="" href="/telefon-aksesuarlari-c-2ade?sayfa=1"> Telefon Aksesuarları <span class="text-color-grey">(150)</span></a><!----><!---->
-                                 </div>
-                                 <div class="item extra-margin ng-star-inserted">
-                                    <a class="text-color-black mat-body-2 ng-star-inserted" ngx-ql="" href="/giyilebilir-aksesuar-c-2ad9?sayfa=1"> Giyilebilir Aksesuar <span class="text-color-grey">(33)</span></a><!----><!---->
-                                 </div>
-                                 <!---->
+                                <?php  }?>
                               </div>
                            </div>
                            <!---->
