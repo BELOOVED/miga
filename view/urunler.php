@@ -766,10 +766,10 @@
                                     <div>
                                         <fe-product-image id="product-image" class="image" _nghost-nyw-c159="">
                                             <a _ngcontent-nyw-c159="" id="product-image-link" href="<?=seo($urun['urun_adi'])?>/<?=seo($urun['id'])?>">
-                                            <img _ngcontent-nyw-c159="" felazyload="" alt="<?=$urun['urun_adi']?>" src="<?=$urun['urun_resim']?>" class="ng-star-inserted"><!----><!----><!---->
+                                            <img _ngcontent-nyw-c159="" felazyload="" alt="/urun/<?=$urun['urun_adi']?>" src="<?=$urun['urun_resim']?>" class="ng-star-inserted"><!----><!----><!---->
                                             </a>
                                         </fe-product-image>
-                                        <a id="product-name" class="mat-caption text-color-black product-name" ngx-ql="" href="<?=seo($urun['urun_adi'])?>/<?=seo($urun['id'])?>"> <?=$urun['urun_adi']?> </a>
+                                        <a id="product-name" class="mat-caption text-color-black product-name" ngx-ql="" href="/urun/<?=seo($urun['urun_adi'])?>/<?=seo($urun['id'])?>"> <?=$urun['urun_adi']?> </a>
                                     </div>
                                     <div class="bottom-row">
                                         <fe-crm-discount-badge _nghost-nyw-c293="">
@@ -779,7 +779,7 @@
                                     if($urun['urun_indirim_status'] == 0){?>
                                         <fe-product-price id="price" class="price" _nghost-nyw-c271="">
                                             <div _ngcontent-nyw-c271="" class="promotion-wrapper">
-                                            <div _ngcontent-nyw-c271="" id="price-old" class="price-old ng-star-inserted"><span _ngcontent-nyw-c271="" id="old-amount" class="amount"><?=$urun['urun_fiyat']?>,00 <span _ngcontent-nyw-c271="" class="currency">TL</span></span></div>
+                                            <div _ngcontent-nyw-c271="" id="price-old" class="price-old ng-star-inserted"><span _ngcontent-nyw-c271="" id="old-amount" class="amount"><?=$urun['urun_fiyat']?> <span _ngcontent-nyw-c271="" class="currency">TL</span></span></div>
                                             <!---->
                                             <div _ngcontent-nyw-c271="" id="price-new" class="price-new subtitle-1"><span _ngcontent-nyw-c271="" id="new-amount" class="amount"> 
                                             <?php
@@ -788,7 +788,7 @@
                                              $indirimli_fiyat = $orijinal_fiyat - ($orijinal_fiyat * ($indirim_orani / 100));
                                              echo $indirimli_fiyat;
                                             ?>    
-                                            ,20 <span _ngcontent-nyw-c271="" class="currency">TL</span></span></div>
+                                             <span _ngcontent-nyw-c271="" class="currency">TL</span></span></div>
                                             </div>
                                             <!---->
                                         </fe-product-price>
@@ -796,7 +796,7 @@
                                  <fe-product-price id="price" class="price" _nghost-nyw-c271="">
                                     <div _ngcontent-nyw-c271="">
                                        <!---->
-                                       <div _ngcontent-nyw-c271="" id="price-new" class="price-new subtitle-1 price-new-only"><span _ngcontent-nyw-c271="" id="new-amount" class="amount"> <?=$urun['urun_fiyat']?>,90 <span _ngcontent-nyw-c271="" class="currency">TL</span></span></div>
+                                       <div _ngcontent-nyw-c271="" id="price-new" class="price-new subtitle-1 price-new-only"><span _ngcontent-nyw-c271="" id="new-amount" class="amount"> <?=$urun['urun_fiyat']?> <span _ngcontent-nyw-c271="" class="currency">TL</span></span></div>
                                     </div>
                                     <!---->
                                  </fe-product-price>
