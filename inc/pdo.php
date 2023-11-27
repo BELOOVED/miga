@@ -25,7 +25,7 @@ try {
 } catch (PDOException $e) {
     die("Bağlantı hatası: " . $e->getMessage());
 }
-?>
-
 $detect = new Mobile_Detect;
 $mobile = $detect->isMobile();
+?>
+
