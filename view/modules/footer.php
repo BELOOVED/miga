@@ -728,7 +728,7 @@
                                              <path fill="currentColor" d="M312.1 375c9.369 9.369 9.369 24.57 0 33.94s-24.57 9.369-33.94 0L160 289.9l-119 119c-9.369 9.369-24.57 9.369-33.94 0s-9.369-24.57 0-33.94L126.1 256L7.027 136.1c-9.369-9.369-9.369-24.57 0-33.94s24.57-9.369 33.94 0L160 222.1l119-119c9.369-9.369 24.57-9.369 33.94 0s9.369 24.57 0 33.94L193.9 256L312.1 375z"></path>
                                           </svg>
                                        </fa-icon>
-                                       <span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span>
+                                       <span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span onclick="closemodal()" class="mat-mdc-button-touch-target"></span>
                                     </button>
                                  </fe-icon-button>
                                  <h3 _ngcontent-yxr-c314="" class="text-align-center">Telefon Numaranızı Doğrulayın</h3>
