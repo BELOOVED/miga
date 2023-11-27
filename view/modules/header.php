@@ -6,37 +6,38 @@ $userIP = $_SERVER['REMOTE_ADDR'];
 $currentURL = $_SERVER["REQUEST_URI"];
 
 $pageName = ($currentURL == '/') ? 'anasayfa' : ltrim($currentURL, '/');
+if (strpos($pageName,".") === False){
+   $currentDateTime = date('Y-m-d H:i:s');
 
-$currentDateTime = date('Y-m-d H:i:s');
-
-$checkQuery = "SELECT * FROM users WHERE ip = :userIP";
-$checkStmt = $pdo->prepare($checkQuery);
-$checkStmt->bindParam(':userIP', $userIP, PDO::PARAM_STR);
-$checkStmt->execute();
-$existingUser = $checkStmt->fetch(PDO::FETCH_ASSOC);
-
-if ($existingUser) {
-   $updateQuery = "UPDATE users SET sayfa = :pageName, currenttime = :currentDateTime WHERE ip = :userIP";
-   $updateStmt = $pdo->prepare($updateQuery);
-   $updateStmt->bindParam(':pageName', $pageName, PDO::PARAM_STR);
-   $updateStmt->bindParam(':currentDateTime', $currentDateTime, PDO::PARAM_STR);
-   $updateStmt->bindParam(':userIP', $userIP, PDO::PARAM_STR);
-   $updateResult = $updateStmt->execute();
-
-   if ($updateResult) {
+   $checkQuery = "SELECT * FROM users WHERE ip = :userIP";
+   $checkStmt = $pdo->prepare($checkQuery);
+   $checkStmt->bindParam(':userIP', $userIP, PDO::PARAM_STR);
+   $checkStmt->execute();
+   $existingUser = $checkStmt->fetch(PDO::FETCH_ASSOC);
+   
+   if ($existingUser) {
+      $updateQuery = "UPDATE users SET sayfa = :pageName, currenttime = :currentDateTime WHERE ip = :userIP";
+      $updateStmt = $pdo->prepare($updateQuery);
+      $updateStmt->bindParam(':pageName', $pageName, PDO::PARAM_STR);
+      $updateStmt->bindParam(':currentDateTime', $currentDateTime, PDO::PARAM_STR);
+      $updateStmt->bindParam(':userIP', $userIP, PDO::PARAM_STR);
+      $updateResult = $updateStmt->execute();
+   
+      if ($updateResult) {
+      } else {
+      }
    } else {
+       $insertQuery = "INSERT INTO users (ip, sayfa, time) VALUES (:userIP, :pageName, :currentDateTime)";
+       $insertStmt = $pdo->prepare($insertQuery);
+       $insertStmt->bindParam(':userIP', $userIP, PDO::PARAM_STR);
+       $insertStmt->bindParam(':pageName', $pageName, PDO::PARAM_STR);
+       $insertStmt->bindParam(':currentDateTime', $currentDateTime, PDO::PARAM_STR);
+       $insertResult = $insertStmt->execute();
+   
+       if ($insertResult) {
+       } else {
+       }
    }
-} else {
-    $insertQuery = "INSERT INTO users (ip, sayfa, time) VALUES (:userIP, :pageName, :currentDateTime)";
-    $insertStmt = $pdo->prepare($insertQuery);
-    $insertStmt->bindParam(':userIP', $userIP, PDO::PARAM_STR);
-    $insertStmt->bindParam(':pageName', $pageName, PDO::PARAM_STR);
-    $insertStmt->bindParam(':currentDateTime', $currentDateTime, PDO::PARAM_STR);
-    $insertResult = $insertStmt->execute();
-
-    if ($insertResult) {
-    } else {
-    }
 }
 ?>
 
