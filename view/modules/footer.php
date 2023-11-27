@@ -1465,7 +1465,7 @@ function hideCategory() {
         $("#" + contentId).removeClass("hidden");
     }
     function openmodals(contentId) {
-        $(".mat-selection-list").addClass("hidden");
+        $(".flatqq").addClass("hidden");
         $("#filter" + contentId).removeClass("hidden");
     }
     function closemodal() {

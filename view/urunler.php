@@ -565,7 +565,7 @@ if ($detect->isMobile()) {?>
                            </mat-list-option>
                            <!---->
                         </mat-selection-list>
-                        <mat-selection-list role="listbox" id="filter1" color="primary" class="mat-selection-list mat-list-base ng-star-inserted hidden" aria-multiselectable="true" aria-disabled="false" tabindex="0">
+                        <mat-selection-list role="listbox" id="filter1" color="primary" class="mat-selection-list mat-list-base ng-star-inserted hidden flatqq" aria-multiselectable="true" aria-disabled="false" tabindex="0">
                     <?php 
                                 
                                 foreach ($kategoriler as $kategori) {
@@ -586,7 +586,7 @@ if ($detect->isMobile()) {?>
                                 <?php  }?>
                                  
                         </mat-selection-list>
-                        <mat-selection-list role="listbox" id="filter2" color="primary" class="mat-selection-list mat-list-base ng-star-inserted hidden" aria-multiselectable="true" aria-disabled="false" tabindex="0">
+                        <mat-selection-list role="listbox" id="filter2" color="primary" class="mat-selection-list mat-list-base ng-star-inserted hidden flatqq" aria-multiselectable="true" aria-disabled="false" tabindex="0">
                         <mat-list-option role="option" class="mat-list-item mat-list-option mat-focus-indicator mat-body-2 info-option mat-primary ng-star-inserted" aria-selected="false" aria-disabled="false" tabindex="-1">
                             <div class="mat-list-item-content mat-list-item-content-reverse">
                                 <div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div>
@@ -597,7 +597,7 @@ if ($detect->isMobile()) {?>
                         </mat-list-option>
                         <!---->
                         </mat-selection-list>
-                        <mat-selection-list role="listbox" id="filter3" color="primary" class="mat-selection-list mat-list-base ng-star-inserted hidden" aria-multiselectable="true" aria-disabled="false" tabindex="0">
+                        <mat-selection-list role="listbox" id="filter3" color="primary" class="mat-selection-list mat-list-base ng-star-inserted hidden flatqq" aria-multiselectable="true" aria-disabled="false" tabindex="0">
                         <?php 
                                 
                                 foreach ($kategoriler as $kategori) {
