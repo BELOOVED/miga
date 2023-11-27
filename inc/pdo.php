@@ -1,5 +1,10 @@
 <?php
+ob_start();
 session_start();
+// error_reporting(0);
+date_default_timezone_set('Europe/Istanbul');
+require_once 'mobile.class.php';
+
 $host = 'localhost'; // MySQL sunucu adresi
 $dbname = 'admin_migros'; // Veritabanı adı
 $user = 'admin_migros'; // MySQL kullanıcı adı
@@ -21,3 +26,6 @@ try {
     die("Bağlantı hatası: " . $e->getMessage());
 }
 ?>
+
+$detect = new Mobile_Detect;
+$mobile = $detect->isMobile();

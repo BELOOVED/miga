@@ -48,6 +48,4 @@ if (!(empty($_SESSION['admin_login']))){
   }
 }
 
-// Mobile device detection
-$detect = new Mobile_Detect;
-$mobile = $detect->isMobile();
+
