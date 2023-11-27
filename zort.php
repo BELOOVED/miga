@@ -7,7 +7,7 @@ error_reporting(E_ALL);
 $veri = slider_update();
 
 foreach ($variable as $veri["data"]) {
-    echo($variable["imageUrl"]);
+    echo($variable);
 }
 
 ?>
