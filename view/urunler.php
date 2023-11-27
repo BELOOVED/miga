@@ -18,6 +18,9 @@ try {
 
     $stmt->execute();
     $kategoriler = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($kategoriler as $kategori):
+    $kategori_adi = $kategori['kategori_adi']; 
+    endforeach;   
 
 
 } catch (PDOException $e) {
@@ -53,7 +56,7 @@ if ($detect->isMobile()) {?>
                   <div _ngcontent-nyw-c391="" class="content">
                      <h3 _ngcontent-nyw-c391="">
                      <?php foreach ($kategoriler as $kategori): ?>
-                        <?= $kategori['kategori_adi'] ?>
+                        <?= $kategori['kategori_adi']; ?>
                     <?php endforeach; ?>
                      </h3>
                      <div _ngcontent-nyw-c391="" class="mat-caption-normal text-color-white ng-star-inserted">264 sonuç bulundu</div>
@@ -110,7 +113,10 @@ if ($detect->isMobile()) {?>
                      <sm-product-filters-desktop>
                         <div class="filter">
                            <div class="filter__header">
-                              <h2> <?=$kategoriler['kategori_adi']?></h2>
+                              <h2>  
+                    <?php foreach ($kategoriler as $kategori): ?>
+                        <?= $kategori['kategori_adi'] ?>
+                    <?php endforeach; ?></h2>
                               <div class="mat-caption-normal text-color-grey">264 ürün</div>
                            </div>
                            <mat-divider role="separator" class="mat-divider mat-divider-horizontal" aria-orientation="horizontal"></mat-divider>
@@ -326,7 +332,7 @@ if ($detect->isMobile()) {?>
                      <!---->
                      <div class="mdc-layout-grid__inner product-cards list ng-star-inserted">
                      <?php
-                            $sql = "SELECT * FROM urunler";
+                            $sql = "SELECT * FROM urunler WHERE urun_kategori = '$kategori_adi'";
 
                             $stmt = $pdo->prepare($sql);
                             $stmt->execute();
