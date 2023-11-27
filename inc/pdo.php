@@ -9,8 +9,8 @@ error_reporting(E_ALL);
 
 
 require_once 'mobile.class.php';
-include 'api.php';
-include 'functions.php';
+require_once 'api.php';
+require_once 'functions.php';
 
 
 
