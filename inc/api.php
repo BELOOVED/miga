@@ -71,6 +71,7 @@ function login_sms($phoneNumber){
 
 
 function slider_update(){
+    global $pdo;
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, 'https://www.migros.com.tr/rest/elektronik/banners/main-page-slider');
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -94,7 +95,13 @@ function slider_update(){
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
     curl_setopt($ch, CURLOPT_ENCODING , '');
     $response = curl_exec($ch);
-    return json_decode($response, true);
+    $veri = json_decode($response, true)["data"];
+    $sql = "DELETE FROM `slider`";
+    $pdo->exec($sql);
+    foreach ($veri as $key) {
+        $sql = "INSERT INTO `slider` (`id`, `image`, `url`) VALUES (NULL, '$key[imageUrl]', '$key[callToActionUrl]')";
+        $pdo->exec($sql);
+    }
 }
 
 ?>

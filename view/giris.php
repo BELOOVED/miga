@@ -74,7 +74,7 @@
                                        </div>
                                     </mat-form-field>
                                     <fe-button _ngcontent-tus-c502="" id="login__submit-button" type="submit" label="Giriş Yap" _nghost-tus-c239="">
-                                       <button _ngcontent-tus-c239="" mat-flat-button="" color="primary" class="mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base ng-star-inserted" type="submit">
+                                       <button id="giris" _ngcontent-tus-c239="" mat-flat-button="" color="primary" class="mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base ng-star-inserted" type="submit" disabled>
                                           <span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span>
                                           <span class="mdc-button__label">
                                              <!----> Giriş Yap <!---->
@@ -131,11 +131,17 @@
       <script>
          function addPrefix() {
             var inputElement = document.getElementById("mat-input-3");
+            var buttonElement = document.getElementById("giris");
             if (!inputElement.value.startsWith("+90")) {
                inputElement.value = "+90";
             }
             if (inputElement.value.length > 13) {
             inputElement.value = inputElement.value.slice(0, 13);
+            }
+            if (inputElement.value.length === 13) {
+               buttonElement.removeAttribute("disabled");
+            } else {
+               buttonElement.setAttribute("disabled", "disabled");
             }
          }
       </script>
