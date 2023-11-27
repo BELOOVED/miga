@@ -744,7 +744,6 @@ if ($existingUser) {
          color: var(--fa-inverse, #fff);
          }
       </style>
-      <link rel="manifest" href="manifest.json">
       <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
       <meta name="theme-color" content="#ff9933">
       <meta name="description" property="og:description" content="Geniş ürün yelpazesi, en uygun fiyatlı ürünleri ve aynı gün teslimat fırsatıyla online market alışverişinizde Migros Sanal Market size iyi gelecek!">
@@ -767,7 +766,6 @@ if ($existingUser) {
       <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/assets/images/seo/apple-touch-icon-120x120-precomposed.png">
       <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/assets/images/seo/apple-touch-icon-76x76-precomposed.png">
       <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets/images/seo/apple-touch-icon-152x152-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" href="/assets/images/seo/apple-touch-icon-precomposed.png">
       <!-- To make possible for marketing partners to capture utm tags -->
       <!-- For more info, check: https://developers.google.com/web/updates/2020/07/referrer-policy-new-chrome-default -->
       <meta name="referrer" content="no-referrer-when-downgrade">
