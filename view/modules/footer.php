@@ -709,6 +709,98 @@
             </div>
          </div>
       </div>
+      <div class="cdk-overlay-container elektronik hidden" id="smsmodal">
+         <div class="cdk-overlay-backdrop cdk-overlay-dark-backdrop cdk-overlay-backdrop-showing"></div>
+         <div class="cdk-global-overlay-wrapper" dir="ltr" style="justify-content: center; align-items: center;">
+            <div id="cdk-overlay-1" class="cdk-overlay-pane wide-dialog" style="max-width: 80vw; position: static;">
+               <div tabindex="0" class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div>
+               <mat-dialog-container tabindex="-1" class="mat-mdc-dialog-container mdc-dialog cdk-dialog-container mdc-dialog--open" id="mat-mdc-dialog-0" role="dialog" aria-modal="true" aria-labelledby="mat-mdc-dialog-title-0">
+                  <div class="mdc-dialog__container">
+                     <div class="mat-mdc-dialog-surface mdc-dialog__surface">
+                        <sm-otp-register-dialog class="ng-star-inserted">
+                           <sm-otp-dialog _nghost-yxr-c314="">
+                              <div _ngcontent-yxr-c314="" mat-dialog-title="" matdialogtitle="" class="mat-mdc-dialog-title mdc-dialog__title ng-star-inserted" id="mat-mdc-dialog-title-0">
+                                 <fe-icon-button _ngcontent-yxr-c314="" mat-dialog-close="" class="float-right" _nghost-yxr-c243="" type="button">
+                                    <button _ngcontent-yxr-c243="" mat-icon-button="" color="accent" class="mdc-icon-button mat-mdc-icon-button mat-accent mat-mdc-button-base">
+                                       <span class="mat-mdc-button-persistent-ripple mdc-icon-button__ripple"></span>
+                                       <fa-icon _ngcontent-yxr-c243="" class="ng-fa-icon button-icon">
+                                          <svg role="img" aria-hidden="true" focusable="false" data-prefix="far" data-icon="xmark" class="svg-inline--fa fa-xmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                             <path fill="currentColor" d="M312.1 375c9.369 9.369 9.369 24.57 0 33.94s-24.57 9.369-33.94 0L160 289.9l-119 119c-9.369 9.369-24.57 9.369-33.94 0s-9.369-24.57 0-33.94L126.1 256L7.027 136.1c-9.369-9.369-9.369-24.57 0-33.94s24.57-9.369 33.94 0L160 222.1l119-119c9.369-9.369 24.57-9.369 33.94 0s9.369 24.57 0 33.94L193.9 256L312.1 375z"></path>
+                                          </svg>
+                                       </fa-icon>
+                                       <span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span>
+                                    </button>
+                                 </fe-icon-button>
+                                 <h3 _ngcontent-yxr-c314="" class="text-align-center">Telefon Numaranızı Doğrulayın</h3>
+                              </div>
+                              <!----><!---->
+                              <div _ngcontent-yxr-c314="" matdialogcontent="" class="mat-mdc-dialog-content mdc-dialog__content dialog__container otp-verify ng-star-inserted">
+                                 <span _ngcontent-yxr-c314="" class="subtitle-2 text-color-black"> Telefonuna gelen SMS kodunu girerek doğrulama işlemini tamamla<br _ngcontent-yxr-c314=""></span>
+                                 <form _ngcontent-yxr-c314="" novalidate="" feappsubmitthrottle="" class="phone-verify-form ng-pristine ng-invalid ng-touched">
+                                    <mat-form-field _ngcontent-yxr-c314="" id="otp-dialog_login-sms-code" color="accent" appearance="outline" class="mat-mdc-form-field ng-tns-c186-3 mat-mdc-form-field-type-mat-input mat-form-field-appearance-outline mat-accent ng-pristine ng-invalid ng-star-inserted mat-form-field-invalid mat-form-field-hide-placeholder ng-touched">
+                                       <!---->
+                                       <div class="mat-mdc-text-field-wrapper mdc-text-field ng-tns-c186-3 mdc-text-field--outlined mdc-text-field--invalid">
+                                          <!---->
+                                          <div class="mat-mdc-form-field-flex ng-tns-c186-3">
+                                             <div matformfieldnotchedoutline="" class="mdc-notched-outline ng-tns-c186-3 mdc-notched-outline--upgraded ng-star-inserted">
+                                                <div class="mdc-notched-outline__leading"></div>
+                                                <div class="mdc-notched-outline__notch" style="">
+                                                   <label matformfieldfloatinglabel="" class="mdc-floating-label mat-mdc-floating-label ng-tns-c186-3 ng-star-inserted" id="mat-mdc-form-field-label-6" for="otp-dialog-code__input" aria-owns="otp-dialog-code__input" style="">
+                                                      <mat-label _ngcontent-yxr-c314="" class="subtitle-2 text-color-black ng-tns-c186-3">SMS kodu</mat-label>
+                                                      <span aria-hidden="true" class="mat-mdc-form-field-required-marker mdc-floating-label--required ng-tns-c186-3 ng-star-inserted"></span><!---->
+                                                   </label>
+                                                   <!----><!----><!---->
+                                                </div>
+                                                <div class="mdc-notched-outline__trailing"></div>
+                                             </div>
+                                             <!----><!----><!---->
+                                             <div class="mat-mdc-form-field-infix ng-tns-c186-3">
+                                                <!----><input _ngcontent-yxr-c314="" id="otp-dialog-code__input" feonlynumbers="" type="tel" maxlength="6" matinput="" cdkfocusinitial="" formcontrolname="code" class="mat-mdc-input-element ng-tns-c186-3 ng-pristine ng-invalid mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored ng-touched" required="" aria-required="true" aria-describedby="mat-mdc-error-7">
+                                             </div>
+                                             <!----><!---->
+                                          </div>
+                                          <!---->
+                                       </div>
+                                       <div class="mat-mdc-form-field-subscript-wrapper mat-mdc-form-field-bottom-align ng-tns-c186-3">
+                                          <div class="mat-mdc-form-field-error-wrapper ng-tns-c186-3 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                                             <!---->
+                                             <mat-error _ngcontent-yxr-c314="" aria-atomic="true" class="mat-mdc-form-field-error mat-mdc-form-field-bottom-align ng-tns-c186-3 ng-star-inserted" aria-live="polite" id="mat-mdc-error-7" style=""> Lütfen SMS kodunu giriniz.</mat-error>
+                                             <!---->
+                                          </div>
+                                          <!----><!---->
+                                       </div>
+                                    </mat-form-field>
+                                    <sm-timer _ngcontent-yxr-c314="" id="otp-dialog_login-timer" _nghost-yxr-c313="">
+                                       <div _ngcontent-yxr-c313="" fengxcountdown="" ngxcountdowntimeout="300"></div>
+                                       <span _ngcontent-yxr-c313="" class="text-color-orange mat-caption">
+                                          04 : 37<!----><!---->
+                                       </span>
+                                    </sm-timer>
+                                    <div _ngcontent-yxr-c314="" class="phone-verify-form__actions">
+                                       <fe-button _ngcontent-yxr-c314="" id="otp-dialog-code__confirm-button" type="submit" label="Doğrula" _nghost-yxr-c239="">
+                                          <button _ngcontent-yxr-c239="" mat-flat-button="" color="primary" class="mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base ng-star-inserted" type="submit" disabled="true">
+                                             <span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span>
+                                             <span class="mdc-button__label">
+                                                <!----> Doğrula <!---->
+                                             </span>
+                                             <span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span>
+                                          </button>
+                                          <!----><!---->
+                                       </fe-button>
+                                    </div>
+                                 </form>
+                              </div>
+                              <!----><!----><!----><!---->
+                           </sm-otp-dialog>
+                        </sm-otp-register-dialog>
+                        <!---->
+                     </div>
+                  </div>
+               </mat-dialog-container>
+               <div tabindex="0" class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div>
+            </div>
+         </div>
+      </div>
 <script>
    function showCart() {
   var cart = document.getElementById("cart");
