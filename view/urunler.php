@@ -33,6 +33,9 @@ if ($detect->isMobile()) {?>
     .header{
         display: none;
     }
+    #filtrelere{
+        margin-top: 70px;
+    }
 </style>
 <?php }?>
 <main _ngcontent-nyw-c368="" class="elektronik">
@@ -62,9 +65,7 @@ if ($detect->isMobile()) {?>
                </div>
             </fe-mobile-breadcrumb>
             <!---->
-            <div class="container ng-star-inserted" style="
-    margin-top: 70px;
-">
+            <div class="container ng-star-inserted" id="filtrelere">
                <div class="mat-caption-normal mobile-only mobile-filter-sort-row">
                   <div>
                      <fa-icon class="ng-fa-icon">
