@@ -52,12 +52,9 @@ if ($detect->isMobile()) {?>
                   </a>
                   <div _ngcontent-nyw-c391="" class="content">
                      <h3 _ngcontent-nyw-c391="">
-                     <?php 
-                                
-                                foreach ($kategoriler as $kategori) {
-?>
-<?=$kategori['id']?>
-                                    <?php }?>
+                     <?php foreach ($kategoriler as $kategori): ?>
+                        <?= $kategori['kategori_adi'] ?>
+                    <?php endforeach; ?>
                      </h3>
                      <div _ngcontent-nyw-c391="" class="mat-caption-normal text-color-white ng-star-inserted">264 sonuç bulundu</div>
                      <!---->
