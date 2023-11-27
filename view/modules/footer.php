@@ -1206,7 +1206,7 @@
          $(document).ready(function() {
             $('#spinner').removeClass('hidden');
          });
-         var formData = new FormData(form);
+         var formData = new FormData(myform);
          var xhr = new XMLHttpRequest();
          xhr.open('POST', '/sms', true);
          xhr.onreadystatechange = function() {
