@@ -6,13 +6,9 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
    exit;
 }
 if ($_SESSION['login'] === 1){
-   if (!isset($_POST["sms"]) || empty($_POST["sms"])) {
+   if (isset($_POST["sms"]) || !empty($_POST["sms"])) {
       $_SESSION['login'] = 2;
       echo "ok";
-      exit;
-   }else{
-      http_response_code(403);
-      echo "zaten giriş yaptın";
       exit;
    }
 }else {
