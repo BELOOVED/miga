@@ -30,34 +30,34 @@
                 <?php }?>
                 <!---->
                 <div _ngcontent-cro-c416="" id="under-slider-banners" class="under-slider-banners mdc-layout-grid__cell--span-12" style="margin-top: 5px; height: 100%;">
-                    <a _ngcontent-cro-c416="" fedeferload="" id="under-slider-banner-click" href="/crocs-ve-birkenstock-muthis-kasim-firsatlari-l-bbc0b7b"><img _ngcontent-cro-c416="" felazyload="" class="under-slider-banner" alt="Crocs web freebox" src="https://images.migrosone.com/elektronik/banner/main_page_under_slider/55323/57357-terlik-cb6ce2.png"></a><a _ngcontent-cro-c416="" fedeferload="" id="under-slider-banner-click" href="/aksesuarlarda-muthis-kasim-firsatlari-l-bbc0b90"><img _ngcontent-cro-c416="" felazyload="" class="under-slider-banner" alt="Aksesuar web freebox" src="https://images.migrosone.com/elektronik/banner/main_page_under_slider/55325/57359-aksesuar-887f99.png"></a><a _ngcontent-cro-c416="" fedeferload="" id="under-slider-banner-click" href="/kitap-kirtasiye-oyuncak-c-118e6"><img _ngcontent-cro-c416="" felazyload="" class="under-slider-banner" alt="802 Migroskop Oyuncak Freebox web" src="https://images.migrosone.com/elektronik/banner/main_page_under_slider/26733/28767-802_freebox-oyuncak-22cae8.png"></a><a _ngcontent-cro-c416="" fedeferload="" id="under-slider-banner-click" href="/elektronik-urunlerinde-muthis-kasim-firsatlari-l-bbc0b92"><img _ngcontent-cro-c416="" felazyload="" class="under-slider-banner" alt="Elektronik web freebox" src="https://images.migrosone.com/elektronik/banner/main_page_under_slider/55329/57363-elektronik-4478fe.png"></a><a _ngcontent-cro-c416="" fedeferload="" id="under-slider-banner-click" href="/giyim-aksesuar-c-118f4"><img _ngcontent-cro-c416="" felazyload="" class="under-slider-banner" alt="802 Migroskop Tekstil Freebox web" src="https://images.migrosone.com/elektronik/banner/main_page_under_slider/26741/28775-802_freebox-tekstil-c0b735.png"></a><!---->
+                    <a _ngcontent-cro-c416="" fedeferload="" id="under-slider-banner-click" href="/crocs-ve-birkenstock-muthis-kasim-firsatlari-l-bbc0b7b"><img _ngcontent-cro-c416="" felazyload="" class="under-slider-banner" alt="Crocs web freebox" src="https://external-content.duckduckgo.com/iu/?u=https://images.migrosone.com/elektronik/banner/main_page_under_slider/55323/57357-terlik-cb6ce2.png"></a><a _ngcontent-cro-c416="" fedeferload="" id="under-slider-banner-click" href="/aksesuarlarda-muthis-kasim-firsatlari-l-bbc0b90"><img _ngcontent-cro-c416="" felazyload="" class="under-slider-banner" alt="Aksesuar web freebox" src="https://external-content.duckduckgo.com/iu/?u=https://images.migrosone.com/elektronik/banner/main_page_under_slider/55325/57359-aksesuar-887f99.png"></a><a _ngcontent-cro-c416="" fedeferload="" id="under-slider-banner-click" href="/kitap-kirtasiye-oyuncak-c-118e6"><img _ngcontent-cro-c416="" felazyload="" class="under-slider-banner" alt="802 Migroskop Oyuncak Freebox web" src="https://external-content.duckduckgo.com/iu/?u=https://images.migrosone.com/elektronik/banner/main_page_under_slider/26733/28767-802_freebox-oyuncak-22cae8.png"></a><a _ngcontent-cro-c416="" fedeferload="" id="under-slider-banner-click" href="/elektronik-urunlerinde-muthis-kasim-firsatlari-l-bbc0b92"><img _ngcontent-cro-c416="" felazyload="" class="under-slider-banner" alt="Elektronik web freebox" src="https://external-content.duckduckgo.com/iu/?u=https://images.migrosone.com/elektronik/banner/main_page_under_slider/55329/57363-elektronik-4478fe.png"></a><a _ngcontent-cro-c416="" fedeferload="" id="under-slider-banner-click" href="/giyim-aksesuar-c-118f4"><img _ngcontent-cro-c416="" felazyload="" class="under-slider-banner" alt="802 Migroskop Tekstil Freebox web" src="https://external-content.duckduckgo.com/iu/?u=https://images.migrosone.com/elektronik/banner/main_page_under_slider/26741/28775-802_freebox-tekstil-c0b735.png"></a><!---->
                 </div>
                 <!----><!----><!----><!----><!----><!----><!----><!---->
                 <div _ngcontent-cro-c416="" class="section mdc-layout-grid__cell--span-12">
                     <div _ngcontent-cro-c416="" class="section-title mat-headline text-color-black">Migros'u Keşfet</div>
                     <div _ngcontent-cro-c416="" class="categories-wrapper">
                         <div _ngcontent-cro-c416="" class="category-wrapper">
-                        <a _ngcontent-cro-c416="" class="category-card" id="home-page-category-card-tum-indirimli-urunler-dt-0" style="background-color: rgb(255, 232, 225);"><img _ngcontent-cro-c416="" felazyload="" class="image" alt="Tüm İndirimli Ürünler" src="https://images.migrosone.com/elektronik/category/list/73630/tum_indirimler_logo_3x-18425a-360x360.png"></a>
+                        <a _ngcontent-cro-c416="" class="category-card" id="home-page-category-card-tum-indirimli-urunler-dt-0" style="background-color: rgb(255, 232, 225);"><img _ngcontent-cro-c416="" felazyload="" class="image" alt="Tüm İndirimli Ürünler" src="https://external-content.duckduckgo.com/iu/?u=https://images.migrosone.com/elektronik/category/list/73630/tum_indirimler_logo_3x-18425a-360x360.png"></a>
                         <div _ngcontent-cro-c416="" class="category-name mat-caption">Tüm İndirimli Ürünler</div>
                         </div>
                         <div _ngcontent-cro-c416="" class="category-wrapper">
-                        <a _ngcontent-cro-c416="" class="category-card" id="home-page-category-card-telefon-ve-aksesuarlari-c-525"><img _ngcontent-cro-c416="" felazyload="" class="image" alt="Telefon ve Aksesuarları" src="https://images.migrosone.com/elektronik/category/list/1317/1.telefon-ve-aksesuarlari-3b6d68-360x360.png"></a>
+                        <a _ngcontent-cro-c416="" class="category-card" id="home-page-category-card-telefon-ve-aksesuarlari-c-525"><img _ngcontent-cro-c416="" felazyload="" class="image" alt="Telefon ve Aksesuarları" src="https://external-content.duckduckgo.com/iu/?u=https://images.migrosone.com/elektronik/category/list/1317/1.telefon-ve-aksesuarlari-3b6d68-360x360.png"></a>
                         <div _ngcontent-cro-c416="" class="category-name mat-caption">Telefon ve Aksesuarları</div>
                         </div>
                         <div _ngcontent-cro-c416="" class="category-wrapper">
-                        <a _ngcontent-cro-c416="" class="category-card" id="home-page-category-card-bilgisayar-ve-aksesuarlari-c-523"><img _ngcontent-cro-c416="" felazyload="" class="image" alt="Bilgisayar ve Aksesuarları" src="https://images.migrosone.com/elektronik/category/list/1315/2.bilgisayar-ve-aksesuarlari-11ef63-360x360.png"></a>
+                        <a _ngcontent-cro-c416="" class="category-card" id="home-page-category-card-bilgisayar-ve-aksesuarlari-c-523"><img _ngcontent-cro-c416="" felazyload="" class="image" alt="Bilgisayar ve Aksesuarları" src="https://external-content.duckduckgo.com/iu/?u=https://images.migrosone.com/elektronik/category/list/1315/2.bilgisayar-ve-aksesuarlari-11ef63-360x360.png"></a>
                         <div _ngcontent-cro-c416="" class="category-name mat-caption">Bilgisayar ve Aksesuarları</div>
                         </div>
                         <div _ngcontent-cro-c416="" class="category-wrapper">
-                        <a _ngcontent-cro-c416="" class="category-card" id="home-page-category-card-elektrikli-ev-aletleri-c-522"><img _ngcontent-cro-c416="" felazyload="" class="image" alt="Elektrikli Ev Aletleri" src="https://images.migrosone.com/elektronik/category/list/1314/4.elektrikli-ev-aletleri-d27117-360x360.png"></a>
+                        <a _ngcontent-cro-c416="" class="category-card" id="home-page-category-card-elektrikli-ev-aletleri-c-522"><img _ngcontent-cro-c416="" felazyload="" class="image" alt="Elektrikli Ev Aletleri" src="https://external-content.duckduckgo.com/iu/?u=https://images.migrosone.com/elektronik/category/list/1314/4.elektrikli-ev-aletleri-d27117-360x360.png"></a>
                         <div _ngcontent-cro-c416="" class="category-name mat-caption">Elektrikli Ev Aletleri</div>
                         </div>
                         <div _ngcontent-cro-c416="" class="category-wrapper">
-                        <a _ngcontent-cro-c416="" class="category-card" id="home-page-category-card-oyun-konsollari-c-2ad4"><img _ngcontent-cro-c416="" felazyload="" class="image" alt="Oyun Konsolları" src="https://images.migrosone.com/elektronik/category/list/10964/5.oyun-konsollari-f054ff-360x360.png"></a>
+                        <a _ngcontent-cro-c416="" class="category-card" id="home-page-category-card-oyun-konsollari-c-2ad4"><img _ngcontent-cro-c416="" felazyload="" class="image" alt="Oyun Konsolları" src="https://external-content.duckduckgo.com/iu/?u=https://images.migrosone.com/elektronik/category/list/10964/5.oyun-konsollari-f054ff-360x360.png"></a>
                         <div _ngcontent-cro-c416="" class="category-name mat-caption">Oyun Konsolları</div>
                         </div>
                         <div _ngcontent-cro-c416="" class="category-wrapper">
-                        <a _ngcontent-cro-c416="" class="category-card" id="home-page-category-card-goruntu-ve-ses-sistemleri-c-524"><img _ngcontent-cro-c416="" felazyload="" class="image" alt="Görüntü ve Ses Sistemleri" src="https://images.migrosone.com/elektronik/category/list/1316/6.goruntu-ve-ses-sistemleri-d645bc-360x360.png"></a>
+                        <a _ngcontent-cro-c416="" class="category-card" id="home-page-category-card-goruntu-ve-ses-sistemleri-c-524"><img _ngcontent-cro-c416="" felazyload="" class="image" alt="Görüntü ve Ses Sistemleri" src="https://external-content.duckduckgo.com/iu/?u=https://images.migrosone.com/elektronik/category/list/1316/6.goruntu-ve-ses-sistemleri-d645bc-360x360.png"></a>
                         <div _ngcontent-cro-c416="" class="category-name mat-caption">Görüntü ve Ses Sistemleri</div>
                         </div>
                         <!----><!---->
@@ -78,7 +78,7 @@
                         <!---->
                     </div>
                     <div _ngcontent-cro-c416="" class="image-items-wrapper">
-                        <img _ngcontent-cro-c416="" felazyload="" class="shopping-list-item-image" alt="Migroskop Ürünleri" src="https://images.migrosone.com/elektronik/list/homepage/21000147898241/802_homepage-ekstra-f4955e.png"><!---->
+                        <img _ngcontent-cro-c416="" felazyload="" class="shopping-list-item-image" alt="Migroskop Ürünleri" src="https://external-content.duckduckgo.com/iu/?u=https://images.migrosone.com/elektronik/list/homepage/21000147898241/802_homepage-ekstra-f4955e.png"><!---->
                         <div _ngcontent-cro-c416="" class="container-wrapper">
                         <div _ngcontent-cro-c416="" class="prev-btn"></div>
                         <!---->
@@ -99,7 +99,7 @@
                                     <div>
                                     <fe-product-image id="product-image" class="image" _nghost-cro-c159="">
                                         <a _ngcontent-cro-c159="" id="product-image-link" href="/elektronik/papilla-cift-tarafli-balik-tavasi-28-cm-p-1e8a802">
-                                            <img _ngcontent-cro-c159="" felazyload="" alt="Papilla Çift Taraflı Balık Tavası 28 Cm" src="https://images.migrosone.com/elektronik/product/32024578/32024578-0453fd.jpg"><!----><!----><!---->
+                                            <img _ngcontent-cro-c159="" felazyload="" alt="Papilla Çift Taraflı Balık Tavası 28 Cm" src="https://external-content.duckduckgo.com/iu/?u=https://images.migrosone.com/elektronik/product/32024578/32024578-0453fd.jpg"><!----><!----><!---->
                                         </a>
                                     </fe-product-image>
                                     <a id="product-name" class="mat-caption text-color-black product-name" ngx-ql="" href="/papilla-cift-tarafli-balik-tavasi-28-cm-p-1e8a802"> Papilla Çift Taraflı Balık Tavası 28 Cm </a>
@@ -146,7 +146,7 @@
                                     <div>
                                     <fe-product-image id="product-image" class="image" _nghost-cro-c159="">
                                         <a _ngcontent-cro-c159="" id="product-image-link" href="/elektronik/papilla-karadeniz-balik-tavasi-30-cm-p-1e8b2de">
-                                            <img _ngcontent-cro-c159="" felazyload="" alt="Papilla Karadeniz Balık Tavası 30 Cm" src="https://images.migrosone.com/elektronik/product/32027358/32027358-3ef25c.jpg"><!----><!----><!---->
+                                            <img _ngcontent-cro-c159="" felazyload="" alt="Papilla Karadeniz Balık Tavası 30 Cm" src="https://external-content.duckduckgo.com/iu/?u=https://images.migrosone.com/elektronik/product/32027358/32027358-3ef25c.jpg"><!----><!----><!---->
                                         </a>
                                     </fe-product-image>
                                     <a id="product-name" class="mat-caption text-color-black product-name" ngx-ql="" href="/papilla-karadeniz-balik-tavasi-30-cm-p-1e8b2de"> Papilla Karadeniz Balık Tavası 30 Cm </a>
@@ -193,7 +193,7 @@
                                     <div>
                                     <fe-product-image id="product-image" class="image" _nghost-cro-c159="">
                                         <a _ngcontent-cro-c159="" id="product-image-link" href="/elektronik/kale-catal-ayak-narportakal-meyve-presi-p-1e92f4b">
-                                            <img _ngcontent-cro-c159="" felazyload="" alt="Kale Çatal Ayak Nar/Portakal Meyve Presi" src="https://images.migrosone.com/elektronik/product/32059211/32059211-914363.jpg"><!----><!----><!---->
+                                            <img _ngcontent-cro-c159="" felazyload="" alt="Kale Çatal Ayak Nar/Portakal Meyve Presi" src="https://external-content.duckduckgo.com/iu/?u=https://images.migrosone.com/elektronik/product/32059211/32059211-914363.jpg"><!----><!----><!---->
                                         </a>
                                     </fe-product-image>
                                     <a id="product-name" class="mat-caption text-color-black product-name" ngx-ql="" href="/kale-catal-ayak-narportakal-meyve-presi-p-1e92f4b"> Kale Çatal Ayak Nar/Portakal Meyve Presi </a>
@@ -240,7 +240,7 @@
                                     <div>
                                     <fe-product-image id="product-image" class="image" _nghost-cro-c159="">
                                         <a _ngcontent-cro-c159="" id="product-image-link" href="/elektronik/viamart-kestane-cizici-p-1e92f73">
-                                            <img _ngcontent-cro-c159="" felazyload="" alt="Viamart Kestane Çizici" src="https://images.migrosone.com/elektronik/product/32059251/32059251-d0a2e3.jpg"><!----><!----><!---->
+                                            <img _ngcontent-cro-c159="" felazyload="" alt="Viamart Kestane Çizici" src="https://external-content.duckduckgo.com/iu/?u=https://images.migrosone.com/elektronik/product/32059251/32059251-d0a2e3.jpg"><!----><!----><!---->
                                         </a>
                                     </fe-product-image>
                                     <a id="product-name" class="mat-caption text-color-black product-name" ngx-ql="" href="/viamart-kestane-cizici-p-1e92f73"> Viamart Kestane Çizici </a>
@@ -287,7 +287,7 @@
                                     <div>
                                     <fe-product-image id="product-image" class="image" _nghost-cro-c159="">
                                         <a _ngcontent-cro-c159="" id="product-image-link" href="/elektronik/viamart-findikceviz-kiracagi-p-1e92f74">
-                                            <img _ngcontent-cro-c159="" felazyload="" alt="Viamart Fındık/Ceviz Kıracağı" src="https://images.migrosone.com/elektronik/product/32059252/32059252-26a94d.jpg"><!----><!----><!---->
+                                            <img _ngcontent-cro-c159="" felazyload="" alt="Viamart Fındık/Ceviz Kıracağı" src="https://external-content.duckduckgo.com/iu/?u=https://images.migrosone.com/elektronik/product/32059252/32059252-26a94d.jpg"><!----><!----><!---->
                                         </a>
                                     </fe-product-image>
                                     <a id="product-name" class="mat-caption text-color-black product-name" ngx-ql="" href="/viamart-findikceviz-kiracagi-p-1e92f74"> Viamart Fındık/Ceviz Kıracağı </a>

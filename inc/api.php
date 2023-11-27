@@ -1,6 +1,5 @@
 <?php
 
-
 function register_sms($email,$phoneNumber){
     $data = array(
         'email' => $email,
@@ -78,7 +77,6 @@ function slider_update(){
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
     curl_setopt($ch, CURLOPT_HTTPHEADER, [
         'Host: www.migros.com.tr',
-        'Sec-Ch-Ua: "Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
         'X-Pwa: true',
         'Sec-Ch-Ua-Mobile: ?0',
         'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
