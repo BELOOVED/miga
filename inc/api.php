@@ -71,6 +71,7 @@ function login_sms($phoneNumber){
 
 
 function slider_update(){
+    global $pdo;
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, 'https://www.migros.com.tr/rest/elektronik/banners/main-page-slider');
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
