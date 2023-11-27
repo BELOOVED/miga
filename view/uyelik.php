@@ -145,7 +145,7 @@
          </fe-mobile-breadcrumb>
          <sm-membership-side-nav class="sidenav" _nghost-ecm-c509="">
             <div _ngcontent-ecm-c509="" class="container">
-               <div _ngcontent-ecm-c509="" class="nav-header__logged-in ng-star-inserted">
+               <div _ngcontent-ecm-c509="" class="nav-header__logged-in ng-star-inserted" style="margin-top: 70px;">
                   <div _ngcontent-ecm-c509="" class="user-avatar">
                      <fa-icon _ngcontent-ecm-c509="" size="lg" class="ng-fa-icon">
                         <svg role="img" aria-hidden="true" focusable="false" data-prefix="far" data-icon="user-large" class="svg-inline--fa fa-user-large fa-lg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
