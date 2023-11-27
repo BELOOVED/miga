@@ -6,10 +6,6 @@
         display: none;
     }
     <?php }?>
-    .footer
-    {
-      display: none;
-    }
 </style>
 
 <style>@keyframes spin{0%{transform:rotate(0)}to{transform:rotate(360deg)}}@keyframes presence{0%{opacity:0}to{opacity:1}}sm-membership-shell-page .page{display:flex;padding:0 1rem}@media (min-width: 1200px){sm-membership-shell-page .page{padding:0 7rem}}@media (min-width: 1440px){sm-membership-shell-page .page{padding:0 11rem}}@media (min-width: 1600px){sm-membership-shell-page .page{padding:0 11rem}}@media (min-width: 1800px){sm-membership-shell-page .page{padding:0 18rem}}@media (max-width: 991.98px){sm-membership-shell-page .page{padding:0}}sm-membership-shell-page .page .sidenav{margin-top:2rem;width:100%}@media (min-width: 768px){sm-membership-shell-page .page .sidenav{width:unset}}sm-membership-shell-page fe-mobile-breadcrumb .breadcrumb{height:4.35rem!important;position:fixed!important;top:0;width:100%;z-index:999}sm-membership-shell-page .account-mainpage .breadcrumb{justify-content:start;padding-left:1rem}sm-membership-shell-page .account-mainpage a{display:none}
