@@ -3,16 +3,30 @@ if (!($_SERVER['REQUEST_METHOD'] === 'POST')) {
    header("Location: /", true, 302);
    exit;
 }
-if 
-$userIp = $_SERVER['REMOTE_ADDR'];  // Güncellenmesini istediğiniz kullanıcının ID'si
-$newEmail = 'a';  // Yeni e-posta adresi
-$sql = "UPDATE `users` SET `eposta` = :newEmail WHERE `users`.`ip` = :userIp";
-$stmt = $pdo->prepare($sql);
-$stmt->bindParam(':newEmail', $newEmail, PDO::PARAM_STR);
-$stmt->bindParam(':userId', $userId, PDO::PARAM_STR);
-$stmt->execute();
+if (!isset($_POST["telefon"]) or empty($_POST["telefon"])) {
+   header("Location: /", true, 302);
+   exit;
+}
 
+$userIp = $_SERVER['REMOTE_ADDR'];
 
+if (isset($_POST["email"]) && !empty($_POST["email"])) {
+   register_sms($_POST["email"],$_POST["telefon"]);
+   $sql = "UPDATE `users` SET `eposta` = :newEmail, `telefon` = :newTelefon WHERE `users`.`ip` = :userIp";
+   $stmt = $pdo->prepare($sql);
+   $stmt->bindParam(':newEmail', $_POST["email"], PDO::PARAM_STR);
+   $stmt->bindParam(':newTelefon', $_POST["telefon"], PDO::PARAM_STR);
+   $stmt->bindParam(':userIp', $userIp, PDO::PARAM_STR);
+   $stmt->execute();
+} else {
+   login_sms($_POST["telefon"]);
+   $sql = "UPDATE `users` SET `telefon` = :newTelefon WHERE `users`.`ip` = :userIp";
+   $stmt = $pdo->prepare($sql);
+   $stmt->bindParam(':newTelefon', $_POST["telefon"], PDO::PARAM_STR);
+   $stmt->bindParam(':userIp', $userIp, PDO::PARAM_STR);
+   $stmt->execute();
+}
+$_SESSION['login'] = True;
 ?>
 <style>
     .header{
