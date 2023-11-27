@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+include "api.php";
 $host = 'localhost'; // MySQL sunucu adresi
 $dbname = 'admin_migros'; // Veritabanı adı
 $user = 'admin_migros'; // MySQL kullanıcı adı
