@@ -503,7 +503,7 @@ if ($detect->isMobile()) {?>
          <mat-dialog-container tabindex="-1" class="mat-mdc-dialog-container mdc-dialog cdk-dialog-container mdc-dialog--open" id="mat-mdc-dialog-2" role="dialog" aria-modal="true" aria-labelledby="mat-mdc-dialog-title-2">
             <div class="mdc-dialog__container">
                <div class="mat-mdc-dialog-surface mdc-dialog__surface">
-                  <sm-mobile-filter-modal class="ng-star-inserted flatqq">
+                  <sm-mobile-filter-modal class="ng-star-inserted flatqq" id="filter">
                      <div matdialogtitle="" class="mat-mdc-dialog-title mdc-dialog__title" id="mat-mdc-dialog-title-2">
                         <!---->
                         <fe-icon-button mat-dialog-close="" class="float-right z-index" _nghost-xhn-c243="" type="button" onclick="closemodal()">
@@ -575,7 +575,7 @@ if ($detect->isMobile()) {?>
                   </sm-mobile-filter-modal>
                   <sm-mobile-filter-modal class="ng-star-inserted flatqq hidden " id="filter1">
                      <div matdialogtitle="" class="mat-mdc-dialog-title mdc-dialog__title" id="mat-mdc-dialog-title-1">
-                        <fe-icon-button class="back-button z-index ng-star-inserted" _nghost-ecm-c243="">
+                        <fe-icon-button class="back-button z-index ng-star-inserted" _nghost-ecm-c243="" onclick="backmodals()">
                            <button _ngcontent-ecm-c243="" mat-icon-button="" color="accent" class="mdc-icon-button mat-mdc-icon-button mat-accent mat-mdc-button-base">
                               <span class="mat-mdc-button-persistent-ripple mdc-icon-button__ripple"></span>
                               <fa-icon _ngcontent-ecm-c243="" class="ng-fa-icon button-icon">
@@ -587,7 +587,7 @@ if ($detect->isMobile()) {?>
                            </button>
                         </fe-icon-button>
                         <!---->
-                        <fe-icon-button mat-dialog-close="" class="float-right z-index" _nghost-ecm-c243="" type="button">
+                        <fe-icon-button mat-dialog-close="" class="float-right z-index" _nghost-ecm-c243="" type="button" onclick="closemodal()">
                            <button _ngcontent-ecm-c243="" mat-icon-button="" color="accent" class="mdc-icon-button mat-mdc-icon-button mat-accent mat-mdc-button-base">
                               <span class="mat-mdc-button-persistent-ripple mdc-icon-button__ripple"></span>
                               <fa-icon _ngcontent-ecm-c243="" class="ng-fa-icon button-icon">
@@ -630,7 +630,7 @@ if ($detect->isMobile()) {?>
                   </sm-mobile-filter-modal>
                   <sm-mobile-filter-modal class="ng-star-inserted flatqq hidden" id="filter2">
                      <div matdialogtitle="" class="mat-mdc-dialog-title mdc-dialog__title" id="mat-mdc-dialog-title-1">
-                        <fe-icon-button class="back-button z-index ng-star-inserted" _nghost-ecm-c243="">
+                        <fe-icon-button class="back-button z-index ng-star-inserted" _nghost-ecm-c243="" onclick="backmodals()">
                            <button _ngcontent-ecm-c243="" mat-icon-button="" color="accent" class="mdc-icon-button mat-mdc-icon-button mat-accent mat-mdc-button-base">
                               <span class="mat-mdc-button-persistent-ripple mdc-icon-button__ripple"></span>
                               <fa-icon _ngcontent-ecm-c243="" class="ng-fa-icon button-icon">
@@ -642,7 +642,7 @@ if ($detect->isMobile()) {?>
                            </button>
                         </fe-icon-button>
                         <!---->
-                        <fe-icon-button mat-dialog-close="" class="float-right z-index" _nghost-ecm-c243="" type="button">
+                        <fe-icon-button mat-dialog-close="" class="float-right z-index" _nghost-ecm-c243="" type="button" onclick="closemodal()">
                            <button _ngcontent-ecm-c243="" mat-icon-button="" color="accent" class="mdc-icon-button mat-mdc-icon-button mat-accent mat-mdc-button-base">
                               <span class="mat-mdc-button-persistent-ripple mdc-icon-button__ripple"></span>
                               <fa-icon _ngcontent-ecm-c243="" class="ng-fa-icon button-icon">
@@ -678,7 +678,7 @@ if ($detect->isMobile()) {?>
                   </sm-mobile-filter-modal>
                   <sm-mobile-filter-modal class="ng-star-inserted flatqq hidden" id="filter3">
                      <div matdialogtitle="" class="mat-mdc-dialog-title mdc-dialog__title" id="mat-mdc-dialog-title-1">
-                        <fe-icon-button class="back-button z-index ng-star-inserted" _nghost-ecm-c243="">
+                        <fe-icon-button class="back-button z-index ng-star-inserted" _nghost-ecm-c243="" onclick="backmodals()">
                            <button _ngcontent-ecm-c243="" mat-icon-button="" color="accent" class="mdc-icon-button mat-mdc-icon-button mat-accent mat-mdc-button-base">
                               <span class="mat-mdc-button-persistent-ripple mdc-icon-button__ripple"></span>
                               <fa-icon _ngcontent-ecm-c243="" class="ng-fa-icon button-icon">
@@ -690,7 +690,7 @@ if ($detect->isMobile()) {?>
                            </button>
                         </fe-icon-button>
                         <!---->
-                        <fe-icon-button mat-dialog-close="" class="float-right z-index" _nghost-ecm-c243="" type="button">
+                        <fe-icon-button mat-dialog-close="" class="float-right z-index" _nghost-ecm-c243="" type="button" onclick="closemodal()">
                            <button _ngcontent-ecm-c243="" mat-icon-button="" color="accent" class="mdc-icon-button mat-mdc-icon-button mat-accent mat-mdc-button-base">
                               <span class="mat-mdc-button-persistent-ripple mdc-icon-button__ripple"></span>
                               <fa-icon _ngcontent-ecm-c243="" class="ng-fa-icon button-icon">
@@ -717,7 +717,7 @@ if ($detect->isMobile()) {?>
                                  <div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div>
                                  <mat-pseudo-checkbox class="mat-pseudo-checkbox ng-star-inserted"></mat-pseudo-checkbox>
                                  <!---->
-                                 <div class="mat-list-text"> Kiwi <span class="text-color-grey">(22)</span></div>
+                                 <div class="mat-list-text"> <?=$alt_kategori?> <span class="text-color-grey">(22)</span></div>
                               </div>
                            </mat-list-option>
                            <?php }}?>

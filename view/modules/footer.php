@@ -1468,6 +1468,10 @@ function hideCategory() {
         $(".flatqq").addClass("hidden");
         $("#filter" + contentId).removeClass("hidden");
     }
+    function backmodals() {
+      $(".flatqq").addClass("hidden");
+        $("#filter").removeClass("hidden");
+    }
     function closemodal() {
         $(".cdk-overlay-container").addClass("hidden");
     }
