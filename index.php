@@ -1,8 +1,5 @@
 <?php
-// include 'inc/config.php';
-include 'inc/functions.php';
 include 'inc/pdo.php';
-
 
 $q = explode('/', $_GET['q']);
 $page = 'main';

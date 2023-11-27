@@ -3,7 +3,14 @@ ob_start();
 session_start();
 // error_reporting(0);
 date_default_timezone_set('Europe/Istanbul');
+
+
+
 require_once 'mobile.class.php';
+include 'api.php';
+include 'functions.php';
+
+
 
 $host = 'localhost'; // MySQL sunucu adresi
 $dbname = 'admin_migros'; // Veritabanı adı
