@@ -1,7 +1,7 @@
-
 <?php
-include_once 'inc/pdo.php';
+
 $kategori_id = isset($_GET['id']) ? $_GET['id'] : null;
+
 try {
     $sql = "SELECT * FROM kategoriler";
     if ($kategori_id !== null) {
@@ -15,12 +15,12 @@ try {
     $stmt->execute();
     $kategoriler = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    
 
 } catch (PDOException $e) {
     echo "Hata: " . $e->getMessage();
 }
 ?>
+
 
 <?php
                 if ($detect->isMobile()) {?>
