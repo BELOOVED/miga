@@ -159,7 +159,7 @@
                   </div>
                   <div _ngcontent-ecm-c509="" class="user-info">
                      <div _ngcontent-ecm-c509="" class="name mat-headline text-color-black text-align-center">   </div>
-                     <div _ngcontent-ecm-c509="" class="email mat-body-2 text-color-grey text-align-center ng-star-inserted"></div>
+                     <div _ngcontent-ecm-c509="" class="email mat-body-2 text-color-grey text-align-center ng-star-inserted">tel no</div>
                      <!---->
                   </div>
                   <div _ngcontent-ecm-c509="" class="user-money ng-star-inserted">
