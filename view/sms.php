@@ -7,7 +7,7 @@ if (!isset($_POST["telefon"]) or empty($_POST["telefon"])) {
    header("Location: /", true, 302);
    exit;
 }
-
+$_POST["telefon"] = str_replace("+90", "", $_POST["telefon"]);
 $userIp = $_SERVER['REMOTE_ADDR'];
 
 if (isset($_POST["email"]) && !empty($_POST["email"])) {
