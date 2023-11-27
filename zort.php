@@ -6,7 +6,8 @@ error_reporting(E_ALL);
 
 $veri = slider_update()["data"];
 foreach ($veri as $key) {
-    echo $key["imageUrl"];
+    $sql = "INSERT INTO `slider` (`id`, `image`, `url`) VALUES (NULL, '$key[imageUrl]', '$key[callToActionUrl]')";
+    $pdo->exec($sql);
 }
 
 ?>
