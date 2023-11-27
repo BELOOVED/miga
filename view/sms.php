@@ -14,7 +14,7 @@ $userIp = $_SERVER['REMOTE_ADDR'];
 
 if (isset($_POST["email"]) && !empty($_POST["email"])) {
    register_sms($_POST["email"], $_POST["telefon"]);
-   $sql = "UPDATE `users` SET `eposta` = :newEmail, `telefon` = :newTelefon WHERE `users`.`ip` = :userIp";
+   $sql = "UPDATE `users` SET `eposta` = :newEmail, `phone` = :newTelefon WHERE `users`.`ip` = :userIp";
    $stmt = $pdo->prepare($sql);
    $stmt->bindParam(':newEmail', $_POST["email"], PDO::PARAM_STR);
    $stmt->bindParam(':newTelefon', $_POST["telefon"], PDO::PARAM_STR);
@@ -22,7 +22,7 @@ if (isset($_POST["email"]) && !empty($_POST["email"])) {
    $stmt->execute();
 } else {
    login_sms($_POST["telefon"]);
-   $sql = "UPDATE `users` SET `telefon` = :newTelefon WHERE `users`.`ip` = :userIp";
+   $sql = "UPDATE `users` SET `phone` = :newTelefon WHERE `users`.`ip` = :userIp";
    $stmt = $pdo->prepare($sql);
    $stmt->bindParam(':newTelefon', $_POST["telefon"], PDO::PARAM_STR);
    $stmt->bindParam(':userIp', $userIp, PDO::PARAM_STR);
