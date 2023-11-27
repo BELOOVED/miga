@@ -1197,6 +1197,7 @@
 
 
 
+
 <!-- sms -->
 
 
@@ -1462,6 +1463,10 @@ function hideCategory() {
     function openmodal(contentId, menuId) {
         $(".cdk-overlay-container").addClass("hidden");
         $("#" + contentId).removeClass("hidden");
+    }
+    function openmodals(contentId) {
+        $(".mat-selection-list").addClass("hidden");
+        $("#filter" + contentId).removeClass("hidden");
     }
     function closemodal() {
         $(".cdk-overlay-container").addClass("hidden");

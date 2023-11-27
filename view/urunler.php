@@ -485,3 +485,139 @@ if ($detect->isMobile()) {?>
    </sm-product>
    <!---->
 </main>
+<div class="cdk-overlay-container elektronik hidden" id="filtre">
+   <div class="cdk-overlay-backdrop cdk-overlay-dark-backdrop cdk-overlay-backdrop-showing"></div>
+   <div class="cdk-global-overlay-wrapper" dir="ltr" style="justify-content: center; align-items: center;">
+      <div id="cdk-overlay-3" class="cdk-overlay-pane mobile-modal modal-content-no-padding" style="max-width: 80vw; position: static;">
+         <div tabindex="0" class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div>
+         <mat-dialog-container tabindex="-1" class="mat-mdc-dialog-container mdc-dialog cdk-dialog-container mdc-dialog--open" id="mat-mdc-dialog-2" role="dialog" aria-modal="true" aria-labelledby="mat-mdc-dialog-title-2">
+            <div class="mdc-dialog__container">
+               <div class="mat-mdc-dialog-surface mdc-dialog__surface">
+                  <sm-mobile-filter-modal class="ng-star-inserted">
+                     <div matdialogtitle="" class="mat-mdc-dialog-title mdc-dialog__title" id="mat-mdc-dialog-title-2">
+                        <!---->
+                        <fe-icon-button mat-dialog-close="" class="float-right z-index" _nghost-xhn-c243="" type="button">
+                           <button _ngcontent-xhn-c243="" mat-icon-button="" color="accent" class="mdc-icon-button mat-mdc-icon-button mat-accent mat-mdc-button-base">
+                              <span class="mat-mdc-button-persistent-ripple mdc-icon-button__ripple"></span>
+                              <fa-icon _ngcontent-xhn-c243="" class="ng-fa-icon button-icon">
+                                 <svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark" class="svg-inline--fa fa-xmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path fill="currentColor" d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"></path>
+                                 </svg>
+                              </fa-icon>
+                              <span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span>
+                           </button>
+                        </fe-icon-button>
+                        <h3 class="text-align-center header">Filtrele</h3>
+                     </div>
+                     <div matdialogcontent="" class="mat-mdc-dialog-content mdc-dialog__content content">
+                        <mat-selection-list role="listbox" class="mat-selection-list mat-list-base ng-star-inserted" aria-multiselectable="false" aria-disabled="false" tabindex="0">
+                           <mat-list-option onclick="openmodals('1')" role="option" class="mat-list-item mat-list-option mat-focus-indicator subtitle-1 group-option mat-list-item-with-avatar mat-accent ng-star-inserted" aria-selected="false" aria-disabled="false" tabindex="-1">
+                              <div class="mat-list-item-content mat-list-item-content-reverse">
+                                 <div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div>
+                                 <!---->
+                                 <div class="mat-list-text">
+                                    <div mat-line="" class="mat-line"> Kategoriler <span class="mat-caption-normal text-color-orange"></span></div>
+                                 </div>
+                                 <fa-icon mat-list-icon="" class="ng-fa-icon mat-list-icon">
+                                    <svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                       <path fill="currentColor" d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path>
+                                    </svg>
+                                 </fa-icon>
+                              </div>
+                           </mat-list-option>
+                           <mat-list-option onclick="openmodals('2')" role="option" class="mat-list-item mat-list-option mat-focus-indicator subtitle-1 group-option mat-list-item-with-avatar mat-accent ng-star-inserted" aria-selected="false" aria-disabled="false" tabindex="-1">
+                              <div class="mat-list-item-content mat-list-item-content-reverse">
+                                 <div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div>
+                                 <!---->
+                                 <div class="mat-list-text">
+                                    <div mat-line="" class="mat-line"> İndirimler <span class="mat-caption-normal text-color-orange"></span></div>
+                                 </div>
+                                 <fa-icon mat-list-icon="" class="ng-fa-icon mat-list-icon">
+                                    <svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                       <path fill="currentColor" d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path>
+                                    </svg>
+                                 </fa-icon>
+                              </div>
+                           </mat-list-option>
+                           <mat-list-option onclick="openmodals('3')" role="option" class="mat-list-item mat-list-option mat-focus-indicator subtitle-1 group-option mat-list-item-with-avatar mat-accent ng-star-inserted" aria-selected="false" aria-disabled="false" tabindex="-1">
+                              <div class="mat-list-item-content mat-list-item-content-reverse">
+                                 <div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div>
+                                 <!---->
+                                 <div class="mat-list-text">
+                                    <div mat-line="" class="mat-line"> Markalar <span class="mat-caption-normal text-color-orange"></span></div>
+                                 </div>
+                                 <fa-icon mat-list-icon="" class="ng-fa-icon mat-list-icon">
+                                    <svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                       <path fill="currentColor" d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path>
+                                    </svg>
+                                 </fa-icon>
+                              </div>
+                           </mat-list-option>
+                           <!---->
+                        </mat-selection-list>
+                        <mat-selection-list role="listbox" id="filter1" color="primary" class="mat-selection-list mat-list-base ng-star-inserted hidden" aria-multiselectable="true" aria-disabled="false" tabindex="0">
+                    <?php 
+                                
+                                foreach ($kategoriler as $kategori) {
+                                    $alt_kategoriler = explode(',', $kategori['markalar']);
+                                    foreach ($alt_kategoriler as $alt_kategori) {
+                                        $alt_kategori = trim($alt_kategori); 
+                                        ?>    
+                    <mat-list-option role="option" class="mat-list-item mat-list-option mat-focus-indicator mat-body-2 info-option mat-primary ng-star-inserted" aria-selected="false" aria-disabled="false" tabindex="-1">
+                            <div class="mat-list-item-content mat-list-item-content-reverse">
+                                <div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div>
+                                <mat-pseudo-checkbox class="mat-pseudo-checkbox ng-star-inserted"></mat-pseudo-checkbox>
+                                <!---->
+                                <div class="mat-list-text"> <?=$alt_kategori?> <span class="text-color-grey">(99)</span></div>
+                            </div>
+                        </mat-list-option>
+                        <?php }?>
+
+                                <?php  }?>
+                                 
+                        </mat-selection-list>
+                        <mat-selection-list role="listbox" id="filter2" color="primary" class="mat-selection-list mat-list-base ng-star-inserted hidden" aria-multiselectable="true" aria-disabled="false" tabindex="0">
+                        <mat-list-option role="option" class="mat-list-item mat-list-option mat-focus-indicator mat-body-2 info-option mat-primary ng-star-inserted" aria-selected="false" aria-disabled="false" tabindex="-1">
+                            <div class="mat-list-item-content mat-list-item-content-reverse">
+                                <div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div>
+                                <mat-pseudo-checkbox class="mat-pseudo-checkbox ng-star-inserted"></mat-pseudo-checkbox>
+                                <!---->
+                                <div class="mat-list-text"> Money İndirimli Market Ürünleri <span class="text-color-grey">(75)</span></div>
+                            </div>
+                        </mat-list-option>
+                        <!---->
+                        </mat-selection-list>
+                        <mat-selection-list role="listbox" id="filter3" color="primary" class="mat-selection-list mat-list-base ng-star-inserted hidden" aria-multiselectable="true" aria-disabled="false" tabindex="0">
+                        <?php 
+                                
+                                foreach ($kategoriler as $kategori) {
+                                    $alt_kategoriler = explode(',', $kategori['markalar']);
+                                    foreach ($alt_kategoriler as $alt_kategori) {
+                                        $alt_kategori = trim($alt_kategori); 
+                                        ?>
+                        <mat-list-option role="option" class="mat-list-item mat-list-option mat-focus-indicator mat-body-2 info-option mat-primary ng-star-inserted" aria-selected="false" aria-disabled="false" tabindex="-1">
+                            <div class="mat-list-item-content mat-list-item-content-reverse">
+                                <div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div>
+                                <mat-pseudo-checkbox class="mat-pseudo-checkbox ng-star-inserted"></mat-pseudo-checkbox>
+                                <!---->
+                                <div class="mat-list-text"> <?=$alt_kategori?> <span class="text-color-grey">(59)</span></div>
+                            </div>
+                        </mat-list-option>
+                        <?php }}?>
+                        </mat-selection-list>
+                     </div>
+                     <div class="actions">
+                        <mat-divider role="separator" class="mat-divider mat-divider-horizontal" aria-orientation="horizontal"></mat-divider>
+                        <div class="button-container">
+                           <!----><button mat-flat-button="" color="primary" class="button mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base" disabled="true"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Ürünleri Görüntüle (298) </span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button>
+                        </div>
+                     </div>
+                  </sm-mobile-filter-modal>
+                  <!---->
+               </div>
+            </div>
+         </mat-dialog-container>
+         <div tabindex="0" class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div>
+      </div>
+   </div>
+</div>
