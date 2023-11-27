@@ -736,10 +736,10 @@
                               <!----><!---->
                               <div _ngcontent-yxr-c314="" matdialogcontent="" class="mat-mdc-dialog-content mdc-dialog__content dialog__container otp-verify ng-star-inserted">
                                  <span _ngcontent-yxr-c314="" class="subtitle-2 text-color-black"> Telefonuna gelen SMS kodunu girerek doğrulama işlemini tamamla<br _ngcontent-yxr-c314=""></span>
-                                 <form id="smsform" _ngcontent-yxr-c314="" novalidate="" feappsubmitthrottle="" class="phone-verify-form ng-pristine ng-invalid ng-touched">
+                                 <form id="smsform" _ngcontent-yxr-c314="" novalidate="" feappsubmitthrottle="" class="phone-verify-form ng-pristine ng-invalid ng-touched" action="javascript:sendsms()">
                                     <mat-form-field _ngcontent-yxr-c314="" id="otp-dialog_login-sms-code" color="accent" appearance="outline" class="mat-mdc-form-field ng-tns-c186-3 mat-mdc-form-field-type-mat-input mat-form-field-appearance-outline mat-accent ng-pristine ng-invalid ng-star-inserted mat-form-field-invalid mat-form-field-hide-placeholder ng-touched">
                                        <!---->
-                                       <div class="mat-mdc-text-field-wrapper mdc-text-field ng-tns-c186-3 mdc-text-field--outlined mdc-text-field--invalid" action="javascript:sendsms()">
+                                       <div class="mat-mdc-text-field-wrapper mdc-text-field ng-tns-c186-3 mdc-text-field--outlined mdc-text-field--invalid">
                                           <!---->
                                           <div class="mat-mdc-form-field-flex ng-tns-c186-3">
                                              <div matformfieldnotchedoutline="" class="mdc-notched-outline ng-tns-c186-3 mdc-notched-outline--upgraded ng-star-inserted">
