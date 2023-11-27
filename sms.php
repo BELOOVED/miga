@@ -1,17 +1,18 @@
 <?php
+include 'inc/pdo.php';
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-   header("Location: /", true, 302);
+   http_response_code(403);
    exit;
 }
 if ($_SESSION['login'] === 1){
-   if (!isset($_POST["sms"]) || empty($_POST["sms"])) {
+   if (isset($_POST["sms"]) || !empty($_POST["sms"])) {
       $_SESSION['login'] = 2;
       echo "ok";
       exit;
    }
 }else {
    if (!isset($_POST["telefon"]) || empty($_POST["telefon"])) {
-      header("Location: /", true, 302);
+      http_response_code(403);
       exit;
    }
    
@@ -36,6 +37,6 @@ if ($_SESSION['login'] === 1){
       $stmt->execute();
       echo "ok";
    }
+   $_SESSION['login'] = 1;
 }
-$_SESSION['login'] = 1;
 ?>

