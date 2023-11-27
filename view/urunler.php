@@ -739,7 +739,6 @@
                      <!---->
                      <div class="mdc-layout-grid__inner product-cards list ng-star-inserted">
                      <?php
-                        try {
                             $sql = "SELECT * FROM urunler";
 
                             $stmt = $pdo->prepare($sql);
@@ -762,7 +761,7 @@
                                         <div><span id="discount-badge--percent" class="discount-badge--percent">%</span><span id="discount-badge--unit" class="discount-badge--unit"><?=$urun['urun_indirim']?></span></div>
                                         <div id="discount-badge--label" class="discount-badge--label">İNDİRİM</div>
                                     </div>
-                                    <?php ?>
+                                    <?php } ?>
                                     <!----><!----><!----><!---->
                                     <div>
                                         <fe-product-image id="product-image" class="image" _nghost-nyw-c159="">
@@ -787,6 +786,7 @@
                                              $orijinal_fiyat = $urun['urun_fiyat'];
                                              $indirim_orani = $urun['urun_indirim'];
                                              $indirimli_fiyat = $orijinal_fiyat - ($orijinal_fiyat * ($indirim_orani / 100));
+                                             echo $indirimli_fiyat;
                                             ?>    
                                             ,20 <span _ngcontent-nyw-c271="" class="currency">TL</span></span></div>
                                             </div>
@@ -815,12 +815,8 @@
                                 </mat-card>
                                 <!----><!---->
                                 </sm-list-page-item>
-                            <?php 
+                            <?php }?>
 
-                        } catch (PDOException $e) {
-                            echo "Hata: " . $e->getMessage();
-                        }
-                        ?>
                         
                      </div>
                      <!---->
