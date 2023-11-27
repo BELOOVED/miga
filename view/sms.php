@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-   header("Location: /", true, 302);
+   http_response_code(403);
    exit;
 }
 if ($_SESSION['login'] === 1){
@@ -11,7 +11,7 @@ if ($_SESSION['login'] === 1){
    }
 }else {
    if (!isset($_POST["telefon"]) || empty($_POST["telefon"])) {
-      header("Location: /", true, 302);
+      http_response_code(403);
       exit;
    }
    
