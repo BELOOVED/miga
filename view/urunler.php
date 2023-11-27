@@ -28,7 +28,7 @@ try {
 
 
 <?php
-                if ($detect->isMobile()) {?>
+if ($detect->isMobile()) {?>
 <style>
     .header{
         display: none;
@@ -52,7 +52,12 @@ try {
                   </a>
                   <div _ngcontent-nyw-c391="" class="content">
                      <h3 _ngcontent-nyw-c391="">
-                        <?=$kategoriler['kategori_adi']?>
+                     <?php 
+                                
+                                foreach ($kategoriler as $kategori) {
+?>
+<?=$kategori['id']?>
+                                    <?php }?>
                      </h3>
                      <div _ngcontent-nyw-c391="" class="mat-caption-normal text-color-white ng-star-inserted">264 sonuç bulundu</div>
                      <!---->
