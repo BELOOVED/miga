@@ -1113,7 +1113,9 @@ if (strpos($pageName,".") === False){
                                           <div _ngcontent-tus-c348="" id="delivery-inner-text" class="delivery-options-inner-text mat-caption-normal">En Yakın Teslimat</div>
                                           <div _ngcontent-tus-c348="" id="delivery-inner-time" class="delivery-options-inner-time mat-caption">
                                           <?php
-                                          setlocale(LC_TIME, 'tr_TR');
+                                          header('Content-Type: text/html; charset=utf-8');
+
+                                          setlocale(LC_TIME, 'tr_TR.UTF-8', 'tr_TR', 'tr', 'turkish');
                                           $bugun = new DateTime('now');
                                           $sonrakiGun = clone $bugun;
                                           $sonrakiGun->modify('+1 day');
