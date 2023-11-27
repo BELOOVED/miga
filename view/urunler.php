@@ -62,7 +62,9 @@ if ($detect->isMobile()) {?>
                </div>
             </fe-mobile-breadcrumb>
             <!---->
-            <div class="container ng-star-inserted">
+            <div class="container ng-star-inserted" style="
+    margin-top: 70px;
+">
                <div class="mat-caption-normal mobile-only mobile-filter-sort-row">
                   <div>
                      <fa-icon class="ng-fa-icon">
