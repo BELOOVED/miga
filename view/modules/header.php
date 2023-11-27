@@ -1234,34 +1234,24 @@ if ($existingUser) {
                         </a>
                         <div class="categories-sub-categories-wrapper ng-star-inserted hidden" id="categoryai" onmouseover="showCategory()" onmouseout="hideCategory()">
                            <div class="categories-wrapper">
-                              <a class="categories mat-caption-normal text-color-black discount-products ng-star-inserted" id="header-categories--tum-indirimli-urunler-dt-0" href="/urunler?q=indirim">
+                              <a class="categories mat-caption-normal text-color-black discount-products ng-star-inserted" id="header-categories--tum-indirimli-urunler-dt-0" href="/urunler/indirimli-urunler">
                                  Tüm İndirimli Ürünler 
                                  <div class="hover-arrow"></div>
                               </a>
-                              <a class="categories mat-caption-normal text-color-black ng-star-inserted" id="header-categories--telefon-ve-aksesuarlari-c-525" href="/urunler?q=telefon">
-                                 Telefon ve Aksesuarları 
+                              <?php
+                            $sql = "SELECT * FROM kategoriler";
+
+                            $stmt = $pdo->prepare($sql);
+                            $stmt->execute();
+
+                            $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                            foreach ($kategoriler as $kategori) {?>
+                              <a class="categories mat-caption-normal text-color-black ng-star-inserted" id="header-categories--telefon-ve-aksesuarlari-c-525" href="/urunler/<?=seo($kategori['kategori_adi'])?>/<?=seo($kategori['id'])?>">
+                                 <?=$kategori['kategori_adi']?>
                                  <div class="hover-arrow"></div>
                               </a>
-                              <a class="categories mat-caption-normal text-color-black ng-star-inserted" id="header-categories--bilgisayar-ve-aksesuarlari-c-523" href="/urunler?q=bilgisayar">
-                                 Bilgisayar ve Aksesuarları 
-                                 <div class="hover-arrow"></div>
-                              </a>
-                              <a class="categories mat-caption-normal text-color-black ng-star-inserted" id="header-categories--beyaz-esya-c-521" href="//urunler?q=beyazesya">
-                                 Beyaz Eşya 
-                                 <div class="hover-arrow"></div>
-                              </a>
-                              <a class="categories mat-caption-normal text-color-black ng-star-inserted" id="header-categories--elektrikli-ev-aletleri-c-522" href="/urunler?q=elektrikli">
-                                 Elektrikli Ev Aletleri 
-                                 <div class="hover-arrow"></div>
-                              </a>
-                              <a class="categories mat-caption-normal text-color-black ng-star-inserted" id="header-categories--oyun-konsollari-c-2ad4" href="/urunler?q=oyunkonsollari">
-                                 Oyun Konsolları 
-                                 <div class="hover-arrow"></div>
-                              </a>
-                              <a class="categories mat-caption-normal text-color-black ng-star-inserted" id="header-categories--goruntu-ve-ses-sistemleri-c-524" href="/urunler?q=goruntu">
-                                 Görüntü ve Ses Sistemleri 
-                                 <div class="hover-arrow"></div>
-                              </a>
+                             <?php }?> 
                               <!---->
                            </div>
                            <div class="sub-categories-wrapper">
