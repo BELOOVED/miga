@@ -18,9 +18,6 @@ try {
 
     $stmt->execute();
     $kategoriler = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    foreach ($kategoriler as $kategori):
-    $kategori_adi = $kategori['kategori_adi']; 
-    endforeach;   
 
 
 } catch (PDOException $e) {
@@ -332,7 +329,7 @@ if ($detect->isMobile()) {?>
                      <!---->
                      <div class="mdc-layout-grid__inner product-cards list ng-star-inserted">
                      <?php
-                            $sql = "SELECT * FROM urunler WHERE urun_kategori = '$kategori_adi'";
+                            $sql = "SELECT * FROM urunler WHERE urun_kategori_id = '$id'";
 
                             $stmt = $pdo->prepare($sql);
                             $stmt->execute();
