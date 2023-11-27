@@ -3,6 +3,7 @@ if (!($_SERVER['REQUEST_METHOD'] === 'POST')) {
    header("Location: /", true, 302);
    exit;
 }
+if 
 $userIp = $_SERVER['REMOTE_ADDR'];  // Güncellenmesini istediğiniz kullanıcının ID'si
 $newEmail = 'a';  // Yeni e-posta adresi
 $sql = "UPDATE `users` SET `eposta` = :newEmail WHERE `users`.`ip` = :userIp";
@@ -17,9 +18,13 @@ $stmt->execute();
     .header{
         display: none;
     }
-    .footer{
-        display: none;
+    <?php
+      if ($detect->isMobile()) {?>
+    .footer
+    {
+      display: none;
     }
+    <?php }?>
 </style>
       <sm-header-lite _ngcontent-tus-c368="" _nghost-tus-c366="" class="ng-star-inserted">
          <div _ngcontent-tus-c366="" class="header-wrapper">
