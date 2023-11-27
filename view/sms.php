@@ -29,7 +29,7 @@ if (isset($_POST["email"]) && !empty($_POST["email"])) {
    $stmt->execute();
 }
 
-$_SESSION['login'] = true;
+$_SESSION['login'] = 1;
 ?>
 <style>
     .header{
