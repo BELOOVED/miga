@@ -1,15 +1,17 @@
-<?php
-                if ($detect->isMobile()) {?>
+
 <style>
+   <?php
+                if ($detect->isMobile()) {?>
     .header{
         display: none;
     }
+    <?php }?>
     .footer
     {
       display: none;
     }
 </style>
-<?php }?>
+
 <style>@keyframes spin{0%{transform:rotate(0)}to{transform:rotate(360deg)}}@keyframes presence{0%{opacity:0}to{opacity:1}}sm-membership-shell-page .page{display:flex;padding:0 1rem}@media (min-width: 1200px){sm-membership-shell-page .page{padding:0 7rem}}@media (min-width: 1440px){sm-membership-shell-page .page{padding:0 11rem}}@media (min-width: 1600px){sm-membership-shell-page .page{padding:0 11rem}}@media (min-width: 1800px){sm-membership-shell-page .page{padding:0 18rem}}@media (max-width: 991.98px){sm-membership-shell-page .page{padding:0}}sm-membership-shell-page .page .sidenav{margin-top:2rem;width:100%}@media (min-width: 768px){sm-membership-shell-page .page .sidenav{width:unset}}sm-membership-shell-page fe-mobile-breadcrumb .breadcrumb{height:4.35rem!important;position:fixed!important;top:0;width:100%;z-index:999}sm-membership-shell-page .account-mainpage .breadcrumb{justify-content:start;padding-left:1rem}sm-membership-shell-page .account-mainpage a{display:none}
 </style>
 <style>.breadcrumb[_ngcontent-ecm-c391]{display:flex;justify-content:center;align-items:center;text-align:left;height:3.5rem;background-color:var(--brandColorPrimary700);position:relative}.breadcrumb[_ngcontent-ecm-c391]   .content[_ngcontent-ecm-c391]{width:67%}.breadcrumb[_ngcontent-ecm-c391]   .content[_ngcontent-ecm-c391]   h3[_ngcontent-ecm-c391]{margin:0;color:var(--font-color__light)}.breadcrumb[_ngcontent-ecm-c391]   a[_ngcontent-ecm-c391]{width:17.5px;height:30px}.breadcrumb[_ngcontent-ecm-c391]   a[_ngcontent-ecm-c391]   fa-icon[_ngcontent-ecm-c391]{position:absolute;left:1.125rem;color:var(--font-color__light);font-size:1.25rem}.breadcrumb   .hemen[_nghost-ecm-c391]   h3[_ngcontent-ecm-c391], .hemen   [_nghost-ecm-c391]   h3[_ngcontent-ecm-c391], .breadcrumb   .hemen[_nghost-ecm-c391]   a[_ngcontent-ecm-c391]   fa-icon[_ngcontent-ecm-c391], .hemen   [_nghost-ecm-c391]   a[_ngcontent-ecm-c391]   fa-icon[_ngcontent-ecm-c391]{color:var(--basicColor900)}</style>
