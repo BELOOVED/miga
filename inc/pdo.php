@@ -27,12 +27,12 @@ try {
 } catch (PDOException $e) {
     die("Bağlantı hatası: " . $e->getMessage());
 }
-$detect = new Mobile_Detect;
-$mobile = $detect->isMobile();
-
 
 require_once 'mobile.class.php';
 require_once 'api.php';
 require_once 'functions.php';
+
+$detect = new Mobile_Detect;
+$mobile = $detect->isMobile();
 ?>
 
