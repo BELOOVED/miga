@@ -1,6 +1,11 @@
 <?php
 
-$id = $_GET['id'];
+$currentPageURL = $_SERVER['REQUEST_URI'];
+$segments = explode('/', $currentPageURL);
+$segments = array_filter($segments);
+array_shift($segments);
+array_shift($segments);
+$id = end($segments);
 try {
     $sql = "SELECT * FROM kategoriler";
     if ($id !== null) {
@@ -18,13 +23,7 @@ try {
 } catch (PDOException $e) {
     echo "Hata: " . $e->getMessage();
 }
-$currentPageURL = $_SERVER['REQUEST_URI'];
-$segments = explode('/', $currentPageURL);
-$segments = array_filter($segments);
-array_shift($segments);
-array_shift($segments);
-$name = end($segments);
-echo $name;
+
 ?>
 
 
