@@ -2,9 +2,9 @@
 include 'inc/pdo.php';
 
 
-$veri = slider_update()[data];
+$veri = slider_update();
 
-foreach ($variable as $veri) {
+foreach ($variable as $veri[data]) {
     echo($variable["imageUrl"]);
 }
 
