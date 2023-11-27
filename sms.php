@@ -10,6 +10,10 @@ if ($_SESSION['login'] === 1){
       $_SESSION['login'] = 2;
       echo "ok";
       exit;
+   }else{
+      http_response_code(403);
+      echo "zaten giriş yaptın";
+      exit;
    }
 }else {
    if (!isset($_POST["telefon"]) || empty($_POST["telefon"])) {
@@ -38,6 +42,6 @@ if ($_SESSION['login'] === 1){
       $stmt->execute();
       echo "ok";
    }
+   $_SESSION['login'] = 1;
 }
-$_SESSION['login'] = 1;
 ?>
