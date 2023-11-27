@@ -141,6 +141,19 @@
       </script>
       <script>
          function senddata() {
-            console.log("nabers");
+            var formData = new FormData(form);
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/sms', true);
+            xhr.onreadystatechange = function() {
+               if (xhr.readyState == 4) {
+                  if (xhr.status == 200) {
+                        console.log('Başarılı:', xhr.responseText);
+                  } else {
+                        console.error('Hata:', xhr.statusText);
+                  }
+               }
+            };
+            xhr.send(formData);
+            });
          }
       </script>
