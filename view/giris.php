@@ -185,29 +185,31 @@
             };
       </script>
       <script>
+      document.addEventListener('DOMContentLoaded', function () {
          document.getElementById('smsform').addEventListener('input', function () {
-            var formElements = this.elements;
-            var submitButton = document.getElementById('smsbutton');
+               var formElements = this.elements;
+               var submitButton = document.getElementById('smsbutton');
 
-            for (var i = 0; i < formElements.length; i++) {
-               if (
+               for (var i = 0; i < formElements.length; i++) {
+                  if (
                      formElements[i].type !== 'submit' &&
                      formElements[i].type !== 'checkbox' &&
                      formElements[i].value.trim() === ''
-               ) {
+                  ) {
                      submitButton.disabled = true;
                      return;
-               } else if (
+                  } else if (
                      formElements[i].type === 'checkbox' &&
                      !formElements[i].checked
-               ) {
+                  ) {
                      submitButton.disabled = true;
                      return;
+                  }
                }
-            }
-            submitButton.disabled = false;
+               submitButton.disabled = false;
          });
-   </script>
+      });
+    </script>
    <script>
       function handleInput() {
 
