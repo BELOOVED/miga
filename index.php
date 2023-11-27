@@ -1,7 +1,10 @@
 <?php
 include 'inc/config.php';
+include 'inc/functions.php';
+
 include 'inc/pdo.php';
 include 'inc/api.php';
+
 
 $q = explode('/', $_GET['q']);
 $page = 'main';
