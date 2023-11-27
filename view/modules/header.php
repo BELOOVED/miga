@@ -1244,7 +1244,7 @@ if ($existingUser) {
                             $stmt = $pdo->prepare($sql);
                             $stmt->execute();
 
-                            $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                            $kategoriler = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                             foreach ($kategoriler as $kategori) {?>
                               <a class="categories mat-caption-normal text-color-black ng-star-inserted" id="header-categories--telefon-ve-aksesuarlari-c-525" href="/urunler/<?=seo($kategori['kategori_adi'])?>/<?=seo($kategori['id'])?>">
