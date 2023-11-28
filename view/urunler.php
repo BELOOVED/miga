@@ -110,7 +110,7 @@ if ($detect->isMobile()) {?>
                         <!----><!----><!---->
                      </ul>
                   </fe-breadcrumb>
-                  <a class="mobile-sub-category mat-caption text-color-black ng-star-inserted" ngx-ql="" href="/telefon-c-2add?sayfa=1"> Telefon <span class="overline text-color-grey">(71)</span></a>
+                  <a class="mobile-sub-category mat-caption text-color-black ng-star-inserted" ngx-ql="" href="/telefon-c-2add?sayfa=1"> Telefon <span class="overline text-color-grey"></span></a>
                </div>
                <fe-breadcrumb class="breadcrumb desktop-only" _nghost-nyw-c389="">
                   <ul _ngcontent-nyw-c389="" class="breadcrumbs">
@@ -208,7 +208,7 @@ if ($detect->isMobile()) {?>
                                              </div>
                                              <div mat-ripple="" class="mat-ripple mat-mdc-checkbox-ripple mat-mdc-focus-indicator"></div>
                                           </div>
-                                          <label for="mat-mdc-checkbox-27-input"><span class="mat-body-2"><?=$alt_kategori?> </span><span class="mat-body-2 text-color-grey">(68)</span></label>
+                                          <label for="mat-mdc-checkbox-27-input"><span class="mat-body-2"><?=$alt_kategori?> </span><span class="mat-body-2 text-color-grey"></span></label>
                                        </div>
                                     </mat-checkbox>
                                  </div>
@@ -239,7 +239,7 @@ if ($detect->isMobile()) {?>
                                              </div>
                                              <div mat-ripple="" class="mat-ripple mat-mdc-checkbox-ripple mat-mdc-focus-indicator"></div>
                                           </div>
-                                          <label for="mat-mdc-checkbox-52-input"><span class="mat-body-2">Money İndirimli Market Ürünleri </span><span class="mat-body-2 text-color-grey">(96)</span></label>
+                                          <label for="mat-mdc-checkbox-52-input"><span class="mat-body-2">Money İndirimli Market Ürünleri </span><span class="mat-body-2 text-color-grey"></span></label>
                                        </div>
                                     </mat-checkbox>
                                  </div>
@@ -564,7 +564,7 @@ if ($detect->isMobile()) {?>
                               </div>
                            </mat-list-option>
                            <!---->
-                        </mat-selection-list>>
+                        </mat-selection-list>
                      </div>
                      <div class="actions">
                         <mat-divider role="separator" class="mat-divider mat-divider-horizontal" aria-orientation="horizontal"></mat-divider>
@@ -614,7 +614,7 @@ if ($detect->isMobile()) {?>
                                  <div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div>
                                  <mat-pseudo-checkbox class="mat-pseudo-checkbox ng-star-inserted"></mat-pseudo-checkbox>
                                  <!---->
-                                 <div class="mat-list-text"> <?=$alt_kategori?> <span class="text-color-grey">(71)</span></div>
+                                 <div class="mat-list-text"> <?=$alt_kategori?> <span class="text-color-grey"></span></div>
                               </div>
                            </mat-list-option>
                            <?php }}?>
@@ -662,7 +662,7 @@ if ($detect->isMobile()) {?>
                                  <div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div>
                                  <mat-pseudo-checkbox class="mat-pseudo-checkbox ng-star-inserted"></mat-pseudo-checkbox>
                                  <!---->
-                                 <div class="mat-list-text"> Money İndirimli Market Ürünleri <span class="text-color-grey">(5)</span></div>
+                                 <div class="mat-list-text"> Money İndirimli Market Ürünleri <span class="text-color-grey"></span></div>
                               </div>
                            </mat-list-option>
                            <!---->
@@ -717,7 +717,7 @@ if ($detect->isMobile()) {?>
                                  <div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div>
                                  <mat-pseudo-checkbox class="mat-pseudo-checkbox ng-star-inserted"></mat-pseudo-checkbox>
                                  <!---->
-                                 <div class="mat-list-text"> <?=$alt_kategori?> <span class="text-color-grey">(22)</span></div>
+                                 <div class="mat-list-text"> <?=$alt_kategori?> <span class="text-color-grey"></span></div>
                               </div>
                            </mat-list-option>
                            <?php }}?>
