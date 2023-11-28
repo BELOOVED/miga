@@ -1463,7 +1463,12 @@ function hideCategory() {
     function openmodal(contentId, menuId) {
         $(".cdk-overlay-container").addClass("hidden");
         $("#" + contentId).removeClass("hidden");
+        if (typeof contentId !== 'undefined' && typeof filtre !== 'undefined' && typeof sirala !== 'undefined' && contentId === filtre && sirala) {
+        $(".footer").addClass("hidden");
+
     }
+    }
+    
     function openmodals(contentId) {
         $(".flatqq").addClass("hidden");
         $("#filter" + contentId).removeClass("hidden");
