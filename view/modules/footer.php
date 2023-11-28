@@ -1463,7 +1463,7 @@ function hideCategory() {
     function openmodal(contentId, menuId) {
         $(".cdk-overlay-container").addClass("hidden");
         $("#" + contentId).removeClass("hidden");
-        if (typeof contentId !== 'undefined' && typeof filtre !== 'undefined' && typeof sirala !== 'undefined' && contentId === filtre && sirala) {
+        if (contentId == 'filtre' && contentId == 'sirala') {
         $(".footer").addClass("hidden");
 
     }
