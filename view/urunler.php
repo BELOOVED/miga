@@ -1001,7 +1001,7 @@ if ($detect->isMobile()) {?>
     });
 });
     $(document).ready(function () {
-    $('mat-option[role=option]').change(function () {
+    $('mat-option[role=option]').click(function () {
         var selectedValue = $(this).val();
         $.ajax({
             url: 'product_filter.php',
