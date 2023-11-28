@@ -918,7 +918,7 @@ if ($detect->isMobile()) {?>
         $.ajax({
             url: 'product_filter.php',
             type: 'POST',
-            data: { option: selectedValue },
+            data: { option: selectedValue, id: $id },
             success: function (response) {
                 console.log('Success:', response);
                 $('#product-details').html(response);

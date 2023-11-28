@@ -1,6 +1,7 @@
 <?php
 include 'inc/pdo.php';
 $option = $_POST['option'];
+$id = $_POST['id'];
 
 switch ($option) {
     case '1':
