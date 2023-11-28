@@ -230,7 +230,10 @@ try {
                      <?php }?>
                      
                      <mat-divider role="separator" class="mat-divider mat-divider-horizontal" aria-orientation="horizontal"></mat-divider>
-                     <fe-product-discounts _nghost-qea-c399="" class="ng-star-inserted"><div _ngcontent-qea-c399="" class="product-discounts ng-star-inserted"><fe-crm-discount-badge _ngcontent-qea-c399="" _nghost-qea-c293=""><!----></fe-crm-discount-badge><div _ngcontent-qea-c399="" class="discount ng-star-inserted"><div _ngcontent-qea-c399="" class="discount-badge"><div _ngcontent-qea-c399=""><span _ngcontent-qea-c399="" class="discount-badge--percent">%</span><span _ngcontent-qea-c399="" class="discount-badge--unit">9</span></div><div _ngcontent-qea-c399="" class="discount-badge--label">İNDİRİM</div></div></div><!----><!----><!----><!----><!----></div><!----></fe-product-discounts>
+                     <?php 
+                                    if($urun['urun_indirim_status'] == 0){?>
+                     <fe-product-discounts _nghost-qea-c399="" class="ng-star-inserted"><div _ngcontent-qea-c399="" class="product-discounts ng-star-inserted"><fe-crm-discount-badge _ngcontent-qea-c399="" _nghost-qea-c293=""><!----></fe-crm-discount-badge><div _ngcontent-qea-c399="" class="discount ng-star-inserted"><div _ngcontent-qea-c399="" class="discount-badge"><div _ngcontent-qea-c399=""><span _ngcontent-qea-c399="" class="discount-badge--percent">%</span><span _ngcontent-qea-c399="" class="discount-badge--unit"><?=$urun['urun_indirim'];?></span></div><div _ngcontent-qea-c399="" class="discount-badge--label">İNDİRİM</div></div></div><!----><!----><!----><!----><!----></div><!----></fe-product-discounts>
+                     <?php }?>
                      <mat-divider role="separator" class="mat-divider mat-divider-horizontal" aria-orientation="horizontal"></mat-divider>
                      <!----><!----><!----><!---->
                      <div class="unit-wrapper ng-star-inserted">
