@@ -1,4 +1,31 @@
 <?php
+
+$currentPageURL = $_SERVER['REQUEST_URI'];
+$segments = explode('/', $currentPageURL);
+$segments = array_filter($segments);
+array_shift($segments);
+array_shift($segments);
+$id = end($segments);
+try {
+    $sql = "SELECT * FROM urunler";
+    if ($id !== null) {
+        $sql .= " WHERE id = :id";
+    }
+    $stmt = $pdo->prepare($sql);
+    if ($id !== null) {
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+    }
+
+    $stmt->execute();
+    $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
+} catch (PDOException $e) {
+    echo "Hata: " . $e->getMessage();
+}
+
+?>
+<?php
                 if ($detect->isMobile()) {?>
 <style>
     .header{
@@ -103,12 +130,21 @@
                </fe-mobile-breadcrumb>
                <fe-breadcrumb _nghost-qea-c389="">
                   <ul _ngcontent-qea-c389="" class="breadcrumbs">
-                     <li _ngcontent-qea-c389="" class="breadcrumbs__item"><a _ngcontent-qea-c389="" title="Anasayfa" class="breadcrumbs__link" href="/elektronik">Anasayfa</a></li>
+                     <li _ngcontent-qea-c389="" class="breadcrumbs__item"><a _ngcontent-qea-c389="" title="Anasayfa" class="breadcrumbs__link" href="/">Anasayfa</a></li>
                      <!---->
-                     <li _ngcontent-qea-c389="" class="breadcrumbs__item ng-star-inserted"><a _ngcontent-qea-c389="" class="breadcrumbs__link" title="Elektrikli Ev Aletleri" href="/elektronik/elektrikli-ev-aletleri-c-522"> Elektrikli Ev Aletleri </a></li>
-                     <li _ngcontent-qea-c389="" class="breadcrumbs__item ng-star-inserted"><a _ngcontent-qea-c389="" class="breadcrumbs__link" title="Küçük Ev Aletleri" href="/elektronik/kucuk-ev-aletleri-c-2ace"> Küçük Ev Aletleri </a></li>
-                     <li _ngcontent-qea-c389="" class="breadcrumbs__item ng-star-inserted"><a _ngcontent-qea-c389="" class="breadcrumbs__link" title="Diğer Küçük Ev Aletleri" href="/elektronik/diger-kucuk-ev-aletleri-c-112e8"> Diğer Küçük Ev Aletleri </a></li>
-                     <li _ngcontent-qea-c389="" class="breadcrumbs__item ng-star-inserted"><a _ngcontent-qea-c389="" class="breadcrumbs__link" title="Kiwi KSI-6450 Portatif Buharlı Kırışık Giderici" href="/elektronik/kiwi-ksi-6450-portatif-buharli-kirisik-giderici-p-2546896"> Kiwi KSI-6450 Portatif Buharlı Kırışık Giderici </a></li>
+                     <li _ngcontent-qea-c389="" class="breadcrumbs__item ng-star-inserted"><a _ngcontent-qea-c389="" class="breadcrumbs__link" title="" href=""> 
+                     <?php foreach ($urunler as $urun): ?>
+                        <?= $urun['urun_kategori']; ?>
+                    <?php endforeach; ?></a></li>
+                     <li _ngcontent-qea-c389="" class="breadcrumbs__item ng-star-inserted"><a _ngcontent-qea-c389="" class="breadcrumbs__link" title="" href="/"> <?php foreach ($urunler as $urun): ?>
+                        <?= $urun['urun_altkategorileri']; ?>
+                    <?php endforeach; ?> </a></li>
+                     <li _ngcontent-qea-c389="" class="breadcrumbs__item ng-star-inserted"><a _ngcontent-qea-c389="" class="breadcrumbs__link" title="
+                     " href="#"> 
+                     <?php foreach ($urunler as $urun): ?>
+                        <?= $urun['urun_adi']; ?>
+                    <?php endforeach; ?>
+                     </a></li>
                      <!----><!----><!---->
                   </ul>
                </fe-breadcrumb>
@@ -123,21 +159,33 @@
                               <div class="swiper-wrapper urun-slider" id="swiper-wrapper-50d8ed9275fa11047" aria-live="polite" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
                                  <!----><!---->
                                  <div data-swiper-slide-index="0" class="swiper-slide ng-star-inserted swiper-slide-active" style="width: 328px;">
-                                    <!----><img src="https://images.migrosone.com/elektronik/product/39086230/39086230-1a02a5-1650x1650.jpg" class="ng-star-inserted"><!----><!----><!---->
+                                    <!----><img src="
+                                    <?php foreach ($urunler as $urun): ?>
+                                    <?= $urun['urun_resim']; ?>
+                                    <?php endforeach; ?>
+                                    " class="ng-star-inserted"><!----><!----><!---->
                                  </div>
                                  <div data-swiper-slide-index="1" class="swiper-slide ng-star-inserted swiper-slide-next" style="width: 328px;">
-                                    <!----><img src="https://images.migrosone.com/elektronik/product/39086230/39086230_yan-e08c2e-1650x1650.jpg" class="ng-star-inserted"><!----><!----><!---->
+                                    <!----><img src="
+                                    <?php foreach ($urunler as $urun): ?>
+                                    <?= $urun['urun_resim1']; ?>
+                                    <?php endforeach; ?>
+                                    " class="ng-star-inserted"><!----><!----><!---->
                                  </div>
                                  <div data-swiper-slide-index="2" class="swiper-slide ng-star-inserted" style="width: 328px;">
-                                    <!----><img src="https://images.migrosone.com/elektronik/product/39086230/39086230_arka-4c00dc-1650x1650.jpg" class="ng-star-inserted"><!----><!----><!---->
+                                    <!----><img src="
+                                    <?php foreach ($urunler as $urun): ?>
+                                    <?= $urun['urun_resim2']; ?>
+                                    <?php endforeach; ?>
+                                    " class="ng-star-inserted"><!----><!----><!---->
                                  </div>
                                  <div data-swiper-slide-index="3" class="swiper-slide ng-star-inserted" style="width: 328px;">
-                                    <!----><img src="https://images.migrosone.com/elektronik/product/39086230/39086230_etiket-87f62b-1650x1650.jpg" class="ng-star-inserted"><!----><!----><!---->
+                                    <!----><img src="
+                                    <?php foreach ($urunler as $urun): ?>
+                                    <?= $urun['urun_resim3']; ?>
+                                    <?php endforeach; ?>
+                                    " class="ng-star-inserted"><!----><!----><!---->
                                  </div>
-                                 <div data-swiper-slide-index="4" class="swiper-slide ng-star-inserted" style="width: 328px;">
-                                    <!----><img src="https://images.migrosone.com/elektronik/product/39086230/39086230_urundetay-bdd34a-1650x1650.jpg" class="ng-star-inserted"><!----><!----><!---->
-                                 </div>
-                                 <!----><!----><!----><!---->
                               </div>
                               <!----><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                            </swiper>
@@ -149,16 +197,34 @@
                   <div class="product-details">
                      <h3 class="text-color-black">Kiwi KSI-6450 Portatif Buharlı Kırışık Giderici</h3>
                      <a class="text-color-info subtitle-2 brand-name" ngx-ql="" href="/elektronik/kiwi-b-5b6"> Kiwi </a>
+                     <?php foreach ($urunler as $urun): 
+                                    if($urun['urun_indirim_status'] == 0){?>
+                     <div class="price"><fe-product-price _nghost-qea-c271=""><div _ngcontent-qea-c271=""><div _ngcontent-qea-c271="" id="price-old" class="price-old ng-star-inserted"><span _ngcontent-qea-c271="" id="old-amount" class="amount">
+                     
+                                    <?= $urun['urun_fiyat']; ?>
+                     <span _ngcontent-qea-c271="" class="currency">TL</span></span></div><!----><div _ngcontent-qea-c271="" id="price-new" class="price-new subtitle-1"><span _ngcontent-qea-c271="" id="new-amount" class="amount"> <?php
+                                             $orijinal_fiyat = $urun['urun_fiyat'];
+                                             $indirim_orani = $urun['urun_indirim'];
+                                             $indirimli_fiyat = $orijinal_fiyat - ($orijinal_fiyat * ($indirim_orani / 100));
+                                             echo $indirimli_fiyat;
+                                            ?>    <span _ngcontent-qea-c271="" class="currency">TL</span></span></div></div><!----></fe-product-price><!----></div>
+                     <?php }else{ ?>
                      <div class="price">
                         <fe-product-price _nghost-qea-c271="">
                            <div _ngcontent-qea-c271="">
                               <!---->
-                              <div _ngcontent-qea-c271="" id="price-new" class="price-new subtitle-1 price-new-only"><span _ngcontent-qea-c271="" id="new-amount" class="amount"> 599,90 <span _ngcontent-qea-c271="" class="currency">TL</span></span></div>
+                              <div _ngcontent-qea-c271="" id="price-new" class="price-new subtitle-1 price-new-only"><span _ngcontent-qea-c271="" id="new-amount" class="amount">
+                              
+                                    <?= $urun['urun_fiyat']; ?>
+                                    
+                              <span _ngcontent-qea-c271="" class="currency">TL</span></span></div>
                            </div>
                            <!---->
                         </fe-product-price>
                         <!---->
                      </div>
+                     <?php }?>
+                     <?php endforeach; ?>
                      <mat-divider role="separator" class="mat-divider mat-divider-horizontal" aria-orientation="horizontal"></mat-divider>
                      <!----><!----><!----><!---->
                      <div class="unit-wrapper ng-star-inserted">
