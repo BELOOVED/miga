@@ -290,7 +290,7 @@ try {
             <!----><!----><!---->
             <div class="sticky-add-button mobile-only">
                                    <?php if($urun['urun_indirim_status'] == 0){?>
-            <fe-product-price class="product-price ng-star-inserted" _nghost-qea-c271=""><div _ngcontent-qea-c271=""><div _ngcontent-qea-c271="" id="price-old" class="price-old ng-star-inserted"><span _ngcontent-qea-c271="" id="old-amount" class="amount">48.799,00 <span _ngcontent-qea-c271="" class="currency">TL</span></span></div><!----><div _ngcontent-qea-c271="" id="price-new" class="price-new subtitle-1"><span _ngcontent-qea-c271="" id="new-amount" class="amount"> <?php
+            <fe-product-price class="product-price ng-star-inserted" _nghost-qea-c271=""><div _ngcontent-qea-c271=""><div _ngcontent-qea-c271="" id="price-old" class="price-old ng-star-inserted"><span _ngcontent-qea-c271="" id="old-amount" class="amount"><?=$urun['urun_fiyat'];?> <span _ngcontent-qea-c271="" class="currency">TL</span></span></div><!----><div _ngcontent-qea-c271="" id="price-new" class="price-new subtitle-1"><span _ngcontent-qea-c271="" id="new-amount" class="amount"> <?php
                                              $orijinal_fiyat = $urun['urun_fiyat'];
                                              $indirim_orani = $urun['urun_indirim'];
                                              $indirimli_fiyat = $orijinal_fiyat - ($orijinal_fiyat * ($indirim_orani / 100));
@@ -345,13 +345,17 @@ try {
                </fe-mobile-breadcrumb>
                <fe-breadcrumb _nghost-tus-c389="">
                   <ul _ngcontent-tus-c389="" class="breadcrumbs">
-                     <li _ngcontent-tus-c389="" class="breadcrumbs__item"><a _ngcontent-tus-c389="" title="Anasayfa" class="breadcrumbs__link" href="/elektronik">Anasayfa</a></li>
+                     <li _ngcontent-tus-c389="" class="breadcrumbs__item"><a _ngcontent-tus-c389="" title="Anasayfa" class="breadcrumbs__link" href="/">Anasayfa</a></li>
                      <!---->
-                     <li _ngcontent-tus-c389="" class="breadcrumbs__item ng-star-inserted"><a _ngcontent-tus-c389="" class="breadcrumbs__link" title="Ev, Yaşam" href="/elektronik/ev-yasam-c-1190c"> Ev, Yaşam </a></li>
-                     <li _ngcontent-tus-c389="" class="breadcrumbs__item ng-star-inserted"><a _ngcontent-tus-c389="" class="breadcrumbs__link" title="Mutfak Eşyaları" href="/elektronik/mutfak-esyalari-c-119a2"> Mutfak Eşyaları </a></li>
-                     <li _ngcontent-tus-c389="" class="breadcrumbs__item ng-star-inserted"><a _ngcontent-tus-c389="" class="breadcrumbs__link" title="Fırında Pişirme" href="/elektronik/firinda-pisirme-c-119b7"> Fırında Pişirme </a></li>
-                     <li _ngcontent-tus-c389="" class="breadcrumbs__item ng-star-inserted"><a _ngcontent-tus-c389="" class="breadcrumbs__link" title="Kek Kalıbı" href="/elektronik/kek-kalibi-c-119c7"> Kek Kalıbı </a></li>
-                     <li _ngcontent-tus-c389="" class="breadcrumbs__item ng-star-inserted"><a _ngcontent-tus-c389="" class="breadcrumbs__link" title="Masterchef Mini Döküm Ürünleri" href="/elektronik/masterchef-mini-dokum-urunleri-p-1e902a9"> Masterchef Mini Döküm Ürünleri </a></li>
+                     <li _ngcontent-tus-c389="" class="breadcrumbs__item ng-star-inserted"><a _ngcontent-tus-c389="" class="breadcrumbs__link" title="" href="/"> <?php foreach ($urunler as $urun): ?>
+                                    <?= $urun['urun_kategori']; ?>
+                                    <?php endforeach; ?> </a></li>
+                     <li _ngcontent-tus-c389="" class="breadcrumbs__item ng-star-inserted"><a _ngcontent-tus-c389="" class="breadcrumbs__link" title="" href="/"> <?php foreach ($urunler as $urun): ?>
+                                    <?= $urun['urun_altkategorileri']; ?>
+                                    <?php endforeach; ?></a></li>
+                     <li _ngcontent-tus-c389="" class="breadcrumbs__item ng-star-inserted"><a _ngcontent-tus-c389="" class="breadcrumbs__link" title="" href="#"> <?php foreach ($urunler as $urun): ?>
+                                    <?= $urun['urun_adi']; ?>
+                                    <?php endforeach; ?> </a></li>
                      <!----><!----><!---->
                   </ul>
                </fe-breadcrumb>
@@ -361,62 +365,77 @@ try {
                         <div class="preview-image-wrapper">
                            <swiper class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events">
                               <!----><!----><!---->
-                              <div class="swiper-wrapper" id="swiper-wrapper-a688a1f52d06d3c9" aria-live="polite" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
+                              <div class="swiper-wrapper urun-slider" id="swiper-wrapper-a688a1f52d06d3c9" aria-live="polite" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
                                  <!----><!---->
                                  <div data-swiper-slide-index="0" class="swiper-slide ng-star-inserted swiper-slide-active" style="width: 328px;">
-                                    <!----><img src="https://images.migrosone.com/elektronik/product/32047785/32047785-1065dd-1650x1650.jpg" class="ng-star-inserted"><!----><!----><!---->
+                                    <!----><img src="
+                                    <?php foreach ($urunler as $urun): ?>
+                                    <?= $urun['urun_resim']; ?>
+                                    <?php endforeach; ?>
+                                    " class="ng-star-inserted"><!----><!----><!---->
                                  </div>
                                  <div data-swiper-slide-index="1" class="swiper-slide ng-star-inserted swiper-slide-next" style="width: 328px;">
-                                    <!----><img src="https://images.migrosone.com/elektronik/product/32047785/32047785_yan-227e30-1650x1650.jpg" class="ng-star-inserted"><!----><!----><!---->
+                                    <!----><img src="
+                                    <?php foreach ($urunler as $urun): ?>
+                                    <?= $urun['urun_resim1']; ?>
+                                    <?php endforeach; ?>
+                                    " class="ng-star-inserted"><!----><!----><!---->
                                  </div>
                                  <div data-swiper-slide-index="2" class="swiper-slide ng-star-inserted" style="width: 328px;">
-                                    <!----><img src="https://images.migrosone.com/elektronik/product/32047785/32047785_arka-500938-1650x1650.jpg" class="ng-star-inserted"><!----><!----><!---->
+                                    <!----><img src="
+                                    <?php foreach ($urunler as $urun): ?>
+                                    <?= $urun['urun_resim2']; ?>
+                                    <?php endforeach; ?>
+                                    " class="ng-star-inserted"><!----><!----><!---->
+                                 </div>
+                                 <div data-swiper-slide-index="2" class="swiper-slide ng-star-inserted" style="width: 328px;">
+                                    <!----><img src="
+                                    <?php foreach ($urunler as $urun): ?>
+                                    <?= $urun['urun_resim3']; ?>
+                                    <?php endforeach; ?>
+                                    " class="ng-star-inserted"><!----><!----><!---->
                                  </div>
                                  <!----><!----><!----><!---->
                               </div>
                               <!----><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                            </swiper>
                         </div>
-                        <div class="product-images-carousel-cells ng-star-inserted">
-                           <div class="product-images-carousel-cell product-images-carousel-cell--active ng-star-inserted"><img src="https://images.migrosone.com/elektronik/product/32047785/32047785-1065dd-105x105.jpg" alt="Product Image"></div>
-                           <div class="product-images-carousel-cell ng-star-inserted"><img src="https://images.migrosone.com/elektronik/product/32047785/32047785_yan-227e30-105x105.jpg" alt="Product Image"></div>
-                           <div class="product-images-carousel-cell ng-star-inserted"><img src="https://images.migrosone.com/elektronik/product/32047785/32047785_arka-500938-105x105.jpg" alt="Product Image"></div>
-                           <!---->
-                        </div>
                         <!---->
                      </div>
                      <!---->
                   </sm-product-images>
                   <div class="product-details">
-                     <h3 class="text-color-black">Masterchef Mini Döküm Ürünleri</h3>
-                     <a class="text-color-info subtitle-2 brand-name" ngx-ql="" href="/elektronik/masterchef-b-1a26"> Masterchef </a>
+                     <h3 class="text-color-black">
+                     <?php foreach ($urunler as $urun): ?>
+                                    <?= $urun['urun_adi']; ?>
+                                    <?php endforeach; ?>
+                     </h3>
+                     <a class="text-color-info subtitle-2 brand-name" ngx-ql="" href="#"> <?php foreach ($urunler as $urun): ?>
+                                    <?= $urun['urun_marka']; ?>
+                                    <?php endforeach; ?> </a>
                      <div class="price">
-                        <fe-product-price _nghost-tus-c271="">
-                           <div _ngcontent-tus-c271="">
-                              <div _ngcontent-tus-c271="" id="price-old" class="price-old ng-star-inserted"><span _ngcontent-tus-c271="" id="old-amount" class="amount">99,95 <span _ngcontent-tus-c271="" class="currency">TL</span></span></div>
-                              <!---->
-                              <div _ngcontent-tus-c271="" id="price-new" class="price-new subtitle-1"><span _ngcontent-tus-c271="" id="new-amount" class="amount"> 84,95 <span _ngcontent-tus-c271="" class="currency">TL</span></span></div>
-                           </div>
-                           <!---->
-                        </fe-product-price>
+                     <?php if($urun['urun_indirim_status'] == 0){?>
+            <fe-product-price class="product-price ng-star-inserted" _nghost-qea-c271=""><div _ngcontent-qea-c271=""><div _ngcontent-qea-c271="" id="price-old" class="price-old ng-star-inserted"><span _ngcontent-qea-c271="" id="old-amount" class="amount"><?=$urun['urun_fiyat'];?> <span _ngcontent-qea-c271="" class="currency">TL</span></span></div><!----><div _ngcontent-qea-c271="" id="price-new" class="price-new subtitle-1"><span _ngcontent-qea-c271="" id="new-amount" class="amount"> <?php
+                                             $orijinal_fiyat = $urun['urun_fiyat'];
+                                             $indirim_orani = $urun['urun_indirim'];
+                                             $indirimli_fiyat = $orijinal_fiyat - ($orijinal_fiyat * ($indirim_orani / 100));
+                                             echo $indirimli_fiyat;
+                                            ?>  <span _ngcontent-qea-c271="" class="currency">TL</span></span></div></div><!----></fe-product-price>
+                                            <?php }else{?>
+               <fe-product-price class="product-price ng-star-inserted" _nghost-qea-c271="">
+                  <div _ngcontent-qea-c271="">
+                     <!---->
+                     <div _ngcontent-qea-c271="" id="price-new" class="price-new subtitle-1 price-new-only"><span _ngcontent-qea-c271="" id="new-amount" class="amount"> <?= $urun['urun_fiyat']; ?> <span _ngcontent-qea-c271="" class="currency">TL</span></span></div>
+                  </div>
+                  <?php }?>
+               </fe-product-price>
                         <!---->
                      </div>
                      <mat-divider role="separator" class="mat-divider mat-divider-horizontal" aria-orientation="horizontal"></mat-divider>
-                     <fe-product-discounts _nghost-tus-c399="" class="ng-star-inserted">
-                        <div _ngcontent-tus-c399="" class="product-discounts ng-star-inserted">
-                           <fe-crm-discount-badge _ngcontent-tus-c399="" _nghost-tus-c293="">
-                              <!---->
-                           </fe-crm-discount-badge>
-                           <div _ngcontent-tus-c399="" class="discount ng-star-inserted">
-                              <div _ngcontent-tus-c399="" class="discount-badge">
-                                 <div _ngcontent-tus-c399=""><span _ngcontent-tus-c399="" class="discount-badge--percent">%</span><span _ngcontent-tus-c399="" class="discount-badge--unit">15</span></div>
-                                 <div _ngcontent-tus-c399="" class="discount-badge--label">İNDİRİM</div>
-                              </div>
-                           </div>
-                           <!----><!----><!----><!----><!---->
-                        </div>
-                        <!---->
-                     </fe-product-discounts>
+                     <?php 
+                                    if($urun['urun_indirim_status'] == 0){?>
+                     <fe-product-discounts _nghost-qea-c399="" class="ng-star-inserted"><div _ngcontent-qea-c399="" class="product-discounts ng-star-inserted"><fe-crm-discount-badge _ngcontent-qea-c399="" _nghost-qea-c293=""><!----></fe-crm-discount-badge><div _ngcontent-qea-c399="" class="discount ng-star-inserted"><div _ngcontent-qea-c399="" class="discount-badge"><div _ngcontent-qea-c399=""><span _ngcontent-qea-c399="" class="discount-badge--percent">%</span><span _ngcontent-qea-c399="" class="discount-badge--unit"><?=$urun['urun_indirim'];?></span></div><div _ngcontent-qea-c399="" class="discount-badge--label">İNDİRİM</div></div></div><!----><!----><!----><!----><!----></div><!----></fe-product-discounts>
+                     <?php }?>
                      <mat-divider role="separator" class="mat-divider mat-divider-horizontal ng-star-inserted" aria-orientation="horizontal"></mat-divider>
                      <!----><!----><!----><!---->
                      <div class="unit-wrapper ng-star-inserted">
@@ -461,7 +480,7 @@ try {
                               <div class="mat-tab-header-pagination-chevron"></div>
                            </button>
                            <div class="mat-tab-label-container">
-                              <div role="tablist" class="mat-tab-list" style="transform: translateX(-218px);">
+                              <div role="tablist" class="mat-tab-list" style="transform: translateX(0px);">
                                  <div class="mat-tab-labels">
                                     <div role="tab" mattablabelwrapper="" mat-ripple="" cdkmonitorelementfocus="" class="mat-ripple mat-tab-label mat-focus-indicator mat-tab-label-active ng-star-inserted" id="mat-tab-label-0-0" tabindex="0" aria-posinset="1" aria-setsize="3" aria-controls="mat-tab-content-0-0" aria-selected="true" aria-disabled="false">
                                        <div class="mat-tab-label-content">

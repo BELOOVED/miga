@@ -17,8 +17,7 @@
 <style>.banner[_ngcontent-ecm-c508]{height:4.938rem;border-radius:3px;background-image:linear-gradient(275deg,#f7e7a6,#bb9962);display:flex;align-items:center;justify-content:space-between;padding:1.125rem .625rem 1.125rem 1.188rem;position:relative}.banner[_ngcontent-ecm-c508]   .logo[_ngcontent-ecm-c508]{width:5.938rem;height:2.687rem}.banner[_ngcontent-ecm-c508]   .title[_ngcontent-ecm-c508]{flex:1;font-weight:900;line-height:normal;color:#412761;margin-left:.75rem}.banner[_ngcontent-ecm-c508]   .register-button[_ngcontent-ecm-c508]{width:6.625rem;height:1.938rem;border-radius:3px;background-image:linear-gradient(106deg,#3d1857 0%,#6d5181);display:flex;justify-content:space-around;align-items:center}.banner[_ngcontent-ecm-c508]   .register-button[_ngcontent-ecm-c508]   span[_ngcontent-ecm-c508]{font-size:.7rem;color:var(--basicColorWhite);font-weight:600;margin-left:.25rem}.banner[_ngcontent-ecm-c508]   .register-button[_ngcontent-ecm-c508]   fa-icon[_ngcontent-ecm-c508]{color:var(--basicColorWhite)}.banner[_ngcontent-ecm-c508]   .description[_ngcontent-ecm-c508]{color:var(--basicColorBlack);position:absolute;bottom:.532rem;right:.532rem;font-size:.55rem;line-height:normal;font-weight:900}.banner[_ngcontent-ecm-c508]   .description--amount[_ngcontent-ecm-c508]{color:#412761}.banner.small[_ngcontent-ecm-c508]{height:3.125rem;width:100%;padding:0 .813rem}.banner.small[_ngcontent-ecm-c508]   .logo[_ngcontent-ecm-c508]{width:4.375rem;height:2.063rem}.banner.small[_ngcontent-ecm-c508]   .title[_ngcontent-ecm-c508]{font-size:.75rem}.banner.small[_ngcontent-ecm-c508]   fa-icon[_ngcontent-ecm-c508]{color:#412761}</style>
 
 <?php
-   if (isset($_SESSION['login'])){
-      $_SESSION['login'] = 0;
+   if (isset($_SESSION['login']) == 1){
   
    ?>
 <main _ngcontent-cro-c368="" class="elektronik">
@@ -44,7 +43,7 @@
          <sm-membership-side-nav class="sidenav" _nghost-cro-c509="">
             <div _ngcontent-cro-c509="" class="container">
                <!---->
-               <div _ngcontent-cro-c509="" class="nav-header__logged-out ng-star-inserted">
+               <div _ngcontent-cro-c509="" class="nav-header__logged-out ng-star-inserted" style="margin-top: 120px;">
                   <div _ngcontent-cro-c509="" class="mat-headline text-color-black text-align-center">Merhaba 👋</div>
                </div>
                <!---->
