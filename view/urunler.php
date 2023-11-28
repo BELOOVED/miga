@@ -900,7 +900,7 @@ if ($detect->isMobile()) {?>
                      </div>
                      <div class="actions">
                         <mat-divider role="separator" class="mat-divider mat-divider-horizontal" aria-orientation="horizontal"></mat-divider>
-                        <div class="button-container"><button mat-flat-button="" color="primary" class="button mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label">Sırala</span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button></div>
+                        <div class="button-container"><button mat-flat-button="" onclick="silra()" color="primary" class="button mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label">Sırala</span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button></div>
                      </div>
                   </sm-mobile-sort-modal>
                   <!---->
@@ -930,5 +930,10 @@ if ($detect->isMobile()) {?>
         });
     });
 });
-
+function silra(){
+      setTimeout(function() {
+            $('#spinner').addClass('hidden');
+       }, 1000);
+       closemodal();
+}
 </script>
