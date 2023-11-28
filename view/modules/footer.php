@@ -1479,6 +1479,8 @@ function hideCategory() {
     }
     function closemodal() {
         $(".cdk-overlay-container").addClass("hidden");
+        $(".footer").removeClass("hidden");
+
     }
     function sepetadres() {
         $("#sepet1").addClass("hidden");
