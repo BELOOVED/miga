@@ -931,7 +931,7 @@ if ($detect->isMobile()) {?>
     });
 });
 function silra(){
-   $('#spinner').removeClass('hidden');
+   $('#spinner').toggleClass('hidden');
        closemodal();
 }
 </script>
