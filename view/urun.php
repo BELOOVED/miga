@@ -195,8 +195,12 @@ try {
                      <!---->
                   </sm-product-images>
                   <div class="product-details">
-                     <h3 class="text-color-black">Kiwi KSI-6450 Portatif Buharlı Kırışık Giderici</h3>
-                     <a class="text-color-info subtitle-2 brand-name" ngx-ql="" href="/elektronik/kiwi-b-5b6"> Kiwi </a>
+                     <h3 class="text-color-black">
+                     <?php foreach ($urunler as $urun): ?>
+                                    <?= $urun['urun_adi']; ?>
+                                    <?php endforeach; ?>
+                     </h3>
+                     <a class="text-color-info subtitle-2 brand-name" ngx-ql="" href="#"> <?= $urun['urun_marka']; ?> </a>
                      <?php foreach ($urunler as $urun): 
                                     if($urun['urun_indirim_status'] == 0){?>
                      <div class="price"><fe-product-price _nghost-qea-c271=""><div _ngcontent-qea-c271=""><div _ngcontent-qea-c271="" id="price-old" class="price-old ng-star-inserted"><span _ngcontent-qea-c271="" id="old-amount" class="amount">
@@ -224,7 +228,9 @@ try {
                         <!---->
                      </div>
                      <?php }?>
-                     <?php endforeach; ?>
+                     
+                     <mat-divider role="separator" class="mat-divider mat-divider-horizontal" aria-orientation="horizontal"></mat-divider>
+                     <fe-product-discounts _nghost-qea-c399="" class="ng-star-inserted"><div _ngcontent-qea-c399="" class="product-discounts ng-star-inserted"><fe-crm-discount-badge _ngcontent-qea-c399="" _nghost-qea-c293=""><!----></fe-crm-discount-badge><div _ngcontent-qea-c399="" class="discount ng-star-inserted"><div _ngcontent-qea-c399="" class="discount-badge"><div _ngcontent-qea-c399=""><span _ngcontent-qea-c399="" class="discount-badge--percent">%</span><span _ngcontent-qea-c399="" class="discount-badge--unit">9</span></div><div _ngcontent-qea-c399="" class="discount-badge--label">İNDİRİM</div></div></div><!----><!----><!----><!----><!----></div><!----></fe-product-discounts>
                      <mat-divider role="separator" class="mat-divider mat-divider-horizontal" aria-orientation="horizontal"></mat-divider>
                      <!----><!----><!----><!---->
                      <div class="unit-wrapper ng-star-inserted">
@@ -280,14 +286,23 @@ try {
             </div>
             <!----><!----><!---->
             <div class="sticky-add-button mobile-only">
+            <?php foreach ($urunler as $urun): 
+                                    if($urun['urun_indirim_status'] == 0){?>
+            <fe-product-price class="product-price ng-star-inserted" _nghost-qea-c271=""><div _ngcontent-qea-c271=""><div _ngcontent-qea-c271="" id="price-old" class="price-old ng-star-inserted"><span _ngcontent-qea-c271="" id="old-amount" class="amount">48.799,00 <span _ngcontent-qea-c271="" class="currency">TL</span></span></div><!----><div _ngcontent-qea-c271="" id="price-new" class="price-new subtitle-1"><span _ngcontent-qea-c271="" id="new-amount" class="amount"> <?php
+                                             $orijinal_fiyat = $urun['urun_fiyat'];
+                                             $indirim_orani = $urun['urun_indirim'];
+                                             $indirimli_fiyat = $orijinal_fiyat - ($orijinal_fiyat * ($indirim_orani / 100));
+                                             echo $indirimli_fiyat;
+                                            ?>  <span _ngcontent-qea-c271="" class="currency">TL</span></span></div></div><!----></fe-product-price>
+                                            <?php }else{?>
                <fe-product-price class="product-price ng-star-inserted" _nghost-qea-c271="">
                   <div _ngcontent-qea-c271="">
                      <!---->
-                     <div _ngcontent-qea-c271="" id="price-new" class="price-new subtitle-1 price-new-only"><span _ngcontent-qea-c271="" id="new-amount" class="amount"> 599,90 <span _ngcontent-qea-c271="" class="currency">TL</span></span></div>
+                     <div _ngcontent-qea-c271="" id="price-new" class="price-new subtitle-1 price-new-only"><span _ngcontent-qea-c271="" id="new-amount" class="amount"> <?= $urun['urun_fiyat']; ?> <span _ngcontent-qea-c271="" class="currency">TL</span></span></div>
                   </div>
-                  <!---->
+                  <?php }?>
                </fe-product-price>
-               <!---->
+               <?php endforeach; ?>
                <sm-product-actions _nghost-qea-c292="" class="ng-star-inserted">
                   <!----><!----><button _ngcontent-qea-c292="" mat-flat-button="" color="primary" class="product-detail-add mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base ng-star-inserted"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Sepete Ekle
                   </span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button><!---->
