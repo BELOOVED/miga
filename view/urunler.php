@@ -911,9 +911,97 @@ if ($detect->isMobile()) {?>
       </div>
    </div>
 </div>
+<div class="cdk-overlay-container elektronik hidden" id="sirala2">
+   <div class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing"></div>
+   <div class="cdk-overlay-connected-position-bounding-box" dir="ltr" style="top: 0px; left: 0px; height: 100%; width: 100%;">
+      <div id="cdk-overlay-2" class="cdk-overlay-pane dialog-shadow" style="width: 223.984px; top: 296.387px; left: 766.973px;">
+         <div role="listbox" tabindex="-1" class="ng-trigger ng-trigger-transformPanel ng-tns-c190-2 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel non-scrollable" id="mat-select-0-panel" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-0">
+            <!---->
+            <div class="ng-tns-c190-2">
+               <!---->
+               <mat-option role="option" class="mat-mdc-option mat-mdc-focus-indicator mdc-list-item mat-body-2 ng-star-inserted mdc-list-item--selected mat-mdc-option-active" id="mat-option-1" tabindex="1" aria-disabled="false" aria-selected="true">
+                  <!---->
+                  <span class="mdc-list-item__primary-text">
+                     Önerilenler <!---->
+                  </span>
+                  <!---->
+                  <div mat-ripple="" class="mat-ripple mat-mdc-option-ripple"></div>
+               </mat-option>
+               <mat-option role="option" class="mat-mdc-option mat-mdc-focus-indicator mdc-list-item mat-body-2 ng-star-inserted" id="mat-option-2" tabindex="2" aria-disabled="false">
+                  <!---->
+                  <span class="mdc-list-item__primary-text">
+                     Çok Satanlar <!---->
+                  </span>
+                  <!---->
+                  <div mat-ripple="" class="mat-ripple mat-mdc-option-ripple"></div>
+               </mat-option>
+               <mat-option role="option" class="mat-mdc-option mat-mdc-focus-indicator mdc-list-item mat-body-2 ng-star-inserted" id="mat-option-3" tabindex="3" aria-disabled="false">
+                  <!---->
+                  <span class="mdc-list-item__primary-text">
+                     Satın Aldıklarıma Göre <!---->
+                  </span>
+                  <!---->
+                  <div mat-ripple="" class="mat-ripple mat-mdc-option-ripple"></div>
+               </mat-option>
+               <mat-option role="option" class="mat-mdc-option mat-mdc-focus-indicator mdc-list-item mat-body-2 ng-star-inserted" id="mat-option-4" tabindex="4" aria-disabled="false">
+                  <!---->
+                  <span class="mdc-list-item__primary-text">
+                     İndirim Yüzdesine Göre <!---->
+                  </span>
+                  <!---->
+                  <div mat-ripple="" class="mat-ripple mat-mdc-option-ripple"></div>
+               </mat-option>
+               <mat-option role="option" class="mat-mdc-option mat-mdc-focus-indicator mdc-list-item mat-body-2 ng-star-inserted" id="mat-option-5" tabindex="5" aria-disabled="false">
+                  <!---->
+                  <span class="mdc-list-item__primary-text">
+                     Önce En Düşük Fiyat <!---->
+                  </span>
+                  <!---->
+                  <div mat-ripple="" class="mat-ripple mat-mdc-option-ripple"></div>
+               </mat-option>
+               <mat-option role="option" class="mat-mdc-option mat-mdc-focus-indicator mdc-list-item mat-body-2 ng-star-inserted" id="mat-option-6" tabindex="6" aria-disabled="false">
+                  <!---->
+                  <span class="mdc-list-item__primary-text">
+                     Önce En Yüksek Fiyat <!---->
+                  </span>
+                  <!---->
+                  <div mat-ripple="" class="mat-ripple mat-mdc-option-ripple"></div>
+               </mat-option>
+               <mat-option role="option" class="mat-mdc-option mat-mdc-focus-indicator mdc-list-item mat-body-2 ng-star-inserted" id="mat-option-7" tabindex="7" aria-disabled="false">
+                  <!---->
+                  <span class="mdc-list-item__primary-text">
+                     İndirim Miktarına Göre <!---->
+                  </span>
+                  <!---->
+                  <div mat-ripple="" class="mat-ripple mat-mdc-option-ripple"></div>
+               </mat-option>
+               <!---->
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
 <script>
-    $(document).ready(function () {
+      $(document).ready(function () {
     $('input[type=radio]').change(function () {
+        var selectedValue = $(this).val();
+        $.ajax({
+            url: 'product_filter.php',
+            type: 'POST',
+            data: { option: selectedValue, id: <?=$id?> },
+            success: function (response) {
+                console.log('Success:', response);
+                $('#product-details').html(response);
+            },
+            error: function (xhr, status, error) {
+                console.error('Error:', error);
+                alert('Bir hata oluştu. Lütfen tekrar deneyin.');
+            }
+        });
+    });
+});
+    $(document).ready(function () {
+    $('mat-option[role=option]').change(function () {
         var selectedValue = $(this).val();
         $.ajax({
             url: 'product_filter.php',
