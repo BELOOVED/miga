@@ -352,7 +352,7 @@ if ($detect->isMobile()) {?>
                         </sm-legal-description>
                      </div>
                      <!---->
-                     <div class="mdc-layout-grid__inner product-cards list ng-star-inserted">
+                     <div class="mdc-layout-grid__inner product-cards list ng-star-inserted" id="product-details">
                         <?php
                             $sql = "SELECT * FROM urunler WHERE urun_kategori_id = '$id'";
                             $stmt = $pdo->prepare($sql);
@@ -773,7 +773,7 @@ if ($detect->isMobile()) {?>
                               <div class="mdc-form-field">
                                  <div class="mdc-radio">
                                     <div class="mat-mdc-radio-touch-target"></div>
-                                    <input type="radio" class="mdc-radio__native-control" id="mat-radio-10-input" name="mat-radio-group-8" value="[object Object]" tabindex="0">
+                                    <input type="radio" class="mdc-radio__native-control" id="mat-radio-10-input" name="mat-radio-group-8" value="1" tabindex="0">
                                     <div class="mdc-radio__background">
                                        <div class="mdc-radio__outer-circle"></div>
                                        <div class="mdc-radio__inner-circle"></div>
@@ -791,7 +791,7 @@ if ($detect->isMobile()) {?>
                               <div class="mdc-form-field">
                                  <div class="mdc-radio">
                                     <div class="mat-mdc-radio-touch-target"></div>
-                                    <input type="radio" class="mdc-radio__native-control" id="mat-radio-11-input" name="mat-radio-group-8" value="[object Object]" tabindex="-1">
+                                    <input type="radio" class="mdc-radio__native-control" id="mat-radio-11-input" name="mat-radio-group-8" value="2" tabindex="-1">
                                     <div class="mdc-radio__background">
                                        <div class="mdc-radio__outer-circle"></div>
                                        <div class="mdc-radio__inner-circle"></div>
@@ -809,7 +809,7 @@ if ($detect->isMobile()) {?>
                               <div class="mdc-form-field">
                                  <div class="mdc-radio">
                                     <div class="mat-mdc-radio-touch-target"></div>
-                                    <input type="radio" class="mdc-radio__native-control" id="mat-radio-12-input" name="mat-radio-group-8" value="[object Object]" tabindex="-1">
+                                    <input type="radio" class="mdc-radio__native-control" id="mat-radio-12-input" name="mat-radio-group-8" value="3" tabindex="-1">
                                     <div class="mdc-radio__background">
                                        <div class="mdc-radio__outer-circle"></div>
                                        <div class="mdc-radio__inner-circle"></div>
@@ -827,7 +827,7 @@ if ($detect->isMobile()) {?>
                               <div class="mdc-form-field">
                                  <div class="mdc-radio">
                                     <div class="mat-mdc-radio-touch-target"></div>
-                                    <input type="radio" class="mdc-radio__native-control" id="mat-radio-13-input" name="mat-radio-group-8" value="[object Object]" tabindex="-1">
+                                    <input type="radio" class="mdc-radio__native-control" id="mat-radio-13-input" name="mat-radio-group-8" value="4" tabindex="-1">
                                     <div class="mdc-radio__background">
                                        <div class="mdc-radio__outer-circle"></div>
                                        <div class="mdc-radio__inner-circle"></div>
@@ -845,7 +845,7 @@ if ($detect->isMobile()) {?>
                               <div class="mdc-form-field">
                                  <div class="mdc-radio">
                                     <div class="mat-mdc-radio-touch-target"></div>
-                                    <input type="radio" class="mdc-radio__native-control" id="mat-radio-14-input" name="mat-radio-group-8" value="[object Object]" tabindex="-1">
+                                    <input type="radio" class="mdc-radio__native-control" id="mat-radio-14-input" name="mat-radio-group-8" value="5" tabindex="-1">
                                     <div class="mdc-radio__background">
                                        <div class="mdc-radio__outer-circle"></div>
                                        <div class="mdc-radio__inner-circle"></div>
@@ -863,7 +863,7 @@ if ($detect->isMobile()) {?>
                               <div class="mdc-form-field">
                                  <div class="mdc-radio">
                                     <div class="mat-mdc-radio-touch-target"></div>
-                                    <input type="radio" class="mdc-radio__native-control" id="mat-radio-15-input" name="mat-radio-group-8" value="[object Object]" tabindex="-1">
+                                    <input type="radio" class="mdc-radio__native-control" id="mat-radio-15-input" name="mat-radio-group-8" value="6" tabindex="-1">
                                     <div class="mdc-radio__background">
                                        <div class="mdc-radio__outer-circle"></div>
                                        <div class="mdc-radio__inner-circle"></div>
@@ -881,7 +881,7 @@ if ($detect->isMobile()) {?>
                               <div class="mdc-form-field">
                                  <div class="mdc-radio">
                                     <div class="mat-mdc-radio-touch-target"></div>
-                                    <input type="radio" class="mdc-radio__native-control" id="mat-radio-16-input" name="mat-radio-group-8" value="[object Object]" tabindex="-1">
+                                    <input type="radio" class="mdc-radio__native-control" id="mat-radio-16-input" name="mat-radio-group-8" value="7" tabindex="-1">
                                     <div class="mdc-radio__background">
                                        <div class="mdc-radio__outer-circle"></div>
                                        <div class="mdc-radio__inner-circle"></div>
@@ -911,3 +911,23 @@ if ($detect->isMobile()) {?>
       </div>
    </div>
 </div>
+<script>
+    $(document).ready(function () {
+        $('input[type=radio]').change(function () {
+            var selectedValue = $(this).val();
+
+            // Ajax isteği gönder
+            $.ajax({
+                url: 'product_filter.php', 
+                type: 'POST',
+                data: { option: selectedValue }, 
+                success: function (response) {
+                    $('#product-details').html(response);
+                },
+                error: function () {
+                    alert('Bir hata oluştu. Lütfen tekrar deneyin.');
+                }
+            });
+        });
+    });
+</script>
