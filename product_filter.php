@@ -1,4 +1,5 @@
 <?php
+include 'inc/pdo.php';
 $option = $_POST['option'];
 
 switch ($option) {
