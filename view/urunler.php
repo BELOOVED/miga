@@ -754,7 +754,7 @@ if ($detect->isMobile()) {?>
                <div class="mat-mdc-dialog-surface mdc-dialog__surface">
                   <sm-mobile-sort-modal class="ng-star-inserted">
                      <div matdialogtitle="" class="mat-mdc-dialog-title mdc-dialog__title" id="mat-mdc-dialog-title-1">
-                        <fe-icon-button mat-dialog-close="" class="float-right" _nghost-toa-c243="" type="button">
+                        <fe-icon-button mat-dialog-close="" class="float-right" _nghost-toa-c243="" type="button" onclick="closemodal()">
                            <button _ngcontent-toa-c243="" mat-icon-button="" color="accent" class="mdc-icon-button mat-mdc-icon-button mat-accent mat-mdc-button-base">
                               <span class="mat-mdc-button-persistent-ripple mdc-icon-button__ripple"></span>
                               <fa-icon _ngcontent-toa-c243="" class="ng-fa-icon button-icon">
