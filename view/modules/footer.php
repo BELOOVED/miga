@@ -1516,6 +1516,29 @@ function hideCategory() {
     // Initial setup - add active class to the first bullet
     $paginationBullets.eq(0).addClass('swiper-pagination-bullet-active');
   });
+  $(document).ready(function(){
+    var $paginationBullets = $('.swiper-pagination-bullet');
+
+    $('.urun-slider').on('afterChange', function(event, slick, currentSlide){
+      // Remove active class from all bullets
+      $paginationBullets.removeClass('swiper-pagination-bullet-active');
+
+      // Add active class to the bullet corresponding to the current slide
+      $paginationBullets.eq(currentSlide).addClass('swiper-pagination-bullet-active');
+    });
+
+    $('.urun-slider').slick({
+        infinite: true, // sonsuz döngü
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false, // otomatik döngü başlatma
+        prevArrow: $('.swiper-button-prev'), // önceki buton
+        nextArrow: $('.swiper-button-next'), // sonraki buton
+    });
+
+    // Initial setup - add active class to the first bullet
+    $paginationBullets.eq(0).addClass('swiper-pagination-bullet-active');
+  });
 </script>
    </body>
 </html>

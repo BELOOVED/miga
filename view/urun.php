@@ -120,7 +120,7 @@
                               <!----><!---->
                               <div class="swiper-pagination swiper-pagination-bullets ng-star-inserted"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
                               <!---->
-                              <div class="swiper-wrapper" id="swiper-wrapper-50d8ed9275fa11047" aria-live="polite" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
+                              <div class="swiper-wrapper urun-slider" id="swiper-wrapper-50d8ed9275fa11047" aria-live="polite" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
                                  <!----><!---->
                                  <div data-swiper-slide-index="0" class="swiper-slide ng-star-inserted swiper-slide-active" style="width: 328px;">
                                     <!----><img src="https://images.migrosone.com/elektronik/product/39086230/39086230-1a02a5-1650x1650.jpg" class="ng-star-inserted"><!----><!----><!---->
