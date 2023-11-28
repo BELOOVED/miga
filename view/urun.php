@@ -286,8 +286,7 @@ try {
             </div>
             <!----><!----><!---->
             <div class="sticky-add-button mobile-only">
-            <?php foreach ($urunler as $urun): 
-                                    if($urun['urun_indirim_status'] == 0){?>
+                                   <?php if($urun['urun_indirim_status'] == 0){?>
             <fe-product-price class="product-price ng-star-inserted" _nghost-qea-c271=""><div _ngcontent-qea-c271=""><div _ngcontent-qea-c271="" id="price-old" class="price-old ng-star-inserted"><span _ngcontent-qea-c271="" id="old-amount" class="amount">48.799,00 <span _ngcontent-qea-c271="" class="currency">TL</span></span></div><!----><div _ngcontent-qea-c271="" id="price-new" class="price-new subtitle-1"><span _ngcontent-qea-c271="" id="new-amount" class="amount"> <?php
                                              $orijinal_fiyat = $urun['urun_fiyat'];
                                              $indirim_orani = $urun['urun_indirim'];
