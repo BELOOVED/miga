@@ -913,21 +913,22 @@ if ($detect->isMobile()) {?>
 </div>
 <script>
     $(document).ready(function () {
-        $('input[type=radio]').change(function () {
-            var selectedValue = $(this).val();
-
-            // Ajax isteği gönder
-            $.ajax({
-                url: 'product_filter.php', 
-                type: 'POST',
-                data: { option: selectedValue }, 
-                success: function (response) {
-                    $('#product-details').html(response);
-                },
-                error: function () {
-                    alert('Bir hata oluştu. Lütfen tekrar deneyin.');
-                }
-            });
+    $('input[type=radio]').change(function () {
+        var selectedValue = $(this).val();
+        $.ajax({
+            url: 'product_filter.php',
+            type: 'POST',
+            data: { option: selectedValue },
+            success: function (response) {
+                console.log('Success:', response);
+                $('#product-details').html(response);
+            },
+            error: function (xhr, status, error) {
+                console.error('Error:', error);
+                alert('Bir hata oluştu. Lütfen tekrar deneyin.');
+            }
         });
     });
+});
+
 </script>
