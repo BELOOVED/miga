@@ -598,7 +598,7 @@ if ($detect->isMobile()) {?>
                               <span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span>
                            </button>
                         </fe-icon-button>
-                        <h3 class="text-align-center header">Kategoriler</h3>
+                        <h3 class="text-align-center header" style="display: block !important; ">Kategoriler</h3>
                      </div>
                      <div matdialogcontent="" class="mat-mdc-dialog-content mdc-dialog__content content">
                         <mat-selection-list role="listbox" color="primary" class="mat-selection-list mat-list-base ng-star-inserted" aria-multiselectable="true" aria-disabled="false" tabindex="0">
@@ -653,7 +653,7 @@ if ($detect->isMobile()) {?>
                               <span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span>
                            </button>
                         </fe-icon-button>
-                        <h3 class="text-align-center header">İndirimler</h3>
+                        <h3 class="text-align-center header" style="display: block !important; ">İndirimler</h3>
                      </div>
                      <div matdialogcontent="" class="mat-mdc-dialog-content mdc-dialog__content content">
                         <mat-selection-list role="listbox" color="primary" class="mat-selection-list mat-list-base ng-star-inserted" aria-multiselectable="true" aria-disabled="false" tabindex="0">
@@ -701,7 +701,7 @@ if ($detect->isMobile()) {?>
                               <span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span>
                            </button>
                         </fe-icon-button>
-                        <h3 class="text-align-center header">Markalar</h3>
+                        <h3 class="text-align-center header" style="display: block !important; ">Markalar</h3>
                      </div>
                      <div matdialogcontent="" class="mat-mdc-dialog-content mdc-dialog__content content">
                         <mat-selection-list role="listbox" color="primary" class="mat-selection-list mat-list-base ng-star-inserted" aria-multiselectable="true" aria-disabled="false" tabindex="0">
