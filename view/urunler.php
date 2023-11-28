@@ -932,7 +932,6 @@ if ($detect->isMobile()) {?>
 });
 function silra(){
    $('#spinner').removeClass('hidden');
-
        closemodal();
 }
 </script>
