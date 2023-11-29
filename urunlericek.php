@@ -5,25 +5,40 @@ $category_ids = [1317, 1315, 1313, 1314, 10964, 1316, 70185];
 try {
     foreach ($category_ids as $category_id) {
         for ($page = 1; $page <= 5; $page++) {
-            $url = "https://www.migros.com.tr/rest/elektronik/products/search?category-id={$category_id}&sayfa={$page}&sirala=onerilenler&reid=1701245548467000001";
-            $ch = curl_init($url);
-            
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, "https://www.migros.com.tr/rest/elektronik/products/search?category-id=".strval($category_id)."&sayfa=".strval($page) ."&sirala=onerilenler");
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
+            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
+            curl_setopt($ch, CURLOPT_HTTPHEADER, [
+                'Host: www.migros.com.tr',
+                'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0',
+                'Accept: application/json',
+                'Accept-Language: tr-TR,tr;q=0.8,en-US;q=0.5,en;q=0.3',
+                'Accept-Encoding: gzip, deflate, br',
+                'Upgrade-Insecure-Requests: 1',
+                'Sec-Fetch-Dest: empty',
+                'Sec-Fetch-Mode: same-origin',
+                'Sec-Fetch-Site: same-origin',
+                'Cache-Control: max-age=0',
+                'Te: trailers',
+            ]);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
             $response = curl_exec($ch);
             curl_close($ch);
-            $data = json_decode($response, true);
+            
+            $dataa = json_decode($response, true)['data']['storeProductInfos'];
 
-            for ($i = 0; $i < 30; $i++) {
-                if (isset($data['data']['storeProductInfos'][$i]['name'])) {
-                    $urun_adi = $data['data']['storeProductInfos'][$i]['name'];
-                    $urun_fiyat = number_format($data['data']['storeProductInfos'][$i]['regularPrice'], 2, ',', '.');
-                    $urun_indirim = $data['data']['storeProductInfos'][$i]['discountRate'];
-                    $urun_kategori_id = $data['data']['storeProductInfos'][$i]['categoryId'];
-                    $urun_kategori = $data['data']['storeProductInfos'][$i]['categoriesForSorting']['0']['name'];
-                    $urun_altkategorileri = $data['data']['storeProductInfos'][$i]['categoriesForSorting']['1']['name'];
-                    $urun_resim = $data['data']['storeProductInfos'][$i]['images']['0']['urls']['PRODCUT_LIST'];
-                    $urun_marka = $data['data']['storeProductInfos'][$i]['brand']['name'];
+            foreach ($data as $dataa) {
+                if (isset($data['name'])) {
+                    $urun_adi = $data['name'];
+                    $urun_fiyat = number_format($data['regularPrice'], 2, ',', '.');
+                    $urun_indirim = $data['discountRate'];
+                    $urun_kategori_id = $data['categoryId'];
+                    $urun_kategori = $data['categoriesForSorting']['0']['name'];
+                    $urun_altkategorileri = $data['categoriesForSorting']['1']['name'];
+                    $urun_resim = $data['images']['0']['urls']['PRODCUT_LIST'];
+                    $urun_marka = $data['brand']['name'];
 
                     $query = "INSERT INTO urunler 
                                 (urun_adi, urun_fiyat, urun_indirim, urun_kategori_id, urun_kategori, urun_altkategorileri, urun_resim, urun_marka) 
