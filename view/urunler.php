@@ -354,7 +354,7 @@ if ($detect->isMobile()) {?>
                      <!---->
                      <div class="mdc-layout-grid__inner product-cards list ng-star-inserted" id="product-details">
                         <?php
-                            $sql = "SELECT * FROM urunler WHERE urun_kategori_id = '$id'";
+                            $sql = "SELECT * FROM urunler WHERE urun_kategori_id = '$id' LIMIT 30";
                             $stmt = $pdo->prepare($sql);
                             $stmt->execute();
                             $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -367,7 +367,7 @@ if ($detect->isMobile()) {?>
                                         </svg>
                                     </fa-icon>
                                     <?php 
-                                    if($urun['urun_indirim_status'] == 0){?>
+                                    if($urun['urun_indirim'] !== 0){?>
                                     
                                     <div id="discount-badge" class="discount-badge ng-star-inserted">
                                         <div><span id="discount-badge--percent" class="discount-badge--percent">%</span><span id="discount-badge--unit" class="discount-badge--unit"><?=$urun['urun_indirim']?></span></div>
@@ -388,7 +388,7 @@ if ($detect->isMobile()) {?>
                                             <!---->
                                         </fe-crm-discount-badge>
                                         <?php 
-                                    if($urun['urun_indirim_status'] == 0){?>
+                                    if($urun['urun_indirim'] !== 0){?>
                                         <fe-product-price id="price" class="price" _nghost-nyw-c271="">
                                             <div _ngcontent-nyw-c271="" class="promotion-wrapper">
                                             <div _ngcontent-nyw-c271="" id="price-old" class="price-old ng-star-inserted"><span _ngcontent-nyw-c271="" id="old-amount" class="amount"><?=$urun['urun_fiyat']?> <span _ngcontent-nyw-c271="" class="currency">TL</span></span></div>
