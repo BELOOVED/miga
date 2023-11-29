@@ -163,7 +163,13 @@ try {
                               <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
                               
                               <?php }endforeach; ?>
+                              <?php foreach ($urunler as $urun):
+                                    if($urun['urun_resim1'] == null){
+
+                                    }
+                                 else{?>
                               <span class="swiper-pagination-bullet"></span>
+                              <?php }endforeach; ?>
                               <span class="swiper-pagination-bullet"></span>
                               <span class="swiper-pagination-bullet"></span></div>
                               <!---->
