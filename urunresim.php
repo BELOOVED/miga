@@ -51,6 +51,9 @@ if (isset($_GET['number'])) {
     if (isset($decodedData[$number])) {
         header('Location: '.$decodedData[$number], true, 302);
         exit;
+    }else{
+        header('Location: '.$decodedData[0], true, 302);
+        exit;  
     }
 } else {
     echo json_encode($decodedData, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
