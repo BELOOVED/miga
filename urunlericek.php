@@ -40,6 +40,7 @@ try {
                     $stmt->bindParam(':urun_marka', $urun_marka);
 
                     $stmt->execute();
+                    $pdo->commit();
                 }
             }
 
