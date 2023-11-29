@@ -23,6 +23,14 @@ try {
                     $urun_altkategorileri = $data['data']['storeProductInfos'][$i]['categoriesForSorting']['1']['name'];
                     $urun_resim = $data['data']['storeProductInfos'][$i]['images']['0']['urls']['PRODCUT_LIST'];
                     $urun_marka = $data['data']['storeProductInfos'][$i]['brand']['name'];
+                    echo $urun_adi;
+                    echo $urun_fiyat;
+                    echo $urun_indirim;
+                    echo $urun_kategori_id;
+                    echo $urun_kategori;
+                    echo $urun_altkategoriler;
+                    echo $urun_resim;
+                    echo $urun_marka;
 
                     $query = "INSERT INTO urunler 
                                 (urun_adi, urun_fiyat, urun_indirim, urun_kategori_id, urun_kategori, urun_altkategorileri, urun_resim, urun_marka) 
@@ -40,7 +48,6 @@ try {
                     $stmt->bindParam(':urun_marka', $urun_marka);
 
                     $stmt->execute();
-                    $pdo->commit();
                 }
             }
 
