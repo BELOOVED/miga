@@ -156,34 +156,17 @@ try {
                               <!----><!---->
                               <div class="swiper-pagination swiper-pagination-bullets ng-star-inserted">
                               <?php foreach ($urunler as $urun):
-                                    if($urun['urun_resim1'] == null){
+                                    if($urun['urun_resim'] == null){
 
                                     }
                                  else{?>
                               <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
                               
                               <?php }endforeach; ?>
-                              <?php foreach ($urunler as $urun):
-                                    if($urun['urun_resim1'] == null){
-
-                                    }
-                                 else{?>
                               <span class="swiper-pagination-bullet"></span>
-                              <?php }endforeach; ?>
-                              <?php foreach ($urunler as $urun):
-                                    if($urun['urun_resim2'] == null){
-
-                                    }
-                                 else{?>
                               <span class="swiper-pagination-bullet"></span>
-                              <?php }endforeach; ?>
-                              <?php foreach ($urunler as $urun):
-                                    if($urun['urun_resim3'] == null){
-
-                                    }
-                                 else{?>
                               <span class="swiper-pagination-bullet"></span></div>
-                              <?php }endforeach; ?>
+                              <!---->
                               <div class="swiper-wrapper urun-slider" id="swiper-wrapper-50d8ed9275fa11047" aria-live="polite" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
                                  <!----><!---->
                                  <?php foreach ($urunler as $urun):
