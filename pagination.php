@@ -76,36 +76,5 @@ foreach ($urunler as $urun) {
     echo '</div>';
 }
 
-echo '<sm-pagination _nghost-nyw-c392="">';
-echo '<div _ngcontent-nyw-c392="" class="page-row ng-star-inserted">';
 
-echo '<button _ngcontent-nyw-c392="" mat-flat-button="" color="accent" id="pagination-button-first" class="button button--icon button--nonselected mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-accent mat-mdc-button-base" disabled="true">';
-echo '<span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span>';
-echo '<span class="mdc-button__label">İlk</span>';
-echo '</button>';
-
-echo '<button _ngcontent-nyw-c392="" mat-flat-button="" color="accent" id="pagination-button-previous" class="button button--icon button--nonselected mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-accent mat-mdc-button-base" disabled="true">';
-echo '<span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span>';
-echo '<span class="mdc-button__label">Önceki</span>';
-echo '</button>';
-
-for ($i = 1; $i <= $totalPages; $i++) {
-    echo '<button _ngcontent-nyw-c392="" mat-flat-button="" class="button mdc-button mdc-button--unelevated mat-mdc-unelevated-button' . ($i == $page ? ' mat-primary' : ' button--nonselected mat-accent') . ' mat-mdc-button-base ng-star-inserted" id="pagination-button-' . $i . '">';
-    echo '<span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span>';
-    echo '<span class="mdc-button__label">' . $i . '</span>';
-    echo '</button>';
-}
-
-echo '<button _ngcontent-nyw-c392="" mat-flat-button="" color="accent" id="pagination-button-next" class="button button--icon button--nonselected mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-accent mat-mdc-button-base">';
-echo '<span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span>';
-echo '<span class="mdc-button__label">Sonraki</span>';
-echo '</button>';
-
-echo '<button _ngcontent-nyw-c392="" mat-flat-button="" color="accent" id="pagination-button-last" class="button button--icon button--nonselected mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-accent mat-mdc-button-base">';
-echo '<span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span>';
-echo '<span class="mdc-button__label">Son</span>';
-echo '</button>';
-
-echo '</div>';
-echo '</sm-pagination>';
 ?>
