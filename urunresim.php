@@ -36,7 +36,7 @@ http_response_code($kod);
 if ($kod != 200){
     die();
 }
-
+echo $result;
 $dataa = json_decode($result, true)['data']['storeProductInfos']['images'];
 $decodedData = json_decode("{}", true);
 foreach ($dataa as $image) {
