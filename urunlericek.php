@@ -35,7 +35,7 @@ try {
                     $urun_fiyat = number_format(intval($data['regularPrice']) / 100, 2, ',', '.');
                     $urun_indirim = $data['discountRate'];
                     $urun_kategori_id = $data['categoryId'];
-                    $urun_kategori = $data['categoriesAscendants']['0']['name'];
+                    $urun_kategori = $data['categoryAscendants']['0']['name'];
                     $urun_altkategorileri = $data['categoriesForSorting']['0']['name'];
                     $urun_resim = $data['images'][0]['urls']['PRODUCT_LIST'];
                     $urun_resim1 = $data['images'][0]['urls']['PRODUCT_DETAIL'];
