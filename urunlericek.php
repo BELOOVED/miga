@@ -4,9 +4,7 @@ require_once('inc/pdo.php');
 $category_ids = [1317, 1315, 1313, 1314, 10964, 1316, 70185];
 
 try {
-    foreach ($category_ids as $category_id) {
-        for ($page = 1; $page <= 5; $page++) {
-            $url = "https://www.migros.com.tr/rest/elektronik/products/search?category-id={$category_id}&sayfa={$page}&sirala=onerilenler&reid=1701245548467000001";
+            $url = "https://www.migros.com.tr/rest/elektronik/products/search?category-id=1317&sayfa=1&sirala=onerilenler&reid=1701245548467000001";
             $ch = curl_init($url);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             $response = curl_exec($ch);
@@ -44,8 +42,7 @@ try {
                 }
             }
 
-        }
-    }
+    
 
     echo "Veriler başarıyla eklendi.";
 
