@@ -37,7 +37,7 @@ try {
                     $urun_kategori_id = $data['categoryId'];
                     $urun_kategori = $data['categoriesForSorting']['0']['name'];
                     $urun_altkategorileri = $data['categoriesForSorting']['1']['name'];
-                    $urun_resim = $data['images'][0]['urls']['PRODCUT_LIST'];
+                    $urun_resim = $data['images'][0]['urls']['PRODUCT_LIST'];
                     $urun_resim1 = $data['images'][0]['urls']['PRODUCT_DETAIL'];
                     $urun_resim2 = $data['images'][0]['urls']['PRODUCT_HD'];
                     $urun_resim3 = $data['images'][0]['urls']['CART'];
