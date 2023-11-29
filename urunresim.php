@@ -43,6 +43,10 @@ $decodedData = array();
 foreach ($data as $key => $image) {
     $decodedData[] = "https://external-content.duckduckgo.com/iu/?u=".$image["urls"]["PRODUCT_HD"];
 }
+if isset($_GET['number']){
+    echo json_encode($decodedData[intval($_GET[number])], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 
-echo json_encode($decodedData, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+}else{
+    echo json_encode($decodedData, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+}
 ?>
