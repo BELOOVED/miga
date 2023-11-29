@@ -982,6 +982,28 @@ if ($detect->isMobile()) {?>
    </div>
 </div>
 <script>
+$(document).ready(function() {
+    $('body').on('click', '.pagination-button', function(e) {
+        e.preventDefault();
+
+        var page = $(this).text();
+
+        $.ajax({
+            url: 'pagination.php',
+            type: 'POST',
+            data: { page: page },
+            success: function(response) {
+                $('#product-details').html(response);
+            },
+            error: function(error) {
+                console.error('Ajax hatası:', error);
+            }
+        });
+    });
+});
+</script>
+
+<script>
       $(document).ready(function () {
     $('input[type=radio]').change(function () {
         var selectedValue = $(this).val();
