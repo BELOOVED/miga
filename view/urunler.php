@@ -983,10 +983,11 @@ if ($detect->isMobile()) {?>
 </div>
 <script>
 $(document).ready(function() {
-    $('body').on('click', '.pagination-button', function(e) {
+    $('body').on('click', '#pagination-button-2', function(e) {
         e.preventDefault();
 
-        var page = $(this).text();
+        var page = $('.mdc-button__label', this).text();
+
 
         $.ajax({
             url: 'pagination.php',
