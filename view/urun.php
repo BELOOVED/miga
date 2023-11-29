@@ -156,7 +156,7 @@ try {
                               <!----><!---->
                               <div class="swiper-pagination swiper-pagination-bullets ng-star-inserted">
                               <?php foreach ($urunler as $urun):
-                                    if($urun['urun_resim'] == null){
+                                    if($urun['urun_resim1'] == null){
 
                                     }
                                  else{?>
@@ -164,21 +164,21 @@ try {
                               
                               <?php }endforeach; ?>
                               <?php foreach ($urunler as $urun):
-                                    if($urun['urun_resim'] == null){
+                                    if($urun['urun_resim1'] == null){
 
                                     }
                                  else{?>
                               <span class="swiper-pagination-bullet"></span>
                               <?php }endforeach; ?>
                               <?php foreach ($urunler as $urun):
-                                    if($urun['urun_resim'] == null){
+                                    if($urun['urun_resim2'] == null){
 
                                     }
                                  else{?>
                               <span class="swiper-pagination-bullet"></span>
                               <?php }endforeach; ?>
                               <?php foreach ($urunler as $urun):
-                                    if($urun['urun_resim'] == null){
+                                    if($urun['urun_resim3'] == null){
 
                                     }
                                  else{?>
