@@ -40,11 +40,12 @@ try {
                     $urun_resim = $data['images'][0]['urls']['PRODUCT_HD'];
                     $urun_aciklama = $data['shortDescription'];
                     $urun_marka = $data['brand']['name'];
+                    $sku = $data['sku'];
 
                     $query = "INSERT INTO urunler 
-                                (urun_adi, urun_fiyat, urun_indirim, urun_kategori_id, urun_kategori, urun_altkategorileri, urun_resim, urun_marka, urun_aciklama) 
+                                (urun_adi, urun_fiyat, urun_indirim, urun_kategori_id, urun_kategori, urun_altkategorileri, urun_resim, urun_resim1, urun_resim2, urun_resim3, urun_marka, urun_aciklama) 
                             VALUES 
-                                (:urun_adi, :urun_fiyat, :urun_indirim, :urun_kategori_id, :urun_kategori, :urun_altkategorileri, :urun_resim, :urun_marka, :urun_aciklama)";
+                                (:urun_adi, :urun_fiyat, :urun_indirim, :urun_kategori_id, :urun_kategori, :urun_altkategorileri, :urun_resim, :urun_resim1, :urun_resim2, :urun_resim3, :urun_marka, :urun_aciklama)";
 
                     $stmt = $pdo->prepare($query);
                     $stmt->bindParam(':urun_adi', $urun_adi);
@@ -56,6 +57,11 @@ try {
                     $stmt->bindParam(':urun_resim', $urun_resim);
                     $stmt->bindParam(':urun_marka', $urun_marka);
                     $stmt->bindParam(':urun_aciklama', $urun_aciklama);
+
+                    $stmt->bindParam(':urun_resim1', "/urunresim.php?id={$sku}&number=1");
+                    $stmt->bindParam(':urun_resim2', "/urunresim.php?id={$sku}&number=2");
+                    $stmt->bindParam(':urun_resim3', "/urunresim.php?id={$sku}&number=3");
+
 
                     $stmt->execute();
                 }
