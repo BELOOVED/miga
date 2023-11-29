@@ -37,13 +37,14 @@ try {
                     $urun_kategori_id = $data['categoryId'];
                     $urun_kategori = $data['categoriesForSorting']['0']['name'];
                     $urun_altkategorileri = $data['categoriesForSorting']['1']['name'];
-                    $urun_resim = $data['images']['0']['urls']['PRODCUT_LIST'];
+                    $urun_resim = $data['images'][0]['urls']['PRODCUT_LIST'];
+                    $urun_aciklama = $data['brand']['shortDescription'];
                     $urun_marka = $data['brand']['name'];
 
                     $query = "INSERT INTO urunler 
-                                (urun_adi, urun_fiyat, urun_indirim, urun_kategori_id, urun_kategori, urun_altkategorileri, urun_resim, urun_marka) 
+                                (urun_adi, urun_fiyat, urun_indirim, urun_kategori_id, urun_kategori, urun_altkategorileri, urun_resim, urun_resim1, urun_resim2, urun_resim3, urun_marka, urun_aciklama) 
                             VALUES 
-                                (:urun_adi, :urun_fiyat, :urun_indirim, :urun_kategori_id, :urun_kategori, :urun_altkategorileri, :urun_resim, :urun_marka)";
+                                (:urun_adi, :urun_fiyat, :urun_indirim, :urun_kategori_id, :urun_kategori, :urun_altkategorileri, :urun_resim, :urun_resim1, :urun_resim2, :urun_resim3, :urun_marka, :urun_aciklama)";
 
                     $stmt = $pdo->prepare($query);
                     $stmt->bindParam(':urun_adi', $urun_adi);
@@ -53,7 +54,11 @@ try {
                     $stmt->bindParam(':urun_kategori', $urun_kategori);
                     $stmt->bindParam(':urun_altkategorileri', $urun_altkategorileri);
                     $stmt->bindParam(':urun_resim', $urun_resim);
+                    $stmt->bindParam(':urun_resim1', $urun_resim1);
+                    $stmt->bindParam(':urun_resim2', $urun_resim2);
+                    $stmt->bindParam(':urun_resim3', $urun_resim3);
                     $stmt->bindParam(':urun_marka', $urun_marka);
+                    $stmt->bindParam(':urun_aciklama', $urun_aciklama);
 
                     $stmt->execute();
                 }
