@@ -59,11 +59,11 @@ try {
                     $stmt->bindParam(':urun_resim', $urun_resim);
 
                     $resim1 = "/urunresim.php?id={$sku}&number=1";
-                    $stmt->bindParam(':urun_resim1', $resim1 );
+                    $stmt->bindValue(':urun_resim1', $resim1 );
                     $resim2 = "/urunresim.php?id={$sku}&number=2";
-                    $stmt->bindParam(':urun_resim2', $resim2 );
+                    $stmt->bindValue(':urun_resim2', $resim2 );
                     $resim3 = "/urunresim.php?id={$sku}&number=3";
-                    $stmt->bindParam(':urun_resim3', $resim3 );
+                    $stmt->bindValue(':urun_resim3', $resim3 );
 
                     $stmt->bindParam(':urun_marka', $urun_marka);
                     $stmt->bindParam(':urun_aciklama', $urun_aciklama);
