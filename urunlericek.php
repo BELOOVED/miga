@@ -28,8 +28,6 @@ try {
             curl_close($ch);
             
             $dataa = json_decode($response, true)['data']['storeProductInfos'];
-            print_r($dataa);
-
             foreach ($dataa as $data) {
                 if (isset($data['name'])) {
                     $urun_adi = $data['name'];
