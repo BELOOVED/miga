@@ -154,38 +154,86 @@ try {
                         <div class="preview-image-wrapper">
                            <swiper class="swiper-container swiper-container-initialized swiper-container-horizontal">
                               <!----><!---->
-                              <div class="swiper-pagination swiper-pagination-bullets ng-star-inserted"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
-                              <!---->
+                              <div class="swiper-pagination swiper-pagination-bullets ng-star-inserted">
+                              <?php foreach ($urunler as $urun):
+                                    if($urun['urun_resim'] == null){
+
+                                    }
+                                 else{?>
+                              <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                              
+                              <?php }endforeach; ?>
+                              <?php foreach ($urunler as $urun):
+                                    if($urun['urun_resim'] == null){
+
+                                    }
+                                 else{?>
+                              <span class="swiper-pagination-bullet"></span>
+                              <?php }endforeach; ?>
+                              <?php foreach ($urunler as $urun):
+                                    if($urun['urun_resim'] == null){
+
+                                    }
+                                 else{?>
+                              <span class="swiper-pagination-bullet"></span>
+                              <?php }endforeach; ?>
+                              <?php foreach ($urunler as $urun):
+                                    if($urun['urun_resim'] == null){
+
+                                    }
+                                 else{?>
+                              <span class="swiper-pagination-bullet"></span></div>
+                              <?php }endforeach; ?>
                               <div class="swiper-wrapper urun-slider" id="swiper-wrapper-50d8ed9275fa11047" aria-live="polite" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
                                  <!----><!---->
+                                 <?php foreach ($urunler as $urun):
+                                    if($urun['urun_resim'] == null){
+
+                                    }
+                                 else{?>
                                  <div data-swiper-slide-index="0" class="swiper-slide ng-star-inserted swiper-slide-active" style="width: 328px;">
                                     <!----><img src="
-                                    <?php foreach ($urunler as $urun): ?>
                                     <?= $urun['urun_resim']; ?>
-                                    <?php endforeach; ?>
                                     " class="ng-star-inserted"><!----><!----><!---->
                                  </div>
+                                 <?php }endforeach; ?>
+                                 <?php foreach ($urunler as $urun):
+                                    if($urun['urun_resim1'] == null){
+
+                                    }
+                                 else{?>
                                  <div data-swiper-slide-index="1" class="swiper-slide ng-star-inserted swiper-slide-next" style="width: 328px;">
                                     <!----><img src="
-                                    <?php foreach ($urunler as $urun): ?>
                                     <?= $urun['urun_resim1']; ?>
-                                    <?php endforeach; ?>
                                     " class="ng-star-inserted"><!----><!----><!---->
                                  </div>
+                                 <?php }endforeach; ?>
+                                 <?php foreach ($urunler as $urun):
+                                    if($urun['urun_resim2'] == null){
+
+                                    }
+                                 else{?>
                                  <div data-swiper-slide-index="2" class="swiper-slide ng-star-inserted" style="width: 328px;">
                                     <!----><img src="
-                                    <?php foreach ($urunler as $urun): ?>
                                     <?= $urun['urun_resim2']; ?>
-                                    <?php endforeach; ?>
+                                   
                                     " class="ng-star-inserted"><!----><!----><!---->
                                  </div>
+                                 <?php }endforeach; ?>
+                                 <?php foreach ($urunler as $urun):
+                                    if($urun['urun_resim3'] == null){
+
+                                    }
+                                 else{?>
                                  <div data-swiper-slide-index="3" class="swiper-slide ng-star-inserted" style="width: 328px;">
                                     <!----><img src="
-                                    <?php foreach ($urunler as $urun): ?>
+                                    
                                     <?= $urun['urun_resim3']; ?>
-                                    <?php endforeach; ?>
+                                    
                                     " class="ng-star-inserted"><!----><!----><!---->
                                  </div>
+
+                                 <?php } endforeach; ?>
                               </div>
                               <!----><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                            </swiper>
