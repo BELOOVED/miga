@@ -54,7 +54,14 @@ try {
         }
     }
 
-    echo "Veriler başarıyla eklendi.";
+    echo $urun_adi;
+                    echo $urun_fiyat;
+                    echo $urun_indirim;
+                    echo $urun_kategori_id;
+                    echo $urun_kategori;
+                    echo $urun_altkategoriler;
+                    echo $urun_resim;
+                    echo $urun_marka;
 
 } catch (PDOException $e) {
     echo "Hata: " . $e->getMessage();
