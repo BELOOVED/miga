@@ -28,7 +28,7 @@ try {
             curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
             $response = curl_exec($ch);
             curl_close($ch);
-            
+            echo $response;
             $dataa = json_decode($response, true)['data']['storeProductInfos'];
             foreach ($dataa as $data) {
                 if (isset($data['name'])) {
