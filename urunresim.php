@@ -37,10 +37,11 @@ if ($kod != 200){
     die();
 }
 
-$dataa = json_decode($result, true)['data']['storeProductInfos']['images'];
-$decodedData = json_decode("{}", true);
-foreach ($dataa as $key => $image) {
-    $decodedData[$key] = array(
+$data = json_decode($result, true)['data']['storeProductInfos']['images'];
+$decodedData = array();
+
+foreach ($data as $key => $image) {
+    $decodedData[] = array(
         'image' => $image["urls"]["PRODUCT_HD"],
     );
 }
