@@ -58,9 +58,9 @@ try {
                     $stmt->bindParam(':urun_marka', $urun_marka);
                     $stmt->bindParam(':urun_aciklama', $urun_aciklama);
 
-                    $stmt->bindParam(':urun_resim1', "/urunresim.php?id={$sku}&number=1");
-                    $stmt->bindParam(':urun_resim2', "/urunresim.php?id={$sku}&number=2");
-                    $stmt->bindParam(':urun_resim3', "/urunresim.php?id={$sku}&number=3");
+                    $stmt->bindParam(':urun_resim1', "/urunresim.php?id=".strval($sku)."&number=1");
+                    $stmt->bindParam(':urun_resim2', "/urunresim.php?id=".strval($sku)."&number=2");
+                    $stmt->bindParam(':urun_resim3', "/urunresim.php?id=".strval($sku)."&number=3");
 
 
                     $stmt->execute();
