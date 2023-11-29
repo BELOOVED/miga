@@ -41,8 +41,9 @@ $data = json_decode($result, true)['data']['storeProductInfoDTO']['images'];
 $decodedData = array();
 
 foreach ($data as $key => $image) {
-    $decodedData[] = $image["urls"]["PRODUCT_HD"],
+    $decodedData[] = $image["urls"]["PRODUCT_HD"];
 }
 
 echo json_encode($decodedData, JSON_PRETTY_PRINT);
+
 ?>
