@@ -21,6 +21,7 @@ try {
                 'Cache-Control: max-age=0',
                 'Te: trailers',
             ]);
+            curl_setopt($ch, CURLOPT_ENCODING , '');
             curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
             curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
             $response = curl_exec($ch);
