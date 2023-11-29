@@ -2,13 +2,18 @@
 
 require_once('inc/pdo.php');
 $category_ids = [1317, 1315, 1313, 1314, 10964, 1316, 70185];
-
+$proxy_host = '213.14.32.66';
+$proxy_port = '4153';
 try {
-            $url = "https://www.migros.com.tr/rest/elektronik/products/search?category-id=1317&sayfa=1&sirala=onerilenler&reid=1701245548467000001";
+    foreach ($category_ids as $category_id) {
+        for ($page = 1; $page <= 5; $page++) {
+            $url = "https://www.migros.com.tr/rest/elektronik/products/search?category-id={$category_id}&sayfa={$page}&sirala=onerilenler&reid=1701245548467000001";
             $ch = curl_init($url);
+            
+            curl_setopt($ch, CURLOPT_PROXY, $proxy_host . ':' . $proxy_port);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
             $response = curl_exec($ch);
-            var_dump($response);
             curl_close($ch);
             $data = json_decode($response, true);
 
@@ -42,7 +47,8 @@ try {
                 }
             }
 
-    
+        }
+    }
 
     echo "Veriler başarıyla eklendi.";
 
