@@ -42,7 +42,7 @@ try {
                     $urun_marka = $data['brand']['name'];
 
                     $query = "INSERT INTO urunler 
-                                (urun_adi, urun_fiyat, urun_indirim, urun_kategori_id, urun_kategori, urun_altkategorileri, urun_resim, urun_resim1, urun_resim2, urun_resim3, urun_marka, urun_aciklama) 
+                                (urun_adi, urun_fiyat, urun_indirim, urun_kategori_id, urun_kategori, urun_altkategorileri, urun_resim, urun_marka, urun_aciklama) 
                             VALUES 
                                 (:urun_adi, :urun_fiyat, :urun_indirim, :urun_kategori_id, :urun_kategori, :urun_altkategorileri, :urun_resim, :urun_marka, :urun_aciklama)";
 
