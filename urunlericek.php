@@ -30,6 +30,7 @@ try {
             $dataa = json_decode($response, true)['data']['storeProductInfos'];
 
             foreach ($dataa as $data) {
+                print_r($data);
                 if (isset($data['name'])) {
                     $urun_adi = $data['name'];
                     $urun_fiyat = number_format($data['regularPrice'], 2, ',', '.');
