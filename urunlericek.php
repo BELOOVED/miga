@@ -58,9 +58,9 @@ try {
                     $stmt->bindParam(':urun_altkategorileri', $urun_altkategorileri);
                     $stmt->bindParam(':urun_resim', $urun_resim);
 
-                    $stmt->bindParam(':urun_resim1', "/urunresim.php?id=39390134&number=0");
-                    $stmt->bindParam(':urun_resim2', "/urunresim.php?id=39390134&number=0");
-                    $stmt->bindParam(':urun_resim3', "/urunresim.php?id=39390134&number=0");
+                    $stmt->bindParam(':urun_resim1', '/urunresim.php?id=39390134&number=0');
+                    $stmt->bindParam(':urun_resim2', '/urunresim.php?id=39390134&number=0');
+                    $stmt->bindParam(':urun_resim3', '/urunresim.php?id=39390134&number=0');
 
 
                     $stmt->bindParam(':urun_marka', $urun_marka);
