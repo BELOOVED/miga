@@ -14,32 +14,35 @@ try {
             $data = json_decode($response, true);
 
             for ($i = 0; $i < 30; $i++) {
-                $urun_adi = $data['data']['storeProductInfos'][$i]['name'];
-                $urun_fiyat = number_format($data['data']['storeProductInfos'][$i]['regularPrice'], 2, ',', '.');
-                $urun_indirim = $data['data']['storeProductInfos'][$i]['discountRate'];
-                $urun_kategori_id = $data['data']['storeProductInfos'][$i]['categoryId'];
-                $urun_kategori = $data['data']['storeProductInfos'][$i]['categoriesForSorting']['0']['name'];
-                $urun_altkategorileri = $data['data']['storeProductInfos'][$i]['categoriesForSorting']['1']['name'];
-                $urun_resim = $data['data']['storeProductInfos'][$i]['images']['0']['urls']['PRODCUT_LIST'];
-                $urun_marka = $data['data']['storeProductInfos'][$i]['brand']['name'];
+                if (isset($data['data']['storeProductInfos'][$i]['name'])) {
+                    $urun_adi = $data['data']['storeProductInfos'][$i]['name'];
+                    $urun_fiyat = number_format($data['data']['storeProductInfos'][$i]['regularPrice'], 2, ',', '.');
+                    $urun_indirim = $data['data']['storeProductInfos'][$i]['discountRate'];
+                    $urun_kategori_id = $data['data']['storeProductInfos'][$i]['categoryId'];
+                    $urun_kategori = $data['data']['storeProductInfos'][$i]['categoriesForSorting']['0']['name'];
+                    $urun_altkategorileri = $data['data']['storeProductInfos'][$i]['categoriesForSorting']['1']['name'];
+                    $urun_resim = $data['data']['storeProductInfos'][$i]['images']['0']['urls']['PRODCUT_LIST'];
+                    $urun_marka = $data['data']['storeProductInfos'][$i]['brand']['name'];
 
-                $query = "INSERT INTO urunler 
-                            (urun_adi, urun_fiyat, urun_indirim, urun_kategori_id, urun_kategori, urun_altkategorileri, urun_resim, urun_marka) 
-                          VALUES 
-                            (:urun_adi, :urun_fiyat, :urun_indirim, :urun_kategori_id, :urun_kategori, :urun_altkategorileri, :urun_resim, :urun_marka)";
+                    $query = "INSERT INTO urunler 
+                                (urun_adi, urun_fiyat, urun_indirim, urun_kategori_id, urun_kategori, urun_altkategorileri, urun_resim, urun_marka) 
+                            VALUES 
+                                (:urun_adi, :urun_fiyat, :urun_indirim, :urun_kategori_id, :urun_kategori, :urun_altkategorileri, :urun_resim, :urun_marka)";
 
-                $stmt = $pdo->prepare($query);
-                $stmt->bindParam(':urun_adi', $urun_adi);
-                $stmt->bindParam(':urun_fiyat', $urun_fiyat);
-                $stmt->bindParam(':urun_indirim', $urun_indirim);
-                $stmt->bindParam(':urun_kategori_id', $urun_kategori_id);
-                $stmt->bindParam(':urun_kategori', $urun_kategori);
-                $stmt->bindParam(':urun_altkategorileri', $urun_altkategorileri);
-                $stmt->bindParam(':urun_resim', $urun_resim);
-                $stmt->bindParam(':urun_marka', $urun_marka);
+                    $stmt = $pdo->prepare($query);
+                    $stmt->bindParam(':urun_adi', $urun_adi);
+                    $stmt->bindParam(':urun_fiyat', $urun_fiyat);
+                    $stmt->bindParam(':urun_indirim', $urun_indirim);
+                    $stmt->bindParam(':urun_kategori_id', $urun_kategori_id);
+                    $stmt->bindParam(':urun_kategori', $urun_kategori);
+                    $stmt->bindParam(':urun_altkategorileri', $urun_altkategorileri);
+                    $stmt->bindParam(':urun_resim', $urun_resim);
+                    $stmt->bindParam(':urun_marka', $urun_marka);
 
-                $stmt->execute();
+                    $stmt->execute();
+                }
             }
+
         }
     }
 
