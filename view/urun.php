@@ -170,8 +170,21 @@ try {
                                  else{?>
                               <span class="swiper-pagination-bullet"></span>
                               <?php }endforeach; ?>
+                              <?php foreach ($urunler as $urun):
+                                    if($urun['urun_resim2'] == null){
+
+                                    }
+                                 else{?>
                               <span class="swiper-pagination-bullet"></span>
-                              <span class="swiper-pagination-bullet"></span></div>
+                              <?php }endforeach; ?>
+                              <?php foreach ($urunler as $urun):
+                                    if($urun['urun_resim3'] == null){
+
+                                    }
+                                 else{?>
+                              <span class="swiper-pagination-bullet"></span>
+                              <?php }endforeach; ?>
+                              </div>
                               <!---->
                               <div class="swiper-wrapper urun-slider" id="swiper-wrapper-50d8ed9275fa11047" aria-live="polite" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
                                  <!----><!---->
