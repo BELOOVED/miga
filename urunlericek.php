@@ -31,7 +31,8 @@ try {
             foreach ($dataa as $data) {
                 if (isset($data['name'])) {
                     $urun_adi = $data['name'];
-                    $urun_fiyat = number_format($data['regularPrice'], 2, ',', '.');
+                    // $urun_fiyat = number_format($data['regularPrice'], 2, ',', '.');
+                    $urun_fiyat = number_format(intval($data['regularPrice']) / 100, 2, ',', '.');
                     $urun_indirim = $data['discountRate'];
                     $urun_kategori_id = $data['categoryId'];
                     $urun_kategori = $data['categoriesForSorting']['0']['name'];
