@@ -2,8 +2,8 @@
 
 require_once('inc/pdo.php');
 $category_ids = [1317, 1315, 1313, 1314, 10964, 1316, 70185];
-$proxy_host = '213.14.32.66';
-$proxy_port = '4153';
+$proxy_host = '188.132.221.135';
+$proxy_port = '8080';
 try {
     foreach ($category_ids as $category_id) {
         for ($page = 1; $page <= 5; $page++) {
