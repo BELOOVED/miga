@@ -354,7 +354,7 @@ if ($detect->isMobile()) {?>
                      <!---->
                      <div class="mdc-layout-grid__inner product-cards list ng-star-inserted" id="product-details">
                         <?php
-                            $sql = "SELECT * FROM urunler WHERE urun_kategori_id = '$id' LIMIT 30";
+                            $sql = "SELECT * FROM urunler WHERE urun_kategori_id = '$id' DESC";
                             $stmt = $pdo->prepare($sql);
                             $stmt->execute();
                             $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -981,28 +981,6 @@ if ($detect->isMobile()) {?>
       </div>
    </div>
 </div>
-<script>
-$(document).ready(function() {
-    $('body').on('click', '#pagination-button-2', function(e) {
-        e.preventDefault();
-
-        var page = $('.mdc-button__label', this).text();
-
-
-        $.ajax({
-            url: 'pagination.php',
-            type: 'POST',
-            data: { page: page },
-            success: function(response) {
-                $('#product-details').html(response);
-            },
-            error: function(error) {
-                console.error('Ajax hatası:', error);
-            }
-        });
-    });
-});
-</script>
 
 <script>
       $(document).ready(function () {
