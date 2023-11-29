@@ -4,8 +4,6 @@ require_once('inc/pdo.php');
 $category_ids = [1317, 1315, 1313, 1314, 10964, 1316, 70185];
 
 try {
-    foreach ($category_ids as $category_id) {
-        for ($page = 1; $page <= 5; $page++) {
             $url = "https://www.migros.com.tr/rest/elektronik/search/screens/telefon-ve-aksesuarlari-c-525?reid=1701250589669000002";
             $headers = [
                 "sec-ch-ua: ^\^\"Brave^\^\";v=^\^\"119^\^\", ^\^\"Chromium^\^\";v=^\^\"119^\^\", ^\^\"Not?A_Brand^\^\";v=^\^\"24^\^\"",
@@ -55,8 +53,7 @@ try {
 
                 $stmt->execute();
             }
-        }
-    }
+        
 
     echo "Veriler başarıyla eklendi.";
 
