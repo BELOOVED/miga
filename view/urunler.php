@@ -431,57 +431,6 @@ if ($detect->isMobile()) {?>
 
                         
                      </div>
-                     <!---->
-                     <sm-pagination _nghost-nyw-c392="">
-                        <div _ngcontent-nyw-c392="" class="page-row ng-star-inserted">
-                           <button _ngcontent-nyw-c392="" mat-flat-button="" color="accent" id="pagination-button-first" class="button button--icon button--nonselected mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-accent mat-mdc-button-base" disabled="true">
-                              <span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span>
-                              <span class="mdc-button__label">
-                                 <fa-icon _ngcontent-nyw-c392="" class="ng-fa-icon">
-                                    <svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevrons-left" class="svg-inline--fa fa-chevrons-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                       <path fill="currentColor" d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 278.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192zm384-192l-192 192c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L301.3 256 470.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0z"></path>
-                                    </svg>
-                                 </fa-icon>
-                              </span>
-                              <span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span>
-                           </button>
-                           <button _ngcontent-nyw-c392="" mat-flat-button="" color="accent" id="pagination-button-previous" class="button button--icon button--nonselected mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-accent mat-mdc-button-base" disabled="true">
-                              <span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span>
-                              <span class="mdc-button__label">
-                                 <fa-icon _ngcontent-nyw-c392="" class="ng-fa-icon">
-                                    <svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                                       <path fill="currentColor" d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 278.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"></path>
-                                    </svg>
-                                 </fa-icon>
-                              </span>
-                              <span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span>
-                           </button>
-                           <button _ngcontent-nyw-c392="" mat-flat-button="" class="button mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base ng-star-inserted" id="pagination-button-1"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> 1 </span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button><button _ngcontent-nyw-c392="" mat-flat-button="" class="button mdc-button mdc-button--unelevated mat-mdc-unelevated-button button--nonselected mat-accent mat-mdc-button-base ng-star-inserted" id="pagination-button-2"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> 2 </span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button><button _ngcontent-nyw-c392="" mat-flat-button="" class="button mdc-button mdc-button--unelevated mat-mdc-unelevated-button button--nonselected mat-accent mat-mdc-button-base ng-star-inserted" id="pagination-button-3"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> 3 </span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button><!---->
-                           <button _ngcontent-nyw-c392="" mat-flat-button="" color="accent" id="pagination-button-next" class="button button--icon button--nonselected mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-accent mat-mdc-button-base">
-                              <span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span>
-                              <span class="mdc-button__label">
-                                 <fa-icon _ngcontent-nyw-c392="" class="ng-fa-icon">
-                                    <svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                                       <path fill="currentColor" d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path>
-                                    </svg>
-                                 </fa-icon>
-                              </span>
-                              <span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span>
-                           </button>
-                           <button _ngcontent-nyw-c392="" mat-flat-button="" color="accent" id="pagination-button-last" class="button button--icon button--nonselected mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-accent mat-mdc-button-base">
-                              <span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span>
-                              <span class="mdc-button__label">
-                                 <fa-icon _ngcontent-nyw-c392="" class="ng-fa-icon">
-                                    <svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevrons-right" class="svg-inline--fa fa-chevrons-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                       <path fill="currentColor" d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-192-192c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 233.4 425.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l192-192zm-384 192l192-192c12.5-12.5 12.5-32.8 0-45.3l-192-192c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 41.4 425.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"></path>
-                                    </svg>
-                                 </fa-icon>
-                              </span>
-                              <span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span>
-                           </button>
-                        </div>
-                        <!---->
-                     </sm-pagination>
                      <!----><!---->
                      <div class="free-banner-wrapper mobile-only ng-star-inserted">
                         <div fedeferload="" id="div-gpt-ad-1664180136950-0" style="transform: scale(1); height: auto; width: auto;"></div>
