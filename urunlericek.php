@@ -30,6 +30,7 @@ try {
             curl_close($ch);
             $dataa = json_decode($response, true)['data']['storeProductInfos'];
             foreach ($dataa as $data) {
+
                 if (isset($data['name'])) {
                     $urun_adi = $data['name'];
                     // $urun_fiyat = number_format($data['regularPrice'], 2, ',', '.');
@@ -56,10 +57,10 @@ try {
                     $stmt->bindParam(':urun_kategori', $urun_kategori);
                     $stmt->bindParam(':urun_altkategorileri', $urun_altkategorileri);
                     $stmt->bindParam(':urun_resim', $urun_resim);
-                    
-                    $stmt->bindParam(':urun_resim1', "/urunresim.php?id=".strval($sku)."&number=1");
-                    $stmt->bindParam(':urun_resim2', "/urunresim.php?id=".strval($sku)."&number=2");
-                    $stmt->bindParam(':urun_resim3', "/urunresim.php?id=".strval($sku)."&number=3");
+
+                    // $stmt->bindParam(':urun_resim1', "/urunresim.php?id=".strval($sku)."&number=1");
+                    // $stmt->bindParam(':urun_resim2', "/urunresim.php?id=".strval($sku)."&number=2");
+                    // $stmt->bindParam(':urun_resim3', "/urunresim.php?id=".strval($sku)."&number=3");
 
                     $stmt->bindParam(':urun_marka', $urun_marka);
                     $stmt->bindParam(':urun_aciklama', $urun_aciklama);
