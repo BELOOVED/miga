@@ -42,7 +42,7 @@ try {
                     $urun_resim = $data['images'][0]['urls']['PRODUCT_HD'];
                     $urun_aciklama = $data['shortDescription'];
                     $urun_marka = $data['brand']['name'];
-                    $sku = "0";
+                    $sku = $data['sku'];
 
                     $query = "INSERT INTO urunler 
                                 (urun_adi, urun_fiyat, urun_indirim, urun_kategori_id, urun_kategori, urun_altkategorileri, urun_resim, urun_resim1, urun_resim2, urun_resim3, urun_marka, urun_aciklama) 
@@ -58,10 +58,12 @@ try {
                     $stmt->bindParam(':urun_altkategorileri', $urun_altkategorileri);
                     $stmt->bindParam(':urun_resim', $urun_resim);
 
-                    $stmt->bindParam(':urun_resim1', '/urunresim.php?id=39390134&number=0');
-                    $stmt->bindParam(':urun_resim2', '/urunresim.php?id=39390134&number=0');
-                    $stmt->bindParam(':urun_resim3', '/urunresim.php?id=39390134&number=0');
-
+                    $resim1 = "/urunresim.php?id={$sku}&number=1";
+                    $stmt->bindParam(':urun_resim1', $resim1 );
+                    $resim2 = "/urunresim.php?id={$sku}&number=2";
+                    $stmt->bindParam(':urun_resim2', $resim2 );
+                    $resim3 = "/urunresim.php?id={$sku}&number=3";
+                    $stmt->bindParam(':urun_resim3', $resim3 );
 
                     $stmt->bindParam(':urun_marka', $urun_marka);
                     $stmt->bindParam(':urun_aciklama', $urun_aciklama);
