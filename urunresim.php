@@ -41,9 +41,8 @@ $data = json_decode($result, true)['data']['storeProductInfoDTO']['images'];
 $decodedData = array();
 
 foreach ($data as $key => $image) {
-    $decodedData[] = $image["urls"]["PRODUCT_HD"];
+    $decodedData[] = "https://external-content.duckduckgo.com/iu/?u=".$image["urls"]["PRODUCT_HD"];
 }
 
-echo json_encode($decodedData, JSON_PRETTY_PRINT);
-
+echo json_encode($decodedData, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 ?>
