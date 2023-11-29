@@ -354,7 +354,7 @@ if ($detect->isMobile()) {?>
                      <!---->
                      <div class="mdc-layout-grid__inner product-cards list ng-star-inserted" id="product-details">
                         <?php
-                            $sql = "SELECT * FROM urunler WHERE urun_kategori_id = '$id'";
+                            $sql = "SELECT * FROM urunler WHERE urun_kategori_id = '2100000000$id'";
                             $stmt = $pdo->prepare($sql);
                             $stmt->execute();
                             $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
