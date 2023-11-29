@@ -367,7 +367,7 @@ if ($detect->isMobile()) {?>
                                         </svg>
                                     </fa-icon>
                                     <?php 
-                                    if($urun['urun_indirim'] !== 0){?>
+                                    if($urun['urun_indirim'] != 0){?>
                                     
                                     <div id="discount-badge" class="discount-badge ng-star-inserted">
                                         <div><span id="discount-badge--percent" class="discount-badge--percent">%</span><span id="discount-badge--unit" class="discount-badge--unit"><?=$urun['urun_indirim']?></span></div>
@@ -377,7 +377,7 @@ if ($detect->isMobile()) {?>
                                     <!----><!----><!----><!---->
                                     <div>
                                         <fe-product-image id="product-image" class="image" _nghost-nyw-c159="">
-                                            <a _ngcontent-nyw-c159="" id="product-image-link" href="<?=seo($urun['urun_adi'])?>/<?=seo($urun['id'])?>">
+                                            <a _ngcontent-nyw-c159="" id="product-image-link" href="/urun/<?=seo($urun['urun_adi'])?>/<?=seo($urun['id'])?>">
                                             <img _ngcontent-nyw-c159="" felazyload="" alt="/urun/<?=$urun['urun_adi']?>" src="<?=$urun['urun_resim']?>" class="ng-star-inserted"><!----><!----><!---->
                                             </a>
                                         </fe-product-image>
@@ -388,7 +388,7 @@ if ($detect->isMobile()) {?>
                                             <!---->
                                         </fe-crm-discount-badge>
                                         <?php 
-                                    if($urun['urun_indirim'] !== 0){?>
+                                    if($urun['urun_indirim'] != 0){?>
                                         <fe-product-price id="price" class="price" _nghost-nyw-c271="">
                                             <div _ngcontent-nyw-c271="" class="promotion-wrapper">
                                             <div _ngcontent-nyw-c271="" id="price-old" class="price-old ng-star-inserted"><span _ngcontent-nyw-c271="" id="old-amount" class="amount"><?=$urun['urun_fiyat']?> <span _ngcontent-nyw-c271="" class="currency">TL</span></span></div>

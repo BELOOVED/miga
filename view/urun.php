@@ -202,7 +202,7 @@ try {
                      </h3>
                      <a class="text-color-info subtitle-2 brand-name" ngx-ql="" href="#"> <?= $urun['urun_marka']; ?> </a>
                      <?php foreach ($urunler as $urun): 
-                                    if($urun['urun_indirim'] !== 0){?>
+                                    if($urun['urun_indirim'] != 0){?>
                      <div class="price"><fe-product-price _nghost-qea-c271=""><div _ngcontent-qea-c271=""><div _ngcontent-qea-c271="" id="price-old" class="price-old ng-star-inserted"><span _ngcontent-qea-c271="" id="old-amount" class="amount">
                      
                                     <?= $urun['urun_fiyat']; ?>
@@ -231,7 +231,7 @@ try {
                      
                      <mat-divider role="separator" class="mat-divider mat-divider-horizontal" aria-orientation="horizontal"></mat-divider>
                      <?php 
-                                    if($urun['urun_indirim'] !== 0){?>
+                                    if($urun['urun_indirim'] != 0){?>
                      <fe-product-discounts _nghost-qea-c399="" class="ng-star-inserted"><div _ngcontent-qea-c399="" class="product-discounts ng-star-inserted"><fe-crm-discount-badge _ngcontent-qea-c399="" _nghost-qea-c293=""><!----></fe-crm-discount-badge><div _ngcontent-qea-c399="" class="discount ng-star-inserted"><div _ngcontent-qea-c399="" class="discount-badge"><div _ngcontent-qea-c399=""><span _ngcontent-qea-c399="" class="discount-badge--percent">%</span><span _ngcontent-qea-c399="" class="discount-badge--unit"><?=$urun['urun_indirim'];?></span></div><div _ngcontent-qea-c399="" class="discount-badge--label">İNDİRİM</div></div></div><!----><!----><!----><!----><!----></div><!----></fe-product-discounts>
                      <?php }?>
                      <mat-divider role="separator" class="mat-divider mat-divider-horizontal" aria-orientation="horizontal"></mat-divider>
@@ -289,7 +289,7 @@ try {
             </div>
             <!----><!----><!---->
             <div class="sticky-add-button mobile-only">
-                                   <?php if($urun['urun_indirim'] !== 0){?>
+                                   <?php if($urun['urun_indirim'] != 0){?>
             <fe-product-price class="product-price ng-star-inserted" _nghost-qea-c271=""><div _ngcontent-qea-c271=""><div _ngcontent-qea-c271="" id="price-old" class="price-old ng-star-inserted"><span _ngcontent-qea-c271="" id="old-amount" class="amount"><?=$urun['urun_fiyat'];?> <span _ngcontent-qea-c271="" class="currency">TL</span></span></div><!----><div _ngcontent-qea-c271="" id="price-new" class="price-new subtitle-1"><span _ngcontent-qea-c271="" id="new-amount" class="amount"> <?php
                                              $orijinal_fiyat = $urun['urun_fiyat'];
                                              $indirim_orani = $urun['urun_indirim'];
@@ -414,7 +414,7 @@ try {
                                     <?= $urun['urun_marka']; ?>
                                     <?php endforeach; ?> </a>
                      <div class="price">
-                     <?php if($urun['urun_indirim'] !== 0){?>
+                     <?php if($urun['urun_indirim'] != 0){?>
             <fe-product-price class="product-price ng-star-inserted" _nghost-qea-c271=""><div _ngcontent-qea-c271=""><div _ngcontent-qea-c271="" id="price-old" class="price-old ng-star-inserted"><span _ngcontent-qea-c271="" id="old-amount" class="amount"><?=$urun['urun_fiyat'];?> <span _ngcontent-qea-c271="" class="currency">TL</span></span></div><!----><div _ngcontent-qea-c271="" id="price-new" class="price-new subtitle-1"><span _ngcontent-qea-c271="" id="new-amount" class="amount"> <?php
                                              $orijinal_fiyat = $urun['urun_fiyat'];
                                              $indirim_orani = $urun['urun_indirim'];
@@ -433,7 +433,7 @@ try {
                      </div>
                      <mat-divider role="separator" class="mat-divider mat-divider-horizontal" aria-orientation="horizontal"></mat-divider>
                      <?php 
-                                    if($urun['urun_indirim'] !== 0){?>
+                                    if($urun['urun_indirim'] != 0){?>
                      <fe-product-discounts _nghost-qea-c399="" class="ng-star-inserted"><div _ngcontent-qea-c399="" class="product-discounts ng-star-inserted"><fe-crm-discount-badge _ngcontent-qea-c399="" _nghost-qea-c293=""><!----></fe-crm-discount-badge><div _ngcontent-qea-c399="" class="discount ng-star-inserted"><div _ngcontent-qea-c399="" class="discount-badge"><div _ngcontent-qea-c399=""><span _ngcontent-qea-c399="" class="discount-badge--percent">%</span><span _ngcontent-qea-c399="" class="discount-badge--unit"><?=$urun['urun_indirim'];?></span></div><div _ngcontent-qea-c399="" class="discount-badge--label">İNDİRİM</div></div></div><!----><!----><!----><!----><!----></div><!----></fe-product-discounts>
                      <?php }?>
                      <mat-divider role="separator" class="mat-divider mat-divider-horizontal ng-star-inserted" aria-orientation="horizontal"></mat-divider>
