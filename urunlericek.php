@@ -42,7 +42,7 @@ try {
                     $urun_resim = $data['images'][0]['urls']['PRODUCT_HD'];
                     $urun_aciklama = $data['shortDescription'];
                     $urun_marka = $data['brand']['name'];
-                    $sku = $data['sku'];
+                    $sku = "0";
 
                     $query = "INSERT INTO urunler 
                                 (urun_adi, urun_fiyat, urun_indirim, urun_kategori_id, urun_kategori, urun_altkategorileri, urun_resim, urun_resim1, urun_resim2, urun_resim3, urun_marka, urun_aciklama) 
