@@ -1,5 +1,7 @@
 <?php
-
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 require_once('inc/pdo.php');
 $category_ids = [1317, 1315, 1313, 1314, 10964, 1316, 70185];
 try {
@@ -26,9 +28,9 @@ try {
             curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
             $response = curl_exec($ch);
             curl_close($ch);
-            
             $dataa = json_decode($response, true)['data']['storeProductInfos'];
             foreach ($dataa as $data) {
+
                 if (isset($data['name'])) {
                     $urun_adi = $data['name'];
                     // $urun_fiyat = number_format($data['regularPrice'], 2, ',', '.');
@@ -40,11 +42,12 @@ try {
                     $urun_resim = $data['images'][0]['urls']['PRODUCT_HD'];
                     $urun_aciklama = $data['shortDescription'];
                     $urun_marka = $data['brand']['name'];
+                    $sku = $data['sku'];
 
                     $query = "INSERT INTO urunler 
-                                (urun_adi, urun_fiyat, urun_indirim, urun_kategori_id, urun_kategori, urun_altkategorileri, urun_resim, urun_marka, urun_aciklama) 
+                                (urun_adi, urun_fiyat, urun_indirim, urun_kategori_id, urun_kategori, urun_altkategorileri, urun_resim, urun_resim1, urun_resim2, urun_resim3, urun_marka, urun_aciklama) 
                             VALUES 
-                                (:urun_adi, :urun_fiyat, :urun_indirim, :urun_kategori_id, :urun_kategori, :urun_altkategorileri, :urun_resim, :urun_marka, :urun_aciklama)";
+                                (:urun_adi, :urun_fiyat, :urun_indirim, :urun_kategori_id, :urun_kategori, :urun_altkategorileri, :urun_resim, :urun_resim1, :urun_resim2, :urun_resim3, :urun_marka, :urun_aciklama)";
 
                     $stmt = $pdo->prepare($query);
                     $stmt->bindParam(':urun_adi', $urun_adi);
@@ -54,8 +57,18 @@ try {
                     $stmt->bindParam(':urun_kategori', $urun_kategori);
                     $stmt->bindParam(':urun_altkategorileri', $urun_altkategorileri);
                     $stmt->bindParam(':urun_resim', $urun_resim);
+
+                    $resim1 = "/urunresim.php?id={$sku}&number=1";
+                    $stmt->bindValue(':urun_resim1', $resim1 );
+                    $resim2 = "/urunresim.php?id={$sku}&number=2";
+                    $stmt->bindValue(':urun_resim2', $resim2 );
+                    $resim3 = "/urunresim.php?id={$sku}&number=3";
+                    $stmt->bindValue(':urun_resim3', $resim3 );
+
                     $stmt->bindParam(':urun_marka', $urun_marka);
                     $stmt->bindParam(':urun_aciklama', $urun_aciklama);
+
+                   
 
                     $stmt->execute();
                 }
