@@ -84,10 +84,19 @@
                         <!---->
                         <div _ngcontent-cro-c416="" class="list-page-items-container">
                         <?php
+                        $sql_count = "SELECT COUNT(*) FROM urunler";
+                        $stmt_count = $pdo->prepare($sql_count);
+                        $stmt_count->execute();
+                        $total_rows = $stmt_count->fetchColumn();
+                        if ($total_rows <= 30) {
+                            $sql = "SELECT * FROM urunler";
+                        } else {
                             $sql = "SELECT * FROM urunler ORDER BY RAND() LIMIT 30";
-                            $stmt = $pdo->prepare($sql);
-                            $stmt->execute();
-                            $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                        }
+
+                        $stmt = $pdo->prepare($sql);
+                        $stmt->execute();
+                        $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             foreach ($urunler as $urun) {
                             if($urun['urun_indirim'] != 0){?>
                             <sm-list-page-item _ngcontent-cro-c416="" fegtm="" class="list-item mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-3-tablet mdc-layout-grid__cell--span-2-phone">
