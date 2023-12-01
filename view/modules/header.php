@@ -1051,7 +1051,7 @@ if (strpos($pageName,".") === False){
                   <!---->
                   <div class="header-top-wrapper">
                      <div class="header-top elektronik">
-                     <!----><!----><a id="header-electronic-tab" class="elektronik-logo-tab header-tab selected"></a>
+                     <!----><!----><a id="header-electronic-tab" class="elektronik-logo-tab header-tab selected" href="/"></a>
                         <div class="anonymous">
                            <div class="login-signup-wrapper track-wrapper">
                               <div class="inner inner-track text-color-white">

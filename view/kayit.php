@@ -15,7 +15,7 @@
       <div _ngcontent-tus-c366="" class="desktop-only">
          <!----><!---->
       </div>
-      <div _ngcontent-tus-c366="" class="logo-container elektronik"></div>
+      <div _ngcontent-tus-c366="" class="logo-container elektronik" onclick="window.location.href= '/';"></div>
       <div _ngcontent-tus-c366="" class="mobile-only">
          <!----><!---->
       </div>
@@ -109,8 +109,8 @@
                                     <!---->
                                  </div>
                               </mat-form-field>
-                              <div class="register__content--agreements"><span class="mat-caption-normal"><a href="javascript:void(0)" class="text-color-orange">Kişisel Verilerin Korunması Hakkında Aydınlatma Metni </a> için tıklayın. </span></div>
-                              <div class="register__content--agreements">
+                              <div class="register__content--agreements"><span class="mat-caption-normal"><a href="javascript:void(0)" onclick="openmodal('kvkk')" class="text-color-orange">Kişisel Verilerin Korunması Hakkında Aydınlatma Metni </a> için tıklayın. </span></div>
+                              <div class="register__content--agreements" >
                                  <mat-checkbox color="primary" formcontrolname="permitMembership" required="" class="mat-mdc-checkbox fe-checkbox-label-caption mat-primary ng-untouched ng-pristine ng-invalid" id="mat-mdc-checkbox-1">
                                     <div class="mdc-form-field">
                                        <div class="mdc-checkbox">
@@ -127,7 +127,7 @@
                                        </div>
                                        <label for="mat-mdc-checkbox-1-input">
                                           <span class="mat-caption-normal">
-                                             <a href="javascript:void(0)" class="text-color-orange">Üyelik Sözleşmesi</a> 'ni onaylıyorum ve <a href="javascript:void(0)" class="text-color-orange">Açık Rıza Metni</a> kapsamında kişisel verilerimin işlenmesine ve paylaşılmasına onay veriyorum. * <!---->
+                                             <a href="javascript:void(0)"  onclick="openmodal('uyeliksozlesmesi')" class="text-color-orange">Üyelik Sözleşmesi</a> 'ni onaylıyorum ve <a href="javascript:void(0)" onclick="openmodal('acikrizametni')" class="text-color-orange">Açık Rıza Metni</a> kapsamında kişisel verilerimin işlenmesine ve paylaşılmasına onay veriyorum. * <!---->
                                           </span>
                                        </label>
                                     </div>
@@ -148,7 +148,7 @@
                                           </div>
                                           <div mat-ripple="" class="mat-ripple mat-mdc-checkbox-ripple mat-mdc-focus-indicator"></div>
                                        </div>
-                                       <label for="mat-mdc-checkbox-2-input"><span class="mat-caption-normal"> Migros Sanalmarket indirim ve kampanyalarından anında haberdar olmak için <a href="javascript:void(0)" class="text-color-orange">Dijital Platform Gıda Hizmetleri A.Ş. Ticari İletişim İzni Metni</a> kapsamında iletişim izni veriyorum. </span></label>
+                                       <label for="mat-mdc-checkbox-2-input"><span class="mat-caption-normal"> Migros Sanalmarket indirim ve kampanyalarından anında haberdar olmak için <a href="javascript:void(0)" onclick="openmodal('dijitalplatform')" class="text-color-orange">Dijital Platform Gıda Hizmetleri A.Ş. Ticari İletişim İzni Metni</a> kapsamında iletişim izni veriyorum. </span></label>
                                     </div>
                                  </mat-checkbox>
                               </div>
