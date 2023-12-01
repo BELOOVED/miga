@@ -158,7 +158,7 @@
                         <!---->
                         </div>
                     </div>
-                    <button _ngcontent-cro-c416="" mat-stroked-button="" color="primary" class="see-all-button text-color-orange mat-body-2 mdc-button mdc-button--outlined mat-mdc-outlined-button mat-primary mat-mdc-button-base"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Tümünü Gör </span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button><!---->
+                    <button onclick="window.location.href = '/urunler/indirimli-urunler/1';" _ngcontent-cro-c416="" mat-stroked-button="" color="primary" class="see-all-button text-color-orange mat-body-2 mdc-button mdc-button--outlined mat-mdc-outlined-button mat-primary mat-mdc-button-base"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Tümünü Gör </span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button><!---->
                     <div _ngcontent-cro-c416="" class="fade-out"></div>
                 </div>
                 <!----><!----><!----><!---->
