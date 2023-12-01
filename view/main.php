@@ -84,7 +84,7 @@
                         <!---->
                         <div _ngcontent-cro-c416="" class="list-page-items-container">
                         <?php
-                            $sql = "SELECT * FROM urunler ORDER BY id LIMIT 30 DESC";
+                            $sql = "SELECT * FROM urunler ORDER BY RAND() LIMIT 30";
                             $stmt = $pdo->prepare($sql);
                             $stmt->execute();
                             $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
