@@ -1001,6 +1001,7 @@ if ($detect->isMobile()) {?>
             success: function (response) {
                 console.log('Success:', response);
                 $('#product-details').html(response);
+                closemodal();
             },
             error: function (xhr, status, error) {
                 console.error('Error:', error);
