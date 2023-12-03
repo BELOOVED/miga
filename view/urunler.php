@@ -1090,8 +1090,7 @@ $(document).ready(function () {
     }
 });
 $(document).ready(function () {
-    // Checkbox durumu değiştiğinde dinle
-    $('.mat-mdc-checkbox-27-input').change(function () {
+    $('#mat-mdc-checkbox-27-input').change(function () {
         var marka = $(this).attr('tabindex');
 
         if ($(this).prop('checked')) {
