@@ -129,9 +129,7 @@ foreach ($urunler as $urun) {
             $stmt->bindParam(($key + 1), $value, PDO::PARAM_STR);
         }
 
-        if (!$stmt->execute()) {
-            print_r($stmt->errorInfo());
-        } else {
+        $stmt->execute();
             $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
     foreach ($urunler as $urun) {
@@ -239,5 +237,5 @@ foreach ($urunler as $urun) {
         echo '</div>';
         echo '</mat-card>';
         echo '</sm-list-page-item>';}
-    }}
+    }
 ?>
