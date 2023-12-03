@@ -1090,23 +1090,18 @@ $(document).ready(function () {
     }
 });
 $(document).ready(function () {
-    var marka; // marka değişkenini global olarak tanımla
+    // Checkbox durumu değiştiğinde dinle
+    $('.mat-mdc-checkbox-27-input').change(function () {
+        var marka = $(this).attr('tabindex');
 
-    if ($('#mat-mdc-checkbox-27-input').prop('checked')) {
-        marka = $('.mat-mdc-checkbox-27-input').attr('tabindex');
-        performAjaxxRequest();
-    }
-
-    $('#mat-mdc-checkbox-27-input').change(function () {
         if ($(this).prop('checked')) {
-            marka = $(this).attr('tabindex');
-            performAjaxxRequest();
+            performAjaxxRequest(marka);
         } else {
-            cancelAjaxxRequest();
+            cancelAjaxxRequest(marka);
         }
     });
 
-    function performAjaxxRequest() {
+    function performAjaxxRequest(marka) {
         $('#spinner').removeClass('hidden');
 
         $.ajax({
@@ -1129,7 +1124,7 @@ $(document).ready(function () {
         });
     }
 
-    function cancelAjaxxRequest() {
+    function cancelAjaxxRequest(marka) {
         $('#spinner').removeClass('hidden');
 
         $.ajax({
@@ -1152,6 +1147,7 @@ $(document).ready(function () {
         });
     }
 });
+
 
 function silra(){
    $('#spinner').toggleClass('hidden');
