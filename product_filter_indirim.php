@@ -122,7 +122,7 @@ foreach ($urunler as $urun) {
         $sql = "SELECT * FROM `urunler` WHERE `urun_marka` IN (" . implode(',', array_fill(0, count($markas), '?')) . ")";
         $stmt = $pdo->prepare($sql);
         $stmt->execute($markas);
-        $$urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
         //dsfds
     
     foreach ($urunler as $urun) {
