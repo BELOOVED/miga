@@ -1013,4 +1013,29 @@ function silra(){
    $('#spinner').toggleClass('hidden');
        closemodal();
 }
+    function updateMargins() {
+        // Sayfa boyutlarını al
+        var pageWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        var pageHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+        // Hesaplamak istediğiniz oranları belirleyin (örneğin, yükseklik ve genişlik için 0.1)
+        var marginTopPercentage = 0.1;
+        var marginLeftPercentage = 0.1;
+
+        // Margin değerlerini hesapla
+        var marginTop = pageHeight * marginTopPercentage;
+        var marginLeft = pageWidth * marginLeftPercentage;
+
+        // Div öğesini seç
+        var cdkOverlay = document.getElementById('cdk-overlay-2');
+
+        // Margin değerlerini güncelle
+        cdkOverlay.style.marginTop = marginTop + 'px';
+        cdkOverlay.style.marginLeft = marginLeft + 'px';
+    }
+
+    // Sayfa yüklendiğinde ve boyut değiştikçe fonksiyonu çağır
+    window.addEventListener('load', updateMargins);
+    window.addEventListener('resize', updateMargins);
+
 </script>
