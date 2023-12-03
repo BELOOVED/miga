@@ -121,7 +121,7 @@ foreach ($urunler as $urun) {
     
     if ($markas !== null) {
         $placeholders = implode(',', array_map(function($marka) {
-            return ':marka_' . md5($marka);
+            return ':marka' . md5($marka); // Her bir adlandırılmış parametreyi benzersiz bir isimle oluşturun
         }, $markas));
         
         $sql = "SELECT * FROM urunler WHERE urun_kategori_id = :id AND urun_marka IN ($placeholders)";
@@ -130,14 +130,12 @@ foreach ($urunler as $urun) {
         
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         
-        $paramArray = []; // Yeni bir dizi oluşturun
-        
         foreach ($markas as $key => $value) {
-            $paramName = ':marka_' . md5($value);
-            $paramArray[$paramName] = $value; // Diziye ekle
+            $paramName = ':marka' . md5($value); // Her bir adlandırılmış parametrenin benzersiz ismini oluşturun
+            $stmt->bindParam($paramName, $value, PDO::PARAM_STR);
         }
         
-        if (!$stmt->execute($paramArray)) {
+        if (!$stmt->execute()) {
             print_r($stmt->errorInfo());
         } else {
             $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
