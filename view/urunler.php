@@ -1090,46 +1090,35 @@ $(document).ready(function () {
     }
 });
 $(document).ready(function () {
+    var selectedMarkas = [];  // Array to store selected markas
+
     $('.golaggaa').change(function () {
         var marka = $(this).attr('tabindex');
 
         if ($(this).prop('checked')) {
-            performAjaxxRequest(marka);
+            // Add the selected marka to the array
+            if (selectedMarkas.indexOf(marka) === -1) {
+                selectedMarkas.push(marka);
+            }
         } else {
-            cancelAjaxxRequest(marka);
+            // Remove the deselected marka from the array
+            var index = selectedMarkas.indexOf(marka);
+            if (index !== -1) {
+                selectedMarkas.splice(index, 1);
+            }
         }
+
+        // Perform the AJAX request with the array of selected markas
+        performAjaxxRequest(selectedMarkas);
     });
 
-    function performAjaxxRequest(marka) {
+    function performAjaxxRequest(selectedMarkas) {
         $('#spinner').removeClass('hidden');
 
         $.ajax({
             url: 'product_filter_indirim.php?q=marka',
             type: 'POST',
-            data: { marka: marka, id: <?=$id?> },
-            success: function (response) {
-                console.log('Success:', response);
-                $('#product-details').html(response);
-
-                setTimeout(function () {
-                    $('#spinner').addClass('hidden');
-                }, 1000);
-            },
-            error: function (xhr, status, error) {
-                console.error('Error:', error);
-                alert('Bir hata oluştu. Lütfen tekrar deneyin.');
-                $('#spinner').addClass('hidden');
-            }
-        });
-    }
-
-    function cancelAjaxxRequest(marka) {
-        $('#spinner').removeClass('hidden');
-
-        $.ajax({
-            url: 'product_filter_indirim.php?q=markagerial',
-            type: 'POST',
-            data: { marka: marka, id: <?=$id?> },
+            data: { markas: selectedMarkas, id: <?=$id?> },
             success: function (response) {
                 console.log('Success:', response);
                 $('#product-details').html(response);
@@ -1146,6 +1135,7 @@ $(document).ready(function () {
         });
     }
 });
+
 
 
 function silra(){
