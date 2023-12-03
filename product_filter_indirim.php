@@ -117,26 +117,27 @@ foreach ($urunler as $urun) {
     echo '</sm-list-page-item>';
 }
 }elseif($q == 'marka'){
+    try {
+    
     if ($markas !== null) {
         $placeholders = implode(',', array_fill(0, count($markas), '?'));
 
-$sql = "SELECT * FROM urunler WHERE urun_kategori_id = :id AND urun_marka IN ($placeholders)";
+        $sql = "SELECT * FROM urunler WHERE urun_kategori_id = :id AND urun_marka IN ($placeholders)";
 
-$stmt = $pdo->prepare($sql);
+        $stmt = $pdo->prepare($sql);
 
-$stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
 
-foreach ($markas as $key => $value) {
-    $stmt->bindParam(($key + 1), $value, PDO::PARAM_STR);
-}
+        foreach ($markas as $key => $value) {
+            $stmt->bindParam(($key + 1), $value, PDO::PARAM_STR);
+        }
 
-if (!$stmt->execute()) {
-    print_r($stmt->errorInfo());
-} else {
-    $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    print_r($urunler);
-}
-
+        if (!$stmt->execute()) {
+            print_r($stmt->errorInfo());
+        } else {
+            $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            print_r($urunler);
+        }
         
     
     foreach ($urunler as $urun) {
@@ -244,5 +245,8 @@ if (!$stmt->execute()) {
         echo '</div>';
         echo '</mat-card>';
         echo '</sm-list-page-item>';}
+    }}
+catch (Exception $e) {
+        echo 'Exception: ', $e->getMessage(), "\n";
     }}
 ?>
