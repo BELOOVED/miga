@@ -1037,6 +1037,8 @@ $(document).ready(function () {
     $('#indirimaa').change(function () {
         if ($(this).prop('checked')) {
             performAjaxRequest();
+        } else {
+            cancelAjaxRequest();
         }
     });
 
@@ -1044,7 +1046,7 @@ $(document).ready(function () {
         $('#spinner').removeClass('hidden');
 
         $.ajax({
-            url: 'product_filter_indirim.php',
+            url: 'product_filter_indirim.php?q=indirim',
             type: 'POST',
             data: { id: <?=$id?> },
             success: function (response) {
@@ -1058,6 +1060,30 @@ $(document).ready(function () {
             error: function (xhr, status, error) {
                 console.error('Error:', error);
                 alert('Bir hata oluştu. Lütfen tekrar deneyin.');
+                $('#spinner').addClass('hidden');
+            }
+        });
+    }
+
+    function cancelAjaxRequest() {
+        $('#spinner').removeClass('hidden');
+
+        $.ajax({
+            url: 'product_filter_indirim.php?q=gerial',
+            type: 'POST',
+            data: { id: <?=$id?> },
+            success: function (response) {
+                console.log('Success:', response);
+                $('#product-details').html(response);
+
+                setTimeout(function () {
+                    $('#spinner').addClass('hidden');
+                }, 1000);
+            },
+            error: function (xhr, status, error) {
+                console.error('Error:', error);
+                alert('Bir hata oluştu. Lütfen tekrar deneyin.');
+                $('#spinner').addClass('hidden');
             }
         });
     }
