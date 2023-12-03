@@ -139,7 +139,6 @@ foreach ($urunler as $urun) {
             print_r($stmt->errorInfo());
         } else {
             $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            print_r($urunler);
         }
         
     
