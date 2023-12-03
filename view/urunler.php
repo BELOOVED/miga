@@ -1006,7 +1006,9 @@ if ($detect->isMobile()) {?>
     $('mat-option[role=option]').click(function () {
       var tabindexValue = $(this).attr('tabindex');
       var aaValue = $('.mdc-list-item__primary-text', this).text();
+      $('#spinner').removeClass('hidden');
 
+      
         $.ajax({
             url: 'product_filter.php',
             type: 'POST',
@@ -1015,7 +1017,9 @@ if ($detect->isMobile()) {?>
                 console.log('Success:', response);
                 $('#product-details').html(response);
                 $('#siralatext2').text(aaValue);
-
+                  setTimeout(function() {
+                     $('#spinner').addClass('hidden');
+                  }, 1000);
                 closemodal();
             },
             error: function (xhr, status, error) {
