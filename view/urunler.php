@@ -860,11 +860,10 @@ if ($detect->isMobile()) {?>
       </div>
    </div>
 </div>
-<div class="cdk-overlay-container elektronik hidden" id="sirala2">
+<div class="cdk-overlay-container elektronik hidden" id="sirala2" style="postion: static;">
    <div class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing"></div>
-   <div class="cdk-overlay-connected-position-bounding-box " id="yetoa" dir="ltr" style="top: 0px; left: 0px; height: 100%; width: 100%;">
-      <div id="cdk-overlay-2" class="cdk-overlay-pane dialog-shadow" style="width: 223.984px; margin-top: -130;
-    margin-left: 1070; ">
+   <div class="cdk-overlay-connected-position-bounding-box " id="yetoa" dir="ltr" style="style="position: absolute;top: 0;left: -180;height: 864px;display: flex;align-items: flex-end;"">
+      <div id="cdk-overlay-2" class="cdk-overlay-pane dialog-shadow" style="width: 223.984px;">
          <div role="listbox" tabindex="-1" class="ng-trigger ng-trigger-transformPanel ng-tns-c190-2 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel non-scrollable" id="mat-select-0-panel" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-0">
             <!---->
             <div class="ng-tns-c190-2">
@@ -1014,29 +1013,6 @@ function silra(){
    $('#spinner').toggleClass('hidden');
        closemodal();
 }
-    function updateMargins() {
-        // Sayfa boyutlarını al
-        var pageWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-        var pageHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-
-        // Hesaplamak istediğiniz oranları belirleyin (örneğin, yükseklik ve genişlik için 0.1)
-        var marginTopPercentage = 0.1;
-        var marginLeftPercentage = 0.1;
-
-        // Margin değerlerini hesapla
-        var marginTop = pageHeight * marginTopPercentage;
-        var marginLeft = pageWidth * marginLeftPercentage;
-
-        // Div öğesini seç
-        var cdkOverlay = document.getElementById('cdk-overlay-2');
-
-        // Margin değerlerini güncelle
-        cdkOverlay.style.marginTop = marginTop + 'px';
-        cdkOverlay.style.marginLeft = marginLeft + 'px';
-    }
-
-    // Sayfa yüklendiğinde ve boyut değiştikçe fonksiyonu çağır
-    window.addEventListener('load', updateMargins);
-    window.addEventListener('resize', updateMargins);
+   
 
 </script>
