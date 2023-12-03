@@ -863,7 +863,7 @@ if ($detect->isMobile()) {?>
 <div class="cdk-overlay-container elektronik hidden" id="sirala2">
    <div class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing"></div>
    <div class="cdk-overlay-connected-position-bounding-box " id="yetoa" dir="ltr" style="top: 0px; left: 0px; height: 100%; width: 100%;">
-      <div id="cdk-overlay-2" class="cdk-overlay-pane dialog-shadow" style="">
+      <div id="cdk-overlay-2" class="cdk-overlay-pane dialog-shadow" style="width: 223.984px; top: 296.387px; left: 766.973px;">
          <div role="listbox" tabindex="-1" class="ng-trigger ng-trigger-transformPanel ng-tns-c190-2 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel non-scrollable" id="mat-select-0-panel" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-0">
             <!---->
             <div class="ng-tns-c190-2">
@@ -997,7 +997,7 @@ if ($detect->isMobile()) {?>
         $.ajax({
             url: 'product_filter.php',
             type: 'POST',
-            data: { option: selectedValue, id: <?=$id?> },
+            data: { option: tabindexValue, id: <?=$id?> },
             success: function (response) {
                 console.log('Success:', response);
                 $('#product-details').html(response);
