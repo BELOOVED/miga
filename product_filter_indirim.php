@@ -124,7 +124,7 @@ foreach ($urunler as $urun) {
         $placeholders = implode(',', array_fill(0, count($markas), '?'));
 
         
-            print_r($placeholders);
+            print_r($markas);
         
         
    
