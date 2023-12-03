@@ -118,29 +118,12 @@ foreach ($urunler as $urun) {
 }
 }elseif($q == 'marka'){
     try {
-    
     if ($markas !== null) {
-        $placeholders = implode(',', array_map(function($marka) {
-            return ':marka' . md5($marka); // Her bir adlandırılmış parametreyi benzersiz bir isimle oluşturun
-        }, $markas));
-        
-        $sql = "SELECT * FROM urunler WHERE urun_kategori_id = :id AND urun_marka IN ($placeholders)";
-        
+        $sql = "SELECT * FROM `urunler` WHERE `urun_marka` IN (" . implode(',', array_fill(0, count($markalar), '?')) . ") ORDER BY `urun_resim` DESC";
         $stmt = $pdo->prepare($sql);
-        
-        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-        
-        foreach ($markas as $key => $value) {
-            $paramName = ':marka' . md5($value); // Her bir adlandırılmış parametrenin benzersiz ismini oluşturun
-            $stmt->bindParam($paramName, $value, PDO::PARAM_STR);
-        }
-        
-        if (!$stmt->execute()) {
-            print_r($stmt->errorInfo());
-        } else {
-            $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        }
-        
+        $stmt->execute($markas);
+        $$urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
     
     foreach ($urunler as $urun) {
         echo '<sm-list-page-item fegtm="" class="mdc-layout-grid__cell--span-2-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-2-phone ng-star-inserted">';
