@@ -123,7 +123,7 @@ foreach ($urunler as $urun) {
         $stmt = $pdo->prepare($sql);
         $stmt->execute($markas);
         $$urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    
+        //dsfds
     
     foreach ($urunler as $urun) {
         echo '<sm-list-page-item fegtm="" class="mdc-layout-grid__cell--span-2-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-2-phone ng-star-inserted">';
