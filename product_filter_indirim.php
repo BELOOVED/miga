@@ -116,6 +116,6 @@ foreach ($urunler as $urun) {
     echo '</sm-list-page-item>';
 }
 }elseif($q == 'marka'){
-    echo $markas;
+    var_dump($markas);
    }
 ?>
