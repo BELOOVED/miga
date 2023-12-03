@@ -1030,25 +1030,37 @@ if ($detect->isMobile()) {?>
     });
 });
 $(document).ready(function () {
-   $('#indirimaa').prop('checked', function() {
-      $('#spinner').removeClass('hidden');
+    if ($('#indirimaa').prop('checked')) {
+        performAjaxRequest();
+    }
+
+    $('#indirimaa').change(function () {
+        if ($(this).prop('checked')) {
+            performAjaxRequest();
+        }
+    });
+
+    function performAjaxRequest() {
+        $('#spinner').removeClass('hidden');
+
         $.ajax({
             url: 'product_filter_indirim.php',
             type: 'POST',
-            data: {id: <?=$id?> },
+            data: { id: <?=$id?> },
             success: function (response) {
                 console.log('Success:', response);
                 $('#product-details').html(response);
-                  setTimeout(function() {
-                     $('#spinner').addClass('hidden');
-                  }, 1000);
+
+                setTimeout(function () {
+                    $('#spinner').addClass('hidden');
+                }, 1000);
             },
             error: function (xhr, status, error) {
                 console.error('Error:', error);
                 alert('Bir hata oluştu. Lütfen tekrar deneyin.');
             }
         });
-    });
+    }
 });
 function silra(){
    $('#spinner').toggleClass('hidden');
