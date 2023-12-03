@@ -120,7 +120,7 @@ foreach ($urunler as $urun) {
     try {
     
     if ($markas !== null) {
-        $placeholders = implode(',', array_fill(0, count($markas), ':marka'));
+        $placeholders = implode(',', array_fill(0, count($markas), '?'));
 
 $sql = "SELECT * FROM urunler WHERE urun_kategori_id = :id AND urun_marka IN ($placeholders)";
 
@@ -130,7 +130,7 @@ $stmt->bindParam(':id', $id, PDO::PARAM_INT);
 
 foreach ($markas as $key => $value) {
     $paramName = ":marka" . ($key + 1); // Adlandırılmış parametre ismini oluşturun
-    $stmt->bindParam($paramName, $value, PDO::PARAM_STR);
+    $stmt->bindValue($paramName, $value, PDO::PARAM_STR);
 }
 
 if (!$stmt->execute()) {
