@@ -237,7 +237,7 @@ if ($detect->isMobile()) {?>
                                        <div class="mdc-form-field">
                                           <div class="mdc-checkbox">
                                              <div class="mat-mdc-checkbox-touch-target"></div>
-                                             <input type="checkbox" class="mdc-checkbox__native-control" id="mat-mdc-checkbox-52-input" tabindex="0" aria-checked="false">
+                                             <input type="checkbox" id="indirimaa" class="mdc-checkbox__native-control" id="mat-mdc-checkbox-52-input" tabindex="0" aria-checked="false">
                                              <div class="mdc-checkbox__ripple"></div>
                                              <div class="mdc-checkbox__background">
                                                 <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true" class="mdc-checkbox__checkmark">
@@ -696,7 +696,7 @@ if ($detect->isMobile()) {?>
 <div class="cdk-overlay-container elektronik hidden" id="sirala">
    <div class="cdk-overlay-backdrop cdk-overlay-dark-backdrop cdk-overlay-backdrop-showing"></div>
    <div class="cdk-global-overlay-wrapper" dir="ltr" style="justify-content: center; align-items: center;">
-      <div id="cdk-overlay-2" class="cdk-overlay-pane mobile-modal modal-content-no-padding" style="max-width: 80vw; position: static;">
+      <div id="cdk-overlay-2" class="cdk-overlay-pane mobile-modal modal-content-no-padding" style="max-width: 80vw; position: static; min-height: 0 !impo;">
          <div tabindex="0" class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div>
          <mat-dialog-container tabindex="-1" class="mat-mdc-dialog-container mdc-dialog cdk-dialog-container mdc-dialog--open" id="mat-mdc-dialog-1" role="dialog" aria-modal="true" aria-labelledby="mat-mdc-dialog-title-1">
             <div class="mdc-dialog__container">
@@ -1029,10 +1029,31 @@ if ($detect->isMobile()) {?>
         });
     });
 });
+$(document).ready(function () {
+   $('#indirimaa').prop('checked', function() {
+      $('#spinner').removeClass('hidden');
+        $.ajax({
+            url: 'product_filter_indirim.php',
+            type: 'POST',
+            data: {id: <?=$id?> },
+            success: function (response) {
+                console.log('Success:', response);
+                $('#product-details').html(response);
+                  setTimeout(function() {
+                     $('#spinner').addClass('hidden');
+                  }, 1000);
+            },
+            error: function (xhr, status, error) {
+                console.error('Error:', error);
+                alert('Bir hata oluştu. Lütfen tekrar deneyin.');
+            }
+        });
+    });
+});
 function silra(){
    $('#spinner').toggleClass('hidden');
        closemodal();
 }
-   
+
 
 </script>
