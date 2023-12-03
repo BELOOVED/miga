@@ -17,10 +17,10 @@ switch ($option) {
         $orderBy = 'ORDER BY urun_indirim DESC';
         break;
     case '5':
-        $orderBy = 'ORDER BY urun_fiyat DESC';
+        $orderBy = 'ORDER BY urun_fiyat ASC';
         break;
     case '6':
-        $orderBy = 'ORDER BY urun_fiyat ASC';
+        $orderBy = 'ORDER BY urun_fiyat DESC';
         break;
     case '7':
         $orderBy = 'ORDER BY urun_indirim DESC';

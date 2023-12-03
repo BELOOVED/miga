@@ -862,7 +862,7 @@ if ($detect->isMobile()) {?>
 </div>
 <div class="cdk-overlay-container elektronik hidden" id="sirala2">
    <div class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing"></div>
-   <div class="cdk-overlay-connected-position-bounding-box" dir="ltr" style="top: 0px; left: 0px; height: 100%; width: 100%;">
+   <div class="cdk-overlay-connected-position-bounding-box hidden" id="yetoa" dir="ltr" style="top: 0px; left: 0px; height: 100%; width: 100%;">
       <div id="cdk-overlay-2" class="cdk-overlay-pane dialog-shadow" style="width: 223.984px; top: 296.387px; left: 766.973px;">
          <div role="listbox" tabindex="-1" class="ng-trigger ng-trigger-transformPanel ng-tns-c190-2 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel non-scrollable" id="mat-select-0-panel" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-0">
             <!---->
@@ -930,7 +930,48 @@ if ($detect->isMobile()) {?>
       </div>
    </div>
 </div>
+<?php
+                if ($detect->isMobile()) {?>
 
+<style>
+   #yetoa {
+    top: 0px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  #cdk-overlay-2 {
+   position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 370px;
+  }
+
+</style>
+<?php }else{?>
+<style>
+#yetoa{
+   top: 150px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+#cdk-overlay-2{
+   position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 530px;
+}
+</style>
+             <?php }?>   
 <script>
       $(document).ready(function () {
     $('input[type=radio]').change(function () {
@@ -952,7 +993,7 @@ if ($detect->isMobile()) {?>
 });
     $(document).ready(function () {
     $('mat-option[tabindex]').click(function () {
-        var selectedValue = $(this).val();
+      var tabindexValue = $(this).attr('tabindex');
         $.ajax({
             url: 'product_filter.php',
             type: 'POST',
