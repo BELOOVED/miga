@@ -206,7 +206,7 @@ if ($detect->isMobile()) {?>
                                        <div class="mdc-form-field">
                                           <div class="mdc-checkbox">
                                              <div class="mat-mdc-checkbox-touch-target"></div>
-                                             <input type="checkbox" class="mdc-checkbox__native-control" id="mat-mdc-checkbox-27-input" tabindex="0" aria-checked="false">
+                                             <input type="checkbox" class="mdc-checkbox__native-control" id="mat-mdc-checkbox-27-input" tabindex="<?=$alt_kategori?>" aria-checked="false">
                                              <div class="mdc-checkbox__ripple"></div>
                                              <div class="mdc-checkbox__background">
                                                 <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true" class="mdc-checkbox__checkmark">
@@ -666,7 +666,7 @@ if ($detect->isMobile()) {?>
                                                       foreach ($alt_kategoriler as $alt_kategori) {
                                                          $alt_kategori = trim($alt_kategori); 
                                                          ?>   
-                        <mat-list-option role="option" id="<?=$alt_kategori?>" class="mat-list-item mat-list-option mat-focus-indicator mat-body-2 info-option mat-primary ng-star-inserted" aria-selected="false" aria-disabled="false" tabindex="-1">
+                        <mat-list-option role="option" id="<?=$alt_kategori?>" class="mat-list-item mat-list-option mat-focus-indicator mat-body-2 info-option mat-primary ng-star-inserted" aria-selected="false" aria-disabled="false" tabindex="<?=$alt_kategori?>">
                               <div class="mat-list-item-content mat-list-item-content-reverse">
                                  <div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div>
                                  <mat-pseudo-checkbox class="mat-pseudo-checkbox ng-star-inserted"></mat-pseudo-checkbox>
@@ -1029,6 +1029,7 @@ if ($detect->isMobile()) {?>
         });
     });
 });
+
 $(document).ready(function () {
     if ($('#indirimaa').prop('checked')) {
         performAjaxRequest();
@@ -1072,6 +1073,69 @@ $(document).ready(function () {
             url: 'product_filter_indirim.php?q=gerial',
             type: 'POST',
             data: { id: <?=$id?> },
+            success: function (response) {
+                console.log('Success:', response);
+                $('#product-details').html(response);
+
+                setTimeout(function () {
+                    $('#spinner').addClass('hidden');
+                }, 1000);
+            },
+            error: function (xhr, status, error) {
+                console.error('Error:', error);
+                alert('Bir hata oluştu. Lütfen tekrar deneyin.');
+                $('#spinner').addClass('hidden');
+            }
+        });
+    }
+});
+$(document).ready(function () {
+   
+    if ($('.mat-mdc-checkbox-27-input', this).prop('checked')) {
+      var marka = $(this).attr('tabindex');
+
+        performAjaxxRequest();
+    }
+
+    $('.mat-mdc-checkbox-27-input', this).change(function () {
+        if ($(this).prop('checked')) {
+         
+            performAjaxxRequest();
+        } else {
+            cancelAjaxxRequest();
+        }
+    });
+
+    function performAjaxxRequest() {
+        $('#spinner').removeClass('hidden');
+
+        $.ajax({
+            url: 'product_filter_indirim.php?q=marka',
+            type: 'POST',
+            data: { marka: marka, id: <?=$id?> },
+            success: function (response) {
+                console.log('Success:', response);
+                $('#product-details').html(response);
+
+                setTimeout(function () {
+                    $('#spinner').addClass('hidden');
+                }, 1000);
+            },
+            error: function (xhr, status, error) {
+                console.error('Error:', error);
+                alert('Bir hata oluştu. Lütfen tekrar deneyin.');
+                $('#spinner').addClass('hidden');
+            }
+        });
+    }
+
+    function cancelAjaxxRequest() {
+        $('#spinner').removeClass('hidden');
+
+        $.ajax({
+            url: 'product_filter_indirim.php?q=markagerial',
+            type: 'POST',
+            data: { marka: marka, id: <?=$id?> },
             success: function (response) {
                 console.log('Success:', response);
                 $('#product-details').html(response);
