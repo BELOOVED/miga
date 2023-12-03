@@ -50,7 +50,7 @@ foreach ($urunler as $urun) {
     }
     echo '<div>';
     echo '<fe-product-image id="product-image" class="image" _nghost-nyw-c159="">';
-    echo '<a _ngcontent-nyw-c159="" id="product-image-link" href="' . seo($urun['urun_adi']) . '/' . seo($urun['id']) . '">';
+    echo '<a _ngcontent-nyw-c159="" id="product-image-link" href="/urun/' . seo($urun['urun_adi']) . '/' . seo($urun['id']) . '">';
     echo '<img _ngcontent-nyw-c159="" felazyload="" alt="/urun/' . $urun['urun_adi'] . '" src="' . $urun['urun_resim'] . '" class="ng-star-inserted">';
     echo '</a>';
     echo '</fe-product-image>';
