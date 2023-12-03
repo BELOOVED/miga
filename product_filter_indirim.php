@@ -2,7 +2,7 @@
 include 'inc/pdo.php';
 $id = $_POST['id'];
 $q = $_GET['q'];
-$marka = $_POST['marka'];
+$marka = isset($_POST['marka']) ? htmlspecialchars($_POST['marka']) : null;
 if($q == 'indirim'){
 $sql = "SELECT * FROM urunler WHERE urun_kategori_id = '$id' AND urun_indirim > 0";
 $stmt = $pdo->prepare($sql);
@@ -116,10 +116,17 @@ foreach ($urunler as $urun) {
     echo '</sm-list-page-item>';
 }
 }elseif($q == 'marka'){
-    $sql = "SELECT * FROM urunler WHERE urun_kategori_id = '$id' AND urun_marka = '$marka'";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute();
-    $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    if ($marka !== null) {
+        $sql = "SELECT * FROM urunler WHERE urun_kategori_id = :id AND urun_marka = :marka";
+        
+        $stmt = $pdo->prepare($sql);
+        
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->bindParam(':marka', $marka, PDO::PARAM_STR);
+        
+        $stmt->execute();
+        
+        $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
     foreach ($urunler as $urun) {
         echo '<sm-list-page-item fegtm="" class="mdc-layout-grid__cell--span-2-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-2-phone ng-star-inserted">';
@@ -170,6 +177,9 @@ foreach ($urunler as $urun) {
         echo '</div>';
         echo '</mat-card>';
         echo '</sm-list-page-item>';
+    }
+}else {
+        echo "Marka bilgisi alınamadı.";
     }
 }elseif($q == 'markagerial'){
         $sql = "SELECT * FROM urunler WHERE urun_kategori_id = '$id' AND urun_marka = '$marka'";
