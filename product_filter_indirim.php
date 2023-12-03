@@ -118,20 +118,21 @@ foreach ($urunler as $urun) {
 }elseif($q == 'marka'){
     if ($markas !== null) {
         $placeholders = implode(',', array_fill(0, count($markas), '?'));
-    
+
         $sql = "SELECT * FROM urunler WHERE urun_kategori_id = :id AND urun_marka IN ($placeholders)";
-    
+
         $stmt = $pdo->prepare($sql);
-    
+
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-    
+
         foreach ($markas as $key => $value) {
-            $stmt->bindValue(($key+1), htmlspecialchars($value), PDO::PARAM_STR);
+            $stmt->bindParam(($key + 1), $value, PDO::PARAM_STR);
         }
-    
-        $stmt->execute();
-    
-        $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        if (!$stmt->execute()) {
+            print_r($stmt->errorInfo());
+        } else {
+            $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
     foreach ($urunler as $urun) {
         echo '<sm-list-page-item fegtm="" class="mdc-layout-grid__cell--span-2-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-2-phone ng-star-inserted">';
@@ -183,7 +184,7 @@ foreach ($urunler as $urun) {
         echo '</mat-card>';
         echo '</sm-list-page-item>';
     }
-}else {
+}}else {
     $sql = "SELECT * FROM urunler WHERE urun_kategori_id = '$id'";
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
