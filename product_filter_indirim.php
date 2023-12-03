@@ -120,25 +120,26 @@ foreach ($urunler as $urun) {
     try {
     
     if ($markas !== null) {
-        $placeholders = implode(',', array_fill(0, count($markas), '?'));
+        $placeholders = implode(',', array_fill(0, count($markas), ':marka'));
 
-        $sql = "SELECT * FROM urunler WHERE urun_kategori_id = :id AND urun_marka IN ($placeholders)";
+$sql = "SELECT * FROM urunler WHERE urun_kategori_id = :id AND urun_marka IN ($placeholders)";
 
-        $stmt = $pdo->prepare($sql);
+$stmt = $pdo->prepare($sql);
 
-        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+$stmt->bindParam(':id', $id, PDO::PARAM_INT);
 
-        foreach ($markas as $key => $value) {
-            $stmt->bindParam(($key + 1), $value, PDO::PARAM_STR);
-        }
+foreach ($markas as $key => $value) {
+    $paramName = ":marka" . ($key + 1); // Adlandırılmış parametre ismini oluşturun
+    $stmt->bindParam($paramName, $value, PDO::PARAM_STR);
+}
 
-        if (!$stmt->execute()) {
-            print_r($stmt->errorInfo());
-        } else {
-            $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            print_r($urunler);
-        }
-        
+if (!$stmt->execute()) {
+    print_r($stmt->errorInfo());
+} else {
+    $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    print_r($urunler);
+}
+
     
     foreach ($urunler as $urun) {
         echo '<sm-list-page-item fegtm="" class="mdc-layout-grid__cell--span-2-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-2-phone ng-star-inserted">';
