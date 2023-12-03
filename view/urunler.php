@@ -1005,7 +1005,7 @@ if ($detect->isMobile()) {?>
     $(document).ready(function () {
     $('mat-option[role=option]').click(function () {
       var tabindexValue = $(this).attr('tabindex');
-      var aaValue = $('.mdc-list-item__primary-text').text();
+      var aaValue = $('.mdc-list-item__primary-text', this).text();
 
         $.ajax({
             url: 'product_filter.php',
