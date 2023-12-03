@@ -1005,6 +1005,8 @@ if ($detect->isMobile()) {?>
     $(document).ready(function () {
     $('mat-option[role=option]').click(function () {
       var tabindexValue = $(this).attr('tabindex');
+      var aaValue = $('.mdc-list-item__primary-text').text();
+
         $.ajax({
             url: 'product_filter.php',
             type: 'POST',
@@ -1012,7 +1014,7 @@ if ($detect->isMobile()) {?>
             success: function (response) {
                 console.log('Success:', response);
                 $('#product-details').html(response);
-                $('#siralatext2').text(tabindexValue);
+                $('#siralatext2').text(aaValue);
 
                 closemodal();
             },
