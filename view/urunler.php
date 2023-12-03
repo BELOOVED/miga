@@ -316,7 +316,7 @@ if ($detect->isMobile()) {?>
                                              <div class="mat-mdc-select-value ng-tns-c190-6" id="mat-select-value-3">
                                                 <!---->
                                                 <span class="mat-mdc-select-value-text ng-tns-c190-6 ng-star-inserted">
-                                                   <span class="mat-mdc-select-min-line ng-tns-c190-6 ng-star-inserted">Önerilenler</span><!----><!---->
+                                                   <span id="siralatext2" class="mat-mdc-select-min-line ng-tns-c190-6 ng-star-inserted">Önerilenler</span><!----><!---->
                                                 </span>
                                                 <!---->
                                              </div>
@@ -863,7 +863,7 @@ if ($detect->isMobile()) {?>
 <div class="cdk-overlay-container elektronik hidden" id="sirala2" style="postion: static;">
    <div class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing"></div>
    <div class="cdk-overlay-connected-position-bounding-box " id="yetoa" dir="ltr" style="position: absolute;top: 0;left: -180;height: 864px;display: flex;align-items: flex-end;">
-      <div id="cdk-overlay-2" class="cdk-overlay-pane dialog-shadow" style="width: 223.984px;">
+      <div id="cdk-overlay-2" class="cdk-overlay-pane dialog-shadow" style="width: 223.984px; margin-right: 105;">
          <div role="listbox" tabindex="-1" class="ng-trigger ng-trigger-transformPanel ng-tns-c190-2 mat-mdc-select-panel mdc-menu-surface mdc-menu-surface--open mat-accent ng-star-inserted dropdown-panel non-scrollable" id="mat-select-0-panel" aria-multiselectable="false" aria-labelledby="mat-mdc-form-field-label-0">
             <!---->
             <div class="ng-tns-c190-2">
@@ -954,6 +954,12 @@ if ($detect->isMobile()) {?>
 </style>
 <?php }else{?>
 <style>
+   @media screen and (max-width: 1800px) {
+   #cdk-overlay-2 {
+        margin-right: 0;
+    }
+}
+
 #yetoa{
    top: 150px;
     left: 0px;
@@ -970,8 +976,10 @@ if ($detect->isMobile()) {?>
     min-height: 100vh;
     width: 530px;
 }
+
 </style>
              <?php }?>   
+             style
 <script>
       $(document).ready(function () {
     $('input[type=radio]').change(function () {
@@ -1001,6 +1009,8 @@ if ($detect->isMobile()) {?>
             success: function (response) {
                 console.log('Success:', response);
                 $('#product-details').html(response);
+                $('#siralatext2').text(tabindexValue);
+
                 closemodal();
             },
             error: function (xhr, status, error) {
