@@ -956,10 +956,14 @@ if ($detect->isMobile()) {?>
 <style>
    @media screen and (max-width: 1800px) {
    #cdk-overlay-2 {
-        margin-right: 0;
+        margin-right: 0 !important;
     }
 }
-
+@media screen and (max-width: 1500px) {
+   #cdk-overlay-2 {
+        margin-right: -130px !important;
+    }
+}
 #yetoa{
    top: 150px;
     left: 0px;
@@ -979,7 +983,6 @@ if ($detect->isMobile()) {?>
 
 </style>
              <?php }?>   
-             style
 <script>
       $(document).ready(function () {
     $('input[type=radio]').change(function () {
