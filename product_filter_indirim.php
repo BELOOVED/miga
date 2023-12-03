@@ -182,7 +182,7 @@ foreach ($urunler as $urun) {
         echo '</mat-card>';
         echo '</sm-list-page-item>';
     }
-}}else {
+}else {
     $sql = "SELECT * FROM urunler WHERE urun_kategori_id = '$id'";
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
@@ -237,5 +237,5 @@ foreach ($urunler as $urun) {
         echo '</div>';
         echo '</mat-card>';
         echo '</sm-list-page-item>';}
-    }
+   }   }
 ?>
