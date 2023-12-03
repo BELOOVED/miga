@@ -119,7 +119,7 @@ foreach ($urunler as $urun) {
 }elseif($q == 'marka'){
     try {
     if ($markas !== null) {
-        $sql = "SELECT * FROM `urunler` WHERE `urun_marka` IN (" . implode(',', array_fill(0, count($markalar), '?')) . ") ORDER BY `urun_resim` DESC";
+        $sql = "SELECT * FROM `urunler` WHERE `urun_marka` IN (" . implode(',', array_fill(0, count($markalar), '?')) . ")";
         $stmt = $pdo->prepare($sql);
         $stmt->execute($markas);
         $$urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
