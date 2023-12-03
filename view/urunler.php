@@ -1092,12 +1092,12 @@ $(document).ready(function () {
 $(document).ready(function () {
     var marka; // marka değişkenini global olarak tanımla
 
-    if ($('.mat-mdc-checkbox-27-input').prop('checked')) {
+    if ($('#mat-mdc-checkbox-27-input').prop('checked')) {
         marka = $('.mat-mdc-checkbox-27-input').attr('tabindex');
         performAjaxxRequest();
     }
 
-    $('.mat-mdc-checkbox-27-input').change(function () {
+    $('#mat-mdc-checkbox-27-input').change(function () {
         if ($(this).prop('checked')) {
             marka = $(this).attr('tabindex');
             performAjaxxRequest();
