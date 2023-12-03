@@ -206,7 +206,7 @@ if ($detect->isMobile()) {?>
                                        <div class="mdc-form-field">
                                           <div class="mdc-checkbox">
                                              <div class="mat-mdc-checkbox-touch-target"></div>
-                                             <input type="checkbox" class="mdc-checkbox__native-control" id="mat-mdc-checkbox-27-input" tabindex="<?=$alt_kategori?>" aria-checked="false">
+                                             <input type="checkbox" class="mdc-checkbox__native-control golaggaa" id="mat-mdc-checkbox-27-input" tabindex="<?=$alt_kategori?>" aria-checked="false">
                                              <div class="mdc-checkbox__ripple"></div>
                                              <div class="mdc-checkbox__background">
                                                 <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true" class="mdc-checkbox__checkmark">
@@ -1090,7 +1090,7 @@ $(document).ready(function () {
     }
 });
 $(document).ready(function () {
-    $('#mat-mdc-checkbox-27-input').change(function () {
+    $('.golaggaa').change(function () {
         var marka = $(this).attr('tabindex');
 
         if ($(this).prop('checked')) {
