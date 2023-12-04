@@ -522,6 +522,9 @@ if ($detect->isMobile()) {?>
                      </div>
                      <div class="actions">
                         <mat-divider role="separator" class="mat-divider mat-divider-horizontal" aria-orientation="horizontal"></mat-divider>
+                        <div class="button-container">
+                           <!----><button mat-flat-button="" color="primary" class="button mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base" disabled="true"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Ürünleri Görüntüle  </span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button>
+                        </div>
                      </div>
                   </sm-mobile-filter-modal>
                   <sm-mobile-filter-modal class="ng-star-inserted flatqq hidden " id="filter1">
@@ -575,7 +578,7 @@ if ($detect->isMobile()) {?>
                      <div class="actions">
                         <mat-divider role="separator" class="mat-divider mat-divider-horizontal" aria-orientation="horizontal"></mat-divider>
                         <div class="button-container">
-                           <button mat-flat-button="" color="accent" onclick="caqAjaxRequest()" class="button mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-accent mat-mdc-button-base ng-star-inserted"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Filtreyi Temizle </span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button>
+                           <button mat-flat-button="" color="accent" onclick="caqAjaxRequest()" class="button mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-accent mat-mdc-button-base ng-star-inserted"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Filtreyi Temizle </span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button><!----><button mat-flat-button="" color="primary" class="button mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base" disabled="true"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Ürünleri Görüntüle </span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button>
                         </div>
                      </div>
                   </sm-mobile-filter-modal>
@@ -623,7 +626,8 @@ if ($detect->isMobile()) {?>
                      <div class="actions">
                         <mat-divider role="separator" class="mat-divider mat-divider-horizontal" aria-orientation="horizontal"></mat-divider>
                         <div class="button-container">
-                           <button mat-flat-button="" onclick="caqAjaxRequest()" color="accent" class="button mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-accent mat-mdc-button-base ng-star-inserted" ><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Filtreyi Temizle </span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button>
+                           <button mat-flat-button="" onclick="caqAjaxRequest()" color="accent" class="button mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-accent mat-mdc-button-base ng-star-inserted" ><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Filtreyi Temizle </span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button><!----><button mat-flat-button="" color="primary" class="button mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base" disabled="true"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Ürünleri Görüntüle </span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button>
+                        </div>
                      </div>
                   </sm-mobile-filter-modal>
                   <sm-mobile-filter-modal class="ng-star-inserted flatqq hidden" id="filter3">
@@ -678,7 +682,7 @@ if ($detect->isMobile()) {?>
                      <div class="actions">
                         <mat-divider role="separator" class="mat-divider mat-divider-horizontal" aria-orientation="horizontal"></mat-divider>
                         <div class="button-container">
-                           <button mat-flat-button="" onclick="caqAjaxRequest()" color="accent" class="button mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-accent mat-mdc-button-base ng-star-inserted"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Filtreyi Temizle </span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button>
+                           <button mat-flat-button="" onclick="caqAjaxRequest()" color="accent" class="button mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-accent mat-mdc-button-base ng-star-inserted"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Filtreyi Temizle </span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button><!----><button mat-flat-button="" color="primary" class="button mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base" disabled="true"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Ürünleri Görüntüle</span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button>
                         </div>
                      </div>
                   </sm-mobile-filter-modal>
