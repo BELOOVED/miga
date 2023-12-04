@@ -1227,7 +1227,7 @@ $(document).click(function () {
             success: function (response) {
                 console.log('Başarı:', response);
                 $('#product-details').html(response);
-
+                closemodal();
                 setTimeout(function () {
                     $('#spinner').addClass('hidden');
                 }, 1000);
