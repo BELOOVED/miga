@@ -1211,14 +1211,13 @@ function silra(){
 }
 
 $(document).click(function () {
-    if ($('#indirimaaa').click()) {
-      $('#ggarwere', this).toggleClass('mat-pseudo-checkbox-checked');
-
+    $('#indirimaaa').click(function () {
+        $('#ggarwere', this).toggleClass('mat-pseudo-checkbox-checked');
         performAjaaxRequest();
-    }
+    });
 
     $('#indirimaaa').change(function () {
-        if ($(this).click()) {
+        if ($(this).is(':checked')) {
             performAjaaxRequest();
         } else {
             cancelAjaaxRequest();
@@ -1233,7 +1232,7 @@ $(document).click(function () {
             type: 'POST',
             data: { id: <?=$id?> },
             success: function (response) {
-                console.log('Success:', response);
+                console.log('Başarı:', response);
                 $('#product-details').html(response);
 
                 setTimeout(function () {
@@ -1241,7 +1240,7 @@ $(document).click(function () {
                 }, 1000);
             },
             error: function (xhr, status, error) {
-                console.error('Error:', error);
+                console.error('Hata:', error);
                 alert('Bir hata oluştu. Lütfen tekrar deneyin.');
                 $('#spinner').addClass('hidden');
             }
@@ -1256,7 +1255,7 @@ $(document).click(function () {
             type: 'POST',
             data: { id: <?=$id?> },
             success: function (response) {
-                console.log('Success:', response);
+                console.log('Başarı:', response);
                 $('#product-details').html(response);
 
                 setTimeout(function () {
@@ -1264,11 +1263,12 @@ $(document).click(function () {
                 }, 1000);
             },
             error: function (xhr, status, error) {
-                console.error('Error:', error);
+                console.error('Hata:', error);
                 alert('Bir hata oluştu. Lütfen tekrar deneyin.');
                 $('#spinner').addClass('hidden');
             }
         });
     }
 });
+
 </script>
