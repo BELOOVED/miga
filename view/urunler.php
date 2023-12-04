@@ -1206,8 +1206,11 @@ $(document).ready(function () {
 
 
 function silra(){
-   $('#spinner').toggleClass('hidden');
-       closemodal();
+   $('#spinner').removeClass('hidden');
+   closemodal();
+   setTimeout(function () {
+                    $('#spinner').addClass('hidden');
+                }, 1000);
 }
 
 $(document).click(function () {
