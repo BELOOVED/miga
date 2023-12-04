@@ -82,7 +82,7 @@
                         <div _ngcontent-cro-c416="" class="container-wrapper">
                         <div _ngcontent-cro-c416="" class="prev-btn"></div>
                         <!---->
-                        <div _ngcontent-cro-c416="" class="list-page-items-container slick-slider">
+                        <div _ngcontent-cro-c416="" class="list-page-items-container">
                         <?php
                         $sql_count = "SELECT COUNT(*) FROM urunler";
                         $stmt_count = $pdo->prepare($sql_count);
