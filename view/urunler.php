@@ -1210,7 +1210,7 @@ function silra(){
        closemodal();
 }
 
-$(document).ready(function () {
+$(document).click(function () {
     if ($('#indirimaaa').click()) {
       $('#ggarwere', this).toggleClass('mat-pseudo-checkbox-checked');
 
