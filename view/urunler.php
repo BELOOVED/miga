@@ -1212,17 +1212,10 @@ function silra(){
 
 $(document).click(function () {
     $('#indirimaaa').click(function () {
-        $('#ggarwere', this).toggleClass('mat-pseudo-checkbox-checked');
+        $('#ggarwere').toggleClass('mat-pseudo-checkbox-checked');
         performAjaaxRequest();
     });
 
-    $('#indirimaaa').change(function () {
-        if ($(this).is(':checked')) {
-            performAjaaxRequest();
-        } else {
-            cancelAjaaxRequest();
-        }
-    });
 
     function performAjaaxRequest() {
         $('#spinner').removeClass('hidden');
