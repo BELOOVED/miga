@@ -666,7 +666,7 @@ if ($detect->isMobile()) {?>
                                                       foreach ($alt_kategoriler as $alt_kategori) {
                                                          $alt_kategori = trim($alt_kategori); 
                                                          ?>   
-                        <mat-list-option role="option" id="<?=$alt_kategori?>" class="mat-list-item mat-list-option mat-focus-indicator mat-body-2 info-option mat-primary ng-star-inserted" aria-selected="false" aria-disabled="false" tabindex="<?=$alt_kategori?>">
+                        <mat-list-option role="option" id="<?=$alt_kategori?>" class="mat-list-item mat-list-option mat-focus-indicator mat-body-2 info-option mat-primary ng-star-inserted golaggaaa" aria-selected="false" aria-disabled="false" tabindex="<?=$alt_kategori?>">
                               <div class="mat-list-item-content mat-list-item-content-reverse">
                                  <div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div>
                                  <mat-pseudo-checkbox class="mat-pseudo-checkbox ng-star-inserted"></mat-pseudo-checkbox>
@@ -696,7 +696,7 @@ if ($detect->isMobile()) {?>
 <div class="cdk-overlay-container elektronik hidden" id="sirala">
    <div class="cdk-overlay-backdrop cdk-overlay-dark-backdrop cdk-overlay-backdrop-showing"></div>
    <div class="cdk-global-overlay-wrapper" dir="ltr" style="justify-content: center; align-items: center;">
-      <div id="cdk-overlay-2" class="cdk-overlay-pane mobile-modal modal-content-no-padding" style="max-width: 80vw; position: static; min-height: 0 !impo;">
+      <div id="cdk-overlay-2" class="cdk-overlay-pane mobile-modal modal-content-no-padding" style="max-width: 100vw !important; position: static; min-height: 0 !important;">
          <div tabindex="0" class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div>
          <mat-dialog-container tabindex="-1" class="mat-mdc-dialog-container mdc-dialog cdk-dialog-container mdc-dialog--open" id="mat-mdc-dialog-1" role="dialog" aria-modal="true" aria-labelledby="mat-mdc-dialog-title-1">
             <div class="mdc-dialog__container">
@@ -1135,7 +1135,52 @@ $(document).ready(function () {
         });
     }
 });
+$(document).ready(function () {
+    var selectedMarkas = [];  // Array to store selected markas
 
+    $('.golaggaaa').click(function () {
+        var marka = $(this).attr('tabindex');
+
+        if ($(this).prop('checked')) {
+            // Add the selected marka to the array
+            if (selectedMarkas.indexOf(marka) === -1) {
+                selectedMarkas.push(marka);
+            }
+        } else {
+            // Remove the deselected marka from the array
+            var index = selectedMarkas.indexOf(marka);
+            if (index !== -1) {
+                selectedMarkas.splice(index, 1);
+            }
+        }
+
+        // Perform the AJAX request with the array of selected markas
+        performAjaxxxRequest(selectedMarkas);
+    });
+
+    function performAjaxxxRequest(selectedMarkas) {
+        $('#spinner').removeClass('hidden');
+
+        $.ajax({
+            url: 'product_filter_indirim.php?q=marka',
+            type: 'POST',
+            data: { markas: selectedMarkas, id: <?=$id?> },
+            success: function (response) {
+                console.log('Success:', response);
+                $('#product-details').html(response);
+
+                setTimeout(function () {
+                    $('#spinner').addClass('hidden');
+                }, 1000);
+            },
+            error: function (xhr, status, error) {
+                console.error('Error:', error);
+                alert('Bir hata oluştu. Lütfen tekrar deneyin.');
+                $('#spinner').addClass('hidden');
+            }
+        });
+    }
+});
 
 
 function silra(){
