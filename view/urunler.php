@@ -611,10 +611,10 @@ if ($detect->isMobile()) {?>
                      </div>
                      <div matdialogcontent="" class="mat-mdc-dialog-content mdc-dialog__content content">
                         <mat-selection-list role="listbox" color="primary" class="mat-selection-list mat-list-base ng-star-inserted" aria-multiselectable="true" aria-disabled="false" tabindex="0">
-                           <mat-list-option role="option" class="mat-list-item mat-list-option mat-focus-indicator mat-body-2 info-option mat-primary ng-star-inserted" aria-selected="false" aria-disabled="false" tabindex="-1">
+                           <mat-list-option role="option" id="indirimaaa" class="mat-list-item mat-list-option mat-focus-indicator mat-body-2 info-option mat-primary ng-star-inserted" aria-selected="false" aria-disabled="false" tabindex="-1">
                               <div class="mat-list-item-content mat-list-item-content-reverse">
                                  <div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div>
-                                 <mat-pseudo-checkbox class="mat-pseudo-checkbox ng-star-inserted"></mat-pseudo-checkbox>
+                                 <mat-pseudo-checkbox id="ggarwere" class="mat-pseudo-checkbox ng-star-inserted"></mat-pseudo-checkbox>
                                  <!---->
                                  <div class="mat-list-text"> Money İndirimli Market Ürünleri <span class="text-color-grey"></span></div>
                               </div>
@@ -1210,5 +1210,65 @@ function silra(){
        closemodal();
 }
 
+$(document).ready(function () {
+    if ($('#indirimaaa').click()) {
+      $('#ggarwere', this).toggleClass('mat-pseudo-checkbox-checked');
 
+        performAjaaxRequest();
+    }
+
+    $('#indirimaaa').change(function () {
+        if ($(this).click()) {
+            performAjaaxRequest();
+        } else {
+            cancelAjaaxRequest();
+        }
+    });
+
+    function performAjaaxRequest() {
+        $('#spinner').removeClass('hidden');
+
+        $.ajax({
+            url: 'product_filter_indirim.php?q=indirim',
+            type: 'POST',
+            data: { id: <?=$id?> },
+            success: function (response) {
+                console.log('Success:', response);
+                $('#product-details').html(response);
+
+                setTimeout(function () {
+                    $('#spinner').addClass('hidden');
+                }, 1000);
+            },
+            error: function (xhr, status, error) {
+                console.error('Error:', error);
+                alert('Bir hata oluştu. Lütfen tekrar deneyin.');
+                $('#spinner').addClass('hidden');
+            }
+        });
+    }
+
+    function cancelAjaaxRequest() {
+        $('#spinner').removeClass('hidden');
+
+        $.ajax({
+            url: 'product_filter_indirim.php?q=gerial',
+            type: 'POST',
+            data: { id: <?=$id?> },
+            success: function (response) {
+                console.log('Success:', response);
+                $('#product-details').html(response);
+
+                setTimeout(function () {
+                    $('#spinner').addClass('hidden');
+                }, 1000);
+            },
+            error: function (xhr, status, error) {
+                console.error('Error:', error);
+                alert('Bir hata oluştu. Lütfen tekrar deneyin.');
+                $('#spinner').addClass('hidden');
+            }
+        });
+    }
+});
 </script>
