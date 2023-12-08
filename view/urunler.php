@@ -563,7 +563,7 @@ if ($detect->isMobile()) {?>
                                     foreach ($alt_kategoriler as $alt_kategori) {
                                         $alt_kategori = trim($alt_kategori); 
                                         ?>
-                           <mat-list-option role="option" id="<?=$alt_kategori?>" class="mat-list-item mat-list-option mat-focus-indicator mat-body-2 info-option mat-primary ng-star-inserted" aria-selected="false" aria-disabled="false" tabindex="-1">
+                           <mat-list-option role="option" id="<?=$alt_kategori?>" class="mat-list-item mat-list-option mat-focus-indicator mat-body-2 info-option mat-primary ng-star-inserted golaggaaaa" aria-selected="false" aria-disabled="false" tabindex="<?=$alt_kategori?>">
                               <div class="mat-list-item-content mat-list-item-content-reverse">
                                  <div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div>
                                  <mat-pseudo-checkbox class="mat-pseudo-checkbox ng-star-inserted"></mat-pseudo-checkbox>
@@ -1199,7 +1199,48 @@ $(document).ready(function () {
         });
     }
 });
+$(document).ready(function () {
+    var selectedMarkas = [];  // Array to store selected markas
 
+    $('.golaggaaaa').click(function () {
+        var marka = $(this).attr('tabindex');
+        $('mat-pseudo-checkbox', this).toggleClass('mat-pseudo-checkbox-checked')
+        if ($('mat-pseudo-checkbox', this).hasClass('mat-pseudo-checkbox-checked')) {
+            // Add the selected marka to the array
+            if (selectedMarkas.indexOf(marka) === -1) {
+                selectedMarkas.push(marka);
+            }
+        } else {
+            // Remove the deselected marka from the array
+            var index = selectedMarkas.indexOf(marka);
+            if (index !== -1) {
+                selectedMarkas.splice(index, 1);
+            }
+        }
+
+        // Perform the AJAX request with the array of selected markas
+        performAjaxxxRequest(selectedMarkas);
+    });
+
+    function performAjaxxxRequest(selectedMarkas) {
+
+        $.ajax({
+            url: 'product_filter_indirim.php?q=kategori',
+            type: 'POST',
+            data: { markas: selectedMarkas, id: <?=$id?> },
+            success: function (response) {
+                console.log('Success:', response);
+                $('#product-details').html(response);
+
+            },
+            error: function (xhr, status, error) {
+                console.error('Error:', error);
+                alert('Bir hata oluştu. Lütfen tekrar deneyin.');
+                $('#spinner').addClass('hidden');
+            }
+        });
+    }
+});
 
 function silra(){
    
