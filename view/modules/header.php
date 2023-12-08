@@ -1202,7 +1202,9 @@ if (strpos($pageName,".") === False){
                                  </svg>
                               </fa-icon>
                               <?php 
-                              if (!empty($_COOKIE)) {?>
+                              $productId = isset($_COOKIE["cart_item_{$urun['id']}"]) ? $_COOKIE["cart_item_{$urun['id']}"] : null;
+                              if ($productId)
+                              {?>
                               <sm-cart-dropdown-list _ngcontent-lvo-c343="" _nghost-lvo-c342="" class="ng-star-inserted">
                                  <div _ngcontent-lvo-c342="" class="cart-dropdown-wrapper">
                                     <sm-cart-dropdown-item _ngcontent-lvo-c342="" _nghost-lvo-c341="" class="ng-star-inserted">
