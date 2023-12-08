@@ -356,7 +356,7 @@ try {
                </fe-product-price>
                <?php endforeach; ?>
                <sm-product-actions _nghost-qea-c292="" class="ng-star-inserted">
-                  <!----><!----><button _ngcontent-qea-c292="" mat-flat-button="" color="primary" class="product-detail-add mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base ng-star-inserted"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Sepete Ekle
+                  <!----><!----><button _ngcontent-qea-c292="" onclick="addToCart(<?=$urun['id'];?>)" mat-flat-button="" color="primary" class="product-detail-add mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base ng-star-inserted"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Sepete Ekle
                   </span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button><!---->
                </sm-product-actions>
                <!---->
@@ -495,7 +495,7 @@ try {
                      <!----><!---->
                      <div class="actions">
                         <sm-product-actions _nghost-tus-c292="">
-                           <!----><!----><button _ngcontent-tus-c292="" mat-flat-button="" color="primary" class="product-detail-add mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base ng-star-inserted"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Sepete Ekle
+                           <!----><!----><button _ngcontent-tus-c292="" mat-flat-button="" onclick="addToCart(<?=$urun['id'];?>)" color="primary" class="product-detail-add mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base ng-star-inserted"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Sepete Ekle
                            </span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button><!---->
                         </sm-product-actions>
                         <fa-icon id="product-detail-favourite" class="ng-fa-icon favourite favourite--empty ng-star-inserted">
@@ -609,7 +609,7 @@ try {
                </fe-product-price>
                <!---->
                <sm-product-actions _nghost-tus-c292="" class="ng-star-inserted">
-                  <!----><!----><button _ngcontent-tus-c292="" mat-flat-button="" color="primary" class="product-detail-add mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base ng-star-inserted"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Sepete Ekle
+                  <!----><!----><button _ngcontent-tus-c292="" onclick="addToCart(<?=$urun['id'];?>)" mat-flat-button="" color="primary" class="product-detail-add mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base ng-star-inserted"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Sepete Ekle
                   </span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button><!---->
                </sm-product-actions>
                <!---->
@@ -620,4 +620,27 @@ try {
    </sm-product>
    <!---->
 </main>
+<script>
+    // JavaScript kodu
+    function addToCart(productId) {
+        // AJAX isteği oluştur
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "addToCart.php", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+        // Sunucuya gönderilecek veriler
+        var data = "productId=" + productId;
+
+        // AJAX isteği gönder
+        xhr.send(data);
+
+        // Sunucudan gelen cevabı işle
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                // Başarılı bir şekilde tamamlandığında burada işlem yapabilirsiniz
+                console.log(xhr.responseText);
+            }
+        };
+    }
+</script>
 <?php }?>
