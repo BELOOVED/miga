@@ -1207,7 +1207,7 @@ if (strpos($pageName,".") === False){
                                  </svg>
                               </fa-icon>
                               <?php 
-                              if (isset($_COOKIE["cart_item_$id"])) : null;
+                              if (isset($_COOKIE["cart_item_$id"]))
                              
                               {?>
                               <sm-cart-dropdown-list _ngcontent-lvo-c343="" _nghost-lvo-c342="" class="ng-star-inserted">
