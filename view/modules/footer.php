@@ -1302,6 +1302,14 @@ function hideCart() {
   var cart = document.getElementById("cart");
   cart.classList.add("hidden");
 }
+function showCart2() {
+    $(".empty-cart2").removeClass("hidden");
+  }
+
+  // jQuery ile hideCart2 fonksiyonu
+  function hideCart2() {
+    $(".empty-cart2").addClass("hidden");
+  }
 function showCategory() {
   var cart = document.getElementById("categoryai");
   cart.classList.remove("hidden");
