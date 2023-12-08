@@ -1208,7 +1208,7 @@ if (strpos($pageName,".") === False){
                      <sm-cart-dropdown _nghost-cro-c342="">
                         <div _ngcontent-cro-c342="">
                            <div _ngcontent-cro-c342="" id="homepage-cart-button" class="toggle-layer"  onmouseover="showCart()" onmouseout="hideCart()"></div>
-                           <div _ngcontent-cro-c342="" feclickelsewhere="" class="dropdown-btn">
+                           <div _ngcontent-cro-c342="" feclickelsewhere="" onmouseover="showCart2()" onmouseout="hideCart2()" class="dropdown-btn">
                               <div _ngcontent-cro-c342="" class="icon-cart-quantity-wrapper">
                                  <div _ngcontent-cro-c342="" class="icon-cart"></div>
                                  <div _ngcontent-cro-c342="" class="quantity">0</div>
