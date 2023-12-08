@@ -1162,8 +1162,8 @@ $(document).ready(function () {
 
     $('.golaggaaa').click(function () {
         var marka = $(this).attr('tabindex');
-
-        if ($(this).prop('checked')) {
+        $('mat-pseudo-checkbox', this).toggleClass('mat-pseudo-checkbox-checked')
+        if ($('mat-pseudo-checkbox', this).hasClass('mat-pseudo-checkbox-checked')) {
             // Add the selected marka to the array
             if (selectedMarkas.indexOf(marka) === -1) {
                 selectedMarkas.push(marka);
@@ -1207,7 +1207,8 @@ $(document).ready(function () {
 
 function silra(){
    $('#spinner').removeClass('hidden');
-   closemodal();
+   $(".cdk-overlay-container").addClass("hidden");
+        $(".footer").removeClass("hidden");;
    setTimeout(function () {
                     $('#spinner').addClass('hidden');
                 }, 1000);
