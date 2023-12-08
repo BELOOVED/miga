@@ -1202,6 +1202,79 @@ if (strpos($pageName,".") === False){
                            </div>
                         </div>
                      </sm-cart-dropdown>
+                     <sm-cart-dropdown-list _ngcontent-lvo-c343="" _nghost-lvo-c342="" class="ng-star-inserted">
+                        <div _ngcontent-lvo-c342="" id="homepage-cart-button" class="cart-dropdown-wrapper" onmouseover="showCart()" onmouseout="hideCart()">
+                           <sm-cart-dropdown-item _ngcontent-lvo-c342="" _nghost-lvo-c341="" class="ng-star-inserted">
+                              <div _ngcontent-lvo-c341="" class="cart-dropdown-item">
+                                 <fe-product-image _ngcontent-lvo-c341="" _nghost-lvo-c159="" class="ng-star-inserted">
+                                    <a _ngcontent-lvo-c159="" id="product-image-link" href="/elektronik/goldstar-mini-boy-celik-caydanlik-304-p-1e8bd53">
+                                       <img _ngcontent-lvo-c159="" felazyload="" alt="Goldstar Mini Boy Çelik Çaydanlık 304" src="https://images.migrosone.com/elektronik/product/32030035/32030035-7b8c0b-105x105.jpg" class="ng-star-inserted"><!----><!---->
+                                    </a>
+                                 </fe-product-image>
+                                 <!---->
+                                 <div _ngcontent-lvo-c341="" class="detail-wrapper">
+                                    <div _ngcontent-lvo-c341="" class="name-delete-wrapper">
+                                       <fe-product-name _ngcontent-lvo-c341="" _nghost-lvo-c160="">
+                                          <h1 _ngcontent-lvo-c160="">
+                                             <a _ngcontent-lvo-c160="" class="migros ng-star-inserted" href="/goldstar-mini-boy-celik-caydanlik-304-p-1e8bd53"> Goldstar Mini Boy Çelik Çaydanlık 304 </a><!----><!---->
+                                          </h1>
+                                       </fe-product-name>
+                                       <fa-icon _ngcontent-lvo-c341="" id="cart-dropdown-delete-button" class="ng-fa-icon delete-button">
+                                          <svg role="img" aria-hidden="true" focusable="false" data-prefix="far" data-icon="trash-can" class="svg-inline--fa fa-trash-can" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                             <path fill="currentColor" d="M160 400C160 408.8 152.8 416 144 416C135.2 416 128 408.8 128 400V192C128 183.2 135.2 176 144 176C152.8 176 160 183.2 160 192V400zM240 400C240 408.8 232.8 416 224 416C215.2 416 208 408.8 208 400V192C208 183.2 215.2 176 224 176C232.8 176 240 183.2 240 192V400zM320 400C320 408.8 312.8 416 304 416C295.2 416 288 408.8 288 400V192C288 183.2 295.2 176 304 176C312.8 176 320 183.2 320 192V400zM317.5 24.94L354.2 80H424C437.3 80 448 90.75 448 104C448 117.3 437.3 128 424 128H416V432C416 476.2 380.2 512 336 512H112C67.82 512 32 476.2 32 432V128H24C10.75 128 0 117.3 0 104C0 90.75 10.75 80 24 80H93.82L130.5 24.94C140.9 9.357 158.4 0 177.1 0H270.9C289.6 0 307.1 9.358 317.5 24.94H317.5zM151.5 80H296.5L277.5 51.56C276 49.34 273.5 48 270.9 48H177.1C174.5 48 171.1 49.34 170.5 51.56L151.5 80zM80 432C80 449.7 94.33 464 112 464H336C353.7 464 368 449.7 368 432V128H80V432z"></path>
+                                          </svg>
+                                       </fa-icon>
+                                    </div>
+                                    <fe-product-labels _ngcontent-lvo-c341="" _nghost-lvo-c295="">
+                                       <div _ngcontent-lvo-c295="" class="product-labels ng-star-inserted">
+                                          <div _ngcontent-lvo-c295="" class="price product-label ng-star-inserted"><span _ngcontent-lvo-c295="">İndirimli Ürün</span></div>
+                                          <!----><!---->
+                                          <fe-crm-discount-badge _ngcontent-lvo-c295="" _nghost-lvo-c293="">
+                                             <!---->
+                                          </fe-crm-discount-badge>
+                                       </div>
+                                       <!---->
+                                    </fe-product-labels>
+                                    <div _ngcontent-lvo-c341="" class="actions-price-wrapper">
+                                       <sm-product-actions _ngcontent-lvo-c341="" _nghost-lvo-c292="">
+                                          <div _ngcontent-lvo-c292="" class="product-actions ng-star-inserted">
+                                             <button _ngcontent-lvo-c292="" class="product-decrease" id="product-actions-product-decrease--goldstar-mini-boy-celik-caydanlik-304-p-1e8bd53" no-pointer-event="true">
+                                                <fa-icon _ngcontent-lvo-c292="" class="ng-fa-icon ng-star-inserted">
+                                                   <svg role="img" aria-hidden="true" focusable="false" data-prefix="far" data-icon="trash-can" class="svg-inline--fa fa-trash-can" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                      <path fill="currentColor" d="M160 400C160 408.8 152.8 416 144 416C135.2 416 128 408.8 128 400V192C128 183.2 135.2 176 144 176C152.8 176 160 183.2 160 192V400zM240 400C240 408.8 232.8 416 224 416C215.2 416 208 408.8 208 400V192C208 183.2 215.2 176 224 176C232.8 176 240 183.2 240 192V400zM320 400C320 408.8 312.8 416 304 416C295.2 416 288 408.8 288 400V192C288 183.2 295.2 176 304 176C312.8 176 320 183.2 320 192V400zM317.5 24.94L354.2 80H424C437.3 80 448 90.75 448 104C448 117.3 437.3 128 424 128H416V432C416 476.2 380.2 512 336 512H112C67.82 512 32 476.2 32 432V128H24C10.75 128 0 117.3 0 104C0 90.75 10.75 80 24 80H93.82L130.5 24.94C140.9 9.357 158.4 0 177.1 0H270.9C289.6 0 307.1 9.358 317.5 24.94H317.5zM151.5 80H296.5L277.5 51.56C276 49.34 273.5 48 270.9 48H177.1C174.5 48 171.1 49.34 170.5 51.56L151.5 80zM80 432C80 449.7 94.33 464 112 464H336C353.7 464 368 449.7 368 432V128H80V432z"></path>
+                                                   </svg>
+                                                </fa-icon>
+                                                <!----><!---->
+                                             </button>
+                                             <div _ngcontent-lvo-c292="" id="product-amount" class="product-amount"><span _ngcontent-lvo-c292="" class="amount mat-caption">1</span><span _ngcontent-lvo-c292="" class="unit text-color-grey">adet</span></div>
+                                             <button _ngcontent-lvo-c292="" aria-label="Sepetteki ürün sayısını arttır" class="product-increase" id="product-actions-product-increase--goldstar-mini-boy-celik-caydanlik-304-p-1e8bd53">
+                                                <fa-icon _ngcontent-lvo-c292="" class="ng-fa-icon">
+                                                   <svg role="img" aria-hidden="true" focusable="false" data-prefix="far" data-icon="plus" class="svg-inline--fa fa-plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                      <path fill="currentColor" d="M432 256C432 269.3 421.3 280 408 280h-160v160c0 13.25-10.75 24.01-24 24.01S200 453.3 200 440v-160h-160c-13.25 0-24-10.74-24-23.99C16 242.8 26.75 232 40 232h160v-160c0-13.25 10.75-23.99 24-23.99S248 58.75 248 72v160h160C421.3 232 432 242.8 432 256z"></path>
+                                                   </svg>
+                                                </fa-icon>
+                                             </button>
+                                          </div>
+                                          <!----><!----><!---->
+                                       </sm-product-actions>
+                                       <fe-product-price _ngcontent-lvo-c341="" _nghost-lvo-c271="">
+                                          <div _ngcontent-lvo-c271="" class="promotion-wrapper">
+                                             <div _ngcontent-lvo-c271="" id="price-old" class="price-old ng-star-inserted"><span _ngcontent-lvo-c271="" id="old-amount" class="amount">799,95 <span _ngcontent-lvo-c271="" class="currency">TL</span></span></div>
+                                             <!---->
+                                             <div _ngcontent-lvo-c271="" id="price-new" class="price-new subtitle-1"><span _ngcontent-lvo-c271="" id="new-amount" class="amount"> 599,95 <span _ngcontent-lvo-c271="" class="currency">TL</span></span></div>
+                                          </div>
+                                          <!---->
+                                       </fe-product-price>
+                                    </div>
+                                 </div>
+                              </div>
+                           </sm-cart-dropdown-item>
+                           <!---->
+                           <div _ngcontent-lvo-c342="" class="minimum-amount-basket-wrapper">
+                              <!----><button _ngcontent-lvo-c342="" class="subtitle-2">Sepete Git</button>
+                           </div>
+                        </div>
+                     </sm-cart-dropdown-list>
                      <!---->
                   </div>
                   <!---->

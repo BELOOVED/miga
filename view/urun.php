@@ -293,7 +293,7 @@ try {
                      <!----><!---->
                      <div class="actions">
                         <sm-product-actions _nghost-qea-c292="">
-                           <!----><!----><button _ngcontent-qea-c292="" mat-flat-button="" color="primary" class="product-detail-add mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base ng-star-inserted"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Sepete Ekle
+                           <!----><!----><button _ngcontent-qea-c292=" "  onclick="addToCart(<?=$urun['id'];?>)" mat-flat-button="" color="primary" class="product-detail-add mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base ng-star-inserted"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Sepete Ekle
                            </span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button><!---->
                         </sm-product-actions>
                         <fa-icon id="product-detail-favourite" class="ng-fa-icon favourite favourite--empty ng-star-inserted">
