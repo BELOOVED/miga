@@ -1210,7 +1210,7 @@ if (strpos($pageName,".") === False){
                               if (isset($_COOKIE["cart_item_$id"]))
                              
                               {?>
-                              <sm-cart-dropdown-list _ngcontent-lvo-c343="" id="cart" _nghost-lvo-c342="" class="empty-cart  ng-star-inserted hidden">
+                              <sm-cart-dropdown-list _ngcontent-cro-c342="" id="cart" _nghost-lvo-c342="" class="empty-cart  ng-star-inserted hidden">
                                  <div _ngcontent-lvo-c342="" class="cart-dropdown-wrapper">
                                     <sm-cart-dropdown-item _ngcontent-lvo-c342="" _nghost-lvo-c341="" class="ng-star-inserted">
                                        <div _ngcontent-lvo-c341="" class="cart-dropdown-item">
