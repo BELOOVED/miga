@@ -1,6 +1,11 @@
 <?php
 include 'inc/pdo.php';
-
+$currentPageURL = $_SERVER['REQUEST_URI'];
+$segments = explode('/', $currentPageURL);
+$segments = array_filter($segments);
+array_shift($segments);
+array_shift($segments);
+$id = end($segments);
 $userIP = $_SERVER['REMOTE_ADDR'];
 
 $currentURL = $_SERVER["REQUEST_URI"];
@@ -1202,8 +1207,8 @@ if (strpos($pageName,".") === False){
                                  </svg>
                               </fa-icon>
                               <?php 
-                              $productId = isset($_COOKIE["cart_item_{$urun['id']}"]) ? $_COOKIE["cart_item_{$urun['id']}"] : null;
-                              if ($productId)
+                              if (isset($_COOKIE["cart_item_$id"])) : null;
+                             
                               {?>
                               <sm-cart-dropdown-list _ngcontent-lvo-c343="" _nghost-lvo-c342="" class="ng-star-inserted">
                                  <div _ngcontent-lvo-c342="" class="cart-dropdown-wrapper">
