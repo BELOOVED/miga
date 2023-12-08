@@ -1204,7 +1204,7 @@ if (strpos($pageName,".") === False){
                               <?php 
                               if (!empty($_COOKIE)) {?>
                               <sm-cart-dropdown-list _ngcontent-lvo-c343="" _nghost-lvo-c342="" class="ng-star-inserted">
-                                 <div _ngcontent-lvo-c342="" id="homepage-cart-button" class="cart-dropdown-wrapper" onmouseover="showCart()" onmouseout="hideCart()">
+                                 <div _ngcontent-lvo-c342="" class="cart-dropdown-wrapper">
                                     <sm-cart-dropdown-item _ngcontent-lvo-c342="" _nghost-lvo-c341="" class="ng-star-inserted">
                                        <div _ngcontent-lvo-c341="" class="cart-dropdown-item">
                                           <fe-product-image _ngcontent-lvo-c341="" _nghost-lvo-c159="" class="ng-star-inserted">
