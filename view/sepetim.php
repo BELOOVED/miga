@@ -377,9 +377,9 @@
                   <div class="cart-empty">
                      <mat-card class="mat-mdc-card mdc-card">
                         <img srcset="
-                           /assets/images/cart-empty/cart-empty.webp,
-                           /assets/images/cart-empty/cart-empty@2x.webp,
-                           /assets/images/cart-empty/cart-empty@3x.webp
+                           /assets/images/cart-empty.webp,
+                           /assets/images/cart-empty@2x.webp,
+                           /assets/images/cart-empty@3x.webp
                            ">
                         <div class="info">
                            <p class="subtitle-1 text-color-black">Sepetinde hiç ürün bulunmuyor!</p>
