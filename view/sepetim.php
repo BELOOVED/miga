@@ -363,8 +363,9 @@
       </sm-cart-page>
       <!---->
    </article>
-   </sm-product>  
-   <?php }}} else {?>
+   </sm-product>
+    
+   <?php }else{?>
    <!----NOTCOOKIE!---->
    <sm-product>
       <article>
@@ -399,5 +400,5 @@
          <!---->
       </article>
    </sm-product>
-   <?php }?>
+   <?php }}}?>
 </main>
