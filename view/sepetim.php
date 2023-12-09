@@ -85,7 +85,7 @@
                      <!---->
                      <div class="product-list list ng-star-inserted">
                      <?php
-                            $sql = "SELECT * FROM urunler WHERE urun_kategori_id = '$id'";
+                            $sql = "SELECT * FROM urunler WHERE id = '$id'";
                             $stmt = $pdo->prepare($sql);
                             $stmt->execute();
                             $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
