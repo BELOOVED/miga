@@ -378,7 +378,7 @@ if ($detect->isMobile()) {?>
                                     <div>
                                         <fe-product-image id="product-image" class="image" _nghost-nyw-c159="">
                                             <a _ngcontent-nyw-c159="" id="product-image-link" href="/urun/<?=seo($urun['urun_adi'])?>/<?=seo($urun['id'])?>">
-                                            <img _ngcontent-nyw-c159="" felazyload="" alt="/urun/<?=$urun['urun_adi']?>" src="<?=$urun['urun_resim']?>" class="ng-star-inserted"><!----><!----><!---->
+                                            <img _ngcontent-nyw-c159="" felazyload="" alt="<?=$urun['urun_adi']?>" src="<?=$urun['urun_resim']?>" class="ng-star-inserted"><!----><!----><!---->
                                             </a>
                                         </fe-product-image>
                                         <a id="product-name" class="mat-caption text-color-black product-name" ngx-ql="" href="/urun/<?=seo($urun['urun_adi'])?>/<?=seo($urun['id'])?>"> <?=$urun['urun_adi']?> </a>

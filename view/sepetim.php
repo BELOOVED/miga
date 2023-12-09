@@ -84,20 +84,29 @@
                      </div>
                      <!---->
                      <div class="product-list list ng-star-inserted">
+                     <?php
+                            $sql = "SELECT * FROM urunler WHERE urun_kategori_id = '$id'";
+                            $stmt = $pdo->prepare($sql);
+                            $stmt->execute();
+                            $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                            foreach ($urunler as $urun) {?>
                         <sm-cart-page-item class="ng-star-inserted">
                            <div class="cart-page-item" id="21000032030036">
                               <fe-product-image _nghost-ssk-c159="" class="ng-star-inserted">
-                                 <a _ngcontent-ssk-c159="" id="product-image-link" href="/elektronik/goldstar-aile-boy-celik-caydanlik-304-p-1e8bd54">
-                                    <img _ngcontent-ssk-c159="" felazyload="" alt="Goldstar Aile Boy Çelik Çaydanlık 304" src="https://images.migrosone.com/elektronik/product/32030036/32030036-7ad0f6-105x105.jpg" class="ng-star-inserted"><!----><!---->
+                                 <a _ngcontent-ssk-c159="" id="product-image-link" href="/urun/<?=seo($urun['urun_adi'])?>/<?=seo($urun['id'])?>">
+                                    <img _ngcontent-ssk-c159="" felazyload="" alt="<?=$urun['urun_adi']?>" src="<?=$urun['urun_resim']?>" class="ng-star-inserted"><!----><!---->
                                  </a>
                               </fe-product-image>
                               <!---->
                               <div class="product-name">
                                  <fe-product-name customclass="subtitle-2 text-color-black" _nghost-ssk-c160="">
                                     <h1 _ngcontent-ssk-c160="">
-                                       <a _ngcontent-ssk-c160="" class="subtitle-2 text-color-black ng-star-inserted" href="/goldstar-aile-boy-celik-caydanlik-304-p-1e8bd54"> Goldstar Aile Boy Çelik Çaydanlık 304 </a><!----><!---->
+                                       <a _ngcontent-ssk-c160="" class="subtitle-2 text-color-black ng-star-inserted" href="/urun/<?=seo($urun['urun_adi'])?>/<?=seo($urun['id'])?>"> <?=$urun['urun_adi']?> </a><!----><!---->
                                     </h1>
                                  </fe-product-name>
+                                 <?php 
+                                    if($urun['urun_indirim'] != 0){?>
+                                    
                                  <fe-product-labels _nghost-ssk-c295="" class="ng-star-inserted">
                                     <div _ngcontent-ssk-c295="" class="product-labels ng-star-inserted">
                                        <div _ngcontent-ssk-c295="" class="price product-label ng-star-inserted"><span _ngcontent-ssk-c295="">İndirimli Ürün</span></div>
@@ -108,7 +117,7 @@
                                     </div>
                                     <!---->
                                  </fe-product-labels>
-                                 <!----><!---->
+                                 <?php } ?>
                                  <div class="product-price mobile-only">
                                     <sm-product-actions _nghost-ssk-c292="" class="ng-star-inserted">
                                        <div _ngcontent-ssk-c292="" class="product-actions ng-star-inserted">
@@ -131,16 +140,32 @@
                                        </div>
                                        <!----><!----><!---->
                                     </sm-product-actions>
-                                    <!---->
+                                    <?php 
+                                    if($urun['urun_indirim'] != 0){?>
                                     <fe-product-price _nghost-ssk-c271="" class="ng-star-inserted">
                                        <div _ngcontent-ssk-c271="" class="promotion-wrapper">
-                                          <div _ngcontent-ssk-c271="" id="price-old" class="price-old ng-star-inserted"><span _ngcontent-ssk-c271="" id="old-amount" class="amount">849,95 <span _ngcontent-ssk-c271="" class="currency">TL</span></span></div>
+                                          <div _ngcontent-ssk-c271="" id="price-old" class="price-old ng-star-inserted"><span _ngcontent-ssk-c271="" id="old-amount" class="amount"><?=$urun['urun_fiyat']?> <span _ngcontent-ssk-c271="" class="currency">TL</span></span></div>
                                           <!---->
-                                          <div _ngcontent-ssk-c271="" id="price-new" class="price-new subtitle-1"><span _ngcontent-ssk-c271="" id="new-amount" class="amount"> 649,95 <span _ngcontent-ssk-c271="" class="currency">TL</span></span></div>
+                                          <div _ngcontent-ssk-c271="" id="price-new" class="price-new subtitle-1"><span _ngcontent-ssk-c271="" id="new-amount" class="amount"> 
+                                          <?php
+                                             $orijinal_fiyat = $urun['urun_fiyat'];
+                                             $indirim_orani = $urun['urun_indirim'];
+                                             $indirimli_fiyat = $orijinal_fiyat - ($orijinal_fiyat * ($indirim_orani / 100));
+                                             echo $indirimli_fiyat;
+                                            ?>  
+                                          <span _ngcontent-ssk-c271="" class="currency">TL</span></span></div>
                                        </div>
                                        <!---->
                                     </fe-product-price>
-                                    <!---->
+                                    <?php }else{?>
+                                    <fe-product-price _nghost-ssk-c271="" class="ng-star-inserted">
+                                        <div _ngcontent-ssk-c271="">
+                                            <!---->
+                                            <div _ngcontent-ssk-c271="" id="price-new" class="price-new subtitle-1 price-new-only"><span _ngcontent-ssk-c271="" id="new-amount" class="amount"> <?=$urun['urun_fiyat']?> <span _ngcontent-ssk-c271="" class="currency">TL</span></span></div>
+                                        </div>
+                                        <!---->
+                                    </fe-product-price>
+                                    <?php }?>  
                                  </div>
                                  <div class="actions">
                                     <sm-product-note-popover _nghost-ssk-c373="">
@@ -205,7 +230,7 @@
                            </div>
                            <!----><!---->
                         </sm-cart-page-item>
-                        <!----><!----><!---->
+                        <?php }?>
                      </div>
                      <!----><!----><!----><!---->
                      <div class="segmentify-wrapper">
@@ -229,7 +254,7 @@
                            <fe-line-checkout-summary-mobile _ngcontent-ssk-c256="">
                               <div class="checkout-summary-mobile__container with-details">
                                  <div class="free-delivery-info ng-star-inserted">
-                                    <b class="ng-star-inserted">100,05 TL</b> ve üzeri alışverişlerde <b class="ng-star-inserted">ücretsiz teslimat</b><!----><!---->
+                                    <b class="ng-star-inserted">100 TL</b> ve üzeri alışverişlerde <b class="ng-star-inserted">ücretsiz teslimat</b><!----><!---->
                                  </div>
                                  <!----><!---->
                                  <mat-expansion-panel toggleposition="before" class="mat-expansion-panel ng-tns-c97-0 ng-star-inserted">
