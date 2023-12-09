@@ -37,9 +37,10 @@
                      if (isset($_SESSION['sehir']) && isset($_SESSION['ilce']) && isset($_SESSION['mahalle'])) {
                         
                      ?>
-                     onclick="openmodal('sepet')"
+                     onclick="window.location.href= '/sepetim'" 
+                     
                      <?php }else{?>
-                     onclick="window.location.href= '/sepetim'"   
+                        onclick="openmodal('sepet')"
                      <?php }?>
                      >
                         <img _ngcontent-cro-c303="" src="/assets/icons/bottom-navigation/cart-passive.svg" alt="SepetimIcon"><!---->
