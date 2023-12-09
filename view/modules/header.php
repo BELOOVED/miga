@@ -1222,10 +1222,15 @@ if (strpos($pageName,".") === False){
                                     <path fill="currentColor" d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path>
                                  </svg>
                               </fa-icon>
-                              <?php 
-                              if (isset($_COOKIE["cart_item_$id"]))
-                             
-                              {?>
+                              <?php
+                              foreach ($_COOKIE as $cookieName => $cookieValue) {
+                                 if (strpos($cookieName, 'cart_item_') !== false) {
+                                    $id = substr($cookieName, strlen('cart_item_'));
+
+                                    if (!empty($id)) {
+                                    
+                              ?>
+
                               <sm-cart-dropdown-list _ngcontent-nog-c343="" id="cart" class="empty-cart2 hidden" _nghost-nog-c342="" onmouseover="showCart2()" onmouseout="hideCart2()">
                                  <div _ngcontent-nog-c342="" class="cart-dropdown-wrapper">
                                     <sm-cart-dropdown-item _ngcontent-nog-c342="" _nghost-nog-c341="">
@@ -1299,9 +1304,13 @@ if (strpos($pageName,".") === False){
                                     </div>
                                  </div>
                               </sm-cart-dropdown-list>
-                              <?php }else{?>
+                              <?php }
+                                 
+                              else{?>
                               <span _ngcontent-svk-c342="" id="cart" class="empty-cart mat-body-2 hidden">Sepetiniz Henüz Boş</span>
-                              <?php }?>
+                              <?php }
+                                 }}
+                              ?>
                            </div>
                         </div>
                      </sm-cart-dropdown>

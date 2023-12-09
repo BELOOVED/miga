@@ -32,7 +32,16 @@
                         <img _ngcontent-cro-c303="" src="/assets/icons/bottom-navigation/search-passive.svg" alt="KategorilerIcon"><!---->
                         <div _ngcontent-cro-c303="" class="text mat-caption-normal text-align-center"> Kategoriler </div>
                      </div>
-                     <div _ngcontent-cro-c303="" class="nav-item" id="mobile-navbar-item-2" onclick="openmodal('sepet')">
+                     <div _ngcontent-cro-c303="" class="nav-item" id="mobile-navbar-item-2" 
+                     <?php
+                     if (isset($_SESSION['sehir']) && isset($_SESSION['ilce']) && isset($_SESSION['mahalle'])) {
+                        
+                     ?>
+                     onclick="openmodal('sepet')"
+                     <?php }else{?>
+                     onclick="window.location.href= '/sepetim'"   
+                     <?php }?>
+                     >
                         <img _ngcontent-cro-c303="" src="/assets/icons/bottom-navigation/cart-passive.svg" alt="SepetimIcon"><!---->
                         <div _ngcontent-cro-c303="" class="text mat-caption-normal text-align-center"> Sepetim </div>
                      </div>
