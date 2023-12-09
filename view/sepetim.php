@@ -1,9 +1,21 @@
+
+<style>
+   <?php
+                if ($detect->isMobile()) {?>
+    .header{
+        display: none;
+    }
+    .footer{
+        display: none;
+    }
+    <?php }?>
+</style>
 <sm-header-lite _ngcontent-ssk-c369="" _nghost-ssk-c367="">
    <div _ngcontent-ssk-c367="" class="header-wrapper">
       <div _ngcontent-ssk-c367="" class="desktop-only">
          <!----><!---->
       </div>
-      <div _ngcontent-ssk-c367="" class="logo-container elektronik"></div>
+      <div _ngcontent-ssk-c367="" class="logo-container elektronik" onclick="window.location.href= '/';"></div>
       <div _ngcontent-ssk-c367="" class="mobile-only">
          <!----><!---->
       </div>
