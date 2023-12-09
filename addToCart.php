@@ -3,7 +3,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $productId = $_POST["productId"];
 
-    setcookie("$productId", "1", time() + 86400, "/");
+    setcookie("cart_item_$productId", "1", time() + 86400, "/");
 
     echo "Ürün sepete eklendi!";
 } else {
