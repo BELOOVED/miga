@@ -64,6 +64,10 @@
     foreach ($_COOKIE as $cookieName => $cookieValue) {
     if (strpos($cookieName, 'cart_item_') !== false) {
     $id = substr($cookieName, strlen('cart_item_'));
+    $sql = "SELECT * FROM urunler WHERE id = '$id'";
+                            $stmt = $pdo->prepare($sql);
+                            $stmt->execute();
+                            $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
     if (!empty($id)) {
     ?>
    <sm-product>
@@ -85,10 +89,7 @@
                      <!---->
                      <div class="product-list list ng-star-inserted">
                      <?php
-                            $sql = "SELECT * FROM urunler WHERE id = '$id'";
-                            $stmt = $pdo->prepare($sql);
-                            $stmt->execute();
-                            $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                            
                             foreach ($urunler as $urun) {?>
                         <sm-cart-page-item class="ng-star-inserted">
                            <div class="cart-page-item" id="21000032030036">
@@ -363,7 +364,7 @@
       <!---->
    </article>
    </sm-product>  
-   <?php }}else{?>
+   <?php }}} else {?>
    <!----NOTCOOKIE!---->
    <sm-product>
       <article>
@@ -398,5 +399,5 @@
          <!---->
       </article>
    </sm-product>
-   <?php }}?>
+   <?php }?>
 </main>
