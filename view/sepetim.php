@@ -384,7 +384,7 @@
                         <div class="info">
                            <p class="subtitle-1 text-color-black">Sepetinde hiç ürün bulunmuyor!</p>
                         </div>
-                        <button id="start-shopping-btn" color="primary" mat-flat-button="" class="mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Alışverişe Başla </span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button>
+                        <button onclick="window.location.href= '/'" id="start-shopping-btn" color="primary" mat-flat-button="" class="mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Alışverişe Başla </span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button>
                      </mat-card>
                   </div>
                   <!---->
