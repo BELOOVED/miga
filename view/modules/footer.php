@@ -1558,5 +1558,26 @@ function hideCategory() {
     $paginationBullets.eq(0).addClass('swiper-pagination-bullet-active');
   });
 </script>
+<script>
+    function addToCart(productId) {
+      $('#spinner').removeClass('hidden');
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "addToCart.php", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+        var data = "productId=" + productId;
+
+        xhr.send(data);
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                console.log(xhr.responseText);
+                setTimeout(function () {
+                    $('#spinner').addClass('hidden');
+                }, 1000);
+            }
+        };
+    }
+</script>
    </body>
 </html>

@@ -620,27 +620,5 @@ try {
    </sm-product>
    <!---->
 </main>
-<script>
-    // JavaScript kodu
-    function addToCart(productId) {
-        // AJAX isteği oluştur
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "addToCart.php", true);
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
-        // Sunucuya gönderilecek veriler
-        var data = "productId=" + productId;
-
-        // AJAX isteği gönder
-        xhr.send(data);
-
-        // Sunucudan gelen cevabı işle
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState == 4 && xhr.status == 200) {
-                // Başarılı bir şekilde tamamlandığında burada işlem yapabilirsiniz
-                console.log(xhr.responseText);
-            }
-        };
-    }
-</script>
 <?php }?>
