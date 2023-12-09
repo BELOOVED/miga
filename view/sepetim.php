@@ -363,7 +363,7 @@
       <!---->
    </article>
    </sm-product>  
-   <?php }else{?>
+   <?php }}else{?>
    <!----NOTCOOKIE!---->
    <sm-product>
       <article>
@@ -398,5 +398,5 @@
          <!---->
       </article>
    </sm-product>
-   <?php }}}?>
+   <?php }}?>
 </main>
