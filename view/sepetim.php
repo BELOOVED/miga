@@ -195,14 +195,32 @@
                                  </div>
                               </div>
                               <div class="product-price desktop-only">
-                                 <fe-product-price _nghost-ssk-c271="" class="ng-star-inserted">
-                                    <div _ngcontent-ssk-c271="" class="promotion-wrapper">
-                                       <div _ngcontent-ssk-c271="" id="price-old" class="price-old ng-star-inserted"><span _ngcontent-ssk-c271="" id="old-amount" class="amount">849,95 <span _ngcontent-ssk-c271="" class="currency">TL</span></span></div>
+                              <?php 
+                                    if($urun['urun_indirim'] != 0){?>
+                                    <fe-product-price _nghost-ssk-c271="" class="ng-star-inserted">
+                                       <div _ngcontent-ssk-c271="" class="promotion-wrapper">
+                                          <div _ngcontent-ssk-c271="" id="price-old" class="price-old ng-star-inserted"><span _ngcontent-ssk-c271="" id="old-amount" class="amount"><?=$urun['urun_fiyat']?> <span _ngcontent-ssk-c271="" class="currency">TL</span></span></div>
+                                          <!---->
+                                          <div _ngcontent-ssk-c271="" id="price-new" class="price-new subtitle-1"><span _ngcontent-ssk-c271="" id="new-amount" class="amount"> 
+                                          <?php
+                                             $orijinal_fiyat = $urun['urun_fiyat'];
+                                             $indirim_orani = $urun['urun_indirim'];
+                                             $indirimli_fiyat = $orijinal_fiyat - ($orijinal_fiyat * ($indirim_orani / 100));
+                                             echo $indirimli_fiyat;
+                                            ?>  
+                                          <span _ngcontent-ssk-c271="" class="currency">TL</span></span></div>
+                                       </div>
                                        <!---->
-                                       <div _ngcontent-ssk-c271="" id="price-new" class="price-new subtitle-1"><span _ngcontent-ssk-c271="" id="new-amount" class="amount"> 649,95 <span _ngcontent-ssk-c271="" class="currency">TL</span></span></div>
-                                    </div>
-                                    <!---->
-                                 </fe-product-price>
+                                    </fe-product-price>
+                                    <?php }else{?>
+                                    <fe-product-price _nghost-ssk-c271="" class="ng-star-inserted">
+                                        <div _ngcontent-ssk-c271="">
+                                            <!---->
+                                            <div _ngcontent-ssk-c271="" id="price-new" class="price-new subtitle-1 price-new-only"><span _ngcontent-ssk-c271="" id="new-amount" class="amount"> <?=$urun['urun_fiyat']?> <span _ngcontent-ssk-c271="" class="currency">TL</span></span></div>
+                                        </div>
+                                        <!---->
+                                    </fe-product-price>
+                                    <?php }?>  
                                  <!---->
                                  <sm-product-actions _nghost-ssk-c292="" class="ng-star-inserted">
                                     <div _ngcontent-ssk-c292="" class="product-actions ng-star-inserted">
