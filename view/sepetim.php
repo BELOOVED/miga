@@ -81,13 +81,16 @@
                      <!---->
                      <div class="product-list list ng-star-inserted">
                      <?php
+                     $id = array(); // Döngü dışında bir dizi tanımla
+
                      foreach ($_COOKIE as $cookieName => $cookieValue) {
                          if (strpos($cookieName, 'cart_item_') !== false) {
-                         $id = substr($cookieName, strlen('cart_item_'));
-                     
-                         }}
+                             $ids = substr($cookieName, strlen('cart_item_'));
+                             $id[] = $ids; // $id'yi diziye ekle
+                         }
+                     }
                      if (!empty($id)) {
-                            $sql = "SELECT * FROM urunler WHERE id = '$id'";
+                            $sql = "SELECT * FROM urunler WHERE id IN (" . implode(',', array_fill(0, count($id), '?')) . ")";
                             $stmt = $pdo->prepare($sql);
                             $stmt->execute();
                             $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
