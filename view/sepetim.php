@@ -90,6 +90,7 @@
                              $id[] = $ids; // $id'yi diziye ekle
                          }
                      }
+                     die();
                      if (!empty($id)) {
                             $sql = "SELECT * FROM urunler WHERE id IN (" . implode(',', array_fill(0, count($id), '?')) . ")";
                             $stmt = $pdo->prepare($sql);
