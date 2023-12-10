@@ -90,11 +90,14 @@
                         }
                     }
                      if (!empty($id)) {
-                            $sql = "SELECT * FROM urunler WHERE id IN (" . implode(',', array_fill(0, count($id), '?')) . ")";
-                            $stmt = $pdo->prepare($sql);
-                            $stmt->execute();
-                            $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                            foreach ($urunler as $urun) {?>
+                        $sql = "SELECT * FROM urunler WHERE id IN (" . implode(',', array_fill(0, count($id), '?')) . ")";
+                        $stmt = $pdo->prepare($sql);
+                        for ($i = 0; $i < count($id); $i++) {
+                           $stmt->bindParam($i + 1, $id[$i]);
+                        }
+                        $stmt->execute();
+                        $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                        foreach ($urunler as $urun) {?>
                         <sm-cart-page-item class="ng-star-inserted">
                            <div class="cart-page-item" id="21000032030036">
                               <fe-product-image _nghost-ssk-c159="" class="ng-star-inserted">
