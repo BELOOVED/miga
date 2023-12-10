@@ -101,7 +101,7 @@
                         <sm-cart-page-item class="ng-star-inserted" >
                            <div class="cart-page-item" id="21000032030036">
                               <fe-product-image _nghost-ssk-c159="" class="ng-star-inserted" style="height: 100% !important">
-                                 <a _ngcontent-ssk-c159="" id="product-image-link" href="/urun/<?=seo($urun['urun_adi'])?>/<?=seo($urun['id'])?>"  style="height: 50% !important">
+                                 <a _ngcontent-ssk-c159="" id="product-image-link" href="/urun/<?=seo($urun['urun_adi'])?>/<?=seo($urun['id'])?>"  style="height: 100% !important">
                                     <img  style="height: 50% !important" _ngcontent-ssk-c159="" felazyload="" alt="<?=$urun['urun_adi']?>" src="<?=$urun['urun_resim']?>" class="ng-star-inserted"><!----><!---->
                                  </a>
                               </fe-product-image>
