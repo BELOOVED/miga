@@ -100,7 +100,7 @@
                         foreach ($urunler as $urun) {?>
                         <sm-cart-page-item class="ng-star-inserted" >
                            <div class="cart-page-item" id="21000032030036">
-                              <fe-product-image _nghost-ssk-c159="" class="ng-star-inserted" style="height: 50%">
+                              <fe-product-image _nghost-ssk-c159="" class="ng-star-inserted" style="height: 10%">
                                  <a _ngcontent-ssk-c159="" id="product-image-link" href="/urun/<?=seo($urun['urun_adi'])?>/<?=seo($urun['id'])?>">
                                     <img _ngcontent-ssk-c159="" felazyload="" alt="<?=$urun['urun_adi']?>" src="<?=$urun['urun_resim']?>" class="ng-star-inserted"><!----><!---->
                                  </a>
