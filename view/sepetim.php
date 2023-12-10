@@ -98,9 +98,9 @@
                         $stmt->execute();
                         $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         foreach ($urunler as $urun) {?>
-                        <sm-cart-page-item class="ng-star-inserted" style="height: 50%">
+                        <sm-cart-page-item class="ng-star-inserted" >
                            <div class="cart-page-item" id="21000032030036">
-                              <fe-product-image _nghost-ssk-c159="" class="ng-star-inserted">
+                              <fe-product-image _nghost-ssk-c159="" class="ng-star-inserted" style="height: 50%">
                                  <a _ngcontent-ssk-c159="" id="product-image-link" href="/urun/<?=seo($urun['urun_adi'])?>/<?=seo($urun['id'])?>">
                                     <img _ngcontent-ssk-c159="" felazyload="" alt="<?=$urun['urun_adi']?>" src="<?=$urun['urun_resim']?>" class="ng-star-inserted"><!----><!---->
                                  </a>
