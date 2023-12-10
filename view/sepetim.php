@@ -86,11 +86,10 @@
                      foreach ($_COOKIE as $cookieName => $cookieValue) {
                          if (strpos($cookieName, 'cart_item_') !== false) {
                              $ids = substr($cookieName, strlen('cart_item_'));
-                             echı $ids;
+                             echo $ids;
                              $id[] = $ids; // $id'yi diziye ekle
                          }
                      }
-                     die();
                      if (!empty($id)) {
                             $sql = "SELECT * FROM urunler WHERE id IN (" . implode(',', array_fill(0, count($id), '?')) . ")";
                             $stmt = $pdo->prepare($sql);
