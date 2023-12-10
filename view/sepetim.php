@@ -81,12 +81,12 @@
                      <!---->
                      <div class="product-list list ng-star-inserted">
                      <?php
-                     $id = array(); // Döngü dışında bir dizi tanımla
+                     $id = array();
 
                      foreach ($_COOKIE as $cookieName => $cookieValue) {
                         if (strpos($cookieName, 'cart_item_') !== false) {
                             $ids = substr($cookieName, strlen('cart_item_'));
-                            $id[] = $ids; // $id'yi diziye ekle
+                            $id[] = $ids;
                         }
                     }
                      if (!empty($id)) {
