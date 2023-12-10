@@ -454,7 +454,7 @@ try {
                      </div>
                      <!---->
                   </sm-product-images>
-                  <div class="product-details">
+                  <div class="product-details" style="height: auto;">
                      <h3 class="text-color-black">
                      <?php foreach ($urunler as $urun): ?>
                                     <?= $urun['urun_adi']; ?>
