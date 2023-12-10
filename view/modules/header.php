@@ -1304,12 +1304,12 @@ if (strpos($pageName,".") === False){
                                     </div>
                                  </div>
                               </sm-cart-dropdown-list>
-                              <?php }
+                              <?php } }
                                  
                               else{?>
                               <span _ngcontent-svk-c342="" id="cart" class="empty-cart mat-body-2 hidden">Sepetiniz Henüz Boş</span>
                               <?php }
-                                 }}
+                                 }
                               ?>
                            </div>
                         </div>
