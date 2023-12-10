@@ -85,7 +85,7 @@
                          if (strpos($cookieName, 'cart_item_') !== false) {
                          $id = substr($cookieName, strlen('cart_item_'));
                      
-                     
+                         }}
                      if (!empty($id)) {
                             $sql = "SELECT * FROM urunler WHERE id = '$id'";
                             $stmt = $pdo->prepare($sql);
@@ -250,7 +250,7 @@
                            </div>
                            <!----><!---->
                         </sm-cart-page-item>
-                        <?php }}?>
+                        <?php }?>
                      </div>
                      <!----><!----><!----><!---->
                      <div class="segmentify-wrapper">
@@ -368,7 +368,7 @@
                         <button onclick="window.location.href= '/'" id="start-shopping-btn" color="primary" mat-flat-button="" class="mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Alışverişe Başla </span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button>
                      </mat-card>
                   </div>
-   <?php }}?>
+   <?php }?>
                
                <!---->
             </div>
