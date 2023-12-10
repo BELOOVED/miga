@@ -1,9 +1,4 @@
-<?php
-foreach ($_COOKIE as $cookieName => $cookieValue) {
-    if (strpos($cookieName, 'cart_item_') !== false) {
-    $id = substr($cookieName, strlen('cart_item_'));
 
- ?>
 
 <style>
    <?php
@@ -66,11 +61,7 @@ foreach ($_COOKIE as $cookieName => $cookieValue) {
 </sm-header-lite>
 <main _ngcontent-ssk-c369="" class="elektronik">
    <router-outlet _ngcontent-ssk-c369=""></router-outlet>
-   <?php
-    
-    
-    if (!empty($id)) {
-    ?>
+   
    <sm-product>
    <article>
       <router-outlet></router-outlet>
@@ -90,6 +81,12 @@ foreach ($_COOKIE as $cookieName => $cookieValue) {
                      <!---->
                      <div class="product-list list ng-star-inserted">
                      <?php
+                     foreach ($_COOKIE as $cookieName => $cookieValue) {
+                         if (strpos($cookieName, 'cart_item_') !== false) {
+                         $id = substr($cookieName, strlen('cart_item_'));
+                     
+                     
+                     if (!empty($id)) {
                             $sql = "SELECT * FROM urunler WHERE id = '$id'";
                             $stmt = $pdo->prepare($sql);
                             $stmt->execute();
