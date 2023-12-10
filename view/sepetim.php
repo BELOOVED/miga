@@ -86,7 +86,6 @@
                      foreach ($_COOKIE as $cookieName => $cookieValue) {
                         if (strpos($cookieName, 'cart_item_') !== false) {
                             $ids = substr($cookieName, strlen('cart_item_'));
-                            echo $ids;
                             $id[] = $ids; // $id'yi diziye ekle
                         }
                     }
