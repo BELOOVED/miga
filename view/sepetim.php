@@ -79,7 +79,7 @@
                         <span id="update-cart" class="subtitle-2 update-cart text-color-orange ng-star-inserted"> Sepeti Düzenle </span><!---->
                      </div>
                      <!---->
-                     <div class="product-list list ng-star-inserted" style="height: 50% !important">
+                     <div class="product-list list ng-star-inserted">
                      <?php
                      $id = array();
 
@@ -98,7 +98,7 @@
                         $stmt->execute();
                         $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         foreach ($urunler as $urun) {?>
-                        <sm-cart-page-item class="ng-star-inserted">
+                        <sm-cart-page-item class="ng-star-inserted" style="height: 50%">
                            <div class="cart-page-item" id="21000032030036">
                               <fe-product-image _nghost-ssk-c159="" class="ng-star-inserted">
                                  <a _ngcontent-ssk-c159="" id="product-image-link" href="/urun/<?=seo($urun['urun_adi'])?>/<?=seo($urun['id'])?>">
