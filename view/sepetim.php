@@ -250,7 +250,7 @@
                            </div>
                            <!----><!---->
                         </sm-cart-page-item>
-                        <?php }?>
+                        <?php }}?>
                      </div>
                      <!----><!----><!----><!---->
                      <div class="segmentify-wrapper">
@@ -354,30 +354,8 @@
                   </div>
                   <!---->
                </div>
-               <!---->
-            </div>
-            <sm-popup-banner>
-               <!---->
-            </sm-popup-banner>
-         </div>
-         <!----><!----><!---->
-      </sm-cart-page>
-      <!---->
-   </article>
-   </sm-product>
-    
-   <?php }else{?>
-   <!----NOTCOOKIE!---->
-   <sm-product>
-      <article>
-         <router-outlet></router-outlet>
-         <sm-cart-page>
-            <div class="cart-page">
-               <sm-special-discount id="sepetinize-ozel-firsatlar">
-                  <!---->
-               </sm-special-discount>
-               <div class="cart-container">
-                  <div class="cart-empty">
+               <?php }else{?>
+                <div class="cart-empty">
                      <mat-card class="mat-mdc-card mdc-card">
                         <img srcset="
                            /assets/images/cart-empty.webp,
@@ -390,16 +368,19 @@
                         <button onclick="window.location.href= '/'" id="start-shopping-btn" color="primary" mat-flat-button="" class="mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Alışverişe Başla </span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button>
                      </mat-card>
                   </div>
-                  <!---->
-               </div>
-               <sm-popup-banner>
-                  <!---->
-               </sm-popup-banner>
+   <?php }}?>
+               
+               <!---->
             </div>
-            <!----><!----><!---->
-         </sm-cart-page>
-         <!---->
-      </article>
+            <sm-popup-banner>
+               <!---->
+            </sm-popup-banner>
+         </div>
+         <!----><!----><!---->
+      </sm-cart-page>
+      <!---->
+   </article>
    </sm-product>
-   <?php }}}?>
+    
+   
 </main>
