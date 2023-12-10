@@ -79,7 +79,7 @@
                         <span id="update-cart" class="subtitle-2 update-cart text-color-orange ng-star-inserted"> Sepeti Düzenle </span><!---->
                      </div>
                      <!---->
-                     <div class="product-list list ng-star-inserted">
+                     <div class="product-list list ng-star-inserted" style="height: 50% !important">
                      <?php
                      $id = array();
 
