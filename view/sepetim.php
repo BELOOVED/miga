@@ -150,7 +150,7 @@
                                              <!----><!---->
                                           </button>
                                           <div _ngcontent-ssk-c292="" id="product-amount" class="product-amount"><span _ngcontent-ssk-c292="" class="amount mat-caption"><?=strval($adet)?></span><span _ngcontent-ssk-c292="" class="unit text-color-grey">adet</span></div>
-                                          <button _ngcontent-ssk-c292="" aria-label="Sepetteki ürün sayısını arttır" class="product-increase" id="product-actions-product-increase--goldstar-aile-boy-celik-caydanlik-304-p-1e8bd54">
+                                          <button _ngcontent-ssk-c292="" aria-label="Sepetteki ürün sayısını arttır" class="product-increase" id="product-actions-product-increase--goldstar-aile-boy-celik-caydanlik-304-p-1e8bd54" onclick="urunekleee('<?=urun['id']')">
                                              <fa-icon _ngcontent-ssk-c292="" class="ng-fa-icon">
                                                 <svg role="img" aria-hidden="true" focusable="false" data-prefix="far" data-icon="plus" class="svg-inline--fa fa-plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                                    <path fill="currentColor" d="M432 256C432 269.3 421.3 280 408 280h-160v160c0 13.25-10.75 24.01-24 24.01S200 453.3 200 440v-160h-160c-13.25 0-24-10.74-24-23.99C16 242.8 26.75 232 40 232h160v-160c0-13.25 10.75-23.99 24-23.99S248 58.75 248 72v160h160C421.3 232 432 242.8 432 256z"></path>
@@ -253,7 +253,7 @@
                                           <!----><!---->
                                        </button>
                                        <div _ngcontent-ssk-c292="" id="product-amount" class="product-amount"><span _ngcontent-ssk-c292="" class="amount mat-caption"><?=strval($adet)?></span><span _ngcontent-ssk-c292="" class="unit text-color-grey">adet</span></div>
-                                       <button _ngcontent-ssk-c292="" aria-label="Sepetteki ürün sayısını arttır" class="product-increase" id="product-actions-product-increase--goldstar-aile-boy-celik-caydanlik-304-p-1e8bd54">
+                                       <button _ngcontent-ssk-c292="" aria-label="Sepetteki ürün sayısını arttır" class="product-increase" id="product-actions-product-increase--goldstar-aile-boy-celik-caydanlik-304-p-1e8bd54" onclick="urunekleee('<?=urun['id']')">
                                           <fa-icon _ngcontent-ssk-c292="" class="ng-fa-icon">
                                              <svg role="img" aria-hidden="true" focusable="false" data-prefix="far" data-icon="plus" class="svg-inline--fa fa-plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                                 <path fill="currentColor" d="M432 256C432 269.3 421.3 280 408 280h-160v160c0 13.25-10.75 24.01-24 24.01S200 453.3 200 440v-160h-160c-13.25 0-24-10.74-24-23.99C16 242.8 26.75 232 40 232h160v-160c0-13.25 10.75-23.99 24-23.99S248 58.75 248 72v160h160C421.3 232 432 242.8 432 256z"></path>
@@ -383,9 +383,22 @@
    </sm-product>
    <script>
       function deleteCookieAndReload(cookieName) {
-    document.cookie = 'cart_item_'+ cookieName + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-    location.reload();
-}
+         document.cookie = 'cart_item_'+ cookieName + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+         location.reload();
+      }
+      function urunekleee(cookieName) {
+         var cookieName = "cart_item_"+cookieName;
+         var currentValue = document.cookie.replace(/(?:(?:^|.*;\s*)exampleCookie\s*=\s*([^;]*).*$)|^.*$/, "$1");
+
+         if (currentValue) {
+            var newValue = parseInt(currentValue, 10) + 1;
+            document.cookie = cookieName + "=" + newValue + "; path=/";
+            location.reload();
+         } else {
+            document.cookie = cookieName + "=1; path=/";
+            location.reload();
+         }
+      }
    </script>
     
    
