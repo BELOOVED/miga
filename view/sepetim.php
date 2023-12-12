@@ -75,7 +75,7 @@
                   <div class="selector mdc-layout-grid__cell--span-8 mdc-layout-grid__cell--span-5-tablet mdc-layout-grid__cell--span-4-phone">
                      <!---->
                      <div class="cart-container__header">
-                        <h2 id="cart-header" class="text-color-black mat-headline"> Sepetim <span class="mat-body-2 text-color-grey"><?=strval(count($urunler))?> Ürün</span></h2>
+                        <h2 id="cart-header" class="text-color-black mat-headline"> Sepetim <span class="mat-body-2 text-color-grey"></span></h2>
                         <span id="update-cart" class="subtitle-2 update-cart text-color-orange ng-star-inserted"> Sepeti Düzenle </span><!---->
                      </div>
                      <!---->
