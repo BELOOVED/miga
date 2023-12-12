@@ -149,7 +149,7 @@
                                              </fa-icon>
                                              <!----><!---->
                                           </button>
-                                          <div _ngcontent-ssk-c292="" id="product-amount" class="product-amount"><span _ngcontent-ssk-c292="" class="amount mat-caption">1</span><span _ngcontent-ssk-c292="" class="unit text-color-grey">adet</span></div>
+                                          <div _ngcontent-ssk-c292="" id="product-amount" class="product-amount"><span _ngcontent-ssk-c292="" class="amount mat-caption"><?=strval($adet)?></span><span _ngcontent-ssk-c292="" class="unit text-color-grey">adet</span></div>
                                           <button _ngcontent-ssk-c292="" aria-label="Sepetteki ürün sayısını arttır" class="product-increase" id="product-actions-product-increase--goldstar-aile-boy-celik-caydanlik-304-p-1e8bd54">
                                              <fa-icon _ngcontent-ssk-c292="" class="ng-fa-icon">
                                                 <svg role="img" aria-hidden="true" focusable="false" data-prefix="far" data-icon="plus" class="svg-inline--fa fa-plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -252,7 +252,7 @@
                                           </fa-icon>
                                           <!----><!---->
                                        </button>
-                                       <div _ngcontent-ssk-c292="" id="product-amount" class="product-amount"><span _ngcontent-ssk-c292="" class="amount mat-caption">1</span><span _ngcontent-ssk-c292="" class="unit text-color-grey">adet</span></div>
+                                       <div _ngcontent-ssk-c292="" id="product-amount" class="product-amount"><span _ngcontent-ssk-c292="" class="amount mat-caption"><?=strval($adet)?></span><span _ngcontent-ssk-c292="" class="unit text-color-grey">adet</span></div>
                                        <button _ngcontent-ssk-c292="" aria-label="Sepetteki ürün sayısını arttır" class="product-increase" id="product-actions-product-increase--goldstar-aile-boy-celik-caydanlik-304-p-1e8bd54">
                                           <fa-icon _ngcontent-ssk-c292="" class="ng-fa-icon">
                                              <svg role="img" aria-hidden="true" focusable="false" data-prefix="far" data-icon="plus" class="svg-inline--fa fa-plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
