@@ -289,7 +289,13 @@
                                           <div class="checkout-summary-mobile__content ng-star-inserted">
                                              <div class="revenue-container">
                                                 <div class="mat-caption-normal">Ödenecek Tutar</div>
-                                                <h3 class="revenue">676,94 TL</h3>
+                                                <?php
+                                                $urun_fiyat = 0;
+                                                foreach ($urunler as $urun) {
+                                                   $urun_fiyat += $urun["urun_fiyat"];
+                                                   echo '<h3 class="revenue">'.strval($urun_fiyat).' TL</h3>';                                                   
+                                                }                                          
+                                                ?>
                                              </div>
                                              <button id="checkout-summary-mobile-confirm-button" feappclickthrottle="" mat-flat-button="" color="primary" class="mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary confirm-button mat-mdc-button-base"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Devam Et </span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button>
                                           </div>
@@ -345,7 +351,13 @@
                                           </div>
                                        </div>
                                        <div _ngcontent-ssk-c253="" class="subtitle-1">Ödenecek Tutar</div>
-                                       <div _ngcontent-ssk-c253="" class="subtitle-1 text-align-right">676,94 TL</div>
+                                       <?php
+                                          $urun_fiyat = 0;
+                                          foreach ($urunler as $urun) {
+                                             $urun_fiyat += $urun["urun_fiyat"];
+                                             echo '<div _ngcontent-ssk-c253="" class="subtitle-1 text-align-right">'.strval($urun_fiyat).' TL</div>';                                                   
+                                          }                                          
+                                          ?>
                                     </div>
                                     <mat-divider _ngcontent-ssk-c253="" role="separator" class="mat-divider mat-divider-horizontal" aria-orientation="horizontal"></mat-divider>
                                     <!---->
