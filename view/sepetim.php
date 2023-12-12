@@ -97,7 +97,10 @@
                         }
                         $stmt->execute();
                         $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                        foreach ($urunler as $urun) {?>
+                        $urun_fiyat = 0;
+                        foreach ($urunler as $urun) {
+                        $urun_fiyat += $urun["urun_fiyat"];
+                        ?>
                         <sm-cart-page-item class="ng-star-inserted" >
                            <div class="cart-page-item" id="21000032030036">
                               <fe-product-image _nghost-ssk-c159="" class="ng-star-inserted" style="height: 100% !important">
@@ -280,7 +283,6 @@
                            <fe-line-checkout-summary-mobile _ngcontent-ssk-c256="">
                               <div class="checkout-summary-mobile__container with-details">
                                  <div class="free-delivery-info ng-star-inserted">
-                                    <b class="ng-star-inserted">100 TL</b> ve üzeri alışverişlerde <b class="ng-star-inserted">ücretsiz teslimat</b><!----><!---->
                                  </div>
                                  <!----><!---->
                                  <mat-expansion-panel toggleposition="before" class="mat-expansion-panel ng-tns-c97-0 ng-star-inserted">
@@ -289,13 +291,7 @@
                                           <div class="checkout-summary-mobile__content ng-star-inserted">
                                              <div class="revenue-container">
                                                 <div class="mat-caption-normal">Ödenecek Tutar</div>
-                                                <?php
-                                                $urun_fiyat = 0;
-                                                foreach ($urunler as $urun) {
-                                                   $urun_fiyat += $urun["urun_fiyat"];
-                                                   echo '<h3 class="revenue">'.strval($urun_fiyat).' TL</h3>';                                                   
-                                                }                                          
-                                                ?>
+                                                <h3 class="revenue"><?=strval($urun_fiyat)?> TL</h3>
                                              </div>
                                              <button id="checkout-summary-mobile-confirm-button" feappclickthrottle="" mat-flat-button="" color="primary" class="mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary confirm-button mat-mdc-button-base"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Devam Et </span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button>
                                           </div>
@@ -307,14 +303,9 @@
                                        <div class="mat-expansion-panel-body ng-tns-c97-0">
                                           <div class="summary-content mat-body-2 ng-star-inserted" style="">
                                              <p>Sipariş Tutarı</p>
-                                             <p>849,95 TL</p>
-                                             <p class="ng-star-inserted" style="">Teslimat Tutarı</p>
-                                             <p class="ng-star-inserted" style="">26,99 TL</p>
+                                             <p><?=strval($urun_fiyat)?> TL</p>
                                              <!----><!---->
                                              <div class="discounts text-color-success">
-                                                <p class="ng-star-inserted">Migros İndirimi</p>
-                                                <p class="ng-star-inserted">-200,00 TL</p>
-                                                <!----><!----><!----><!---->
                                              </div>
                                           </div>
                                           <mat-divider role="separator" class="mat-divider mat-divider-horizontal ng-star-inserted" aria-orientation="horizontal" style=""></mat-divider>
@@ -336,28 +327,11 @@
                                        <div _ngcontent-ssk-c253="" class="mat-body-2 text-color-grey text-align-right">1 Ürün</div>
                                        <div _ngcontent-ssk-c253="" class="summary-content mat-body-2">
                                           <p _ngcontent-ssk-c253="">Toplam Tutar</p>
-                                          <p _ngcontent-ssk-c253="">849,95 TL</p>
-                                          <div _ngcontent-ssk-c253="" class="delivery-price ng-star-inserted">
-                                             <p _ngcontent-ssk-c253="">Teslimat Tutarı</p>
-                                             <p _ngcontent-ssk-c253="" class="price">
-                                                <span _ngcontent-ssk-c253="">26,99 <span _ngcontent-ssk-c253="" class="currency">TL</span></span><!----><!---->
-                                             </p>
-                                          </div>
+                                          <p _ngcontent-ssk-c253=""><?=strval($urun_fiyat)?> TL</p>
                                           <!---->
-                                          <div _ngcontent-ssk-c253="" class="discounts">
-                                             <p _ngcontent-ssk-c253="" class="ng-star-inserted">Migros İndirimi</p>
-                                             <p _ngcontent-ssk-c253="" class="ng-star-inserted">-200,00 TL</p>
-                                             <!----><!----><!----><!----><!----><!----><!----><!---->
-                                          </div>
                                        </div>
                                        <div _ngcontent-ssk-c253="" class="subtitle-1">Ödenecek Tutar</div>
-                                       <?php
-                                          $urun_fiyat = 0;
-                                          foreach ($urunler as $urun) {
-                                             $urun_fiyat += $urun["urun_fiyat"];
-                                             echo '<div _ngcontent-ssk-c253="" class="subtitle-1 text-align-right">'.strval($urun_fiyat).' TL</div>';                                                   
-                                          }                                          
-                                          ?>
+                                       <div _ngcontent-ssk-c253="" class="subtitle-1 text-align-right"><?=strval($urun_fiyat)?> TL</div>
                                     </div>
                                     <mat-divider _ngcontent-ssk-c253="" role="separator" class="mat-divider mat-divider-horizontal" aria-orientation="horizontal"></mat-divider>
                                     <!---->
