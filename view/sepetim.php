@@ -75,7 +75,7 @@
                   <div class="selector mdc-layout-grid__cell--span-8 mdc-layout-grid__cell--span-5-tablet mdc-layout-grid__cell--span-4-phone">
                      <!---->
                      <div class="cart-container__header">
-                        <h2 id="cart-header" class="text-color-black mat-headline"> Sepetim <span class="mat-body-2 text-color-grey">1 Ürün</span></h2>
+                        <h2 id="cart-header" class="text-color-black mat-headline"> Sepetim <span class="mat-body-2 text-color-grey"><?=strval(count($urunler))?> Ürün</span></h2>
                         <span id="update-cart" class="subtitle-2 update-cart text-color-orange ng-star-inserted"> Sepeti Düzenle </span><!---->
                      </div>
                      <!---->
@@ -97,6 +97,7 @@
                         }
                         $stmt->execute();
                         $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
                         $urun_fiyat = 0;
                         foreach ($urunler as $urun) {
                         $urun_fiyat += $urun["urun_fiyat"];
@@ -272,7 +273,6 @@
                         <div _ngcontent-ssk-c388="" class="card ng-star-inserted">
                            <div _ngcontent-ssk-c388="" class="container sm-free-delivery">
                               <!---->
-                              <div _ngcontent-ssk-c388="" class="description ng-star-inserted"><b _ngcontent-ssk-c388="">100,05 TL</b>’lik daha ürün ekle, <b _ngcontent-ssk-c388="">teslimatın ücretsiz olsun!</b></div>
                               <!----><!---->
                            </div>
                         </div>
@@ -324,7 +324,7 @@
                                  <mat-card _ngcontent-ssk-c253="" class="mat-card mat-focus-indicator container">
                                     <div _ngcontent-ssk-c253="" class="summary">
                                        <div _ngcontent-ssk-c253="" class="subtitle-1">Sepet Özeti</div>
-                                       <div _ngcontent-ssk-c253="" class="mat-body-2 text-color-grey text-align-right">1 Ürün</div>
+                                       <div _ngcontent-ssk-c253="" class="mat-body-2 text-color-grey text-align-right"><?=strval(count($urunler))?> Ürün</div>
                                        <div _ngcontent-ssk-c253="" class="summary-content mat-body-2">
                                           <p _ngcontent-ssk-c253="">Toplam Tutar</p>
                                           <p _ngcontent-ssk-c253=""><?=strval($urun_fiyat)?> TL</p>
