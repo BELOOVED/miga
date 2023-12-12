@@ -100,7 +100,15 @@
 
                         $urun_fiyat = 0;
                         foreach ($urunler as $urun) {
-                        $urun_fiyat += $urun["urun_fiyat"];
+                           $adet = intval($_COOKIE["cart_item_".strval($urun["id"])]);
+                           if($urun['urun_indirim'] != 0){
+                              $orijinal_fiyat = $urun['urun_fiyat'];
+                              $indirim_orani = $urun['urun_indirim'];
+                              $urun_fiyat = ($orijinal_fiyat - ($orijinal_fiyat * ($indirim_orani / 100)) * $adet);
+                           }else {
+                              $urun_fiyat += ($urun["urun_fiyat"] * $adet);
+                           }
+                           
                         ?>
                         <sm-cart-page-item class="ng-star-inserted" >
                            <div class="cart-page-item" id="21000032030036">
