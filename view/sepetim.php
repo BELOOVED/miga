@@ -298,8 +298,8 @@
                         <div _ngcontent-ssk-c256="" class="mobile-only">
                            <fe-line-checkout-summary-mobile _ngcontent-ssk-c256="">
                               <div class="checkout-summary-mobile__container with-details">
-                                 <div class="free-delivery-info ng-star-inserted">
-                                 </div>
+                                 <!-- <div class="free-delivery-info ng-star-inserted">
+                                 </div> -->
                                  <!----><!---->
                                  <mat-expansion-panel toggleposition="before" class="mat-expansion-panel ng-tns-c97-0 ng-star-inserted">
                                     <mat-expansion-panel-header role="button" class="mat-expansion-panel-header mat-focus-indicator ng-tns-c98-1 ng-tns-c97-0 mat-expansion-toggle-indicator-before ng-star-inserted" id="mat-expansion-panel-header-0" tabindex="0" aria-controls="cdk-accordion-child-0" aria-expanded="false" aria-disabled="false">
