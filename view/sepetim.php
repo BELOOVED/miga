@@ -104,7 +104,7 @@
                            if($urun['urun_indirim'] != 0){
                               $orijinal_fiyat = $urun['urun_fiyat'];
                               $indirim_orani = $urun['urun_indirim'];
-                              $urun_fiyat = ($orijinal_fiyat - ($orijinal_fiyat * ($indirim_orani / 100)) * $adet);
+                              $urun_fiyat = (($orijinal_fiyat - ($orijinal_fiyat * ($indirim_orani / 100))) * $adet);
                            }else {
                               $urun_fiyat += ($urun["urun_fiyat"] * $adet);
                            }
