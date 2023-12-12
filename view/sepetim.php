@@ -141,7 +141,7 @@
                                  <div class="product-price mobile-only">
                                     <sm-product-actions _nghost-ssk-c292="" class="ng-star-inserted">
                                        <div _ngcontent-ssk-c292="" class="product-actions ng-star-inserted">
-                                          <button _ngcontent-ssk-c292="" class="product-decrease" id="product-actions-product-decrease--goldstar-aile-boy-celik-caydanlik-304-p-1e8bd54" no-pointer-event="true">
+                                          <button _ngcontent-ssk-c292="" class="product-decrease" id="product-actions-product-decrease--goldstar-aile-boy-celik-caydanlik-304-p-1e8bd54" no-pointer-event="true" onclick="uruneksi('<?=strval($urun['id'])?>')">
                                              <fa-icon _ngcontent-ssk-c292="" class="ng-fa-icon ng-star-inserted">
                                              <?php   
                                           if ($adet > 1){
@@ -248,7 +248,7 @@
                                  <!---->
                                  <sm-product-actions _nghost-ssk-c292="" class="ng-star-inserted">
                                     <div _ngcontent-ssk-c292="" class="product-actions ng-star-inserted">
-                                       <button _ngcontent-ssk-c292="" class="product-decrease" id="product-actions-product-decrease--goldstar-aile-boy-celik-caydanlik-304-p-1e8bd54" no-pointer-event="true">
+                                       <button _ngcontent-ssk-c292="" class="product-decrease" id="product-actions-product-decrease--goldstar-aile-boy-celik-caydanlik-304-p-1e8bd54" no-pointer-event="true" onclick="uruneksi('<?=strval($urun['id'])?>')">
                                           <fa-icon _ngcontent-ssk-c292="" class="ng-fa-icon ng-star-inserted">
                                           <?php   
                                           if ($adet > 1){
@@ -402,6 +402,19 @@
          document.cookie = cookieName + "=" + cookieValue + "; path=/";
          location.reload();
       }
+
+      function uruneksi(cookieNamea) {
+         var cookieName = "cart_item_"+cookieNamea;
+         var cookieValue = parseInt(getCookieValue(cookieName), 10) || 0;
+         cookieValue--;
+         if (cookieValue === 0) {
+            document.cookie = cookieName + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+         }else{
+            document.cookie = cookieName + "=" + cookieValue + "; path=/";
+         }
+         location.reload();
+      }
+
 
       function getCookieValue(cookieName) {
          var name = cookieName + "=";
