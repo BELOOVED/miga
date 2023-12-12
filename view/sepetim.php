@@ -386,19 +386,26 @@
          document.cookie = 'cart_item_'+ cookieName + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
          location.reload();
       }
-      function urunekleee(cookieName) {
-         var cookieName = "cart_item_"+cookieName;
-         var currentValue = document.cookie.replace(/(?:(?:^|.*;\s*)exampleCookie\s*=\s*([^;]*).*$)|^.*$/, "$1");
+      function urunekleee(cookieNamee) {
+         var cookieName = "cart_item_"+cookieNamee;
+         var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)exampleCookie\s*=\s*([^;]*).*$)|^.*$/, "$1");
+         if (cookieValue) {
+            // Çerez değerini bir sayıya dönüştür ve 1 ekleyin
+            var newValue = parseInt(cookieValue, 10) + 1;
 
-         if (currentValue) {
-            var newValue = parseInt(currentValue, 10) + 1;
+            // Çerezi güncel değeriyle birlikte tekrar oluşturun
             document.cookie = cookieName + "=" + newValue + "; path=/";
+
+            // Sayfayı yenile
             location.reload();
          } else {
+            // Çerez yoksa başlangıç değeriyle bir çerez oluşturun
             document.cookie = cookieName + "=1; path=/";
+
+            // Sayfayı yenile
             location.reload();
          }
-      }
+      }  
    </script>
     
    
