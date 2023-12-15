@@ -1218,11 +1218,11 @@ if (strpos($pageName,".") === False){
                               ?>
                            
                            
-                           onmouseover="showCart2()" onmouseout="hideCart2()
+                           onmouseover="showCart2()" onmouseout="hideCart2()"
                            <?php } }
                                  
                               else{?>
-                              onmouseover="showCart()" onmouseout="hideCart()
+                              onmouseover="showCart()" onmouseout="hideCart()"
                               <?php }
                                  }
                               ?>
@@ -1239,15 +1239,15 @@ if (strpos($pageName,".") === False){
                               ?>
                            
                            
-                           onmouseover="showCart2()" onmouseout="hideCart2()
+                           onmouseover="showCart2()" onmouseout="hideCart2()"
                            <?php } }
                                  
                               else{?>
-                              onmouseover="showCart()" onmouseout="hideCart()
+                              onmouseover="showCart()" onmouseout="hideCart()"
                               <?php }
                                  }
                               ?>
-                           " class="dropdown-btn">
+                            class="dropdown-btn">
                               <div _ngcontent-cro-c342="" class="icon-cart-quantity-wrapper">
                                  <div _ngcontent-cro-c342="" class="icon-cart"></div>
                                  <div _ngcontent-cro-c342="" class="quantity">0</div>
