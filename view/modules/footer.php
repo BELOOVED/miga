@@ -1579,5 +1579,48 @@ function hideCategory() {
         };
     }
 </script>
+<script>
+      function deleteCookieAndReload(cookieName) {
+         document.cookie = 'cart_item_'+ cookieName + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+         location.reload();
+      }
+      function urunekleee(cookieNamea) {
+         var cookieName = "cart_item_"+cookieNamea;
+         // Çerez adını belirle
+         var cookieValue = parseInt(getCookieValue(cookieName), 10) || 0;
+         cookieValue++;
+         document.cookie = cookieName + "=" + cookieValue + "; path=/";
+         location.reload();
+      }
+
+      function uruneksi(cookieNamea) {
+         var cookieName = "cart_item_"+cookieNamea;
+         var cookieValue = parseInt(getCookieValue(cookieName), 10) || 0;
+         cookieValue--;
+         if (cookieValue === 0) {
+            document.cookie = cookieName + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+         }else{
+            document.cookie = cookieName + "=" + cookieValue + "; path=/";
+         }
+         location.reload();
+      }
+
+
+      function getCookieValue(cookieName) {
+         var name = cookieName + "=";
+         var decodedCookie = decodeURIComponent(document.cookie);
+         var cookieArray = decodedCookie.split(';');
+
+         for (var i = 0; i < cookieArray.length; i++) {
+            var cookie = cookieArray[i].trim();
+            if (cookie.indexOf(name) === 0) {
+                  return cookie.substring(name.length, cookie.length);
+            }
+         }
+
+         return null;
+      }
+
+   </script>
    </body>
 </html>
