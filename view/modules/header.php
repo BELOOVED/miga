@@ -1218,11 +1218,11 @@ if (strpos($pageName,".") === False){
                               ?>
                            
                            
-                           onmouseover="showCart2()" onmouseout="hideCart2()"
+                           onmouseover="showCart()" onmouseout="hideCart()"
                            <?php } }
                                  
                               else{?>
-                              onmouseover="showCart()" onmouseout="hideCart()"
+                              onmouseover="showCart2()" onmouseout="hideCart2()"
                               <?php }
                                  }
                               ?>
@@ -1239,11 +1239,11 @@ if (strpos($pageName,".") === False){
                               ?>
                            
                            
-                           onmouseover="showCart2()" onmouseout="hideCart2()"
+                           onmouseover="showCart()" onmouseout="hideCart()"
                            <?php } }
                                  
                               else{?>
-                              onmouseover="showCart()" onmouseout="hideCart()"
+                              onmouseover="showCart2()" onmouseout="hideCart2()"
                               <?php }
                                  }
                               ?>
