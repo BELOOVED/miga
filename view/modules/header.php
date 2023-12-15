@@ -1272,11 +1272,42 @@ if (strpos($pageName,".") === False){
 
                               <sm-cart-dropdown-list _ngcontent-nog-c343="" id="cart" class="empty-cart2 hidden" _nghost-nog-c342="" onmouseover="showCart2()" onmouseout="hideCart2()">
                                  <div _ngcontent-nog-c342="" class="cart-dropdown-wrapper">
+
+                                 <?php
+                                 $id = array();
+
+                                 foreach ($_COOKIE as $cookieName => $cookieValue) {
+                                    if (strpos($cookieName, 'cart_item_') !== false) {
+                                       $ids = substr($cookieName, strlen('cart_item_'));
+                                       $id[] = $ids;
+                                    }
+                              }
+                                 if (!empty($id)) {
+                                    $sql = "SELECT * FROM urunler WHERE id IN (" . implode(',', array_fill(0, count($id), '?')) . ")";
+                                    $stmt = $pdo->prepare($sql);
+                                    for ($i = 0; $i < count($id); $i++) {
+                                       $stmt->bindParam($i + 1, $id[$i]);
+                                    }
+                                    $stmt->execute();
+                                    $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                                    $urun_fiyat = 0;
+                                    foreach ($urunler as $urun) {
+                                       $adet = intval($_COOKIE["cart_item_".strval($urun["id"])]);
+                                       if($urun['urun_indirim'] != 0){
+                                          $orijinal_fiyat = $urun['urun_fiyat'];
+                                          $indirim_orani = $urun['urun_indirim'];
+                                          $urun_fiyat = (($orijinal_fiyat - ($orijinal_fiyat * ($indirim_orani / 100))) * $adet);
+                                       }else {
+                                          $urun_fiyat += ($urun["urun_fiyat"] * $adet);
+                                       }
+                                       
+                                    ?>
                                     <sm-cart-dropdown-item _ngcontent-nog-c342="" _nghost-nog-c341="">
                                        <div _ngcontent-nog-c341="" class="cart-dropdown-item">
                                           <fe-product-image _ngcontent-nog-c341="" _nghost-nog-c159="">
-                                             <a _ngcontent-nog-c159="" id="product-image-link" href="/elektronik/goldstar-mini-boy-celik-caydanlik-304-p-1e8bd53">
-                                                <img _ngcontent-nog-c159="" felazyload="" alt="Goldstar Mini Boy Çelik Çaydanlık 304" src="https://images.migrosone.com/elektronik/product/32030035/32030035-7b8c0b-105x105.jpg"><!----><!---->
+                                             <a _ngcontent-nog-c159="" id="product-image-link" href="/urun/<?=seo($urun['urun_adi'])?>/<?=seo($urun['id'])?>">
+                                                <img _ngcontent-nog-c159="" felazyload="" alt="<?=$urun['urun_adi']?>" src="<?=$urun['urun_resim']?>"><!----><!---->
                                              </a>
                                           </fe-product-image>
                                           <!---->
@@ -1284,7 +1315,7 @@ if (strpos($pageName,".") === False){
                                              <div _ngcontent-nog-c341="" class="name-delete-wrapper">
                                                 <fe-product-name _ngcontent-nog-c341="" _nghost-nog-c160="">
                                                    <h1 _ngcontent-nog-c160="">
-                                                      <a _ngcontent-nog-c160="" class="migros" href="/goldstar-mini-boy-celik-caydanlik-304-p-1e8bd53"> Goldstar Mini Boy Çelik Çaydanlık 304 </a><!----><!---->
+                                                      <a _ngcontent-nog-c160="" class="migros" src="<?=$urun['urun_resim']?>"> <?=$urun['urun_adi']?> </a><!----><!---->
                                                    </h1>
                                                 </fe-product-name>
                                                 <fa-icon _ngcontent-nog-c341="" id="cart-dropdown-delete-button" class="ng-fa-icon delete-button">
@@ -1293,6 +1324,9 @@ if (strpos($pageName,".") === False){
                                                    </svg>
                                                 </fa-icon>
                                              </div>
+                                              <?php 
+                                    if($urun['urun_indirim'] != 0){?>
+                                    
                                              <fe-product-labels _ngcontent-nog-c341="" _nghost-nog-c295="">
                                                 <div _ngcontent-nog-c295="" class="product-labels">
                                                    <div _ngcontent-nog-c295="" class="price product-label"><span _ngcontent-nog-c295="">İndirimli Ürün</span></div>
@@ -1303,19 +1337,24 @@ if (strpos($pageName,".") === False){
                                                 </div>
                                                 <!---->
                                              </fe-product-labels>
+                                              <?php } ?>
                                              <div _ngcontent-nog-c341="" class="actions-price-wrapper">
                                                 <sm-product-actions _ngcontent-nog-c341="" _nghost-nog-c292="">
                                                    <div _ngcontent-nog-c292="" class="product-actions">
-                                                      <button _ngcontent-nog-c292="" class="product-decrease" id="product-actions-product-decrease--goldstar-mini-boy-celik-caydanlik-304-p-1e8bd53" no-pointer-event="true">
-                                                         <fa-icon _ngcontent-nog-c292="" class="ng-fa-icon">
-                                                            <svg role="img" aria-hidden="true" focusable="false" data-prefix="far" data-icon="trash-can" class="svg-inline--fa fa-trash-can" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                                               <path fill="currentColor" d="M160 400C160 408.8 152.8 416 144 416C135.2 416 128 408.8 128 400V192C128 183.2 135.2 176 144 176C152.8 176 160 183.2 160 192V400zM240 400C240 408.8 232.8 416 224 416C215.2 416 208 408.8 208 400V192C208 183.2 215.2 176 224 176C232.8 176 240 183.2 240 192V400zM320 400C320 408.8 312.8 416 304 416C295.2 416 288 408.8 288 400V192C288 183.2 295.2 176 304 176C312.8 176 320 183.2 320 192V400zM317.5 24.94L354.2 80H424C437.3 80 448 90.75 448 104C448 117.3 437.3 128 424 128H416V432C416 476.2 380.2 512 336 512H112C67.82 512 32 476.2 32 432V128H24C10.75 128 0 117.3 0 104C0 90.75 10.75 80 24 80H93.82L130.5 24.94C140.9 9.357 158.4 0 177.1 0H270.9C289.6 0 307.1 9.358 317.5 24.94H317.5zM151.5 80H296.5L277.5 51.56C276 49.34 273.5 48 270.9 48H177.1C174.5 48 171.1 49.34 170.5 51.56L151.5 80zM80 432C80 449.7 94.33 464 112 464H336C353.7 464 368 449.7 368 432V128H80V432z"></path>
-                                                            </svg>
-                                                         </fa-icon>
+                                                      <button onclick="uruneksi('<?=strval($urun['id'])?>')" _ngcontent-nog-c292="" class="product-decrease" id="product-actions-product-decrease--goldstar-mini-boy-celik-caydanlik-304-p-1e8bd53" no-pointer-event="true">
+                                                      <fa-icon _ngcontent-ssk-c292="" class="ng-fa-icon ng-star-inserted">
+                                                         <?php   
+                                                      if ($adet > 1){
+                                                         echo '<svg role="img" aria-hidden="true" focusable="false" data-prefix="far" data-icon="minus" class="svg-inline--fa fa-minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M432 256C432 269.3 421.3 280 408 280H40c-13.25 0-24-10.74-24-23.99C16 242.8 26.75 232 40 232h368C421.3 232 432 242.8 432 256z"></path></svg>';
+                                                      }else{
+                                                         echo '<svg role="img" aria-hidden="true" focusable="false" data-prefix="far" data-icon="trash-can" class="svg-inline--fa fa-trash-can" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M160 400C160 408.8 152.8 416 144 416C135.2 416 128 408.8 128 400V192C128 183.2 135.2 176 144 176C152.8 176 160 183.2 160 192V400zM240 400C240 408.8 232.8 416 224 416C215.2 416 208 408.8 208 400V192C208 183.2 215.2 176 224 176C232.8 176 240 183.2 240 192V400zM320 400C320 408.8 312.8 416 304 416C295.2 416 288 408.8 288 400V192C288 183.2 295.2 176 304 176C312.8 176 320 183.2 320 192V400zM317.5 24.94L354.2 80H424C437.3 80 448 90.75 448 104C448 117.3 437.3 128 424 128H416V432C416 476.2 380.2 512 336 512H112C67.82 512 32 476.2 32 432V128H24C10.75 128 0 117.3 0 104C0 90.75 10.75 80 24 80H93.82L130.5 24.94C140.9 9.357 158.4 0 177.1 0H270.9C289.6 0 307.1 9.358 317.5 24.94H317.5zM151.5 80H296.5L277.5 51.56C276 49.34 273.5 48 270.9 48H177.1C174.5 48 171.1 49.34 170.5 51.56L151.5 80zM80 432C80 449.7 94.33 464 112 464H336C353.7 464 368 449.7 368 432V128H80V432z"></path></svg>';
+                                                      }
+                                                      ?>
+                                                      </fa-icon>
                                                          <!----><!---->
                                                       </button>
                                                       <div _ngcontent-nog-c292="" id="product-amount" class="product-amount"><span _ngcontent-nog-c292="" class="amount mat-caption">1</span><span _ngcontent-nog-c292="" class="unit text-color-grey">adet</span></div>
-                                                      <button _ngcontent-nog-c292="" aria-label="Sepetteki ürün sayısını arttır" class="product-increase" id="product-actions-product-increase--goldstar-mini-boy-celik-caydanlik-304-p-1e8bd53">
+                                                      <button onclick="urunekleee('<?=strval($urun['id'])?>')" _ngcontent-nog-c292="" aria-label="Sepetteki ürün sayısını arttır" class="product-increase" id="product-actions-product-increase--goldstar-mini-boy-celik-caydanlik-304-p-1e8bd53">
                                                          <fa-icon _ngcontent-nog-c292="" class="ng-fa-icon">
                                                             <svg role="img" aria-hidden="true" focusable="false" data-prefix="far" data-icon="plus" class="svg-inline--fa fa-plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                                                <path fill="currentColor" d="M432 256C432 269.3 421.3 280 408 280h-160v160c0 13.25-10.75 24.01-24 24.01S200 453.3 200 440v-160h-160c-13.25 0-24-10.74-24-23.99C16 242.8 26.75 232 40 232h160v-160c0-13.25 10.75-23.99 24-23.99S248 58.75 248 72v160h160C421.3 232 432 242.8 432 256z"></path>
@@ -1325,14 +1364,34 @@ if (strpos($pageName,".") === False){
                                                    </div>
                                                    <!----><!----><!---->
                                                 </sm-product-actions>
+                                                <?php 
+                                                if($urun['urun_indirim'] != 0){?>
                                                 <fe-product-price _ngcontent-nog-c341="" _nghost-nog-c271="">
                                                    <div _ngcontent-nog-c271="" class="promotion-wrapper">
-                                                      <div _ngcontent-nog-c271="" id="price-old" class="price-old"><span _ngcontent-nog-c271="" id="old-amount" class="amount">799,95 <span _ngcontent-nog-c271="" class="currency">TL</span></span></div>
+                                                      <div _ngcontent-nog-c271="" id="price-old" class="price-old"><span _ngcontent-nog-c271="" id="old-amount" class="amount"><?=$urun['urun_fiyat']?> <span _ngcontent-nog-c271="" class="currency">TL</span></span></div>
                                                       <!---->
-                                                      <div _ngcontent-nog-c271="" id="price-new" class="price-new subtitle-1"><span _ngcontent-nog-c271="" id="new-amount" class="amount"> 599,95 <span _ngcontent-nog-c271="" class="currency">TL</span></span></div>
+                                                      <div _ngcontent-nog-c271="" id="price-new" class="price-new subtitle-1"><span _ngcontent-nog-c271="" id="new-amount" class="amount">
+                                                      <?php
+                                                      $orijinal_fiyat = $urun['urun_fiyat'];
+                                                      $indirim_orani = $urun['urun_indirim'];
+                                                      $indirimli_fiyat = $orijinal_fiyat - ($orijinal_fiyat * ($indirim_orani / 100));
+                                                      echo $indirimli_fiyat;
+                                                      ?>  
+                                                       <span _ngcontent-nog-c271="" class="currency">TL</span></span></div>
                                                    </div>
                                                    <!---->
                                                 </fe-product-price>
+                                                <?php }else{?>
+                                                 <fe-product-price _ngcontent-nog-c341="" _nghost-nog-c271="">
+                                                   <div _ngcontent-nog-c271="" class="">
+                                                      
+                                                      <div _ngcontent-nog-c271="" id="price-new" class="price-new subtitle-1 price-new-only"><span _ngcontent-nog-c271="" id="new-amount" class="amount">
+                                                      <?=$urun['urun_fiyat']?>
+                                                       <span _ngcontent-nog-c271="" class="currency">TL</span></span></div>
+                                                   </div>
+                                                   <!---->
+                                                </fe-product-price>
+                                                <?php }?> 
                                              </div>
                                           </div>
                                        </div>
@@ -1344,7 +1403,7 @@ if (strpos($pageName,".") === False){
                                  </div>
                               </sm-cart-dropdown-list>
                               <?php } }
-                                 
+                                    }}
                               else{?>
                               <span _ngcontent-svk-c342="" id="cart" class="empty-cart mat-body-2 hidden">Sepetiniz Henüz Boş</span>
                               <?php }
