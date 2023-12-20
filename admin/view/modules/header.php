@@ -52,25 +52,31 @@
        </div>
      <div id="user-dropdown" class="collapse">
       <ul class="user-setting-menu">
-            <li><a href="javaScript:void();"><i class="icon-user"></i>  My Profile</a></li>
-            <li><a href="javaScript:void();"><i class="icon-settings"></i> Setting</a></li>
-      <li><a href="javaScript:void();"><i class="icon-power"></i> Logout</a></li>
+            <li><a href="javaScript:void();"><i class="icon-user"></i>  Admin Yönet</a></li>
+            <li><a href="javaScript:void();"><i class="icon-settings"></i> Site Ayarları</a></li>
+      <li><a href="javaScript:void();"><i class="icon-power"></i> Çıkış</a></li>
       </ul>
      </div>
       </div>
    <ul class="sidebar-menu">
-      <li class="sidebar-header">MAIN NAVIGATION</li>
       <li>
         <a href="javaScript:void();" class="waves-effect">
-          <i class="zmdi zmdi-view-dashboard"></i> <span>Dashboard</span><i class="fa fa-angle-left pull-right"></i>
+          <i class="zmdi zmdi-view-dashboard"></i> <span>Ürünler</span><i class="fa fa-angle-left pull-right"></i>
         </a>
 		<ul class="sidebar-submenu">
-		  <li><a href="index"><i class="zmdi zmdi-dot-circle-alt"></i> eCommerce</a></li>
-		  <li><a href="dashboard-human-resources"><i class="zmdi zmdi-dot-circle-alt"></i> Human Resources</a></li>
-		  <li><a href="dashboard-digital-marketing"><i class="zmdi zmdi-dot-circle-alt"></i> Digital Marketing</a></li>
-          <li><a href="dashboard-property-listing"><i class="zmdi zmdi-dot-circle-alt"></i> Property Listings</a></li>
-		  <li><a href="dashboard-service-support"><i class="zmdi zmdi-dot-circle-alt"></i> Services & Support</a></li>
-		  <li><a href="dashboard-logistics"><i class="zmdi zmdi-dot-circle-alt"></i> Logistics</a></li>
+        <?php
+                            $sql = "SELECT * FROM kategoriler";
+
+                            $stmt = $pdo->prepare($sql);
+                            $stmt->execute();
+
+                            $kategoriler = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                            foreach ($kategoriler as $kategori) {?>
+		  <li><a href="urunler?q=<?=$kategori['id']?>"><i class="zmdi zmdi-dot-circle-alt"></i> <?=$kategori['kategori_adi']?></a></li>
+          <?php }?> 
+		  <li><a href="kategoriduzenle"><i class="zmdi zmdi-dot-circle-alt"></i> Kategorileri Düzenle</a></li>
+
 		</ul>
       </li>
       <li>
