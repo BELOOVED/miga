@@ -1,5 +1,5 @@
 <?php
-include 'inc/pdo.php';
+include '../inc/pdo.php';
 
 $q = explode('/', $_GET['q']);
 $page = 'main';
