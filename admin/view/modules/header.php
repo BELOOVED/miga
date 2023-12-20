@@ -59,6 +59,17 @@
      </div>
       </div>
    <ul class="sidebar-menu">
+   <li>
+        <a href="javaScript:void();" class="waves-effect">
+          <i class="zmdi zmdi-view-dashboard"></i> <span>Anasayfa</span><i class="fa fa-angle-left pull-right"></i>
+        </a>
+		<ul class="sidebar-submenu">
+        
+		  <li><a href="kategoriduzenle"><i class="zmdi zmdi-dot-circle-alt"></i>  Günlük Özet</a></li>
+		  <li><a href="kategoriduzenle"><i class="zmdi zmdi-dot-circle-alt"></i>  Aylık Özet</a></li>
+
+		</ul>
+      </li>
       <li>
         <a href="javaScript:void();" class="waves-effect">
           <i class="zmdi zmdi-view-dashboard"></i> <span>Ürünler</span><i class="fa fa-angle-left pull-right"></i>
@@ -81,198 +92,27 @@
       </li>
       <li>
         <a href="javaScript:void();" class="waves-effect">
-          <i class="zmdi zmdi-layers"></i>
-          <span>UI Elements</span> <i class="fa fa-angle-left pull-right"></i>
+          <i class="zmdi zmdi-view-dashboard"></i> <span>Siparişler</span><i class="fa fa-angle-left pull-right"></i>
         </a>
-        <ul class="sidebar-submenu">
-    <li><a href="ui-typography"><i class="zmdi zmdi-dot-circle-alt"></i> Typography</a></li>
-        <li><a href="ui-cards"><i class="zmdi zmdi-dot-circle-alt"></i> Cards</a></li>
-    <li><a href="ui-buttons"><i class="zmdi zmdi-dot-circle-alt"></i> Buttons</a></li>
-        <li><a href="ui-nav-tabs"><i class="zmdi zmdi-dot-circle-alt"></i> Nav Tabs</a></li>
-        <li><a href="ui-accordions"><i class="zmdi zmdi-dot-circle-alt"></i> Accordions</a></li>
-        <li><a href="ui-modals"><i class="zmdi zmdi-dot-circle-alt"></i> Modals</a></li>
-        <li><a href="ui-list-groups"><i class="zmdi zmdi-dot-circle-alt"></i> List Groups</a></li>
-        <li><a href="ui-bootstrap-elements"><i class="zmdi zmdi-dot-circle-alt"></i> BS Elements</a></li>
-        <li><a href="ui-pagination"><i class="zmdi zmdi-dot-circle-alt"></i> Pagination</a></li>
-        <li><a href="ui-alerts"><i class="zmdi zmdi-dot-circle-alt"></i> Alerts</a></li>
-        <li><a href="ui-progressbars"><i class="zmdi zmdi-dot-circle-alt"></i> Progress Bars</a></li>
-    <li><a href="ui-checkbox-radio"><i class="zmdi zmdi-dot-circle-alt"></i> Checkboxes & Radios</a></li>
-        <li><a href="ui-notification"><i class="zmdi zmdi-dot-circle-alt"></i> Notifications</a></li>
-        <li><a href="ui-sweet-alert"><i class="zmdi zmdi-dot-circle-alt"></i> Sweet Alerts</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="javaScript:void();" class="waves-effect">
-          <i class="zmdi zmdi-card-travel"></i>
-          <span>Components</span>
-          <i class="fa fa-angle-left pull-right"></i>
-        </a>
-        <ul class="sidebar-submenu">
-          <li><a href="components-range-slider"><i class="zmdi zmdi-dot-circle-alt"></i> Range Sliders</a></li>
-          <li><a href="components-image-carousel"><i class="zmdi zmdi-dot-circle-alt"></i> Image Carousels</a></li>
-          <li><a href="components-grid-layouts"><i class="zmdi zmdi-dot-circle-alt"></i> Grid Layouts</a></li>
-          <li><a href="components-switcher-buttons"><i class="zmdi zmdi-dot-circle-alt"></i> Switcher Buttons</a></li>
-          <li><a href="components-pricing-table"><i class="zmdi zmdi-dot-circle-alt"></i> Pricing Tables</a></li>
-          <li><a href="components-vertical-timeline"><i class="zmdi zmdi-dot-circle-alt"></i> Vertical Timeline</a></li>
-          <li><a href="components-horizontal-timeline"><i class="zmdi zmdi-dot-circle-alt"></i> Horizontal Timeline</a></li>
-          <li><a href="components-fancy-lightbox"><i class="zmdi zmdi-dot-circle-alt"></i> Fancy Lightbox</a></li>
-          <li><a href="components-color-palette"><i class="zmdi zmdi-dot-circle-alt"></i> Color Palette</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="javaScript:void();" class="waves-effect">
-          <i class="zmdi zmdi-chart"></i> <span>Charts</span>
-          <i class="fa fa-angle-left float-right"></i>
-        </a>
-        <ul class="sidebar-submenu">
-          <li><a href="charts-chartjs"><i class="zmdi zmdi-dot-circle-alt"></i> Chart JS</a></li>
-          <li><a href="charts-apex"><i class="zmdi zmdi-dot-circle-alt"></i> Apex Charts</a></li>
-          <li><a href="charts-sparkline"><i class="zmdi zmdi-dot-circle-alt"></i> Sparkline Charts</a></li>
-          <li><a href="charts-peity"><i class="zmdi zmdi-dot-circle-alt"></i> Peity Charts</a></li>
-          <li><a href="charts-other"><i class="zmdi zmdi-dot-circle-alt"></i> Other Charts</a></li>
-        </ul>
-       </li>
-	   <li>
-        <a href="javaScript:void();" class="waves-effect">
-          <i class="zmdi zmdi-widgets"></i> <span>Widgets</span>
-          <i class="fa fa-angle-left float-right"></i>
-        </a>
-        <ul class="sidebar-submenu">
-          <li><a href="widgets-static"><i class="zmdi zmdi-dot-circle-alt"></i> Static Widgets</a></li>
-          <li><a href="widgets-data"><i class="zmdi zmdi-dot-circle-alt"></i> Data Widgets</a></li>
-        </ul>
-       </li>
-    
-      <li>
-        <a href="javaScript:void();" class="waves-effect">
-          <i class="zmdi zmdi-email"></i>
-          <span>Mailbox</span>
-           <small class="badge float-right badge-warning">12</small>
-        </a>
-        <ul class="sidebar-submenu">
-          <li><a href="mail-inbox"><i class="zmdi zmdi-dot-circle-alt"></i> Inbox</a></li>
-          <li><a href="mail-compose"><i class="zmdi zmdi-dot-circle-alt"></i> Compose</a></li>
-          <li><a href="mail-read"><i class="zmdi zmdi-dot-circle-alt"></i> Read Mail</a></li>
-        </ul>
-      </li>
-      
-      <li>
-        <a href="javaScript:void();" class="waves-effect">
-          <i class="zmdi zmdi-format-list-bulleted"></i> <span>Forms</span>
-          <i class="fa fa-angle-left pull-right"></i>
-        </a>
-        <ul class="sidebar-submenu">
-          <li><a href="form-inputs"><i class="zmdi zmdi-dot-circle-alt"></i> Basic Inputs</a></li>
-          <li><a href="form-input-group"><i class="zmdi zmdi-dot-circle-alt"></i> Input Groups</a></li>
-          <li><a href="form-layouts"><i class="zmdi zmdi-dot-circle-alt"></i> Form Layouts</a></li>
-          <li><a href="form-advanced"><i class="zmdi zmdi-dot-circle-alt"></i> Form Advanced</a></li>
-          <li><a href="form-uploads"><i class="zmdi zmdi-dot-circle-alt"></i> Form Uploads</a></li>
-          <li><a href="form-validation"><i class="zmdi zmdi-dot-circle-alt"></i> Form Validation</a></li>
-          <li><a href="form-step-wizard"><i class="zmdi zmdi-dot-circle-alt"></i> Form Wizard</a></li>
-          <li><a href="form-text-editor"><i class="zmdi zmdi-dot-circle-alt"></i> Form Editor</a></li>
-        </ul>
-      </li>
+		<ul class="sidebar-submenu">
+        
+		  <li><a href="kategoriduzenle"><i class="zmdi zmdi-dot-circle-alt"></i>  Kredi Kartı</a></li>
+		  <li><a href="kategoriduzenle"><i class="zmdi zmdi-dot-circle-alt"></i>  IBAN</a></li>
 
+		</ul>
+      </li>
       <li>
         <a href="javaScript:void();" class="waves-effect">
-          <i class="zmdi zmdi-lock"></i> <span>Authentication</span>
-          <i class="fa fa-angle-left float-right"></i>
+          <i class="zmdi zmdi-view-dashboard"></i> <span>Kullanıcılar</span><i class="fa fa-angle-left pull-right"></i>
         </a>
-        <ul class="sidebar-submenu">
-          <li><a href="authentication-signin" target="_blank"><i class="zmdi zmdi-dot-circle-alt"></i> SignIn 1</a></li>
-          <li><a href="authentication-signup" target="_blank"><i class="zmdi zmdi-dot-circle-alt"></i> SignUp 1</a></li>
-          <li><a href="authentication-signin2" target="_blank"><i class="zmdi zmdi-dot-circle-alt"></i> SignIn 2</a></li>
-          <li><a href="authentication-signup2" target="_blank"><i class="zmdi zmdi-dot-circle-alt"></i> SignUp 2</a></li>
-          <li><a href="authentication-lock-screen" target="_blank"><i class="zmdi zmdi-dot-circle-alt"></i> Lock Screen</a></li>
-          <li><a href="authentication-reset-password" target="_blank"><i class="zmdi zmdi-dot-circle-alt"></i> Reset Password 1</a></li>
-          <li><a href="authentication-reset-password2" target="_blank"><i class="zmdi zmdi-dot-circle-alt"></i> Reset Password 2</a></li>
-        </ul>
-       </li>
-       <li>
-        <a href="calendar" class="waves-effect">
-          <i class="zmdi zmdi-calendar-check"></i> <span>Calendar</span>
-          <small class="badge float-right badge-light">New</small>
-        </a>
-      </li>
-       <li>
-        <a href="javaScript:void();" class="waves-effect">
-          <i class="zmdi zmdi-invert-colors"></i> <span>UI Icons</span>
-          <i class="fa fa-angle-left float-right"></i>
-        </a>
-        <ul class="sidebar-submenu">
-          <li><a href="icons-font-awesome"><i class="zmdi zmdi-dot-circle-alt"></i> Font Awesome</a></li>
-          <li><a href="icons-material-designs"><i class="zmdi zmdi-dot-circle-alt"></i> Material Design</a></li>
-          <li><a href="icons-themify"><i class="zmdi zmdi-dot-circle-alt"></i> Themify Icons</a></li>
-          <li><a href="icons-simple-line-icons"><i class="zmdi zmdi-dot-circle-alt"></i> Line Icons</a></li>
-          <li><a href="icons-flags"><i class="zmdi zmdi-dot-circle-alt"></i> Flag Icons</a></li>
-        </ul>
-      </li>
-     
-     <li>
-        <a href="javaScript:void();" class="waves-effect">
-          <i class="zmdi zmdi-grid"></i> <span>Tables</span>
-          <i class="fa fa-angle-left float-right"></i>
-        </a>
-        <ul class="sidebar-submenu">
-          <li><a href="table-simple-tables"><i class="zmdi zmdi-dot-circle-alt"></i> Simple Tables</a></li>
-          <li><a href="table-data-tables"><i class="zmdi zmdi-dot-circle-alt"></i> Data Tables</a></li>
-        </ul>
-       </li>
-     
-     <li>
-        <a href="javaScript:void();" class="waves-effect">
-          <i class="zmdi zmdi-map"></i> <span>Maps</span>
-          <i class="fa fa-angle-left float-right"></i>
-        </a>
-        <ul class="sidebar-submenu">
-          <li><a href="maps-google"><i class="zmdi zmdi-dot-circle-alt"></i> Google Maps</a></li>
-          <li><a href="maps-vector"><i class="zmdi zmdi-dot-circle-alt"></i> Vector Maps</a></li>
-        </ul>
-       </li>
-     
-      <li>
-        <a href="javaScript:void();" class="waves-effect">
-          <i class="zmdi zmdi-collection-folder-image"></i> <span>Sample Pages</span>
-          <i class="fa fa-angle-left float-right"></i>
-        </a>
-        <ul class="sidebar-submenu">
-              <li><a href="pages-invoice"><i class="zmdi zmdi-dot-circle-alt"></i> Invoice</a></li>
-          <li><a href="pages-user-profile"><i class="zmdi zmdi-dot-circle-alt"></i> User Profile</a></li>
-          <li><a href="pages-blank-page"><i class="zmdi zmdi-dot-circle-alt"></i> Blank Page</a></li>
-              <li><a href="pages-coming-soon"><i class="zmdi zmdi-dot-circle-alt"></i> Coming Soon</a></li>
-          <li><a href="pages-403"><i class="zmdi zmdi-dot-circle-alt"></i> 403 Error</a></li>
-          <li><a href="pages-404"><i class="zmdi zmdi-dot-circle-alt"></i> 404 Error</a></li>
-          <li><a href="pages-500"><i class="zmdi zmdi-dot-circle-alt"></i> 500 Error</a></li>
-        </ul>
-       </li>
+		<ul class="sidebar-submenu">
+        
+		  <li><a href="kategoriduzenle"><i class="zmdi zmdi-dot-circle-alt"></i>  Kayıt Olanlar</a></li>
+		  <li><a href="kategoriduzenle"><i class="zmdi zmdi-dot-circle-alt"></i>  Giriş Yapanlar</a></li>
 
-      <li>
-        <a href="javaScript:void();" class="waves-effect">
-          <i class="fa fa-share"></i> <span>Multilevel</span>
-          <i class="fa fa-angle-left pull-right"></i>
-        </a>
-        <ul class="sidebar-submenu">
-          <li><a href="javaScript:void();"><i class="zmdi zmdi-dot-circle-alt"></i> Level One</a></li>
-          <li>
-            <a href="javaScript:void();"><i class="zmdi zmdi-dot-circle-alt"></i> Level One <i class="fa fa-angle-left pull-right"></i></a>
-            <ul class="sidebar-submenu">
-              <li><a href="javaScript:void();"><i class="zmdi zmdi-dot-circle-alt"></i> Level Two</a></li>
-              <li>
-                <a href="javaScript:void();"><i class="zmdi zmdi-dot-circle-alt"></i> Level Two <i class="fa fa-angle-left pull-right"></i></a>
-                <ul class="sidebar-submenu">
-                  <li><a href="javaScript:void();"><i class="zmdi zmdi-dot-circle-alt"></i> Level Three</a></li>
-                  <li><a href="javaScript:void();"><i class="zmdi zmdi-dot-circle-alt"></i> Level Three</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li><a href="javaScript:void();" class="waves-effect"><i class="zmdi zmdi-dot-circle-alt"></i> Level One</a></li>
-        </ul>
+		</ul>
       </li>
-      <li class="sidebar-header">LABELS</li>
-      <li><a href="javaScript:void();" class="waves-effect"><i class="zmdi zmdi-coffee text-danger"></i> <span>Important</span></a></li>
-      <li><a href="javaScript:void();" class="waves-effect"><i class="zmdi zmdi-chart-donut text-success"></i> <span>Warning</span></a></li>
-      <li><a href="javaScript:void();" class="waves-effect"><i class="zmdi zmdi-share text-info"></i> <span>Information</span></a></li>
+     
     </ul>
    
    </div>
@@ -403,39 +243,29 @@
         </ul>
       </div>
     </li>
-    <li class="nav-item language">
-      <a class="nav-link dropdown-toggle dropdown-toggle-nocaret waves-effect" data-toggle="dropdown" href="javascript:void();"><i class="fa fa-flag"></i></a>
-      <ul class="dropdown-menu dropdown-menu-right">
-          <li class="dropdown-item"> <i class="flag-icon flag-icon-gb mr-2"></i> English</li>
-          <li class="dropdown-item"> <i class="flag-icon flag-icon-fr mr-2"></i> French</li>
-          <li class="dropdown-item"> <i class="flag-icon flag-icon-cn mr-2"></i> Chinese</li>
-          <li class="dropdown-item"> <i class="flag-icon flag-icon-de mr-2"></i> German</li>
-        </ul>
-    </li>
     <li class="nav-item">
       <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown" href="#">
-        <span class="user-profile"><img src="https://via.placeholder.com/110x110" class="img-circle" alt="user avatar"></span>
+        <span class="user-profile"><img src="https://i.ibb.co/JngyMRP/photo-2023-11-22-17-31-24.jpg" class="img-circle" alt="user avatar"></span>
       </a>
       <ul class="dropdown-menu dropdown-menu-right">
        <li class="dropdown-item user-details">
         <a href="javaScript:void();">
            <div class="media">
-             <div class="avatar"><img class="align-self-start mr-3" src="https://via.placeholder.com/110x110" alt="user avatar"></div>
+             <div class="avatar"><img class="align-self-start mr-3" src="https://i.ibb.co/JngyMRP/photo-2023-11-22-17-31-24.jpg" alt="user avatar"></div>
             <div class="media-body">
-            <h6 class="mt-2 user-title">Sarajhon Mccoy</h6>
-            <p class="user-subtitle">mccoy@example.com</p>
+            <h6 class="mt-2 user-title">xAmphitrite</h6>
             </div>
            </div>
           </a>
         </li>
         <li class="dropdown-divider"></li>
-        <li class="dropdown-item"><i class="icon-envelope mr-2"></i> Inbox</li>
+        <li class="dropdown-item"><i class="icon-envelope mr-2"></i> Loglar</li>
         <li class="dropdown-divider"></li>
-        <li class="dropdown-item"><i class="icon-wallet mr-2"></i> Account</li>
+        <li class="dropdown-item"><i class="icon-wallet mr-2"></i> Admini Düzenle</li>
         <li class="dropdown-divider"></li>
-        <li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li>
+        <li class="dropdown-item"><i class="icon-settings mr-2"></i> Site Ayarları</li>
         <li class="dropdown-divider"></li>
-        <li class="dropdown-item"><i class="icon-power mr-2"></i> Logout</li>
+        <li class="dropdown-item"><i class="icon-power mr-2"></i> Çıkış</li>
       </ul>
     </li>
   </ul>
