@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
   <meta name="description" content=""/>
   <meta name="author" content=""/>
-  <title>Migros Admin</title>
+  <title>Dashtreme - Multipurpose Bootstrap4 Admin Template</title>
   <!--favicon-->
   <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
   <!-- Vector CSS -->
-  <link href="assets/plugins/vectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet"/>
+  <link href="assets/plugins/vectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
   <!-- simplebar CSS-->
   <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet"/>
   <!-- Bootstrap core CSS-->
@@ -28,26 +28,26 @@
 
 <body class="bg-theme bg-theme1">
 
-   <!-- start loader -->
+<!-- start loader -->
    <div id="pageloader-overlay" class="visible incoming"><div class="loader-wrapper-outer"><div class="loader-wrapper-inner" ><div class="loader"></div></div></div></div>
    <!-- end loader -->
 
 <!-- Start wrapper-->
  <div id="wrapper">
- 
-  <!--Start sidebar-wrapper-->
+
+   <!--Start sidebar-wrapper-->
    <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
      <div class="brand-logo">
-      <a href="index">
+      <a href="index.html">
        <img src="assets/images/logo-icon.png" class="logo-icon" alt="logo icon">
-       <h5 class="logo-text">Migros Admin</h5>
+       <h5 class="logo-text">Dashtreme Admin</h5>
      </a>
    </div>
    <div class="user-details">
     <div class="media align-items-center user-pointer collapsed" data-toggle="collapse" data-target="#user-dropdown">
-      <div class="avatar"><img class="mr-3 side-user-img" src="https://i.ibb.co/JngyMRP/photo-2023-11-22-17-31-24.jpg" alt="user avatar"></div>
+      <div class="avatar"><img class="mr-3 side-user-img" src="https://via.placeholder.com/110x110" alt="user avatar"></div>
        <div class="media-body">
-       <h6 class="side-user-name">xAmphitrite</h6>
+       <h6 class="side-user-name">Mark Johnson</h6>
       </div>
        </div>
      <div id="user-dropdown" class="collapse">
@@ -65,12 +65,12 @@
           <i class="zmdi zmdi-view-dashboard"></i> <span>Dashboard</span><i class="fa fa-angle-left pull-right"></i>
         </a>
 		<ul class="sidebar-submenu">
-		  <li><a href="index"><i class="zmdi zmdi-dot-circle-alt"></i> eCommerce</a></li>
-		  <li><a href="dashboard-human-resources"><i class="zmdi zmdi-dot-circle-alt"></i> Human Resources</a></li>
-		  <li><a href="dashboard-digital-marketing"><i class="zmdi zmdi-dot-circle-alt"></i> Digital Marketing</a></li>
-          <li><a href="dashboard-property-listing"><i class="zmdi zmdi-dot-circle-alt"></i> Property Listings</a></li>
-		  <li><a href="dashboard-service-support"><i class="zmdi zmdi-dot-circle-alt"></i> Services & Support</a></li>
-		  <li><a href="dashboard-logistics"><i class="zmdi zmdi-dot-circle-alt"></i> Logistics</a></li>
+		  <li><a href="index.html"><i class="zmdi zmdi-dot-circle-alt"></i> eCommerce</a></li>
+		  <li><a href="dashboard-human-resources.html"><i class="zmdi zmdi-dot-circle-alt"></i> Human Resources</a></li>
+		  <li><a href="dashboard-digital-marketing.html"><i class="zmdi zmdi-dot-circle-alt"></i> Digital Marketing</a></li>
+          <li><a href="dashboard-property-listing.html"><i class="zmdi zmdi-dot-circle-alt"></i> Property Listings</a></li>
+		  <li><a href="dashboard-service-support.html"><i class="zmdi zmdi-dot-circle-alt"></i> Services & Support</a></li>
+		  <li><a href="dashboard-logistics.html"><i class="zmdi zmdi-dot-circle-alt"></i> Logistics</a></li>
 		</ul>
       </li>
       <li>
@@ -79,20 +79,20 @@
           <span>UI Elements</span> <i class="fa fa-angle-left pull-right"></i>
         </a>
         <ul class="sidebar-submenu">
-    <li><a href="ui-typography"><i class="zmdi zmdi-dot-circle-alt"></i> Typography</a></li>
-        <li><a href="ui-cards"><i class="zmdi zmdi-dot-circle-alt"></i> Cards</a></li>
-    <li><a href="ui-buttons"><i class="zmdi zmdi-dot-circle-alt"></i> Buttons</a></li>
-        <li><a href="ui-nav-tabs"><i class="zmdi zmdi-dot-circle-alt"></i> Nav Tabs</a></li>
-        <li><a href="ui-accordions"><i class="zmdi zmdi-dot-circle-alt"></i> Accordions</a></li>
-        <li><a href="ui-modals"><i class="zmdi zmdi-dot-circle-alt"></i> Modals</a></li>
-        <li><a href="ui-list-groups"><i class="zmdi zmdi-dot-circle-alt"></i> List Groups</a></li>
-        <li><a href="ui-bootstrap-elements"><i class="zmdi zmdi-dot-circle-alt"></i> BS Elements</a></li>
-        <li><a href="ui-pagination"><i class="zmdi zmdi-dot-circle-alt"></i> Pagination</a></li>
-        <li><a href="ui-alerts"><i class="zmdi zmdi-dot-circle-alt"></i> Alerts</a></li>
-        <li><a href="ui-progressbars"><i class="zmdi zmdi-dot-circle-alt"></i> Progress Bars</a></li>
-    <li><a href="ui-checkbox-radio"><i class="zmdi zmdi-dot-circle-alt"></i> Checkboxes & Radios</a></li>
-        <li><a href="ui-notification"><i class="zmdi zmdi-dot-circle-alt"></i> Notifications</a></li>
-        <li><a href="ui-sweet-alert"><i class="zmdi zmdi-dot-circle-alt"></i> Sweet Alerts</a></li>
+    <li><a href="ui-typography.html"><i class="zmdi zmdi-dot-circle-alt"></i> Typography</a></li>
+        <li><a href="ui-cards.html"><i class="zmdi zmdi-dot-circle-alt"></i> Cards</a></li>
+    <li><a href="ui-buttons.html"><i class="zmdi zmdi-dot-circle-alt"></i> Buttons</a></li>
+        <li><a href="ui-nav-tabs.html"><i class="zmdi zmdi-dot-circle-alt"></i> Nav Tabs</a></li>
+        <li><a href="ui-accordions.html"><i class="zmdi zmdi-dot-circle-alt"></i> Accordions</a></li>
+        <li><a href="ui-modals.html"><i class="zmdi zmdi-dot-circle-alt"></i> Modals</a></li>
+        <li><a href="ui-list-groups.html"><i class="zmdi zmdi-dot-circle-alt"></i> List Groups</a></li>
+        <li><a href="ui-bootstrap-elements.html"><i class="zmdi zmdi-dot-circle-alt"></i> BS Elements</a></li>
+        <li><a href="ui-pagination.html"><i class="zmdi zmdi-dot-circle-alt"></i> Pagination</a></li>
+        <li><a href="ui-alerts.html"><i class="zmdi zmdi-dot-circle-alt"></i> Alerts</a></li>
+        <li><a href="ui-progressbars.html"><i class="zmdi zmdi-dot-circle-alt"></i> Progress Bars</a></li>
+    <li><a href="ui-checkbox-radio.html"><i class="zmdi zmdi-dot-circle-alt"></i> Checkboxes & Radios</a></li>
+        <li><a href="ui-notification.html"><i class="zmdi zmdi-dot-circle-alt"></i> Notifications</a></li>
+        <li><a href="ui-sweet-alert.html"><i class="zmdi zmdi-dot-circle-alt"></i> Sweet Alerts</a></li>
         </ul>
       </li>
       <li>
@@ -102,15 +102,15 @@
           <i class="fa fa-angle-left pull-right"></i>
         </a>
         <ul class="sidebar-submenu">
-          <li><a href="components-range-slider"><i class="zmdi zmdi-dot-circle-alt"></i> Range Sliders</a></li>
-          <li><a href="components-image-carousel"><i class="zmdi zmdi-dot-circle-alt"></i> Image Carousels</a></li>
-          <li><a href="components-grid-layouts"><i class="zmdi zmdi-dot-circle-alt"></i> Grid Layouts</a></li>
-          <li><a href="components-switcher-buttons"><i class="zmdi zmdi-dot-circle-alt"></i> Switcher Buttons</a></li>
-          <li><a href="components-pricing-table"><i class="zmdi zmdi-dot-circle-alt"></i> Pricing Tables</a></li>
-          <li><a href="components-vertical-timeline"><i class="zmdi zmdi-dot-circle-alt"></i> Vertical Timeline</a></li>
-          <li><a href="components-horizontal-timeline"><i class="zmdi zmdi-dot-circle-alt"></i> Horizontal Timeline</a></li>
-          <li><a href="components-fancy-lightbox"><i class="zmdi zmdi-dot-circle-alt"></i> Fancy Lightbox</a></li>
-          <li><a href="components-color-palette"><i class="zmdi zmdi-dot-circle-alt"></i> Color Palette</a></li>
+          <li><a href="components-range-slider.html"><i class="zmdi zmdi-dot-circle-alt"></i> Range Sliders</a></li>
+          <li><a href="components-image-carousel.html"><i class="zmdi zmdi-dot-circle-alt"></i> Image Carousels</a></li>
+          <li><a href="components-grid-layouts.html"><i class="zmdi zmdi-dot-circle-alt"></i> Grid Layouts</a></li>
+          <li><a href="components-switcher-buttons.html"><i class="zmdi zmdi-dot-circle-alt"></i> Switcher Buttons</a></li>
+          <li><a href="components-pricing-table.html"><i class="zmdi zmdi-dot-circle-alt"></i> Pricing Tables</a></li>
+          <li><a href="components-vertical-timeline.html"><i class="zmdi zmdi-dot-circle-alt"></i> Vertical Timeline</a></li>
+          <li><a href="components-horizontal-timeline.html"><i class="zmdi zmdi-dot-circle-alt"></i> Horizontal Timeline</a></li>
+          <li><a href="components-fancy-lightbox.html"><i class="zmdi zmdi-dot-circle-alt"></i> Fancy Lightbox</a></li>
+          <li><a href="components-color-palette.html"><i class="zmdi zmdi-dot-circle-alt"></i> Color Palette</a></li>
         </ul>
       </li>
       <li>
@@ -119,11 +119,11 @@
           <i class="fa fa-angle-left float-right"></i>
         </a>
         <ul class="sidebar-submenu">
-          <li><a href="charts-chartjs"><i class="zmdi zmdi-dot-circle-alt"></i> Chart JS</a></li>
-          <li><a href="charts-apex"><i class="zmdi zmdi-dot-circle-alt"></i> Apex Charts</a></li>
-          <li><a href="charts-sparkline"><i class="zmdi zmdi-dot-circle-alt"></i> Sparkline Charts</a></li>
-          <li><a href="charts-peity"><i class="zmdi zmdi-dot-circle-alt"></i> Peity Charts</a></li>
-          <li><a href="charts-other"><i class="zmdi zmdi-dot-circle-alt"></i> Other Charts</a></li>
+          <li><a href="charts-chartjs.html"><i class="zmdi zmdi-dot-circle-alt"></i> Chart JS</a></li>
+          <li><a href="charts-apex.html"><i class="zmdi zmdi-dot-circle-alt"></i> Apex Charts</a></li>
+          <li><a href="charts-sparkline.html"><i class="zmdi zmdi-dot-circle-alt"></i> Sparkline Charts</a></li>
+          <li><a href="charts-peity.html"><i class="zmdi zmdi-dot-circle-alt"></i> Peity Charts</a></li>
+          <li><a href="charts-other.html"><i class="zmdi zmdi-dot-circle-alt"></i> Other Charts</a></li>
         </ul>
        </li>
 	   <li>
@@ -132,8 +132,8 @@
           <i class="fa fa-angle-left float-right"></i>
         </a>
         <ul class="sidebar-submenu">
-          <li><a href="widgets-static"><i class="zmdi zmdi-dot-circle-alt"></i> Static Widgets</a></li>
-          <li><a href="widgets-data"><i class="zmdi zmdi-dot-circle-alt"></i> Data Widgets</a></li>
+          <li><a href="widgets-static.html"><i class="zmdi zmdi-dot-circle-alt"></i> Static Widgets</a></li>
+          <li><a href="widgets-data.html"><i class="zmdi zmdi-dot-circle-alt"></i> Data Widgets</a></li>
         </ul>
        </li>
     
@@ -144,9 +144,9 @@
            <small class="badge float-right badge-warning">12</small>
         </a>
         <ul class="sidebar-submenu">
-          <li><a href="mail-inbox"><i class="zmdi zmdi-dot-circle-alt"></i> Inbox</a></li>
-          <li><a href="mail-compose"><i class="zmdi zmdi-dot-circle-alt"></i> Compose</a></li>
-          <li><a href="mail-read"><i class="zmdi zmdi-dot-circle-alt"></i> Read Mail</a></li>
+          <li><a href="mail-inbox.html"><i class="zmdi zmdi-dot-circle-alt"></i> Inbox</a></li>
+          <li><a href="mail-compose.html"><i class="zmdi zmdi-dot-circle-alt"></i> Compose</a></li>
+          <li><a href="mail-read.html"><i class="zmdi zmdi-dot-circle-alt"></i> Read Mail</a></li>
         </ul>
       </li>
       
@@ -156,14 +156,14 @@
           <i class="fa fa-angle-left pull-right"></i>
         </a>
         <ul class="sidebar-submenu">
-          <li><a href="form-inputs"><i class="zmdi zmdi-dot-circle-alt"></i> Basic Inputs</a></li>
-          <li><a href="form-input-group"><i class="zmdi zmdi-dot-circle-alt"></i> Input Groups</a></li>
-          <li><a href="form-layouts"><i class="zmdi zmdi-dot-circle-alt"></i> Form Layouts</a></li>
-          <li><a href="form-advanced"><i class="zmdi zmdi-dot-circle-alt"></i> Form Advanced</a></li>
-          <li><a href="form-uploads"><i class="zmdi zmdi-dot-circle-alt"></i> Form Uploads</a></li>
-          <li><a href="form-validation"><i class="zmdi zmdi-dot-circle-alt"></i> Form Validation</a></li>
-          <li><a href="form-step-wizard"><i class="zmdi zmdi-dot-circle-alt"></i> Form Wizard</a></li>
-          <li><a href="form-text-editor"><i class="zmdi zmdi-dot-circle-alt"></i> Form Editor</a></li>
+          <li><a href="form-inputs.html"><i class="zmdi zmdi-dot-circle-alt"></i> Basic Inputs</a></li>
+          <li><a href="form-input-group.html"><i class="zmdi zmdi-dot-circle-alt"></i> Input Groups</a></li>
+          <li><a href="form-layouts.html"><i class="zmdi zmdi-dot-circle-alt"></i> Form Layouts</a></li>
+          <li><a href="form-advanced.html"><i class="zmdi zmdi-dot-circle-alt"></i> Form Advanced</a></li>
+          <li><a href="form-uploads.html"><i class="zmdi zmdi-dot-circle-alt"></i> Form Uploads</a></li>
+          <li><a href="form-validation.html"><i class="zmdi zmdi-dot-circle-alt"></i> Form Validation</a></li>
+          <li><a href="form-step-wizard.html"><i class="zmdi zmdi-dot-circle-alt"></i> Form Wizard</a></li>
+          <li><a href="form-text-editor.html"><i class="zmdi zmdi-dot-circle-alt"></i> Form Editor</a></li>
         </ul>
       </li>
 
@@ -173,17 +173,17 @@
           <i class="fa fa-angle-left float-right"></i>
         </a>
         <ul class="sidebar-submenu">
-          <li><a href="authentication-signin" target="_blank"><i class="zmdi zmdi-dot-circle-alt"></i> SignIn 1</a></li>
-          <li><a href="authentication-signup" target="_blank"><i class="zmdi zmdi-dot-circle-alt"></i> SignUp 1</a></li>
-          <li><a href="authentication-signin2" target="_blank"><i class="zmdi zmdi-dot-circle-alt"></i> SignIn 2</a></li>
-          <li><a href="authentication-signup2" target="_blank"><i class="zmdi zmdi-dot-circle-alt"></i> SignUp 2</a></li>
-          <li><a href="authentication-lock-screen" target="_blank"><i class="zmdi zmdi-dot-circle-alt"></i> Lock Screen</a></li>
-          <li><a href="authentication-reset-password" target="_blank"><i class="zmdi zmdi-dot-circle-alt"></i> Reset Password 1</a></li>
-          <li><a href="authentication-reset-password2" target="_blank"><i class="zmdi zmdi-dot-circle-alt"></i> Reset Password 2</a></li>
+          <li><a href="authentication-signin.html" target="_blank"><i class="zmdi zmdi-dot-circle-alt"></i> SignIn 1</a></li>
+          <li><a href="authentication-signup.html" target="_blank"><i class="zmdi zmdi-dot-circle-alt"></i> SignUp 1</a></li>
+          <li><a href="authentication-signin2.html" target="_blank"><i class="zmdi zmdi-dot-circle-alt"></i> SignIn 2</a></li>
+          <li><a href="authentication-signup2.html" target="_blank"><i class="zmdi zmdi-dot-circle-alt"></i> SignUp 2</a></li>
+          <li><a href="authentication-lock-screen.html" target="_blank"><i class="zmdi zmdi-dot-circle-alt"></i> Lock Screen</a></li>
+          <li><a href="authentication-reset-password.html" target="_blank"><i class="zmdi zmdi-dot-circle-alt"></i> Reset Password 1</a></li>
+          <li><a href="authentication-reset-password2.html" target="_blank"><i class="zmdi zmdi-dot-circle-alt"></i> Reset Password 2</a></li>
         </ul>
        </li>
        <li>
-        <a href="calendar" class="waves-effect">
+        <a href="calendar.html" class="waves-effect">
           <i class="zmdi zmdi-calendar-check"></i> <span>Calendar</span>
           <small class="badge float-right badge-light">New</small>
         </a>
@@ -194,11 +194,11 @@
           <i class="fa fa-angle-left float-right"></i>
         </a>
         <ul class="sidebar-submenu">
-          <li><a href="icons-font-awesome"><i class="zmdi zmdi-dot-circle-alt"></i> Font Awesome</a></li>
-          <li><a href="icons-material-designs"><i class="zmdi zmdi-dot-circle-alt"></i> Material Design</a></li>
-          <li><a href="icons-themify"><i class="zmdi zmdi-dot-circle-alt"></i> Themify Icons</a></li>
-          <li><a href="icons-simple-line-icons"><i class="zmdi zmdi-dot-circle-alt"></i> Line Icons</a></li>
-          <li><a href="icons-flags"><i class="zmdi zmdi-dot-circle-alt"></i> Flag Icons</a></li>
+          <li><a href="icons-font-awesome.html"><i class="zmdi zmdi-dot-circle-alt"></i> Font Awesome</a></li>
+          <li><a href="icons-material-designs.html"><i class="zmdi zmdi-dot-circle-alt"></i> Material Design</a></li>
+          <li><a href="icons-themify.html"><i class="zmdi zmdi-dot-circle-alt"></i> Themify Icons</a></li>
+          <li><a href="icons-simple-line-icons.html"><i class="zmdi zmdi-dot-circle-alt"></i> Line Icons</a></li>
+          <li><a href="icons-flags.html"><i class="zmdi zmdi-dot-circle-alt"></i> Flag Icons</a></li>
         </ul>
       </li>
      
@@ -208,8 +208,8 @@
           <i class="fa fa-angle-left float-right"></i>
         </a>
         <ul class="sidebar-submenu">
-          <li><a href="table-simple-tables"><i class="zmdi zmdi-dot-circle-alt"></i> Simple Tables</a></li>
-          <li><a href="table-data-tables"><i class="zmdi zmdi-dot-circle-alt"></i> Data Tables</a></li>
+          <li><a href="table-simple-tables.html"><i class="zmdi zmdi-dot-circle-alt"></i> Simple Tables</a></li>
+          <li><a href="table-data-tables.html"><i class="zmdi zmdi-dot-circle-alt"></i> Data Tables</a></li>
         </ul>
        </li>
      
@@ -219,8 +219,8 @@
           <i class="fa fa-angle-left float-right"></i>
         </a>
         <ul class="sidebar-submenu">
-          <li><a href="maps-google"><i class="zmdi zmdi-dot-circle-alt"></i> Google Maps</a></li>
-          <li><a href="maps-vector"><i class="zmdi zmdi-dot-circle-alt"></i> Vector Maps</a></li>
+          <li><a href="maps-google.html"><i class="zmdi zmdi-dot-circle-alt"></i> Google Maps</a></li>
+          <li><a href="maps-vector.html"><i class="zmdi zmdi-dot-circle-alt"></i> Vector Maps</a></li>
         </ul>
        </li>
      
@@ -230,13 +230,13 @@
           <i class="fa fa-angle-left float-right"></i>
         </a>
         <ul class="sidebar-submenu">
-              <li><a href="pages-invoice"><i class="zmdi zmdi-dot-circle-alt"></i> Invoice</a></li>
-          <li><a href="pages-user-profile"><i class="zmdi zmdi-dot-circle-alt"></i> User Profile</a></li>
-          <li><a href="pages-blank-page"><i class="zmdi zmdi-dot-circle-alt"></i> Blank Page</a></li>
-              <li><a href="pages-coming-soon"><i class="zmdi zmdi-dot-circle-alt"></i> Coming Soon</a></li>
-          <li><a href="pages-403"><i class="zmdi zmdi-dot-circle-alt"></i> 403 Error</a></li>
-          <li><a href="pages-404"><i class="zmdi zmdi-dot-circle-alt"></i> 404 Error</a></li>
-          <li><a href="pages-500"><i class="zmdi zmdi-dot-circle-alt"></i> 500 Error</a></li>
+              <li><a href="pages-invoice.html"><i class="zmdi zmdi-dot-circle-alt"></i> Invoice</a></li>
+          <li><a href="pages-user-profile.html"><i class="zmdi zmdi-dot-circle-alt"></i> User Profile</a></li>
+          <li><a href="pages-blank-page.html"><i class="zmdi zmdi-dot-circle-alt"></i> Blank Page</a></li>
+              <li><a href="pages-coming-soon.html"><i class="zmdi zmdi-dot-circle-alt"></i> Coming Soon</a></li>
+          <li><a href="pages-403.html"><i class="zmdi zmdi-dot-circle-alt"></i> 403 Error</a></li>
+          <li><a href="pages-404.html"><i class="zmdi zmdi-dot-circle-alt"></i> 404 Error</a></li>
+          <li><a href="pages-500.html"><i class="zmdi zmdi-dot-circle-alt"></i> 500 Error</a></li>
         </ul>
        </li>
 
@@ -438,3 +438,168 @@
 <!--End topbar header-->
 
 <div class="clearfix"></div>
+	
+  <div class="content-wrapper">
+    <div class="container-fluid">
+      <!-- Breadcrumb-->
+     <div class="row pt-2 pb-2">
+        <div class="col-sm-9">
+		    <h4 class="page-title">Vector Map</h4>
+		    <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javaScript:void();">Dashtreme</a></li>
+            <li class="breadcrumb-item"><a href="javaScript:void();">Maps</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Vector Map</li>
+         </ol>
+	   </div>
+	   <div class="col-sm-3">
+       <div class="btn-group float-sm-right">
+        <button type="button" class="btn btn-light waves-effect waves-light"><i class="fa fa-cog mr-1"></i> Setting</button>
+        <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split waves-effect waves-light" data-toggle="dropdown">
+        <span class="caret"></span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="javaScript:void();" class="dropdown-item">Action</a>
+          <a href="javaScript:void();" class="dropdown-item">Another action</a>
+          <a href="javaScript:void();" class="dropdown-item">Something else here</a>
+          <div class="dropdown-divider"></div>
+          <a href="javaScript:void();" class="dropdown-item">Separated link</a>
+        </div>
+      </div>
+     </div>
+     </div>
+    <!-- End Breadcrumb-->
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card">
+             <div class="card-header text-uppercase">World Map</div>
+              <div class="card-body">
+                <div id="world-map-markers" style="height: 300px"></div>
+              </div>
+          </div>
+        </div>
+      </div><!--End Row-->
+
+
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="card">
+             <div class="card-header text-uppercase">India</div>
+              <div class="card-body">
+                <div id="india" style="height: 350px"></div>
+              </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card">
+             <div class="card-header text-uppercase">Usa</div>
+              <div class="card-body">
+               <div id="usa" style="height: 350px"></div>
+              </div>
+          </div>
+        </div>
+     </div><!--End Row-->
+
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="card">
+             <div class="card-header text-uppercase">Australia Map</div>
+              <div class="card-body">
+                <div id="australia" style="height: 350px"></div>
+              </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card">
+             <div class="card-header text-uppercase">Uk Map</div>
+              <div class="card-body">
+               <div id="uk" style="height: 350px"></div>
+              </div>
+          </div>
+        </div>
+     </div><!--End Row-->
+<!--start overlay-->
+	  <div class="overlay toggle-menu"></div>
+	<!--end overlay-->
+    </div>
+    <!-- End container-fluid-->
+    
+   </div><!--End content-wrapper-->
+   <!--Start Back To Top Button-->
+    <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
+    <!--End Back To Top Button-->
+	
+	<!--Start footer-->
+	<footer class="footer">
+      <div class="container">
+        <div class="text-center">
+          Copyright © 2018 Dashtreme Admin
+        </div>
+      </div>
+    </footer>
+	<!--End footer-->
+	
+	<!--start color switcher-->
+   <div class="right-sidebar">
+    <div class="switcher-icon">
+      <i class="zmdi zmdi-settings zmdi-hc-spin"></i>
+    </div>
+    <div class="right-sidebar-content">
+
+      <p class="mb-0">Gaussion Texture</p>
+      <hr>
+      
+      <ul class="switcher">
+        <li id="theme1"></li>
+        <li id="theme2"></li>
+        <li id="theme3"></li>
+        <li id="theme4"></li>
+        <li id="theme5"></li>
+        <li id="theme6"></li>
+      </ul>
+
+      <p class="mb-0">Gradient Background</p>
+      <hr>
+      
+      <ul class="switcher">
+        <li id="theme7"></li>
+        <li id="theme8"></li>
+        <li id="theme9"></li>
+        <li id="theme10"></li>
+        <li id="theme11"></li>
+        <li id="theme12"></li>
+		<li id="theme13"></li>
+        <li id="theme14"></li>
+        <li id="theme15"></li>
+      </ul>
+      
+     </div>
+   </div>
+  <!--end color switcher-->
+   
+  </div><!--End wrapper-->
+
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+	
+  <!-- simplebar js -->
+  <script src="assets/plugins/simplebar/js/simplebar.js"></script>
+  <!-- sidebar-menu js -->
+  <script src="assets/js/sidebar-menu.js"></script>
+  
+  <!-- Custom scripts -->
+  <script src="assets/js/app-script.js"></script>
+  
+  <!-- Vector map JavaScript -->
+  <script src="assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js"></script>
+  <script src="assets/plugins/vectormap/jquery-jvectormap-world-mill-en.js"></script>
+  <script src="assets/plugins/vectormap/jquery-jvectormap-in-mill.js"></script>
+  <script src="assets/plugins/vectormap/jquery-jvectormap-us-aea-en.js"></script>
+  <script src="assets/plugins/vectormap/jquery-jvectormap-uk-mill-en.js"></script>
+  <script src="assets/plugins/vectormap/jquery-jvectormap-au-mill.js"></script>
+  <script src="assets/plugins/vectormap/jvectormap.custom.js"></script>
+	
+</body>
+</html>
