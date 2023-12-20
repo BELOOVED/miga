@@ -617,6 +617,16 @@ body.bg-theme1 {
     filter: blur(10px); /* Bulanıklık miktarını isteğinize göre ayarlayabilirsiniz */
     z-index: -1;
   }
+  body.bg-theme1::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Siyah ve yarı şeffaf bir arkaplan ekleyin */
+    z-index: -1;
+  }
 body.bg-theme2 {
   background-image: url(../images/bg-themes/2.png);
 }
