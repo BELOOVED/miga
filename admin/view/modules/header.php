@@ -52,9 +52,10 @@
        </div>
      <div id="user-dropdown" class="collapse">
       <ul class="user-setting-menu">
-            <li><a href="javaScript:void();"><i class="icon-user"></i>  Admin Yönet</a></li>
-            <li><a href="javaScript:void();"><i class="icon-settings"></i> Site Ayarları</a></li>
-      <li><a href="javaScript:void();"><i class="icon-power"></i> Çıkış</a></li>
+            <li><a href="/"><i class="icon-user"></i>  Anasayfa</a></li>
+            <li><a href="adminyonet"><i class="icon-user"></i>  Admin Yönet</a></li>
+            <li><a href="siteyarlari"><i class="icon-settings"></i> Site Ayarları</a></li>
+      <li><a href="logOut();"><i class="icon-power"></i> Çıkış</a></li>
       </ul>
      </div>
       </div>
@@ -65,8 +66,8 @@
         </a>
 		<ul class="sidebar-submenu">
         
-		  <li><a href="kategoriduzenle"><i class="zmdi zmdi-dot-circle-alt"></i>  Günlük Özet</a></li>
-		  <li><a href="kategoriduzenle"><i class="zmdi zmdi-dot-circle-alt"></i>  Aylık Özet</a></li>
+		  <li><a href="gunlukozet"><i class="zmdi zmdi-dot-circle-alt"></i>  Günlük Özet</a></li>
+		  <li><a href="aylikozet"><i class="zmdi zmdi-dot-circle-alt"></i>  Aylık Özet</a></li>
 
 		</ul>
       </li>
@@ -96,8 +97,8 @@
         </a>
 		<ul class="sidebar-submenu">
         
-		  <li><a href="kategoriduzenle"><i class="zmdi zmdi-dot-circle-alt"></i>  Kredi Kartı</a></li>
-		  <li><a href="kategoriduzenle"><i class="zmdi zmdi-dot-circle-alt"></i>  IBAN</a></li>
+		  <li><a href="kredikarti"><i class="zmdi zmdi-dot-circle-alt"></i>  Kredi Kartı</a></li>
+		  <li><a href="iban"><i class="zmdi zmdi-dot-circle-alt"></i>  IBAN</a></li>
 
 		</ul>
       </li>
@@ -107,8 +108,8 @@
         </a>
 		<ul class="sidebar-submenu">
         
-		  <li><a href="kategoriduzenle"><i class="zmdi zmdi-dot-circle-alt"></i>  Kayıt Olanlar</a></li>
-		  <li><a href="kategoriduzenle"><i class="zmdi zmdi-dot-circle-alt"></i>  Giriş Yapanlar</a></li>
+		  <li><a href="kullanicilar?q=0"><i class="zmdi zmdi-dot-circle-alt"></i>  Kayıt Olanlar</a></li>
+		  <li><a href="kullanicilar?q=1"><i class="zmdi zmdi-dot-circle-alt"></i>  Giriş Yapanlar</a></li>
 
 		</ul>
       </li>
