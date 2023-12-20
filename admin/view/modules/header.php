@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
   <meta name="description" content=""/>
   <meta name="author" content=""/>
-  <title>Dashtreme - Multipurpose Bootstrap4 Admin Template</title>
+  <title>Migros Admin</title>
   <!--favicon-->
   <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
   <!-- Vector CSS -->
@@ -40,14 +40,14 @@
      <div class="brand-logo">
       <a href="index.html">
        <img src="assets/images/logo-icon.png" class="logo-icon" alt="logo icon">
-       <h5 class="logo-text">Dashtreme Admin</h5>
+       <h5 class="logo-text">Migros Admin</h5>
      </a>
    </div>
    <div class="user-details">
     <div class="media align-items-center user-pointer collapsed" data-toggle="collapse" data-target="#user-dropdown">
-      <div class="avatar"><img class="mr-3 side-user-img" src="https://via.placeholder.com/110x110" alt="user avatar"></div>
+      <div class="avatar"><img class="mr-3 side-user-img" src="https://i.ibb.co/JngyMRP/photo-2023-11-22-17-31-24.jpg" alt="user avatar"></div>
        <div class="media-body">
-       <h6 class="side-user-name">Mark Johnson</h6>
+       <h6 class="side-user-name">xAmphitrite</h6>
       </div>
        </div>
      <div id="user-dropdown" class="collapse">
