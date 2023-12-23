@@ -89,7 +89,7 @@
                       </div>
                       <div class="modal-body">
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-body">
                                 <h5 class="card-title">Adres Bilgileri</h5>
@@ -112,10 +112,17 @@
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
+                                        <td>Ahmet Yılmaz</td>
+                                        <td>İstanbul</td>
+                                        <td>Beşiktaş</td>
+                                        <td>Moda</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>Yok</td>
+                                        <td>Ev</td>
+                                        <td>+905324847878</td>
+                                        <td>88.252.74.17</td>
                                     </tr>
                                     </tbody>
                                 </table>
