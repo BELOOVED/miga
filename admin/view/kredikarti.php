@@ -25,7 +25,7 @@
       </div>
      </div>
      </div>
-
+     <div class="row"><div class="col-sm-12 col-md-6"><div class="dt-buttons btn-group">          <button class="btn btn-light buttons-copy buttons-html5" tabindex="0" aria-controls="example" type="button"><span>Kopyala</span></button> <button class="btn btn-light buttons-excel buttons-html5" tabindex="0" aria-controls="example" type="button"><span>Excel</span></button> <button class="btn btn-light buttons-pdf buttons-html5" tabindex="0" aria-controls="example" type="button"><span>PDF</span></button> <button class="btn btn-light buttons-print" tabindex="0" aria-controls="example" type="button"><span>Yazdır</span></button> <button class="btn btn-light buttons-collection dropdown-toggle buttons-colvis" tabindex="0" aria-controls="example" type="button" aria-haspopup="true"><span>Kolon Gizle</span></button> </div></div><div class="col-sm-12 col-md-6"><div id="example_filter" class="dataTables_filter"><label>Ara:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="example"></label></div></div></div>
       <div class="row">
         <div class="col-lg-12">
           <div class="card">
