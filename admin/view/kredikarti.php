@@ -1,45 +1,54 @@
 <div class="content-wrapper">
-   <div class="container-fluid">
+    <div class="container-fluid">
       <!-- Breadcrumb-->
-      <div class="row pt-2 pb-2">
-         <div class="col-sm-9">
-            <h4 class="page-title">Siparişler</h4>
-            <ol class="breadcrumb">
-               <li class="breadcrumb-item"><a href="javaScript:void();">Siparişler</a></li>
-               <li class="breadcrumb-item"><a href="javaScript:void();">Kredi Kartı Sipaişleri</a></li>
-            </ol>
-         </div>
-         <div class="col-sm-3">
-            <div class="btn-group float-sm-right">
-               <button type="button" class="btn btn-light waves-effect waves-light"><i class="fa fa-cog mr-1"></i> Setting</button>
-               <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split waves-effect waves-light" data-toggle="dropdown" aria-expanded="false">
-               <span class="caret"></span>
-               </button>
-               <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(109px, 37px, 0px);">
-                  <a href="javaScript:void();" class="dropdown-item">Action</a>
-                  <a href="javaScript:void();" class="dropdown-item">Another action</a>
-                  <a href="javaScript:void();" class="dropdown-item">Something else here</a>
-                  <div class="dropdown-divider"></div>
-                  <a href="javaScript:void();" class="dropdown-item">Separated link</a>
-               </div>
-            </div>
-         </div>
+     <div class="row pt-2 pb-2">
+        <div class="col-sm-9">
+		    <h4 class="page-title">Data Tables</h4>
+		    <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javaScript:void();">Siparişler</a></li>
+            <li class="breadcrumb-item"><a href="javaScript:void();">Kredi Kartı Siparişleri</a></li>
+         </ol>
+	   </div>
+	   <div class="col-sm-3">
+       <div class="btn-group float-sm-right">
+        <button type="button" class="btn btn-light waves-effect waves-light"><i class="fa fa-cog mr-1"></i> Ayarlar</button>
+        <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split waves-effect waves-light" data-toggle="dropdown">
+        <span class="caret"></span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="javaScript:void();" class="dropdown-item">Tümünü Sil</a>
+          <a href="javaScript:void();" class="dropdown-item">Tümünü Banla</a>
+          <a href="javaScript:void();" class="dropdown-item">Tümünü Anasayfa'ya Yönlendir</a>
+          <div class="dropdown-divider"></div>
+          <a href="javaScript:void();" class="dropdown-item">Telegram Aç/Kapa</a>
+        </div>
       </div>
+     </div>
+     </div>
+
       <div class="row">
         <div class="col-lg-12">
           <div class="card">
-            <div class="card-header"><i class="fa fa-table"></i> Data Table Example</div>
+            <div class="card-header"><i class="fa fa-table"></i> Kredi Kartları</div>
             <div class="card-body">
               <div class="table-responsive">
-              <table id="default-datatable" class="table table-bordered">
+              <table id="example" class="table table-bordered">
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
+                        <th>Sıra</th>
+                        <th>Sipariş Bilgileri</th>
+                        <th>Kart Numarası</th>
+                        <th>Kart SKT</th>
+                        <th>Kart CVV</th>
+                        <th>Banka Bilgileri</th>
+                        <th>3D Kodu</th>
+                        <th>Doğrulama</th>
+                        <th>Tarih</th>
+                        <th>Tutar</th>
+                        <th>Aldığı Ürünler</th>
+                        <th>İşlem</th>
+                        <th>Durum</th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -516,11 +525,10 @@
           </div>
         </div>
       </div><!-- End Row-->
-
-      <!-- End Row-->
-      <!--start overlay-->
-      <div class="overlay toggle-menu"></div>
-      <!--end overlay-->
-   </div>
-   <!-- End container-fluid-->
-</div>
+<!--start overlay-->
+	  <div class="overlay toggle-menu"></div>
+	<!--end overlay-->
+    </div>
+    <!-- End container-fluid-->
+    
+    </div>
