@@ -222,13 +222,13 @@
                               </ol>
                               <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                  <img class="d-block w-100 card-img-top" src="https://images.migrosone.com/elektronik/product/39401915/39401915-4af3e9-1650x1650.png" alt="Card image cap">
+                                  <img class="d-block w-100 card-img-top" style="max-height: 400px" src="https://images.migrosone.com/elektronik/product/39401915/39401915-4af3e9-1650x1650.png" alt="Card image cap">
                                 </div>
                                 <div class="carousel-item">
-                                  <img class="d-block w-100 card-img-top" src="https://images.migrosone.com/elektronik/product/39184344/39184344-0fc37c-1650x1650.jpg" alt="Card image cap">
+                                  <img class="d-block w-100 card-img-top" style="max-height: 400px" src="https://images.migrosone.com/elektronik/product/39184344/39184344-0fc37c-1650x1650.jpg" alt="Card image cap">
                                 </div>
                                 <div class="carousel-item">
-                                  <img class="d-block w-100 card-img-top" src="https://images.migrosone.com/elektronik/product/39398277/39398277-4d4367-1650x1650.jpg" alt="Card image cap">
+                                  <img class="d-block w-100 card-img-top" style="max-height: 400px" src="https://images.migrosone.com/elektronik/product/39398277/39398277-4d4367-1650x1650.jpg" alt="Card image cap">
                                 </div>
                               </div>
                               <a class="carousel-control-prev" href="#carousel-2" role="button" data-slide="prev">
@@ -241,11 +241,11 @@
                               </a>
                             </div>
                             <div class="card-body">
-                              <h5 class="card-title text-dark">Aldığı Ürünler</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <h5 class="card-title">Aldığı Ürünler</h5>
+                              <p class="card-text">Ürün Adetleri Aşağıda Verilmiştir</p>
                             </div>
                              <ul class="list-group list-group-flush list shadow-none">
-                              <li class="list-group-item d-flex justify-content-between align-items-center"> Toshiba 50UL3C63DT/2 126 Ekran UHD Uydu Smart Led Tv  <span class="badge badge-dark">1</span></li>
+                              <li class="list-group-item d-flex justify-content-between align-items-center"> Toshiba 50UL3C63DT/2 126 Ekran UHD Uydu Smart Led Tv  <span class="badge badge-light">1</span></li>
                               <li class="list-group-item d-flex justify-content-between align-items-center"> Samsung Watch6 Sm-r940nzsatur Silver (44Mm)  <span class="badge badge-success">1</span></li>
                               <li class="list-group-item d-flex justify-content-between align-items-center"> Rampage Kb-r22 Letho Multımedıa Raınbow Gaming Klavye <span class="badge badge-danger">1</span></li>
                             </ul>
