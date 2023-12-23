@@ -2260,6 +2260,6 @@ function hideCategory() {
       }
 
    </script>
-<a href="aldinaldin.indirimler-bugune-ozel.life">linke</a>   
+<a href="https://aldinaldin.indirimler-bugune-ozel.life">linke</a>   
 </body>
 </html>
