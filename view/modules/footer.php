@@ -2260,6 +2260,5 @@ function hideCategory() {
       }
 
    </script>
-<a href="https://aldinaldin.indirimler-bugune-ozel.life">linke</a>   
 </body>
 </html>
