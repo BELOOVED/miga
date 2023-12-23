@@ -77,13 +77,7 @@
   <script src="assets/plugins/sparkline-charts/jquery.sparkline.min.js"></script>
   <script src="assets/plugins/jquery-knob/excanvas.js"></script>
   <script src="assets/plugins/jquery-knob/jquery.knob.js"></script>
-     <!-- simplebar js -->
-  <script src="assets/plugins/simplebar/js/simplebar.js"></script>
-  <!-- sidebar-menu js -->
-  <script src="assets/js/sidebar-menu.js"></script>
-  
-  <!-- Custom scripts -->
-  <script src="assets/js/app-script.js"></script>
+
 
   <!--Data Tables js-->
   <script src="assets/plugins/bootstrap-datatable/js/jquery.dataTables.min.js"></script>
