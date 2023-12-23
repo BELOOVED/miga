@@ -1,13 +1,14 @@
 
 
 <style>
-   <?php
-                if ($detect->isMobile()) {?>
     .header{
         display: none;
     }
-    .footer{
-        display: none;
+    <?php
+      if ($detect->isMobile()) {?>
+    .footer
+    {
+      display: none;
     }
     <?php }?>
 </style>
