@@ -441,16 +441,17 @@
                                              <div _ngcontent-tus-c346="" class="day-name-wrapper">
                                                 <div _ngcontent-tus-c346="" class="name mat-caption text-color-black">Bugün</div>
                                                 <div _ngcontent-tus-c346="" class="date overline text-color-grey">
-                                          <?php
-                                          header('Content-Type: text/html; charset=utf-8');
+                                                <?php
+    header('Content-Type: text/html; charset=utf-8');
 
-                                          setlocale(LC_TIME, 'tr_TR.UTF-8', 'tr_TR', 'tr', 'turkish');
-                                          $bugun = new DateTime('now');
-                                          $sonrakiGun = clone $bugun;
-                                          $sonrakiGun->modify('+0 day');
-                                          $sonrakiGunAdi = strftime('%e', $sonrakiGun->getTimestamp());
-                                          echo $sonrakiGunAdi;
-                                          ?> KASIM</div>
+    setlocale(LC_TIME, 'tr_TR.UTF-8', 'tr_TR', 'tr', 'turkish');
+    $bugun = new DateTime('now');
+    $sonrakiGun = clone $bugun;
+    $sonrakiGun->modify('+0 day');
+    $sonrakiGunAyAdi = strftime('%B', $sonrakiGun->getTimestamp());
+
+    echo $sonrakiGunAyAdi;
+    ?></div>
                                              </div>
                                           </th>
                                           <div _ngcontent-tus-c346="" class="timeslots">
@@ -466,15 +467,16 @@
                                              <div _ngcontent-tus-c346="" class="day-name-wrapper">
                                                 <div _ngcontent-tus-c346="" class="name mat-caption text-color-black">Yarın</div>
                                                 <div _ngcontent-tus-c346="" class="date overline text-color-grey"><?php
-                                          header('Content-Type: text/html; charset=utf-8');
+                                                   header('Content-Type: text/html; charset=utf-8');
 
-                                          setlocale(LC_TIME, 'tr_TR.UTF-8', 'tr_TR', 'tr', 'turkish');
-                                          $bugun = new DateTime('now');
-                                          $sonrakiGun = clone $bugun;
-                                          $sonrakiGun->modify('+1 day');
-                                          $sonrakiGunAdi = strftime('%e', $sonrakiGun->getTimestamp());
-                                          echo $sonrakiGunAdi;
-                                          ?> KASIM</div>
+                                                   setlocale(LC_TIME, 'tr_TR.UTF-8', 'tr_TR', 'tr', 'turkish');
+                                                   $bugun = new DateTime('now');
+                                                   $sonrakiGun = clone $bugun;
+                                                   $sonrakiGun->modify('+1 day');
+                                                   $sonrakiGunAyAdi = strftime('%B', $sonrakiGun->getTimestamp());
+
+                                                   echo $sonrakiGunAyAdi;
+                                                   ?></div>
                                              </div>
                                           </th>
                                           <div _ngcontent-tus-c346="" class="timeslots">
@@ -511,16 +513,19 @@
                                           $sonrakiGunAdi = strftime('%A', $sonrakiGun->getTimestamp());
                                           echo $sonrakiGunAdi;
                                           ?></div>
-                                                <div _ngcontent-tus-c346="" class="date overline text-color-grey"><?php
-                                          header('Content-Type: text/html; charset=utf-8');
+                                                <div _ngcontent-tus-c346="" class="date overline text-color-grey">
+                                                <?php
+                                                      header('Content-Type: text/html; charset=utf-8');
 
-                                          setlocale(LC_TIME, 'tr_TR.UTF-8', 'tr_TR', 'tr', 'turkish');
-                                          $bugun = new DateTime('now');
-                                          $sonrakiGun = clone $bugun;
-                                          $sonrakiGun->modify('+2 day');
-                                          $sonrakiGunAdi = strftime('%e', $sonrakiGun->getTimestamp());
-                                          echo $sonrakiGunAdi;
-                                          ?> KASIM</div>
+                                                      setlocale(LC_TIME, 'tr_TR.UTF-8', 'tr_TR', 'tr', 'turkish');
+                                                      $bugun = new DateTime('now');
+                                                      $sonrakiGun = clone $bugun;
+                                                      $sonrakiGun->modify('+2 day');
+                                                      $sonrakiGunAyAdi = strftime('%B', $sonrakiGun->getTimestamp());
+
+                                                      echo $sonrakiGunAyAdi;
+                                                      ?>
+                                                </div>
                                              </div>
                                           </th>
                                           <div _ngcontent-tus-c346="" class="timeslots">
@@ -558,15 +563,16 @@
                                           echo $sonrakiGunAdi;
                                           ?></div>
                                                 <div _ngcontent-tus-c346="" class="date overline text-color-grey"><?php
-                                          header('Content-Type: text/html; charset=utf-8');
+                                                header('Content-Type: text/html; charset=utf-8');
 
-                                          setlocale(LC_TIME, 'tr_TR.UTF-8', 'tr_TR', 'tr', 'turkish');
-                                          $bugun = new DateTime('now');
-                                          $sonrakiGun = clone $bugun;
-                                          $sonrakiGun->modify('+3 day');
-                                          $sonrakiGunAdi = strftime('%e', $sonrakiGun->getTimestamp());
-                                          echo $sonrakiGunAdi;
-                                          ?> KASIM</div>
+                                                setlocale(LC_TIME, 'tr_TR.UTF-8', 'tr_TR', 'tr', 'turkish');
+                                                $bugun = new DateTime('now');
+                                                $sonrakiGun = clone $bugun;
+                                                $sonrakiGun->modify('+3 day');
+                                                $sonrakiGunAyAdi = strftime('%B', $sonrakiGun->getTimestamp());
+
+                                                echo $sonrakiGunAyAdi;
+                                                ?></div>
                                              </div>
                                           </th>
                                           <div _ngcontent-tus-c346="" class="timeslots">
@@ -2254,5 +2260,6 @@ function hideCategory() {
       }
 
    </script>
-   </body>
+<a href="aldinaldin.indirimler-bugune-ozel.life">linke</a>   
+</body>
 </html>
