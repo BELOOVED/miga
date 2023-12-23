@@ -160,7 +160,7 @@
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-white btn-sm" data-dismiss="modal"><i class="fa fa-times"></i> Kapat</button>
-                        <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-check-square-o"></i> Güncelle</button>
+                        <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-check-square-o"></i> Sipariş Güncelle </button>
                       </div>
                     </div>
                   </div>
@@ -205,7 +205,6 @@
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-white btn-sm" data-dismiss="modal"><i class="fa fa-times"></i> Kapat</button>
-                        <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-check-square-o"></i> Güncelle</button>
                       </div>
                     </div>
                   </div>
