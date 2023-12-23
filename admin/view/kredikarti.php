@@ -210,7 +210,7 @@
                     </div>
                   </div>
             </div>
-            <div class="modal fade" id="smallllsizemodal" aria-modal="true" style="padding-right: 17px; display: block;">
+            <div class="modal fade" id="smallllsizemodal" style="padding-right: 17px; display: block;" aria-hidden="true">
                   <div class="modal-dialog">
                     <div class="modal-content border-0">
                         <div class="card mb-0">
