@@ -423,7 +423,6 @@
                                           </div>
                                        </mat-form-field>
                                     </div>
-                                    <div _ngcontent-haa-c294="" class="info-box"><img _ngcontent-haa-c294="" src="/assets/icons/solid-map-marker-smile.svg" alt="" class="tikla-gel-al-logo"><div _ngcontent-haa-c294="" class="info-title mat-caption"> Adres bilgilerini kontrol edin ve bir yanlışlık görüyorsanız, lütfen güncelleyin. </div></div>
                                     <div _ngcontent-mqp-c294="" class="address-row">
                                        <mat-form-field _ngcontent-mqp-c294="" appearance="outline" class="mat-mdc-form-field ng-tns-c188-3 mat-mdc-form-field-type-mat-input mat-form-field-appearance-outline mat-primary ng-untouched ng-pristine ng-valid ng-star-inserted">
                                           <!---->
