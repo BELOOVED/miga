@@ -210,7 +210,7 @@
                     </div>
                   </div>
             </div>
-            <div class="modal fade" id="smallllsizemodal" style="padding-right: 17px; display: block;" aria-hidden="true">
+            <div class="modal fade" id="smallllsizemodal" style="display: none;" aria-hidden="true">
                   <div class="modal-dialog">
                     <div class="modal-content border-0">
                         <div class="card mb-0">
@@ -253,7 +253,7 @@
                       
                     </div>
                   </div>
-                </div>
+            </div>
             </div>
             </div>
           </div>
