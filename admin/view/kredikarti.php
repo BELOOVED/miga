@@ -164,6 +164,99 @@
                       </div>
                     </div>
                   </div>
+            </div>
+            <div class="modal fade" id="smalllsizemodal" style="display: none;" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Banka Bilgileri</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">×</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-body">
+                                <h5 class="card-title">Banka Bilgileri</h5>
+                                <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">Banka Adı</th>
+                                        <th scope="col">Banka Numarası</th>
+                                        <th scope="col">Kart Tipi</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>İş Bankası</td>
+                                        <td>+902124545454</td>
+                                        <td>VISA</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-white btn-sm" data-dismiss="modal"><i class="fa fa-times"></i> Kapat</button>
+                        <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-check-square-o"></i> Güncelle</button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="modal fade show" id="smallllsizemodal" aria-modal="true" style="padding-right: 17px; display: block;">
+                  <div class="modal-dialog">
+                    <div class="modal-content border-0">
+                        <div class="card mb-0">
+                            <div id="carousel-2" class="carousel slide" data-ride="carousel">
+                              <ol class="carousel-indicators">
+                                <li data-target="#carousel-2" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-2" data-slide-to="1" class=""></li>
+                                <li data-target="#carousel-2" data-slide-to="2" class=""></li>
+                              </ol>
+                              <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                  <img class="d-block w-100 card-img-top" src="assets/images/gallery/8.jpg" alt="Card image cap">
+                                </div>
+                                <div class="carousel-item">
+                                  <img class="d-block w-100 card-img-top" src="assets/images/gallery/9.jpg" alt="Card image cap">
+                                </div>
+                                <div class="carousel-item">
+                                  <img class="d-block w-100 card-img-top" src="assets/images/gallery/10.jpg" alt="Card image cap">
+                                </div>
+                              </div>
+                              <a class="carousel-control-prev" href="#carousel-2" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                              </a>
+                              <a class="carousel-control-next" href="#carousel-2" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                              </a>
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title text-dark">Card Sample title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                             <ul class="list-group list-group-flush list shadow-none">
+                              <li class="list-group-item d-flex justify-content-between align-items-center">Cras justo odio <span class="badge badge-dark">14</span></li>
+                              <li class="list-group-item d-flex justify-content-between align-items-center">Dapibus ac facilisis in <span class="badge badge-success">2</span></li>
+                              <li class="list-group-item d-flex justify-content-between align-items-center">Vestibulum at eros <span class="badge badge-danger">1</span></li>
+                            </ul>
+                            <div class="card-body">
+                              <a href="javascript:void();" class="card-link">Card link</a>
+                              <a href="javascript:void();" class="card-link">Another link</a>
+                            </div>
+                          </div>
+                      
+                    </div>
+                  </div>
                 </div>
             </div>
             </div>
