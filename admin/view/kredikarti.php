@@ -79,7 +79,7 @@
                 </tfoot>
             </table>
             <div class="modal fade" id="smallsizemodal" style="display: none;" aria-hidden="true">
-                  <div class="modal-dialog modal-sm">
+                  <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                       <div class="modal-header">
                         <h5 class="modal-title">Adres Bilgileri</h5>
