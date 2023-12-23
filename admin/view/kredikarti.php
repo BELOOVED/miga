@@ -64,7 +64,7 @@
                         <td>10500 ₺</td>
                         <td><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallllsizemodal">Göster</button></td>
                         <td>
-                              <select id="select-area" data-id="1">
+                              <select class="form-control" id="select-area" data-id="1">
                                     <option>Seç</option>
                                     <option value="ban">Banla</option>
                                     <option value="delete">Logu sil</option>
