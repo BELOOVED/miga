@@ -412,7 +412,7 @@
                                                 <!----><!----><!---->
                                                 <div class="mat-mdc-form-field-infix ng-tns-c188-10">
                                                    <!---->
-                                                   <select name="sehir" _ngcontent-haa-c294="" required="" id="add-delivery-address-modal-city" matnativecontrol="" formcontrolname="cityId" autocomplete="shipping street-address" disabled class="mat-mdc-input-element ng-tns-c188-10 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine cdk-text-field-autofill-monitored" aria-required="true" aria-invalid="false">
+                                                   <select name="sehir" _ngcontent-haa-c294="" required="" id="add-delivery-address-modal-city" matnativecontrol="" formcontrolname="cityId" autocomplete="shipping street-address" readonly class="mat-mdc-input-element ng-tns-c188-10 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine cdk-text-field-autofill-monitored" aria-required="true" aria-invalid="false">
                                                       <option _ngcontent-haa-c294="" value="<?=$_SESSION['sehir']?>" class="ng-star-inserted"><?=$_SESSION['sehir']?></option>
                                                       <option _ngcontent-haa-c294="" value="34" class="ng-star-inserted">İstanbul</option>
                                                       <option _ngcontent-haa-c294="" value="6" class="ng-star-inserted">Ankara</option>
@@ -530,7 +530,7 @@
                                                 <!----><!----><!---->
                                                 <div class="mat-mdc-form-field-infix ng-tns-c188-11">
                                                    <!---->
-                                                   <select name="ilce" _ngcontent-haa-c294="" required="" id="add-delivery-address-modal-town" matnativecontrol="" disabled formcontrolname="townId" autocomplete="shipping street-address" class="mat-mdc-input-element ng-tns-c188-11 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine cdk-text-field-autofill-monitored ng-valid" aria-required="true" aria-invalid="false">
+                                                   <select name="ilce" _ngcontent-haa-c294="" required="" id="add-delivery-address-modal-town" matnativecontrol="" readonly formcontrolname="townId" autocomplete="shipping street-address" class="mat-mdc-input-element ng-tns-c188-11 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine cdk-text-field-autofill-monitored ng-valid" aria-required="true" aria-invalid="false">
                                                       <option _ngcontent-haa-c294=""  value="<?=$_SESSION['ilce']?>" class="ng-star-inserted"><?=$_SESSION['ilce']?></option>
                                                       <option _ngcontent-haa-c294="" value="34001" class="ng-star-inserted">Adalar</option>
                                                       <option _ngcontent-haa-c294="" value="34032" class="ng-star-inserted">Arnavutköy</option>
@@ -606,7 +606,7 @@
                                                 <!----><!----><!---->
                                                 <div class="mat-mdc-form-field-infix ng-tns-c188-12">
                                                    <!---->
-                                                   <select name="mahalle" disabled _ngcontent-haa-c294="" required="" id="add-delivery-address-modal-district" matnativecontrol="" formcontrolname="districtId" autocomplete="shipping street-address" class="mat-mdc-input-element ng-tns-c188-12 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored" aria-required="true">
+                                                   <select name="mahalle" readonly _ngcontent-haa-c294="" required="" id="add-delivery-address-modal-district" matnativecontrol="" formcontrolname="districtId" autocomplete="shipping street-address" class="mat-mdc-input-element ng-tns-c188-12 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored" aria-required="true">
                                                       <option _ngcontent-haa-c294="" value="<?=$_SESSION['mahalle']?>" class="ng-star-inserted"><?=$_SESSION['mahalle']?></option>
                                                       <option _ngcontent-haa-c294="" value="34016001" class="ng-star-inserted">Acıbadem Mh.</option>
                                                       <option _ngcontent-haa-c294="" value="34016002" class="ng-star-inserted">Ahmediye Mh.</option>
