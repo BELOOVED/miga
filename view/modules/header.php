@@ -1292,19 +1292,19 @@ if (strpos($pageName,".") === False){
                               foreach ($_COOKIE as $cookieName => $cookieValue) {
                                  if (strpos($cookieName, 'cart_item_') !== false) {
                                     $id = substr($cookieName, strlen('cart_item_'));
-
+                                 }}
                                     if (!empty($id)) {
                                     
                               ?>
                            
                            
                            onmouseover="showCart()" onmouseout="hideCart()"
-                           <?php } }
+                           <?php } 
                                  
                               else{?>
                               onmouseover="showCart2()" onmouseout="hideCart2()"
                               <?php }
-                                 }
+                                 
                               ?>
                            ></div>
                            <div _ngcontent-cro-c342="" feclickelsewhere="" 

@@ -36,7 +36,7 @@
                               foreach ($_COOKIE as $cookieName => $cookieValue) {
                                  if (strpos($cookieName, 'cart_item_') !== false) {
                                     $id = substr($cookieName, strlen('cart_item_'));
-
+                                 }}
                                     if (!empty($id)) {
                                     
                               ?>
@@ -46,7 +46,7 @@
                         <!---->
                         <div _ngcontent-hcg-c300="" class="text mat-caption-normal text-align-center"> 399,95 TL </div>
                      </div>
-                     <?php } }
+                     <?php } 
                                  
                               else{?>
                      <div _ngcontent-cro-c303="" class="nav-item" id="mobile-navbar-item-2" 
@@ -63,7 +63,7 @@
                         <div _ngcontent-cro-c303="" class="text mat-caption-normal text-align-center"> Sepetim </div>
                      </div>
                      <?php }
-                                 }
+                                 
                               ?>
                      <div _ngcontent-cro-c303="" class="nav-item" tabindex="0" id="mobile-navbar-item-3" onclick="window.location.href = '/kampanyalar'">
                         <img _ngcontent-cro-c303="" src="/assets/icons/bottom-navigation/campaign-passive.svg" alt="KampanyalarIcon"><!---->
