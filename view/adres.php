@@ -325,21 +325,21 @@
                                           <!---->
                                           <div class="mat-mdc-text-field-wrapper mdc-text-field ng-tns-c188-8 mdc-text-field--outlined">
                                              <!---->
-                                             <div class="mat-mdc-form-field-flex ng-tns-c188-8">
-                                                <div matformfieldnotchedoutline="" class="mdc-notched-outline ng-tns-c188-8 mdc-notched-outline--upgraded ng-star-inserted">
+                                             <div class="mat-mdc-form-field-flex ng-tns-c188-9">
+                                                <div matformfieldnotchedoutline="" class="mdc-notched-outline ng-tns-c188-9 mdc-notched-outline--notched mdc-notched-outline--upgraded ng-star-inserted">
                                                    <div class="mdc-notched-outline__leading"></div>
-                                                   <div class="mdc-notched-outline__notch">
-                                                      <label matformfieldfloatinglabel="" class="mdc-floating-label mat-mdc-floating-label ng-tns-c188-8 ng-star-inserted" id="mat-mdc-form-field-label-4" for="last-name" aria-owns="last-name" style="">
-                                                         <mat-label _ngcontent-haa-c294="" class="ng-tns-c188-8">Soyad</mat-label>
-                                                         <span aria-hidden="true" class="mat-mdc-form-field-required-marker mdc-floating-label--required ng-tns-c188-8 ng-star-inserted"></span><!---->
+                                                   <div class="mdc-notched-outline__notch" style="width: calc(65px * var(--mat-mdc-form-field-floating-label-scale, 0.75) + 9px);">
+                                                      <label matformfieldfloatinglabel="" class="mdc-floating-label mat-mdc-floating-label ng-tns-c188-9 mdc-floating-label--float-above ng-star-inserted" id="mat-mdc-form-field-label-6" for="phone-number" aria-owns="phone-number" style="">
+                                                         <mat-label _ngcontent-haa-c294="" class="ng-tns-c188-9">Soyad</mat-label>
+                                                         <span aria-hidden="true" class="mat-mdc-form-field-required-marker mdc-floating-label--required ng-tns-c188-9 ng-star-inserted"></span><!---->
                                                       </label>
                                                       <!----><!----><!---->
                                                    </div>
                                                    <div class="mdc-notched-outline__trailing"></div>
                                                 </div>
                                                 <!----><!----><!---->
-                                                <div class="mat-mdc-form-field-infix ng-tns-c188-8">
-                                                   <!----><input name="soyadi" _ngcontent-haa-c294="" id="last-name" fefontfamilycheck="" matinput="" required="" type="text" formcontrolname="lastName" class="mat-mdc-input-element ng-tns-c188-8 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored" aria-required="true">
+                                                <div class="mat-mdc-form-field-infix ng-tns-c188-9">
+                                                   <!----><input name="soyadi" _ngcontent-haa-c294="" id="phone-number" matinput="" fefontfamilycheck="" required="" type="text" formcontrolname="phoneNumber" class="mat-mdc-input-element ng-tns-c188-9 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine ng-valid cdk-text-field-autofill-monitored" aria-invalid="false" aria-required="true">
                                                 </div>
                                                 <!----><!---->
                                              </div>
