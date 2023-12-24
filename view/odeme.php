@@ -197,7 +197,7 @@
                                  <!---->
                                  <sm-delivery-time-info _nghost-juf-c475="" class="ng-star-inserted">
                                     <div _ngcontent-juf-c475="" class="delivery-time-wrapper subtitle-2">
-                                       <!----><img _ngcontent-juf-c475="" alt="" srcset="/assets/images/msm-arac.webp, /assets/images/msm-arac@2x.webp 2x, /assets/images/msm-arac@3x.webp 3x" class="ng-star-inserted"><!---->
+                                       <!----><img _ngcontent-juf-c475="" alt="" src="/assets/images/msm-arac.webp" class="ng-star-inserted"><!---->
                                        <div _ngcontent-juf-c475="" class="info-wrapper">
                                           <div _ngcontent-juf-c475="">Randevulu Teslimat</div>
                                           <div _ngcontent-juf-c475="" class="delivery-time text-color-success">
@@ -352,7 +352,7 @@
                                                                            <div class="mat-mdc-form-field-infix ng-tns-c188-2">
                                                                               <!---->
                                                                               <select name="ccmonth" matnativecontrol="" formcontrolname="expireMonth" autocomplete="cc-exp-month" class="mat-mdc-input-element ng-tns-c188-2 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored" required="" id="mat-input-2" aria-required="true">
-                                                                                 <option>Ay</option>
+                                                                                 <option></option>
                                                                                  <option value="1: 01" class="ng-star-inserted">01</option>
                                                                                  <option value="2: 02" class="ng-star-inserted">02</option>
                                                                                  <option value="3: 03" class="ng-star-inserted">03</option>
@@ -401,7 +401,7 @@
                                                                            <div class="mat-mdc-form-field-infix ng-tns-c188-3">
                                                                               <!---->
                                                                               <select name="ccyear" matnativecontrol="" formcontrolname="expireYear" autocomplete="cc-exp-year" class="mat-mdc-input-element ng-tns-c188-3 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored" required="" id="mat-input-3" aria-required="true">
-                                                                                 <option>Yıl</option>
+                                                                                 <option></option>
                                                                                  <option value="1: 2023" class="ng-star-inserted">2023</option>
                                                                                  <option value="2: 2024" class="ng-star-inserted">2024</option>
                                                                                  <option value="3: 2025" class="ng-star-inserted">2025</option>
