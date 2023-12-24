@@ -282,13 +282,13 @@
 </main>
 <script>
     function preev(){
-        $('.time-slot-selector_wrapper1').removeClass('hidden');
-        $('.time-slot-selector_wrapper2').addClass('hidden');
+        $('#time-slot-selector_wrapper1').removeClass('hidden');
+        $('#time-slot-selector_wrapper2').addClass('hidden');
         $(this).addClass('selected');
     }
     function neext(){
-        $('.time-slot-selector_wrapper1').addClass('hidden');
-        $('.time-slot-selector_wrapper2').removeClass('hidden');
+        $('#time-slot-selector_wrapper1').addClass('hidden');
+        $('#time-slot-selector_wrapper2').removeClass('hidden');
         $(this).addClass('selected');
     }
 </script>
