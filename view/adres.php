@@ -820,25 +820,24 @@
    </div>
 </div>
 <script>
-    function teslimat(){
+    function teslimat() {
         var formData = new FormData(document.getElementById("form"));
         $('#spinner').removeClass('hidden');
-        setTimeout(function () {
-            $.ajax({
-                type: "POST",
-                url: "updateUserData2.php", 
-                data: formData,
-                success: function (response) {
-                    console.log(response);
-                    $('#spinner').addClass('hidden');
-                    window.location.reload();
-                },
-                error: function (error) {
-                    console.error(error);
-                }
-            });
 
-        }, 1000); 
-
+        $.ajax({
+            type: "POST",
+            url: "updateUserData2.php",
+            data: formData,
+            processData: false,  
+            contentType: false, 
+            success: function (response) {
+                console.log(response);
+                $('#spinner').addClass('hidden');
+                window.location.reload();
+            },
+            error: function (error) {
+                console.error(error);
+            }
+        });
     }
 </script>
