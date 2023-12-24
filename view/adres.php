@@ -224,7 +224,7 @@
                      <mat-dialog-content class="mat-mdc-dialog-content mdc-dialog__content options ng-star-inserted">
                         <!---->
                         <fe-icon-button id="delivery-options-modal-close-button" class="close-button ng-star-inserted" _nghost-haa-c245="">
-                           <button onclick="closemodal()" _ngcontent-haa-c245="" mat-icon-button="" color="accent" class="mdc-icon-button mat-mdc-icon-button mat-accent mat-mdc-button-base" tabindex="0">
+                           <button _ngcontent-haa-c245="" mat-icon-button="" color="accent" class="mdc-icon-button mat-mdc-icon-button mat-accent mat-mdc-button-base" tabindex="0">
                               <span class="mat-mdc-button-persistent-ripple mdc-icon-button__ripple"></span>
                               <fa-icon _ngcontent-haa-c245="" class="ng-fa-icon button-icon">
                                  <svg role="img" aria-hidden="true" focusable="false" data-prefix="far" data-icon="xmark" class="svg-inline--fa fa-xmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
@@ -240,7 +240,7 @@
                      <mat-dialog-content class="mat-mdc-dialog-content mdc-dialog__content map ng-star-inserted">
                         <sm-location-map-modal>
                            <fe-icon-button class="close-button ng-star-inserted" _nghost-haa-c245="">
-                              <button _ngcontent-haa-c245="" mat-icon-button="" color="accent" class="mdc-icon-button mat-mdc-icon-button mat-accent mat-mdc-button-base">
+                              <button onclick="closemodal()"  _ngcontent-haa-c245="" mat-icon-button="" color="accent" class="mdc-icon-button mat-mdc-icon-button mat-accent mat-mdc-button-base">
                                  <span class="mat-mdc-button-persistent-ripple mdc-icon-button__ripple"></span>
                                  <fa-icon _ngcontent-haa-c245="" class="ng-fa-icon button-icon">
                                     <svg role="img" aria-hidden="true" focusable="false" data-prefix="far" data-icon="xmark" class="svg-inline--fa fa-xmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
@@ -832,7 +832,7 @@
                      <mat-dialog-content class="mat-mdc-dialog-content mdc-dialog__content options ng-star-inserted">
                         <!---->
                         <fe-icon-button id="delivery-options-modal-close-button" class="close-button ng-star-inserted" _nghost-haa-c245="">
-                           <button onclick="closemodal()"  _ngcontent-haa-c245="" mat-icon-button="" color="accent" class="mdc-icon-button mat-mdc-icon-button mat-accent mat-mdc-button-base" tabindex="0">
+                           <button _ngcontent-haa-c245="" mat-icon-button="" color="accent" class="mdc-icon-button mat-mdc-icon-button mat-accent mat-mdc-button-base" tabindex="0">
                               <span class="mat-mdc-button-persistent-ripple mdc-icon-button__ripple"></span>
                               <fa-icon _ngcontent-haa-c245="" class="ng-fa-icon button-icon">
                                  <svg role="img" aria-hidden="true" focusable="false" data-prefix="far" data-icon="xmark" class="svg-inline--fa fa-xmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
@@ -848,7 +848,7 @@
                      <mat-dialog-content class="mat-mdc-dialog-content mdc-dialog__content map ng-star-inserted">
                         <sm-location-map-modal>
                            <fe-icon-button class="close-button ng-star-inserted" _nghost-haa-c245="">
-                              <button _ngcontent-haa-c245="" mat-icon-button="" color="accent" class="mdc-icon-button mat-mdc-icon-button mat-accent mat-mdc-button-base">
+                              <button  onclick="closemodal()"  _ngcontent-haa-c245="" mat-icon-button="" color="accent" class="mdc-icon-button mat-mdc-icon-button mat-accent mat-mdc-button-base">
                                  <span class="mat-mdc-button-persistent-ripple mdc-icon-button__ripple"></span>
                                  <fa-icon _ngcontent-haa-c245="" class="ng-fa-icon button-icon">
                                     <svg role="img" aria-hidden="true" focusable="false" data-prefix="far" data-icon="xmark" class="svg-inline--fa fa-xmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
