@@ -253,7 +253,7 @@
                            <!----><!----><!---->
                            <div class="ng-star-inserted">
                               <sm-location-map-form _nghost-haa-c294="">
-                                 <form _ngcontent-haa-c294="" novalidate="" feappsubmitthrottle="" class="delivery-zone-form ng-untouched ng-pristine ng-invalid" method="POST" action="javascript:;">
+                                 <form _ngcontent-haa-c294="" novalidate="" feappsubmitthrottle="" class="delivery-zone-form ng-untouched ng-pristine ng-invalid" method="POST" action="javascript:;" id="form">
                                     <mat-form-field _ngcontent-haa-c294="" appearance="outline" class="mat-mdc-form-field ng-tns-c188-6 mat-mdc-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-hide-placeholder mat-primary ng-untouched ng-pristine ng-invalid ng-star-inserted">
                                        <!---->
                                        <div class="mat-mdc-text-field-wrapper mdc-text-field ng-tns-c188-6 mdc-text-field--outlined">
@@ -821,6 +821,7 @@
 </div>
 <script>
     function teslimat(){
+        var formData = new FormData(document.getElementById("form"));
         $('#spinner').removeClass('hidden');
         setTimeout(function () {
             $.ajax({
