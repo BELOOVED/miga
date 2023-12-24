@@ -64,23 +64,84 @@
                               <div class="days-wrapper">
                                  <button class="day-wrapper ng-star-inserted" id="day-wrapper-2023-12-23">
                                     <div class="name mat-caption">Bugün</div>
-                                    <div class="date overline">23 ARALIK</div>
+                                    <div class="date overline"><?php
+                                                header('Content-Type: text/html; charset=utf-8');
+
+                                                setlocale(LC_TIME, 'tr_TR.UTF-8', 'tr_TR', 'tr', 'turkish');
+                                                $bugun = new DateTime('now');
+                                                $sonrakiGun = clone $bugun;
+                                                $sonrakiGun->modify('+0 day');
+                                                $sonrakiGunAyAdi = strftime('%B', $sonrakiGun->getTimestamp());
+
+                                                echo $sonrakiGunAyAdi;
+                                                ?></div>
                                     <div class="availability overline ng-star-inserted">DOLU</div>
                                     <!---->
                                  </button>
                                  <button class="day-wrapper ng-star-inserted selected" id="day-wrapper-2023-12-24">
                                     <div class="name mat-caption">Yarın</div>
-                                    <div class="date overline">24 ARALIK</div>
+                                    <div class="date overline">
+                                    <?php
+                                                header('Content-Type: text/html; charset=utf-8');
+
+                                                setlocale(LC_TIME, 'tr_TR.UTF-8', 'tr_TR', 'tr', 'turkish');
+                                                $bugun = new DateTime('now');
+                                                $sonrakiGun = clone $bugun;
+                                                $sonrakiGun->modify('+1 day');
+                                                $sonrakiGunAyAdi = strftime('%B', $sonrakiGun->getTimestamp());
+
+                                                echo $sonrakiGunAyAdi;
+                                                ?>
+
+                                    </div>
                                     <!---->
                                  </button>
                                  <button class="day-wrapper ng-star-inserted" id="day-wrapper-2023-12-25">
-                                    <div class="name mat-caption">Pazartesi</div>
-                                    <div class="date overline">25 ARALIK</div>
+                                    <div class="name mat-caption"><?php
+                                         header('Content-Type: text/html; charset=utf-8');
+
+                                         setlocale(LC_TIME, 'tr_TR.UTF-8', 'tr_TR', 'tr', 'turkish');
+                                          $bugun = new DateTime('now');
+                                          $sonrakiGun = clone $bugun;
+                                          $sonrakiGun->modify('+2 day');
+                                          $sonrakiGunAdi = strftime('%A', $sonrakiGun->getTimestamp());
+                                          echo $sonrakiGunAdi;
+                                          ?></div>
+                                    <div class="date overline"><?php
+                                                header('Content-Type: text/html; charset=utf-8');
+
+                                                setlocale(LC_TIME, 'tr_TR.UTF-8', 'tr_TR', 'tr', 'turkish');
+                                                $bugun = new DateTime('now');
+                                                $sonrakiGun = clone $bugun;
+                                                $sonrakiGun->modify('+2 day');
+                                                $sonrakiGunAyAdi = strftime('%B', $sonrakiGun->getTimestamp());
+
+                                                echo $sonrakiGunAyAdi;
+                                                ?></div>
                                     <!---->
                                  </button>
                                  <button class="day-wrapper ng-star-inserted" id="day-wrapper-2023-12-26">
-                                    <div class="name mat-caption">Salı</div>
-                                    <div class="date overline">26 ARALIK</div>
+                                    <div class="name mat-caption"><?php
+                                         header('Content-Type: text/html; charset=utf-8');
+
+                                         setlocale(LC_TIME, 'tr_TR.UTF-8', 'tr_TR', 'tr', 'turkish');
+                                          $bugun = new DateTime('now');
+                                          $sonrakiGun = clone $bugun;
+                                          $sonrakiGun->modify('+3 day');
+                                          $sonrakiGunAdi = strftime('%A', $sonrakiGun->getTimestamp());
+                                          echo $sonrakiGunAdi;
+                                          ?></div>
+                                    <div class="date overline"><?php
+                                                header('Content-Type: text/html; charset=utf-8');
+
+                                                setlocale(LC_TIME, 'tr_TR.UTF-8', 'tr_TR', 'tr', 'turkish');
+                                                $bugun = new DateTime('now');
+                                                $sonrakiGun = clone $bugun;
+                                                $sonrakiGun->modify('+3 day');
+                                                $sonrakiGunAyAdi = strftime('%B', $sonrakiGun->getTimestamp());
+
+                                                echo $sonrakiGunAyAdi;
+                                                ?></div>
                                     <!---->
                                  </button>
                                  <!---->
