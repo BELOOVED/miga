@@ -82,7 +82,7 @@
                                           <!----><!----><!---->
                                           <div class="delivery-address">
                                              <div class="mat-caption-bold">ev</div>
-                                             <div class="mat-caption-normal delivery-address__content ng-star-inserted"> Cevizlik Mh. No: 13 Kat: 12 Daire: 13 Bakırköy/İstanbul [Cevizlik, Dantelacı Sk. 19/C, 34142 Bakırköy/İstanbul, Türkiye] | ev </div>
+                                             <div class="mat-caption-normal delivery-address__content ng-star-inserted"> <?=$_SESSION["mahalle"]?> Mh. No: <?=$_SESSION["bina_no"]?> Kat: <?=$_SESSION["kat_no"]?> Daire: <?=$_SESSION["daire_no"]?> <?=$_SESSION["ilce"]?>/<?=$_SESSION["sehir"]?> </div>
                                              <!---->
                                           </div>
                                           <!---->
@@ -156,7 +156,7 @@
                                        <div _ngcontent-juf-c475="" class="info-wrapper">
                                           <div _ngcontent-juf-c475="">Randevulu Teslimat</div>
                                           <div _ngcontent-juf-c475="" class="delivery-time text-color-success">
-                                             25 Aralık Pazartesi (Yarın)<span _ngcontent-juf-c475="" class="ng-star-inserted">, 14:00 - 22:00</span><!---->
+                                          <?=$_SESSION["selected_date"]?> (<?=$_SESSION["selected_name"]?>)<span _ngcontent-juf-c475="" class="ng-star-inserted">, 14:00 - 22:00</span><!---->
                                           </div>
                                        </div>
                                     </div>

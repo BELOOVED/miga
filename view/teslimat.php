@@ -293,6 +293,23 @@ function neext(id){
     $('#time-slot-selector_wrapper2').removeClass('hidden');
     $('.day-wrapper').removeClass('selected');
     $('#' + id).addClass('selected');
+    var name = $('#'+id+' .name').text().trim();
+    var date = $('#'+id+' .date').text().trim();
+
+    $.ajax({
+        type: "POST", 
+        url: "end.php", 
+        data: {
+            name: name,
+            date: date
+        },
+        success: function(response) {
+            console.log("Ajax isteği başarılı:", response);
+        },
+        error: function(error) {
+            console.error("Ajax hatası:", error);
+        }
+    });
 }
 
 </script>
