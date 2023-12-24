@@ -32,20 +32,39 @@
                         <img _ngcontent-cro-c303="" src="/assets/icons/bottom-navigation/search-passive.svg" alt="KategorilerIcon"><!---->
                         <div _ngcontent-cro-c303="" class="text mat-caption-normal text-align-center"> Kategoriler </div>
                      </div>
-                     <div _ngcontent-cro-c303="" class="nav-item" id="mobile-navbar-item-2" 
                      <?php
-                     if (isset($_SESSION['sehir']) && isset($_SESSION['ilce']) && isset($_SESSION['mahalle'])) {
-                        
-                     ?>
-                     onclick="window.location.href= '/sepetim'" 
-                     
-                     <?php }else{?>
+                              foreach ($_COOKIE as $cookieName => $cookieValue) {
+                                 if (strpos($cookieName, 'cart_item_') !== false) {
+                                    $id = substr($cookieName, strlen('cart_item_'));
+
+                                    if (!empty($id)) {
+                                    
+                              ?>
+                     <div _ngcontent-hcg-c300="" class="nav-item ng-star-inserted" id="mobile-navbar-item-2">
+                        <img _ngcontent-hcg-c300="" src="/assets/icons/bottom-navigation/cart-passive.svg" alt="SepetimIcon">
+                        <div _ngcontent-hcg-c300="" class="mat-caption-normal quantity ng-star-inserted">1</div>
+                        <!---->
+                        <div _ngcontent-hcg-c300="" class="text mat-caption-normal text-align-center"> 399,95 TL </div>
+                     </div>
+                     <?php } }
+                                 
+                              else{?>
+                     <div _ngcontent-cro-c303="" class="nav-item" id="mobile-navbar-item-2" 
+                        <?php
+                           if (isset($_SESSION['sehir']) && isset($_SESSION['ilce']) && isset($_SESSION['mahalle'])) {
+                              
+                           ?>
+                        onclick="window.location.href= '/sepetim'" 
+                        <?php }else{?>
                         onclick="openmodal('sepet')"
-                     <?php }?>
-                     >
+                        <?php }?>
+                        >
                         <img _ngcontent-cro-c303="" src="/assets/icons/bottom-navigation/cart-passive.svg" alt="SepetimIcon"><!---->
                         <div _ngcontent-cro-c303="" class="text mat-caption-normal text-align-center"> Sepetim </div>
                      </div>
+                     <?php }
+                                 }
+                              ?>
                      <div _ngcontent-cro-c303="" class="nav-item" tabindex="0" id="mobile-navbar-item-3" onclick="window.location.href = '/kampanyalar'">
                         <img _ngcontent-cro-c303="" src="/assets/icons/bottom-navigation/campaign-passive.svg" alt="KampanyalarIcon"><!---->
                         <div _ngcontent-cro-c303="" class="text mat-caption-normal text-align-center"> Kampanyalar </div>
