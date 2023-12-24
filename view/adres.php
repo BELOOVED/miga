@@ -258,24 +258,24 @@
                                        <!---->
                                        <div class="mat-mdc-text-field-wrapper mdc-text-field ng-tns-c188-6 mdc-text-field--outlined">
                                           <!---->
-                                          <div class="mat-mdc-form-field-flex ng-tns-c188-6">
-                                             <div matformfieldnotchedoutline="" class="mdc-notched-outline ng-tns-c188-6 mdc-notched-outline--upgraded ng-star-inserted">
-                                                <div class="mdc-notched-outline__leading"></div>
-                                                <div class="mdc-notched-outline__notch">
-                                                   <label matformfieldfloatinglabel="" class="mdc-floating-label mat-mdc-floating-label ng-tns-c188-6 ng-star-inserted" id="mat-mdc-form-field-label-0" for="location-name" aria-owns="location-name" style="">
-                                                      <mat-label _ngcontent-haa-c294="" class="ng-tns-c188-6">Adres İsmi, Örn: Ev</mat-label>
-                                                      <span aria-hidden="true" class="mat-mdc-form-field-required-marker mdc-floating-label--required ng-tns-c188-6 ng-star-inserted"></span><!---->
-                                                   </label>
-                                                   <!----><!----><!---->
+                                          <div class="mat-mdc-form-field-flex ng-tns-c188-9">
+                                                <div matformfieldnotchedoutline="" class="mdc-notched-outline ng-tns-c188-9 mdc-notched-outline--notched mdc-notched-outline--upgraded ng-star-inserted">
+                                                   <div class="mdc-notched-outline__leading"></div>
+                                                   <div class="mdc-notched-outline__notch" style="width: calc(65px * var(--mat-mdc-form-field-floating-label-scale, 0.75) + 9px);">
+                                                      <label matformfieldfloatinglabel="" class="mdc-floating-label mat-mdc-floating-label ng-tns-c188-9 mdc-floating-label--float-above ng-star-inserted" id="mat-mdc-form-field-label-6" for="phone-number" aria-owns="phone-number" style="">
+                                                         <mat-label _ngcontent-haa-c294="" class="ng-tns-c188-9">Adres İsmi, Örn: Ev</mat-label>
+                                                         <span aria-hidden="true" class="mat-mdc-form-field-required-marker mdc-floating-label--required ng-tns-c188-9 ng-star-inserted"></span><!---->
+                                                      </label>
+                                                      <!----><!----><!---->
+                                                   </div>
+                                                   <div class="mdc-notched-outline__trailing"></div>
                                                 </div>
-                                                <div class="mdc-notched-outline__trailing"></div>
+                                                <!----><!----><!---->
+                                                <div class="mat-mdc-form-field-infix ng-tns-c188-9">
+                                                   <!----><input name="adres_ismi" _ngcontent-haa-c294="" id="phone-number" matinput="" fefontfamilycheck="" required="" type="text" formcontrolname="phoneNumber" class="mat-mdc-input-element ng-tns-c188-9 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine ng-valid cdk-text-field-autofill-monitored" aria-invalid="false" aria-required="true">
+                                                </div>
+                                                <!----><!---->
                                              </div>
-                                             <!----><!----><!---->
-                                             <div class="mat-mdc-form-field-infix ng-tns-c188-6">
-                                                <!----><input name="adres_ismi" _ngcontent-haa-c294="" id="location-name" fefontfamilycheck="" matinput="" required="" type="text" formcontrolname="name" class="mat-mdc-input-element ng-tns-c188-6 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored" aria-required="true">
-                                             </div>
-                                             <!----><!---->
-                                          </div>
                                           <!---->
                                        </div>
                                        <div class="mat-mdc-form-field-subscript-wrapper mat-mdc-form-field-bottom-align ng-tns-c188-6">
