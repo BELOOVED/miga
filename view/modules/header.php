@@ -1129,12 +1129,6 @@ if (strpos($pageName,".") === False){
       <!-- Add the slick-theme.css if you want default styling -->
       <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
       <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
-      <script>
-         let logged = <?= $us['id'] ? 'true' : 'false' ?>;
-         let locate = <?= intval($main['location']) ?>;
-         let phone_status = <?= intval($main['phone_status']) ?>;
-         let passport_status = <?= intval($main['passport_status']) ?>;
-      </script>
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
       <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
       <style>
