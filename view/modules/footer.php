@@ -450,7 +450,7 @@
                                                    $sonrakiGun->modify('+0 day');
                                                    $sonrakiGunAyAdi = strftime('%B', $sonrakiGun->getTimestamp());
                                                    $sonrakiGunAdi = strftime('%e', $sonrakiGun->getTimestamp());
-                                                   echo $sonrakiGunAdi;
+                                                   echo $sonrakiGunAdi . ' ';
                                                    echo $sonrakiGunAyAdi;
                                                    ?></div>
                                              </div>
@@ -476,7 +476,7 @@
                                                    $sonrakiGun->modify('+1 day');
                                                    $sonrakiGunAyAdi = strftime('%B', $sonrakiGun->getTimestamp());
                                                    $sonrakiGunAdi = strftime('%e', $sonrakiGun->getTimestamp());
-                                                   echo $sonrakiGunAdi;
+                                                   echo $sonrakiGunAdi . ' ';
                                                    echo $sonrakiGunAyAdi;
                                                    ?></div>
                                              </div>
@@ -525,7 +525,7 @@
                                                       $sonrakiGun->modify('+2 day');
                                                       $sonrakiGunAyAdi = strftime('%B', $sonrakiGun->getTimestamp());
                                                       $sonrakiGunAdi = strftime('%e', $sonrakiGun->getTimestamp());
-                                                      echo $sonrakiGunAdi;
+                                                      echo $sonrakiGunAdi . ' ';
                                                       echo $sonrakiGunAyAdi;
                                                       ?>
                                                 </div>
@@ -574,7 +574,7 @@
                                                 $sonrakiGun->modify('+3 day');
                                                 $sonrakiGunAyAdi = strftime('%B', $sonrakiGun->getTimestamp());
                                                 $sonrakiGunAdi = strftime('%e', $sonrakiGun->getTimestamp());
-                                                echo $sonrakiGunAdi;
+                                                echo $sonrakiGunAdi . ' ';
                                                 echo $sonrakiGunAyAdi;
                                                 ?></div>
                                              </div>
