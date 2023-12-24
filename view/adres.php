@@ -126,7 +126,7 @@
                                              </fe-icon-button>
                                              <!---->
                                           </div>
-                                          <div class="address-detailed mat-caption-normal text-color-grey"> <?=$_SESSION["mahalle"]?>. No: <?=$_SESSION["bina_no"]?> Kat: <?=$_SESSION["kat_no"]?> Daire: <?=$_SESSION["daire_no"]?> <?=$_SESSION["ilce"]?>/<?=$_SESSION["sehir"]?> </div>
+                                          <div class="address-detailed mat-caption-normal text-color-grey"> <?=$_SESSION["mahalle"]?> Mh. No: <?=$_SESSION["bina_no"]?> Kat: <?=$_SESSION["kat_no"]?> Daire: <?=$_SESSION["daire_no"]?> <?=$_SESSION["ilce"]?>/<?=$_SESSION["sehir"]?> </div>
                                        </div>
                                     </label>
                                  </div>
