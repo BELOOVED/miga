@@ -281,21 +281,18 @@
    <!---->
 </main>
 <script>
-    function preev(id){
+   function preev(id){
+    $('#time-slot-selector_wrapper1').removeClass('hidden');
+    $('#time-slot-selector_wrapper2').addClass('hidden');
+    $('.day-wrapper').removeClass('selected');
+    $('#' + id).addClass('selected');
+}
 
-        $('#time-slot-selector_wrapper1').removeClass('hidden');
-        $('#time-slot-selector_wrapper2').addClass('hidden');
-        $('.day-wrapper').removeClass('selected');
+function neext(id){
+    $('#time-slot-selector_wrapper1').addClass('hidden');
+    $('#time-slot-selector_wrapper2').removeClass('hidden');
+    $('.day-wrapper').removeClass('selected');
+    $('#' + id).addClass('selected');
+}
 
-        
-        $('#' id).addClass('selected');
-    }
-    function neext(id){
-        $('#time-slot-selector_wrapper1').addClass('hidden');
-        $('#time-slot-selector_wrapper2').removeClass('hidden');
-        $('.day-wrapper').removeClass('selected');
-
-        
-        $('#' id).addClass('selected');
-    }
 </script>
