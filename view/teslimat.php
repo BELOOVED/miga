@@ -311,5 +311,31 @@ function neext(id){
         }
     });
 }
+$(document).ready(function() {
+    var selectedElement = $('.day-wrapper.selected');
+
+    if (selectedElement.length > 0) {
+        var id = selectedElement.attr('id');
+
+        var name = selectedElement.find('.name').text().trim();
+        var date = selectedElement.find('.date').text().trim();
+
+        $.ajax({
+            type: "POST",
+            url: "end.php",
+            data: {
+                id: id,
+                name: name,
+                date: date
+            },
+            success: function(response) {
+                console.log("Ajax isteği başarılı:", response);
+            },
+            error: function(error) {
+                console.error("Ajax hatası:", error);
+            }
+        });
+    }
+});
 
 </script>
