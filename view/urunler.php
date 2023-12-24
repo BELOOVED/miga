@@ -77,7 +77,6 @@ if ($detect->isMobile()) {?>
                         <?= $kategori['kategori_adi']; ?>
                     <?php endforeach; ?>
                      </h3>
-                     <div _ngcontent-nyw-c391="" class="mat-caption-normal text-color-white ng-star-inserted">264 sonuç bulundu</div>
                      <!---->
                   </div>
                </div>
@@ -139,7 +138,6 @@ if ($detect->isMobile()) {?>
                     <?php foreach ($kategoriler as $kategori): ?>
                         <?= $kategori['kategori_adi'] ?>
                     <?php endforeach; ?></h2>
-                              <div class="mat-caption-normal text-color-grey">264 ürün</div>
                            </div>
                            <mat-divider role="separator" class="mat-divider mat-divider-horizontal" aria-orientation="horizontal"></mat-divider>
                            <div class="filter__subcategories ng-star-inserted">
