@@ -62,7 +62,7 @@
                         <sm-time-slot-selector _ngcontent-haa-c500="">
                            <div class="time-slot-selector-wrapper ng-star-inserted">
                               <div class="days-wrapper">
-                                 <button class="day-wrapper ng-star-inserted" onclick="preev('1')" id="1">
+                                 <button class="day-wrapper ng-star-inserted" onclick="preev(1)" id="1">
                                     <div class="name mat-caption">Bugün</div>
                                     <div class="date overline"><?php
                                                 header('Content-Type: text/html; charset=utf-8');
@@ -79,7 +79,7 @@
                                     <div class="availability overline ng-star-inserted">DOLU</div>
                                     <!---->
                                  </button>
-                                 <button class="day-wrapper ng-star-inserted selected" onclick="neext('2')" id="2">
+                                 <button class="day-wrapper ng-star-inserted selected" onclick="neext(2)" id="2">
                                     <div class="name mat-caption">Yarın</div>
                                     <div class="date overline">
                                     <?php
@@ -98,7 +98,7 @@
                                     </div>
                                     <!---->
                                  </button>
-                                 <button class="day-wrapper ng-star-inserted" onclick="neext('3')" id="3">
+                                 <button class="day-wrapper ng-star-inserted" onclick="neext(3)" id="3">
                                     <div class="name mat-caption"><?php
                                          header('Content-Type: text/html; charset=utf-8');
 
@@ -123,7 +123,7 @@
                                                 ?></div>
                                     <!---->
                                  </button>
-                                 <button class="day-wrapper ng-star-inserted" onclick="neext('4')" id="4">
+                                 <button class="day-wrapper ng-star-inserted" onclick="neext(4)" id="4">
                                     <div class="name mat-caption"><?php
                                          header('Content-Type: text/html; charset=utf-8');
 
