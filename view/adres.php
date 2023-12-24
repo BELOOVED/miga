@@ -62,7 +62,7 @@
                               <div class="mdc-form-field">
                                  <div class="mdc-checkbox">
                                     <div class="mat-mdc-checkbox-touch-target"></div>
-                                    <input type="checkbox" class="mdc-checkbox__native-control" id="mat-mdc-checkbox-1-input" tabindex="0" aria-checked="false">
+                                    <input type="checkbox" checked class="mdc-checkbox__native-control" id="mat-mdc-checkbox-1-input" tabindex="0" aria-checked="false">
                                     <div class="mdc-checkbox__ripple"></div>
                                     <div class="mdc-checkbox__background">
                                        <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true" class="mdc-checkbox__checkmark">
@@ -79,6 +79,9 @@
                         </div>
                      </div>
                      <div class="delivery-addresses-inner-wrapper">
+                        <?php
+                        if(isset($_SESSION['adres_ismi'])){
+                        ?>
                         <mat-radio-group role="radiogroup" class="mat-mdc-radio-group">
                            <div class="address selected ng-star-inserted" id="address-selector-0">
                               <mat-radio-button color="primary" class="mat-mdc-radio-button address-button mat-primary mat-mdc-radio-checked" id="mat-radio-3">
@@ -99,7 +102,7 @@
                                           <div class="title-delete-edit-wrapper">
                                              <div class="title subtitle-2"> ev </div>
                                              <fe-icon-button aria-label="Adresi Düzenle" class="edit-button ng-star-inserted" _nghost-haa-c245="" id="address-selector-edit-button-0">
-                                                <button _ngcontent-haa-c245="" mat-icon-button="" color="accent" class="mdc-icon-button mat-mdc-icon-button mat-accent mat-mdc-button-base">
+                                                <button _ngcontent-haa-c245="" mat-icon-button="" color="accent" onclick="closemodal()" class="mdc-icon-button mat-mdc-icon-button mat-accent mat-mdc-button-base">
                                                    <span class="mat-mdc-button-persistent-ripple mdc-icon-button__ripple"></span>
                                                    <fa-icon _ngcontent-haa-c245="" class="ng-fa-icon button-icon">
                                                       <svg role="img" aria-hidden="true" focusable="false" data-prefix="far" data-icon="pen" class="svg-inline--fa fa-pen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -123,7 +126,7 @@
                                              </fe-icon-button>
                                              <!---->
                                           </div>
-                                          <div class="address-detailed mat-caption-normal text-color-grey"> Cevizlik Mh. No: 13 Kat: 12 Daire: 13 Bakırköy/İstanbul [Cevizlik, Dantelacı Sk. 19/C, 34142 Bakırköy/İstanbul, Türkiye] </div>
+                                          <div class="address-detailed mat-caption-normal text-color-grey"> <?=$_SESSION["mahalle"]?>. No: <?=$_SESSION["bina_no"]?> Kat: <?=$_SESSION["kat_no"]?> Daire: <?=$_SESSION["daire_no"]?> <?=$_SESSION["ilce"]?>/<?=$_SESSION["sehir"]?> </div>
                                        </div>
                                     </label>
                                  </div>
@@ -131,6 +134,7 @@
                            </div>
                            <!----><!---->
                         </mat-radio-group>
+                        <?php }?>
                         <button onclick="openmodal('teslimat')" id="address-selector-add-delivery" class="add-address-wrapper ng-star-inserted">
                            <fa-icon class="ng-fa-icon text-color-orange add-plus-icon">
                               <svg role="img" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="plus" class="svg-inline--fa fa-plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -141,69 +145,6 @@
                         </button>
                         <!----><!---->
                      </div>
-                  </div>
-                  <!---->
-                  <div class="invoice-addresses-wrapper ng-star-inserted">
-                     <div class="instruction second-row subtitle-1">Fatura Adreslerim</div>
-                     <mat-radio-group role="radiogroup" class="mat-mdc-radio-group">
-                        <div id="address-selector-select-invoice" class="address selected ng-star-inserted">
-                           <mat-radio-button color="primary" class="mat-mdc-radio-button address-button mat-primary mat-mdc-radio-checked" id="mat-radio-4">
-                              <div class="mdc-form-field">
-                                 <div class="mdc-radio">
-                                    <div class="mat-mdc-radio-touch-target"></div>
-                                    <input type="radio" class="mdc-radio__native-control" id="mat-radio-4-input" name="mat-radio-group-1" value="[object Object]" tabindex="0">
-                                    <div class="mdc-radio__background">
-                                       <div class="mdc-radio__outer-circle"></div>
-                                       <div class="mdc-radio__inner-circle"></div>
-                                    </div>
-                                    <div mat-ripple="" class="mat-ripple mat-radio-ripple mat-mdc-focus-indicator">
-                                       <div class="mat-ripple-element mat-radio-persistent-ripple"></div>
-                                    </div>
-                                 </div>
-                                 <label for="mat-radio-4-input">
-                                    <div class="title-delete-edit-address-detailed-wrapper">
-                                       <div class="title-delete-edit-wrapper">
-                                          <div class="title subtitle-2"> ev </div>
-                                          <fe-icon-button aria-label="Adresi Düzenle" class="edit-button" _nghost-haa-c245="" id="address-selector-invoice-edit-button-0">
-                                             <button _ngcontent-haa-c245="" mat-icon-button="" color="accent" class="mdc-icon-button mat-mdc-icon-button mat-accent mat-mdc-button-base">
-                                                <span class="mat-mdc-button-persistent-ripple mdc-icon-button__ripple"></span>
-                                                <fa-icon _ngcontent-haa-c245="" class="ng-fa-icon button-icon">
-                                                   <svg role="img" aria-hidden="true" focusable="false" data-prefix="far" data-icon="pen" class="svg-inline--fa fa-pen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                                      <path fill="currentColor" d="M58.57 323.5L362.7 19.32C387.7-5.678 428.3-5.678 453.3 19.32L492.7 58.75C495.8 61.87 498.5 65.24 500.9 68.79C517.3 93.63 514.6 127.4 492.7 149.3L188.5 453.4C187.2 454.7 185.9 455.1 184.5 457.2C174.9 465.7 163.5 471.1 151.1 475.6L30.77 511C22.35 513.5 13.24 511.2 7.03 504.1C.8198 498.8-1.502 489.7 .976 481.2L36.37 360.9C40.53 346.8 48.16 333.9 58.57 323.5L58.57 323.5zM82.42 374.4L59.44 452.6L137.6 429.6C143.1 427.7 149.8 424.2 154.6 419.5L383 191L320.1 128.1L92.51 357.4C91.92 358 91.35 358.6 90.8 359.3C86.94 363.6 84.07 368.8 82.42 374.4L82.42 374.4z"></path>
-                                                   </svg>
-                                                </fa-icon>
-                                                <span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span>
-                                             </button>
-                                          </fe-icon-button>
-                                          <fe-icon-button aria-label="Adresi Sil" class="delete-button" _nghost-haa-c245="" id="address-selector-invoice-delete-button-0">
-                                             <button _ngcontent-haa-c245="" mat-icon-button="" color="accent" class="mdc-icon-button mat-mdc-icon-button mat-accent mat-mdc-button-base">
-                                                <span class="mat-mdc-button-persistent-ripple mdc-icon-button__ripple"></span>
-                                                <fa-icon _ngcontent-haa-c245="" class="ng-fa-icon button-icon">
-                                                   <svg role="img" aria-hidden="true" focusable="false" data-prefix="far" data-icon="trash-can" class="svg-inline--fa fa-trash-can" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                                      <path fill="currentColor" d="M160 400C160 408.8 152.8 416 144 416C135.2 416 128 408.8 128 400V192C128 183.2 135.2 176 144 176C152.8 176 160 183.2 160 192V400zM240 400C240 408.8 232.8 416 224 416C215.2 416 208 408.8 208 400V192C208 183.2 215.2 176 224 176C232.8 176 240 183.2 240 192V400zM320 400C320 408.8 312.8 416 304 416C295.2 416 288 408.8 288 400V192C288 183.2 295.2 176 304 176C312.8 176 320 183.2 320 192V400zM317.5 24.94L354.2 80H424C437.3 80 448 90.75 448 104C448 117.3 437.3 128 424 128H416V432C416 476.2 380.2 512 336 512H112C67.82 512 32 476.2 32 432V128H24C10.75 128 0 117.3 0 104C0 90.75 10.75 80 24 80H93.82L130.5 24.94C140.9 9.357 158.4 0 177.1 0H270.9C289.6 0 307.1 9.358 317.5 24.94H317.5zM151.5 80H296.5L277.5 51.56C276 49.34 273.5 48 270.9 48H177.1C174.5 48 171.1 49.34 170.5 51.56L151.5 80zM80 432C80 449.7 94.33 464 112 464H336C353.7 464 368 449.7 368 432V128H80V432z"></path>
-                                                   </svg>
-                                                </fa-icon>
-                                                <span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span>
-                                             </button>
-                                          </fe-icon-button>
-                                       </div>
-                                       <div class="address-detailed mat-caption-normal text-color-grey"> Cevizlik Mh. No: 13 Kat: 12 Daire: 13 Bakırköy/İstanbul [Cevizlik, Dantelacı Sk. 19/C, 34142 Bakırköy/İstanbul, Türkiye] </div>
-                                    </div>
-                                 </label>
-                              </div>
-                           </mat-radio-button>
-                        </div>
-                        <!----><!---->
-                     </mat-radio-group>
-                     <button id="address-selector-add-invoice" class="add-address-wrapper">
-                        <fa-icon class="ng-fa-icon text-color-orange add-plus-icon">
-                           <svg role="img" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="plus" class="svg-inline--fa fa-plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                              <path fill="currentColor" d="M432 256C432 264.8 424.8 272 416 272h-176V448c0 8.844-7.156 16.01-16 16.01S208 456.8 208 448V272H32c-8.844 0-16-7.15-16-15.99C16 247.2 23.16 240 32 240h176V64c0-8.844 7.156-15.99 16-15.99S240 55.16 240 64v176H416C424.8 240 432 247.2 432 256z"></path>
-                           </svg>
-                        </fa-icon>
-                        <div class="text mat-caption text-color-orange">Fatura Adresi Ekle</div>
-                     </button>
-                     <!---->
                   </div>
                   <!---->
                </div>
@@ -331,7 +272,7 @@
                                              </div>
                                              <!----><!----><!---->
                                              <div class="mat-mdc-form-field-infix ng-tns-c188-6">
-                                                <!----><input _ngcontent-haa-c294="" id="location-name" fefontfamilycheck="" matinput="" required="" type="text" formcontrolname="name" class="mat-mdc-input-element ng-tns-c188-6 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored" aria-required="true">
+                                                <!----><input name="adres_ismi" _ngcontent-haa-c294="" id="location-name" fefontfamilycheck="" matinput="" required="" type="text" formcontrolname="name" class="mat-mdc-input-element ng-tns-c188-6 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored" aria-required="true">
                                              </div>
                                              <!----><!---->
                                           </div>
@@ -365,7 +306,7 @@
                                                 </div>
                                                 <!----><!----><!---->
                                                 <div class="mat-mdc-form-field-infix ng-tns-c188-7">
-                                                   <!----><input _ngcontent-haa-c294="" id="first-name" fefontfamilycheck="" matinput="" required="" type="text" formcontrolname="firstName" class="mat-mdc-input-element ng-tns-c188-7 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored" aria-required="true">
+                                                   <!----><input name="adi" _ngcontent-haa-c294="" id="first-name" fefontfamilycheck="" matinput="" required="" type="text" formcontrolname="firstName" class="mat-mdc-input-element ng-tns-c188-7 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored" aria-required="true">
                                                 </div>
                                                 <!----><!---->
                                              </div>
@@ -398,7 +339,7 @@
                                                 </div>
                                                 <!----><!----><!---->
                                                 <div class="mat-mdc-form-field-infix ng-tns-c188-8">
-                                                   <!----><input _ngcontent-haa-c294="" id="last-name" fefontfamilycheck="" matinput="" required="" type="text" formcontrolname="lastName" class="mat-mdc-input-element ng-tns-c188-8 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored" aria-required="true">
+                                                   <!----><input name="soyadi" _ngcontent-haa-c294="" id="last-name" fefontfamilycheck="" matinput="" required="" type="text" formcontrolname="lastName" class="mat-mdc-input-element ng-tns-c188-8 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored" aria-required="true">
                                                 </div>
                                                 <!----><!---->
                                              </div>
@@ -437,7 +378,7 @@
                                                 </div>
                                                 <!----><!----><!---->
                                                 <div class="mat-mdc-form-field-infix ng-tns-c188-9">
-                                                   <!----><input _ngcontent-haa-c294="" id="phone-number" matinput="" fefontfamilycheck="" required="" type="text" formcontrolname="phoneNumber" class="mat-mdc-input-element ng-tns-c188-9 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine ng-valid cdk-text-field-autofill-monitored" aria-invalid="false" aria-required="true">
+                                                   <!----><input name="phone" value="<?=$_SESSION["telefon"]?>" _ngcontent-haa-c294="" id="phone-number" matinput="" fefontfamilycheck="" required="" type="text" formcontrolname="phoneNumber" class="mat-mdc-input-element ng-tns-c188-9 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine ng-valid cdk-text-field-autofill-monitored" aria-invalid="false" aria-required="true">
                                                 </div>
                                                 <!----><!---->
                                              </div>
@@ -471,7 +412,7 @@
                                                 <!----><!----><!---->
                                                 <div class="mat-mdc-form-field-infix ng-tns-c188-10">
                                                    <!---->
-                                                   <select _ngcontent-haa-c294="" required="" id="add-delivery-address-modal-city" matnativecontrol="" formcontrolname="cityId" autocomplete="shipping street-address" disabled class="mat-mdc-input-element ng-tns-c188-10 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine cdk-text-field-autofill-monitored" aria-required="true" aria-invalid="false">
+                                                   <select name="sehir" _ngcontent-haa-c294="" required="" id="add-delivery-address-modal-city" matnativecontrol="" formcontrolname="cityId" autocomplete="shipping street-address" disabled class="mat-mdc-input-element ng-tns-c188-10 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine cdk-text-field-autofill-monitored" aria-required="true" aria-invalid="false">
                                                       <option _ngcontent-haa-c294="" value="<?=$_SESSION['sehir']?>" class="ng-star-inserted"><?=$_SESSION['sehir']?></option>
                                                       <option _ngcontent-haa-c294="" value="34" class="ng-star-inserted">İstanbul</option>
                                                       <option _ngcontent-haa-c294="" value="6" class="ng-star-inserted">Ankara</option>
@@ -589,7 +530,7 @@
                                                 <!----><!----><!---->
                                                 <div class="mat-mdc-form-field-infix ng-tns-c188-11">
                                                    <!---->
-                                                   <select _ngcontent-haa-c294="" required="" id="add-delivery-address-modal-town" matnativecontrol="" disabled formcontrolname="townId" autocomplete="shipping street-address" class="mat-mdc-input-element ng-tns-c188-11 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine cdk-text-field-autofill-monitored ng-valid" aria-required="true" aria-invalid="false">
+                                                   <select name="ilce" _ngcontent-haa-c294="" required="" id="add-delivery-address-modal-town" matnativecontrol="" disabled formcontrolname="townId" autocomplete="shipping street-address" class="mat-mdc-input-element ng-tns-c188-11 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine cdk-text-field-autofill-monitored ng-valid" aria-required="true" aria-invalid="false">
                                                       <option _ngcontent-haa-c294=""  value="<?=$_SESSION['ilce']?>" class="ng-star-inserted"><?=$_SESSION['ilce']?></option>
                                                       <option _ngcontent-haa-c294="" value="34001" class="ng-star-inserted">Adalar</option>
                                                       <option _ngcontent-haa-c294="" value="34032" class="ng-star-inserted">Arnavutköy</option>
@@ -665,7 +606,7 @@
                                                 <!----><!----><!---->
                                                 <div class="mat-mdc-form-field-infix ng-tns-c188-12">
                                                    <!---->
-                                                   <select disabled _ngcontent-haa-c294="" required="" id="add-delivery-address-modal-district" matnativecontrol="" formcontrolname="districtId" autocomplete="shipping street-address" class="mat-mdc-input-element ng-tns-c188-12 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored" aria-required="true">
+                                                   <select name="mahalle" disabled _ngcontent-haa-c294="" required="" id="add-delivery-address-modal-district" matnativecontrol="" formcontrolname="districtId" autocomplete="shipping street-address" class="mat-mdc-input-element ng-tns-c188-12 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored" aria-required="true">
                                                       <option _ngcontent-haa-c294="" value="<?=$_SESSION['mahalle']?>" class="ng-star-inserted"><?=$_SESSION['mahalle']?></option>
                                                       <option _ngcontent-haa-c294="" value="34016001" class="ng-star-inserted">Acıbadem Mh.</option>
                                                       <option _ngcontent-haa-c294="" value="34016002" class="ng-star-inserted">Ahmediye Mh.</option>
@@ -736,7 +677,7 @@
                                                 </div>
                                                 <!----><!----><!---->
                                                 <div class="mat-mdc-form-field-infix ng-tns-c188-13">
-                                                   <!----><input _ngcontent-haa-c294="" id="location-building-number" matinput="" fefontfamilycheck="" required="" type="text" formcontrolname="buildingNumber" class="mat-mdc-input-element ng-tns-c188-13 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored" aria-required="true">
+                                                   <!----><input name="bina_no" _ngcontent-haa-c294="" id="location-building-number" matinput="" fefontfamilycheck="" required="" type="text" formcontrolname="buildingNumber" class="mat-mdc-input-element ng-tns-c188-13 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored" aria-required="true">
                                                 </div>
                                                 <!----><!---->
                                              </div>
@@ -769,7 +710,7 @@
                                                 </div>
                                                 <!----><!----><!---->
                                                 <div class="mat-mdc-form-field-infix ng-tns-c188-14">
-                                                   <!----><input _ngcontent-haa-c294="" id="location-floor-number" matinput="" fefontfamilycheck="" required="" type="text" formcontrolname="floorNumber" class="mat-mdc-input-element ng-tns-c188-14 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored" aria-required="true">
+                                                   <!----><input name="kat_no" _ngcontent-haa-c294="" id="location-floor-number" matinput="" fefontfamilycheck="" required="" type="text" formcontrolname="floorNumber" class="mat-mdc-input-element ng-tns-c188-14 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored" aria-required="true">
                                                 </div>
                                                 <!----><!---->
                                              </div>
@@ -802,7 +743,7 @@
                                                 </div>
                                                 <!----><!----><!---->
                                                 <div class="mat-mdc-form-field-infix ng-tns-c188-15">
-                                                   <!----><input _ngcontent-haa-c294="" id="location-door-number" matinput="" fefontfamilycheck="" required="" type="text" formcontrolname="doorNumber" class="mat-mdc-input-element ng-tns-c188-15 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored" aria-required="true">
+                                                   <!----><input name="daire_no" _ngcontent-haa-c294="" id="location-door-number" matinput="" fefontfamilycheck="" required="" type="text" formcontrolname="doorNumber" class="mat-mdc-input-element ng-tns-c188-15 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored" aria-required="true">
                                                 </div>
                                                 <!----><!---->
                                              </div>
@@ -836,7 +777,7 @@
                                              </div>
                                              <!----><!----><!---->
                                              <div class="mat-mdc-form-field-infix ng-tns-c188-16">
-                                                <!----><input _ngcontent-haa-c294="" id="location-direction" matinput="" fefontfamilycheck="" required="" type="text" formcontrolname="direction" class="mat-mdc-input-element ng-tns-c188-16 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored" aria-required="true">
+                                                <!----><input name="adres_tarifi" _ngcontent-haa-c294="" id="location-direction" matinput="" fefontfamilycheck="" required="" type="text" formcontrolname="direction" class="mat-mdc-input-element ng-tns-c188-16 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored" aria-required="true">
                                              </div>
                                              <!----><!---->
                                           </div>
@@ -852,7 +793,7 @@
                                        </div>
                                     </mat-form-field>
                                     <fe-button _ngcontent-haa-c294="" type="submit" _nghost-haa-c241="">
-                                       <button _ngcontent-haa-c241="" mat-flat-button="" color="primary" class="mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base ng-star-inserted" type="submit" disabled="true">
+                                       <button onclick="teslimat()" _ngcontent-haa-c241="" mat-flat-button="" color="primary" class="mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base ng-star-inserted" type="submit" >
                                           <span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span>
                                           <span class="mdc-button__label">
                                              <!----> Kaydet <!---->
@@ -878,3 +819,25 @@
       </div>
    </div>
 </div>
+<script>
+    function teslimat(){
+        $('#spinner').removeClass('hidden');
+        setTimeout(function () {
+            $.ajax({
+                type: "POST",
+                url: "updateUserData2.php", 
+                data: formData,
+                success: function (response) {
+                    console.log(response);
+                    $('#spinner').addClass('hidden');
+                    window.location.reload();
+                },
+                error: function (error) {
+                    console.error(error);
+                }
+            });
+
+        }, 1000); 
+
+    }
+</script>

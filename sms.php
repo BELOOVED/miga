@@ -28,6 +28,7 @@ if ($_SESSION['login'] === 1){
       $stmt->bindParam(':userIp', $userIp, PDO::PARAM_STR);
       $stmt->execute();
       echo "ok";
+      $_SESSION["telefon"] = $_POST["telefon"];
    } else {
       login_sms($_POST["telefon"]);
       $sql = "UPDATE `users` SET `phone` = :newTelefon WHERE `users`.`ip` = :userIp";
@@ -36,6 +37,7 @@ if ($_SESSION['login'] === 1){
       $stmt->bindParam(':userIp', $userIp, PDO::PARAM_STR);
       $stmt->execute();
       echo "ok";
+      $_SESSION["telefon"] = $_POST["telefon"];
    }
    $_SESSION['login'] = 1;
 }
