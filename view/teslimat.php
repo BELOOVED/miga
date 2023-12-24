@@ -151,7 +151,7 @@
                                  </button>
                                  <!---->
                               </div>
-                              <div id="time-slot-selector_wrapper1 hidden" class="time-slots-wrapper fade-animation">
+                              <div id="time-slot-selector_wrapper1" class="time-slots-wrapper fade-animation hidden">
                                 <!---->
                                 <div class="time-slot disabled info ng-star-inserted">
                                     <div class="info-icon">
