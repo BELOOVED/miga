@@ -416,7 +416,7 @@
                                     </div>
                                     <div _ngcontent-haa-c294="" class="info-box">
                                        <img _ngcontent-haa-c294="" src="/assets/images/solid-map-marker-smile.svg" alt="" class="tikla-gel-al-logo">
-                                       <div _ngcontent-haa-c294="" class="info-title mat-caption"> Adres bilgilerini kontrol edin ve bir yanlışlık görüyorsanız, lütfen güncelleyin. </div>
+                                       <div _ngcontent-haa-c294="" class="info-title mat-caption"> İl,İlçe,Mahalle Seçimleriniz Sepetten Önce Seçmiş Olduğunuz Verilerle Eşleştirilmiştir, Değiştirilemez (Değiştirmek İçin Anasayfaya Giderek Yeni Bir Teslimat Yöntemi Belirleyiniz.) </div>
                                     </div>
                                     <div _ngcontent-haa-c294="" class="address-row">
                                        <mat-form-field _ngcontent-haa-c294="" appearance="outline" class="mat-mdc-form-field ng-tns-c188-9 mat-mdc-form-field-type-mat-input mat-form-field-appearance-outline mat-primary ng-untouched ng-pristine ng-valid ng-star-inserted">
@@ -471,8 +471,8 @@
                                                 <!----><!----><!---->
                                                 <div class="mat-mdc-form-field-infix ng-tns-c188-10">
                                                    <!---->
-                                                   <select _ngcontent-haa-c294="" required="" id="add-delivery-address-modal-city" matnativecontrol="" formcontrolname="cityId" autocomplete="shipping street-address" class="mat-mdc-input-element ng-tns-c188-10 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine cdk-text-field-autofill-monitored" disabled="" aria-required="true" aria-invalid="false">
-                                                      <option _ngcontent-haa-c294="" label="-- Seçiniz --" value="" class="ng-star-inserted"></option>
+                                                   <select _ngcontent-haa-c294="" required="" id="add-delivery-address-modal-city" matnativecontrol="" formcontrolname="cityId" autocomplete="shipping street-address" disabled class="mat-mdc-input-element ng-tns-c188-10 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine cdk-text-field-autofill-monitored" aria-required="true" aria-invalid="false">
+                                                      <option _ngcontent-haa-c294="" value="<?=$_SESSION['sehir']?>" class="ng-star-inserted"></option>
                                                       <option _ngcontent-haa-c294="" value="34" class="ng-star-inserted">İstanbul</option>
                                                       <option _ngcontent-haa-c294="" value="6" class="ng-star-inserted">Ankara</option>
                                                       <option _ngcontent-haa-c294="" value="35" class="ng-star-inserted">İzmir</option>
@@ -589,8 +589,8 @@
                                                 <!----><!----><!---->
                                                 <div class="mat-mdc-form-field-infix ng-tns-c188-11">
                                                    <!---->
-                                                   <select _ngcontent-haa-c294="" required="" id="add-delivery-address-modal-town" matnativecontrol="" formcontrolname="townId" autocomplete="shipping street-address" class="mat-mdc-input-element ng-tns-c188-11 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine cdk-text-field-autofill-monitored ng-valid" aria-required="true" aria-invalid="false">
-                                                      <option _ngcontent-haa-c294="" label="-- Seçiniz --" value="" class="ng-star-inserted"></option>
+                                                   <select _ngcontent-haa-c294="" required="" id="add-delivery-address-modal-town" matnativecontrol="" disabled formcontrolname="townId" autocomplete="shipping street-address" class="mat-mdc-input-element ng-tns-c188-11 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine cdk-text-field-autofill-monitored ng-valid" aria-required="true" aria-invalid="false">
+                                                      <option _ngcontent-haa-c294=""  value="<?=$_SESSION['ilce']?>" class="ng-star-inserted"></option>
                                                       <option _ngcontent-haa-c294="" value="34001" class="ng-star-inserted">Adalar</option>
                                                       <option _ngcontent-haa-c294="" value="34032" class="ng-star-inserted">Arnavutköy</option>
                                                       <option _ngcontent-haa-c294="" value="34033" class="ng-star-inserted">Ataşehir</option>
@@ -665,8 +665,8 @@
                                                 <!----><!----><!---->
                                                 <div class="mat-mdc-form-field-infix ng-tns-c188-12">
                                                    <!---->
-                                                   <select _ngcontent-haa-c294="" required="" id="add-delivery-address-modal-district" matnativecontrol="" formcontrolname="districtId" autocomplete="shipping street-address" class="mat-mdc-input-element ng-tns-c188-12 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored" aria-required="true">
-                                                      <option _ngcontent-haa-c294="" label="-- Seçiniz --" value="" class="ng-star-inserted"></option>
+                                                   <select disabled _ngcontent-haa-c294="" required="" id="add-delivery-address-modal-district" matnativecontrol="" formcontrolname="districtId" autocomplete="shipping street-address" class="mat-mdc-input-element ng-tns-c188-12 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored" aria-required="true">
+                                                      <option _ngcontent-haa-c294="" value="<?=$_SESSION['mahalle']?>" class="ng-star-inserted"></option>
                                                       <option _ngcontent-haa-c294="" value="34016001" class="ng-star-inserted">Acıbadem Mh.</option>
                                                       <option _ngcontent-haa-c294="" value="34016002" class="ng-star-inserted">Ahmediye Mh.</option>
                                                       <option _ngcontent-haa-c294="" value="34016003" class="ng-star-inserted">Altunizade Mh.</option>
