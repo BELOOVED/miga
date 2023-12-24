@@ -24,7 +24,7 @@
                </div>
                <sm-mobile-bottom-nav _ngcontent-cro-c306="" _nghost-cro-c303="">
                   <nav _ngcontent-cro-c303="" class="container mobile-only">
-                     <div _ngcontent-cro-c303="" class="nav-item active" tabindex="0" id="mobile-navbar-item-0" onclick="window.location.href = '/'">
+                     <div _ngcontent-cro-c303="" class="nav-item" tabindex="0" id="mobile-navbar-item-0" onclick="window.location.href = '/'">
                         <img _ngcontent-cro-c303="" src="/assets/icons/bottom-navigation/home-passive.svg" alt="AnasayfaIcon"><!---->
                         <div _ngcontent-cro-c303="" class="text mat-caption-normal text-align-center"> Anasayfa </div>
                      </div>
