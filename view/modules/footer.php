@@ -40,14 +40,8 @@
                                     if (!empty($id)) {
                                     
                               ?>
-                             <div <?php
-                           if (isset($_SESSION['sehir']) && isset($_SESSION['ilce']) && isset($_SESSION['mahalle'])) {
-                              
-                           ?>
-                        onclick="window.location.href= '/sepetim'" 
-                        <?php }else{?>
-                        onclick="openmodal('sepet')"
-                        <?php }?>  _ngcontent-hcg-c300="" class="nav-item ng-star-inserted" id="mobile-navbar-item-2" style="flex: 1 1 0;
+                              <style>[_nghost-hcg-c300]{position:fixed;bottom:0;left:0;z-index:1000}.container[_ngcontent-hcg-c300]{width:100vw;height:var(--mobile-bottom-nav-height);box-shadow:0 -2px 5px #0000000f;background-color:var(--basicColorWhite);display:flex}.container[_ngcontent-hcg-c300]   .nav-item[_ngcontent-hcg-c300]{flex:1 1 0;word-break:break-all;overflow:hidden;display:flex;flex-direction:column;align-items:center;padding-top:.625rem;padding-bottom:.5rem;position:relative}.container[_ngcontent-hcg-c300]   .nav-item.active[_ngcontent-hcg-c300]{color:var(--brandColorPrimary700)}.container[_ngcontent-hcg-c300]   .nav-item[_ngcontent-hcg-c300]   img[_ngcontent-hcg-c300]{width:1.25rem;height:1.25rem;margin-bottom:.125rem}.container[_ngcontent-hcg-c300]   .nav-item[_ngcontent-hcg-c300]   .quantity[_ngcontent-hcg-c300]{border:2px solid var(--basicColorWhite);display:flex;align-items:center;justify-content:center;background-color:var(--brandColorPrimary700);position:absolute;top:0;border-radius:50px;height:20px;width:20px;right:calc(50% - 1rem);transform:translate(50%);color:var(--basicColorWhite);font-size:.5rem}@media (max-width: 576px){.container[_ngcontent-hcg-c300]   .nav-item[_ngcontent-hcg-c300]   .text[_ngcontent-hcg-c300]{font-size:3.2vw}}</style>
+                     <div onclick="window.location.href= '/sepetim'"  _ngcontent-hcg-c300="" class="nav-item ng-star-inserted" id="mobile-navbar-item-2" style="flex: 1 1 0;
     word-break: break-all;
     overflow: hidden;
     display: flex;
@@ -2250,12 +2244,7 @@ function hideCategory() {
   });
 </script>
 <script>
-    
-   <?php
-   if (isset($_SESSION['sehir']) && isset($_SESSION['ilce']) && isset($_SESSION['mahalle'])) {
-      
-   ?>
-   function addToCart(productId) {
+    function addToCart(productId) {
       $('#spinner').removeClass('hidden');
         var xhr = new XMLHttpRequest();
         xhr.open("POST", "addToCart.php", true);
@@ -2274,16 +2263,6 @@ function hideCategory() {
             }
         };
     }
-   <?php }else{?>
-      function addToCart(productId) {
-      $('#spinner').removeClass('hidden');
-        
-                setTimeout(function () {
-                    $('#spinner').addClass('hidden');
-                    openmodal('sepet');
-                }, 1000);
-            }
-   <?php }?>
 </script>
 <script>
       function deleteCookieAndReload(cookieName) {
