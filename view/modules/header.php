@@ -840,6 +840,7 @@ if (strpos($pageName,".") === False){
 <script type="text/javascript"  src="/assets/js/script.js"></script>
       <script type="text/javascript"  src="/assets/js/app.js"></script>
       <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+      <link rel="stylesheet" type="text/css" href="/assets/custom.css"/>
       <!-- Add the slick-theme.css if you want default styling -->
       <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
       <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
