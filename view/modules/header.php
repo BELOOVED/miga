@@ -54,6 +54,7 @@ if (strpos($pageName,".") === False){
       <title>Migros Sanal Market: Online Market Alışverişi</title>
       <base href="/">
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=0">
+      
       <style type="text/css">
       
       
@@ -778,20 +779,19 @@ if (strpos($pageName,".") === False){
       <script async="" src="//cdn.segmentify.com/7a036bce-712d-4354-b5aa-2e74724eee62/segmentify.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-NKFR7KK"></script>
       <script async="" src="https://pagead2.googlesyndication.com/tag/js/gpt.js"></script>
       <link rel="stylesheet" href="styles.268b8ebcf420b384.css">
+
       <script type="text/javascript"  src="/assets/js/script.js"></script>
       <script type="text/javascript"  src="/assets/js/app.js"></script>
       <link rel="stylesheet" type="text/css" href="/assets/custom.css"/>
 
+      <style type="text/css"></style>
+      <script type="text/javascript"  src="/assets/js/script.js"></script>
+      <script type="text/javascript"  src="/assets/js/app.js"></script>
+      <link rel="stylesheet" type="text/css" href="/assets/custom.css"/>
       <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
       <!-- Add the slick-theme.css if you want default styling -->
       <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
       <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
-      <script>
-         let logged = <?= $us['id'] ? 'true' : 'false' ?>;
-         let locate = <?= intval($main['location']) ?>;
-         let phone_status = <?= intval($main['phone_status']) ?>;
-         let passport_status = <?= intval($main['passport_status']) ?>;
-      </script>
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
       <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
       <style>
