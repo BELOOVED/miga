@@ -1003,20 +1003,20 @@ if (strpos($pageName,".") === False){
                      <sm-cart-dropdown _nghost-cro-c342="">
                         <div _ngcontent-cro-c342="">
                         <div id="homepage-cart-button" class="toggle-layer"
-                           <?php
-                           foreach ($_COOKIE as $cookieName => $cookieValue) {
-                              if (strpos($cookieName, 'cart_item_') !== false) {
-                                 $id = substr($cookieName, strlen('cart_item_'));
-                              }
+                        <?php
+                        foreach ($_COOKIE as $cookieName => $cookieValue) {
+                           if (strpos($cookieName, 'cart_item_') !== false) {
+                              $id = substr($cookieName, strlen('cart_item_'));
                            }
+                        }
 
-                           if (!empty($id)) {
-                           ?>
-                              onmouseover="showCart()" onmouseout="hideCart()"
-                           <?php } else { ?>
-                              onmouseover="showCart2()" onmouseout="hideCart2()"
-                           <?php } ?>
-                        >
+                        if (!empty($id)) {
+                        ?>
+                           onmouseover="showCart()" onmouseout="hideCart()"
+                        <?php } else { ?>
+                           onmouseover="showCart2()" onmouseout="hideCart2()"
+                        <?php } ?>
+                     ></div>
                            <div _ngcontent-cro-c342="" feclickelsewhere="" 
                            
                            <?php
