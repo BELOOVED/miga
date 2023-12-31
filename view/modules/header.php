@@ -1304,6 +1304,26 @@ if (strpos($pageName,".") === False){
                         }
                      }
                   }
+
+                  $sql = "SELECT * FROM urunler WHERE id IN (" . implode(',', array_fill(0, count($cartItemIds), '?')) . ")";
+                  $stmt = $pdo->prepare($sql);
+                  for ($i = 0; $i < count($id); $i++) {
+                     $stmt->bindParam($i + 1, $id[$i]);
+                  }
+                  $stmt->execute();
+                  $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                  $urun_fiyat = 0;
+                  foreach ($urunler as $urun) {
+                     $adet = intval($_COOKIE["cart_item_".strval($urun["id"])]);
+                     if($urun['urun_indirim'] != 0){
+                        $orijinal_fiyat = $urun['urun_fiyat'];
+                        $indirim_orani = $urun['urun_indirim'];
+                        $urun_fiyat = (($orijinal_fiyat - ($orijinal_fiyat * ($indirim_orani / 100))) * $adet);
+                     }else {
+                        $urun_fiyat += ($urun["urun_fiyat"] * $adet);
+                     }
+
                   ?>
 
                   <?php if (!$mobile): ?>
@@ -1313,11 +1333,11 @@ if (strpos($pageName,".") === False){
                               <div _ngcontent-cro-c342="" feclickelsewhere="" <?= $showCart2Function ?> class="dropdown-btn">
                                  <div _ngcontent-cro-c342="" class="icon-cart-quantity-wrapper">
                                     <div _ngcontent-cro-c342="" class="icon-cart"></div>
-                                    <div _ngcontent-cro-c342="" class="quantity">0</div>
+                                    <div _ngcontent-cro-c342="" class="quantity"><?=count($cartItemIds)?></div>
                                  </div>
                                  <div _ngcontent-cro-c342="">
                                     <div _ngcontent-cro-c342="" class="subtitle-2 text-color-black">Sepetim</div>
-                                    <div _ngcontent-cro-c342="" class="mat-caption price">0,00 TL</div>
+                                    <div _ngcontent-cro-c342="" class="mat-caption price"><?=$urun_fiyat?> TL</div>
                                  </div>
                                  <fa-icon _ngcontent-cro-c342="" class="ng-fa-icon text-color-black">
                                     <svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
