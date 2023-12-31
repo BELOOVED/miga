@@ -1331,7 +1331,7 @@ if (strpos($pageName,".") === False){
                                              <?php
                                              // Kodunuzun devamı buraya gelecek
                                              foreach ($cartItemIds as $id) {
-                                                // ... İlgili ürünle ilgili kodlar buraya eklenecek
+                                                print_r($id);
                                              }
                                              ?>
                                           </div>
