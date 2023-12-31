@@ -1332,10 +1332,11 @@ if (strpos($pageName,".") === False){
                               } else {
                                     $urun_fiyat = intval($urun["urun_fiyat"] * $adet);
                               }
-                              print_r ($urun_fiyat);
 
                               $toplam_fiyat += $urun_fiyat;
                            }
+                           print_r ($toplam_fiyat);
+
                         }
 
                         // Now $toplam_fiyat contains the correct total price
