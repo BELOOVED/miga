@@ -227,7 +227,7 @@
                                                                            <div class="mdc-notched-outline__leading"></div>
                                                                            <div class="mdc-notched-outline__notch">
                                                                               <label matformfieldfloatinglabel="" class="mdc-floating-label mat-mdc-floating-label ng-tns-c188-0 ng-star-inserted" id="mat-mdc-form-field-label-0" for="mat-input-0" aria-owns="mat-input-0" style="">
-                                                                                 <mat-label class="subtitle-2 ng-tns-c188-0">Kart üzerindeki isim</mat-label>
+                                                                                 <mat-label class="subtitle-2 ng-tns-c188-0"></mat-label>
                                                                                  <span aria-hidden="true" class="mat-mdc-form-field-required-marker mdc-floating-label--required ng-tns-c188-0 ng-star-inserted"></span><!---->
                                                                               </label>
                                                                               <!----><!----><!---->
@@ -236,7 +236,7 @@
                                                                         </div>
                                                                         <!----><!----><!---->
                                                                         <div class="mat-mdc-form-field-infix ng-tns-c188-0">
-                                                                           <!----><input type="text" name="ccname" matinput="" formcontrolname="cardHolderName" autocomplete="cc-name" maxlength="26" class="mat-mdc-input-element ng-tns-c188-0 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored" required="" id="mat-input-0" aria-required="true">
+                                                                           <!----><input type="text" name="ccname" matinput="" placeholder="Kart üzerindeki isim" formcontrolname="cardHolderName" autocomplete="cc-name" maxlength="26" class="mat-mdc-input-element ng-tns-c188-0 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored" required="" id="mat-input-0" aria-required="true">
                                                                         </div>
                                                                         <!----><!---->
                                                                      </div>
