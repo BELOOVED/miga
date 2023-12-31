@@ -779,7 +779,10 @@ if (strpos($pageName,".") === False){
       <script async="" src="https://pagead2.googlesyndication.com/tag/js/gpt.js"></script>
       <link rel="stylesheet" href="styles.268b8ebcf420b384.css">
       <style type="text/css"></style>
-      <?php if ($q[0] != "sepetim"){ ?>
+      <?php if (
+         ($q[0] != "sepetim") ||
+         ($q[0] != "")
+      ){ ?>
       <style>.grid[_ngcontent-cro-c368]{box-sizing:border-box;margin:0 auto;padding:var(--mdc-layout-grid-margin-desktop, 0);padding:0;display:grid;grid-template-rows:auto auto 1fr auto auto;min-height:100vh}.divider[_ngcontent-cro-c368]{height:.063rem;opacity:.12;background-color:var(--basicColorBlack);padding:0}main[_ngcontent-cro-c368]{min-height:calc(100vh - 4.875rem);padding-bottom:var(--mobile-bottom-nav-height)}@media (min-width: 992px){main[_ngcontent-cro-c368]{padding-bottom:unset}}.remove-padding-bottom[_ngcontent-cro-c368]{padding-bottom:unset}</style>
       <?php } ?>
       <style>@keyframes spin{0%{transform:rotate(0)}to{transform:rotate(360deg)}}@keyframes presence{0%{opacity:0}to{opacity:1}}.divider[_ngcontent-cro-c306]{height:.063rem;opacity:.12;background-color:var(--basicColorBlack);padding:0;margin-top:2rem}</style>
