@@ -64,7 +64,7 @@
 			  </div>
 			 </div>
 			</div>
-			 <button type="button" class="btn btn-light btn-block">Sign In</button>
+			 <button type="button" class="btn btn-light btn-block">Giriş Yap</button>
 			  
 			 
 			 </form>
