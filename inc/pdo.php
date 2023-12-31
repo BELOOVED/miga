@@ -32,17 +32,17 @@ require_once 'mobile.class.php';
 require_once 'api.php';
 require_once 'functions.php';
 
-$main = $db->query("SELECT * from main where id=1")->fetch_assoc();
+$main = $pdo->query("SELECT * from main where id=1")->fetch_assoc();
 
 // Get user data
 $user_id = intval($_SESSION['user_id']);
 if (!empty($user_id)) {
-  $us = $db->query("SELECT * from users where id='$user_id'")->fetch_assoc();
+  $us = $pdo->query("SELECT * from users where id='$user_id'")->fetch_assoc();
 }
 
 // Admin logged status
 $kk = $_SESSION['admin_login'];
-$main1 = $db->query("SELECT * FROM admin_users WHERE admin_login = '$kk'")->fetch_assoc();
+$main1 = $pdo->query("SELECT * FROM admin_users WHERE admin_login = '$kk'")->fetch_assoc();
 
 // Admin logged status
 $admin = false;
