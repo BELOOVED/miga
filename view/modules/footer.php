@@ -66,9 +66,9 @@
     right: calc(50% - 1rem);
     transform: translate(50%);
     color: var(--basicColorWhite);
-    font-size: .5rem;" _ngcontent-hcg-c300="" class="mat-caption-normal quantity ng-star-inserted">1</div>
+    font-size: .5rem;" _ngcontent-hcg-c300="" class="mat-caption-normal quantity ng-star-inserted"><?=count($cartItemIds)?></div>
                         <!---->
-                        <div _ngcontent-hcg-c300="" class="text mat-caption-normal text-align-center"> 399,95 TL </div>
+                        <div _ngcontent-hcg-c300="" class="text mat-caption-normal text-align-center"> <?=$toplam_fiyat?> TL </div>
                      </div>
                      <?php } 
                                  
