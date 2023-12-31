@@ -1325,11 +1325,13 @@ if (strpos($pageName,".") === False){
                         if ($urun['urun_indirim'] != 0) {
                            $orijinal_fiyat = $urun['urun_fiyat'];
                            $indirim_orani = $urun['urun_indirim'];
-                           $toplam_fiyat += ($orijinal_fiyat - ($orijinal_fiyat * ($indirim_orani / 100))) * $adet;
+                           $urun_fiyat = intval(($orijinal_fiyat - ($orijinal_fiyat * ($indirim_orani / 100))) * $adet);
                         } else {
-                           $toplam_fiyat += $urun["urun_fiyat"] * $adet;
+                           $urun_fiyat = intval($urun["urun_fiyat"] * $adet);
                         }
-                     }
+               
+                        $toplam_fiyat += $urun_fiyat;
+                      }
                   }
                   ?>
 
