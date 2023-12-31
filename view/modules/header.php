@@ -1362,7 +1362,9 @@ if (strpos($pageName,".") === False){
                                  <?php if (!empty($cartItemIds)): ?>
                                     <sm-cart-dropdown-list _ngcontent-nog-c343="" id="cart" class="empty-cart2 hidden" _nghost-nog-c342="" <?= $showCart2Function ?>>
                                           <div _ngcontent-nog-c342="" class="cart-dropdown-wrapper">
-                                             <?php foreach ($urunler as $urun) { ?>
+                                             <?php foreach ($urunler as $urun) { 
+                                                                              $adet = intval($_COOKIE["cart_item_" . strval($urun["id"])]);
+                                                                              ?>
                                                 <sm-cart-dropdown-item _ngcontent-nog-c342="" _nghost-nog-c341="">
                                        <div _ngcontent-nog-c341="" class="cart-dropdown-item">
                                           <fe-product-image _ngcontent-nog-c341="" _nghost-nog-c159="">
@@ -1413,7 +1415,7 @@ if (strpos($pageName,".") === False){
                                                       </fa-icon>
                                                          <!----><!---->
                                                       </button>
-                                                      <div _ngcontent-nog-c292="" id="product-amount" class="product-amount"><span _ngcontent-nog-c292="" class="amount mat-caption">1</span><span _ngcontent-nog-c292="" class="unit text-color-grey">adet</span></div>
+                                                      <div _ngcontent-nog-c292="" id="product-amount" class="product-amount"><span _ngcontent-nog-c292="" class="amount mat-caption"><?=$adet?></span><span _ngcontent-nog-c292="" class="unit text-color-grey">adet</span></div>
                                                       <button onclick="urunekleee('<?=strval($urun['id'])?>')" _ngcontent-nog-c292="" aria-label="Sepetteki ürün sayısını arttır" class="product-increase" id="product-actions-product-increase--goldstar-mini-boy-celik-caydanlik-304-p-1e8bd53">
                                                          <fa-icon _ngcontent-nog-c292="" class="ng-fa-icon">
                                                             <svg role="img" aria-hidden="true" focusable="false" data-prefix="far" data-icon="plus" class="svg-inline--fa fa-plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
