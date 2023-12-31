@@ -36,21 +36,21 @@
 		 	<div class="text-center">
 		 		<img src="assets/images/logo-icon.png" style="width: 100px" alt="logo icon">
 		 	</div>
-		  <div class="card-title text-uppercase text-center py-3">Sign In</div>
+		  <div class="card-title text-uppercase text-center py-3">Yönetim Paneli</div>
 		    <form>
 			  <div class="form-group">
-			  <label for="exampleInputUsername" class="sr-only">Username</label>
+			  <label for="exampleInputUsername" class="sr-only">Kullanıcı Adı</label>
 			   <div class="position-relative has-icon-right">
-				  <input type="text" id="exampleInputUsername" class="form-control input-shadow" placeholder="Enter Username">
+				  <input type="text" id="exampleInputUsername" class="form-control input-shadow" placeholder="Kullanıcı Adı">
 				  <div class="form-control-position">
 					  <i class="icon-user"></i>
 				  </div>
 			   </div>
 			  </div>
 			  <div class="form-group">
-			  <label for="exampleInputPassword" class="sr-only">Password</label>
+			  <label for="exampleInputPassword" class="sr-only">Parola</label>
 			   <div class="position-relative has-icon-right">
-				  <input type="password" id="exampleInputPassword" class="form-control input-shadow" placeholder="Enter Password">
+				  <input type="password" id="exampleInputPassword" class="form-control input-shadow" placeholder="Parola">
 				  <div class="form-control-position">
 					  <i class="icon-lock"></i>
 				  </div>
@@ -60,30 +60,15 @@
 			 <div class="form-group col-6">
 			   <div class="icheck-material-white">
                 <input type="checkbox" id="user-checkbox" checked="" />
-                <label for="user-checkbox">Remember me</label>
+                <label for="user-checkbox">Beni Hatırla</label>
 			  </div>
-			 </div>
-			 <div class="form-group col-6 text-right">
-			  <a href="authentication-reset-password.html">Reset Password</a>
 			 </div>
 			</div>
 			 <button type="button" class="btn btn-light btn-block">Sign In</button>
-			  <div class="text-center mt-3">Sign In With</div>
 			  
-			 <div class="form-row mt-4">
-			  <div class="form-group mb-0 col-6">
-			   <button type="button" class="btn btn-light btn-block"><i class="fa fa-facebook-square"></i> Facebook</button>
-			 </div>
-			 <div class="form-group mb-0 col-6 text-right">
-			  <button type="button" class="btn btn-light btn-block"><i class="fa fa-twitter-square"></i> Twitter</button>
-			 </div>
-			</div>
 			 
 			 </form>
 		   </div>
-		  </div>
-		  <div class="card-footer text-center py-3">
-		    <p class="text-warning mb-0">Do not have an account? <a href="authentication-signup.html"> Sign Up here</a></p>
 		  </div>
 	     </div>
     
