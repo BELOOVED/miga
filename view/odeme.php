@@ -68,13 +68,7 @@
                               </div>
                               <div class="line"></div>
                            </div>
-                           <div class="step-content" style="
-                           
-                           position: relative;
-                           margin-top: 40px;
-                           right: 5px;
-                           width: 100% !important;
-                           ">
+                           <div class="step-content">
                               <div class="step-title"> Teslimat Adresin </div>
                               <div class="content">
                                  <sm-delivery-info class="ng-star-inserted">
@@ -180,7 +174,13 @@
                               </div>
                               <div class="line"></div>
                            </div>
-                           <div class="step-content">
+                           <div class="step-content"  style="
+                           
+                           position: relative;
+                           margin-top: 40px;
+                           right: 5px;
+                           width: 100% !important;
+                           ">
                               <div class="step-title"> Ödeme Yöntemini Belirle </div>
                               <div class="content">
                                  <!----><!---->
