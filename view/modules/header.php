@@ -1290,100 +1290,59 @@ if (strpos($pageName,".") === False){
                         </fe-product-search-combobox>
                         <!---->
                      </div>
-                        <?php
-$showCartFunction = 'onmouseover="showCart()" onmouseout="hideCart()"';
-$showCart2Function = 'onmouseover="showCart2()" onmouseout="hideCart2()"';
+                  <?php
+                  $showCartFunction = 'onmouseover="showCart()" onmouseout="hideCart()"';
+                  $showCart2Function = 'onmouseover="showCart2()" onmouseout="hideCart2()"';
 
-$cartItemIds = [];
+                  $cartItemIds = [];
 
-foreach ($_COOKIE as $cookieName => $cookieValue) {
-    if (strpos($cookieName, 'cart_item_') !== false) {
-        $id = substr($cookieName, strlen('cart_item_'));
-        if (!empty($id)) {
-            $cartItemIds[] = $id;
-        }
-    }
-}
-?>
+                  foreach ($_COOKIE as $cookieName => $cookieValue) {
+                     if (strpos($cookieName, 'cart_item_') !== false) {
+                        $id = substr($cookieName, strlen('cart_item_'));
+                        if (!empty($id)) {
+                              $cartItemIds[] = $id;
+                        }
+                     }
+                  }
+                  ?>
 
-<?php if (!$mobile): ?>
-    <sm-cart-dropdown _nghost-cro-c342="">
-        <div _ngcontent-cro-c342="">
-            <div _ngcontent-cro-c342="" id="homepage-cart-button" class="toggle-layer" <?= $showCartFunction ?>></div>
-            <div _ngcontent-cro-c342="" feclickelsewhere="" <?= $showCart2Function ?> class="dropdown-btn">
-                <div _ngcontent-cro-c342="" class="icon-cart-quantity-wrapper">
-                    <div _ngcontent-cro-c342="" class="icon-cart"></div>
-                    <div _ngcontent-cro-c342="" class="quantity">0</div>
-                </div>
-                <div _ngcontent-cro-c342="">
-                    <div _ngcontent-cro-c342="" class="subtitle-2 text-color-black">Sepetim</div>
-                    <div _ngcontent-cro-c342="" class="mat-caption price">0,00 TL</div>
-                </div>
-                <fa-icon _ngcontent-cro-c342="" class="ng-fa-icon text-color-black">
-                    <svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path fill="currentColor" d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path>
-                    </svg>
-                </fa-icon>
-                
-                <?php if (!empty($cartItemIds)): ?>
-                    <sm-cart-dropdown-list _ngcontent-nog-c343="" id="cart" class="empty-cart2 hidden" _nghost-nog-c342="" <?= $showCart2Function ?>>
-                        <div _ngcontent-nog-c342="" class="cart-dropdown-wrapper">
-                        <?php
-// Kodunuzun devamı buraya gelecek
-foreach ($cartItemIds as $id) {
-    $sql = "SELECT * FROM urunler WHERE id = ?";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([$id]);
-    $urun = $stmt->fetch(PDO::FETCH_ASSOC);
-
-    $adet = intval($_COOKIE["cart_item_" . strval($urun["id"])]);
-    $urun_fiyat = 0;
-
-    if ($urun['urun_indirim'] != 0) {
-        $orijinal_fiyat = $urun['urun_fiyat'];
-        $indirim_orani = $urun['urun_indirim'];
-        $urun_fiyat = (($orijinal_fiyat - ($orijinal_fiyat * ($indirim_orani / 100))) * $adet);
-    } else {
-        $urun_fiyat += ($urun["urun_fiyat"] * $adet);
-    }
-?>
-    <sm-cart-dropdown-item _ngcontent-nog-c342="" _nghost-nog-c341="">
-        <!-- ... -->
-        <!-- Ürün detayları buraya eklenecek -->
-        <fe-product-image _ngcontent-nog-c341="" _nghost-nog-c159="">
-            <!-- ... -->
-        </fe-product-image>
-        <div _ngcontent-nog-c341="" class="detail-wrapper">
-            <!-- ... -->
-            <fe-product-name _ngcontent-nog-c341="" _nghost-nog-c160="">
-                <!-- ... -->
-            </fe-product-name>
-            <fa-icon _ngcontent-nog-c341="" id="cart-dropdown-delete-button" class="ng-fa-icon delete-button">
-                <!-- ... -->
-            </fa-icon>
-            <?php
-            if ($urun['urun_indirim'] != 0) { ?>
-                <fe-product-labels _ngcontent-nog-c341="" _nghost-nog-c295="">
-                    <!-- İndirim etiketi eklenecek -->
-                </fe-product-labels>
-            <?php } ?>
-            <div _ngcontent-nog-c341="" class="actions-price-wrapper">
-                <!-- ... -->
-            </div>
-        </div>
-    </sm-cart-dropdown-item>
-<?php
-} // foreach kapanışı
-?>
+                  <?php if (!$mobile): ?>
+                     <sm-cart-dropdown _nghost-cro-c342="">
+                        <div _ngcontent-cro-c342="">
+                              <div _ngcontent-cro-c342="" id="homepage-cart-button" class="toggle-layer" <?= $showCartFunction ?>></div>
+                              <div _ngcontent-cro-c342="" feclickelsewhere="" <?= $showCart2Function ?> class="dropdown-btn">
+                                 <div _ngcontent-cro-c342="" class="icon-cart-quantity-wrapper">
+                                    <div _ngcontent-cro-c342="" class="icon-cart"></div>
+                                    <div _ngcontent-cro-c342="" class="quantity">0</div>
+                                 </div>
+                                 <div _ngcontent-cro-c342="">
+                                    <div _ngcontent-cro-c342="" class="subtitle-2 text-color-black">Sepetim</div>
+                                    <div _ngcontent-cro-c342="" class="mat-caption price">0,00 TL</div>
+                                 </div>
+                                 <fa-icon _ngcontent-cro-c342="" class="ng-fa-icon text-color-black">
+                                    <svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                          <path fill="currentColor" d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path>
+                                    </svg>
+                                 </fa-icon>
+                                 
+                                 <?php if (!empty($cartItemIds)): ?>
+                                    <sm-cart-dropdown-list _ngcontent-nog-c343="" id="cart" class="empty-cart2 hidden" _nghost-nog-c342="" <?= $showCart2Function ?>>
+                                          <div _ngcontent-nog-c342="" class="cart-dropdown-wrapper">
+                                             <?php
+                                             // Kodunuzun devamı buraya gelecek
+                                             foreach ($cartItemIds as $id) {
+                                                // ... İlgili ürünle ilgili kodlar buraya eklenecek
+                                             }
+                                             ?>
+                                          </div>
+                                    </sm-cart-dropdown-list>
+                                 <?php else: ?>
+                                    <span _ngcontent-svk-c342="" id="cart" class="empty-cart mat-body-2 hidden">Sepetiniz Henüz Boş</span>
+                                 <?php endif; ?>
+                              </div>
                         </div>
-                    </sm-cart-dropdown-list>
-                <?php else: ?>
-                    <span _ngcontent-svk-c342="" id="cart" class="empty-cart mat-body-2 hidden">Sepetiniz Henüz Boş</span>
-                <?php endif; ?>
-            </div>
-        </div>
-    </sm-cart-dropdown>
-<?php endif; ?>
+                     </sm-cart-dropdown>
+                  <?php endif; ?>
 
                      <!---->
                   </div>
