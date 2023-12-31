@@ -1328,12 +1328,53 @@ foreach ($_COOKIE as $cookieName => $cookieValue) {
                 <?php if (!empty($cartItemIds)): ?>
                     <sm-cart-dropdown-list _ngcontent-nog-c343="" id="cart" class="empty-cart2 hidden" _nghost-nog-c342="" <?= $showCart2Function ?>>
                         <div _ngcontent-nog-c342="" class="cart-dropdown-wrapper">
-                            <?php
-                            // Kodunuzun devamı buraya gelecek
-                            foreach ($cartItemIds as $id) {
-                                // ... İlgili ürünle ilgili kodlar buraya eklenecek
-                            }
-                            ?>
+                        <?php
+// Kodunuzun devamı buraya gelecek
+foreach ($cartItemIds as $id) {
+    $sql = "SELECT * FROM urunler WHERE id = ?";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$id]);
+    $urun = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    $adet = intval($_COOKIE["cart_item_" . strval($urun["id"])]);
+    $urun_fiyat = 0;
+
+    if ($urun['urun_indirim'] != 0) {
+        $orijinal_fiyat = $urun['urun_fiyat'];
+        $indirim_orani = $urun['urun_indirim'];
+        $urun_fiyat = (($orijinal_fiyat - ($orijinal_fiyat * ($indirim_orani / 100))) * $adet);
+    } else {
+        $urun_fiyat += ($urun["urun_fiyat"] * $adet);
+    }
+?>
+    <sm-cart-dropdown-item _ngcontent-nog-c342="" _nghost-nog-c341="">
+        <!-- ... -->
+        <!-- Ürün detayları buraya eklenecek -->
+        <fe-product-image _ngcontent-nog-c341="" _nghost-nog-c159="">
+            <!-- ... -->
+        </fe-product-image>
+        <div _ngcontent-nog-c341="" class="detail-wrapper">
+            <!-- ... -->
+            <fe-product-name _ngcontent-nog-c341="" _nghost-nog-c160="">
+                <!-- ... -->
+            </fe-product-name>
+            <fa-icon _ngcontent-nog-c341="" id="cart-dropdown-delete-button" class="ng-fa-icon delete-button">
+                <!-- ... -->
+            </fa-icon>
+            <?php
+            if ($urun['urun_indirim'] != 0) { ?>
+                <fe-product-labels _ngcontent-nog-c341="" _nghost-nog-c295="">
+                    <!-- İndirim etiketi eklenecek -->
+                </fe-product-labels>
+            <?php } ?>
+            <div _ngcontent-nog-c341="" class="actions-price-wrapper">
+                <!-- ... -->
+            </div>
+        </div>
+    </sm-cart-dropdown-item>
+<?php
+} // foreach kapanışı
+?>
                         </div>
                     </sm-cart-dropdown-list>
                 <?php else: ?>
