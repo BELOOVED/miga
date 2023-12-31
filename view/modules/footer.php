@@ -2263,7 +2263,7 @@ function hideCategory() {
                 console.log(xhr.responseText);
                 setTimeout(function () {
                     $('#spinner').addClass('hidden');
-                    window.location.reload();
+                    window.location.href = '/sepetim';
                 }, 1000);
             }
         };
