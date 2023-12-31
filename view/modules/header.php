@@ -1290,6 +1290,7 @@ if (strpos($pageName,".") === False){
                         </fe-product-search-combobox>
                         <!---->
                      </div>
+                     <?php if (!$mobile){ ?>
                      <sm-cart-dropdown _nghost-cro-c342="">
                         <div _ngcontent-cro-c342="">
                            <div _ngcontent-cro-c342="" id="homepage-cart-button" class="toggle-layer"
@@ -1497,7 +1498,7 @@ if (strpos($pageName,".") === False){
                            </div>
                         </div>
                      </sm-cart-dropdown>
-                     
+                     <?php } ?>
                      <!---->
                   </div>
                   <!---->
