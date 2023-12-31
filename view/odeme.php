@@ -178,7 +178,7 @@
                            
                            position: relative;
                            margin-top: 40px;
-                           right: 5px;
+                           right: 12px;
                            width: 100% !important;
                            ">
                               <div class="step-title"> Ödeme Yöntemini Belirle </div>
