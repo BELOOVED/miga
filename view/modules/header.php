@@ -1498,7 +1498,6 @@ if (strpos($pageName,".") === False){
                      <!---->
                   </div>
                   <!---->
-                  <?php if ($q == "sepetim"){ ?>
                   <div class="header-bottom">
                      <div class="tabs">
                         <div class="tab mat-caption text-color-black" onmouseover="showCategory()" onmouseout="hideCategory()">
@@ -1560,7 +1559,6 @@ if (strpos($pageName,".") === False){
                      <!---->
                   </div>
 
-                  <?php } ?>
                   <!---->
                </div>
                <!---->
