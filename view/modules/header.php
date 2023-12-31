@@ -1320,7 +1320,6 @@ if (strpos($pageName,".") === False){
 
                            foreach ($urunler as $urun) {
                               $adet = intval($_COOKIE["cart_item_" . strval($urun["id"])]);
-                              print_r ($urun);
                               // Ensure $adet is at least 1
                               $adet = max(1, $adet);
 
@@ -1333,6 +1332,7 @@ if (strpos($pageName,".") === False){
                               } else {
                                     $urun_fiyat = intval($urun["urun_fiyat"] * $adet);
                               }
+                              print_r ($urun_fiyat);
 
                               $toplam_fiyat += $urun_fiyat;
                            }
