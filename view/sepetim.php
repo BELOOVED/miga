@@ -305,7 +305,7 @@
                                              if (!isset($_SESSION["telefon"])){
                                           
                                              ?>
-                                             openmodal('sepet-giris');
+                                            onclick="openmodal('sepet-giris');"
                                              <?php }else{?>
                                              onclick="window.location.href = '/adres'"
                                              <?php }?>
@@ -360,7 +360,7 @@
                                              if (!isset($_SESSION["telefon"])){
                                           
                                              ?>
-                                             openmodal('sepet-giris');
+                                             onclick="openmodal('sepet-giris');"
                                              <?php }else{?>
                                              onclick="window.location.href = '/adres'"
                                              <?php }?> _ngcontent-ssk-c254="" id="checkout-summary-desktop-confirm-button" mat-flat-button="" color="primary" feappclickthrottle="" class="confirm-button mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Devam Et </span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button>
