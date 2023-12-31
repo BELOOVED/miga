@@ -65,7 +65,7 @@ if ($detect->isMobile()) {?>
             <fe-mobile-breadcrumb class="mobile-header mobile-only" _nghost-nyw-c391="">
                <div _ngcontent-nyw-c391="" class="breadcrumb mobile-only">
                   <a _ngcontent-nyw-c391="">
-                     <fa-icon _ngcontent-nyw-c391="" class="ng-fa-icon">
+                     <fa-icon _ngcontent-nyw-c391="" class="ng-fa-icon" onclick="window.history.back();">
                         <svg role="img" aria-hidden="true" focusable="false" data-prefix="far" data-icon="arrow-left" class="svg-inline--fa fa-arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                            <path fill="currentColor" d="M447.1 256c0 13.25-10.76 24.01-24.01 24.01H83.9l132.7 126.6c9.625 9.156 9.969 24.41 .8125 33.94c-9.156 9.594-24.34 9.938-33.94 .8125l-176-168C2.695 268.9 .0078 262.6 .0078 256S2.695 243.2 7.445 238.6l176-168C193 61.51 208.2 61.85 217.4 71.45c9.156 9.5 8.812 24.75-.8125 33.94l-132.7 126.6h340.1C437.2 232 447.1 242.8 447.1 256z"></path>
                         </svg>
