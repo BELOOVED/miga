@@ -1324,6 +1324,7 @@ if (strpos($pageName,".") === False){
                            $urun_fiyat += ($urun["urun_fiyat"] * $adet);
                         }
                      }
+                  }
                   ?>
 
                   <?php if (!$mobile): ?>
