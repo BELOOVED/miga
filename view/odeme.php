@@ -837,7 +837,7 @@
                                              </div>
                                              <label for="mat-mdc-checkbox-3-input">
                                                 <span class="mat-caption-normal">
-                                                   <a href="javascript:void(0)" class="text-color-orange"> Ön Bilgilendirme Koşulları</a>'nı okudum, onaylıyorum. <!---->
+                                                   <a href="javascript:void(0)" onclick="openmodal('acikrizametni')" class="text-color-orange"> Ön Bilgilendirme Koşulları</a>'nı okudum, onaylıyorum. <!---->
                                                 </span>
                                              </label>
                                           </div>
@@ -858,7 +858,7 @@
                                              </div>
                                              <label for="mat-mdc-checkbox-4-input">
                                                 <span class="mat-caption-normal">
-                                                   <a href="javascript:void(0)" class="text-color-orange"> Mesafeli Satış Sözleşmesi</a>'ni okudum, onaylıyorum. <!---->
+                                                   <a href="javascript:void(0)" onclick="openmodal('kvkk')" class="text-color-orange"> Mesafeli Satış Sözleşmesi</a>'ni okudum, onaylıyorum. <!---->
                                                 </span>
                                              </label>
                                           </div>
