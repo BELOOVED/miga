@@ -1316,22 +1316,20 @@ if (strpos($pageName,".") === False){
                       $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
                   
                       foreach ($urunler as $urun) {
-                          $adet = intval($_COOKIE["cart_item_" . strval($urun["id"])]);
-                          if ($adet == 0){
-                           $adet = 1;
-                          }
-                          $urun_fiyat = 0; // Initialize product price for each iteration
-                  
-                          if ($urun['urun_indirim'] != 0) {
-                              $orijinal_fiyat = $urun['urun_fiyat'];
-                              $indirim_orani = $urun['urun_indirim'];
-                              $urun_fiyat = ($orijinal_fiyat - ($orijinal_fiyat * ($indirim_orani / 100))) * $adet;
-                          } else {
-                              $urun_fiyat = $urun["urun_fiyat"] * $adet;
-                          }
-                  
-                          $toplam_fiyat += $urun_fiyat;
-                      }
+                        $adet = intval($_COOKIE["cart_item_" . strval($urun["id"])]);
+                        if ($adet == 0){
+                        $adet = 1;
+                        }
+                        $urun_fiyat = 0; // Initialize product price for each iteration
+               
+                        if ($urun['urun_indirim'] != 0) {
+                           $orijinal_fiyat = $urun['urun_fiyat'];
+                           $indirim_orani = $urun['urun_indirim'];
+                           $toplam_fiyat += ($orijinal_fiyat - ($orijinal_fiyat * ($indirim_orani / 100))) * $adet;
+                        } else {
+                           $toplam_fiyat += $urun["urun_fiyat"] * $adet;
+                        }
+                     }
                   }
                   ?>
 
