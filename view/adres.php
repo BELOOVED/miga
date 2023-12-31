@@ -156,7 +156,7 @@
                                  <div class="checkout-summary-mobile__content ng-star-inserted">
                                     <div class="revenue-container">
                                        <div class="mat-caption-normal">Ödenecek Tutar</div>
-                                       <h3 class="revenue">6.038,90 TL</h3>
+                                       <h3 class="revenue"><?=$_SESSION['urun_fiyati']?> TL</h3>
                                     </div>
                                     <button onclick="window.location.href= '/teslimat'" id="checkout-summary-mobile-confirm-button" feappclickthrottle="" mat-flat-button="" color="primary" class="mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary confirm-button mat-mdc-button-base"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Devam Et </span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button>
                                  </div>
@@ -189,7 +189,7 @@
                                           </div>
                                        </div>
                                        <div _ngcontent-juf-c255="" class="subtitle-1">Ödenecek Tutar</div>
-                                       <div _ngcontent-juf-c255="" class="subtitle-1 text-align-right">6.038,90 TL</div>
+                                       <div _ngcontent-juf-c255="" class="subtitle-1 text-align-right"><?=$_SESSION['urun_fiyati']?> TL</div>
                                     </div>
                                     <mat-divider _ngcontent-juf-c255="" role="separator" class="mat-divider mat-divider-horizontal" aria-orientation="horizontal"></mat-divider>
                                     <!---->
