@@ -1293,40 +1293,42 @@ if (strpos($pageName,".") === False){
                   <?php
                   $showCartFunction = 'onmouseover="showCart()" onmouseout="hideCart()"';
                   $showCart2Function = 'onmouseover="showCart2()" onmouseout="hideCart2()"';
-
+                  
                   $cartItemIds = [];
-
+                  $toplam_fiyat = 0; // Initialize total price
+                  
                   foreach ($_COOKIE as $cookieName => $cookieValue) {
-                     if (strpos($cookieName, 'cart_item_') !== false) {
-                        $id = substr($cookieName, strlen('cart_item_'));
-                        if (!empty($id)) {
+                      if (strpos($cookieName, 'cart_item_') !== false) {
+                          $id = substr($cookieName, strlen('cart_item_'));
+                          if (!empty($id)) {
                               $cartItemIds[] = $id;
-                        }
-                     }
+                          }
+                      }
                   }
-                  $urun_fiyat = 0;
+                  
                   if (!empty($cartItemIds)) {
-                     $sql = "SELECT * FROM urunler WHERE id IN (" . implode(',', array_fill(0, count($cartItemIds), '?')) . ")";
-                     $stmt = $pdo->prepare($sql);
-                     for ($i = 0; $i < count($cartItemIds); $i++) {
-                        $stmt->bindParam($i + 1, $cartItemIds[$i]);
-                     }
-                     $stmt->execute();
-                     $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-                     foreach ($urunler as $urun) {
-                        $adet = intval($_COOKIE["cart_item_" . strval($urun["id"])]);
-                    
-                        if ($urun['urun_indirim'] != 0) {
-                            $orijinal_fiyat = $urun['urun_fiyat'];
-                            $indirim_orani = $urun['urun_indirim'];
-                            $urun_fiyat = ($orijinal_fiyat - ($orijinal_fiyat * ($indirim_orani / 100))) * $adet;
-                        } else {
-                            $urun_fiyat = $urun["urun_fiyat"] * $adet;
-                        }
-                    
-                        $toplam_fiyat += $urun_fiyat;
-                    }
+                      $sql = "SELECT * FROM urunler WHERE id IN (" . implode(',', array_fill(0, count($cartItemIds), '?')) . ")";
+                      $stmt = $pdo->prepare($sql);
+                      for ($i = 0; $i < count($cartItemIds); $i++) {
+                          $stmt->bindParam($i + 1, $cartItemIds[$i]);
+                      }
+                      $stmt->execute();
+                      $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                  
+                      foreach ($urunler as $urun) {
+                          $adet = intval($_COOKIE["cart_item_" . strval($urun["id"])]);
+                          $urun_fiyat = 0; // Initialize product price for each iteration
+                  
+                          if ($urun['urun_indirim'] != 0) {
+                              $orijinal_fiyat = $urun['urun_fiyat'];
+                              $indirim_orani = $urun['urun_indirim'];
+                              $urun_fiyat = ($orijinal_fiyat - ($orijinal_fiyat * ($indirim_orani / 100))) * $adet;
+                          } else {
+                              $urun_fiyat = $urun["urun_fiyat"] * $adet;
+                          }
+                  
+                          $toplam_fiyat += $urun_fiyat;
+                      }
                   }
                   ?>
 
