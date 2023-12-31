@@ -171,21 +171,15 @@
                                  <mat-card _ngcontent-juf-c255="" class="mat-card mat-focus-indicator container">
                                     <div _ngcontent-juf-c255="" class="summary">
                                        <div _ngcontent-juf-c255="" class="subtitle-1">Sepet Özeti</div>
-                                       <div _ngcontent-juf-c255="" class="mat-body-2 text-color-grey text-align-right">2 Ürün</div>
+                                       <div _ngcontent-juf-c255="" class="mat-body-2 text-color-grey text-align-right"><?= $_SESSION['urunler']?> Ürün</div>
                                        <div _ngcontent-juf-c255="" class="summary-content mat-body-2">
                                           <p _ngcontent-juf-c255="">Toplam Tutar</p>
-                                          <p _ngcontent-juf-c255="">6.668,90 TL</p>
+                                          <p _ngcontent-juf-c255=""><?=$_SESSION['urun_fiyati']?> TL</p>
                                           <div _ngcontent-juf-c255="" class="delivery-price ng-star-inserted">
                                              <p _ngcontent-juf-c255="">Teslimat Tutarı</p>
                                              <p _ngcontent-juf-c255="" class="price">
-                                                <span _ngcontent-juf-c255="" class="text-linethrough">26,99 <span _ngcontent-juf-c255="" class="currency">TL</span></span><!----><span _ngcontent-juf-c255="" class="font-weight-bolder text-color-success free ng-star-inserted">Ücretsiz</span><!----><!---->
+                                                <span _ngcontent-juf-c255="" class="text-linethrough">Ücretsiz <span _ngcontent-juf-c255="" class="currency">TL</span></span><!----><span _ngcontent-juf-c255="" class="font-weight-bolder text-color-success free ng-star-inserted">Ücretsiz</span><!----><!---->
                                              </p>
-                                          </div>
-                                          <!---->
-                                          <div _ngcontent-juf-c255="" class="discounts">
-                                             <p _ngcontent-juf-c255="" class="ng-star-inserted">Migros İndirimi</p>
-                                             <p _ngcontent-juf-c255="" class="ng-star-inserted">-630,00 TL</p>
-                                             <!----><!----><!----><!----><!----><!----><!----><!---->
                                           </div>
                                        </div>
                                        <div _ngcontent-juf-c255="" class="subtitle-1">Ödenecek Tutar</div>

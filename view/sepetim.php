@@ -331,7 +331,9 @@
                                  <mat-card _ngcontent-ssk-c253="" class="mat-card mat-focus-indicator container">
                                     <div _ngcontent-ssk-c253="" class="summary">
                                        <div _ngcontent-ssk-c253="" class="subtitle-1">Sepet Özeti</div>
-                                       <div _ngcontent-ssk-c253="" class="mat-body-2 text-color-grey text-align-right"><?=strval(count($urunler))?> Ürün</div>
+                                       <div _ngcontent-ssk-c253="" class="mat-body-2 text-color-grey text-align-right"><?=strval(count($urunler));
+                                       $_SESSION['urunler'] = strval(count($urunler));
+                                       ?> Ürün</div>
                                        <div _ngcontent-ssk-c253="" class="summary-content mat-body-2">
                                           <p _ngcontent-ssk-c253="">Toplam Tutar</p>
                                           <p _ngcontent-ssk-c253=""><?=strval($urun_fiyat);
