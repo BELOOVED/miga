@@ -1501,7 +1501,7 @@ if (strpos($pageName,".") === False){
                      <!---->
                   </div>
                   <!---->
-                  <?php if ($q[0] != "sepetim"){ ?>
+                  <?php if ($q[0] == "urunler"){ ?>
 
                   <div class="header-bottom">
                      <div class="tabs">
