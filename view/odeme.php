@@ -703,10 +703,10 @@
                         <mat-card _ngcontent-juf-c255="" class="mat-card mat-focus-indicator container">
                            <div _ngcontent-juf-c255="" class="summary">
                               <div _ngcontent-juf-c255="" class="subtitle-1">Sepet Özeti</div>
-                              <div _ngcontent-juf-c255="" class="mat-body-2 text-color-grey text-align-right">2 Ürün</div>
+                              <div _ngcontent-juf-c255="" class="mat-body-2 text-color-grey text-align-right"><?= $_SESSION['urunler']?> Ürün</div>
                               <div _ngcontent-juf-c255="" class="summary-content mat-body-2">
                                  <p _ngcontent-juf-c255="">Toplam Tutar</p>
-                                 <p _ngcontent-juf-c255="">6.668,90 TL</p>
+                                 <p _ngcontent-juf-c255=""><?=$_SESSION['urun_fiyati']?> TL</p>
                                  <div _ngcontent-juf-c255="" class="delivery-price ng-star-inserted">
                                     <p _ngcontent-juf-c255="">Teslimat Tutarı</p>
                                     <p _ngcontent-juf-c255="" class="price">
@@ -714,14 +714,9 @@
                                     </p>
                                  </div>
                                  <!---->
-                                 <div _ngcontent-juf-c255="" class="discounts">
-                                    <p _ngcontent-juf-c255="" class="ng-star-inserted">Migros İndirimi</p>
-                                    <p _ngcontent-juf-c255="" class="ng-star-inserted">-630,00 TL</p>
-                                    <!----><!----><!----><!----><!----><!----><!----><!---->
-                                 </div>
                               </div>
                               <div _ngcontent-juf-c255="" class="subtitle-1">Ödenecek Tutar</div>
-                              <div _ngcontent-juf-c255="" class="subtitle-1 text-align-right">6.038,90 TL</div>
+                              <div _ngcontent-juf-c255="" class="subtitle-1 text-align-right"><?=$_SESSION['urun_fiyati']?> TL</div>
                            </div>
                            <mat-divider _ngcontent-juf-c255="" role="separator" class="mat-divider mat-divider-horizontal" aria-orientation="horizontal"></mat-divider>
                            <!---->
@@ -743,7 +738,7 @@
                                     </div>
                                     <label for="mat-mdc-checkbox-1-input">
                                        <span class="mat-caption-normal">
-                                          <a href="javascript:void(0)" class="text-color-orange"> Ön Bilgilendirme Koşulları</a>'nı okudum, onaylıyorum. <!---->
+                                          <a href="javascript:void(0)" onclick="openmodal('kvkk')" class="text-color-orange"> Ön Bilgilendirme Koşulları</a>'nı okudum, onaylıyorum. <!---->
                                        </span>
                                     </label>
                                  </div>
@@ -764,7 +759,7 @@
                                     </div>
                                     <label for="mat-mdc-checkbox-2-input">
                                        <span class="mat-caption-normal">
-                                          <a href="javascript:void(0)" class="text-color-orange"> Mesafeli Satış Sözleşmesi</a>'ni okudum, onaylıyorum. <!---->
+                                          <a href="javascript:void(0)" onclick="openmodal('acikrizametni')" class="text-color-orange"> Mesafeli Satış Sözleşmesi</a>'ni okudum, onaylıyorum. <!---->
                                        </span>
                                     </label>
                                  </div>
@@ -797,7 +792,7 @@
                                  <mat-card _ngcontent-juf-c255="" class="mat-card mat-focus-indicator container">
                                     <div _ngcontent-juf-c255="" class="summary">
                                        <div _ngcontent-juf-c255="" class="subtitle-1">Sepet Özeti</div>
-                                       <div _ngcontent-juf-c255="" class="mat-body-2 text-color-grey text-align-right"><?= $_SESSION['urunler']?> Ürün</div>
+                                       <div _ngcontent-juf-c255="" class="mat-body-2 text-color-grey text-align-right"><?=$_SESSION['urunler']?> Ürün</div>
                                        <div _ngcontent-juf-c255="" class="summary-content mat-body-2">
                                           <p _ngcontent-juf-c255="">Toplam Tutar</p>
                                           <p _ngcontent-juf-c255=""><?=$_SESSION['urun_fiyati']?> TL</p>
