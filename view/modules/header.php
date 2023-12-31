@@ -1335,8 +1335,6 @@ if (strpos($pageName,".") === False){
 
                               $toplam_fiyat += $urun_fiyat;
                            }
-                           print_r ($toplam_fiyat);
-
                         }
 
                         // Now $toplam_fiyat contains the correct total price
@@ -1353,7 +1351,7 @@ if (strpos($pageName,".") === False){
                                  </div>
                                  <div _ngcontent-cro-c342="">
                                     <div _ngcontent-cro-c342="" class="subtitle-2 text-color-black">Sepetim</div>
-                                    <div _ngcontent-cro-c342="" class="mat-caption price"><?=$urun_fiyat?> TL</div>
+                                    <div _ngcontent-cro-c342="" class="mat-caption price"><?=$toplam_fiyat?> TL</div>
                                  </div>
                                  <fa-icon _ngcontent-cro-c342="" class="ng-fa-icon text-color-black">
                                     <svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
