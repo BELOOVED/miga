@@ -2263,6 +2263,7 @@ function hideCategory() {
                 console.log(xhr.responseText);
                 setTimeout(function () {
                     $('#spinner').addClass('hidden');
+                    window.location.reload();
                 }, 1000);
             }
         };
