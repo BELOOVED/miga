@@ -217,7 +217,7 @@
                      <!---->
                   </div>
                   <div _ngcontent-haa-c500="" class="mdc-layout-grid__cell--span-4 mdc-layout-grid__cell--span-3-tablet">
-                  fe-line-checkout-summary _nghost-juf-c258="">
+                  <fe-line-checkout-summary _nghost-juf-c258="">
                         <div _ngcontent-juf-c258="" class="mobile-only">
                            <fe-line-checkout-summary-mobile _ngcontent-juf-c258="">
                               <div class="checkout-summary-mobile__container">
