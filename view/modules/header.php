@@ -1304,26 +1304,26 @@ if (strpos($pageName,".") === False){
                         }
                      }
                   }
-
-                  $sql = "SELECT * FROM urunler WHERE id IN (" . implode(',', array_fill(0, count($cartItemIds), '?')) . ")";
-                  $stmt = $pdo->prepare($sql);
-                  for ($i = 0; $i < count($cartItemIds); $i++) {
-                     $stmt->bindParam($i + 1, $cartItemIds[$i]);
-                  }
-                  $stmt->execute();
-                  $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
                   $urun_fiyat = 0;
-                  foreach ($urunler as $urun) {
-                     $adet = intval($_COOKIE["cart_item_".strval($urun["id"])]);
-                     if($urun['urun_indirim'] != 0){
-                        $orijinal_fiyat = $urun['urun_fiyat'];
-                        $indirim_orani = $urun['urun_indirim'];
-                        $urun_fiyat = (($orijinal_fiyat - ($orijinal_fiyat * ($indirim_orani / 100))) * $adet);
-                     }else {
-                        $urun_fiyat += ($urun["urun_fiyat"] * $adet);
+                  if (!empty($id)) {
+                     $sql = "SELECT * FROM urunler WHERE id IN (" . implode(',', array_fill(0, count($cartItemIds), '?')) . ")";
+                     $stmt = $pdo->prepare($sql);
+                     for ($i = 0; $i < count($cartItemIds); $i++) {
+                        $stmt->bindParam($i + 1, $cartItemIds[$i]);
                      }
+                     $stmt->execute();
+                     $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+                     foreach ($urunler as $urun) {
+                        $adet = intval($_COOKIE["cart_item_".strval($urun["id"])]);
+                        if($urun['urun_indirim'] != 0){
+                           $orijinal_fiyat = $urun['urun_fiyat'];
+                           $indirim_orani = $urun['urun_indirim'];
+                           $urun_fiyat = (($orijinal_fiyat - ($orijinal_fiyat * ($indirim_orani / 100))) * $adet);
+                        }else {
+                           $urun_fiyat += ($urun["urun_fiyat"] * $adet);
+                        }
+                     }
                   ?>
 
                   <?php if (!$mobile): ?>
