@@ -1317,6 +1317,9 @@ if (strpos($pageName,".") === False){
                   
                       foreach ($urunler as $urun) {
                           $adet = intval($_COOKIE["cart_item_" . strval($urun["id"])]);
+                          if ($adet == 0){
+                           $adet = 1;
+                          }
                           $urun_fiyat = 0; // Initialize product price for each iteration
                   
                           if ($urun['urun_indirim'] != 0) {
