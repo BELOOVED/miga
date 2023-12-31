@@ -217,16 +217,16 @@
                      <!---->
                   </div>
                   <div _ngcontent-haa-c500="" class="mdc-layout-grid__cell--span-4 mdc-layout-grid__cell--span-3-tablet">
-                  <fe-line-checkout-summary _nghost-juf-c258="">
+                  fe-line-checkout-summary _nghost-juf-c258="">
                         <div _ngcontent-juf-c258="" class="mobile-only">
                            <fe-line-checkout-summary-mobile _ngcontent-juf-c258="">
                               <div class="checkout-summary-mobile__container">
                                  <div class="checkout-summary-mobile__content ng-star-inserted">
                                     <div class="revenue-container">
                                        <div class="mat-caption-normal">Ödenecek Tutar</div>
-                                       <h3 class="revenue">6.038,90 TL</h3>
+                                       <h3 class="revenue"><?=$_SESSION['urun_fiyati']?> TL</h3>
                                     </div>
-                                    <button onclick="window.location.href= '/odeme'" id="checkout-summary-mobile-confirm-button" feappclickthrottle="" mat-flat-button="" color="primary" class="mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary confirm-button mat-mdc-button-base"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Devam Et </span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button>
+                                    <button onclick="window.location.href= '/teslimat'" id="checkout-summary-mobile-confirm-button" feappclickthrottle="" mat-flat-button="" color="primary" class="mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary confirm-button mat-mdc-button-base"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Devam Et </span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button>
                                  </div>
                                  <!---->
                               </div>
@@ -239,32 +239,26 @@
                                  <mat-card _ngcontent-juf-c255="" class="mat-card mat-focus-indicator container">
                                     <div _ngcontent-juf-c255="" class="summary">
                                        <div _ngcontent-juf-c255="" class="subtitle-1">Sepet Özeti</div>
-                                       <div _ngcontent-juf-c255="" class="mat-body-2 text-color-grey text-align-right">2 Ürün</div>
+                                       <div _ngcontent-juf-c255="" class="mat-body-2 text-color-grey text-align-right"><?= $_SESSION['urunler']?> Ürün</div>
                                        <div _ngcontent-juf-c255="" class="summary-content mat-body-2">
                                           <p _ngcontent-juf-c255="">Toplam Tutar</p>
-                                          <p _ngcontent-juf-c255="">6.668,90 TL</p>
+                                          <p _ngcontent-juf-c255=""><?=$_SESSION['urun_fiyati']?> TL</p>
                                           <div _ngcontent-juf-c255="" class="delivery-price ng-star-inserted">
                                              <p _ngcontent-juf-c255="">Teslimat Tutarı</p>
                                              <p _ngcontent-juf-c255="" class="price">
-                                                <span _ngcontent-juf-c255="" class="text-linethrough">26,99 <span _ngcontent-juf-c255="" class="currency">TL</span></span><!----><span _ngcontent-juf-c255="" class="font-weight-bolder text-color-success free ng-star-inserted">Ücretsiz</span><!----><!---->
+                                                <span _ngcontent-juf-c255="" class="text-linethrough">26.99 <span _ngcontent-juf-c255="" class="currency">TL</span></span><!----><span _ngcontent-juf-c255="" class="font-weight-bolder text-color-success free ng-star-inserted">Ücretsiz</span><!----><!---->
                                              </p>
-                                          </div>
-                                          <!---->
-                                          <div _ngcontent-juf-c255="" class="discounts">
-                                             <p _ngcontent-juf-c255="" class="ng-star-inserted">Migros İndirimi</p>
-                                             <p _ngcontent-juf-c255="" class="ng-star-inserted">-630,00 TL</p>
-                                             <!----><!----><!----><!----><!----><!----><!----><!---->
                                           </div>
                                        </div>
                                        <div _ngcontent-juf-c255="" class="subtitle-1">Ödenecek Tutar</div>
-                                       <div _ngcontent-juf-c255="" class="subtitle-1 text-align-right">6.038,90 TL</div>
+                                       <div _ngcontent-juf-c255="" class="subtitle-1 text-align-right"><?=$_SESSION['urun_fiyati']?> TL</div>
                                     </div>
                                     <mat-divider _ngcontent-juf-c255="" role="separator" class="mat-divider mat-divider-horizontal" aria-orientation="horizontal"></mat-divider>
                                     <!---->
                                     
                                     <!---->
                                     <mat-divider _ngcontent-juf-c256="" role="separator" class="mat-divider mat-divider-horizontal" aria-orientation="horizontal"></mat-divider>
-                                    <button onclick="window.location.href= '/odeme'" _ngcontent-juf-c256="" id="checkout-summary-desktop-confirm-button" mat-flat-button="" color="primary" feappclickthrottle="" class="confirm-button mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Devam Et </span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button>
+                                    <button onclick="window.location.href= '/teslimat'" _ngcontent-juf-c256="" id="checkout-summary-desktop-confirm-button" mat-flat-button="" color="primary" feappclickthrottle="" class="confirm-button mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"> Devam Et </span><span class="mat-mdc-focus-indicator"></span><span matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span class="mat-mdc-button-touch-target"></span></button>
                                  </mat-card>
                               </fe-line-checkout-price-summary>
                            </fe-line-checkout-summary-desktop>

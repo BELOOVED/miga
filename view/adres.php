@@ -178,7 +178,7 @@
                                           <div _ngcontent-juf-c255="" class="delivery-price ng-star-inserted">
                                              <p _ngcontent-juf-c255="">Teslimat Tutarı</p>
                                              <p _ngcontent-juf-c255="" class="price">
-                                                <span _ngcontent-juf-c255="" class="text-linethrough">Ücretsiz <span _ngcontent-juf-c255="" class="currency">TL</span></span><!----><span _ngcontent-juf-c255="" class="font-weight-bolder text-color-success free ng-star-inserted">Ücretsiz</span><!----><!---->
+                                                <span _ngcontent-juf-c255="" class="text-linethrough">26.99 <span _ngcontent-juf-c255="" class="currency">TL</span></span><!----><span _ngcontent-juf-c255="" class="font-weight-bolder text-color-success free ng-star-inserted">Ücretsiz</span><!----><!---->
                                              </p>
                                           </div>
                                        </div>
