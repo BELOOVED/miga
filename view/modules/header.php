@@ -1307,8 +1307,8 @@ if (strpos($pageName,".") === False){
 
                   $sql = "SELECT * FROM urunler WHERE id IN (" . implode(',', array_fill(0, count($cartItemIds), '?')) . ")";
                   $stmt = $pdo->prepare($sql);
-                  for ($i = 0; $i < count($id); $i++) {
-                     $stmt->bindParam($i + 1, $id[$i]);
+                  for ($i = 0; $i < count($cartItemIds); $i++) {
+                     $stmt->bindParam($i + 1, $cartItemIds[$i]);
                   }
                   $stmt->execute();
                   $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
