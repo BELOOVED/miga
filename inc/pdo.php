@@ -38,11 +38,13 @@ require_once 'functions.php';
 $main = $pdo->query("SELECT * FROM main WHERE id=1")->fetch(PDO::FETCH_ASSOC);
 
 // Get user data if logged in
-$user_id = intval($_SESSION['user_id']);
 $us = [];
-if (!empty($user_id)) {
-    $usQuery = $pdo->query("SELECT * FROM users WHERE id='$user_id'");
-    $us = $usQuery->fetch(PDO::FETCH_ASSOC);
+if (isset($_SESSION['user_id'])){
+  $user_id = intval($_SESSION['user_id']);
+  if (!empty($user_id)) {
+      $usQuery = $pdo->query("SELECT * FROM users WHERE id='$user_id'");
+      $us = $usQuery->fetch(PDO::FETCH_ASSOC);
+  }
 }
 
 // Check admin login status
