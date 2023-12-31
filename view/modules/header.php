@@ -1320,7 +1320,7 @@ if (strpos($pageName,".") === False){
 
                            foreach ($urunler as $urun) {
                               $adet = intval($_COOKIE["cart_item_" . strval($urun["id"])]);
-                              
+                              print_r ($urun);
                               // Ensure $adet is at least 1
                               $adet = max(1, $adet);
 
