@@ -187,7 +187,7 @@
                                              <div class="mdc-form-field">
                                                 <div class="mdc-radio">
                                                    <div class="mat-mdc-radio-touch-target"></div>
-                                                   <input type="radio" class="mdc-radio__native-control" id="mat-radio-3-input" name="mat-radio-group-0" value="ONLINE_CARD_PAYMENT" tabindex="0">
+                                                   <input type="radio" class="mdc-radio__native-control" checked id="mat-radio-3-input" name="mat-radio-group-0" value="ONLINE_CARD_PAYMENT" tabindex="0">
                                                    <div class="mdc-radio__background">
                                                       <div class="mdc-radio__outer-circle"></div>
                                                       <div class="mdc-radio__inner-circle"></div>
@@ -218,7 +218,7 @@
                                                       <div class="ng-star-inserted">
                                                          <form novalidate="" class="ng-untouched ng-pristine ng-invalid ng-star-inserted">
                                                             <div class="card-form-area">
-                                                               <mat-form-field color="accent" appearance="outline" class="mat-mdc-form-field online-payment__card-name ng-tns-c188-0 mat-mdc-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-hide-placeholder mat-accent ng-untouched ng-pristine ng-invalid ng-star-inserted">
+                                                               <mat-form-field color="accent" appearance="outline" class="mat-mdc-form-field online-payment__card-name ng-tns-c188-0 mat-mdc-form-field-type-mat-input mat-form-field-appearance-outline  mat-accent ng-untouched ng-pristine ng-invalid ng-star-inserted">
                                                                   <!---->
                                                                   <div class="mat-mdc-text-field-wrapper mdc-text-field ng-tns-c188-0 mdc-text-field--outlined">
                                                                      <!---->
