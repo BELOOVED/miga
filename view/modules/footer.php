@@ -2244,7 +2244,11 @@ function hideCategory() {
   });
 </script>
 <script>
-    function addToCart(productId) {
+    <?php
+   if (isset($_SESSION['sehir']) && isset($_SESSION['ilce']) && isset($_SESSION['mahalle'])) {
+      
+   ?>
+   function addToCart(productId) {
       $('#spinner').removeClass('hidden');
         var xhr = new XMLHttpRequest();
         xhr.open("POST", "addToCart.php", true);
@@ -2263,6 +2267,16 @@ function hideCategory() {
             }
         };
     }
+   <?php }else{?>
+      function addToCart(productId) {
+      $('#spinner').removeClass('hidden');
+        
+                setTimeout(function () {
+                    $('#spinner').addClass('hidden');
+                    openmodal('sepet');
+                }, 1000);
+            }
+   <?php }?>
 </script>
 <script>
       function deleteCookieAndReload(cookieName) {
