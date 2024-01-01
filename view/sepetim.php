@@ -299,7 +299,7 @@
                                           <div class="checkout-summary-mobile__content ng-star-inserted">
                                              <div class="revenue-container">
                                                 <div class="mat-caption-normal">Ödenecek Tutar</div>
-                                                <h3 class="revenue"><?=strval($urun_fiyat)?> TL</h3>
+                                                <h3 class="revenue"><?=$_SESSION['toplam_fiyat']?> TL</h3>
                                              </div>
                                              <button 
                                              <?php
@@ -352,7 +352,7 @@
                                           <!---->
                                        </div>
                                        <div _ngcontent-ssk-c253="" class="subtitle-1">Ödenecek Tutar</div>
-                                       <div _ngcontent-ssk-c253="" class="subtitle-1 text-align-right"><?=strval($urun_fiyat)?> TL</div>
+                                       <div _ngcontent-ssk-c253="" class="subtitle-1 text-align-right"><?=$_SESSION['toplam_fiyat']?> TL</div>
                                     </div>
                                     <mat-divider _ngcontent-ssk-c253="" role="separator" class="mat-divider mat-divider-horizontal" aria-orientation="horizontal"></mat-divider>
                                     <!---->
