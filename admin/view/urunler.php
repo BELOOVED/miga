@@ -1,16 +1,23 @@
 <?php
-$q = $_GET['q'];
-if($q== NULL){
-$sql = "SELECT * FROM urunler";
-}else{
-$sql = "SELECT * FROM urunler WHERE urun_kategori_id = $q";
+$q = isset($_GET['q']) ? $_GET['q'] : null;
+
+if ($q === null) {
+    $sql = "SELECT * FROM urunler";
+} else {
+    $sql = "SELECT * FROM urunler WHERE urun_kategori_id = :q";
 }
+
 $stmt = $pdo->prepare($sql);
+
+if ($q !== null) {
+    $stmt->bindParam(':q', $q, PDO::PARAM_INT);
+}
+
 $stmt->execute();
 
 $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
 
-?> 
 <div class="content-wrapper">
    <div class="container-fluid">
       <!-- Breadcrumb-->
