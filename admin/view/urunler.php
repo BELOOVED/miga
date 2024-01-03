@@ -33,8 +33,8 @@ $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
       <div class="row">
          <div class="col-lg-12">
             <div class="card">
+            <div class="card-header"><i class="fa fa-table"></i> Tüm Ürünler</div>
                <div class="card-body">
-                  <h5 class="card-title">Tüm Ürünler</h5>
                   <div class="table-responsive">
                      <table id="default-datatable" class="table table-hover">
                         <thead>
@@ -67,6 +67,17 @@ $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             <?php }?> 
                            
                         </tbody>
+                        <tfoot>
+                           <tr>
+                              <th scope="col">#</th>
+                              <th scope="col">Ürün Resmi</th>
+                              <th scope="col">Ürün Adı</th>
+                              <th scope="col">Ürün Marka</th>
+                              <th scope="col">Ürün Fiyatı</th>
+                              <th scope="col">Ürün Kategori</th>
+                              <th scope="col">İşlem Yap</th>
+                           </tr>
+                        </tfoot>
                      </table>
                   </div>
                </div>
