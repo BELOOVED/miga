@@ -1,23 +1,12 @@
 <?php
-$q = isset($_GET['q']) ? $_GET['q'] : null;
-
-if ($q === null) {
-    $sql = "SELECT * FROM urunler";
-} else {
-    $sql = "SELECT * FROM urunler WHERE urun_kategori_id = :q";
-}
+$sql = "SELECT * FROM urunler";
 
 $stmt = $pdo->prepare($sql);
-
-if ($q !== null) {
-    $stmt->bindParam(':q', $q, PDO::PARAM_INT);
-}
-
 $stmt->execute();
 
 $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
-?>
 
+?> 
 <div class="content-wrapper">
    <div class="container-fluid">
       <!-- Breadcrumb-->
@@ -69,12 +58,7 @@ $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             foreach ($urunler as $urun) {?>
                             <tr>
                               <th scope="row"><?=$urun['id']?></th>
-                              <td><img src="
-                              <?
-                              
-                              //=$urun['urun_resim']
-                              ?>
-                              " width="100" height="100" /></td>
+                              <td><a href="<?=$urun['urun_resim']?>"></a><img src="<?//=$urun['urun_resim']?>" width="100" height="100" /></td>
                               <td><?=$urun['urun_adi']?></td>
                               <td><?=$urun['urun_marka']?></td>
                               <td><?=$urun['urun_fiyat']?></td>
