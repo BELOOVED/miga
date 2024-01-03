@@ -13,11 +13,6 @@ $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
       <div class="row pt-2 pb-2">
          <div class="col-sm-9">
             <h4 class="page-title">Ürünler</h4>
-            <ol class="breadcrumb">
-               <li class="breadcrumb-item"><a href="javaScript:void();">Kategoriler</a></li>
-               <li class="breadcrumb-item"><a href="javaScript:void();">Ürünler</a></li>
-               <li class="breadcrumb-item active" aria-current="page"><?=$urunler['urun_kategori']?></li>
-            </ol>
          </div>
          <div class="col-sm-3">
             <div class="btn-group float-sm-right">
@@ -26,11 +21,11 @@ $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
                <span class="caret"></span>
                </button>
                <div class="dropdown-menu">
-                  <a href="javaScript:void();" class="dropdown-item">Action</a>
-                  <a href="javaScript:void();" class="dropdown-item">Another action</a>
-                  <a href="javaScript:void();" class="dropdown-item">Something else here</a>
+                  <a href="javaScript:void();" class="dropdown-item">Yeni Ürün Ekle</a>
+                  <a href="javaScript:void();" class="dropdown-item">Tüm Ürünleri Sil</a>
+                  <a href="javaScript:void();" class="dropdown-item">Migros'tan Ürün Çek</a>
                   <div class="dropdown-divider"></div>
-                  <a href="javaScript:void();" class="dropdown-item">Separated link</a>
+                  <a href="javaScript:void();" class="dropdown-item">Tüm Ürünleri Deaktif Et</a>
                </div>
             </div>
          </div>
@@ -39,7 +34,7 @@ $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
          <div class="col-lg-12">
             <div class="card">
                <div class="card-body">
-                  <h5 class="card-title">Hover Table</h5>
+                  <h5 class="card-title">Tüm Ürünler</h5>
                   <div class="table-responsive">
                      <table class="table table-hover">
                         <thead>
@@ -58,7 +53,7 @@ $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             foreach ($urunler as $urun) {?>
                             <tr>
                               <th scope="row"><?=$urun['id']?></th>
-                              <td><a href="<?=$urun['urun_resim']?>"><img src="<?//=$urun['urun_resim']?>" width="100" height="100" /></a></td>
+                              <td><a target="_blank" href="<?=$urun['urun_resim']?>"><img src="<?//=$urun['urun_resim']?>" width="100" height="100" /></a></td>
                               <td><?=$urun['urun_adi']?></td>
                               <td><?=$urun['urun_marka']?></td>
                               <td><?=$urun['urun_fiyat']?></td>

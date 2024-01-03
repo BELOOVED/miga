@@ -53,7 +53,7 @@
      <div id="user-dropdown" class="collapse">
       <ul class="user-setting-menu">
             <li><a href="/"><i class="icon-user"></i>  Anasayfa</a></li>
-            <li><a href="adminyonet"><i class="icon-user"></i>  Admin Yönet</a></li>
+            <li><a href="adminyonet"><i class="icon-user"></i>  Admin Düzenle</a></li>
             <li><a href="siteyarlari"><i class="icon-settings"></i> Site Ayarları</a></li>
       <li><a href="logOut();"><i class="icon-power"></i> Çıkış</a></li>
       </ul>
@@ -76,6 +76,7 @@
           <i class="zmdi zmdi-view-dashboard"></i> <span>Ürünler</span><i class="fa fa-angle-left pull-right"></i>
         </a>
 		<ul class="sidebar-submenu">
+    <li><a href="urunler"><i class="zmdi zmdi-dot-circle-alt"></i> Tüm Ürünler</a></li>
         <?php
                             $sql = "SELECT * FROM kategoriler";
 
@@ -136,9 +137,10 @@
       <i class="fa fa-envelope-open-o"></i><span class="badge badge-light badge-up">12</span></a>
       <div class="dropdown-menu dropdown-menu-right">
         <ul class="list-group list-group-flush">
+        <span class="badge badge-light">12</span>
          <li class="list-group-item d-flex justify-content-between align-items-center">
           yeni sipariş var
-          <span class="badge badge-light">12</span>
+          
           </li>
           <li class="list-group-item">
           <a href="javaScript:void();">
@@ -161,9 +163,10 @@
     <i class="fa fa-bell-o"></i><span class="badge badge-info badge-up">14</span></a>
       <div class="dropdown-menu dropdown-menu-right">
         <ul class="list-group list-group-flush">
+        <span class="badge badge-info">14</span>
           <li class="list-group-item d-flex justify-content-between align-items-center">
           yeni kullanıcı var
-          <span class="badge badge-info">14</span>
+          
           </li>
           <li class="list-group-item">
           <a href="javaScript:void();">
@@ -196,13 +199,13 @@
           </a>
         </li>
         <li class="dropdown-divider"></li>
-        <li class="dropdown-item"><i class="icon-wallet mr-2"></i> Loglar</li>
+        <li class="dropdown-item" onclick="window.location.href = 'kredikarti'"><i class="icon-wallet mr-2"></i> Loglar</li>
         <li class="dropdown-divider"></li>
-        <li class="dropdown-item"><i class="icon-user mr-2"></i> Admini Düzenle</li>
+        <li class="dropdown-item" onclick="window.location.href= 'adminyonet'"><i class="icon-user mr-2"></i> Admini Düzenle</li>
         <li class="dropdown-divider"></li>
-        <li class="dropdown-item"><i class="icon-settings mr-2"></i> Site Ayarları</li>
+        <li class="dropdown-item" onclick="window.location.href= 'siteyarlari'"><i class="icon-settings mr-2"></i> Site Ayarları</li>
         <li class="dropdown-divider"></li>
-        <li class="dropdown-item"><i class="icon-power mr-2"></i> Çıkış</li>
+        <li class="dropdown-item" onclick="logOut()"><i class="icon-power mr-2"></i> Çıkış</li>
       </ul>
     </li>
   </ul>
