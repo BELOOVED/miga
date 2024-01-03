@@ -95,7 +95,7 @@ function logIn() {
       data: $("#form").serialize(),
       success: (response) => {
         if (response == "success") {
-          window.location.href = 'kredikarti';
+          window.location.reload();
         } else {
           swal.fire("Hata!", "Kullanıcı adı ve ya şifre doğru değil", "error");
         }
