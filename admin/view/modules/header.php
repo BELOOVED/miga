@@ -86,7 +86,7 @@
                             $kategoriler = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                             foreach ($kategoriler as $kategori) {?>
-		  <li><a href="urunler?q=<?=$kategori['id']?>"><i class="zmdi zmdi-dot-circle-alt"></i> <?=$kategori['kategori_adi']?></a></li>
+		  <li><a href="urunler?type=<?=$kategori['id']?>"><i class="zmdi zmdi-dot-circle-alt"></i> <?=$kategori['kategori_adi']?></a></li>
           <?php }?> 
 		  <li><a href="kategoriduzenle"><i class="zmdi zmdi-dot-circle-alt"></i> Kategorileri Düzenle</a></li>
 

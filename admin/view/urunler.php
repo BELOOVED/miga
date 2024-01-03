@@ -1,7 +1,7 @@
 <?php
 $sql = "SELECT * FROM urunler";
 
-if(isset($_GET['q']) && !empty($_GET['q'])) {
+if(isset($_GET['type']) && !empty($_GET['type'])) {
     $type = $_GET['q'];
 
     $sql .= " WHERE urun_kategori_id = :kategori_id";
