@@ -53,7 +53,7 @@ $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             foreach ($urunler as $urun) {?>
                             <tr>
                               <th scope="row"><?=$urun['id']?></th>
-                              <td><a target="_blank" href="<?=$urun['urun_resim']?>"><img src="<?//=$urun['urun_resim']?>" width="100" height="100" /></a></td>
+                              <td><a target="_blank" href="<?=$urun['urun_resim']?>"><img src="<?=$urun['urun_resim']?>" width="100" height="100" /></a></td>
                               <td><?=$urun['urun_adi']?></td>
                               <td><?=$urun['urun_marka']?></td>
                               <td><?=$urun['urun_fiyat']?></td>
