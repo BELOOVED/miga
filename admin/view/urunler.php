@@ -1,13 +1,16 @@
 <?php
+$q = $_GET['q'];
+if($q== NULL){
 $sql = "SELECT * FROM urunler";
-
+}else{
+$sql = "SELECT * FROM urunler WHERE id = $q";
+}
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
 
 $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-foreach ($kategoriler as $kategori) {?>
-<?php }?> 
+?> 
 <div class="content-wrapper">
    <div class="container-fluid">
       <!-- Breadcrumb-->
