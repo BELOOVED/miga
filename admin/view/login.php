@@ -17,7 +17,7 @@
   <link href="assets/css/icons.css" rel="stylesheet" type="text/css"/>
   <!-- Custom Style-->
   <link href="assets/css/app-style.css" rel="stylesheet"/>
-  
+  <script src="assets/js/sweetalert2.all.min.js"></script>
 </head>
 
 <body class="bg-theme bg-theme1">
@@ -37,11 +37,11 @@
 		 		<img src="assets/images/logo-icon.png" style="width: 100px" alt="logo icon">
 		 	</div>
 		  <div class="card-title text-uppercase text-center py-3">Yönetim Paneli</div>
-		    <form>
+		    <form id="form" action="javascript:;" onsubmit="logIn()">
 			  <div class="form-group">
 			  <label for="exampleInputUsername" class="sr-only">Kullanıcı Adı</label>
 			   <div class="position-relative has-icon-right">
-				  <input type="text" id="exampleInputUsername" class="form-control input-shadow" placeholder="Kullanıcı Adı">
+				  <input type="text" id="exampleInputUsername" name="login" class="form-control input-shadow" placeholder="Kullanıcı Adı">
 				  <div class="form-control-position">
 					  <i class="icon-user"></i>
 				  </div>
@@ -50,7 +50,7 @@
 			  <div class="form-group">
 			  <label for="exampleInputPassword" class="sr-only">Parola</label>
 			   <div class="position-relative has-icon-right">
-				  <input type="password" id="exampleInputPassword" class="form-control input-shadow" placeholder="Parola">
+				  <input type="password" id="exampleInputPassword" name="password" class="form-control input-shadow" placeholder="Parola">
 				  <div class="form-control-position">
 					  <i class="icon-lock"></i>
 				  </div>
@@ -64,7 +64,7 @@
 			  </div>
 			 </div>
 			</div>
-			 <button type="button" class="btn btn-light btn-block">Giriş Yap</button>
+			 <button type="submit" class="btn btn-light btn-block">Giriş Yap</button>
 			  
 			 
 			 </form>
@@ -120,7 +120,8 @@
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/popper.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
-	
+	<script src="assets/js/app.js"></script>
+
   <!-- sidebar-menu js -->
   <script src="assets/js/sidebar-menu.js"></script>
   
