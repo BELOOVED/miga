@@ -1,12 +1,19 @@
 <?php
 $sql = "SELECT * FROM urunler";
 
-$stmt = $pdo->prepare($sql);
+if(isset($_GET['q']) && !empty($_GET['q'])) {
+    $type = $_GET['q'];
+
+    $sql .= " WHERE urun_kategori_id = :kategori_id";
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(':kategori_id', $type, PDO::PARAM_INT);
+} else {
+    $stmt = $pdo->prepare($sql);
+}
+
 $stmt->execute();
-
 $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-?> 
+?>
 <div class="content-wrapper">
    <div class="container-fluid">
       <!-- Breadcrumb-->
