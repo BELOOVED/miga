@@ -3,7 +3,7 @@ $q = $_GET['q'];
 if($q== NULL){
 $sql = "SELECT * FROM urunler";
 }else{
-$sql = "SELECT * FROM urunler WHERE id = $q";
+$sql = "SELECT * FROM urunler WHERE urun_kategori_id = $q";
 }
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
