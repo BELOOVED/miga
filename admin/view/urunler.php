@@ -2,7 +2,7 @@
 $sql = "SELECT * FROM urunler";
 
 if(isset($_GET['type']) && !empty($_GET['type'])) {
-    $type = $_GET['q'];
+    $type = $_GET['type'];
 
     $sql .= " WHERE urun_kategori_id = :kategori_id";
     $stmt = $pdo->prepare($sql);
