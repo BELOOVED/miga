@@ -60,70 +60,6 @@ if ($admin == true) {
       updates = '$update'
       where id= '1'");
     die('success');
-  } elseif ($q == 'accounts') {
-    $papara_holder = escape('papara_holder');
-    $papara_number = escape('papara_number');
-    $bitcoin_wallet = escape('bitcoin_wallet');
-    $bitcoin_img = escape('bitcoin_img');
-    $cmt_holder = escape('cmt_holder');
-    $cmt_number = escape('cmt_number');
-    $payfix_holder = escape('payfix_holder');
-    $payfix_number = escape('payfix_number');
-    $mefete_holder = escape('mefete_holder');
-    $mefete_number = escape('mefete_number');
-    $pep_holder = escape('pep_holder');
-    $pep_number = escape('pep_number');
-    $kassa_holder = escape('kassa_holder');
-    $kassa_number = escape('kassa_number');
-    $papara_iban_holder = escape('papara_iban_holder');
-    $papara_iban_number = escape('papara_iban_number');
-    $paycell_holder = escape('paycell_holder');
-    $paycell_number = escape('paycell_number');
-    $paybol_holder = escape('paybol_holder');
-    $paybol_number = escape('paybol_number');
-    $tosla_holder = escape('tosla_holder');
-    $tosla_number = escape('tosla_number');
-    $cepbank_holder = escape('cepbank_holder');
-    $cepbank_number = escape('cepbank_number');
-    $parazula_holder = escape('parazula_holder');
-    $parazula_number = escape('parazula_number');
-    $tether_holder = escape('tether_holder');
-    $tether_number = escape('tether_number');
-    $fast_holder = escape('fast_holder');
-    $fast_number = escape('fast_number');
-    $db->query("UPDATE accounts set
-        papara_holder = '$papara_holder',
-        papara_number = '$papara_number',
-        bitcoin_wallet = '$bitcoin_wallet',
-        bitcoin_img = '$bitcoin_img',
-        cmt_holder = '$cmt_holder',
-        cmt_number = '$cmt_number',
-        payfix_holder = '$payfix_holder',
-        payfix_number = '$payfix_number',
-        mefete_holder = '$mefete_holder',
-        mefete_number = '$mefete_number',
-        pep_holder = '$pep_holder',
-        pep_number = '$pep_number',
-        kassa_holder = '$kassa_holder',
-        kassa_number = '$kassa_number',
-        papara_iban_holder = '$papara_iban_holder',
-        papara_iban_number = '$papara_iban_number',
-        paycell_holder = '$paycell_holder',
-        paycell_number = '$paycell_number',
-        paybol_holder = '$paybol_holder',
-        paybol_number = '$paybol_number',
-        tosla_holder = '$tosla_holder',
-        tosla_number = '$tosla_number',
-        cepbank_number = '$cepbank_number',
-        cepbank_holder = '$cepbank_holder',
-        parazula_number = '$parazula_number',
-        parazula_holder = '$parazula_holder',
-        tether_number = '$tether_number',
-        tether_holder = '$tether_holder',
-        fast_number = '$fast_number',
-        fast_holder = '$fast_holder'
-      where id = 1");
-    die("success");
   } elseif ($q == 'delete') {
     $table = escape_get('table');
     $id = escape_get('id');
@@ -142,16 +78,7 @@ if ($admin == true) {
       $db->query($sql);
       die('success');
     }
-  } elseif ($q == 'change-balance') {
-    $balance = escape('balance');
-    $id = escape('id');
-    if (!empty($balance) || intval($balance) > 0 && !empty($id)) {
-      $db->query("UPDATE users set balance='$balance' where id='$id'");
-      die('success');
-    } else {
-      die('error');
-    }
-  }
+  } 
   elseif($q == 'search-user'){
     if (! empty($_POST["keyword"])) {
       $sql = $db->prepare("SELECT * FROM users WHERE login LIKE  ? ORDER BY login LIMIT 0,6");
@@ -294,14 +221,7 @@ if ($admin == true) {
         iban = '$iban'");
     die('success');
   }
-  elseif ($q == 'add-crypto') {
-    $name = escape('name');
-    $iban = escape('cryptocode');
-    $db->query("INSERT into cryptoacc set
-        name = '$name',
-        crypto_code = '$iban'");
-    die('success');
-  }elseif ($q == 'update-bank') {
+  elseif ($q == 'update-bank') {
     $bank_id = escape('id');
     $name = escape('name');
     $account_holder = escape('account-holder');
