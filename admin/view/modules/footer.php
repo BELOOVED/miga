@@ -55,7 +55,7 @@
   <!-- Bootstrap core JavaScript-->
   <script src="assets/js/popper.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
-	
+	<script src="assets/js/app.js"></script>
  <!-- simplebar js -->
   <script src="assets/plugins/simplebar/js/simplebar.js"></script>
   <!-- sidebar-menu js -->
