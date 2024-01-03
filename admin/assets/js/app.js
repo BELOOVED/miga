@@ -95,7 +95,7 @@ function logIn() {
       data: $("#form").serialize(),
       success: (response) => {
         if (response == "success") {
-          window.location.location = '/dashboard';
+          window.location.href = '/dashboard';
         } else {
           swal.fire("Hata!", "Kullanıcı adı ve ya şifre doğru değil", "error");
         }
