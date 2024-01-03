@@ -866,7 +866,7 @@
    <!---->
    <script>
       function satinal() {
-         $('#spinner').addClass('hidden');         
+         $('#spinner').removeClass('hidden');       
       }
    </script>
 </main>
