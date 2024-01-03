@@ -91,11 +91,6 @@
   <script src="assets/plugins/bootstrap-datatable/js/buttons.print.min.js"></script>
   <script src="assets/plugins/bootstrap-datatable/js/buttons.colVis.min.js"></script>
 
-    <script>
-        $(function() {
-            $(".knob").knob();
-        });
-    </script>
   <!-- Index js -->
   <script src="assets/js/index.js"></script>
 
