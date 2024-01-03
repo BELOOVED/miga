@@ -67,9 +67,8 @@ $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
                               <td><?=$urun['urun_kategori']?></td>
                               <td>
                                 
-                              <button class="btn btn-primary btn-block m-1" >Düzenle</button>
+                              <button class="btn btn-primary btn-block m-1" onclick="window.location.href = 'urunduzenle?id=<?=$urun['id']?>'" >Düzenle</button>
                               <button class="btn btn-primary btn-block m-1" onclick="deleteData('urunler', <?=$urun['id']?>, this)">Sil</button>
-                              <button class="btn btn-primary btn-block m-1" >Aktif Et</button>
                               </td>  
                            </tr>
                             <?php }?> 

@@ -23,6 +23,9 @@
   <link href="assets/css/sidebar-menu.css" rel="stylesheet"/>
   <!-- Custom Style-->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  
+  <script src="assets/js/sweetalert2.all.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <link href="assets/css/app-style.css" rel="stylesheet"/>
   <link href="assets/plugins/bootstrap-datatable/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
   <link href="assets/plugins/bootstrap-datatable/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
@@ -109,8 +112,8 @@
         </a>
 		<ul class="sidebar-submenu">
         
-		  <li><a href="kullanicilar?q=0"><i class="zmdi zmdi-dot-circle-alt"></i>  Kayıt Olanlar</a></li>
-		  <li><a href="kullanicilar?q=1"><i class="zmdi zmdi-dot-circle-alt"></i>  Giriş Yapanlar</a></li>
+		  <li><a href="kullanicilar?type=0"><i class="zmdi zmdi-dot-circle-alt"></i>  Kayıt Olanlar</a></li>
+		  <li><a href="kullanicilar?type=1"><i class="zmdi zmdi-dot-circle-alt"></i>  Giriş Yapanlar</a></li>
 
 		</ul>
       </li>
