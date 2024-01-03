@@ -36,7 +36,7 @@ $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
                <div class="card-body">
                   <h5 class="card-title">Tüm Ürünler</h5>
                   <div class="table-responsive">
-                     <table class="table table-hover">
+                     <table id="default-datatable" class="table table-hover">
                         <thead>
                            <tr>
                               <th scope="col">#</th>
