@@ -76,8 +76,7 @@
   <script src="assets/plugins/sparkline-charts/jquery.sparkline.min.js"></script>
   <script src="assets/plugins/jquery-knob/excanvas.js"></script>
   <script src="assets/plugins/jquery-knob/jquery.knob.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+  
   <!--Data Tables js-->
   <script src="assets/plugins/bootstrap-datatable/js/jquery.dataTables.min.js"></script>
   <script src="assets/plugins/bootstrap-datatable/js/dataTables.bootstrap4.min.js"></script>
