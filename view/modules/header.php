@@ -1301,7 +1301,7 @@ if (strpos($pageName,".") === False){
                         $showCart2Function = 'onmouseover="showCart2()" onmouseout="hideCart2()"';
 
                         $cartItemIds = [];
-                        $toplam_fiyat = 0; // Initialize total price
+                        $_SESSION['toplam_fiyat'] = 0; // Initialize total price
 
                         foreach ($_COOKIE as $cookieName => $cookieValue) {
                            if (strpos($cookieName, 'cart_item_') !== false) {
@@ -1311,7 +1311,7 @@ if (strpos($pageName,".") === False){
                               }
                            }
                         }
-
+                        $_SESSION['cartItemIds'] = count($cartItemIds);
                         if (!empty($cartItemIds)) {
                            $sql = "SELECT * FROM urunler WHERE id IN (" . implode(',', array_fill(0, count($cartItemIds), '?')) . ")";
                            $stmt = $pdo->prepare($sql);
@@ -1339,11 +1339,9 @@ if (strpos($pageName,".") === False){
                                     $urun_fiyat = intval($urun["urun_fiyat"] * $adet);
                               }
 
-                              $toplam_fiyat += $urun_fiyat;
+                              $_SESSION['toplam_fiyat'] += $urun_fiyat;
                            }
                         }
-
-                        // Now $toplam_fiyat contains the correct total price
                      ?>
 
                   <?php if (!$mobile): ?>
@@ -1353,11 +1351,11 @@ if (strpos($pageName,".") === False){
                               <div _ngcontent-cro-c342="" feclickelsewhere="" <?= $showCart2Function ?> class="dropdown-btn">
                                  <div _ngcontent-cro-c342="" class="icon-cart-quantity-wrapper">
                                     <div _ngcontent-cro-c342="" class="icon-cart"></div>
-                                    <div _ngcontent-cro-c342="" class="quantity"><?=count($cartItemIds)?></div>
+                                    <div _ngcontent-cro-c342="" class="quantity"><?=$_SESSION['cartItemIds']?></div>
                                  </div>
                                  <div _ngcontent-cro-c342="">
                                     <div _ngcontent-cro-c342="" class="subtitle-2 text-color-black">Sepetim</div>
-                                    <div _ngcontent-cro-c342="" class="mat-caption price"><?=$toplam_fiyat?> TL</div>
+                                    <div _ngcontent-cro-c342="" class="mat-caption price"><?=$_SESSION['toplam_fiyat']?> TL</div>
                                  </div>
                                  <fa-icon _ngcontent-cro-c342="" class="ng-fa-icon text-color-black">
                                     <svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
