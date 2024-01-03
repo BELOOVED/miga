@@ -1,24 +1,13 @@
 <?php
-$id = $_GET['q'];
-try {
-    $sql = "SELECT * FROM urunler";
-    if ($id !== null) {
-        $sql .= " WHERE urun_kategori_id = :id";
-    }
-    $stmt = $pdo->prepare($sql);
-    if ($id !== null) {
-        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-    }
+$sql = "SELECT * FROM urunler";
 
-    $stmt->execute();
-    $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
 
+$urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-} catch (PDOException $e) {
-    echo "Hata: " . $e->getMessage();
-}
-
-?>
+foreach ($kategoriler as $kategori) {?>
+<?php }?> 
 <div class="content-wrapper">
    <div class="container-fluid">
       <!-- Breadcrumb-->
@@ -33,7 +22,7 @@ try {
          </div>
          <div class="col-sm-3">
             <div class="btn-group float-sm-right">
-               <button type="button" class="btn btn-light waves-effect waves-light"><i class="fa fa-cog mr-1"></i> Setting</button>
+               <button type="button" class="btn btn-light waves-effect waves-light"><i class="fa fa-cog mr-1"></i> Ayarlar</button>
                <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split waves-effect waves-light" data-toggle="dropdown">
                <span class="caret"></span>
                </button>
@@ -57,29 +46,32 @@ try {
                         <thead>
                            <tr>
                               <th scope="col">#</th>
-                              <th scope="col">First</th>
-                              <th scope="col">Last</th>
-                              <th scope="col">Handle</th>
+                              <th scope="col">Ürün Resmi</th>
+                              <th scope="col">Ürün Adı</th>
+                              <th scope="col">Ürün Marka</th>
+                              <th scope="col">Ürün Fiyatı</th>
+                              <th scope="col">Ürün Kategori</th>
+                              <th scope="col">İşlem Yap</th>
                            </tr>
                         </thead>
                         <tbody>
-                           <tr>
-                              <th scope="row">1</th>
-                              <td>Mark</td>
-                              <td>Otto</td>
-                              <td>@mdo</td>
+                            <?php
+                            foreach ($urunler as $urun) {?>
+                            <tr>
+                              <th scope="row"><?=$urun['id']?></th>
+                              <td><img src="<?=$urun['urun_resim_1']?>" width="100" height="100" /></td>
+                              <td><?=$urun['urun_adi']?></td>
+                              <td><?=$urun['urun_marka']?></td>
+                              <td><?=$urun['urun_fiyat']?></td>
+                              <td><?=$urun['urun_kategori']?></td>
+                              <td>
+                              <button class="btn btn-primary btn-block m-1" >Düzenle</button>
+                              <button class="btn btn-primary btn-block m-1" >Sil</button>
+                              <button class="btn btn-primary btn-block m-1" >Aktif Et</button>
+                              </td>  
                            </tr>
-                           <tr>
-                              <th scope="row">2</th>
-                              <td>Jacob</td>
-                              <td>Thornton</td>
-                              <td>@fat</td>
-                           </tr>
-                           <tr>
-                              <th scope="row">3</th>
-                              <td colspan="2">Larry the Bird</td>
-                              <td>@twitter</td>
-                           </tr>
+                            <?php }?> 
+                           
                         </tbody>
                      </table>
                   </div>
