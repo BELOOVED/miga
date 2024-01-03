@@ -1,5 +1,5 @@
 <?php
-include '../inc/pdo.php';
+include '../inc/config.php';
 include '../inc/functions.php';
 $q = $_GET['q'];
 global $db;
