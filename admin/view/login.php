@@ -18,6 +18,7 @@
   <!-- Custom Style-->
   <link href="assets/css/app-style.css" rel="stylesheet"/>
   <script src="assets/js/sweetalert2.all.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body class="bg-theme bg-theme1">
