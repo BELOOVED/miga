@@ -71,7 +71,7 @@ $kullanicilar = $stmt->fetchAll(PDO::FETCH_ASSOC);
                               <td><?php echo isset($kullanici['sayfa']) ? $kullanici['sayfa'] : 'Aktif Değil';?></td>
                               <td ><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallsizemodal<?=$kullanici['id']?>">Göster</button></td>
                               <td ><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallllsizemodal<?=$kullanici['id']?>">Göster</button></td>
-                              <td><?php echo isset($kullanici['ip']) ? $kullanici['phone'] : 'IP Yok';?></td>
+                              <td><?php echo isset($kullanici['ip']) ? $kullanici['ip'] : 'IP Yok';?></td>
                               <td>
                                 <?php
                                 $mysqlDate = $kullanici['time'];
