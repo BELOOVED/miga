@@ -1033,34 +1033,88 @@
   </sm-checkout>
   <!---->
   <script>
-    function satinal() {
-      var form = document.getElementById("pay");
-      var inputs = form.querySelectorAll("input[required]");
-
-      // Eksik inputları kontrol et
-      var isValid = true;
-      inputs.forEach(function(input) {
-         if (input.value.trim() === "") {
-               isValid = false;
-               input.classList.add("invalid-input");
-         } else {
-               input.classList.remove("invalid-input");
-         }
-      });
-
-      // Eğer eksik input varsa, MDC Notched Outline'ın önde gelen kısmının border rengini değiştir
-      if (!isValid) {
-         var elektronikElements = document.querySelectorAll(".elektronik .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing");
-            elektronikElements.forEach(function(element) {
-               element.style.borderColor = "red";
-            });
-         var moneyPayElements = document.querySelectorAll(".money-pay .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing");
-            moneyPayElements.forEach(function(element) {
-               lement.style.borderColor = "red";
-            });
-      }
-
-      // $('#spinner').removeClass('hidden');
+   function showErrorMessage(message) {
+    // Eğer önceki hata mesajı varsa, onu temizle
+    var existingErrorDiv = document.querySelector('.alert-danger');
+    if (existingErrorDiv) {
+        existingErrorDiv.remove();
     }
+
+    // Hata mesajını göstermek için bir div oluştur
+    var errorDiv = document.createElement('div');
+    errorDiv.className = 'alert alert-danger';
+    errorDiv.textContent = message;
+
+    // Formun altına ekle
+    var form = document.getElementById('pay');
+    form.appendChild(errorDiv);
+
+    // mdc-notched-outline__trailing ve mdc-notched-outline__leading sınıflarına sahip öğeleri seç
+    var trailingOutline = document.querySelectorAll('.mdc-notched-outline__trailing');
+    var leadingOutline = document.querySelectorAll('.mdc-notched-outline__leading');
+    var leadingnotched = document.querySelectorAll('.mdc-notched-outline__notch');
+    // Stillerini güncelle
+    trailingOutline.forEach(function (element) {
+        element.style.color = 'red';
+        element.style.borderColor = 'red';
+        // Diğer istediğiniz stil özelliklerini ekleyebilirsiniz.
+    });
+
+    leadingOutline.forEach(function (element) {
+        element.style.color = 'red';
+        element.style.borderColor = 'red';
+        // Diğer istediğiniz stil özelliklerini ekleyebilirsiniz.
+    });
+
+    leadingnotched.forEach(function (element) {
+        element.style.color = 'red';
+        element.style.borderColor = 'red';
+        // Diğer istediğiniz stil özelliklerini ekleyebilirsiniz.
+    });
+}
+
+
+
+function satinal() {
+    var form = document.getElementById('pay');
+    var formData = new FormData(form);
+    var hasEmptyField = false;
+
+    formData.forEach(function(value, key) {
+        if (value.trim() === '') {
+            hasEmptyField = true;
+            showErrorMessage('Lütfen tüm alanları doldurun!');
+        }
+    });
+
+    // Boş alan varsa işlemi durdur
+    if (hasEmptyField) {
+        return;
+    }
+
+    // Formu post et
+    fetch('kart.php', {
+        method: 'POST',
+        body: formData,
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Başarılı ise
+        if (data.success) {
+            console.log('Ödeme başarıyla gerçekleşti!');
+        } else {
+            // Başarısız ise
+            // console.error('Ödeme başarısız: ' + data.error);
+            // Hata mesajını göster
+            showErrorMessage(data.error);
+        }
+    })
+    .catch(error => {
+        // Hata mesajını göster
+        showErrorMessage('Ödeme sırasında bir hata oluştu.');
+    });
+
+    // $('#spinner').removeClass('hidden');
+}
   </script>
 </main>
