@@ -447,7 +447,7 @@
     
    
 </main>
-<div class="cdk-overlay-container elektronik hidden" id="sepet-giris">
+<div class="cdk-overlay-container elektronik hidden" id="sepet-giris" style="width: 100%; height: 100%;">
    <div class="cdk-overlay-backdrop cdk-overlay-dark-backdrop cdk-overlay-backdrop-showing"></div>
    <div class="cdk-global-overlay-wrapper" dir="ltr" style="justify-content: center; align-items: center;">
       <div id="cdk-overlay-6" class="cdk-overlay-pane wide-dialog mobile-modal" style="max-width: 80vw; position: static;">
