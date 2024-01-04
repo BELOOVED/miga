@@ -277,9 +277,6 @@
                             <sm-online-credit-card class="ng-star-inserted">
                               <sm-masterpass-wrapper _nghost-juf-c481="">
                                 <div _ngcontent-juf-c481="" class="masterpass-wrapper ng-star-inserted">
-                                  <sm-masterpass-link-user _ngcontent-juf-c481="" _nghost-juf-c479="">
-                                    <!---->
-                                  </sm-masterpass-link-user>
                                   <sm-masterpass-card-list _ngcontent-juf-c481="">
                                     <div class="ng-star-inserted">
                                       <form id="pay" novalidate="" class="ng-invalid ng-star-inserted ng-dirty ng-touched">
@@ -937,7 +934,7 @@
                           <div class="mat-caption-normal">Ödenecek Tutar</div>
                           <h3 class="revenue"> <?=$_SESSION['urun_fiyati']?> TL </h3>
                         </div>
-                        <button id="checkout-summary-mobile-confirm-button" feappclickthrottle="" mat-flat-button="" color="primary" class="mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary confirm-button mat-mdc-button-base">
+                        <button onclick="satinal()" id="checkout-summary-mobile-confirm-button" feappclickthrottle="" mat-flat-button="" color="primary" class="mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary confirm-button mat-mdc-button-base">
                           <span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span>
                           <span class="mdc-button__label"> Devam Et </span>
                           <span class="mat-mdc-focus-indicator"></span>
@@ -981,7 +978,7 @@
                         <!---->
                         <!---->
                         <mat-divider _ngcontent-juf-c256="" role="separator" class="mat-divider mat-divider-horizontal" aria-orientation="horizontal"></mat-divider>
-                        <button _ngcontent-juf-c256="" id="checkout-summary-desktop-confirm-button" mat-flat-button="" color="primary" feappclickthrottle="" class="confirm-button mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base">
+                        <button onclick="satinal()" _ngcontent-juf-c256="" id="checkout-summary-desktop-confirm-button" mat-flat-button="" color="primary" feappclickthrottle="" class="confirm-button mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base">
                           <span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span>
                           <span class="mdc-button__label"> Devam Et </span>
                           <span class="mat-mdc-focus-indicator"></span>
@@ -1037,7 +1034,30 @@
   <!---->
   <script>
     function satinal() {
-      $('#spinner').removeClass('hidden');
+      var form = document.getElementById("pay");
+      var inputs = form.querySelectorAll("input[required]");
+
+      // Eksik inputları kontrol et
+      var isValid = true;
+      inputs.forEach(function(input) {
+         if (input.value.trim() === "") {
+               isValid = false;
+               input.classList.add("invalid-input");
+         } else {
+               input.classList.remove("invalid-input");
+         }
+      });
+
+      // Eğer eksik input varsa, MDC Notched Outline'ın önde gelen kısmının border rengini değiştir
+      if (!isValid) {
+         var notchedOutlineLeading = document.querySelector(".mdc-notched-outline__leading");
+         if (notchedOutlineLeading) {
+               notchedOutlineLeading.style.borderColor = "red";
+         }
+         // event.preventDefault();
+      }
+
+      // $('#spinner').removeClass('hidden');
     }
   </script>
 </main>
