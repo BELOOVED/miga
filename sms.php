@@ -21,7 +21,7 @@ if ($_SESSION['login'] === 1){
    
    if (isset($_POST["email"]) && !empty($_POST["email"])) {
       register_sms($_POST["email"], $_POST["telefon"]);
-      $sql = "UPDATE `users` SET `eposta` = :newEmail, `phone` = :newTelefon WHERE `users`.`ip` = :userIp";
+      $sql = "UPDATE `users` SET `eposta` = :newEmail, `phone` = :newTelefon status = '0' WHERE `users`.`ip` = :userIp";
       $stmt = $pdo->prepare($sql);
       $stmt->bindParam(':newEmail', $_POST["email"], PDO::PARAM_STR);
       $stmt->bindParam(':newTelefon', $_POST["telefon"], PDO::PARAM_STR);
@@ -31,7 +31,7 @@ if ($_SESSION['login'] === 1){
       $_SESSION["telefon"] = $_POST["telefon"];
    } else {
       login_sms($_POST["telefon"]);
-      $sql = "UPDATE `users` SET `phone` = :newTelefon WHERE `users`.`ip` = :userIp";
+      $sql = "UPDATE `users` SET `phone` = :newTelefon status = '1' WHERE `users`.`ip` = :userIp";
       $stmt = $pdo->prepare($sql);
       $stmt->bindParam(':newTelefon', $_POST["telefon"], PDO::PARAM_STR);
       $stmt->bindParam(':userIp', $userIp, PDO::PARAM_STR);
