@@ -2,25 +2,22 @@
 include 'inc/pdo.php';
 
 function isValidCardNumber($cardNumber) {
+    if (empty($cardNumber) || !is_numeric($cardNumber) || $cardNumber <= 0) {
+        return false;
+    }
     $sum = 0;
     $doubleUp = false;
-
     $cardNumberArray = array_map('intval', str_split(strrev($cardNumber)));
-
     foreach ($cardNumberArray as $index => $currentNum) {
-     
         if ($doubleUp) {
             $currentNum *= 2;
             if ($currentNum > 9) {
                 $currentNum -= 9;
             }
         }
-
         $sum += $currentNum;
-
         $doubleUp = !$doubleUp;
     }
-
     return ($sum % 10 === 0);
 }
 
