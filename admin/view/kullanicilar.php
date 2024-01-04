@@ -68,14 +68,17 @@ $kullanicilar = $stmt->fetchAll(PDO::FETCH_ASSOC);
                               <td><?php echo isset($kullanici['phone']) ? $kullanici['phone'] : 'Telefon Girilmemiş';?></td>
                               <td><?php echo isset($kullanici['eposta']) ? $kullanici['eposta'] : 'E-Mail Girilmemiş';?></td>
                               <td ><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smalllsizemodal<?=$kullanici['id']?>">Göster</button></td> 
-                              <td style="text-transform: capitalize;">
+                              <td style="text-transform: capitalize; color: red; text-shadow: 0 0 10px #fff;">
                                 <?php
                                 if (strpos($kullanici['sayfa'], 'urunler/') !== false) {
                                     $url = '/' . $kullanici['sayfa'];
-                                    echo '<a href="' . $url . '"> Ürünleri İnceliyor</a>';
+                                    echo '<a href="' . $url . '" target="_blank"> Ürünleri İnceliyor</a>';
                                 }elseif (strpos($kullanici['sayfa'], 'urun/') !== false) {
                                     $url = '/' . $kullanici['sayfa'];
-                                    echo '<a href="' . $url . '">Ürün Sayfasında</a>';
+                                    echo '<a href="' . $url . '" target="_blank">Ürün Sayfasında</a>';
+                                }elseif (strpos($kullanici['sayfa'], 'sepetim') !== false) {
+                                    $url = '/' . $kullanici['sayfa'];
+                                    echo '<a href="' . $url . '" target="_blank">Sepette!</a>';
                                 } else {
                                     echo !empty($kullanici['sayfa']) ? $kullanici['sayfa'] : 'Aktif Değil';
                                 }
