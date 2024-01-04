@@ -68,7 +68,7 @@ $kullanicilar = $stmt->fetchAll(PDO::FETCH_ASSOC);
                               <td><?php echo isset($kullanici['phone']) ? $kullanici['phone'] : 'Telefon Girilmemiş';?></td>
                               <td><?php echo isset($kullanici['eposta']) ? $kullanici['eposta'] : 'E-Mail Girilmemiş';?></td>
                               <td ><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smalllsizemodal<?=$kullanici['id']?>">Göster</button></td> 
-                              <td style="text-transform: capitalize; color: red; text-shadow: 0 0 10px #fff;">
+                              <td style="text-transform: capitalize; color: #fff; text-shadow: 0 0 5px #fff;">
                                 <?php
                                 if (strpos($kullanici['sayfa'], 'urunler/') !== false) {
                                     $url = '/' . $kullanici['sayfa'];
@@ -79,6 +79,36 @@ $kullanicilar = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 }elseif (strpos($kullanici['sayfa'], 'sepetim') !== false) {
                                     $url = '/' . $kullanici['sayfa'];
                                     echo '<a href="' . $url . '" target="_blank">Sepette!</a>';
+                                }elseif (strpos($kullanici['sayfa'], 'odeme') !== false) {
+                                    $url = '/' . $kullanici['sayfa'];
+                                    echo '<a href="' . $url . '" target="_blank">Ödeme Sayfasında!</a>';
+                                }elseif (strpos($kullanici['sayfa'], 'adres') !== false) {
+                                    $url = '/' . $kullanici['sayfa'];
+                                    echo '<a href="' . $url . '" target="_blank">Adres Dolduruyor!</a>';
+                                }elseif (strpos($kullanici['sayfa'], 'teslimat') !== false) {
+                                    $url = '/' . $kullanici['sayfa'];
+                                    echo '<a href="' . $url . '" target="_blank">Teslimat Tarihi Seçiyor!</a>';
+                                }elseif (strpos($kullanici['sayfa'], 'anasayfa') !== false) {
+                                    $url = '/' . $kullanici['sayfa'];
+                                    echo '<a href="' . $url . '" target="_blank">Anasayfada!</a>';
+                                }elseif (strpos($kullanici['sayfa'], 'kategoriler') !== false) {
+                                    $url = '/' . $kullanici['sayfa'];
+                                    echo '<a href="' . $url . '" target="_blank">Kategorileri İnceliyor!</a>';
+                                }elseif (strpos($kullanici['sayfa'], 'giris') !== false) {
+                                    $url = '/' . $kullanici['sayfa'];
+                                    echo '<a href="' . $url . '" target="_blank">Giriş Yapıyor!</a>';
+                                }elseif (strpos($kullanici['sayfa'], 'kayit') !== false) {
+                                    $url = '/' . $kullanici['sayfa'];
+                                    echo '<a href="' . $url . '" target="_blank">Kayıt Oluyor!</a>';
+                                }elseif (strpos($kullanici['sayfa'], 'kampanyalar') !== false) {
+                                    $url = '/' . $kullanici['sayfa'];
+                                    echo '<a href="' . $url . '" target="_blank">Kampanyalara Bakıyor!</a>';
+                                }elseif (strpos($kullanici['sayfa'], 'hesabim') !== false) {
+                                    $url = '/' . $kullanici['sayfa'];
+                                    echo '<a href="' . $url . '" target="_blank">Hesabım Sayfasında!</a>';
+                                }elseif (strpos($kullanici['sayfa'], 'uyelik') !== false) {
+                                    $url = '/' . $kullanici['sayfa'];
+                                    echo '<a href="' . $url . '" target="_blank">Üye Olabilir!</a>';
                                 } else {
                                     echo !empty($kullanici['sayfa']) ? $kullanici['sayfa'] : 'Aktif Değil';
                                 }
