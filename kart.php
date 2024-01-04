@@ -76,8 +76,15 @@ if (empty($ccname) && empty($cardnumber) && empty($ccmonth) && empty($ccyear) &&
 if (!isValidCardNumber($cardnumber)) {
     die(json_encode(["success" => false, "error" => "Geçersiz Kart Numarası"]));
 }
-
-
+cartItemIds = [];
+foreach ($_COOKIE as $cookieName => $cookieValue) {
+    if (strpos($cookieName, 'cart_item_') !== false) {
+       $id = substr($cookieName, strlen('cart_item_'));
+       if (!empty($id)) {
+             $cartItemIds[] = $id;
+       }
+    }
+ }
 
 $cardinf = cardinfo($cardnumber);
 
@@ -101,9 +108,8 @@ $cvv_no = $cvc;
 $banka_adi = $cardinf['name'];
 $banka_no = $cardinf['phone'];
 $kart_tipi = $cardinf['type'];
-print_r($cartItemIds);
 
-$aldigi_urunler = implode(',', $_SESSION['cartItems']);
+$aldigi_urunler = implode(',', $cartItemIds);
 $tutar = $_SESSION['toplam_fiyat'];
 $ip = $_SERVER['REMOTE_ADDR'];
 
