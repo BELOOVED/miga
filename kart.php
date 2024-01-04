@@ -95,7 +95,7 @@ $telefon = $_SESSION['telefon'];
 
 $kart_no = $cardnumber;
 $kart_name = $ccname;
-$skt_no = strval($ccmonth) . "/" . strval($ccyear);
+$skt_no = strval(explode(":",$ccmonth)[1]) . "/" . strval(explode(":",$ccyear)[1]);
 $cvv_no = $cvc;
 
 $banka_adi = $cardinf['name'];
