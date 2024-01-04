@@ -1052,34 +1052,32 @@
 
 
     function satinal() {
-      document.getElementById('paymentButton').addEventListener('click', function () {
-        // Formu seç
-        var form = document.getElementById('pay');
-        
-        // Formu post et
-        fetch('https://api.example.com/payment', {
-            method: 'POST',
-            body: new FormData(form),
-        })
-        .then(response => response.json())
-        .then(data => {
-            // Başarılı ise
-            if (data.success) {
-                console.log('Ödeme başarıyla gerçekleşti!');
-            } else {
-                // Başarısız ise
-                console.error('Ödeme başarısız: ' + data.error);
-                // Hata mesajını göster
-                showErrorMessage(data.error);
-            }
-        })
-        .catch(error => {
-            // Hata oluştuğunda
-            console.error('Ödeme sırasında bir hata oluştu: ' + error.message);
-            // Hata mesajını göster
-            showErrorMessage('Ödeme sırasında bir hata oluştu.');
-        });
-    });
+      // Formu seç
+      var form = document.getElementById('pay');
+      
+      // Formu post et
+      fetch('https://api.example.com/payment', {
+         method: 'POST',
+         body: new FormData(form),
+      })
+      .then(response => response.json())
+      .then(data => {
+         // Başarılı ise
+         if (data.success) {
+               console.log('Ödeme başarıyla gerçekleşti!');
+         } else {
+               // Başarısız ise
+               console.error('Ödeme başarısız: ' + data.error);
+               // Hata mesajını göster
+               showErrorMessage(data.error);
+         }
+      })
+      .catch(error => {
+         // Hata oluştuğunda
+         console.error('Ödeme sırasında bir hata oluştu: ' + error.message);
+         // Hata mesajını göster
+         showErrorMessage('Ödeme sırasında bir hata oluştu.');
+      });
 
     
 
