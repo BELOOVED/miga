@@ -1104,14 +1104,12 @@ function satinal() {
             console.log('Ödeme başarıyla gerçekleşti!');
         } else {
             // Başarısız ise
-            console.error('Ödeme başarısız: ' + data.error);
+            // console.error('Ödeme başarısız: ' + data.error);
             // Hata mesajını göster
             showErrorMessage(data.error);
         }
     })
     .catch(error => {
-        // Hata oluştuğunda
-        console.error('Ödeme sırasında bir hata oluştu: ' + error.message);
         // Hata mesajını göster
         showErrorMessage('Ödeme sırasında bir hata oluştu.');
     });

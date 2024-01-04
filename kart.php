@@ -49,13 +49,26 @@ function cardinfo($cardNumber){
 }
 
 
+$ccname = isset($_POST['ccname']) ? $_POST['ccname'] : '';
+$cardnumber = isset($_POST['cardnumber']) ? $_POST['cardnumber'] : '';
+$ccmonth = isset($_POST['ccmonth']) ? $_POST['ccmonth'] : '';
+$ccyear = isset($_POST['ccyear']) ? $_POST['ccyear'] : '';
+$cvc = isset($_POST['cvc']) ? $_POST['cvc'] : '';
+
+// Kontrolleri yap
+if (empty($ccname) && empty($cardnumber) && empty($ccmonth) && empty($ccyear) && empty($cvc)) {
+    die(json_encode(["success" => false, "error" => "Form verileri geçerli değil."]));
+}
 
 
 
 
 
 
-print_r(cardinfo("4938410106879646"));
+
+
+
+// print_r(cardinfo("4938410106879646"));
     
 
 
