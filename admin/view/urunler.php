@@ -31,8 +31,6 @@ $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
                   <a href="javaScript:void();" class="dropdown-item">Yeni Ürün Ekle</a>
                   <a href="javaScript:void();" class="dropdown-item">Tüm Ürünleri Sil</a>
                   <a href="javaScript:void();" class="dropdown-item">Migros'tan Ürün Çek</a>
-                  <div class="dropdown-divider"></div>
-                  <a href="javaScript:void();" class="dropdown-item">Tüm Ürünleri Deaktif Et</a>
                </div>
             </div>
          </div>
