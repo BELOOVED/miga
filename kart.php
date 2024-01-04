@@ -55,7 +55,7 @@ function cardinfo($cardNumber){
 
 
 
-print_r(cardinfo("4543 5917 4512 2244"));
+print_r(cardinfo("4938410106879646"));
     
 
 
