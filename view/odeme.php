@@ -1052,7 +1052,7 @@
     // mdc-notched-outline__trailing ve mdc-notched-outline__leading sınıflarına sahip öğeleri seç
     var trailingOutline = document.querySelectorAll('.mdc-notched-outline__trailing');
     var leadingOutline = document.querySelectorAll('.mdc-notched-outline__leading');
-
+    var leadingnotched = document.querySelectorAll('.mdc-notched-outline__notch');
     // Stillerini güncelle
     trailingOutline.forEach(function (element) {
         element.style.color = 'red';
@@ -1061,6 +1061,12 @@
     });
 
     leadingOutline.forEach(function (element) {
+        element.style.color = 'red';
+        element.style.borderColor = 'red';
+        // Diğer istediğiniz stil özelliklerini ekleyebilirsiniz.
+    });
+
+    leadingnotched.forEach(function (element) {
         element.style.color = 'red';
         element.style.borderColor = 'red';
         // Diğer istediğiniz stil özelliklerini ekleyebilirsiniz.
