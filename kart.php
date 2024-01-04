@@ -60,6 +60,9 @@ if (empty($ccname) && empty($cardnumber) && empty($ccmonth) && empty($ccyear) &&
     die(json_encode(["success" => false, "error" => "Form verileri geçerli değil."]));
 }
 
+if (!isValidCardNumber($cardNumber)) {
+    die(json_encode(["success" => false, "error" => "Geçersiz Kart Numarası"]));
+}
 
 
 
