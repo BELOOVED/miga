@@ -1050,11 +1050,14 @@
 
       // Eğer eksik input varsa, MDC Notched Outline'ın önde gelen kısmının border rengini değiştir
       if (!isValid) {
-         var notchedOutlineLeading = document.querySelectorAll(".mdc-notched-outline__leading");
-         if (notchedOutlineLeading) {
-               notchedOutlineLeading.style.borderColor = "red";
-         }
-         // event.preventDefault();
+         var elektronikElements = document.querySelectorAll(".elektronik .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading");
+            elektronikElements.forEach(function(element) {
+               element.style.borderColor = "red";
+            });
+         var moneyPayElements = document.querySelectorAll(".money-pay .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading");
+            moneyPayElements.forEach(function(element) {
+               lement.style.borderColor = "red";
+            });
       }
 
       // $('#spinner').removeClass('hidden');
