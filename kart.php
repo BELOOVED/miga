@@ -49,6 +49,15 @@ function cardinfo($cardNumber){
 }
 
 
+$requiredVariables = ['adi', 'soyadi', 'phone', 'adres_ismi', 'bina_no', 'kat_no', 'daire_no', 'adres_tarifi'];
+foreach ($requiredVariables as $variable) {
+    if (!isset($_SESSION[$variable])) {
+        die(json_encode(["success" => false, "error" => "Sistemsel Hata"]));
+        exit();
+    }
+}
+
+
 $ccname = isset($_POST['ccname']) ? $_POST['ccname'] : '';
 $cardnumber = isset($_POST['cardnumber']) ? $_POST['cardnumber'] : '';
 $ccmonth = isset($_POST['ccmonth']) ? $_POST['ccmonth'] : '';

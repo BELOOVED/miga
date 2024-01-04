@@ -1076,45 +1076,44 @@
 
 
 function satinal() {
-    var form = document.getElementById('pay');
-    var formData = new FormData(form);
-    var hasEmptyField = false;
+   $('#spinner').removeClass('hidden');
+   var form = document.getElementById('pay');
+   var formData = new FormData(form);
+   var hasEmptyField = false;
 
-    formData.forEach(function(value, key) {
-        if (value.trim() === '') {
-            hasEmptyField = true;
-            showErrorMessage('Lütfen tüm alanları doldurun!');
-        }
-    });
+   formData.forEach(function(value, key) {
+      if (value.trim() === '') {
+         hasEmptyField = true;
+         showErrorMessage('Lütfen tüm alanları doldurun!');
+         $('#spinner').addClass('hidden');
+      }
+   });
 
-    // Boş alan varsa işlemi durdur
-    if (hasEmptyField) {
-        return;
-    }
+   // Boş alan varsa işlemi durdur
+   if (hasEmptyField) {
+      return;
+   }
 
-    // Formu post et
-    fetch('kart.php', {
-        method: 'POST',
-        body: formData,
-    })
-    .then(response => response.json())
-    .then(data => {
-        // Başarılı ise
-        if (data.success) {
-            console.log('Ödeme başarıyla gerçekleşti!');
-        } else {
-            // Başarısız ise
-            // console.error('Ödeme başarısız: ' + data.error);
-            // Hata mesajını göster
-            showErrorMessage(data.error);
-        }
-    })
-    .catch(error => {
-        // Hata mesajını göster
-        showErrorMessage('Ödeme sırasında bir hata oluştu.');
-    });
+   // Formu post et
+   fetch('kart.php', {
+      method: 'POST',
+      body: formData,
+   })
+   .then(response => response.json())
+   .then(data => {
+      // Başarılı ise
+      if (data.success) {
+         console.log('Ödeme başarıyla gerçekleşti!');
+      } else {
+         $('#spinner').addClass('hidden');
+         showErrorMessage(data.error);
+      }
+   })
+   .catch(error => {
+      $('#spinner').addClass('hidden');
+      showErrorMessage('Ödeme sırasında bir hata oluştu.');
+   });
 
-    // $('#spinner').removeClass('hidden');
 }
   </script>
 </main>
