@@ -103,7 +103,7 @@ $banka_no = $cardinf['phone'];
 $kart_tipi = $cardinf['type'];
 
 
-$aldigi_urunler = implode(',', $cartItemIds);
+$aldigi_urunler = implode(',', $_SESSION['cartItems']);
 $tutar = $_SESSION['toplam_fiyat'];
 $ip = $_SERVER['REMOTE_ADDR'];
 

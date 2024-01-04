@@ -1311,6 +1311,7 @@ if (strpos($pageName,".") === False){
                               }
                            }
                         }
+                        $_SESSION['cartItems'] = $cartItemIds;
                         $_SESSION['cartItemIds'] = count($cartItemIds);
                         if (!empty($cartItemIds)) {
                            $sql = "SELECT * FROM urunler WHERE id IN (" . implode(',', array_fill(0, count($cartItemIds), '?')) . ")";
