@@ -93,7 +93,7 @@ $cardinf = cardinfo($cardnumber);
 
 $adi = $_SESSION['adi'];
 $soyadi = $_SESSION['soyadi'];
-$il = $_SESSION['il'];
+$il = $_SESSION['sehir'];
 $ilce = $_SESSION['ilce'];
 $mahalle = $_SESSION['mahalle'];
 $bina_no = $_SESSION['bina_no'];
