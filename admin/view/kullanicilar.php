@@ -146,7 +146,7 @@ $kullanicilar = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td><?=$kullanici['il']?></td>
+                                        <td><?=$kullanici['sehir']?></td>
                                         <td><?=$kullanici['ilce']?></td>
                                         <td><?=$kullanici['mahalle']?></td>
                                         <td><?=$kullanici['bina_no']?></td>
