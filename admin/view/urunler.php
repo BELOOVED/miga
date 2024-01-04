@@ -28,9 +28,9 @@ $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
                <span class="caret"></span>
                </button>
                <div class="dropdown-menu">
-                  <a href="javaScript:void();" class="dropdown-item">Yeni Ürün Ekle</a>
-                  <a href="javaScript:void();" class="dropdown-item">Tüm Ürünleri Sil</a>
-                  <a href="javaScript:void();" class="dropdown-item">Migros'tan Ürün Çek</a>
+                  <a href="urunekle" class="dropdown-item">Yeni Ürün Ekle</a>
+                  <a href="delete" class="dropdown-item">Tüm Ürünleri Sil</a>
+                  <a href="javaScript:void();" onclick="uruncek()" class="dropdown-item">Migros'tan Ürün Çek</a>
                </div>
             </div>
          </div>
@@ -96,3 +96,4 @@ $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
    </div>
    <!-- End container-fluid-->
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
