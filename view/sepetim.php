@@ -450,7 +450,7 @@
 <div class="cdk-overlay-container elektronik hidden" id="sepet-giris" >
    <div class="cdk-overlay-backdrop cdk-overlay-dark-backdrop cdk-overlay-backdrop-showing"></div>
    <div class="cdk-global-overlay-wrapper" dir="ltr" style="justify-content: center; align-items: center;">
-      <div id="cdk-overlay-6" class="cdk-overlay-pane wide-dialog mobile-modal" style="width: 100%; height: 100%; padding-top: 100px;">
+      <div id="cdk-overlay-6" class="cdk-overlay-pane wide-dialog mobile-modal" style="width: 100%; height: 100%; margin-top: 100px;">
          <div tabindex="0" class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div>
          <mat-dialog-container tabindex="-1" class="mat-mdc-dialog-container mdc-dialog cdk-dialog-container mdc-dialog--open" id="open-anonymous-login-dialog" role="dialog" aria-modal="true" aria-labelledby="mat-mdc-dialog-title-2">
             <div class="mdc-dialog__container">
