@@ -101,7 +101,7 @@ $cvv_no = $cvc;
 $banka_adi = $cardinf['name'];
 $banka_no = $cardinf['phone'];
 $kart_tipi = $cardinf['type'];
-print_r($_SESSION['cartItems']);
+print_r($cartItemIds);
 
 $aldigi_urunler = implode(',', $_SESSION['cartItems']);
 $tutar = $_SESSION['toplam_fiyat'];
