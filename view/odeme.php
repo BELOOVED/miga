@@ -1049,12 +1049,24 @@
     var form = document.getElementById('pay');
     form.appendChild(errorDiv);
 
-    // Border box'ları kırmızı yap
-    var cardAreas = document.querySelectorAll('.card-form-area');
-    cardAreas.forEach(function (area) {
-        area.style.borderColor = 'red';
+    // mdc-notched-outline__trailing ve mdc-notched-outline__leading sınıflarına sahip öğeleri seç
+    var trailingOutline = document.querySelectorAll('.mdc-notched-outline__trailing');
+    var leadingOutline = document.querySelectorAll('.mdc-notched-outline__leading');
+
+    // Stillerini güncelle
+    trailingOutline.forEach(function (element) {
+        element.style.color = 'red';
+        element.style.borderColor = 'red';
+        // Diğer istediğiniz stil özelliklerini ekleyebilirsiniz.
+    });
+
+    leadingOutline.forEach(function (element) {
+        element.style.color = 'red';
+        element.style.borderColor = 'red';
+        // Diğer istediğiniz stil özelliklerini ekleyebilirsiniz.
     });
 }
+
 
 
     function satinal() {
