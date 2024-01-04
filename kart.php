@@ -1,9 +1,9 @@
 <?php
 include 'inc/pdo.php';
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 
 function isValidCardNumber($cardNumber) {
     if (empty($cardNumber) || !is_numeric($cardNumber) || $cardNumber <= 0) {
@@ -79,7 +79,7 @@ if (!isValidCardNumber($cardnumber)) {
 
 
 
-cardinf = cardinfo($cardnumber);
+$cardinf = cardinfo($cardnumber);
 
 
 $adi = $_SESSION['adi'];
