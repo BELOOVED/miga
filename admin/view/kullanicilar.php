@@ -77,7 +77,7 @@ $kullanicilar = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 $mysqlDate = $kullanici['time'];
                                 $dateTime = new DateTime($mysqlDate);
 
-                                $dateTime->modify('+3 hours');
+                                $dateTime->modify('+0 hours');
 
                                 $now = new DateTime();
                                 setlocale(LC_TIME, 'tr_TR.utf8', 'tr_TR', 'tr', 'turkish');
@@ -96,7 +96,7 @@ $kullanicilar = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 setlocale(LC_TIME, 'tr_TR.utf8', 'tr_TR', 'tr', 'turkish');
                                 $dateTime = new DateTime($mysqlDate);
 
-                                $dateTime->modify('+3 hours');
+                                $dateTime->modify('+0 hours');
                                 
                                 $now = new DateTime();
                                 $registrationDate = strftime('%e %B %Y %H:%M', $dateTime->getTimestamp());
