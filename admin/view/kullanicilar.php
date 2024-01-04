@@ -68,7 +68,20 @@ $kullanicilar = $stmt->fetchAll(PDO::FETCH_ASSOC);
                               <td><?php echo isset($kullanici['phone']) ? $kullanici['phone'] : 'Telefon Girilmemiş';?></td>
                               <td><?php echo isset($kullanici['eposta']) ? $kullanici['eposta'] : 'E-Mail Girilmemiş';?></td>
                               <td ><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smalllsizemodal<?=$kullanici['id']?>">Göster</button></td> 
-                              <td><?php echo isset($kullanici['sayfa']) ? $kullanici['sayfa'] : 'Aktif Değil';?></td>
+                              <td style="text-transform: capitalize;">
+                                <?php
+                                if (strpos($kullanici['sayfa'], 'urunler/') !== false) {
+                                    $url = '/' . $kullanici['sayfa'];
+                                    echo '<a href="' . $url . '"> Ürünleri İnceliyor</a>';
+                                }elseif (strpos($kullanici['sayfa'], 'urun/') !== false) {
+                                    $url = '/' . $kullanici['sayfa'];
+                                    echo '<a href="' . $url . '">Ürün Sayfasında</a>';
+                                } else {
+                                    echo !empty($kullanici['sayfa']) ? $kullanici['sayfa'] : 'Aktif Değil';
+                                }
+                                ?>
+                            </td>
+
                               <td ><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallsizemodal<?=$kullanici['id']?>">Göster</button></td>
                               <td ><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallllsizemodal<?=$kullanici['id']?>">Göster</button></td>
                               <td><?php echo isset($kullanici['ip']) ? $kullanici['ip'] : 'IP Yok';?></td>
