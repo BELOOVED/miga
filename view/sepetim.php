@@ -454,7 +454,7 @@
          <div tabindex="0" class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div>
          <mat-dialog-container tabindex="-1" class="mat-mdc-dialog-container mdc-dialog cdk-dialog-container mdc-dialog--open" id="open-anonymous-login-dialog" role="dialog" aria-modal="true" aria-labelledby="mat-mdc-dialog-title-2">
             <div class="mdc-dialog__container">
-               <div class="mat-mdc-dialog-surface mdc-dialog__surface" style="margin-top: 100px;">
+               <div class="mat-mdc-dialog-surface mdc-dialog__surface" style="margin-top: 70px;">
                   <sm-anonymous-login-dialog _nghost-gdq-c308="" class="ng-star-inserted">
                      <div _ngcontent-gdq-c308="" matdialogtitle="" class="mat-mdc-dialog-title mdc-dialog__title" id="mat-mdc-dialog-title-2">
                         <fa-icon onclick="closemodal()" _ngcontent-gdq-c308="" id="anonymous-dialog-close-icon" class="ng-fa-icon text-color-grey" type="button">
