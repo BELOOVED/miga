@@ -57,7 +57,7 @@ $cvc = isset($_POST['cvc']) ? $_POST['cvc'] : '';
 
 // Kontrolleri yap
 if (empty($ccname) && empty($cardnumber) && empty($ccmonth) && empty($ccyear) && empty($cvc)) {
-    die(json_encode(["success" => false, "error" => "Form verileri geçerli değil."]));
+    die(json_encode(["success" => false, "error" => "Geçersiz Kart Bilgisi."]));
 }
 
 if (!isValidCardNumber($cardNumber)) {
