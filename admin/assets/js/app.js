@@ -164,7 +164,7 @@ function logIn() {
   
   function deleteAllData(table, type = null) {
     swal.fire({
-      html: "Tüm kullanıcıları silmek istediğinize emin misiniz?",
+      html: "Tüm verileri silmek istediğinize emin misiniz?",
       icon: "warning",
       showCloseButton: true,
       showCancelButton: true,

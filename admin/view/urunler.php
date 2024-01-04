@@ -29,7 +29,7 @@ $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
                </button>
                <div class="dropdown-menu">
                   <a href="urunekle" class="dropdown-item">Yeni Ürün Ekle</a>
-                  <a href="delete" class="dropdown-item">Tüm Ürünleri Sil</a>
+                  <a href="javascript:;" onclick="deleteAllData('urunler')" class="dropdown-item">Tüm Ürünleri Sil</a>
                   <a href="javaScript:void();" onclick="uruncek()" class="dropdown-item">Migros'tan Ürün Çek</a>
                </div>
             </div>

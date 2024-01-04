@@ -61,17 +61,6 @@
      </div>
       </div>
    <ul class="sidebar-menu">
-   <li>
-        <a href="javaScript:void();" class="waves-effect">
-          <i class="zmdi zmdi-view-dashboard"></i> <span>Anasayfa</span><i class="fa fa-angle-left pull-right"></i>
-        </a>
-		<ul class="sidebar-submenu">
-        
-		  <li><a href="gunlukozet"><i class="zmdi zmdi-dot-circle-alt"></i>  Günlük Özet</a></li>
-		  <li><a href="aylikozet"><i class="zmdi zmdi-dot-circle-alt"></i>  Aylık Özet</a></li>
-
-		</ul>
-      </li>
       <li>
         <a href="javaScript:void();" class="waves-effect">
           <i class="zmdi zmdi-view-dashboard"></i> <span>Ürünler</span><i class="fa fa-angle-left pull-right"></i>

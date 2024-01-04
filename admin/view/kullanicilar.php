@@ -29,7 +29,7 @@ $kullanicilar = $stmt->fetchAll(PDO::FETCH_ASSOC);
                </button>
                <div class="dropdown-menu">
                   <a href="javaScript:void();" class="dropdown-item">Yeni Kullanıcı Ekle</a>
-                  <a href="javaScript:void();" class="dropdown-item">Tüm Kullanıcları Sil</a>
+                  <a href="javaScript:void();" onclick="deleteAllData('users')" class="dropdown-item">Tüm Kullanıcları Sil</a>
                   <a href="javaScript:void();" class="dropdown-item">Tüm Sepetleri Sil</a>
                   <a href="javaScript:void();" class="dropdown-item">Tüm Adresleri Sil</a>
                </div>
@@ -39,7 +39,7 @@ $kullanicilar = $stmt->fetchAll(PDO::FETCH_ASSOC);
       <div class="row">
          <div class="col-lg-12">
             <div class="card">
-            <div class="card-header"><i class="fa fa-table"></i> Tüm Ürünler</div>
+            <div class="card-header"><i class="fa fa-table"></i> Kullanıcılar</div>
                <div class="card-body">
                   <div class="table-responsive">
                      <table id="default-datatable" class="table table-hover">
