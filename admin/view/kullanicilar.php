@@ -118,7 +118,7 @@ $kullanicilar = $stmt->fetchAll(PDO::FETCH_ASSOC);
                               <td ><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallsizemodal<?=$kullanici['id']?>">Göster</button></td>
                               <td ><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallllsizemodal<?=$kullanici['id']?>">Göster</button></td>
                               <td><?php echo isset($kullanici['ip']) ? $kullanici['ip'] : 'IP Yok';?></td>
-                              <td>
+                              <td style="text-transform: capitalize; color: green; text-shadow: 0 0 5px green;">
                                 <?php
                                 $mysqlDate = $kullanici['time'];
                                 $dateTime = new DateTime($mysqlDate);
@@ -144,7 +144,7 @@ $kullanicilar = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 }
                                 ?>
                             </td>
-                            <td>
+                            <td style="text-transform: capitalize; color: green; text-shadow: 0 0 5px green;">
                                 <?php
                                 $mysqlDate = $kullanici['currenttime'];
                                 $dateTime = new DateTime($mysqlDate);
