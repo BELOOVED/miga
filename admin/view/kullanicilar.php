@@ -73,40 +73,42 @@ $kullanicilar = $stmt->fetchAll(PDO::FETCH_ASSOC);
                               <td ><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallllsizemodal<?=$kullanici['id']?>">Göster</button></td>
                               <td><?=$kullanici['ip']?></td> 
                               <td>
-                              <?php
+                                <?php
                                 $mysqlDate = $kullanici['time'];
-
                                 $dateTime = new DateTime($mysqlDate);
 
-                                $now = new DateTime();
+                                $dateTime->modify('+3 hours');
 
-                                $registrationDate = $dateTime->format('j F Y H:i');
+                                $now = new DateTime();
+                                setlocale(LC_TIME, 'tr_TR.utf8', 'tr_TR', 'tr', 'turkish');
+                                $registrationDate = strftime('%e %B %Y %H:%M', $dateTime->getTimestamp());
 
                                 if ($now->diff($dateTime)->days == 0) {
                                     echo "Bugün $registrationDate Tarihinde Kayıt Oldu";
                                 } else {
                                     echo "$registrationDate Tarihinde Kayıt Oldu";
                                 }
-                             ?>
-                            </td> 
-                              <td>
-                              <?php
+                                ?>
+                            </td>
+                            <td>
+                                <?php
                                 $mysqlDate = $kullanici['currenttime'];
                                 setlocale(LC_TIME, 'tr_TR.utf8', 'tr_TR', 'tr', 'turkish');
                                 $dateTime = new DateTime($mysqlDate);
 
+                                $dateTime->modify('+3 hours');
+                                
                                 $now = new DateTime();
-
-                                $registrationDate = $dateTime->format('j F Y H:i');
+                                $registrationDate = strftime('%e %B %Y %H:%M', $dateTime->getTimestamp());
 
                                 if ($now->diff($dateTime)->days == 0) {
                                     echo "Bugün $registrationDate Aktif Oldu";
                                 } else {
                                     echo "$registrationDate Aktif Oldu";
                                 }
-                             ?>
+                                ?>
+                            </td>
 
-                              </td> 
 
                               <td>
                                 
