@@ -1050,11 +1050,11 @@
 
       // Eğer eksik input varsa, MDC Notched Outline'ın önde gelen kısmının border rengini değiştir
       if (!isValid) {
-         var elektronikElements = document.querySelectorAll(".elektronik .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading");
+         var elektronikElements = document.querySelectorAll(".elektronik .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing");
             elektronikElements.forEach(function(element) {
                element.style.borderColor = "red";
             });
-         var moneyPayElements = document.querySelectorAll(".money-pay .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading");
+         var moneyPayElements = document.querySelectorAll(".money-pay .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing");
             moneyPayElements.forEach(function(element) {
                lement.style.borderColor = "red";
             });
