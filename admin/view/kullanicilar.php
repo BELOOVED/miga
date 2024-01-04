@@ -29,7 +29,7 @@ $kullanicilar = $stmt->fetchAll(PDO::FETCH_ASSOC);
                </button>
                <div class="dropdown-menu">
                   <a href="kullaniciekle" class="dropdown-item">Yeni Kullanıcı Ekle</a>
-                  <a href="javaScript:void();" onclick="deleteAllData('users')" class="dropdown-item">Tüm Kullanıcları Sil</a>
+                  <a href="javascript:;" onclick="deleteAllData('users')" class="dropdown-item">Tüm Kullanıcları Sil</a>
                </div>
             </div>
          </div>
