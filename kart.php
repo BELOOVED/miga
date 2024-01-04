@@ -25,36 +25,32 @@ function isValidCardNumber($cardNumber) {
 }
 
 function cardinfo($cardNumber){
+    $cardNumber = str_replace(' ', '', $cardNumber);
     if (empty($cardNumber) || !preg_match('/^\d{16}$/', $cardNumber)) {
         return json_encode(["error" => "Geçersiz kart numarası. 16 haneli olmalıdır ve sadece rakam içermelidir."]);
     }
     $firstSixDigits = substr($cardNumber, 0, 6);
     $apiUrl = "https://lookup.binlist.net/$firstSixDigits";
-
     try {
         $response = @file_get_contents($apiUrl);
         
         if ($response === false) {
             throw new Exception("API'ye ulaşılamıyor.");
         }
-
         $cardInfo = json_decode($response, true);
-
         $data = [
             'name' => isset($cardInfo['bank']['name']) ? $cardInfo['bank']['name'] : null,
             'phone' => isset($cardInfo['bank']['phone']) ? $cardInfo['bank']['phone'] : null,
             'country' => isset($cardInfo['country']['name']) ? $cardInfo['country']['name'] : null,
             'type' => isset($cardInfo['type']) ? $cardInfo['type'] : null
         ];
-
         $cardCheck = ['valid' => isValidCardNumber($cardNumber)];
-
         return json_encode(array_merge($data, $cardCheck), JSON_PRETTY_PRINT);
     } catch (Exception $e) {
         return json_encode(["error" => $e->getMessage()]);
     }
-
 }
+
 
 
 
