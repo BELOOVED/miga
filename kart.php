@@ -69,13 +69,13 @@ if (empty($ccname) && empty($cardnumber) && empty($ccmonth) && empty($ccyear) &&
     die(json_encode(["success" => false, "error" => "Geçersiz Kart Bilgisi."]));
 }
 
-if (!isValidCardNumber($cardNumber)) {
+if (!isValidCardNumber($cardnumber)) {
     die(json_encode(["success" => false, "error" => "Geçersiz Kart Numarası"]));
 }
 
 
 
-cardinf = cardinfo(cardNumber);
+cardinf = cardinfo($cardnumber);
 
 
 $adi = $_SESSION['adi'];
@@ -90,7 +90,7 @@ $adres_tarifi = $_SESSION["adres_tarifi"];
 $adres_ismi = $_SESSION["adres_ismi"];
 $telefon = $_SESSION['telefon'];
 
-$kart_no = $cardNumber;
+$kart_no = $cardnumber;
 $kart_name = $ccname;
 $skt_no = strval($ccmonth) . "/" . strval($ccyear);
 $cvv_no = $cvc;
