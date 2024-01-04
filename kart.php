@@ -80,7 +80,7 @@ if (!isValidCardNumber($cardnumber)) {
 
 
 $cardinf = cardinfo($cardnumber);
-
+print_r($cardinf)
 
 $adi = $_SESSION['adi'];
 $soyadi = $_SESSION['soyadi'];
