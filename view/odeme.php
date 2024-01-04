@@ -726,7 +726,6 @@
                            </div>
                            <mat-divider _ngcontent-juf-c255="" role="separator" class="mat-divider mat-divider-horizontal" aria-orientation="horizontal"></mat-divider>
                            <!---->
-                           <form novalidate="" class="agreement-form ng-untouched ng-pristine ng-invalid ng-star-inserted">
                               <!---->
                               <mat-checkbox color="primary" formcontrolname="distantSalesModal" required="" class="mat-mdc-checkbox mat-primary ng-untouched ng-pristine ng-invalid" id="mat-mdc-checkbox-1">
                                  <div class="mdc-form-field">
@@ -770,7 +769,6 @@
                                     </label>
                                  </div>
                               </mat-checkbox>
-                           </form>
                            <!---->
                         </mat-card>
                      </fe-line-checkout-price-summary>
