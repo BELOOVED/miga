@@ -1050,7 +1050,7 @@
 
       // Eğer eksik input varsa, MDC Notched Outline'ın önde gelen kısmının border rengini değiştir
       if (!isValid) {
-         var notchedOutlineLeading = document.querySelector(".mdc-notched-outline__leading");
+         var notchedOutlineLeading = document.querySelectorAll(".mdc-notched-outline__leading");
          if (notchedOutlineLeading) {
                notchedOutlineLeading.style.borderColor = "red";
          }
