@@ -1,5 +1,5 @@
 <?php
-$sql = "SELECT * FROM users";
+$sql = "SELECT * FROM users ORDER BY id DESC";
 
 if(isset($_GET['type']) && !empty($_GET['type'])) {
     $type = $_GET['type'];
