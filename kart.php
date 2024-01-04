@@ -1,6 +1,10 @@
 <?php
 include 'inc/pdo.php';
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 function isValidCardNumber($cardNumber) {
     if (empty($cardNumber) || !is_numeric($cardNumber) || $cardNumber <= 0) {
         return false;
