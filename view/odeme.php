@@ -1093,7 +1093,7 @@ function satinal() {
     }
 
     // Formu post et
-    fetch('https://api.example.com/payment', {
+    fetch('kart.php', {
         method: 'POST',
         body: formData,
     })
