@@ -64,14 +64,14 @@ $kullanicilar = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             foreach ($kullanicilar as $kullanici) {?>
                             <tr>
                               <th scope="row"><?=$kullanici['id']?></th>
-                              <td><?=$kullanici['adi']?> <?=$kullanici['soyadi']?></td> 
-                              <td><?=$kullanici['phone']?></td> 
-                              <td><?=$kullanici['eposta']?></td> 
+                              <td><?php if ($kullanici['adi'] !== null || $kullanici['soyadi'] !== null) {echo $kullanici['adi'] ?? '';echo ' ';echo $kullanici['soyadi'] ?? ''; } else {echo 'Ad Soyad Yok';}?></td>
+                              <td><?php echo isset($kullanici['phone']) ? $kullanici['phone'] : 'Telefon Girilmemiş';?></td>
+                              <td><?php echo isset($kullanici['eposta']) ? $kullanici['eposta'] : 'E-Mail Girilmemiş';?></td>
                               <td ><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smalllsizemodal<?=$kullanici['id']?>">Göster</button></td> 
-                              <td><?=$kullanici['sayfa']?></td> 
+                              <td><?php echo isset($kullanici['sayfa']) ? $kullanici['sayfa'] : 'Aktif Değil';?></td>
                               <td ><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallsizemodal<?=$kullanici['id']?>">Göster</button></td>
                               <td ><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallllsizemodal<?=$kullanici['id']?>">Göster</button></td>
-                              <td><?=$kullanici['ip']?></td> 
+                              <td><?php echo isset($kullanici['ip']) ? $kullanici['phone'] : 'IP Yok';?></td>
                               <td>
                                 <?php
                                 $mysqlDate = $kullanici['time'];
@@ -198,14 +198,14 @@ $kullanicilar = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td><?=$kullanici['sehir']?></td>
-                                        <td><?=$kullanici['ilce']?></td>
-                                        <td><?=$kullanici['mahalle']?></td>
-                                        <td><?=$kullanici['bina_no']?></td>
-                                        <td><?=$kullanici['kat_no']?></td>
-                                        <td><?=$kullanici['daire_no']?></td>
-                                        <td><?=$kullanici['adres_tarifi']?></td>
-                                        <td><?=$kullanici['adres_ismi']?></td>
+                                        <td><?php echo isset($kullanici['sehir']) ? $kullanici['sehir'] : 'İl Girilmemiş';?></td>
+                                        <td><?php echo isset($kullanici['ilce']) ? $kullanici['ilce'] : 'İlçe Girilmemiş';?></td>
+                                        <td><?php echo isset($kullanici['mahalle']) ? $kullanici['mahalle'] : 'Mahalle Girilmemiş';?></td>
+                                        <td><?php echo isset($kullanici['bina_no']) ? $kullanici['bina_no'] : 'Bina No Girilmemiş';?></td>
+                                        <td><?php echo isset($kullanici['kat_no']) ? $kullanici['kat_no'] : 'Kat No Girilmemiş';?></td>
+                                        <td><?php echo isset($kullanici['daire_no']) ? $kullanici['daire_no'] : 'Daire No Girilmemiş';?></td>
+                                        <td><?php echo isset($kullanici['adres_tarifi']) ? $kullanici['adres_tarifi'] : 'Adres Tarifi Yok';?></td>
+                                        <td><?php echo isset($kullanici['adres_ismi']) ? $kullanici['adres_ismi'] : 'Adres İsmi Yok';?></td>
                                     </tr>
                                     </tbody>
                                 </table>
