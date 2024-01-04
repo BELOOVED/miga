@@ -1034,21 +1034,27 @@
   <!---->
   <script>
    function showErrorMessage(message) {
-        // Hata mesajını göstermek için bir div oluştur
-        var errorDiv = document.createElement('div');
-        errorDiv.className = 'alert alert-danger';
-        errorDiv.textContent = message;
-
-        // Formun altına ekle
-        var form = document.getElementById('pay');
-        form.appendChild(errorDiv);
-
-        // Border box'ları kırmızı yap
-        var cardAreas = document.querySelectorAll('.card-form-area');
-        cardAreas.forEach(function (area) {
-            area.style.borderColor = 'red';
-        });
+    // Eğer önceki hata mesajı varsa, onu temizle
+    var existingErrorDiv = document.querySelector('.alert-danger');
+    if (existingErrorDiv) {
+        existingErrorDiv.remove();
     }
+
+    // Hata mesajını göstermek için bir div oluştur
+    var errorDiv = document.createElement('div');
+    errorDiv.className = 'alert alert-danger';
+    errorDiv.textContent = message;
+
+    // Formun altına ekle
+    var form = document.getElementById('pay');
+    form.appendChild(errorDiv);
+
+    // Border box'ları kırmızı yap
+    var cardAreas = document.querySelectorAll('.card-form-area');
+    cardAreas.forEach(function (area) {
+        area.style.borderColor = 'red';
+    });
+}
 
 
     function satinal() {
