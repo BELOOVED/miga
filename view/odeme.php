@@ -1033,32 +1033,55 @@
   </sm-checkout>
   <!---->
   <script>
+   function showErrorMessage(message) {
+        // Hata mesajını göstermek için bir div oluştur
+        var errorDiv = document.createElement('div');
+        errorDiv.className = 'alert alert-danger';
+        errorDiv.textContent = message;
+
+        // Formun altına ekle
+        var form = document.getElementById('pay');
+        form.appendChild(errorDiv);
+
+        // Border box'ları kırmızı yap
+        var cardAreas = document.querySelectorAll('.card-form-area');
+        cardAreas.forEach(function (area) {
+            area.style.borderColor = 'red';
+        });
+    }
+
+
     function satinal() {
-      var form = document.getElementById("pay");
-      var inputs = form.querySelectorAll("input[required]");
+      document.getElementById('paymentButton').addEventListener('click', function () {
+        // Formu seç
+        var form = document.getElementById('pay');
+        
+        // Formu post et
+        fetch('https://api.example.com/payment', {
+            method: 'POST',
+            body: new FormData(form),
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Başarılı ise
+            if (data.success) {
+                console.log('Ödeme başarıyla gerçekleşti!');
+            } else {
+                // Başarısız ise
+                console.error('Ödeme başarısız: ' + data.error);
+                // Hata mesajını göster
+                showErrorMessage(data.error);
+            }
+        })
+        .catch(error => {
+            // Hata oluştuğunda
+            console.error('Ödeme sırasında bir hata oluştu: ' + error.message);
+            // Hata mesajını göster
+            showErrorMessage('Ödeme sırasında bir hata oluştu.');
+        });
+    });
 
-      // Eksik inputları kontrol et
-      var isValid = true;
-      inputs.forEach(function(input) {
-         if (input.value.trim() === "") {
-               isValid = false;
-               input.classList.add("invalid-input");
-         } else {
-               input.classList.remove("invalid-input");
-         }
-      });
-
-      // Eğer eksik input varsa, MDC Notched Outline'ın önde gelen kısmının border rengini değiştir
-      if (!isValid) {
-         var elektronikElements = document.querySelectorAll(".elektronik .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing");
-            elektronikElements.forEach(function(element) {
-               element.style.borderColor = "red";
-            });
-         var moneyPayElements = document.querySelectorAll(".money-pay .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing");
-            moneyPayElements.forEach(function(element) {
-               lement.style.borderColor = "red";
-            });
-      }
+    
 
       // $('#spinner').removeClass('hidden');
     }
