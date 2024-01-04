@@ -560,25 +560,6 @@
                                     <!---->
                                     <!---->
                                   </sm-masterpass-card-list>
-                                  <fe-masterpass-purchase _ngcontent-juf-c481="" _nghost-juf-c324="">
-                                    <form _ngcontent-juf-c324="" novalidate="" class="ng-untouched ng-pristine ng-valid">
-                                      <input _ngcontent-juf-c324="" type="hidden" name="amount">
-                                      <input _ngcontent-juf-c324="" type="hidden" name="installmentCount">
-                                      <input _ngcontent-juf-c324="" type="hidden" name="listAccountName">
-                                      <input _ngcontent-juf-c324="" type="hidden" name="token">
-                                      <input _ngcontent-juf-c324="" type="hidden" name="orderNo">
-                                      <input _ngcontent-juf-c324="" type="hidden" name="msisdn">
-                                      <input _ngcontent-juf-c324="" type="hidden" name="referenceNo" value="101252836185">
-                                      <input _ngcontent-juf-c324="" type="hidden" name="sendSmsLanguage" value="tur">
-                                      <input _ngcontent-juf-c324="" type="hidden" name="sendSms" value="N">
-                                      <input _ngcontent-juf-c324="" type="hidden" name="aav" value="aav">
-                                      <input _ngcontent-juf-c324="" type="hidden" name="clientIp" value="">
-                                      <input _ngcontent-juf-c324="" type="hidden" name="encCPin" value="0">
-                                      <input _ngcontent-juf-c324="" type="hidden" name="encPassword" value="">
-                                      <input _ngcontent-juf-c324="" type="hidden" name="sendSmsMerchant" value="Y">
-                                      <input _ngcontent-juf-c324="" type="hidden" name="password" value="">
-                                    </form>
-                                  </fe-masterpass-purchase>
                                 </div>
                                 <!---->
                                 <!---->
