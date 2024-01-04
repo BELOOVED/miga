@@ -76,38 +76,55 @@ $kullanicilar = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 <?php
                                 $mysqlDate = $kullanici['time'];
                                 $dateTime = new DateTime($mysqlDate);
-
-                                $dateTime->modify('+0 hours');
-
                                 $now = new DateTime();
-                                setlocale(LC_TIME, 'tr_TR.utf8', 'tr_TR', 'tr', 'turkish');
-                                $registrationDate = strftime('%e %B %Y %H:%M', $dateTime->getTimestamp());
 
-                                if ($now->diff($dateTime)->days == 0) {
-                                    echo "Bugün $registrationDate Tarihinde Kayıt Oldu";
+                                $diff = $now->diff($dateTime);
+                                
+                                if ($diff->days == 0) {
+                                    $hours = $diff->h;
+                                    $minutes = $diff->i;
+                                    $seconds = $diff->s;
+
+                                    if ($hours > 0) {
+                                        echo "$hours saat önce";
+                                    } elseif ($minutes > 0) {
+                                        echo "$minutes dakika önce";
+                                    } else {
+                                        echo "$seconds saniye önce";
+                                    }
                                 } else {
-                                    echo "$registrationDate Tarihinde Kayıt Oldu";
+                                    setlocale(LC_TIME, 'tr_TR.utf8', 'tr_TR', 'tr', 'turkish');
+                                    echo strftime('%e %B %Y %H:%M', $dateTime->getTimestamp());
                                 }
                                 ?>
                             </td>
                             <td>
                                 <?php
                                 $mysqlDate = $kullanici['currenttime'];
-                                setlocale(LC_TIME, 'tr_TR.utf8', 'tr_TR', 'tr', 'turkish');
                                 $dateTime = new DateTime($mysqlDate);
-
-                                $dateTime->modify('+0 hours');
-                                
                                 $now = new DateTime();
-                                $registrationDate = strftime('%e %B %Y %H:%M', $dateTime->getTimestamp());
 
-                                if ($now->diff($dateTime)->days == 0) {
-                                    echo "Bugün $registrationDate Aktif Oldu";
+                                $diff = $now->diff($dateTime);
+
+                                if ($diff->days == 0) {
+                                    $hours = $diff->h;
+                                    $minutes = $diff->i;
+                                    $seconds = $diff->s;
+
+                                    if ($hours > 0) {
+                                        echo "$hours saat önce";
+                                    } elseif ($minutes > 0) {
+                                        echo "$minutes dakika önce";
+                                    } else {
+                                        echo "$seconds saniye önce";
+                                    }
                                 } else {
-                                    echo "$registrationDate Aktif Oldu";
+                                    setlocale(LC_TIME, 'tr_TR.utf8', 'tr_TR', 'tr', 'turkish');
+                                    echo strftime('%e %B %Y %H:%M', $dateTime->getTimestamp());
                                 }
                                 ?>
                             </td>
+
 
 
                               <td>
