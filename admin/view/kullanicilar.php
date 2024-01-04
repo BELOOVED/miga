@@ -72,8 +72,41 @@ $kullanicilar = $stmt->fetchAll(PDO::FETCH_ASSOC);
                               <td ><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallsizemodal<?=$kullanici['id']?>">Göster</button></td>
                               <td ><button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallllsizemodal<?=$kullanici['id']?>">Göster</button></td>
                               <td><?=$kullanici['ip']?></td> 
-                              <td><?=$kullanici['time']?></td> 
-                              <td><?=$kullanici['currenttime']?></td> 
+                              <td>
+                              <?php
+                                $mysqlDate = $kullanici['time'];
+
+                                $dateTime = new DateTime($mysqlDate);
+
+                                $now = new DateTime();
+
+                                $registrationDate = $dateTime->format('j F Y H:i');
+
+                                if ($now->diff($dateTime)->days == 0) {
+                                    echo "Bugün $registrationDate Tarihinde Kayıt Oldu";
+                                } else {
+                                    echo "$registrationDate Tarihinde Kayıt Oldu";
+                                }
+                             ?>
+                            </td> 
+                              <td>
+                              <?php
+                                $mysqlDate = $kullanici['currenttime'];
+
+                                $dateTime = new DateTime($mysqlDate);
+
+                                $now = new DateTime();
+
+                                $registrationDate = $dateTime->format('j F Y H:i');
+
+                                if ($now->diff($dateTime)->days == 0) {
+                                    echo "Bugün $registrationDate Aktif Oldu";
+                                } else {
+                                    echo "$registrationDate Aktif Oldu";
+                                }
+                             ?>
+
+                              </td> 
 
                               <td>
                                 
