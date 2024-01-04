@@ -92,7 +92,7 @@ $kullanicilar = $stmt->fetchAll(PDO::FETCH_ASSOC);
                               <td>
                               <?php
                                 $mysqlDate = $kullanici['currenttime'];
-
+                                setlocale(LC_TIME, 'tr_TR.utf8', 'tr_TR', 'tr', 'turkish');
                                 $dateTime = new DateTime($mysqlDate);
 
                                 $now = new DateTime();
