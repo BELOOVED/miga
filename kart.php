@@ -76,7 +76,10 @@ if (empty($ccname) && empty($cardnumber) && empty($ccmonth) && empty($ccyear) &&
 if (!isValidCardNumber($cardnumber)) {
     die(json_encode(["success" => false, "error" => "Geçersiz Kart Numarası"]));
 }
-cartItemIds = [];
+
+
+
+$cartItemIds = [];
 foreach ($_COOKIE as $cookieName => $cookieValue) {
     if (strpos($cookieName, 'cart_item_') !== false) {
        $id = substr($cookieName, strlen('cart_item_'));
@@ -84,7 +87,7 @@ foreach ($_COOKIE as $cookieName => $cookieValue) {
              $cartItemIds[] = $id;
        }
     }
- }
+}
 
 $cardinf = cardinfo($cardnumber);
 
