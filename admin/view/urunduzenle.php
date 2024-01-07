@@ -2,7 +2,7 @@
 $sql = "SELECT * FROM urunler";
 
 if(isset($_GET['id']) && !empty($_GET['id'])) {
-    $type = $_GET['type'];
+    $type = $_GET['id'];
 
     $sql .= " WHERE id = :id";
     $stmt = $pdo->prepare($sql);
