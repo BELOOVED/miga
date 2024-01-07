@@ -28,7 +28,7 @@ $kategoriler = $stmt->fetchAll(PDO::FETCH_ASSOC);
                <span class="caret"></span>
                </button>
                <div class="dropdown-menu">
-                  <a href="javascript:;" class="dropdown-item">Yeni Kategori Ekle</a>
+                  <a href="javascript:;" data-toggle="modal" data-target="#smalllsizemodal<?=$kategori['id']?>" class="dropdown-item">Yeni Kategori Ekle</a>
                   <a href="javascript:;" onclick="deleteAllData('users')" class="dropdown-item">Tüm Kategorileri Sil</a>
                </div>
             </div>
@@ -136,3 +136,47 @@ $kategoriler = $stmt->fetchAll(PDO::FETCH_ASSOC);
                   </div>
             </div>
             <?php }?>
+            <div class="modal fade" id="smalllsizemodal" style="display: none;" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Kategoriyi Düzenle</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">×</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="card-title">Kategori İçerikleri</div>
+                                    <hr>
+                                    <form>
+                                    <div class="form-group">
+                                        <label for="input-1">Kategori Adı</label>
+                                        <input name="kategori_adi" type="text" class="form-control" id="input-1" placeholder="Kategori Adı" >
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-2">Altkategorileri</label>
+                                        <input name="altkategoriler" type="text" class="form-control" id="input-2" placeholder="Altkategorileri virgül kullanarak yan yana yazınız">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-3">Markalar</label>
+                                        <input name="markalar" type="text" class="form-control" id="input-3" placeholder="Markaları virgül kullanarak yan yana yazınız">
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-light px-5"><i class="icon-lock"></i> Güncelle</button>
+                                    </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-white btn-sm" data-dismiss="modal"><i class="fa fa-times"></i> Kapat</button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
