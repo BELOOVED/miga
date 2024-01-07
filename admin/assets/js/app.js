@@ -163,7 +163,7 @@ function logIn() {
   }
   
   function deleteAllData(table, type = null) {
-    swal({
+    swal.fire({
       html: "Tüm verileri silmek istediğinize emin misiniz?",
       icon: "warning",
       showCloseButton: true,
