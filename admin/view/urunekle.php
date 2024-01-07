@@ -36,7 +36,7 @@
                      </div>
                      <div class="form-group">
                         <label for="input-5">Ürün Resim 3</label>
-                        <input type="text" class="form-control" id="input-5" placeholder="Ürünün Üçüncü Resmi">
+                        <input type="file" class="form-control" id="input-5" placeholder="Ürünün Üçüncü Resmi">
                      </div>
                      <div class="form-group">
                         <label for="input-5">Ürün Resim 4</label>
@@ -56,7 +56,7 @@
                      </div>
                      <div class="form-group">
                         <label for="input-4">Ürün Açıklama</label>
-                        <textarea name="" id="" cols="30" rows="10" placeholder="HTML Kullanabilirsiniz"></textarea>
+                        <textarea name="" id="" cols="30" rows="10" class="form-control" id="input-4" placeholder="HTML Kullanabilirsiniz"></textarea>
                      </div>
                      <div class="form-group">
                         <button type="submit" class="btn btn-light px-5"><i class="icon-lock"></i> Kaydet</button>
