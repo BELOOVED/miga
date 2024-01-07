@@ -52,9 +52,11 @@
        </div>
      <div id="user-dropdown" class="collapse">
       <ul class="user-setting-menu">
-            <li><a href="/"><i class="icon-user"></i>  Anasayfa</a></li>
+            <li><a href="dashborad"><i class="icon-user"></i>  Anasayfa</a></li>
             <li><a href="adminyonet"><i class="icon-user"></i>  Admin Düzenle</a></li>
             <li><a href="siteyarlari"><i class="icon-settings"></i> Site Ayarları</a></li>
+            <li><a href="/"><i class="icon-settings"></i> Siteye Git</a></li>
+
       <li><a href="logOut();"><i class="icon-power"></i> Çıkış</a></li>
       </ul>
      </div>
