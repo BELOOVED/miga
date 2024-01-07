@@ -28,7 +28,7 @@ $kategoriler = $stmt->fetchAll(PDO::FETCH_ASSOC);
                <span class="caret"></span>
                </button>
                <div class="dropdown-menu">
-                  <a href="javascript:;" data-toggle="modal" data-target="#smalllsizemodal<?=$kategori['id']?>" class="dropdown-item">Yeni Kategori Ekle</a>
+               <button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smalllsizemodal">Kategori Ekle</button>
                   <a href="javascript:;" onclick="deleteAllData('users')" class="dropdown-item">Tüm Kategorileri Sil</a>
                </div>
             </div>
