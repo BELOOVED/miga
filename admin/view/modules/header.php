@@ -66,6 +66,7 @@
         </a>
 		<ul class="sidebar-submenu">
     <li><a href="urunler"><i class="zmdi zmdi-dot-circle-alt"></i> Tüm Ürünler</a></li>
+    <li><a href="urunekle"><i class="zmdi zmdi-dot-circle-alt"></i> Ürün Ekle</a></li>
         <?php
                             $sql = "SELECT * FROM kategoriler";
 
@@ -75,7 +76,7 @@
                             $kategoriler = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                             foreach ($kategoriler as $kategori) {?>
-		  <li><a href="urunler?type=<?=$kategori['id']?>"><i class="zmdi zmdi-dot-circle-alt"></i> <?=$kategori['kategori_adi']?></a></li>
+		  <li><a href="urunler?type=<?=$kategori['id']?>"><i class="zmdi zmdi-dot-circle-alt"></i> <?=$kategori['kategori_adi']?> Ürünleri</a></li>
           <?php }?> 
 		  <li><a href="kategoriduzenle"><i class="zmdi zmdi-dot-circle-alt"></i> Kategorileri Düzenle</a></li>
 
