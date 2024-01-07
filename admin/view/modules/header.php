@@ -89,7 +89,7 @@
 		<ul class="sidebar-submenu">
         
 		  <li><a href="kredikarti"><i class="zmdi zmdi-dot-circle-alt"></i>  Kredi Kartı</a></li>
-		  <li><a href="iban"><i class="zmdi zmdi-dot-circle-alt"></i>  IBAN</a></li>
+		  <li><a href="javascript:;" onclick="swal.fire('Bildirim!','Henüz Aktif Değil','warning')"><i class="zmdi zmdi-dot-circle-alt"></i>  IBAN</a></li>
 
 		</ul>
       </li>
@@ -99,8 +99,8 @@
         </a>
 		<ul class="sidebar-submenu">
         
-		  <li><a href="kullanicilar?type=0"><i class="zmdi zmdi-dot-circle-alt"></i>  Kayıt Olanlar</a></li>
-		  <li><a href="kullanicilar?type=1"><i class="zmdi zmdi-dot-circle-alt"></i>  Giriş Yapanlar</a></li>
+		  <li><a href="kullanicilar"><i class="zmdi zmdi-dot-circle-alt"></i>  Kayıt Olanlar</a></li>
+		  <li><a href="javascript:;" onclick="swal.fire('Bildirim!','Henüz Aktif Değil','warning')"><i class="zmdi zmdi-dot-circle-alt"></i>  Giriş Yapanlar</a></li>
 
 		</ul>
       </li>

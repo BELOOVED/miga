@@ -140,7 +140,7 @@ $kategoriler = $stmt->fetchAll(PDO::FETCH_ASSOC);
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title">Kategoriyi Düzenle</h5>
+                        <h5 class="modal-title">Kategori Ekle</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">×</span>
                         </button>
@@ -166,7 +166,7 @@ $kategoriler = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                         <input name="markalar" type="text" class="form-control" id="input-3" placeholder="Markaları virgül kullanarak yan yana yazınız">
                                     </div>
                                     <div class="form-group">
-                                        <button type="submit" class="btn btn-light px-5"><i class="icon-lock"></i> Güncelle</button>
+                                        <button type="submit" class="btn btn-light px-5"><i class="icon-lock"></i> Ekle</button>
                                     </div>
                                     </form>
                                 </div>
