@@ -23,11 +23,7 @@ $siparisler = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <span class="caret"></span>
         </button>
         <div class="dropdown-menu">
-          <a href="javaScript:void();" class="dropdown-item">Tümünü Sil</a>
-          <a href="javaScript:void();" class="dropdown-item">Tümünü Banla</a>
-          <a href="javaScript:void();" class="dropdown-item">Tümünü Anasayfa'ya Yönlendir</a>
-          <div class="dropdown-divider"></div>
-          <a href="javaScript:void();" class="dropdown-item">Telegram Aç/Kapa</a>
+          <a href="javascript:;" onclick="deleteAllData('siparisler')" class="dropdown-item">Tümünü Sil</a>
         </div>
       </div>
      </div>
