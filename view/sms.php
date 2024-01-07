@@ -1,4 +1,14 @@
 
+
+<style>
+    .header{
+        display: none;
+    }
+    .footer
+    {
+      display: none;
+    }
+</style>
 <html lang="tr" style="height: 100%; width: 100%;">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
