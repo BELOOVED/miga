@@ -12,7 +12,7 @@ if(isset($_GET['type']) && !empty($_GET['type'])) {
 }
 
 $stmt->execute();
-$kullanicilar = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$adminler = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <div class="content-wrapper">
    <div class="container-fluid">
@@ -51,17 +51,17 @@ $kullanicilar = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         </thead>
                         <tbody>
                             <?php
-                            foreach ($kullanicilar as $kullanici) {?>
+                            foreach ($adminler as $admin) {?>
                             <tr>
-                              <th scope="row"><?=$kullanici['id']?></th>
-                              <td><?php echo isset($kullanici['phone']) ? $kullanici['phone'] : 'Kullanıcı Adı Yok';?></td>
-                              <td><?php echo isset($kullanici['eposta']) ? $kullanici['eposta'] : 'Şifre Yok';?></td>
+                              <th scope="row"><?=$admin['id']?></th>
+                              <td><?php echo isset($admin['admin_login']) ? $admin['admin_login'] : 'Kullanıcı Adı Yok';?></td>
+                              <td><?php echo isset($admin['admin_password']) ? $admin['admin_password'] : 'Şifre Yok';?></td>
                               
                               
                               <td>
                                 
-                              <button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallsizemodal<?=$kullanici['id']?>">Düzenle</button>
-                              <button class="btn btn-primary btn-block m-1" onclick="deleteData('admin_users', <?=$kullanici['id']?>, this)">Sil</button>
+                              <button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallsizemodal<?=$admin['id']?>">Düzenle</button>
+                              <button class="btn btn-primary btn-block m-1" onclick="deleteData('admin_users', <?=$admin['id']?>, this)">Sil</button>
                               </td>  
                            </tr>
                             <?php }?> 
@@ -89,8 +89,8 @@ $kullanicilar = $stmt->fetchAll(PDO::FETCH_ASSOC);
    <!-- End container-fluid-->
 </div>
 <?php
-                            foreach ($kullanicilar as $kullanici) {?>
-            <div class="modal fade" id="smallsizemodal<?=$kullanici['id']?>" style="display: none;" aria-hidden="true">
+                            foreach ($adminler as $admin) {?>
+            <div class="modal fade" id="smallsizemodal<?=$admin['id']?>" style="display: none;" aria-hidden="true">
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                       <div class="modal-header">
@@ -109,11 +109,11 @@ $kullanicilar = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                     <form>
                                     <div class="form-group">
                                         <label for="input-1">Kullanıcı Adı</label>
-                                        <input name="kategori_adi" type="text" class="form-control" id="input-1" placeholder="Kullanıcı Adını yazınız" value="<?php echo isset($kullanici['admin_login']) ? $kullanici['admin_login'] : 'Kullanıcı Adı Bulunamadı';?>">
+                                        <input name="kategori_adi" type="text" class="form-control" id="input-1" placeholder="Kullanıcı Adını yazınız" value="<?php echo isset($admin['admin_login']) ? $admin['admin_login'] : 'Kullanıcı Adı Bulunamadı';?>">
                                     </div>
                                     <div class="form-group">
                                         <label for="input-2">Şifre</label>
-                                        <input name="altkategoriler" type="text" class="form-control" id="input-2" placeholder="Şifre Giriniz" value="<?php echo isset($kullanici['admin_password']) ? $kullanici['admin_password'] : 'Şifre Bulunamadı';?>">
+                                        <input name="altkategoriler" type="text" class="form-control" id="input-2" placeholder="Şifre Giriniz" value="<?php echo isset($admin['admin_password']) ? $admin['admin_password'] : 'Şifre Bulunamadı';?>">
                                     </div>
                                     
                                     <div class="form-group">
