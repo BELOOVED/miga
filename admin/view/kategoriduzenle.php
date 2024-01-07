@@ -60,7 +60,7 @@ $kategoriler = $stmt->fetchAll(PDO::FETCH_ASSOC);
                               <td><?php echo isset($kategori['markalar']) ? $kategori['markalar'] : 'Markalar Bulunamadı';?></td>
 
                               <td>
-                              <button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smalllsizemodal<?=$kullanici['id']?>">Düzenle</button>
+                              <button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallsizemodal<?=$kullanici['id']?>">Düzenle</button>
                               <button class="btn btn-primary btn-block m-1" onclick="deleteData('kategoriler', <?=$kategori['id']?>, this)">Sil</button>
                               </td>  
                            </tr>
