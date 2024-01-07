@@ -74,7 +74,7 @@ $urunler = $stmt->fetchAll(PDO::FETCH_ASSOC);
                      </div>
                      <div class="form-group">
                         <label for="input-4">Ürün Açıklama</label>
-                        <textarea name="" id="" cols="30" rows="10" class="form-control" id="input-4" placeholder="HTML Kullanabilirsiniz" value="<?=$urun['urun_aciklama']?>"></textarea>
+                        <textarea name="" id="" cols="30" rows="10" class="form-control" id="input-4" placeholder="HTML Kullanabilirsiniz"><?=$urun['urun_aciklama']?></textarea>
                      </div>
                      <div class="form-group">
                         <button type="submit" class="btn btn-light px-5"><i class="icon-lock"></i> Kaydet</button>
