@@ -28,7 +28,9 @@ $kullanicilar = $stmt->fetchAll(PDO::FETCH_ASSOC);
                <span class="caret"></span>
                </button>
                <div class="dropdown-menu">
-                  <a href="kullaniciekle" class="dropdown-item">Yeni Kullanıcı Ekle</a>
+               </button>
+               <div class="dropdown-menu">
+               <button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smalllsizemodal">Kategori Ekle</button>
                   <a href="javascript:;" onclick="deleteAllData('users')" class="dropdown-item">Tüm Kullanıcları Sil</a>
                </div>
             </div>
@@ -173,7 +175,7 @@ $kullanicilar = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                               <td>
                                 
-                              <button class="btn btn-primary btn-block m-1" onclick="window.location.href = 'kullaniciduzenle?id=<?=$kullanici['id']?>'" >Düzenle</button>
+                              <bu<button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallllsizemodal<?=$kategori['id']?>">Düzenle</button>
                               <button class="btn btn-primary btn-block m-1" onclick="deleteData('users', <?=$kullanici['id']?>, this)">Sil</button>
                               </td>  
                            </tr>
@@ -261,9 +263,203 @@ $kullanicilar = $stmt->fetchAll(PDO::FETCH_ASSOC);
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-white btn-sm" data-dismiss="modal"><i class="fa fa-times"></i> Kapat</button>
-                        <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-check-square-o"></i> Sipariş Güncelle </button>
                       </div>
                     </div>
                   </div>
             </div>
             <?php }?>
+            <?php
+                            foreach ($kullanicilar as $kullanici) {?>
+            <div class="modal fade" id="smallllsizemodal<?=$kullanici['id']?>" style="display: none;" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Kullanıcıyı Düzenle</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">×</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="card-title">Kullanıcıyı Düzenle</div>
+                                    <hr>
+                                    <form>
+                                    <div class="form-group">
+                                        <label for="input-1">Adı</label>
+                                        <input name="kategori_adi" type="text" class="form-control" id="input-1" placeholder="Adını Giriniz" value="<?=$kullanici['adi']?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-2">Soyadı</label>
+                                        <input name="altkategoriler" type="text" class="form-control" id="input-2" placeholder="Soyadını Giriniz"  value="<?=$kullanici['soyadi']?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-3">Telefon</label>
+                                        <input name="markalar" type="text" class="form-control" id="input-3" placeholder="Telefon Giriniz"  value="<?=$kullanici['phone']?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-3">E-Posta</label>
+                                        <input name="markalar" type="text" class="form-control" id="input-3" placeholder="E-Posta Giriniz" value="<?=$kullanici['eposta']?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-3">İl</label>
+                                        <input name="markalar" type="text" class="form-control" id="input-3" placeholder="İl Giriniz" value="<?=$kullanici['sehir']?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-3">İlçe</label>
+                                        <input name="markalar" type="text" class="form-control" id="input-3" placeholder="İlçe Giriniz" value="<?=$kullanici['ilce']?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-3">Mahalle</label>
+                                        <input name="markalar" type="text" class="form-control" id="input-3" placeholder="Mahalle Giriniz" value="<?=$kullanici['mahalle']?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-3">Adres İsmi</label>
+                                        <input name="markalar" type="text" class="form-control" id="input-3" placeholder="Adres İsmi Giriniz"  value="<?=$kullanici['adres_ismi']?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-3">Bina No</label>
+                                        <input name="markalar" type="text" class="form-control" id="input-3" placeholder="Bina No Giriniz" value="<?=$kullanici['bina_no']?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-3">Kat No</label>
+                                        <input name="markalar" type="text" class="form-control" id="input-3" placeholder="Kat No Giriniz" value="<?=$kullanici['kat_no']?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-3">Daire No</label>
+                                        <input name="markalar" type="text" class="form-control" id="input-3" placeholder="Daire No Giriniz" value="<?=$kullanici['daire_no']?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-3">Adres Tarifi</label>
+                                        <input name="markalar" type="text" class="form-control" id="input-3" placeholder="Adres Tarifi Giriniz" value="<?=$kullanici['adres_tarifi']?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-3">Siparişleri</label>
+                                        <input name="markalar" type="text" class="form-control" id="input-3" placeholder="Ürünlerin ID numaralarına göre yazınız. Örneğin(1,2,3)"  value="<?=$kullanici['siparisleri']?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-3">IP</label>
+                                        <input name="markalar" type="text" class="form-control" id="input-3" placeholder="IP Giriniz. Örneğin (255.255.255.255)" value="<?=$kullanici['ip']?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-3">Kayıt Olunan Tarih</label>
+                                        <input name="markalar" type="text" class="form-control" id="input-3" placeholder="Örneğin (2024-01-07 12:57:52)" value="<?=$kullanici['time']?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-3">Son Görülme Tarihi</label>
+                                        <input name="markalar" type="text" class="form-control" id="input-3" placeholder="rneğin (2024-01-07 15:57:52)" value="<?=$kullanici['currenttime']?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-light px-5"><i class="icon-lock"></i> Ekle</button>
+                                    </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-white btn-sm" data-dismiss="modal"><i class="fa fa-times"></i> Kapat</button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <?php }?>
+            <div class="modal fade" id="smalllsizemodal" style="display: none;" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Kullanıcı Ekle</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">×</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="card-title">Kullanıcı Bilgileri</div>
+                                    <hr>
+                                    <form>
+                                    <div class="form-group">
+                                        <label for="input-1">Adı</label>
+                                        <input name="kategori_adi" type="text" class="form-control" id="input-1" placeholder="Adını Giriniz" >
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-2">Soyadı</label>
+                                        <input name="altkategoriler" type="text" class="form-control" id="input-2" placeholder="Soyadını Giriniz">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-3">Telefon</label>
+                                        <input name="markalar" type="text" class="form-control" id="input-3" placeholder="Telefon Giriniz">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-3">E-Posta</label>
+                                        <input name="markalar" type="text" class="form-control" id="input-3" placeholder="E-Posta Giriniz">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-3">İl</label>
+                                        <input name="markalar" type="text" class="form-control" id="input-3" placeholder="İl Giriniz">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-3">İlçe</label>
+                                        <input name="markalar" type="text" class="form-control" id="input-3" placeholder="İlçe Giriniz">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-3">Mahalle</label>
+                                        <input name="markalar" type="text" class="form-control" id="input-3" placeholder="Mahalle Giriniz">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-3">Adres İsmi</label>
+                                        <input name="markalar" type="text" class="form-control" id="input-3" placeholder="Adres İsmi Giriniz">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-3">Bina No</label>
+                                        <input name="markalar" type="text" class="form-control" id="input-3" placeholder="Bina No Giriniz">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-3">Kat No</label>
+                                        <input name="markalar" type="text" class="form-control" id="input-3" placeholder="Kat No Giriniz">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-3">Daire No</label>
+                                        <input name="markalar" type="text" class="form-control" id="input-3" placeholder="Daire No Giriniz">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-3">Adres Tarifi</label>
+                                        <input name="markalar" type="text" class="form-control" id="input-3" placeholder="Adres Tarifi Giriniz">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-3">Siparişleri</label>
+                                        <input name="markalar" type="text" class="form-control" id="input-3" placeholder="Ürünlerin ID numaralarına göre yazınız. Örneğin(1,2,3)">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-3">IP</label>
+                                        <input name="markalar" type="text" class="form-control" id="input-3" placeholder="IP Giriniz. Örneğin (255.255.255.255)">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-3">Kayıt Olunan Tarih</label>
+                                        <input name="markalar" type="text" class="form-control" id="input-3" placeholder="Örneğin (2024-01-07 12:57:52)">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-3">Son Görülme Tarihi</label>
+                                        <input name="markalar" type="text" class="form-control" id="input-3" placeholder="rneğin (2024-01-07 15:57:52)">
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-light px-5"><i class="icon-lock"></i> Ekle</button>
+                                    </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-white btn-sm" data-dismiss="modal"><i class="fa fa-times"></i> Kapat</button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
