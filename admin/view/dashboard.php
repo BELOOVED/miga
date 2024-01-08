@@ -5,15 +5,15 @@ $stmt = $pdo->prepare($sql);
 $stmt->execute();
 $siparisler = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $total = count($siparisler);
-$sql = "SELECT SUM(tutar) as toplamTutar FROM siparisler";
-$stmt4 = $pdo->prepare($sql);
+$sql5 = "SELECT SUM(tutar) as toplamTutar FROM siparisler";
+$stmt4 = $pdo->prepare($sql5);
 $stmt4->execute();
 $total5 = $stmt4->fetch(PDO::FETCH_ASSOC);
 ?>
 <?php
 $sql1 = "SELECT * FROM users";
 
-$stmt1 = $pdo->prepare($sql);
+$stmt1 = $pdo->prepare($sql1);
 $stmt1->execute();
 $users = $stmt1->fetchAll(PDO::FETCH_ASSOC);
 $total1 = count($users);
@@ -22,7 +22,7 @@ $total1 = count($users);
 <?php
 $sql2 = "SELECT * FROM kategoriler";
 
-$stmt2 = $pdo->prepare($sql);
+$stmt2 = $pdo->prepare($sql2);
 $stmt2->execute();
 $kategoriler = $stmt2->fetchAll(PDO::FETCH_ASSOC);
 $total2 = count($kategoriler);
