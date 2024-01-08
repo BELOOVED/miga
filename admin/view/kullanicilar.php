@@ -269,7 +269,7 @@ $kullanicilar = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </div>
             <?php }?>
             <?php
-                            foreach ($kullanicilar as $kullanici) {?>
+            //                foreach ($kullanicilar as $kullanici) {?>
             <div class="modal fade" id="smalllllsizemodal<?=$kullanici['id']?>" style="display: none;" aria-hidden="true">
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
@@ -366,7 +366,7 @@ $kullanicilar = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     </div>
                   </div>
             </div>
-            <?php }?>
+            <?php //}?>
             <div class="modal fade" id="smalllsizemodal" style="display: none;" aria-hidden="true">
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
