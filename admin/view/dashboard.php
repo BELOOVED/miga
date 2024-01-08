@@ -1,3 +1,33 @@
+<?php
+$sql = "SELECT * FROM siparisler";
+
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
+$siparisler = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$total = count($siparisler);
+$sql = "SELECT SUM(tutar) as toplamTutar FROM siparisler";
+$stmt4 = $pdo->prepare($sql);
+$stmt4->execute();
+$total5 = $stmt4->fetch(PDO::FETCH_ASSOC);
+?>
+<?php
+$sql1 = "SELECT * FROM users";
+
+$stmt1 = $pdo->prepare($sql);
+$stmt1->execute();
+$users = $stmt1->fetchAll(PDO::FETCH_ASSOC);
+$total1 = count($users);
+
+?>
+<?php
+$sql2 = "SELECT * FROM kategoriler";
+
+$stmt2 = $pdo->prepare($sql);
+$stmt2->execute();
+$kategoriler = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+$total2 = count($kategoriler);
+
+?>
 <div class="content-wrapper">
     <div class="container-fluid">
 
@@ -5,16 +35,15 @@
     <div class="col-12 col-lg-6 col-xl-4">
       <div class="card">
       <div class="card-body">
-          <p class="text-white mb-0">Listings <span class="float-right badge badge-light">Monthly</span></p>
+          <p class="text-white mb-0">Siparişler <span class="float-right badge badge-light">Tamamı</span></p>
            <div class="">
-           <h4 class="mb-0 py-3">92,403 <span class="float-right"><i class="fa fa-home"></i></span></h4>
+           <h4 class="mb-0 py-3"><?=$total?> <span class="float-right"><i class="fa fa-home"></i></span></h4>
            </div>
            <div class="progress-wrapper">
             <div class="progress" style="height:5px;">
-            <div class="progress-bar" style="width:60%"></div>
+            <div class="progress-bar" style="width:100%"></div>
              </div>
           </div>
-          <p class="mb-0 mt-2 text-white small-font">Compare to last month <span class="float-right">+15% <i class="fa fa-long-arrow-up"></i></span></p>
         </div>
       </div>
      </div>
@@ -23,34 +52,32 @@
      <div class="col-12 col-lg-6 col-xl-4">
       <div class="card">
       <div class="card-body">
-          <p class="text-white mb-0">Search <span class="float-right badge badge-light">Today</span></p>
+          <p class="text-white mb-0">Kullanıcılar <span class="float-right badge badge-light">Tamamı</span></p>
            <div class="">
-           <h4 class="mb-0 py-3">5,70,803 <span class="float-right"><i class="fa fa-search"></i></span></h4>
+           <h4 class="mb-0 py-3"><?=$total1?> <span class="float-right"><i class="fa fa-search"></i></span></h4>
            </div>
            <div class="progress-wrapper">
             <div class="progress" style="height:5px;">
-            <div class="progress-bar" style="width:80%"></div>
+            <div class="progress-bar" style="width:100%"></div>
              </div>
           </div>
-          <p class="mb-0 mt-2 text-white small-font">Compare to yesterday <span class="float-right">+43% <i class="fa fa-long-arrow-up"></i></span></p>
-        </div>
+            </div>
       </div>
      </div>
 
      <div class="col-12 col-lg-6 col-xl-4">
       <div class="card">
       <div class="card-body">
-          <p class="text-white mb-0">Earnings <span class="float-right badge badge-light">Weekly</span></p>
+          <p class="text-white mb-0">Kazançlar <span class="float-right badge badge-light">Tamamı</span></p>
            <div class="">
-           <h4 class="mb-0 py-3">$8,456 <span class="float-right"><i class="fa fa-usd"></i></span></h4>
+           <h4 class="mb-0 py-3">₺<?=$total5?> <span class="float-right"><i class="fa fa-try"></i></span></h4>
            </div>
            <div class="progress-wrapper">
             <div class="progress" style="height:5px;">
             <div class="progress-bar" style="width:45%"></div>
              </div>
           </div>
-          <p class="mb-0 mt-2 text-white small-font">Compare to last week <span class="float-right">+32% <i class="fa fa-long-arrow-up"></i></span></p>
-        </div>
+         </div>
       </div>
      </div>
 
@@ -85,7 +112,7 @@
 	 <div class="row">
 	   <div class="col-lg-6">
 	     <div class="card">
-		     <div class="card-header">Popular Listings
+		     <div class="card-header">En Pahalı Ürünler
 				 <div class="card-action">
 				 <div class="dropdown">
 				 <a href="javascript:void();" class="dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown">
@@ -167,7 +194,7 @@
 	   
 	   <div class="col-lg-6">
 	     <div class="card">
-		     <div class="card-header">Popular Categories
+		     <div class="card-header">Kategoriler
 				 <div class="card-action">
 				 <div class="dropdown">
 				 <a href="javascript:void();" class="dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown">
