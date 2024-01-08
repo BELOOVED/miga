@@ -70,7 +70,7 @@ $total2 = count($kategoriler);
       <div class="card-body">
           <p class="text-white mb-0">Kazançlar <span class="float-right badge badge-light">Tamamı</span></p>
            <div class="">
-           <h4 class="mb-0 py-3">₺<?=$total5?> <span class="float-right"><i class="fa fa-try"></i></span></h4>
+           <h4 class="mb-0 py-3">₺<?=$total5['toplamTutar']?> <span class="float-right"><i class="fa fa-try"></i></span></h4>
            </div>
            <div class="progress-wrapper">
             <div class="progress" style="height:5px;">
