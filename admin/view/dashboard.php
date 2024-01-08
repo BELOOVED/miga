@@ -117,9 +117,9 @@ $total7 = count($urunler);
                             foreach ($urunler as $urun) {?>
 				  <li class="list-group-item">
 				    <div class="media align-items-center">
-                    <img src="<?=$urun['urun_resim']?>" alt="user avatar" class="customer-img rounded">
+            <a target="_blank" href="<?=$urun['urun_resim']?>"> <img src="<?=$urun['urun_resim']?>" alt="user avatar" class="customer-img rounded"></a>
 					<div class="media-body ml-3">
-					  <h6 class="mb-0"><?=$urun['urun_adi']?></h6>
+					  <h6 class="mb-0"><a href="/urun/<?=seo($urun['urun_adi'])?>/<?=seo($urun['id'])?>" target="_blank"><?=$urun['urun_adi']?></a></h6>
 					  <small class="small-font">₺<?=$urun['urun_fiyat']?></small>
 					</div>
 				   </div>
