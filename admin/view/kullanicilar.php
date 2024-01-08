@@ -175,7 +175,7 @@ $kullanicilar = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                               <td>
                                 
-                              <button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smalllllsizemodal<?=$kategori['id']?>">Düzenle</button>
+                              <button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smalllllsizemodal<?=$kullanici['id']?>">Düzenle</button>
                               <button class="btn btn-primary btn-block m-1" onclick="deleteData('users', <?=$kullanici['id']?>, this)">Sil</button>
                               </td>  
                            </tr>
