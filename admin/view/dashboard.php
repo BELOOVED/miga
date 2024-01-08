@@ -29,7 +29,7 @@ $total2 = count($kategoriler);
 
 ?>
 <?php
-$sql3 = "SELECT * FROM urunler";
+$sql3 = "SELECT * FROM urunler ORDER BY urun_fiyat DESC Limit 7";
 
 $stmt3 = $pdo->prepare($sql3);
 $stmt3->execute();
