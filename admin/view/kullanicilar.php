@@ -30,7 +30,7 @@ $kullanicilar = $stmt->fetchAll(PDO::FETCH_ASSOC);
                <div class="dropdown-menu">
                </button>
                <div class="dropdown-menu">
-               <button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smalllsizemodal">Kategori Ekle</button>
+               <button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smalllsizemodal">Kullanıcı Ekle</button>
                   <a href="javascript:;" onclick="deleteAllData('users')" class="dropdown-item">Tüm Kullanıcları Sil</a>
                </div>
             </div>
@@ -175,7 +175,7 @@ $kullanicilar = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                               <td>
                                 
-                              <bu<button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallllsizemodal<?=$kategori['id']?>">Düzenle</button>
+                              <button class="btn btn-primary btn-block m-1" data-toggle="modal" data-target="#smallllsizemodal<?=$kategori['id']?>">Düzenle</button>
                               <button class="btn btn-primary btn-block m-1" onclick="deleteData('users', <?=$kullanici['id']?>, this)">Sil</button>
                               </td>  
                            </tr>
